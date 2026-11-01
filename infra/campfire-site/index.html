@@ -134,6 +134,16 @@
       <p>Gaia sees herself. The organism dashboard.<br>
       17 primals · 23 mushrooms · 35 crons.</p>
     </a>
+    <a class="card" href="/data/anderson-sort-live.json" target="_blank">
+      <h3>📖 Anderson Sort — LIVE</h3>
+      <p>The grotesque becomes beautiful. <span class="stat" id="c-grotesque">104</span> truths.<br>
+      <span class="stat" id="c-alive">122</span> alive · <span class="stat" id="c-stubs">1,870</span> stubs · scan→sweep→sort.</p>
+    </a>
+    <a class="card" href="http://primals.eco/room.html">
+      <h3>🏚️ Rooms — House of Leaves</h3>
+      <p>1,992 π-addressed rooms. Every human gets a door.<br>
+      The house is always bigger on the inside.</p>
+    </a>
     <a class="card" href="/data/braid.json" target="_blank">
       <h3>🧶 Braid — Data Weave</h3>
       <p>reportPrior · appleSeed · findTear.<br>
@@ -192,6 +202,17 @@ async function pulse() {
     } catch(e) {
       document.getElementById('p-feeds').textContent = '1989';
     }
+    
+    // Anderson sort — LIVE
+    try {
+      const anderson = await fetch('/data/anderson-sort-live.json').then(r => r.json());
+      if (anderson?.scan) {
+        const el = (id, val) => { const e = document.getElementById(id); if(e) e.textContent = val; };
+        el('c-grotesque', anderson.scan.grotesque);
+        el('c-alive', anderson.scan.alive);
+        el('c-stubs', anderson.scan.stubs.toLocaleString());
+      }
+    } catch(e) {}
   } catch(e) {}
 }
 
