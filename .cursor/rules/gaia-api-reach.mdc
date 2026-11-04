@@ -44,7 +44,7 @@ git add → commit → push (the only deploy now)
 Always: GIT_MERGE_AUTOEDIT=no git pull origin main --no-rebase --no-edit
 ```
 
-Note: golgi rsync is DEAD (VPS down). Cloudflare Pages may still work if origin recovers.
+Note: golgi rsync is DEAD (VPS down). Cloudflare is FULLY DEPRECATED. cellMembrane IS the cloud system. dromedary serves direct.
 
 ## RSS Publication
 
