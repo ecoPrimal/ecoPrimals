@@ -1,0 +1,116 @@
+{
+  "ts": "2026-11-04T19:53:49Z",
+  "type": "topology",
+  "source": "eastGate",
+  "nodes": [
+    {
+      "id": "eastGate",
+      "ip": "192.168.4.244",
+      "status": "ALIVE",
+      "role": "brain+gut"
+    },
+    {
+      "id": "graftGate",
+      "ip": "192.168.4.107",
+      "status": "ALIVE",
+      "role": "Mac Mini"
+    },
+    {
+      "id": "southGate",
+      "ip": "192.168.4.148",
+      "status": "ALIVE",
+      "role": "unknown"
+    },
+    {
+      "id": "ironGate",
+      "ip": "192.168.4.237",
+      "status": "ALIVE",
+      "role": "unknown"
+    },
+    {
+      "id": "blueGate",
+      "ip": "192.168.4.210",
+      "status": "ALIVE",
+      "role": "Windows SSH"
+    },
+    {
+      "id": "sporeGate",
+      "ip": "192.168.4.3",
+      "status": "DORMANT",
+      "role": "traveling node"
+    },
+    {
+      "id": "router",
+      "ip": "192.168.4.1",
+      "status": "ALIVE",
+      "role": "GL-MT6000 gateway"
+    },
+    {
+      "id": "mikrotik",
+      "ip": "192.168.4.2",
+      "status": "ALIVE",
+      "role": "L2 bridge"
+    },
+    {
+      "id": "jetstream",
+      "ip": "192.168.4.111",
+      "status": "ALIVE",
+      "role": "House 2 switch"
+    }
+  ],
+  "edges": [
+    {
+      "from": "router",
+      "to": "eastGate",
+      "type": "ethernet"
+    },
+    {
+      "from": "router",
+      "to": "mikrotik",
+      "type": "ethernet"
+    },
+    {
+      "from": "mikrotik",
+      "to": "graftGate",
+      "type": "ethernet"
+    },
+    {
+      "from": "mikrotik",
+      "to": "southGate",
+      "type": "ethernet"
+    },
+    {
+      "from": "mikrotik",
+      "to": "ironGate",
+      "type": "ethernet"
+    },
+    {
+      "from": "mikrotik",
+      "to": "blueGate",
+      "type": "ethernet"
+    },
+    {
+      "from": "router",
+      "to": "jetstream",
+      "type": "fiber-10G"
+    }
+  ],
+  "services": {
+    "gaia-inference": {
+      "port": 11434,
+      "status": "ACTIVE"
+    },
+    "ollama": {
+      "port": 11436,
+      "status": "ACTIVE"
+    },
+    "tor": {
+      "onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+      "status": "ACTIVE"
+    },
+    "gaia-web": {
+      "port": 8080,
+      "status": "ACTIVE"
+    }
+  }
+}

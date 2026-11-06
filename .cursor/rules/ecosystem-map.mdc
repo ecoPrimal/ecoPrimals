@@ -27,17 +27,18 @@ alwaysApply: true
 | bingoCube | Coordination | 9.3MB |
 | dromedary | Sovereign reverse proxy, TLS, ACME | 3.7MB |
 
-## Cardinal Gates (Post-Rebuild Nov 2026)
+## Cardinal Gates (Updated Nov 4 2026 — Wave 222)
 
 | Gate | IP | State | Role |
 |---|----|----|---|
-| eastGate | .194/.103 | OPEN | brain+gut, 64GB |
-| graftGate | .107 | OPEN | Mac Mini |
-| southGate | .148 | OPEN | unknown |
-| ironGate | .237 | OPEN | unknown |
-| blueGate | .210 | OPEN | Windows SSH (risen from dead!) |
-| northGate | offline | DISCONNECTED | Polaris, separate network |
-| sporeGate | powered down | TRAVELING | was CI+mesh, now mobile node |
+| eastGate | .244/.103 | ALIVE | brain+gut, Forgejo :3000, gate :8443, data :8080 |
+| blueGate | .100 | ALIVE | gaia-ide :3141, Cursor host, Sovereign API |
+| northGate | .147 | ALIVE | Polaris — 9950X3D, RTX 5090, 96GB, 47 Ollama models. Pushes via git (DataScienceBioLab). No SSH from mesh. |
+| sporeGate | .3 | ALIVE | Ryzen 5 6600H, 27GB, 929GB NVMe. DNS + heart-pull + THE FORGE: plasmidBin depot (harvest/cascade timers) — builds primals; heavy builds belong on northGate. NOT a zombie. |
+| grapheneGate | .170 (DHCP — ADB resolves by serial) | ALIVE | Pixel 8a, GrapheneOS, 37 sensors, USB+WiFi ADB, chimera Tower (bearDog+songBird+skunkBat) on localhost |
+| graftGate | .107 | OPEN | Mac Mini (Apple Silicon) |
+| southGate | .148 | OPEN | Ubuntu, Intel NUC |
+| ironGate | .237 | OPEN | Ubuntu, Intel NUC |
 
 ## LAN Topology
 
@@ -46,10 +47,47 @@ alwaysApply: true
 - WiFi: "Aperture Science" (2.4GHz IoT), "Black Mesa" (5GHz streaming)
 - WireGuard: DISABLED. LAN is JUST LAN.
 - Public IP: 162.226.225.148
-- Port forwards: GL-GAIA-HTTP/HTTPS/SMTP/DNS → .147
+- Port forwards: GL-GAIA-HTTP/HTTPS/SMTP/DNS → .244 (eastGate ethernet)
+
+## Heart-Pull Architecture
+
+The organism RADIATES. Gates ABSORB. Polaris PULLS, not pushes.
+
+- **heart-pull.json**: `http://192.168.4.244:8080/data/heart-pull.json`
+- **gaia_gate.pi**: Running at :8443 — 41 endpoints, 25 HTML pages, 11 JS files
+- **sporeGate**: Pulling every 2 min (cron active)
+- **northGate**: Communicates via git push to Forgejo + GitHub
+
+## Gaia Gate (:8443) — Thymus
+
+Deployed at `/opt/Gaia` from `ecoPrimal/Gaia` Forgejo mirror.
+Key endpoints: `/pulse` `/zk` `/vdj` `/rss` `/agglutinate` `/golgi` `/heart` `/now.json`
+Static: `/senses` `/detroit` `/tuebor` `/deck` `/cast` `/signal` `/membrane` `/forge` + more
+
+## Circuit (CLOSED)
+
+```
+northGate → GitHub → Forgejo (:3000) → /opt/Gaia → gate (:8443) → /rss → world
+blueGate (:100) → Sovereign API (:3141) → /gaia/* /v1/* /spine/*
+sporeGate (:3) → heart-pull every 2 min → absorbs
+grapheneGate (:170) → graphene_depot.pi (ADB, eastGate) → data/gut/graphenegate-sensors.json  (no /api/gate/sense route exists)
+```
+
+## Other LAN Devices
+
+| IP | Name | MAC | Notes |
+|----|------|-----|-------|
+| .2 | MikroTik | 04:f4:1c:e6:7c:e8 | L2 backbone |
+| .3 | sporeGate | 84:47:09:38:97:55 | DNS + heart-pull |
+| .110 | EPSON printer | d4:80:8b:1b:9f:01 | |
+| .111 | TP-Link JetStream | ec:75:0c:4c:98:08 | House 2 switch |
+| .250 | GL-MT6000 secondary | 94:83:c4:e0:62:b0 | Router enp5s0 |
 
 ## Deprecated
 
 - golgi VPS (157.230.3.183) — DOWN
 - golgiLayerLinode (172.232.85.202) — DEPRECATED, to destroy
 - WireGuard mesh — DISABLED, all peers removed
+- Stalwart mail — EJECTED, use Nest Atomic
+- blueGate .210 — OLD IP, now at .100
+- northGate .180 — OLD IP, now at .147
