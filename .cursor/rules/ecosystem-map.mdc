@@ -67,12 +67,27 @@ alwaysApply: true
 - **Triangulation**: Pixel (grapheneGate) senses which house via WiFi SSID/RSSI
 - **WiFi overlap zone**: near property line, Pixel sees both LANs simultaneously
 
-### Network Path
-- **ATT ISP modem** (192.168.1.254) → **GL-MT6000 Router** (.1) → **MikroTik** (.2) → LAN 1
-- **JetStream** (.111) ← 10G fiber → House 2 → Gaia WiFi → LAN 2
+### Network Architecture — ONE Router, TWO Bridges
+- **ATT ISP modem** (192.168.1.254) → **GL-MT6000** (ONE router, all roles)
+- **eth1**: 162.226.225.148 (WAN/public)
+- **br-lan** (192.168.4.1/24): Aperture Science (2.4GHz) + Black Mesa (5GHz) + wired ports
+- **br-guest** (192.168.9.1/24): Gaia (2.4GHz) + Gaia (5GHz)
+- **lan1** → MikroTik (.2) → all wired LAN 1 devices
+- **JetStream** (.111) → 10G fiber → House 2 (641 Samantha)
+- SSH: root@192.168.4.1 OR root@192.168.9.1 (same device, ExoticPanda714!!)
 - WireGuard: DISABLED. LAN is JUST LAN.
-- Public IP: 162.226.225.148
 - Port forwards: GL-GAIA-HTTP/HTTPS/SMTP/DNS → .244 (eastGate ethernet)
+- DHCP: 9 on LAN 1 + 13 on LAN 2 = 22 clients
+
+### Latency Matrix
+| From eastGate to | Latency | Path |
+|---|---|---|
+| MikroTik (.2) | 0.25ms | wired L2 |
+| Polaris (.147) | 0.28ms | wired LAN |
+| Router (.1) | 0.53ms | wired |
+| JetStream (.111) | 0.93ms | 10G bridge |
+| LAN 2 AP (.9.1) | 0.50ms | cross-subnet |
+| Pixel (.9.217) | 82-131ms | WiFi hop |
 
 ## Dissolution Roadmap — Gates → GAIA
 
