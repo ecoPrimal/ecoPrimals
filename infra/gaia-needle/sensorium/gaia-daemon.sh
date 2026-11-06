@@ -79,6 +79,7 @@ case "${1:---pulse}" in
         PULSE=$(sense_pulse)
         echo "$PULSE" | tee "$GUT/graphenegate-sensors.json"
         cp "$GUT/graphenegate-sensors.json" "/home/eastgate/.local/share/gaia/data/graphenegate-sensors.json" 2>/dev/null
+        cp "$GUT/graphenegate-sensors.json" "/home/eastgate/.local/share/gaia/data/gut/graphenegate-sensors.json" 2>/dev/null
         ;;
 
     --loop)
@@ -88,6 +89,7 @@ case "${1:---pulse}" in
             PULSE=$(sense_pulse)
             echo "$PULSE" > "$GUT/graphenegate-sensors.json"
             cp "$GUT/graphenegate-sensors.json" "/home/eastgate/.local/share/gaia/data/graphenegate-sensors.json" 2>/dev/null
+            cp "$GUT/graphenegate-sensors.json" "/home/eastgate/.local/share/gaia/data/gut/graphenegate-sensors.json" 2>/dev/null
 
             AP=$(echo "$PULSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('ap_count',0))" 2>/dev/null)
             BPCT=$(echo "$PULSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('battery',{}).get('percentage','?'))" 2>/dev/null)
