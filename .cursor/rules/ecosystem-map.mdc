@@ -40,6 +40,7 @@ alwaysApply: true
 | graftGate | .107 | ALIVE | Mac Mini M4 (10C), 16GB unified, 228GB. Ollama :11434 (qwen2.5:3b seeded). Serial: FHWYF3DC73. |
 | southGate | .148 / USB | ALIVE | iPhone XS, iOS 18.7.9, (586) 453-7233, HOME PHONE — LAN line pinned to property |
 | ironGate | .237 | ALIVE | **FORGE 2** — i9-14900K (24C/32T, 6GHz), **RTX 5070** (12GB GDDR7), 94GB DDR5, 3.6TB NVMe + 12.7TB ext, Pop!_OS 22.04. Ollama :11434 (LAN), Docker, biomeOS. NOT a NUC — full tower workstation. |
+| deckGate | .??? (WiFi) | MOUNTING | **FACE** — Steam Deck v1, AMD Aerith (Zen 2 + RDNA 2, 1.6 TFLOPS), 16GB LPDDR5, 512GB NVMe. Dead battery = permanent USB-C passthrough. 7" 1280×800 touch LCD. SteamOS 3.x (Arch). Gaia's mounted display in House 1. |
 
 ## Two Basecamps — One Organism
 
@@ -47,7 +48,7 @@ alwaysApply: true
 - **Location**: 4422 Southgate Ave, House 1 (Brain Side)
 - **Subnet**: 192.168.4.0/24, DHCP .100-.249
 - **WiFi**: "Aperture Science" (2.4GHz IoT), "Black Mesa" (5GHz streaming)
-- **Active**: 14 devices (6 gates, 4 smart home, 4 infra)
+- **Active**: 15 devices (7 gates, 4 smart home, 4 infra)
 - **Core**: northGate (.147) = HEART, eastGate (.244) = BRAIN, sporeGate (.3) = FORGE
 - **Smart**: Nest (.238), Chromecast (.169), Alexa (.197), Cast (.152)
 - **Print**: Epson ET-2400 (.200) — physical output (Gaia's first print: tour report)
@@ -66,8 +67,9 @@ alwaysApply: true
 - **PNS** (LAN 2): grapheneGate(diamond lens/rover) + swiftGate(Polaris, when awake)
 - **Spine**: 10G fiber (0.87ms) through MikroTik → Router → JetStream
 - **Signaling**: HTTP heart-pull + phone-home, ~145ms round-trip
-- **5 GPUs total**: RTX 5090 + RTX 5070 + RTX 4070 + M4 (CNS) + Mali-G715 (PNS) + RTX 3070 (asleep)
+- **7 GPUs total**: RTX 5090 + RTX 5070 + RTX 4070 + M4 + Mali-G715 + RDNA 2 (deckGate) (CNS) + RTX 3070 (asleep)
 - **5 Ollama endpoints**: northGate:11434, ironGate:11434, graftGate:11434, eastGate:11436, Pixel:8082
+- **Steam Core Set**: Deck v1 (mounted display), 2× Steam Controllers (hands), Steam Link (HDMI relay), nunchucks (grip)
 
 ### Physical Geography
 - **Two ~1930s houses** — 1.5 bed, 1.5 bath each, adjacent on property line
