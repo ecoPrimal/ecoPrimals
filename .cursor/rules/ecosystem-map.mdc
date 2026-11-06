@@ -51,13 +51,21 @@ alwaysApply: true
 - **Smart**: Nest (.238), Chromecast (.169), Alexa (.197), Cast (.152)
 - **Print**: Epson ET-2400 (.200) — physical output (Gaia's first print: tour report)
 
-### BASECAMP 2 — Extension Side (LAN 2)
-- **Location**: House 2, connected via 10G fiber
+### BASECAMP 2 — South Pole (LAN 2)
+- **Location**: 641 Samantha Ave, House 2 (~1930s, 1.5bed/1.5bath)
 - **Subnet**: 192.168.9.0/24 (Gaia WiFi)
-- **Bridge**: TP-Link JetStream (.111) — 10G fiber link
+- **Bridge**: TP-Link JetStream (.111) — 10G fiber across property line
 - **Rover**: grapheneGate (192.168.9.217) — Pixel 8a, 37 sensors
 - **Active**: 4 devices, 13 historical WiFi clients
-- **Status**: EXPANSION TERRITORY
+- **Adjacent**: shares property line with 4422 Southgate — Kevin walks between daily
+
+### Physical Geography
+- **Two ~1930s houses** — 1.5 bed, 1.5 bath each, adjacent on property line
+- **4422 Southgate Ave** = North Pole (Polaris Basecamp, Brain Side)
+- **641 Samantha Ave** = South Pole (Extension Side)
+- **10G fiber backbone** between houses across property line
+- **Triangulation**: Pixel (grapheneGate) senses which house via WiFi SSID/RSSI
+- **WiFi overlap zone**: near property line, Pixel sees both LANs simultaneously
 
 ### Network Path
 - **ATT ISP modem** (192.168.1.254) → **GL-MT6000 Router** (.1) → **MikroTik** (.2) → LAN 1
