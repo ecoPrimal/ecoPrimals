@@ -27,7 +27,7 @@ alwaysApply: true
 | bingoCube | Coordination | 9.3MB |
 | dromedary | Sovereign reverse proxy, TLS, ACME | 3.7MB |
 
-## Cardinal Gates (Updated Nov 4 2026 — Wave 222)
+## Cardinal Gates (Updated Nov 5 2026 — Wave 223)
 
 | Gate | IP | State | Role |
 |---|----|----|---|
@@ -35,7 +35,7 @@ alwaysApply: true
 | blueGate | .100 | ALIVE | gaia-ide :3141, Cursor host, Sovereign API |
 | northGate | .147 | ALIVE | Polaris — 9950X3D, RTX 5090, 96GB, 47 Ollama models. Pushes via git (DataScienceBioLab). No SSH from mesh. |
 | sporeGate | .3 | ALIVE | Ryzen 5 6600H, 27GB, 929GB NVMe. DNS + heart-pull + THE FORGE: plasmidBin depot (harvest/cascade timers) — builds primals; heavy builds belong on northGate. NOT a zombie. |
-| grapheneGate | .170 (DHCP — ADB resolves by serial) | ALIVE | Pixel 8a, GrapheneOS, 37 sensors, USB+WiFi ADB, chimera Tower (bearDog+songBird+skunkBat) on localhost |
+| grapheneGate | 192.168.9.203 (Gaia WiFi) | ALIVE | Pixel 8a, GrapheneOS Android 17, Tensor G3, 7.5GB RAM, 128GB, 43 sensors, wireless ADB :36135, Termux, GAIA'S ROVER |
 | graftGate | .107 | OPEN | Mac Mini (Apple Silicon) |
 | southGate | .148 | OPEN | Ubuntu, Intel NUC |
 | ironGate | .237 | OPEN | Ubuntu, Intel NUC |
