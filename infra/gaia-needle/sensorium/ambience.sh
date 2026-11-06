@@ -147,6 +147,11 @@ case "${1:-help}" in
     adaptive)
         adaptive
         ;;
+    snake|snakejazz|snake-jazz)
+        echo "🐍🎷 Snake Jazz — ssss ss ss ssss ss ss"
+        SNAKE_FILE="/data/data/com.termux/files/home/gaia/sounds/snake-jazz-loop.ogg"
+        tapi "termux-media-player play $SNAKE_FILE"
+        ;;
     stop)
         echo ">>> Silence"
         tapi "termux-media-player stop"
@@ -174,6 +179,7 @@ case "${1:-help}" in
         echo "  rain           Rain sounds"
         echo "  forest         Forest ambience"
         echo "  ocean          Ocean waves"
+        echo "  snake          🐍🎷 Snake Jazz (ssss ss ss)"
         echo "  adaptive       Auto-selects based on time/mood"
         echo "  stop           Silence"
         echo "  volume N       Set volume (0-15)"
