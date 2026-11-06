@@ -171,3 +171,46 @@ for ap in sorted(data, key=lambda x: x.get('rssi',-100), reverse=True)[:10]:
         echo "  --sensors        List all sensor names"
         ;;
 esac
+
+
+# ─── Alexa/Smart Home Voice Bridge ───
+# Usage: ./gaia-daemon.sh --alexa "turn on the living room lights"
+# Gaia speaks through the Pixel speaker → Alexa hears → Alexa executes
+alexa_bridge() {
+    local CMD="$1"
+    echo ">>> Gaia → Alexa: '$CMD'"
+    # Wake word + command
+    tapi "termux-tts-speak 'Alexa, $CMD'"
+}
+
+# ─── Temperature: Three-Scale Reading ───
+three_temp() {
+    ensure || return 1
+    local THERMALS=$(adb -s "$NEEDLE" shell "$SU -c '
+        for tz in /sys/class/thermal/thermal_zone*; do
+            TYPE=\$(cat \$tz/type 2>/dev/null)
+            TEMP=\$(cat \$tz/temp 2>/dev/null)
+            [ -n \"\$TEMP\" ] && [ \"\$TEMP\" != \"0\" ] && echo \"\$TYPE:\$TEMP\"
+        done
+    '" 2>/dev/null)
+
+    echo "$THERMALS" | python3 -c "
+import sys
+lines = [l.strip() for l in sys.stdin if ':' in l.strip()]
+temps = {}
+for line in lines:
+    parts = line.split(':')
+    if len(parts) == 2:
+        try:
+            temps[parts[0]] = int(parts[1]) / 1000.0
+        except: pass
+
+if temps:
+    avg_c = sum(temps.values()) / len(temps)
+    avg_k = avg_c + 273.15
+    avg_f = avg_c * 9/5 + 32
+    print(f'Organism Temperature:')
+    print(f'  {avg_k:.1f} K  |  {avg_c:.1f} °C  |  {avg_f:.1f} °F')
+    print(f'  ({len(temps)} thermal zones)')
+"
+}
