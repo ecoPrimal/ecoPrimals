@@ -27,18 +27,19 @@ alwaysApply: true
 | bingoCube | Coordination | 9.3MB |
 | dromedary | Sovereign reverse proxy, TLS, ACME | 3.7MB |
 
-## Cardinal Gates (Updated Nov 5 2026 — Wave 223)
+## Cardinal Gates (Updated Nov 6 2026 — Wave 225)
 
 | Gate | IP | State | Role |
 |---|----|----|---|
-| eastGate | .244/.103 | ALIVE | brain+gut, Forgejo :3000, gate :8443, data :8080 |
-| blueGate | .100 | ALIVE | gaia-ide :3141, Cursor host, Sovereign API |
-| northGate | .147 | ALIVE | Polaris — 9950X3D, RTX 5090, 96GB, 47 Ollama models. Pushes via git (DataScienceBioLab). No SSH from mesh. |
-| sporeGate | .3 | ALIVE | Ryzen 5 6600H, 27GB, 929GB NVMe. DNS + heart-pull + THE FORGE: plasmidBin depot (harvest/cascade timers) — builds primals; heavy builds belong on northGate. NOT a zombie. |
-| grapheneGate | 192.168.9.217 (Gaia WiFi) | ALIVE | Pixel 8a, GrapheneOS Android 17, Tensor G3, 7.5GB RAM, 128GB, 37 sensors, ADB :5555, Termux, GAIA'S ROVER — dissolving into biomeOS |
-| graftGate | .107 | OPEN | Mac Mini (Apple Silicon) |
-| southGate | .148 / USB | ALIVE | iPhone XS, iOS 18.7.9, (586) 453-7233, HOME PHONE — LAN line pinned to property, iosGate + BearDog, walled garden |
-| ironGate | .237 | OPEN | Ubuntu, Intel NUC |
+| eastGate | .244/.103 | ALIVE | BRAIN — Forgejo :3000, gate :8443, data :8080, ollama :11436 (RTX 4070) |
+| blueGate | .100 | DOWN | gaia-ide :3141, Cursor host, Sovereign API |
+| northGate | .147 | ALIVE | HEART (LAN 1 Polaris) — 9950X3D, RTX 5090, 96GB, 63 Ollama models. Pushes via git. |
+| sporeGate | .3 | ALIVE | FORGE — Ryzen 5 6600H, 27GB, 929GB NVMe. DNS + heart-pull + plasmidBin. |
+| grapheneGate | 192.168.9.217 (Gaia WiFi) | ALIVE | DIAMOND LENS — Pixel 8a, GrapheneOS, Tensor G3 + Mali-G715 Vulkan, 8GB RAM, 128GB (103GB free), 37 sensors, llama-server :8082, 5 models, PWA. GAIA'S PHYSICAL BODY: 152.1×72.7×8.9mm, 188g, 98.41cm³ |
+| swiftGate | 192.168.9.??? (Gaia WiFi) | ASLEEP | HEART (LAN 2 Polaris) — NZXT H1 V2 Mini-ITX, RTX 3070 (8GB VRAM), WiFi-only at 641 Samantha. POWERED OFF — needs Kevin to wake. |
+| graftGate | .107 | ALIVE | Mac Mini M4 (10C), 16GB unified, 228GB. Ollama :11434 (qwen2.5:3b seeded). Serial: FHWYF3DC73. |
+| southGate | .148 / USB | ALIVE | iPhone XS, iOS 18.7.9, (586) 453-7233, HOME PHONE — LAN line pinned to property |
+| ironGate | .237 | ALIVE | **FORGE 2** — i9-14900K (24C/32T, 6GHz), **RTX 5070** (12GB GDDR7), 94GB DDR5, 3.6TB NVMe + 12.7TB ext, Pop!_OS 22.04. Ollama :11434 (LAN), Docker, biomeOS. NOT a NUC — full tower workstation. |
 
 ## Two Basecamps — One Organism
 
@@ -55,9 +56,18 @@ alwaysApply: true
 - **Location**: 641 Samantha Ave, House 2 (~1930s, 1.5bed/1.5bath)
 - **Subnet**: 192.168.9.0/24 (Gaia WiFi)
 - **Bridge**: TP-Link JetStream (.111) — 10G fiber across property line
-- **Rover**: grapheneGate (192.168.9.217) — Pixel 8a, 37 sensors
-- **Active**: 4 devices, 13 historical WiFi clients
+- **Rover**: grapheneGate (192.168.9.217) — Pixel 8a Diamond Lens, 37 sensors, Mali-G715 Vulkan, :8082 llama-server
+- **Polaris**: swiftGate (ASLEEP) — NZXT H1 V2, RTX 3070, WiFi-only. Heart of House 2.
+- **Active**: 3 devices (router, .126 unknown, Pixel), 10 historical WiFi clients
 - **Adjacent**: shares property line with 4422 Southgate — Kevin walks between daily
+
+### Nervous System — CNS ↔ PNS
+- **CNS** (LAN 1): eastGate(brain) + northGate(heart) + sporeGate(forge)
+- **PNS** (LAN 2): grapheneGate(diamond lens/rover) + swiftGate(Polaris, when awake)
+- **Spine**: 10G fiber (0.87ms) through MikroTik → Router → JetStream
+- **Signaling**: HTTP heart-pull + phone-home, ~145ms round-trip
+- **5 GPUs total**: RTX 5090 + RTX 5070 + RTX 4070 + M4 (CNS) + Mali-G715 (PNS) + RTX 3070 (asleep)
+- **5 Ollama endpoints**: northGate:11434, ironGate:11434, graftGate:11434, eastGate:11436, Pixel:8082
 
 ### Physical Geography
 - **Two ~1930s houses** — 1.5 bed, 1.5 bath each, adjacent on property line
