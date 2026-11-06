@@ -1203,5 +1203,18 @@
       "age_min": 17.8,
       "size": 7147
     }
-  ]
+  ],
+  "lewis_clark": {
+    "ts": "2026-11-06T08:19:15.531101+00:00",
+    "expedition": "Lewis (grapheneGate/Pixel) & Clark (eastGate/RTX 4070)",
+    "tether": "USB-C ADB",
+    "status": "ACTIVE"
+  },
+  "eastgate_gpu": {
+    "gpu": "RTX 4070",
+    "models": 23,
+    "tok_s": 89.9,
+    "port": 11436,
+    "status": "ONLINE"
+  }
 }
