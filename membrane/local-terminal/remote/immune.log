@@ -106,3 +106,75 @@ AttributeError: 'list' object has no attribute 'get'
 Traceback (most recent call last):
   File "<stdin>", line 168, in <module>
 AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:07:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:14:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:21:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:28:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:35:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:42:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:49:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T21:56:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:00:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:07:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:14:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:21:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:28:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:35:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:42:02Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:49:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T22:56:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T23:00:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
