@@ -99,10 +99,22 @@
         "192.168.4.176",
         "192.168.4.203"
       ],
-      "role": "SPACE_DECK",
+      "role": "DOCK_FACE",
       "state": "INGESTED",
       "rssi_dbm": -16,
-      "latency_ms": 0.908
+      "latency_ms": 0.908,
+      "mac_wired": "10:82:86:2b:ec:19",
+      "mac_wifi": "14:13:33:d6:96:09",
+      "ip_wired": "192.168.4.176",
+      "ip_wifi": "192.168.9.203",
+      "hostname_dhcp": "steamdeck",
+      "bridge_port_wired": 3,
+      "bridge_port_wifi": "br-guest port 2",
+      "dual_homed": true,
+      "steam_auth": "76561198002558137 (Tamison)",
+      "null_battery": true,
+      "dev_mode": true,
+      "beta_os": true
     }
   ],
   "edges": [
@@ -186,5 +198,6 @@
       "ip": "192.168.4.238",
       "vendor": "Nest Labs"
     }
-  }
+  },
+  "updated": "2026-11-06T19:05:08.777350Z"
 }

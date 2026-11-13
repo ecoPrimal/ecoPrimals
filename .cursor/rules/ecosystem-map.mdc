@@ -40,7 +40,7 @@ alwaysApply: true
 | graftGate | .107 | ALIVE | Mac Mini M4 (10C), 16GB unified, 228GB. Ollama :11434 (qwen2.5:3b seeded). Serial: FHWYF3DC73. |
 | southGate | .148 / USB | ALIVE | iPhone XS, iOS 18.7.9, (586) 453-7233, HOME PHONE — LAN line pinned to property |
 | ironGate | .237 | ALIVE | **FORGE 2** — i9-14900K (24C/32T, 6GHz), **RTX 5070** (12GB GDDR7), 94GB DDR5, 3.6TB NVMe + 12.7TB ext, Pop!_OS 22.04. Ollama :11434 (LAN), Docker, biomeOS. NOT a NUC — full tower workstation. |
-| deckGate | .??? (WiFi) | MOUNTING | **FACE** — Steam Deck v1, AMD Aerith (Zen 2 + RDNA 2, 1.6 TFLOPS), 16GB LPDDR5, 512GB NVMe. Dead battery = permanent USB-C passthrough. 7" 1280×800 touch LCD. SteamOS 3.x (Arch). Gaia's mounted display in House 1. |
+| deckGate | .176 (wired) / .203 (WiFi) | ALIVE | **FACE** — Steam Deck v1, AMD Aerith (Zen 2 + RDNA 2, 1.6 TFLOPS), 16GB LPDDR5, 512GB NVMe. Dead battery = permanent USB-C passthrough. 7" 1280×800 touch LCD. SteamOS 3.x (Arch). Gaia's mounted display in House 1. |
 
 ## Two Basecamps — One Organism
 
