@@ -186,3 +186,7 @@ AttributeError: 'list' object has no attribute 'get'
 Traceback (most recent call last):
   File "<stdin>", line 168, in <module>
 AttributeError: 'list' object has no attribute 'get'
+[2026-11-13T23:21:01Z] immune-activate start
+Traceback (most recent call last):
+  File "<stdin>", line 168, in <module>
+AttributeError: 'list' object has no attribute 'get'
