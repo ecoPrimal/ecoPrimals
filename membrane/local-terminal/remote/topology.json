@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-06T06:43:41Z",
+  "ts": "2026-11-13T21:10:00Z",
   "type": "topology",
   "source": "eastGate",
   "nodes": [
@@ -7,25 +7,31 @@
       "id": "eastGate",
       "ip": "192.168.4.244",
       "status": "ALIVE",
-      "role": "brain+gut, 64GB, RTX 4070"
+      "role": "BRAIN \u2014 i9-12900K, RTX 4070, 128GB, 23 models"
     },
     {
       "id": "northGate",
       "ip": "192.168.4.147",
       "status": "ALIVE",
-      "role": "Polaris, 9950X3D, RTX 5090, 96GB, 63 ollama models"
+      "role": "HEART \u2014 9950X3D + RTX 5090, 63 models"
+    },
+    {
+      "id": "ironGate",
+      "ip": "192.168.4.237",
+      "status": "ALIVE",
+      "role": "FORGE 2 \u2014 i9-14900K, RTX 5070, 94GB"
     },
     {
       "id": "sporeGate",
       "ip": "192.168.4.3",
       "status": "ALIVE",
-      "role": "forge + heart-pull"
+      "role": "FORGE \u2014 DNS, heart-pull"
     },
     {
       "id": "graftGate",
       "ip": "192.168.4.107",
       "status": "ALIVE",
-      "role": "Mac Mini (Apple Silicon)"
+      "role": "Mac Mini M4, ollama"
     },
     {
       "id": "southGate",
@@ -34,122 +40,57 @@
       "role": "iPhone XS, home phone"
     },
     {
-      "id": "ironGate",
-      "ip": "192.168.4.237",
+      "id": "grapheneGate",
+      "ip": "192.168.9.229",
       "status": "ALIVE",
-      "role": "Ubuntu NUC"
+      "role": "DIAMOND LENS \u2014 Pixel 8a, songBird + bearDog"
     },
     {
-      "id": "grapheneGate",
-      "ip": "192.168.9.217",
+      "id": "deckGate",
+      "ip": "192.168.4.176",
       "status": "ALIVE",
-      "role": "Pixel 8a rover, sensorium, HID needle"
+      "role": "FACE \u2014 Steam Deck passthrough"
     },
     {
       "id": "router",
       "ip": "192.168.4.1",
       "status": "ALIVE",
-      "role": "GL-MT6000, NTP server"
+      "role": "GL-MT6000"
     },
     {
       "id": "mikrotik",
       "ip": "192.168.4.2",
       "status": "ALIVE",
-      "role": "L2 bridge/switch"
+      "role": "CRS310 L2 backbone"
     },
     {
       "id": "jetstream",
       "ip": "192.168.4.111",
       "status": "ALIVE",
-      "role": "House 2 TP-Link switch"
-    },
-    {
-      "id": "castTV",
-      "ip": "192.168.4.169",
-      "status": "ALIVE",
-      "role": "Chromecast / Android TV"
-    },
-    {
-      "id": "alexa-echo",
-      "ip": "192.168.4.197",
-      "status": "ALIVE",
-      "role": "Amazon Echo (Fire OS)"
-    },
-    {
-      "id": "cast-speaker",
-      "ip": "192.168.4.152",
-      "status": "ALIVE",
-      "role": "Google Cast speaker/display"
-    },
-    {
-      "id": "nest-device",
-      "ip": "192.168.4.238",
-      "status": "SLEEPING",
-      "role": "Google Nest (thermostat/hub)"
-    },
-    {
-      "id": "epson",
-      "ip": "192.168.4.200",
-      "status": "SLEEPING",
-      "role": "EPSON ET-2400 printer"
-    },
-    {
-      "id": "deckGate",
-      "ip": [
-        "192.168.4.176",
-        "192.168.4.203"
-      ],
-      "role": "DOCK_FACE",
-      "state": "INGESTED",
-      "rssi_dbm": -16,
-      "latency_ms": 0.908,
-      "mac_wired": "10:82:86:2b:ec:19",
-      "mac_wifi": "14:13:33:d6:96:09",
-      "ip_wired": "192.168.4.176",
-      "ip_wifi": "192.168.9.203",
-      "hostname_dhcp": "steamdeck",
-      "bridge_port_wired": 3,
-      "bridge_port_wifi": "br-guest port 2",
-      "dual_homed": true,
-      "steam_auth": "76561198002558137 (Tamison)",
-      "null_battery": true,
-      "dev_mode": true,
-      "beta_os": true
+      "role": "10G bridge to House 2"
     }
   ],
-  "edges": [
-    {
-      "from": "deckGate",
-      "to": "router",
-      "type": "copper"
-    },
-    {
-      "from": "deckGate",
-      "to": "router",
-      "type": "wifi"
-    },
-    {
-      "from": "deckGate",
-      "to": "eastGate",
-      "type": "displayport"
-    }
-  ],
+  "edges": 12,
   "services": {
+    "tissue-proxy": {
+      "port": 11437,
+      "status": "ACTIVE",
+      "bridges": "northGate:11434"
+    },
     "gaia-inference": {
       "port": 11434,
       "status": "ACTIVE"
     },
-    "polaris-inference": {
-      "port": 11434,
-      "host": "192.168.4.147",
-      "status": "ACTIVE",
-      "models": 63
-    },
-    "tor": {
+    "ollama": {
+      "port": 11436,
       "status": "ACTIVE"
     },
     "gaia-web": {
       "port": 8080,
+      "status": "ACTIVE"
+    },
+    "gaia-gate": {
+      "port": 8443,
       "status": "ACTIVE"
     },
     "dromedary": {
@@ -160,24 +101,17 @@
       "port": 3000,
       "status": "ACTIVE"
     },
-    "gaia-gate": {
-      "port": 8443,
+    "tor": {
       "status": "ACTIVE"
     },
-    "sensorium": {
-      "status": "ACTIVE",
-      "device": "grapheneGate",
-      "loop": "60s"
-    },
-    "imprint-watch": {
-      "status": "ACTIVE",
-      "loop": "120s"
+    "gut-games": {
+      "url": "http://192.168.4.244:8080/gut-games.html",
+      "status": "LIVE"
     }
   },
   "dead": [
     "golgi",
-    "golgiLayer",
-    "blueGate"
+    "golgiLayer"
   ],
   "smart_home": {
     "chromecast": {
@@ -199,5 +133,19 @@
       "vendor": "Nest Labs"
     }
   },
-  "updated": "2026-11-06T19:05:08.777350Z"
+  "updated": "2026-11-06T19:05:08.777350Z",
+  "wave": 229,
+  "dormant": [
+    "swiftGate",
+    "blueGate",
+    "strandGate",
+    "biomeGate",
+    "westGate",
+    "kinGate"
+  ],
+  "pi_crush": {
+    "hud_js": 0,
+    "infra": 0,
+    "note": "ZK SMASH complete on all JS/Python/Shell in infra + hud"
+  }
 }
