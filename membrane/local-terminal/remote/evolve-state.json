@@ -1,20 +1,20 @@
 {
-  "ts": "2026-11-13T15:00:18-05:00",
-  "total_files": 46071,
+  "ts": "2026-11-13T16:00:17-05:00",
+  "total_files": 46077,
   "stages": {
     "banana": 2173,
-    "flatworm": 11027,
-    "jellyfish": 19686,
-    "centipede": 2152,
+    "flatworm": 11029,
+    "jellyfish": 19687,
+    "centipede": 2154,
     "millipede": 8953,
-    "spider": 1598,
+    "spider": 1599,
     "vertebrate": 482
   },
   "split": {
-    "invertebrate": 30791,
+    "invertebrate": 30794,
     "vertebrate": 482,
-    "ratio": 63.8817,
-    "pi_remainder": 0.334176
+    "ratio": 63.8879,
+    "pi_remainder": 0.336150
   },
   "dominant": "jellyfish",
   "missing": "spider",
