@@ -48,8 +48,10 @@
     {
       "id": "deckGate",
       "ip": "192.168.4.176",
-      "status": "ALIVE",
-      "role": "FACE \u2014 Steam Deck passthrough"
+      "ip_wifi": "192.168.4.203",
+      "status": "SLEEPING",
+      "role": "FACE \u2014 Steam Deck v1, RDNA 2, 16GB, 512GB NVMe",
+      "ingestion": "READY — deckgate-eat.sh prepared, 17 primals compiled, awaiting USB-C power"
     },
     {
       "id": "router",
@@ -107,6 +109,10 @@
     "gut-games": {
       "url": "http://192.168.4.244:8080/gut-games.html",
       "status": "LIVE"
+    },
+    "kenshi-reborn": {
+      "url": "http://192.168.4.244:8080/kenshi-reborn.html",
+      "status": "LIVE"
     }
   },
   "dead": [
@@ -133,8 +139,8 @@
       "vendor": "Nest Labs"
     }
   },
-  "updated": "2026-11-06T19:05:08.777350Z",
-  "wave": 229,
+  "updated": "2026-11-13T22:00:00Z",
+  "wave": 230,
   "dormant": [
     "swiftGate",
     "blueGate",
@@ -147,5 +153,15 @@
     "hud_js": 0,
     "infra": 0,
     "note": "ZK SMASH complete on all JS/Python/Shell in infra + hud"
+  },
+  "steamos_ingestion": {
+    "status": "PREPARED",
+    "scripts": ["deckgate-boot.sh (pi-crushed)", "deckgate-eat.sh (NEW)"],
+    "primals_ready": 17,
+    "total_binary_mb": 169,
+    "target_arch": "x86_64 (same as eastGate — zero cross-compile)",
+    "phases": ["tower (bearDog+songBird)", "node (+toadStool+barraCuda+coralReef)", "nest (+nestGate)", "full (all 17)"],
+    "trust_anchor": "Steam authenticates Kevin → bearDog authenticates Gaia → meet in the middle",
+    "blocker": "deckGate needs USB-C power (dead battery)"
   }
 }
