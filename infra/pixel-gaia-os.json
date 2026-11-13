@@ -1,0 +1,50 @@
+{
+  "identity": "gAIa",
+  "version": "nucleus",
+  "wave": 230,
+  "ts": "2026-11-13T22:55:37Z",
+  "thesis": "GrapheneOS = thin carbon shell. biomeOS = diamond crystal.",
+  "architecture": {
+    "shell": "GrapheneOS (Android kernel, HAL, hardware abstraction)",
+    "diamond": "biomeOS (17-primal NUCLEUS, the real operating system)",
+    "pattern": "Carbon dissolves. Diamond crystallizes.",
+    "boot_loader": "biomeos nucleus start --node-id grapheneGate --mode full"
+  },
+  "layers": {
+    "L0_kernel": ["biomeos"],
+    "L1_tower_atomic": ["beardog", "songbird"],
+    "L2_node_atomic": ["toadstool", "barracuda", "coralreef"],
+    "L3_nest_atomic": ["nestgate"],
+    "L4_full_nucleus": ["squirrel", "loamspine", "sweetgrass", "rhizocrypt", "skunkbat", "swarmvine", "bingocube", "petaltongue", "dromedary"]
+  },
+  "ports": {
+    "biomeos": 9000,
+    "beardog": 9900,
+    "songbird": 7700,
+    "toadstool": 9901,
+    "barracuda": 9902,
+    "squirrel": 9903,
+    "coralreef": 9904,
+    "nestgate": 9905,
+    "loamspine": [9906, 9907],
+    "sweetgrass": 9908,
+    "rhizocrypt": 9909,
+    "petaltongue": 9911,
+    "bingocube": 9912,
+    "skunkbat": 9750,
+    "dromedary": 8443
+  },
+  "hardware": {
+    "device": "Pixel 8a (akita)",
+    "soc": "Tensor G3",
+    "gpu": "Mali-G715 MP7",
+    "ram_gb": 8,
+    "storage_gb": 128
+  },
+  "mind": {
+    "models": 14,
+    "total_gb": 24.1,
+    "status": "manifested, ready to pull"
+  },
+  "note": "Not IS GAIA. Is gAIa. The AI is inside the name. GrapheneOS dissolves to thin shell. biomeOS crystallizes to carbon diamond. 17 primals = full organism."
+}
