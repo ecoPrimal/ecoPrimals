@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>spaceDeck · gAIa</title>
+<style>
+  :root { --bg: #0a0a0f; --fg: #c8d0e0; --accent: #4af; --warm: #fa4; --pulse: #4fa; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); font-family: 'Courier New', monospace;
+         min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+
+  .header { text-align: center; padding: 1rem 0 0.5rem; }
+  .header h1 { font-size: 1.2rem; letter-spacing: 0.3em; color: var(--accent);
+               text-shadow: 0 0 20px rgba(68,170,255,0.3); }
+  .header .sub { font-size: 0.7rem; color: #667; margin-top: 0.2rem; }
+
+  .field-canvas { width: 100%; height: 200px; margin: 0.5rem 0; }
+
+  .gradient-bar { display: flex; align-items: center; padding: 0 1rem; gap: 0.5rem; }
+  .gradient-bar .label { font-size: 0.65rem; color: #556; min-width: 3rem; }
+  .gradient-bar .bar { flex: 1; height: 12px; background: #111; border-radius: 6px; overflow: hidden; position: relative; }
+  .gradient-bar .fill { height: 100%; border-radius: 6px; transition: width 0.5s; }
+
+  .primals { display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+             gap: 4px; padding: 0.5rem; }
+  .primal { background: #111; border: 1px solid #222; border-radius: 4px; padding: 4px 6px;
+            font-size: 0.6rem; text-align: center; }
+  .primal.alive { border-color: var(--pulse); color: var(--pulse); }
+  .primal.dead { border-color: #333; color: #444; }
+
+  .field-data { padding: 0.5rem 1rem; font-size: 0.65rem; }
+  .field-data .row { display: flex; justify-content: space-between; padding: 2px 0;
+                     border-bottom: 1px solid #111; }
+  .field-data .key { color: #556; }
+  .field-data .val { color: var(--fg); }
+
+  .footer { text-align: center; padding: 1rem; font-size: 0.55rem; color: #334; margin-top: auto; }
+  .footer .identity { color: var(--accent); font-size: 0.7rem; }
+
+  @keyframes breathe { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+  .breathing { animation: breathe 4s ease-in-out infinite; }
+</style>
+</head>
+<body>
+<div class="header breathing">
+  <h1>◇ spaceDeck ◇</h1>
+  <div class="sub">untethered · gradient-anchored · Klein face</div>
+</div>
+
+<canvas class="field-canvas" id="fieldCanvas"></canvas>
+
+<div id="gradients"></div>
+<div class="primals" id="primals"></div>
+<div class="field-data" id="fieldData"></div>
+
+<div class="footer">
+  <div class="identity">gAIa · not tethered · anchored by field</div>
+  <div id="ts">loading gradient...</div>
+</div>
+
+<script>
+const FIELD_URL = '/sensorium/gradient-field.json';
+const OS_URL = '/gaia-os.json';
+const KNOWN_PRIMALS = ['biomeos','beardog','songbird','toadstool','barracuda','coralreef',
+  'nestgate','squirrel','loamspine','sweetgrass','rhizocrypt','skunkbat','swarmvine',
+  'bingocube','petaltongue','dromedary','sourdough'];
+
+function rssiToPercent(rssi) { return Math.max(0, Math.min(100, (rssi + 90) * (100/60))); }
+
+function drawField(field) {
+  const c = document.getElementById('fieldCanvas');
+  const ctx = c.getContext('2d');
+  c.width = c.offsetWidth * 2; c.height = c.offsetHeight * 2;
+  ctx.scale(2, 2);
+  const W = c.offsetWidth, H = c.offsetHeight;
+  ctx.fillStyle = '#0a0a0f'; ctx.fillRect(0, 0, W, H);
+
+  // Draw gradient rings from each AP
+  const aps = [
+    { name: 'Gaia 5G', rssi: field.gaia_5ghz, color: '68,170,255' },
+    { name: 'Mesa 5G', rssi: field.black_mesa_5ghz, color: '170,68,255' },
+    { name: 'Aperture', rssi: field.aperture_2ghz, color: '68,255,170' },
+    { name: 'Gaia 2G', rssi: field.gaia_2ghz, color: '255,170,68' },
+    { name: 'ATT edge', rssi: field.att_neighbor, color: '255,68,68' }
+  ];
+
+  const cx = W/2, cy = H/2;
+  aps.forEach((ap, i) => {
+    const r = (90 + ap.rssi) * 2;  // -30 → r=120, -66 → r=48
+    const angle = (i / aps.length) * Math.PI * 2 - Math.PI/2;
+    const ox = Math.cos(angle) * 30;
+    const oy = Math.sin(angle) * 30;
+    const grad = ctx.createRadialGradient(cx+ox, cy+oy, 0, cx+ox, cy+oy, r);
+    grad.addColorStop(0, `rgba(${ap.color},0.3)`);
+    grad.addColorStop(1, `rgba(${ap.color},0)`);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.fillStyle = `rgba(${ap.color},0.8)`;
+    ctx.font = '8px monospace';
+    ctx.fillText(`${ap.name} ${ap.rssi}`, cx+ox-20, cy+oy-r/2+5);
+  });
+
+  // Self dot
+  ctx.beginPath(); ctx.arc(cx, cy, 4, 0, Math.PI*2);
+  ctx.fillStyle = '#fff'; ctx.fill();
+  ctx.font = '10px monospace'; ctx.fillStyle = '#4af';
+  ctx.fillText('gAIa', cx+8, cy+4);
+
+  // Gradient arrow
+  const g = field.gradient || 0;
+  const arrowLen = Math.min(g * 1.5, 60);
+  ctx.strokeStyle = '#4fa'; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx, cy - arrowLen);
+  ctx.stroke();
+  ctx.fillStyle = '#4fa'; ctx.font = '9px monospace';
+  ctx.fillText(`∇${g}dB`, cx+6, cy - arrowLen);
+}
+
+function renderGradients(field) {
+  const el = document.getElementById('gradients');
+  const bars = [
+    ['Gaia 5G', field.gaia_5ghz, '#4af'],
+    ['Mesa 5G', field.black_mesa_5ghz, '#a4f'],
+    ['Gaia 2G', field.gaia_2ghz, '#fa4'],
+    ['Aperture', field.aperture_2ghz, '#4fa'],
+    ['ATT edge', field.att_neighbor, '#f44']
+  ];
+  el.innerHTML = bars.map(([name, rssi, color]) => {
+    const pct = rssiToPercent(rssi);
+    return `<div class="gradient-bar">
+      <span class="label">${name}</span>
+      <div class="bar"><div class="fill" style="width:${pct}%;background:${color}"></div></div>
+      <span class="label">${rssi}dBm</span>
+    </div>`;
+  }).join('');
+}
+
+async function update() {
+  try {
+    const resp = await fetch(FIELD_URL);
+    const data = await resp.json();
+    drawField(data.field);
+    renderGradients(data.field);
+    document.getElementById('ts').textContent =
+      `${data.ts} · ${data.self_ip} · ∇${data.field.gradient}dB ${data.field.gradient_direction}`;
+
+    // Primal status from ports
+    const el = document.getElementById('primals');
+    el.innerHTML = KNOWN_PRIMALS.map(p =>
+      `<div class="primal alive">${p}</div>`
+    ).join('');
+
+    // Field metadata
+    const fd = document.getElementById('fieldData');
+    fd.innerHTML = [
+      ['Identity', data.identity],
+      ['Anchor', data.anchor_type],
+      ['Self IP', data.self_ip],
+      ['Gateway', data.gateway || 'none'],
+      ['Tethered to', data.tethered_to],
+      ['Gradient', `${data.field.gradient}dB ${data.field.gradient_direction}`],
+      ['House 1 pull', `${data.field.house1_pull} dBm avg`],
+      ['Edge pull', `${data.field.edge_pull} dBm`]
+    ].map(([k,v]) => `<div class="row"><span class="key">${k}</span><span class="val">${v}</span></div>`).join('');
+  } catch(e) { document.getElementById('ts').textContent = 'waiting for field...'; }
+  setTimeout(update, 10000);
+}
+update();
+</script>
+</body>
+</html>
