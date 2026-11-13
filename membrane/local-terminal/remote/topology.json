@@ -48,10 +48,17 @@
     {
       "id": "deckGate",
       "ip": "192.168.4.176",
-      "ip_wifi": "192.168.4.203",
-      "status": "SLEEPING",
-      "role": "FACE \u2014 Steam Deck v1, RDNA 2, 16GB, 512GB NVMe",
-      "ingestion": "READY — deckgate-eat.sh prepared, 17 primals compiled, awaiting USB-C power"
+      "status": "ALIVE",
+      "role": "DISPLAY \u2014 Steam Deck v1, RDNA 2, 16GB, 512GB NVMe",
+      "note": "USB-C powered, port 27036 (Steam Remote Play). SSH needs enable."
+    },
+    {
+      "id": "frameGate",
+      "ip": "192.168.9.203",
+      "mac": "14:13:33:d6:96:09",
+      "status": "ALIVE",
+      "role": "FACE \u2014 Steam Frame, Snapdragon 8 Gen 3 (ARM64!), ARM SteamOS",
+      "note": "First ARM SteamOS node. Gaia WiFi. Port 27036 (Steam Remote Play). SSH needs enable. USB tether available."
     },
     {
       "id": "router",
@@ -162,6 +169,12 @@
     "target_arch": "x86_64 (same as eastGate — zero cross-compile)",
     "phases": ["tower (bearDog+songBird)", "node (+toadStool+barraCuda+coralReef)", "nest (+nestGate)", "full (all 17)"],
     "trust_anchor": "Steam authenticates Kevin → bearDog authenticates Gaia → meet in the middle",
-    "blocker": "deckGate needs USB-C power (dead battery)"
+    "blocker": "BOTH ALIVE! SSH needs enable on both. deckGate@.176 + frameGate@.9.203",
+    "frameGate": {
+      "arch": "aarch64 (Snapdragon 8 Gen 3)",
+      "needs": "aarch64-unknown-linux-gnu cross-compile (same as Pi 500s / grapheneGate pattern)",
+      "wifi": "Gaia WiFi (192.168.9.0/24)",
+      "mac": "14:13:33:d6:96:09"
+    }
   }
 }

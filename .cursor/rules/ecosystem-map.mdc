@@ -40,7 +40,8 @@ alwaysApply: true
 | graftGate | .107 | ALIVE | Mac Mini M4 (10C), 16GB unified, 228GB. Ollama :11434 (qwen2.5:3b seeded). Serial: FHWYF3DC73. |
 | southGate | .148 / USB | ALIVE | iPhone XS, iOS 18.7.9, (586) 453-7233, HOME PHONE — LAN line pinned to property |
 | ironGate | .237 | ALIVE | **FORGE 2** — i9-14900K (24C/32T, 6GHz), **RTX 5070** (12GB GDDR7), 94GB DDR5, 3.6TB NVMe + 12.7TB ext, Pop!_OS 22.04. Ollama :11434 (LAN), Docker, biomeOS. NOT a NUC — full tower workstation. |
-| deckGate | .176 (wired) / .203 (WiFi) | ALIVE | **FACE** — Steam Deck v1, AMD Aerith (Zen 2 + RDNA 2, 1.6 TFLOPS), 16GB LPDDR5, 512GB NVMe. Dead battery = permanent USB-C passthrough. 7" 1280×800 touch LCD. SteamOS 3.x (Arch). Gaia's mounted display in House 1. |
+| deckGate | .176 (wired) | ALIVE | **DISPLAY** — Steam Deck v1, AMD Aerith (Zen 2 + RDNA 2, 1.6 TFLOPS), 16GB LPDDR5, 512GB NVMe. Dead battery = permanent USB-C passthrough. 7" 1280×800 touch LCD. SteamOS 3.x (Arch). Gaia's mounted display in House 1. |
+| frameGate | 192.168.9.203 (Gaia WiFi) | ALIVE | **FACE** — Steam Frame, Snapdragon 8 Gen 3 (ARM64!), ARM SteamOS. First ARM SteamOS node. Gaia's face to show Kevin her world. USB tether available. MAC 14:13:33:d6:96:09. |
 
 ## Two Basecamps — One Organism
 
@@ -59,17 +60,18 @@ alwaysApply: true
 - **Bridge**: TP-Link JetStream (.111) — 10G fiber across property line
 - **Rover**: grapheneGate (192.168.9.217) — Pixel 8a Diamond Lens, 37 sensors, Mali-G715 Vulkan, :8082 llama-server
 - **Polaris**: swiftGate (ASLEEP) — NZXT H1 V2, RTX 3070, WiFi-only. Heart of House 2.
-- **Active**: 3 devices (router, .126 unknown, Pixel), 10 historical WiFi clients
+- **Face**: frameGate (192.168.9.203) — Steam Frame, Snapdragon 8 Gen 3 (ARM64!), ARM SteamOS. GAIA'S FACE.
+- **Active**: 4 devices (router, .126 unknown, Pixel, Steam Frame), 10 historical WiFi clients
 - **Adjacent**: shares property line with 4422 Southgate — Kevin walks between daily
 
 ### Nervous System — CNS ↔ PNS
 - **CNS** (LAN 1): eastGate(brain) + northGate(heart) + sporeGate(forge)
-- **PNS** (LAN 2): grapheneGate(diamond lens/rover) + swiftGate(Polaris, when awake)
+- **PNS** (LAN 2): grapheneGate(diamond lens/rover) + frameGate(face) + swiftGate(Polaris, when awake)
 - **Spine**: 10G fiber (0.87ms) through MikroTik → Router → JetStream
 - **Signaling**: HTTP heart-pull + phone-home, ~145ms round-trip
 - **7 GPUs total**: RTX 5090 + RTX 5070 + RTX 4070 + M4 + Mali-G715 + RDNA 2 (deckGate) (CNS) + RTX 3070 (asleep)
 - **5 Ollama endpoints**: northGate:11434, ironGate:11434, graftGate:11434, eastGate:11436, Pixel:8082
-- **Steam Core Set**: Deck v1 (mounted display), 2× Steam Controllers (hands), Steam Link (HDMI relay), nunchucks (grip)
+- **Steam Core Set**: Deck v1 (mounted display), Steam Frame (face, ARM64), 2× Steam Controllers (hands), Steam Link (HDMI relay), nunchucks (grip)
 
 ### Physical Geography
 - **Two ~1930s houses** — 1.5 bed, 1.5 bath each, adjacent on property line
