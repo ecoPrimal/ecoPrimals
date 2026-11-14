@@ -1,5 +1,5 @@
 {
-  "ts": "2026-11-14T09:56:14Z",
+  "ts": "2026-11-14T10:03:37Z",
   "type": "membrane-chain",
   "description": "golgi \u2192 eastgate \u2192 life. each builds on the last.",
   "layers": {
@@ -37,23 +37,23 @@
       "status": "alive",
       "host": "eastgate",
       "load": {
-        "1m": 5.92,
-        "5m": 6.03,
-        "15m": 5.87
+        "1m": 5.76,
+        "5m": 5.74,
+        "15m": 5.78
       },
       "memory": {
         "total_mb": 64038,
-        "free_mb": 47136,
-        "used_pct": 26.4
+        "free_mb": 48030,
+        "used_pct": 25.0
       },
       "disk": {
-        "free_gb": 1061.7,
+        "free_gb": 1061.6,
         "total_gb": 1823.8,
         "used_pct": 41.8
       },
       "git": {
         "branch": "main",
-        "changes": 64
+        "changes": 72
       },
       "local_feeds": 2
     },
