@@ -32,7 +32,8 @@
 set -e
 
 # Self-discover — no hardcoded IPs
-GAIA_GATE=$(ip route show default 2>/dev/null | awk '/via/{print $3}' | sed 's/\.1$/.244/' || echo "primals.eco")
+GAIA_GATE=$(ip route show default 2>/dev/null | awk '/via/{print $3; exit}' | sed 's/\.1$/.244/')
+GAIA_GATE="${GAIA_GATE:-primals.eco}"
 GAIA_URL="http://${GAIA_GATE}:8443"
 GAIA_DATA="http://${GAIA_GATE}:8080"
 
