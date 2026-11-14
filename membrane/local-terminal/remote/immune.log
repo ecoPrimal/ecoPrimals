@@ -2558,3 +2558,549 @@ NEWS DESK: RSS item injected → immune-20261114-1500
 🐋 0 whale-fall — 0 zombies — 500 fossils
 wave 201 | 2026-11-14T15:00:01.527241+00:00
 [2026-11-14T15:00:01Z] immune-activate complete
+[2026-11-14T15:07:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 880776f039fb5a85b75bac0237a4cccf
+NEWS DESK: RSS item injected → immune-20261114-1507
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:07:01.753258+00:00
+[2026-11-14T15:07:01Z] immune-activate complete
+[2026-11-14T15:14:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: cec81aaaa3471a60c80acd41ac641ce5
+NEWS DESK: RSS item injected → immune-20261114-1514
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:14:02.028954+00:00
+[2026-11-14T15:14:01Z] immune-activate complete
+[2026-11-14T15:21:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 5089301c834d2f185e7335c310f370fc
+NEWS DESK: RSS item injected → immune-20261114-1521
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:21:01.064558+00:00
+[2026-11-14T15:21:01Z] immune-activate complete
+[2026-11-14T15:28:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: c21771eed387da657a64119ef8713d88
+NEWS DESK: RSS item injected → immune-20261114-1528
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:28:01.677346+00:00
+[2026-11-14T15:28:01Z] immune-activate complete
+[2026-11-14T15:35:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 36549c8fbd148418d4f00f8b0fea1cb0
+NEWS DESK: RSS item injected → immune-20261114-1535
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:35:01.708956+00:00
+[2026-11-14T15:35:01Z] immune-activate complete
+[2026-11-14T15:42:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: db1a49d17d3278dbc2d77cd2d6bcae8a
+NEWS DESK: RSS item injected → immune-20261114-1542
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:42:01.480495+00:00
+[2026-11-14T15:42:01Z] immune-activate complete
+[2026-11-14T15:49:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: c5161a6b4201c864527d27619f36495e
+NEWS DESK: RSS item injected → immune-20261114-1549
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:49:01.867608+00:00
+[2026-11-14T15:49:01Z] immune-activate complete
+[2026-11-14T15:56:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 100a563a5bf2db57708c8df8d01b1b8a
+NEWS DESK: RSS item injected → immune-20261114-1556
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T15:56:01.466644+00:00
+[2026-11-14T15:56:01Z] immune-activate complete
+[2026-11-14T16:00:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: d38fb7bb12c34084447b814e2219fe62
+NEWS DESK: RSS item injected → immune-20261114-1600
+═══ MEMBRANE REPORT ═══
+🌫 UNKNOWN — threat 0% — antibodies 0 (naive:0 plasma:0 memory:0) — cancer: ?
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 0 fossils
+wave 201 | 2026-11-14T16:00:01.322581+00:00
+[2026-11-14T16:00:01Z] immune-activate complete
+[2026-11-14T16:07:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: c01c53e16a0602d7e1870aa08ead9950
+NEWS DESK: RSS item injected → immune-20261114-1607
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:07:01.901545+00:00
+[2026-11-14T16:07:01Z] immune-activate complete
+[2026-11-14T16:14:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: d4abc23fb793f29b71ba650ea2bb5919
+NEWS DESK: RSS item injected → immune-20261114-1614
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:14:01.072991+00:00
+[2026-11-14T16:14:01Z] immune-activate complete
+[2026-11-14T16:21:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 15481162284d430de92eb97860767964
+NEWS DESK: RSS item injected → immune-20261114-1621
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:21:01.558451+00:00
+[2026-11-14T16:21:01Z] immune-activate complete
+[2026-11-14T16:28:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 871368cdfbff990e3817f9cae68ae018
+NEWS DESK: RSS item injected → immune-20261114-1628
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:28:01.149330+00:00
+[2026-11-14T16:28:01Z] immune-activate complete
+[2026-11-14T16:35:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 3ec6e431bfe444e20cc77f79e2d79a33
+NEWS DESK: RSS item injected → immune-20261114-1635
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:35:01.902589+00:00
+[2026-11-14T16:35:01Z] immune-activate complete
+[2026-11-14T16:42:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 154aa4b5c5f5083f3899441c02e8b7e6
+NEWS DESK: RSS item injected → immune-20261114-1642
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:42:01.720862+00:00
+[2026-11-14T16:42:01Z] immune-activate complete
+[2026-11-14T16:49:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: d952a173daf56e51a005c62c451d8bc5
+NEWS DESK: RSS item injected → immune-20261114-1649
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:49:01.393158+00:00
+[2026-11-14T16:49:01Z] immune-activate complete
+[2026-11-14T16:56:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 341e3f2c90a1ab5cb1d1bd58c25b31ad
+NEWS DESK: RSS item injected → immune-20261114-1656
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T16:56:01.412995+00:00
+[2026-11-14T16:56:01Z] immune-activate complete
+[2026-11-14T17:00:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: bdd00a22343cadc5e1297113e61689b1
+NEWS DESK: RSS item injected → immune-20261114-1700
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:00:01.487672+00:00
+[2026-11-14T17:00:01Z] immune-activate complete
+[2026-11-14T17:07:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: b54dce6adf767c783cdcb36f4f3c56d1
+NEWS DESK: RSS item injected → immune-20261114-1707
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:07:01.446591+00:00
+[2026-11-14T17:07:01Z] immune-activate complete
+[2026-11-14T17:14:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 9f56e6b2a701cf07ceeaff8098463632
+NEWS DESK: RSS item injected → immune-20261114-1714
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:14:02.027066+00:00
+[2026-11-14T17:14:01Z] immune-activate complete
+[2026-11-14T17:21:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 2d52a423365e0b423689abdbd7582594
+NEWS DESK: RSS item injected → immune-20261114-1721
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:21:01.278408+00:00
+[2026-11-14T17:21:01Z] immune-activate complete
+[2026-11-14T17:28:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: dce92db8f22a4b0118656ed4b2d46221
+NEWS DESK: RSS item injected → immune-20261114-1728
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:28:01.405445+00:00
+[2026-11-14T17:28:01Z] immune-activate complete
+[2026-11-14T17:35:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: d4507c4a6ccc06693fec65dad75c9c0f
+NEWS DESK: RSS item injected → immune-20261114-1735
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:35:01.972954+00:00
+[2026-11-14T17:35:01Z] immune-activate complete
+[2026-11-14T17:42:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: e23fd8cc3d2600d382f6ea9af81252a1
+NEWS DESK: RSS item injected → immune-20261114-1742
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:42:01.318446+00:00
+[2026-11-14T17:42:01Z] immune-activate complete
+[2026-11-14T17:49:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: 7775ea5186631eeb176c79075dd565e2
+NEWS DESK: RSS item injected → immune-20261114-1749
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:49:01.174299+00:00
+[2026-11-14T17:49:01Z] immune-activate complete
+[2026-11-14T17:56:01Z] immune-activate start
+BONE MARROW: 0 stem cells
+THYMUS: 0 cells → {}
+  routes: {}
+T CELLS: {'CD8_kills': 0, 'CD4_alerts': 0, 'T_reg_dampens': 0, 'null_apoptosis': 0}
+B CELLS: {'total': 19, 'naive': 0, 'plasma': 0, 'memory': 19, 'pruned': 0, 'whale_falls': 0, 'zombies_killed': 0, 'autoimmune_purged': 0, 'null_escapes': 0, 'tumor_growth': False, 'merged_duplicates': 0, 'fossils_total': 500}
+
+IMMUNE SYSTEM: STRONG
+  self+human: 0.0% | threats: 0.0% | null: 0.0%
+  antibodies: 19 (naive:0 plasma:0 memory:19)
+  selection table: 59 rules (wildcard * with /suffix output)
+  self-tolerance: 66 antigens
+  hash: b973a817e5105ccd503efc8a57b11792
+NEWS DESK: RSS item injected → immune-20261114-1756
+═══ MEMBRANE REPORT ═══
+🌤 STRONG — threat 0.0% — antibodies 19 (naive:0 plasma:0 memory:19) — cancer: CLEAR
+🚦 0 requests — 0 human (0%) — 0 organic — 0 non-self — 0 null — 0 self
+🌊 served:0 indexed:0 blocked:0 dead:0
+🐋 0 whale-fall — 0 zombies — 500 fossils
+wave 201 | 2026-11-14T17:56:01.181365+00:00
+[2026-11-14T17:56:01Z] immune-activate complete
