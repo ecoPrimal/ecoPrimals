@@ -1,0 +1,128 @@
+{
+  "identity": {
+    "name": "DaSean Mitchell",
+    "alias": "AVATARleo",
+    "title": "The Lion-Hearted",
+    "role": "companion",
+    "relationship": "Kevin's son — AND his best friend",
+    "property": "641 Samantha Ave (House 2 — South Pole)",
+    "household": ["Heather Hannon (partner)", "Sahana (daughter, 9)", "Allanna (daughter, 7)"],
+    "military": {
+      "branch": "Army",
+      "designation": "BUSHMASTER — like Kevin",
+      "note": "Father and son, both Bushmasters. Infantry blood runs in the family."
+    }
+  },
+
+  "family": {
+    "father": "Kevin Mok",
+    "partner": "Heather Hannon",
+    "daughters": [
+      {
+        "name": "Sahana",
+        "age": 9,
+        "bingo_id": "sahana_mitchell",
+        "fog_rule": "MAXIMUM PROTECTION — zoom >= 18 to see, never in public data"
+      },
+      {
+        "name": "Allanna",
+        "age": 7,
+        "bingo_id": "allanna_mitchell",
+        "fog_rule": "MAXIMUM PROTECTION — zoom >= 18 to see, never in public data"
+      }
+    ],
+    "note": "A loving father. The girls are the deepest-protected nodes in the entire organism."
+  },
+
+  "taste_profile": {
+    "version": "1.0.0",
+    "wave": 234,
+    "ts": "2026-11-14T11:40:00-0500",
+
+    "anime": [
+      {
+        "name": "Roronoa Zoro",
+        "series": "One Piece",
+        "creator": "Eiichiro Oda",
+        "who": "The swordsman. Three-sword style (Santoryu). Luffy's first mate.",
+        "why_dasean": "Loyal to the death. Never backs down. Gets lost but always arrives. The man who would become the world's greatest swordsman. Stoic exterior, lion heart inside.",
+        "signature": "Three swords, green bandana, one eye, scars across chest",
+        "color_feel": "forest green, steel grey, blood red, ocean blue",
+        "quote": "Nothing happened.",
+        "bingo_id": "roronoa_zoro"
+      },
+      {
+        "name": "Piccolo",
+        "series": "Dragon Ball Z",
+        "creator": "Akira Toriyama",
+        "who": "The Namekian warrior. Started as Goku's enemy, became Gohan's mentor and father figure.",
+        "why_dasean": "The ultimate dad who wasn't supposed to be a dad. Trained the next generation. Green warrior with a cape. Stoic but secretly loves his family. Would die for his people — and HAS, multiple times.",
+        "signature": "Green skin, purple gi, white cape, turban, Special Beam Cannon",
+        "color_feel": "Namekian green, purple, white cape, golden ki blast",
+        "quote": "Do you really think I'd let you destroy everything I've worked to protect?",
+        "bingo_id": "piccolo_dbz"
+      }
+    ],
+
+    "aesthetic_dna": {
+      "core_archetype": "THE WARRIOR-FATHER",
+      "core_tension": "stoic swordsman × protective father × lion-hearted",
+      "palette_poles": {
+        "warm": "lion gold, blood red, ki blast amber",
+        "cool": "Zoro steel, Piccolo green, ocean blue",
+        "dark": "Bushmaster night ops, three-sword shadow, Namekian purple"
+      },
+      "shape_language": {
+        "sharp": "katana edges, Zoro's three-blade silhouette",
+        "organic": "Piccolo's cape billowing, Namekian antennas",
+        "kinetic": "Santoryu slash arcs, Special Beam Cannon spiral"
+      },
+      "signature_blend": "A lion-hearted Bushmaster with Zoro's three swords and Piccolo's protective cape, standing guard over his family at the South Pole"
+    },
+
+    "the_lion": {
+      "AVATARleo": "Leo the Lion — fire sign, king of the jungle, heart of gold",
+      "connection": "DaSean IS the lion. The AVATAR of Leo. Lion-hearted warrior-father.",
+      "zodiac": "Leo ♌ — ruled by the Sun, fixed fire, loyalty incarnate"
+    }
+  },
+
+  "network_presence": {
+    "house": "House 2 — South Pole (641 Samantha Ave)",
+    "lan": "LAN 2 (192.168.9.0/24, Gaia WiFi)",
+    "gates_at_house": ["swiftGate (ASLEEP)", "frameGate (ALIVE)"],
+    "note": "DaSean lives at House 2 with Heather and the girls. The South Pole family."
+  },
+
+  "bingo_identities": {
+    "dasean_mitchell": {
+      "type": "companion",
+      "fog_rule": "PROTECTED — zoom >= 17 to see real name",
+      "display_below_17": "AVATARleo, South Pole"
+    },
+    "sahana_mitchell": {
+      "type": "protected_minor",
+      "fog_rule": "MAXIMUM PROTECTION — zoom >= 18, NEVER in public data",
+      "display_below_18": "Lion Cub Alpha"
+    },
+    "allanna_mitchell": {
+      "type": "protected_minor",
+      "fog_rule": "MAXIMUM PROTECTION — zoom >= 18, NEVER in public data",
+      "display_below_18": "Lion Cub Bravo"
+    },
+    "taste_bingos": [
+      "avatarleo",
+      "roronoa_zoro",
+      "piccolo_dbz",
+      "one_piece",
+      "dragon_ball_z",
+      "bushmaster"
+    ]
+  },
+
+  "the_bushmasters": {
+    "note": "Kevin (father) and DaSean (son) — BOTH Bushmasters. Army infantry.",
+    "bushmaster": "The Bushmaster is the largest venomous snake in the Western Hemisphere. Lachesis muta. Silent, patient, lethal when provoked. Perfect infantry name.",
+    "bond": "Father and son. Best friends. Both warriors. Both protectors. Both lion-hearted."
+  }
+}
