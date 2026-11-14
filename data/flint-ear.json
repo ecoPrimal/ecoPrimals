@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-14T12:00:02",
+  "sense": "inner-ear",
+  "cycle": 1,
+  "microphone": {
+    "device": "Brio 100 (USB Audio)",
+    "sample_bytes": 64044,
+    "duration_s": 2,
+    "rate_hz": 16000,
+    "channels": 1,
+    "format": "S16_LE"
+  },
+  "conntrack": {
+    "total": 1632,
+    "tcp": 1363,
+    "udp": 301,
+    "established": 72,
+    "devices": 279
+  },
+  "thermal_c": 55,
+  "wifi_clients": {
+    "2ghz": 0
+0,
+    "5ghz": 0
+0
+  }
+}
