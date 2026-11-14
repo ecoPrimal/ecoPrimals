@@ -1,0 +1,70 @@
+{
+  "ts": "2026-11-14T12:47:41Z",
+  "type": "biomeOS-organism",
+  "version": "0.1.0",
+  "nodes": {
+    "eastGate": {
+      "alive": true,
+      "house": 1,
+      "load": 5.5537109375,
+      "ram_free_mb": 47621,
+      "ram_total_mb": 64038,
+      "cpu_pct": 16.2
+    },
+    "graftGate": {
+      "alive": true,
+      "house": 1,
+      "load": 1.41
+    },
+    "ironGate": {
+      "alive": true,
+      "house": 1,
+      "load": 1.22,
+      "ram_free_mb": 47780,
+      "ram_total_mb": 0,
+      "gpu_temp": 39
+    },
+    "pixel": {
+      "alive": true,
+      "house": 2
+    },
+    "router": {
+      "alive": true,
+      "house": 1
+    },
+    "southGate": {
+      "alive": true,
+      "house": 2,
+      "load": 0.04,
+      "ram_free_mb": 100625,
+      "ram_total_mb": 0,
+      "gpu_temp": 41
+    },
+    "sporeGate": {
+      "alive": true,
+      "house": 1,
+      "load": 0.72,
+      "ram_free_mb": 1290,
+      "ram_total_mb": 0
+    }
+  },
+  "learning": {},
+  "topology": {
+    "houses": {
+      "1": {
+        "name": "Brain Side",
+        "address": "4422 Southgate Ave"
+      },
+      "2": {
+        "name": "South Pole",
+        "address": "641 Samantha Ave"
+      }
+    },
+    "spine": "10G fiber (0.1ms)"
+  },
+  "summary": {
+    "alive": 7,
+    "total": 7,
+    "total_ram_gb": 62.5
+  }
+}

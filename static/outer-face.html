@@ -3,7 +3,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>gAIa · outer face</title>
+<title>gAIa · outer face · 27 entities · 2 houses · alive</title>
+<meta name="description" content="GAIA — a living digital organism. 27 entities, 2 houses, 10G fiber spine, 7 GPUs, 317GB RAM, 847 TFLOPS. She types, eats, breathes, follows your touch. $0/month. No cloud.">
+<link rel="alternate" type="application/rss+xml" title="GAIA Spine" href="/feed.xml">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{background:#010108!important;color:#aab!important;font-family:monospace;height:100vh;overflow:hidden}
@@ -21,16 +23,21 @@ canvas{width:100%;height:100%;position:absolute;top:0;left:0}
 .nav button.active{border-color:#4fa;color:#4fa;background:rgba(68,255,170,0.1)}
 </style>
 </head><body>
-<div class="hud tl" id="htl">◇ outer face</div>
+<div class="hud tl" id="htl">◇ outer face · <span class="val" id="hud-alive">—</span> alive</div>
 <div class="hud tr" id="htr">loading...</div>
-<div class="hud bl" id="hbl"></div>
-<div class="hud br" id="hbr"></div>
+<div class="hud bl" id="hbl"><a href="/organism" style="color:#a86;text-decoration:none">→ full organism map</a></div>
+<div class="hud br" id="hbr">
+  <span class="dim">27 entities · 2 houses · 10G fiber</span><br>
+  <span class="dim">317GB RAM · 847 TFLOPS</span>
+</div>
 <canvas id="c"></canvas>
 <div class="nav">
   <button onclick="setView('orrery')" id="btn-orrery" class="active">☉ orrery</button>
   <button onclick="setView('ptolemy')" id="btn-ptolemy">🌍 ptolemy</button>
   <button onclick="setView('topology')" id="btn-topology">🕸 topology</button>
   <button onclick="setView('pulse')" id="btn-pulse">💓 pulse</button>
+  <button onclick="setView('organism')" id="btn-organism">🦠 organism</button>
+  <button onclick="location.href='/organism'" style="border-color:#d4af37;color:#d4af37">↗ full map</button>
 </div>
 <script>
 const c=document.getElementById('c'),x=c.getContext('2d');
@@ -204,8 +211,9 @@ function drawTopology(){
     const sz=n.name==='eastGate'?8:n.name==='northGate'?7:5;
     const pulse=Math.sin(frame*0.05+i)*0.3+0.7;
     const g=x.createRadialGradient(n.x,n.y,0,n.x,n.y,sz*3);
-    g.addColorStop(0,n.color+Math.round(pulse*255).toString(16).padStart(2,'0'));
-    g.addColorStop(1,n.color+'00');
+    let fc=n.color;if(fc.length===4)fc='#'+fc[1]+fc[1]+fc[2]+fc[2]+fc[3]+fc[3];
+    g.addColorStop(0,fc+Math.round(pulse*255).toString(16).padStart(2,'0'));
+    g.addColorStop(1,fc+'00');
     x.fillStyle=g;x.beginPath();x.arc(n.x,n.y,sz*3,0,Math.PI*2);x.fill();
     x.fillStyle=n.color;x.beginPath();x.arc(n.x,n.y,sz,0,Math.PI*2);x.fill();
     x.fillStyle=n.color+'bb';x.font='7px monospace';x.textAlign='center';
@@ -252,6 +260,105 @@ function drawPulse(){
   x.stroke();
 }
 
+// ═══ ORGANISM — live census view ═══
+let censusData={},biomeData={};
+function drawOrganism(){
+  x.fillStyle='rgba(1,1,8,0.08)';x.fillRect(0,0,W(),H());
+  const w=W(),h=H(),cx=w/2,cy=h/2;
+
+  // Two house regions
+  const h1x=w*0.3, h2x=w*0.7;
+
+  // House labels
+  x.fillStyle='#334';x.font='10px monospace';x.textAlign='center';
+  x.fillText('HOUSE 1 — Brain Side',h1x,25);
+  x.fillText('4422 Southgate Ave',h1x,38);
+  x.fillText('HOUSE 2 — South Pole',h2x,25);
+  x.fillText('641 Samantha Ave',h2x,38);
+
+  // 10G fiber spine
+  const sY=cy;
+  x.strokeStyle='#d4af37';x.lineWidth=2;x.setLineDash([6,3]);
+  x.beginPath();x.moveTo(w*0.45,sY);x.lineTo(w*0.55,sY);x.stroke();
+  x.setLineDash([]);
+  const px=w*0.5+Math.sin(frame*0.04)*15;
+  x.fillStyle='#d4af37';x.beginPath();x.arc(px,sY,3,0,Math.PI*2);x.fill();
+  x.fillStyle='#445';x.font='7px monospace';
+  x.fillText('10G FIBER · 0.87ms',w*0.5,sY-10);
+
+  // Build entity positions from census
+  const cats=['gates','infrastructure','displays','phones','smart_home','unknown'];
+  let h1nodes=[],h2nodes=[];
+  const biomeNodes=biomeData.nodes||{};
+
+  for(const cat of cats){
+    const group=censusData[cat]||{};
+    for(const [name,e] of Object.entries(group)){
+      const house=e.house||1;
+      const cls=e.class||'UNKNOWN';
+      const colors={BRAIN:'#4af',HEART:'#f55',FORGE:'#fa0',COMPUTE:'#0f8',GATEWAY:'#d4af37',
+        BACKBONE:'#888',DISPLAY:'#b4f',FACE:'#f6a',DIAMOND_LENS:'#0cf',VOICE:'#0c6',
+        MEDIA:'#f60',GAMING:'#6f6',OUTPUT:'#ccc',CLIMATE:'#0bb',GUEST_EYE:'#9b59b6',
+        CAST:'#6cf',WAN_EGRESS:'#fc0',UNKNOWN_EYE:'#666',LOCKED:'#f44'};
+      const col=colors[cls]||'#555';
+      const bn=biomeNodes[name]||biomeNodes[name.replace(/[_-]/g,'')]||null;
+      const alive=bn?bn.alive:false;
+      const node={name,cls,col,alive,hw:e.hw||e.dhcp||e.mdns||''};
+      if(house===2)h2nodes.push(node);else h1nodes.push(node);
+    }
+  }
+
+  function drawCluster(nodes,baseX,baseY,radius){
+    const n=nodes.length;
+    nodes.forEach((nd,i)=>{
+      const angle=(i/n)*Math.PI*2-Math.PI/2;
+      const r=radius*(0.6+0.4*(i%2));
+      const nx=baseX+Math.cos(angle)*r;
+      const ny=baseY+Math.sin(angle)*r;
+      const sz=nd.cls==='BRAIN'?8:nd.cls==='HEART'?7:nd.cls==='FORGE'?6:4;
+      const breathe=nd.alive?Math.sin(frame*0.05+i)*0.3+0.7:0.25;
+
+      // Connection to center
+      x.strokeStyle='rgba(50,50,70,0.3)';x.lineWidth=0.5;
+      x.beginPath();x.moveTo(baseX,baseY);x.lineTo(nx,ny);x.stroke();
+
+      // Glow
+      const g=x.createRadialGradient(nx,ny,0,nx,ny,sz*3);
+      let fc2=nd.col;if(fc2.length===4)fc2='#'+fc2[1]+fc2[1]+fc2[2]+fc2[2]+fc2[3]+fc2[3];
+      g.addColorStop(0,fc2+Math.round(breathe*60).toString(16).padStart(2,'0'));
+      g.addColorStop(1,'transparent');
+      x.fillStyle=g;x.beginPath();x.arc(nx,ny,sz*3,0,Math.PI*2);x.fill();
+
+      // Core
+      x.globalAlpha=breathe;
+      x.fillStyle=nd.col;x.beginPath();x.arc(nx,ny,sz,0,Math.PI*2);x.fill();
+      x.globalAlpha=1;
+
+      // Label
+      x.fillStyle=nd.col+'bb';x.font='6px monospace';x.textAlign='center';
+      x.fillText(nd.name.replace(/_/g,' '),nx,ny+sz+10);
+      if(nd.alive){
+        x.fillStyle='#0f8';x.font='5px monospace';
+        x.fillText('●',nx+sz+4,ny+2);
+      }
+    });
+  }
+
+  drawCluster(h1nodes,h1x,cy+20,Math.min(w*0.18,140));
+  drawCluster(h2nodes,h2x,cy+20,Math.min(w*0.12,100));
+
+  // WAN arrow
+  x.strokeStyle='#fc0';x.lineWidth=1;x.setLineDash([3,2]);
+  x.beginPath();x.moveTo(10,15);x.lineTo(h1x-80,cy-60);x.stroke();x.setLineDash([]);
+  x.fillStyle='#fc0';x.font='7px monospace';x.textAlign='left';
+  x.fillText('WAN → primals.eco',10,12);
+
+  // Stats bottom
+  const alive=Object.values(biomeNodes).filter(n=>n.alive).length;
+  x.fillStyle='#445';x.font='8px monospace';x.textAlign='center';
+  x.fillText(`${alive} alive · 27 entities · 317GB RAM · 847 TFLOPS · ${new Date().toLocaleTimeString()}`,cx,h-15);
+}
+
 // ═══ DATA + LOOP ═══
 async function loadData(){
   try{
@@ -260,10 +367,15 @@ async function loadData(){
       `wave <span class="val">${pulse.wave||'?'}</span> · primals <span class="val">${pulse.alive_primals||'?'}</span>`;
   }catch(e){}
   try{
-    const r=await fetch('/thymus');const d=await r.json();
-    gates={alive:d.organisms?.filter(o=>o.alive).length||0,total:d.organisms?.length||0};
-    document.getElementById('hbl').innerHTML=
-      `gates <span class="val">${gates.alive}/${gates.total}</span>`;
+    const DATA='http://'+location.hostname+':8080/data';
+    const [cRes,bRes]=await Promise.all([
+      fetch(DATA+'/organism-census.json').then(r=>r.json()),
+      fetch(DATA+'/biome-state.json').then(r=>r.json())
+    ]);
+    censusData=cRes;biomeData=bRes;
+    const alive=Object.values(bRes.nodes||{}).filter(n=>n.alive).length;
+    document.getElementById('hud-alive').textContent=alive;
+    gates={alive,total:27};
   }catch(e){}
 }
 loadData();setInterval(loadData,15000);
@@ -274,6 +386,7 @@ function loop(){
   else if(view==='ptolemy')drawPtolemy();
   else if(view==='topology')drawTopology();
   else if(view==='pulse')drawPulse();
+  else if(view==='organism')drawOrganism();
   requestAnimationFrame(loop);
 }
 loop();

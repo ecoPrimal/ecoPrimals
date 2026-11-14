@@ -1,0 +1,244 @@
+{
+  "ts": "2026-11-14T10:30:01Z",
+  "type": "device-capabilities",
+  "version": "0.2.0",
+  "nodes": {
+    "eastGate": {
+      "name": "eastGate",
+      "ip": "192.168.4.244",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "cpu_model": "12th Gen Intel(R) Core(TM) i9-12900K",
+      "cpu_count": 24,
+      "arch": "x86_64",
+      "ram_kb": 65575184,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4070",
+        "vram_mb": 12282
+      },
+      "ollama_count": 0,
+      "os": "Pop!_OS 22.04 LTS",
+      "kernel": "6.17.9-76061709-generic",
+      "docker": "Docker version 29.3.1, build c2be9cc",
+      "uptime": "up 1 week, 1 day, 10 hours, 58 minutes",
+      "role": "BRAIN \u2014 17 primals, gate:8443, data:8080, Forgejo, Tor"
+    },
+    "sporeGate": {
+      "name": "sporeGate",
+      "ip": "192.168.4.3",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "cpu_model": "AMD Ryzen 5 6600H with Radeon Graphics",
+      "cpu_count": 12,
+      "arch": "x86_64",
+      "ram_kb": 28468240,
+      "ollama_count": 0,
+      "disk": {
+        "total": "929G",
+        "avail": "717G",
+        "use_pct": "19%"
+      },
+      "os": "Pop!_OS 22.04 LTS",
+      "kernel": "6.12.10-76061203-generic",
+      "uptime": "up 1 week, 1 day, 11 hours, 1 minute",
+      "listening_ports": "22,53,5037,5353,7700,7780,7800,8043,8088,8090,8091,8190,8843,9001,9098,9500,9601,9602,9700,9850,9851,27217,29811,29812,29813,29814,29815,29816,34743,43607,46297",
+      "role": "FORGE \u2014 plasmidBin, dual-homed"
+    },
+    "southGate": {
+      "name": "southGate",
+      "ip": "192.168.4.148",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "cpu_model": "AMD Ryzen 7 5800X3D 8-Core Processor",
+      "cpu_count": 16,
+      "arch": "x86_64",
+      "ram_kb": 131806188,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 4060",
+        "vram_mb": 8188
+      },
+      "ollama_count": 6,
+      "disk": {
+        "total": "907G",
+        "avail": "455G",
+        "use_pct": "48%"
+      },
+      "os": "Pop!_OS 22.04 LTS",
+      "kernel": "6.17.9-76061709-generic",
+      "uptime": "up 3 weeks, 1 day, 15 hours, 39 minutes",
+      "listening_ports": "22,53,631,11434",
+      "role": "FORGE 3 \u2014 House 2 compute"
+    },
+    "ironGate": {
+      "name": "ironGate",
+      "ip": "192.168.4.237",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "cpu_model": "Intel(R) Core(TM) i9-14900K",
+      "cpu_count": 32,
+      "arch": "x86_64",
+      "ram_kb": 98579432,
+      "gpu": {
+        "name": "NVIDIA GeForce RTX 5070",
+        "vram_mb": 12227
+      },
+      "ollama_count": 1,
+      "disk": {
+        "total": "3.6T",
+        "avail": "3.1T",
+        "use_pct": "10%"
+      },
+      "os": "Pop!_OS 22.04 LTS",
+      "kernel": "6.12.10-76061203-generic",
+      "uptime": "up 3 weeks, 1 day, 15 hours, 42 minutes",
+      "docker": "Docker version 29.1.3, build 29.1.3-0ubuntu3~22.04.2",
+      "listening_ports": "22,53,631,2222,3000,3001,3002,7700,7701,7780,7800,8000,8001,8080,8081,8083,8091,8866,8867,9800,11434,20241,33989,35149,36081,37227,38561,39877,39971,40155,43015,45485,46357",
+      "role": "FORGE 2 \u2014 heavy compute"
+    },
+    "graftGate": {
+      "name": "graftGate",
+      "ip": "192.168.4.107",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "arch": "arm64",
+      "ollama_count": 0,
+      "disk": {
+        "total": "228Gi",
+        "avail": "96Gi",
+        "use_pct": "11%"
+      },
+      "kernel": "25.6.0",
+      "role": "M4 compute"
+    },
+    "pixel": {
+      "name": "grapheneGate (Pixel 8a)",
+      "ip": "192.168.9.217",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "model": "Pixel 8a",
+      "soc": "Google Tensor G3",
+      "gpu": {
+        "name": "Mali-G715 (Vulkan)",
+        "type": "mobile"
+      },
+      "cpu": "ARM Cortex-X3 + A715 + A510",
+      "arch": "arm64-v8a",
+      "ram_gb": 8,
+      "sensors": 37,
+      "cameras": 2,
+      "wifi": {
+        "connected": "Gaia (5GHz HE160)",
+        "bssid": "ce:ef:ef:30:b5:f3",
+        "rssi": -18,
+        "link_speed": "1020 Mbps",
+        "freq_mhz": 5280,
+        "features": [
+          "RTT",
+          "AWARE",
+          "P2P",
+          "HOTSPOT",
+          "WPA3_SAE",
+          "OWE",
+          "DPP"
+        ]
+      },
+      "cellular": {
+        "carrier": "T-Mobile (MCC:310, MNC:260)",
+        "technology": "LTE (Band 2 + Band 12)",
+        "status": "EMERGENCY_ONLY (no SIM data plan)",
+        "5g_capable": true,
+        "note": "Can see cell towers \u2014 useful for location even without data plan"
+      },
+      "bluetooth": {
+        "devices_known": [
+          "eastgate (BR/EDR)",
+          "ET-2400 Series (BLE/printer)"
+        ]
+      },
+      "gps": {
+        "providers": [
+          "gps (satellite)",
+          "network",
+          "fused",
+          "passive"
+        ],
+        "capabilities": [
+          "bearing",
+          "speed",
+          "altitude"
+        ],
+        "note": "GPS works without SIM \u2014 pure satellite positioning"
+      },
+      "role": "DIAMOND LENS \u2014 37 sensors, dual camera, GPS, cell triangulation, Bluetooth proximity"
+    },
+    "router": {
+      "name": "GL-MT6000 (Flint 2)",
+      "ip": "192.168.4.1",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "cpu": "MediaTek MT7986 (Filogic 830), ARMv8 Cortex-A53, 4 cores",
+      "arch": "aarch64",
+      "ram_mb": 1024,
+      "wifi_radios": 4,
+      "wifi_ssids": [
+        "Aperture Science (2.4G)",
+        "Black Mesa (5G HE160)",
+        "Gaia (2.4G)",
+        "Gaia (5G HE160)"
+      ],
+      "lan_ports": {
+        "lan1": "2.5Gbps (\u2192MikroTik)",
+        "lan3": "1Gbps",
+        "lan5": "active"
+      },
+      "wan": "2.5Gbps (\u2192ATT modem)",
+      "usb": [
+        "Logitech Brio 100 webcam"
+      ],
+      "primals": [
+        "songBird 0.2.1",
+        "toadStool 0.2.0"
+      ],
+      "role": "GATEWAY \u2014 WiFi AP, NAT, webcam, RSSI field, NTP server"
+    },
+    "mikrotik": {
+      "name": "MikroTik CRS310",
+      "ip": "192.168.4.2",
+      "ts": "2026-11-14T10:30:01Z",
+      "alive": true,
+      "firmware": "RouterOS 7.19.6",
+      "cpu": "Marvell 98DX226S (800MHz ARM)",
+      "ram_mb": 256,
+      "ports": "8\u00d7RJ45 + SFP+ (10G) + bonding + bridge",
+      "container_capable": true,
+      "auth": "LOCKED",
+      "readable": [
+        "traffic graphs (all 11 interfaces)",
+        "CPU/RAM/disk graphs"
+      ],
+      "role": "L2 BACKBONE \u2014 10G switching fabric, every gate connected"
+    }
+  },
+  "summary": {
+    "total_nodes": 8,
+    "total_ram_gb": 317.4,
+    "total_ollama_models": 7,
+    "total_gpus": 4,
+    "interpupillary": {
+      "eye_1": "Pixel 8a (House 2, WiFi RSSI -18, GPS capable)",
+      "eye_2": "iPhone XS (southGate .148 area, location TBD)",
+      "distance_method": "WiFi RSSI triangulation + GPS satellite + cell tower",
+      "baseline": "~50m between houses (property line)"
+    },
+    "wan_egress": {
+      "public_ip": "162.226.225.148",
+      "carrier": "ATT",
+      "bandwidth": "~100Mbps down / ~20Mbps up (estimate)",
+      "tor_hidden": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+      "domains": [
+        "primals.eco",
+        "nestgate.io"
+      ]
+    }
+  }
+}

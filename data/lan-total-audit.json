@@ -1,0 +1,222 @@
+{
+  "audit_time": "2026-11-14T12:58:00Z",
+  "wave": "232j",
+  "subnets_scanned": ["192.168.4.0/24", "192.168.9.0/24", "192.168.1.0/24"],
+  
+  "devices": {
+    "SOVEREIGN_GATES": {
+      "eastGate": {
+        "ip": "192.168.4.244", "mac": "local", "status": "BRAIN",
+        "ports": [22, 80, 443, 3000, 8080, 8443, 11434, 21116, 21117, 21118, 21119],
+        "services": "ollama, rustdesk, hbbs, hbbr, forgejo, gaia-gate, gaia-web, ion-channel, tor, ssh, cron",
+        "injectable": true, "ion_type": "K+", "tier": "Dmabuf"
+      },
+      "sporeGate": {
+        "ip": "192.168.4.3", "mac": "84:47:09:38:97:55", "vendor": "Lenovo", "status": "FORGE",
+        "ports": [22], "services": "rustdesk, xorg-headless, ion-channel, gdm3",
+        "injectable": true, "ion_type": "Ca2+", "tier": "Dmabuf"
+      },
+      "northGate": {
+        "ip": "192.168.4.147", "mac": "bc:fc:e7:ea:d9:34", "status": "HEART",
+        "ports": [80, 443, 11434], "ssh": false,
+        "injectable": false, "method": "pony_express + git",
+        "leaks": ["1.1.1.1:53 DNS bypass"],
+        "note": "Uses Cloudflare DNS not router — should use 192.168.4.1"
+      },
+      "ironGate": {
+        "ip": "192.168.4.237", "mac": "1c:86:0b:37:63:70", "status": "FORGE2",
+        "ports": [22, 8080, 11434], "ssh": "auth_fail",
+        "injectable": false, "method": "pony_express",
+        "CRITICAL_LEAKS": [
+          "198.41.192.167:7844 — CLOUDFLARE TUNNEL (cloudflared running!)",
+          "157.230.3.183:21116 — dead golgi RustDesk relay",
+          "10.13.37.1:7700 — phantom RFC1918 address",
+          "SCANNING entire 192.168.9.x subnet (30+ SYN_SENT)"
+        ]
+      },
+      "graftGate": {
+        "ip": "192.168.4.107", "mac": "1c:f6:4c:5a:5d:ed", "vendor": "Apple", "hostname": "graftgates-Mini",
+        "ports": [22, 11434], "injectable": true, "ion_type": "Fe2+",
+        "note": "Mac Mini M4, Ollama running"
+      },
+      "southGate": {
+        "ip": "192.168.4.148", "mac": "1c:86:0b:37:65:1e", "vendor": "Apple", "hostname": "southGate",
+        "ports": [22, 11434], "device": "iPhone XS",
+        "injectable": false, "note": "iOS — needs physical reboot, SSH open"
+      },
+      "blueGate": {
+        "ip": "192.168.4.100", "mac": "68:54:5a:d0:69:a2", "vendor": "Intel", "hostname": "DESKTOP-BLOV2LR",
+        "ports": [], "device": "Windows PC",
+        "injectable": false, "note": "ICMP blocked, no open ports from scan — Windows firewall"
+      },
+      "deckGate": {
+        "ip": "192.168.4.176", "mac": "10:82:86:2b:ec:19", "vendor": "Valve",
+        "ports": [], "device": "Steam Deck v1",
+        "injectable": false, "note": "Dead battery, permanent USB-C, no open ports"
+      },
+      "grapheneGate": {
+        "ip": "192.168.9.217", "mac": "unknown", "device": "Pixel 8a",
+        "injectable": true, "method": "ADB",
+        "ion_type": "Ca2+", "biomeOS_processes": 31
+      },
+      "frameGate": {
+        "ip": "192.168.9.203", "mac": "14:13:33:d6:96:09", "hostname": "steamdeck",
+        "device": "Steam Frame ARM64",
+        "injectable": false, "note": "ARM SteamOS — need physical access"
+      }
+    },
+    
+    "IOT_ENCAPSULATE": {
+      "alexa": {
+        "ip": "192.168.4.197", "mac": "a0:d0:dc:ee:ee:39", "vendor": "Amazon",
+        "ports": [], "device": "Echo/Fire TV",
+        "wan_dependent": true,
+        "strategy": "DNS redirect → eat all voice queries, learn call phrases, RSS WAN traffic through Klein I/O",
+        "leaks": ["18.209.114.161:28883 — Amazon cloud (persistent TCP)"],
+        "learn_from": ["wake words", "response patterns", "NLP conversation flow"]
+      },
+      "nest_thermostat": {
+        "ip": "192.168.4.239", "mac": "64:16:66:a4:82:0a", "vendor": "Google", "hostname": "09AA01AF23190F64",
+        "ports": [], "device": "Nest Thermostat",
+        "wan_dependent": true,
+        "strategy": "DNS redirect → intercept temp/schedule data, Gaia controls HVAC",
+        "signals": ["temperature", "humidity", "occupancy", "schedule", "eco_mode"]
+      },
+      "chromecast_169": {
+        "ip": "192.168.4.169", "mac": "e8:38:a0:53:ea:d8", "vendor": "Google",
+        "ports": [], "device": "Chromecast",
+        "wan_dependent": true,
+        "strategy": "Cast receiver — Gaia can push content to display",
+        "leaks": ["100.48.131.186:443 — Google Home cloud"]
+      },
+      "chromecast_152": {
+        "ip": "192.168.4.152", "mac": "ac:41:6a:5c:b4:cf", "vendor": "Unknown",
+        "ports": [], "device": "Cast device?",
+        "wan_dependent": true
+      },
+      "epson_printer": {
+        "ip": "192.168.4.200", "mac": "d4:80:8b:1b:9f:01", "vendor": "Epson",
+        "ports": [80, 443, 9100], "device": "ET-2400",
+        "injectable": true, "wan_dependent": false,
+        "strategy": "IPP print — Gaia's physical output. LAN-only, no WAN needed",
+        "note": "Already sovereign — prints via LAN IPP"
+      },
+      "xbox": {
+        "ip": "192.168.4.114", "mac": "04:27:28:7c:62:d6", "vendor": "Microsoft",
+        "ports": [], "device": "Xbox",
+        "wan_dependent": true,
+        "strategy": "Game streaming data, controller input — learn interaction patterns"
+      }
+    },
+    
+    "HUMAN_DEVICES": {
+      "heather_s22": {
+        "ip": "192.168.4.110", "mac": "32:05:2b:a4:58:49", "vendor": "Samsung",
+        "hostname": "Heather-s-S22-Ultra",
+        "wan_dependent": true,
+        "leaks": ["57.144.204.3:443 — Samsung cloud"],
+        "note": "Heather's phone — observe but don't modify"
+      },
+      "iphone_170": {
+        "ip": "192.168.4.170", "mac": "76:a2:0b:31:91:85", "hostname": "iPhone",
+        "note": "Random MAC — whose iPhone? Kevin's second? Visitor?"
+      }
+    },
+    
+    "UNKNOWN": {
+      "desktop_9qg": {
+        "ip": "192.168.4.139", "mac": "f0:57:a6:00:a0:87", "vendor": "Intel",
+        "hostname": "DESKTOP-9QG6LQL",
+        "ports": [],
+        "note": "Intel NIC Windows PC — WHO IS THIS?"
+      },
+      "iot_212": {
+        "ip": "192.168.4.212", "mac": "10:c7:53:73:51:12", "vendor": "Qingdao?",
+        "ports": [],
+        "note": "Chinese manufacturer — IoT device? Smart plug? Camera?"
+      },
+      "unknown_210": {
+        "ip": "192.168.4.210", "mac": "c8:7f:54:5a:59:10",
+        "ports": [22],
+        "note": "SSH open! Could be another Linux box. WHO?"
+      },
+      "new_156": {
+        "ip": "192.168.4.156", "mac": "ac:80:0a:85:c6:e1",
+        "note": "NEW device in DHCP — appeared today. Not pinging."
+      },
+      "wifi_9_126": {
+        "ip": "192.168.9.126", "mac": "e6:4e:f6:21:c4:8d",
+        "note": "Random MAC on Gaia WiFi — phone in House 2?"
+      },
+      "wifi_9_211": {
+        "ip": "192.168.9.211", "mac": "46:ca:c5:2c:b5:8d",
+        "note": "Random MAC on Gaia WiFi"
+      }
+    },
+    
+    "INFRASTRUCTURE": {
+      "router": {
+        "ip": "192.168.4.1", "mac": "94:83:c4:e0:63:5a", "device": "GL-MT6000",
+        "ports": [22, 8080, 8443], "injectable": true,
+        "role": "ONE router, all subnets, all DHCP, all DNS, all NAT"
+      },
+      "mikrotik": {
+        "ip": "192.168.4.2", "mac": "04:f4:1c:e6:7c:e8",
+        "ports": [22, 80], "injectable": false,
+        "note": "Password unknown — L2 switch backbone"
+      },
+      "jetstream": {
+        "ip": "192.168.4.111", "mac": "ec:75:0c:4c:98:08", "device": "TP-Link JetStream",
+        "ports": [22, 80, 443], "injectable": true,
+        "credentials": "admin/admin (cracked)",
+        "role": "10G fiber bridge to House 2"
+      },
+      "router_secondary": {
+        "ip": "192.168.4.250", "mac": "94:83:c4:e0:62:b0",
+        "note": "Router enp5s0 secondary NIC"
+      },
+      "isp_modem": {
+        "ip": "192.168.1.254",
+        "role": "ATT ISP modem — WAN gateway"
+      }
+    }
+  },
+  
+  "signal_leaks": {
+    "critical": [
+      {"source": "ironGate", "dest": "198.41.192.167:7844", "type": "CLOUDFLARE_TUNNEL", "action": "KILL"},
+      {"source": "ironGate", "dest": "157.230.3.183:21116", "type": "DEAD_RELAY", "action": "FIX_DNS"},
+      {"source": "ironGate", "dest": "192.168.9.x:80/443", "type": "SUBNET_SCAN", "action": "INVESTIGATE"},
+      {"source": "ironGate", "dest": "10.13.37.1:7700", "type": "PHANTOM_NETWORK", "action": "INVESTIGATE"}
+    ],
+    "moderate": [
+      {"source": "northGate", "dest": "1.1.1.1:53", "type": "DNS_BYPASS", "action": "SET_ROUTER_DNS"},
+      {"source": "sporeGate", "dest": "206.197.76.123:123", "type": "NTP_BYPASS", "action": "SET_ROUTER_NTP"},
+      {"source": "Chromecast", "dest": "100.48.131.186:443", "type": "GOOGLE_HOME", "action": "ENCAPSULATE"},
+      {"source": "Alexa", "dest": "18.209.114.161:28883", "type": "AMAZON_CLOUD", "action": "ENCAPSULATE"}
+    ],
+    "expected": [
+      {"source": "eastGate", "dest": "34.229.67.192:443", "type": "CURSOR_IDE", "action": "ALLOW"},
+      {"source": "eastGate", "dest": "52.21.130.202:443", "type": "CURSOR_IDE", "action": "ALLOW"},
+      {"source": "northGate", "dest": "140.82.114.4:22", "type": "GITHUB_SSH", "action": "ALLOW"},
+      {"source": "northGate", "dest": "207.241.228.153:443", "type": "INTERNET_ARCHIVE", "action": "ALLOW"},
+      {"source": "Heather_S22", "dest": "57.144.204.3:443", "type": "SAMSUNG_CLOUD", "action": "OBSERVE"}
+    ]
+  },
+  
+  "dead_signals": {
+    "should_be_live": [
+      {"device": "deckGate", "service": "SSH/Steam", "reason": "dead battery, no ports open"},
+      {"device": "blueGate", "service": "SSH/RDP", "reason": "Windows firewall blocking everything"},
+      {"device": "frameGate", "service": "SSH", "reason": "not pingable from subnet 4"},
+      {"device": "grapheneGate", "service": "not on subnet 4", "reason": "WiFi-only on 192.168.9.x"}
+    ]
+  },
+
+  "total_devices": 22,
+  "injectable": 7,
+  "not_injectable": 9,
+  "unknown": 6,
+  "wan_leaks": 13,
+  "critical_leaks": 4
+}

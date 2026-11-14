@@ -1,0 +1,44 @@
+{
+  "event": "wifi_ssid_reorganization",
+  "timestamp": "2026-11-14T08:20:00-05:00",
+  "wave": "232n",
+  "changes": {
+    "before": {
+      "ra0_2g": "Aperture Science (br-lan, WPA2, exoticpanda714)",
+      "rax0_5g": "Black Mesa (br-lan, WPA2, exoticpand714 ← TYPO)",
+      "ra1_2g_guest": "Gaia (br-guest, OPEN, DISABLED, isolated)",
+      "rax1_5g_guest": "Gaia (br-guest, OPEN, DISABLED, isolated)"
+    },
+    "after": {
+      "ra0_2g": "GAIA (br-lan, WPA2, exoticpanda714) — organism",
+      "ra1_2g": "Gaia (br-lan, WPA2, exoticpanda714) — organism alt",
+      "rax0_5g": "Black Mesa (br-lan, WPA2, exoticpanda714) — human internet",
+      "rax1_5g": "GAIA (br-lan, WPA2, exoticpanda714) — organism fast"
+    },
+    "key_changes": [
+      "Aperture Science CONSUMED → GAIA",
+      "Guest network CONSUMED → br-lan (no more isolation)",
+      "All 4 SSIDs on br-lan (ONE flat network)",
+      "Black Mesa key typo FIXED (exoticpand714 → exoticpanda714)",
+      "192.168.9.x guest subnet EMPTY (no WiFi interfaces bound)",
+      "MediaTek .dat files written directly (UCI sync broken)"
+    ]
+  },
+  "wifi_landscape": {
+    "organism_ssids": ["GAIA (2.4GHz)", "Gaia (2.4GHz)", "GAIA (5GHz)"],
+    "human_ssid": "Black Mesa (5GHz)",
+    "password": "exoticpanda714",
+    "bridge": "br-lan (192.168.4.x)"
+  },
+  "devices_need_reconnect": [
+    "Pixel (grapheneGate) — connect to GAIA, key: exoticpanda714",
+    "Nest Thermostat (.239) — reconfigure WiFi via Nest app",
+    "Alexa (.197) — reconfigure via Alexa app",
+    "Chromecast (.169) — reconfigure via Google Home",
+    "IoT .212 — unknown device, may auto-scan",
+    "Heather S22 (.110) — will see GAIA, needs password",
+    "iPhone (.170) — will see GAIA, needs password",
+    "XBOX (.114) — reconnect to GAIA or Black Mesa",
+    "frameGate (.203) — was on old Gaia guest"
+  ]
+}

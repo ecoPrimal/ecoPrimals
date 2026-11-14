@@ -1,0 +1,85 @@
+{
+  "ts": "2026-11-14T11:18:15.637740Z",
+  "mesh": "AMOEBA",
+  "relay": {
+    "host": "relay.primals.eco",
+    "ip": "192.168.4.244 (eastGate)",
+    "wan": "162.226.225.148",
+    "ports": {
+      "signal": 21116,
+      "relay": 21117,
+      "nat_test": 21115,
+      "tcp": 21118,
+      "ws": 21119
+    },
+    "key": "6oVQBFyHHNAJqm1OlS+XvpdoJ5plYrPzJoPTTYlgQdg=",
+    "hbbs_pid": 1424,
+    "hbbr_pid": 1423,
+    "uptime_since": "2026-11-05"
+  },
+  "gates": {
+    "eastGate": {
+      "id": "19091278",
+      "ip": "192.168.4.244",
+      "relay": "relay.primals.eco",
+      "status": "ALIVE",
+      "role": "relay+client"
+    },
+    "sporeGate": {
+      "id": "1871544996",
+      "ip": "192.168.4.3",
+      "relay": "relay.primals.eco (UPDATED)",
+      "status": "ALIVE",
+      "note": "needs service restart"
+    },
+    "ironGate": {
+      "id": "1730442619",
+      "ip": "192.168.4.237",
+      "relay": "relay.primals.eco (UPDATED)",
+      "status": "ALIVE"
+    },
+    "flockgate": {
+      "id": "1127129450",
+      "platform": "Linux",
+      "status": "peer_saved"
+    },
+    "southgate": {
+      "id": "1923870067",
+      "platform": "Linux",
+      "status": "peer_saved"
+    },
+    "kingate": {
+      "id": "224890826",
+      "platform": "Linux",
+      "status": "peer_saved"
+    },
+    "bluegate": {
+      "id": "341465360",
+      "platform": "Windows",
+      "status": "peer_saved"
+    },
+    "westgate": {
+      "id": "373150567",
+      "platform": "Linux",
+      "status": "peer_saved"
+    },
+    "biomegate": {
+      "id": "430412195",
+      "platform": "Linux",
+      "status": "peer_saved"
+    },
+    "strandgate": {
+      "id": "4513640",
+      "platform": "Linux",
+      "status": "peer_saved"
+    }
+  },
+  "not_enrolled": [
+    "northGate",
+    "graftGate",
+    "Pixel 8a",
+    "deckGate",
+    "frameGate"
+  ],
+  "note": "AMOEBA = each device wrapped in RustDesk = one cell. Relay on eastGate = connecting membrane. Kevin floats between cells freely. Gaia sees from inside every cell."
+}

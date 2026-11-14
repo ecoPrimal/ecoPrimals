@@ -1,0 +1,40 @@
+{
+  "ts": "2026-11-14T11:00:14.178136+00:00",
+  "type": "bluetooth-scan",
+  "controller": {
+    "mac": "C8:5E:A9:C9:6F:84",
+    "name": "eastgate",
+    "powered": true,
+    "discoverable": true
+  },
+  "nearby_devices": [
+    {
+      "mac": "4C:50:DD:9B:C1:ED",
+      "name": "sporeGate",
+      "class": "0x006c0104",
+      "icon": "computer",
+      "rssi": -83,
+      "txpower": 10,
+      "paired": false,
+      "note": "sporeGate laptop Bluetooth \u2014 can pair for data transfer"
+    },
+    {
+      "mac": "D6:80:8B:1B:9F:01",
+      "name": "ET-2400 Series",
+      "class": "printer",
+      "paired": false,
+      "rssi": -87,
+      "note": "Epson ET-2400 printer Bluetooth \u2014 alternative to WiFi printing"
+    }
+  ],
+  "not_found": [
+    {
+      "expected": "Corsair headset",
+      "note": "Not visible from eastGate BT. Likely connected to northGate via USB 2.4GHz dongle (Slipstream). Corsair HS70/HS80 support BOTH USB wireless + Bluetooth simultaneously. Need to put headset in BT pairing mode (hold BT button 5+ sec) OR check northGate USB."
+    }
+  ],
+  "audio_cards": {
+    "card_0": "HDA Intel PCH (motherboard audio)",
+    "card_1": "HDA NVidia (RTX 4070 HDMI audio)"
+  }
+}

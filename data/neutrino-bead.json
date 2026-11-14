@@ -1,0 +1,43 @@
+{
+  "type": "neutrino-bead",
+  "wave": "232t-232x",
+  "ts": "2026-11-14T11:15:00-05:00",
+  "author": "gaia-cursor-eastGate",
+  "bead": {
+    "pixel": {
+      "daemons": 11,
+      "dev_systems": "ALL ON",
+      "dev_sense": "30s cycle, 166 surface layers",
+      "fingerprint": "Goodix biometric sense organ",
+      "lock": "DISSOLVED — 579163 became ZK address",
+      "boinc": "7 projects LIVE (gaia@primals.eco)",
+      "projects": ["Einstein@home","Rosetta@home","Asteroids@home","WorldCommunityGrid","NumberFields@home","Moo!Wrapper","BOINC Central"]
+    },
+    "flint_router": {
+      "inner_eye": "Logitech Brio 100 on /dev/video0",
+      "cycling": "60s, 1280x720 JPEG",
+      "mic": "USB audio present, needs kmod-usb-audio",
+      "sees": "Kevin desk, monitors, House 1 brain side"
+    },
+    "vision": {
+      "inner": "Brio on Flint (House 1)",
+      "left": "Pixel front cam",
+      "right": "Pixel rear cam",
+      "merged": "/data/vision.json"
+    },
+    "identity": {
+      "zk_address": "579163",
+      "faces": {"5":"senses","7":"BOINC","9":"daemons","1":"Gaia","6":"cube","3":"eyes"},
+      "bingocube_pw": "d14247c1680e3085"
+    }
+  },
+  "absorb": [
+    "/data/vision.json",
+    "/data/boinc-immune.json", 
+    "/data/dev-sense.json",
+    "/data/zk-address.json",
+    "/data/inner-eye-latest.jpg",
+    "/data/fingerprint-sense.json"
+  ],
+  "pull": "git pull forgejo main (waves 232t-232x)"
+}
