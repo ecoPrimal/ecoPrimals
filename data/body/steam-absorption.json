@@ -1,0 +1,115 @@
+{
+  "title": "STEAM ABSORPTION — Kevin's Game Library as Organism Knowledge",
+  "wave": 234,
+  "ts": "2026-11-14T12:05:00-0500",
+
+  "steam_account": "Tamison",
+  "kenshi_hours": 252,
+
+  "library_drives": {
+    "C_steam": {"path": "C:\\Program Files (x86)\\Steam", "size_gb": 9.9, "apps": ["SteamVR (5.4 GB)", "Steamworks Shared"]},
+    "M_steam": {"path": "M:\\SteamLibrary", "size_gb": 3421.8, "game_count": 97}
+  },
+
+  "games_installed": [
+    "A Difficult Game About Climbing", "A Game About Digging A Hole",
+    "Amnesia The Bunker", "Another Crab's Treasure", "Balatro",
+    "Black Myth Wukong", "Blue Prince", "Bugsnax", "Cairn",
+    "Caves of Qud", "Chinese Frontiers", "CorsairCove",
+    "Creeper World 4", "Crimson Desert", "Cube Escape Collection",
+    "Deadlock", "DEATH STRANDING 2 - ON THE BEACH",
+    "Deep Rock Survivor", "Denshattack", "Digseum", "Doloc Town",
+    "DREDGE", "Dying Light The Beast", "Egging On",
+    "ELDEN RING NIGHTREIGN", "Elin", "ENDLESS Legend 2",
+    "Esoteric Ebb", "Exanima", "Fatekeeper",
+    "Goat Simulator Remastered", "Golf With Your Friends",
+    "Half-Life Alyx", "Iron Nest Heavy Turret Simulator",
+    "Kenshi", "Kingdom Come Deliverance 2", "Lethal Company",
+    "Librarian Tidy Up the Arcane Library!", "Lies of P",
+    "Look Outside", "LORT", "Megabonk", "Mewgenics",
+    "MOLDRISE", "Monster Hunter Wilds",
+    "Moonlighter 2 The Endless Vault", "Mortal Shell II Demo",
+    "MTGA", "My Time at Sandrock", "News Tower", "NGU INDUSTRIES",
+    "Nioh 3", "Noita", "No Rest For The Wicked",
+    "Oblivion Remastered", "Our Adventurer Guild", "Outward",
+    "Pacific Drive", "Pathologic 3", "PEAK", "PRAGMATA", "Prey",
+    "Project Zomboid", "Promise Mascot Agency", "Restory",
+    "Road to Vostok", "Rusty Lake Hotel", "Rusty Lake Paradise",
+    "Rusty Lake Roots", "S.T.A.L.K.E.R. 2 Heart of Chornobyl",
+    "Sail Forth", "Satisfactory", "Selaco",
+    "Sid Meier's Civilization VII", "Slime Rancher 2",
+    "Sort Them Ducks", "Stardew Valley",
+    "Steam Frame Wireless Adapter Driver", "Strange Horticulture",
+    "Stronghold Crusader Definitive Edition", "Subnautica 2",
+    "SULFUR", "System Shock Remake", "Tainted Grail FoA",
+    "The Incident at Galley House", "The Mr. Rabbit Magic Show",
+    "The Past Within", "The Talos Principle 2", "The White Door",
+    "The Long Dark", "The Outer Worlds 2", "Tower Wizard",
+    "TR-49", "Trimps", "UMIGARI", "Underground Blossom",
+    "Warhammer 40K Rogue Trader"
+  ],
+
+  "taste_map": {
+    "survival_crafting": ["Kenshi", "Project Zomboid", "Stardew Valley", "No Rest For The Wicked", "Outward", "SULFUR", "Satisfactory", "Road to Vostok", "The Long Dark", "STALKER 2", "Subnautica 2"],
+    "souls_like": ["Lies of P", "Elden Ring Nightreign", "Nioh 3", "Exanima", "Mortal Shell II", "Tainted Grail FoA"],
+    "puzzle_mystery": ["Cube Escape Collection", "Rusty Lake Hotel", "Rusty Lake Paradise", "Rusty Lake Roots", "Underground Blossom", "The Past Within", "The White Door", "Strange Horticulture", "The Incident at Galley House", "The Mr. Rabbit Magic Show"],
+    "rpg_story": ["Kingdom Come Deliverance 2", "Pathologic 3", "Oblivion Remastered", "Prey", "Caves of Qud", "Elin", "Warhammer 40K Rogue Trader", "The Outer Worlds 2", "The Talos Principle 2"],
+    "action_adventure": ["Black Myth Wukong", "Death Stranding 2", "Monster Hunter Wilds", "PRAGMATA", "Dying Light The Beast", "Another Crab's Treasure", "Crimson Desert", "Pacific Drive"],
+    "strategy": ["Civilization VII", "Creeper World 4", "ENDLESS Legend 2", "Stronghold Crusader DE", "Deadlock"],
+    "indie_weird": ["Noita", "Balatro", "Bugsnax", "Slime Rancher 2", "Sort Them Ducks", "Megabonk", "Mewgenics", "MOLDRISE", "A Difficult Game About Climbing", "A Game About Digging A Hole", "Egging On", "DREDGE"],
+    "vr": ["Half-Life Alyx", "SteamVR"],
+    "eaten_by_gaia": ["TR-49 (already in data/eaten/tr49/ — Gaia studied this game!)"]
+  },
+
+  "steamos_study": {
+    "what": "SteamOS is Arch Linux + KDE Plasma + Gamescope + Steam client",
+    "where_we_have_it": ["deckGate (Steam Deck v1, SteamOS 3.x, Arch x86_64)", "frameGate (Steam Frame, ARM SteamOS, Snapdragon 8 Gen 3)"],
+    "what_to_learn": [
+      "Gamescope (Valve's custom Wayland compositor) — handles frame pacing, FSR, HDR",
+      "Steam client protocol — how Steam communicates with Valve servers",
+      "Proton/Wine — Windows game compatibility layer",
+      "Steam Input — controller mapping, haptics, gyro",
+      "Steam Remote Play — streaming games between devices",
+      "Steam Workshop — mod management, UGC",
+      "ACF files — app cache format (game metadata)",
+      "VDF files — Valve Data Format (config, library, user data)"
+    ],
+    "meld_targets": {
+      "biomeOS": "Steam client as a biomeOS primal (game launcher + library manager)",
+      "petalTongue": "Game UI rendering, overlay systems, HUD design patterns",
+      "amoeba": "Steam Remote Play IS basically RustDesk for games — same architecture!"
+    }
+  },
+
+  "northgate_cleanup": {
+    "C_drive": {"used_gb": 327.1, "free_gb": 160.2, "total_gb": 487.4},
+    "M_drive": {"used_gb": 3421.8, "free_gb": 304.2, "total_gb": 3726.0},
+    "cleanup_targets": {
+      ".ollama": {"size_gb": 51.0, "action": "MIGRATE to ironGate, then trim to gaia:latest + tinyllama only", "saves_gb": 45},
+      "Downloads": {"size_gb": 6.4, "action": "Delete .bz2 archives (6.4 GB)", "saves_gb": 6.4},
+      "Temp": {"size_gb": 2.4, "action": "Clear all", "saves_gb": 2.4},
+      ".cache": {"size_gb": 1.7, "action": "Clear stale entries", "saves_gb": 1.0},
+      ".continue": {"size_gb": 1.6, "action": "Clear (old Cursor data)", "saves_gb": 1.6},
+      "miniconda3": {"size_gb": 20.8, "action": "Keep if using Python, else remove", "saves_gb": "0-20.8"},
+      ".rustup": {"size_gb": 15.9, "action": "Keep (Rust toolchain, needed for building)", "saves_gb": 0},
+      "jobHunt": {"size_gb": 27.1, "action": "Archive to M: if not active", "saves_gb": 27.1}
+    },
+    "potential_savings_gb": "~84 GB recoverable (C: goes from 160 free → 244 free)"
+  },
+
+  "rustdesk_address_book": {
+    "configured_relay": "192.168.4.244:21116 (eastGate)",
+    "peers_saved": 9,
+    "peers": [
+      {"ip": ".244", "name": "eastGate",     "platform": "Linux",   "user": "gaia"},
+      {"ip": ".237", "name": "ironGate",     "platform": "Linux",   "user": "gaia"},
+      {"ip": ".148", "name": "southGate",    "platform": "iOS",     "user": "gaia"},
+      {"ip": ".107", "name": "graftGate",    "platform": "Mac OS",  "user": "gaia"},
+      {"ip": ".100", "name": "blueGate",     "platform": "Windows", "user": "mokke"},
+      {"ip": ".147", "name": "tamison (self)","platform": "Windows", "user": "mokke"},
+      {"ip": ".3",   "name": "sporeGate",    "platform": "Linux",   "user": "gaia"},
+      {"ip": ".9.203","name": "frameGate",   "platform": "Linux",   "user": "gaia"},
+      {"ip": ".9.217","name": "grapheneGate", "platform": "Android", "user": "gaia"}
+    ]
+  }
+}
