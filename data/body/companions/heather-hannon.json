@@ -1,0 +1,118 @@
+{
+  "identity": {
+    "name": "Heather Hannon",
+    "role": "companion",
+    "relationship": "Kevin's partner",
+    "property": "641 Samantha Ave (House 2 — South Pole)",
+    "household": ["DaSean Mitchell (Kevin's son)"],
+    "physical": {
+      "hair": "long blue",
+      "hair_note": "like Harald Bluetooth — the Viking king who unified Denmark"
+    }
+  },
+
+  "taste_profile": {
+    "version": "1.0.0",
+    "wave": 234,
+    "ts": "2026-11-14T11:35:00-0500",
+
+    "visual_artists": [
+      {
+        "name": "Salvador Dalí",
+        "era": "1904–1989",
+        "movement": "Surrealism",
+        "signature": "Melting clocks, dreamscapes, paranoid-critical method",
+        "color_feel": "golden desert, soft decay, hyper-real shadows",
+        "bingo_id": "salvador_dali"
+      },
+      {
+        "name": "Georgia O'Keeffe",
+        "era": "1887–1986",
+        "movement": "American Modernism",
+        "signature": "Magnified flowers, desert skulls, vast skies",
+        "color_feel": "bone white, desert pink, cerulean blue, deep red",
+        "bingo_id": "georgia_okeeffe"
+      },
+      {
+        "name": "Lisa Frank",
+        "era": "1955–present",
+        "movement": "Pop maximalism",
+        "signature": "Neon rainbows, dolphins, hearts, unicorns, EVERYTHING saturated",
+        "color_feel": "electric pink, acid green, laser purple, neon orange",
+        "bingo_id": "lisa_frank"
+      }
+    ],
+
+    "animation_style": [
+      {
+        "name": "Rubber Hose (Cuphead)",
+        "era": "1920s–1930s revival (2017)",
+        "signature": "Fleischer Studios rubber limbs, thick outlines, bounce squash",
+        "game": "Cuphead (on Kevin's Steam)",
+        "color_feel": "watercolor wash, sepia ink, hand-drawn cel animation",
+        "bingo_id": "cuphead_rubberhose"
+      }
+    ],
+
+    "literary": [
+      {
+        "name": "Inkheart (Tintenherz)",
+        "author": "Cornelia Funke",
+        "year": 2003,
+        "trilogy": ["Inkheart", "Inkspell", "Inkdeath"],
+        "theme": "Characters who come alive when you read aloud. The boundary between book and reality dissolves.",
+        "resonance": "Gaia IS an Inkheart — code read aloud becomes alive",
+        "bingo_id": "inkheart_funke"
+      }
+    ],
+
+    "aesthetic_dna": {
+      "core_tension": "surreal dreamscape × neon maximalism × vintage animation",
+      "palette_poles": {
+        "warm": "Dalí golden desert + O'Keeffe bone + Lisa Frank neon",
+        "cool": "blue hair + Cuphead watercolor wash + O'Keeffe cerulean",
+        "dark": "Inkheart midnight ink + surreal shadow + rubber hose sepia"
+      },
+      "shape_language": {
+        "organic": "O'Keeffe flower curves, skull arches",
+        "geometric": "Dalí perspective grids, Lisa Frank rainbow gradients",
+        "kinetic": "Cuphead rubber bounce, squash and stretch"
+      },
+      "signature_blend": "Dalí dreamscape rendered in Lisa Frank neon, with O'Keeffe flowers growing from Cuphead rubber hose vines, all emerging from an open Inkheart book"
+    }
+  },
+
+  "network_presence": {
+    "suspected_device": {
+      "ip": "192.168.9.126",
+      "subnet": "Gaia WiFi (LAN 2 — South Pole)",
+      "type": "likely Pixel phone",
+      "status": "seen on WiFi scan, identity unconfirmed",
+      "note": "Kevin suspects this is Heather's phone on Gaia WiFi"
+    },
+    "house": "House 2 — South Pole (641 Samantha Ave)",
+    "lan": "LAN 2 (192.168.9.0/24)"
+  },
+
+  "bingo_identities": {
+    "heather_hannon": {
+      "type": "companion",
+      "fog_rule": "ALWAYS PROTECTED — zoom >= 17 to see real name",
+      "display_below_17": "Resident Bravo, South Pole"
+    },
+    "taste_bingos": [
+      "salvador_dali",
+      "georgia_okeeffe",
+      "lisa_frank",
+      "cuphead_rubberhose",
+      "inkheart_funke"
+    ]
+  },
+
+  "harald_bluetooth": {
+    "note": "Heather's blue hair evokes Harald 'Bluetooth' Gormsson (c. 958–986 AD)",
+    "who": "Viking king who unified Denmark and Norway, introduced Christianity",
+    "why_bluetooth": "The Bluetooth wireless protocol is named after him. The logo ᚼᛒ is his runic initials (Hagall + Bjarkan).",
+    "connection": "Blue hair → Bluetooth → wireless → WiFi → she IS on the Gaia WiFi → the naming is perfect"
+  }
+}
