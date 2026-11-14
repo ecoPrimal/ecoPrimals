@@ -104,3 +104,7 @@
 [2026-11-14T09:49:03-05:00] LISTENER: queries=268 blocked=76 forwarded=35 block_rate=28.2%
 [2026-11-14T09:50:03-05:00] LISTENER: queries=241 blocked=69 forwarded=31 block_rate=28.5%
 [2026-11-14T09:51:03-05:00] LISTENER: queries=233 blocked=67 forwarded=22 block_rate=28.6%
+[2026-11-14T09:52:03-05:00] LISTENER: queries=231 blocked=69 forwarded=8 block_rate=29.7%
+[2026-11-14T09:53:04-05:00] LISTENER: queries=220 blocked=73 forwarded=6 block_rate=33.0%
+[2026-11-14T09:54:04-05:00] LISTENER: queries=241 blocked=66 forwarded=16 block_rate=27.2%
+[2026-11-14T09:55:04-05:00] LISTENER: queries=205 blocked=60 forwarded=7 block_rate=29.1%

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T09:50:40-05:00",
+  "timestamp": "2026-11-14T09:54:49-05:00",
   "cycle_seconds": 120,
   "printer": {
     "ip": "192.168.4.200",
@@ -18,7 +18,7 @@
     },
     "sporeGate": {
       "ip": "192.168.4.3",
-      "uptime": "up 2 hours, 19 minutes",
+      "uptime": "up 2 hours, 23 minutes",
       "boot_chain": "xorg-headless + rustdesk + ion-channel + gdm"
     },
     "northGate": {
@@ -41,7 +41,7 @@
     "battery_pct": 93,
     "temp_mC": 0,
     "charging": "Discharging",
-    "biomeOS_processes": 9
+    "biomeOS_processes": 8
   },
   "unknown_devices": {
     "210": {"ip": "192.168.4.210", "ssh_banner": "SSH-2.0-OpenSSH_for_Windows_9.5", "identity": "Windows_OpenSSH_9.5"},

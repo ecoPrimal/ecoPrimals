@@ -65,3 +65,20 @@ case "${1:-daemon}" in
         done
         ;;
 esac
+
+# === DYSON SPHERE PULL ===
+# Also pull the full Dyson sphere data
+pull_dyson() {
+    adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/dyson-sphere.json "$REMOTE/dyson-sphere.json" 2>/dev/null || true
+    cp "$REMOTE/dyson-sphere.json" "$GAIA_DATA/dyson-sphere.json" 2>/dev/null || true
+    
+    # Pull raw sensor data (from Termux bridge)
+    adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/raw-sensors.json "$REMOTE/raw-sensors.json" 2>/dev/null || true
+    
+    # Pull eye captures (every 10th cycle)
+    if [ $((COUNTER % 10)) -eq 0 ]; then
+        adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/eyes/left-eye.jpg "$GAIA_DATA/pixel-left-eye.jpg" 2>/dev/null || true
+        adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/eyes/right-eye.jpg "$GAIA_DATA/pixel-right-eye.jpg" 2>/dev/null || true
+        log "eyes pulled (left + right)"
+    fi
+}

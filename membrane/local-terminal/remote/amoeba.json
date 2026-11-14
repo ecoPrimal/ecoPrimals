@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-11-14T14:51:37+00:00",
+  "timestamp": "2026-11-14T14:54:49+00:00",
   "sense": "amoeba",
   "cycle_s": 30,
-  "retina": {"focus": "NotificationShade", "app": "com.carriez.flutter_hbb/.MainActivity", "screen": "Awake", "brightness": 128, "rotation": "0"},
+  "retina": {"focus": "NotificationShade", "app": "com.carriez.flutter_hbb/.MainActivity", "screen": "Dozing", "brightness": 128, "rotation": "0"},
   "touch": {"devices": 0, "interactive": ""},
   "rustdesk": {"running": true, "pid": 20321},
   "membrane": {
     "battery_pct": 93,
     "temp_c": 24.3,
-    "mem_avail_kb": 1996576,
+    "mem_avail_kb": 1986620,
     "mem_total_kb": 7505204,
     "display": "1080x2400",
     "refresh_hz": 120
