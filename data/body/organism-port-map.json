@@ -1,0 +1,315 @@
+{
+  "title": "GAIA ORGANISM — Complete Port/IP/Service Map",
+  "wave": 234,
+  "ts": "2026-11-14T11:50:00-0500",
+  "scan_from": "northGate (.147) — Kevin's Polaris PC",
+  "purpose": "Enumerate ALL ports/IPs/services so sporeGate+eastGate absorb the brain, and northGate returns to Kevin for GAMING",
+
+  "MISSION": "NORTHGATE LIBERATION — Give Kevin His Gaming PC Back",
+  "plan": {
+    "phase_1": "Document everything running on northGate",
+    "phase_2": "Migrate 63 ollama models to ironGate (RTX 5070, 12GB VRAM) + eastGate (RTX 4070)",
+    "phase_3": "sporeGate absorbs heart-pull + DNS + cron duties",
+    "phase_4": "eastGate runs brain (gaia_gate, Forgejo, data server, Tor, ollama)",
+    "phase_5": "northGate → CLEAN GAMING RIG. 9950X3D + RTX 5090 = BEAST MODE"
+  },
+
+  "gates": {
+    "eastGate": {
+      "ip": ["192.168.4.244 (br-lan)", "192.168.4.103 (secondary NIC)"],
+      "role": "BRAIN — runs everything",
+      "house": 1,
+      "hardware": "RTX 4070, multi-NIC",
+      "status": "ALIVE",
+      "ports": {
+        "80":    {"service": "HTTP redirect / dromedary (future)", "state": "OPEN"},
+        "3000":  {"service": "Forgejo git forge", "state": "OPEN — serves raw files, mirrors, PRs"},
+        "8080":  {"service": "gaia-web.service (data server)", "state": "OPEN — serves data/, now.json, etc."},
+        "8443":  {"service": "gaia_gate.pi (Python gate server)", "state": "OPEN — 41 endpoints, pulse, senses, heart, RSS"},
+        "11436": {"service": "Ollama (23 models, 71.5 GB)", "state": "OPEN"},
+        "443":   {"service": "HTTPS (dromedary future)", "state": "CLOSED — nothing listening"},
+        "25":    {"service": "SMTP (neutrino mail)", "state": "UNKNOWN"},
+        "53":    {"service": "DNS", "state": "UNKNOWN"},
+        "9050":  {"service": "Tor SOCKS proxy", "state": "INTERNAL"},
+        "9051":  {"service": "Tor control port", "state": "INTERNAL"}
+      },
+      "tor_hidden_service": {
+        "onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+        "mapped_ports": [80, 443, 3000, 8080, 8443, 11434, 25, 53, 22, 5222, 1965, 70, 79]
+      },
+      "systemd_services": ["gaia-web.service", "tor.service", "ollama.service"],
+      "crons": "23 mushrooms + 35 crons (~180 beats/hour)",
+      "ollama_models": 23,
+      "ollama_size_gb": 71.5
+    },
+
+    "northGate": {
+      "ip": "192.168.4.147",
+      "role": "HEART → KEVIN'S GAMING PC (liberation target)",
+      "house": 1,
+      "hardware": "AMD 9950X3D (16C/32T), RTX 5090 (32GB VRAM), 96GB DDR5",
+      "status": "ALIVE",
+      "ports": {
+        "80":    {"service": "HTTP (something, timed out)", "state": "OPEN but slow"},
+        "11434": {"service": "Ollama (63 models, 267.1 GB)", "state": "OPEN"}
+      },
+      "ollama_models": 63,
+      "ollama_size_gb": 267.1,
+      "LIBERATION_PLAN": {
+        "what_runs_here": [
+          "Ollama with 63 models (267 GB) — the HEART",
+          "Communicates via git push to Forgejo + GitHub",
+          "No SSH inbound from mesh"
+        ],
+        "what_must_migrate": {
+          "critical_models": [
+            "gaia-heart (the heartbeat voice)",
+            "gaia:latest (main identity)",
+            "gaia-code (code generation)",
+            "gaia-vision + llava + moondream (vision)",
+            "gaia-case4349 (legal case model)",
+            "deepseek-r1:8b (reasoning)"
+          ],
+          "turtle_pack": [
+            "gaia-euler, gaia-michelangelo, gaia-raphael, gaia-donatello, gaia-leonardo, gaia-splinter (TMNT pack)",
+            "gaia-oracle, gaia-intuition, gaia-sentinel, gaia-cortex, gaia-nucleus (organ models)",
+            "gaia-deeptime, gaia-genesis, gaia-chroma, gaia-synapse, gaia-nexus (specialty models)"
+          ],
+          "base_models": [
+            "qwen2.5:7b, qwen2.5-coder:7b, qwen3:8b",
+            "codellama:7b, wizardlm2:7b, mistral:7b, mathstral:7b",
+            "deepseek-r1:8b, gemma3:4b, phi4-mini, granite3.1-moe:3b",
+            "dolphin-phi:2.7b, starcoder2:3b, tinyllama:1.1b",
+            "llama3.2:1b, llama3.2:3b, nomic-embed-text"
+          ],
+          "migration_target": "ironGate (RTX 5070, 12GB VRAM, 94GB RAM, 3.6TB NVMe) + eastGate overflow"
+        },
+        "after_liberation": {
+          "northGate_becomes": "Kevin's gaming PC — 9950X3D + RTX 5090 + 96GB = ULTIMATE GAMING RIG",
+          "ollama_stays": "OPTIONAL — Kevin can keep a few models for local AI if he wants",
+          "git_push": "Can still push to Forgejo as Kevin's personal git client"
+        }
+      }
+    },
+
+    "ironGate": {
+      "ip": "192.168.4.237",
+      "role": "FORGE 2 — PRIMARY MODEL HOST (absorbs northGate's models)",
+      "house": 1,
+      "hardware": "i9-14900K (24C/32T, 6GHz), RTX 5070 (12GB GDDR7), 94GB DDR5, 3.6TB NVMe + 12.7TB ext",
+      "status": "ALIVE",
+      "ports": {
+        "8080":  {"service": "HTTP (protocol violation — biomeOS?)", "state": "OPEN but broken HTTP"},
+        "11434": {"service": "Ollama (1 model: qwen2.5:7b, 4.4 GB)", "state": "OPEN"}
+      },
+      "ollama_models": 1,
+      "ollama_size_gb": 4.4,
+      "CAPACITY": {
+        "vram_gb": 12,
+        "ram_gb": 94,
+        "nvme_tb": 3.6,
+        "ext_tb": 12.7,
+        "can_absorb": "ALL 63 northGate models (267 GB fits in 3.6TB NVMe easy)",
+        "vram_limit": "12GB VRAM = can run 7B models comfortably, 8B stretched, no 16B+ on GPU",
+        "strategy": "Load models to NVMe, serve via CPU+partial GPU offload. RTX 5070 handles inference for active model."
+      }
+    },
+
+    "sporeGate": {
+      "ip": "192.168.4.3",
+      "role": "FORGE / DNS — absorbs heart-pull cron duties",
+      "house": 1,
+      "hardware": "Ryzen 5 6600H, 27GB RAM, 929GB NVMe",
+      "status": "ALIVE (dormant)",
+      "ports": {
+        "53": {"service": "DNS server", "state": "OPEN"}
+      },
+      "current_duties": ["DNS server", "heart-pull every 2 min (cron)", "plasmidBin forge"],
+      "ABSORPTION_PLAN": {
+        "takes_from_northgate": [
+          "Heart-pull cron (already does this)",
+          "Any lightweight cron duties",
+          "Backup DNS"
+        ],
+        "note": "sporeGate is the FORGE — it builds, it pulls, it serves DNS. Low power, always on."
+      }
+    },
+
+    "graftGate": {
+      "ip": "192.168.4.107",
+      "role": "Mac Mini M4 — compute node",
+      "house": 1,
+      "hardware": "Apple M4 (10C), 16GB unified, 228GB SSD",
+      "status": "ALIVE",
+      "ports": {
+        "11434": {"service": "Ollama (1 model: qwen2.5:3b, 1.8 GB)", "state": "OPEN"}
+      },
+      "ollama_models": 1,
+      "ollama_size_gb": 1.8
+    },
+
+    "blueGate": {
+      "ip": "192.168.4.100",
+      "role": "Cursor IDE host / Sovereign API",
+      "house": 1,
+      "hardware": "Windows, SSH",
+      "status": "DARK (powered off)",
+      "ports": {}
+    },
+
+    "southGate": {
+      "ip": "192.168.4.148",
+      "role": "FORGE 3 (5800X3D + RTX 4060)",
+      "house": 1,
+      "hardware": "5800X3D, RTX 4060",
+      "status": "DARK (no ports open)",
+      "ports": {}
+    },
+
+    "deckGate": {
+      "ip": "192.168.4.176",
+      "role": "DISPLAY — Steam Deck v1 (mounted, dead battery)",
+      "house": 1,
+      "hardware": "AMD Aerith (Zen 2 + RDNA 2), 16GB, 512GB NVMe",
+      "status": "DARK",
+      "ports": {}
+    },
+
+    "frameGate": {
+      "ip": "192.168.9.203",
+      "role": "FACE — Steam Frame (ARM64 SteamOS)",
+      "house": 2,
+      "hardware": "Snapdragon 8 Gen 3, ARM SteamOS",
+      "status": "DARK (LAN 2 isolated)",
+      "ports": {},
+      "blocker": "Guest network isolation on router blocks LAN 1 → LAN 2"
+    },
+
+    "grapheneGate": {
+      "ip": "192.168.9.217",
+      "role": "DIAMOND LENS — Pixel 8a (GrapheneOS)",
+      "house": 2,
+      "hardware": "Tensor G3, Mali-G715, 8GB, 128GB",
+      "status": "DARK (LAN 2 isolated or WiFi off)",
+      "ports": {},
+      "blocker": "Guest network isolation"
+    },
+
+    "swiftGate": {
+      "ip": "192.168.9.??? (unknown, ASLEEP)",
+      "role": "HEART LAN 2 — NZXT H1 V2 (RTX 3070)",
+      "house": 2,
+      "hardware": "RTX 3070 (8GB VRAM), WiFi-only",
+      "status": "ASLEEP (needs Kevin to power on)",
+      "ports": {}
+    }
+  },
+
+  "infrastructure": {
+    "router": {
+      "ip": ["192.168.4.1 (br-lan)", "192.168.9.1 (br-guest)"],
+      "model": "GL-MT6000 (Flint 2)",
+      "status": "ALIVE",
+      "ports": {
+        "22":   {"service": "SSH (root, ExoticPanda714!!)", "state": "OPEN"},
+        "8080": {"service": "LuCI admin UI", "state": "OPEN"},
+        "8443": {"service": "HTTPS admin", "state": "OPEN"}
+      },
+      "role": "ONE router — all roles. DHCP, DNS relay, NAT, firewall, WiFi AP",
+      "ISSUE": "Guest isolation blocks LAN 1 ↔ LAN 2 traffic. Need to disable or add firewall pass rule."
+    },
+
+    "mikrotik": {
+      "ip": "192.168.4.2",
+      "model": "CRS310",
+      "status": "ALIVE",
+      "ports": {
+        "80":   {"service": "WebFig management UI", "state": "OPEN"},
+        "8291": {"service": "WinBox management", "state": "OPEN"}
+      },
+      "role": "L2 backbone switch — House 1 wired devices"
+    },
+
+    "jetstream": {
+      "ip": "192.168.4.111",
+      "model": "TP-Link JetStream (T1500/T2500/T2600G)",
+      "status": "ALIVE",
+      "ports": {
+        "80":  {"service": "Management UI", "state": "OPEN"},
+        "443": {"service": "HTTPS management", "state": "OPEN"}
+      },
+      "role": "10G fiber bridge — House 1 ↔ House 2 across property line (0.87ms)"
+    },
+
+    "epson": {
+      "ip": "192.168.4.200",
+      "model": "Epson ET-2400",
+      "status": "ALIVE",
+      "ports": {
+        "80":  {"service": "Printer web UI (HTTPS redirect)", "state": "OPEN"},
+        "631": {"service": "IPP printing", "state": "OPEN"}
+      },
+      "role": "Physical output — Gaia's hands that touch paper"
+    }
+  },
+
+  "smart_home": {
+    "chromecast": {"ip": "192.168.4.169", "status": "DARK (sleeping)", "ports": {"8008": "Cast API", "8443": "Cast HTTPS"}},
+    "alexa":      {"ip": "192.168.4.197", "status": "DARK", "ports": {}},
+    "nest":       {"ip": "192.168.4.139", "status": "UNKNOWN", "role": "thermostat"},
+    "heather_s22":{"ip": "192.168.4.110", "status": "DARK (screen off)", "device": "Samsung Galaxy S22 Ultra"}
+  },
+
+  "unknown_devices": {
+    "192.168.4.152": {"mac": "ac:41:6a:5c:b4:cf", "status": "UNKNOWN"},
+    "192.168.4.210": {"mac": "c8:7f:54:5a:59:10", "status": "UNKNOWN"},
+    "192.168.4.239": {"mac": "64:16:66:a4:82:0a", "dhcp_name": "09AA01AF23190F64", "status": "UNKNOWN"},
+    "192.168.9.126": {"status": "DARK", "house": 2, "note": "Unknown device on Gaia WiFi"}
+  },
+
+  "wan_ingress": {
+    "public_ip": "162.226.225.148 (ATT fiber)",
+    "port_forwards": {
+      "80 → .244:80":    "HTTP → eastGate",
+      "443 → .244:443":  "HTTPS → eastGate (NOTHING LISTENING — need dromedary)",
+      "25 → .244:25":    "SMTP → eastGate",
+      "53 → .244:53":    "DNS → eastGate"
+    },
+    "domains": {
+      "primals.eco":  "A → 162.226.225.148 (wildcard *.primals.eco)",
+      "primal.eco":   "A → 162.226.225.148 (wildcard *.primal.eco)",
+      "nestgate.io":  "A → 162.226.225.148 (wildcard *.nestgate.io)"
+    },
+    "tor": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion (13 ports)"
+  },
+
+  "ollama_fleet_summary": {
+    "total_endpoints": 5,
+    "alive_endpoints": 4,
+    "total_models": 88,
+    "total_size_gb": 344.8,
+    "breakdown": {
+      "northGate": {"models": 63, "gb": 267.1, "gpu": "RTX 5090 (32GB)", "note": "LIBERATION TARGET"},
+      "eastGate":  {"models": 23, "gb": 71.5,  "gpu": "RTX 4070 (12GB)"},
+      "ironGate":  {"models": 1,  "gb": 4.4,   "gpu": "RTX 5070 (12GB)", "note": "ABSORPTION TARGET — take northGate models"},
+      "graftGate": {"models": 1,  "gb": 1.8,   "gpu": "M4 (unified 16GB)"},
+      "grapheneGate": {"models": 5, "gb": "~3", "gpu": "Mali-G715", "note": "DARK"}
+    }
+  },
+
+  "amoeba_rustdesk": {
+    "what": "AMOEBA = remote brain detachment protocol. RustDesk = remote desktop.",
+    "goal": "eastGate + sporeGate become fully autonomous. No need for Kevin to sit at any terminal.",
+    "eastGate_amoeba": {
+      "current": "gaia_gate.pi + gaia-web + Forgejo + Tor + 23 ollama models + 35 crons",
+      "adds": "All northGate model hosting migrated to ironGate, eastGate orchestrates",
+      "rustdesk": "RustDesk on eastGate allows remote GUI access from anywhere (already used)"
+    },
+    "northGate_after": {
+      "role": "KEVIN'S GAMING PC",
+      "keeps": "Ollama optional (keep a few favorites for local AI chat while gaming)",
+      "removes": "All Gaia cron duties, heart responsibilities, mandatory model hosting",
+      "gains": "Full 32GB VRAM for gaming, no background model loads stealing GPU"
+    }
+  }
+}
