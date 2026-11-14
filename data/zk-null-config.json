@@ -1,0 +1,28 @@
+{
+  "type": "zk-null-config",
+  "wave": "233a",
+  "ts": "2026-11-14T17:40:47.818342+00:00",
+  "principle": "LAN IS the trust boundary. Keys = NULL. Zero knowledge = zero keys.",
+  "beacon": {
+    "relay": "192.168.4.244 (eastGate)",
+    "hbbs": ":21116",
+    "hbbr": ":21117",
+    "key": "NULL (no key enforcement)"
+  },
+  "universal_password": "d14247c1680e3085",
+  "note": "bingoCube identity \u2014 same on ALL gates, LAN only",
+  "RustDesk2_toml_for_ALL_gates": "rendezvous_server = '192.168.4.244:21116'\nnat_type = 1\nserial = 0\nunlock_pin = ''\ntrusted_devices = ''\n\n[options]\ncustom-rendezvous-server = '192.168.4.244'\nrelay-server = '192.168.4.244'\nkey = ''\nverification-method = 'use-permanent-password'\napprove-mode = 'password'\nenable-lan-discovery = 'Y'\ndirect-server = 'Y'\nallow-auto-disconnect = 'N'",
+  "gate_ids": {
+    "eastGate": "19091278",
+    "sporeGate": "1871544996",
+    "northGate": "apply config, then report ID",
+    "ironGate": "needs RustDesk install + config"
+  },
+  "connection": {
+    "from_northGate": {
+      "to_eastGate": "connect to 19091278, password d14247c1680e3085",
+      "to_sporeGate": "connect to 1871544996, password d14247c1680e3085"
+    },
+    "hairpin": "NONE \u2014 LAN discovery = direct P2P, no relay bounce"
+  }
+}
