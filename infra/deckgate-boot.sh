@@ -70,7 +70,7 @@ fi
 echo ""
 echo "[4/6] Gaia Kiosk"
 # π-port: brain resolves at boot — no hardcoded IP
-BRAIN="192.168.4.244"  # eastGate brain — single source
+BRAIN="$(ip route show default | awk '/via/{print $3}' | sed 's/\.1$/.244/')"  # self-discover via gateway  # eastGate brain — single source
 GAIA_URL="http://${BRAIN}:8080/diamond-lens.html"
 KIOSK_SCRIPT="$HOME/gaia-kiosk.sh"
 cat > "$KIOSK_SCRIPT" << KIOSK

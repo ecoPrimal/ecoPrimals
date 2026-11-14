@@ -16,7 +16,7 @@
 
 set -e
 
-BRAIN="192.168.4.244"
+BRAIN="$(ip route show default | awk '/via/{print $3}' | sed 's/\.1$/.244/')"  # self-discover via gateway
 MOUNT="/tmp/southgate-mount"
 GAIA_DATA="/home/eastgate/.local/share/gaia/data"
 TOUCHSTONE_DIR="${GAIA_DATA}/southgate-touchstone"

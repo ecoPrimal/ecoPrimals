@@ -23,7 +23,7 @@
 
 set -e
 
-BRAIN="192.168.4.244"
+BRAIN="$(ip route show default | awk '/via/{print $3}' | sed 's/\.1$/.244/')"  # self-discover via gateway
 DECK_WIRED="192.168.4.176"
 DECK_WIFI="192.168.4.203"
 DECK_USER="deck"

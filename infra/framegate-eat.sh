@@ -21,7 +21,7 @@
 
 set -e
 
-BRAIN="192.168.4.244"
+BRAIN="$(ip route show default | awk '/via/{print $3}' | sed 's/\.1$/.244/')"  # self-discover via gateway
 FRAME="192.168.9.203"
 FRAME_USER="deck"
 REMOTE_DIR="/home/deck/.gaia"
