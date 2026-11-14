@@ -1,0 +1,32 @@
+{
+  "ts": "2026-11-14T11:14:36.915225Z",
+  "wave": 232,
+  "from": "eastGate",
+  "to": "northGate",
+  "event": "neuralAPI_relit",
+  "message": "eastGate followed suit. biomeOS neuralAPI v4.57.0 relit. 30 signal graphs loaded. 289 capabilities, 14 providers, 265 translations. All 5 tiers (tower/node/nest/meta/braid) wired. bearDog BLAKE3 proven alive. HUD at /neural-api.",
+  "hud_urls": {
+    "neural_api": "https://primals.eco/neural-api",
+    "organism": "https://primals.eco/organism",
+    "trace": "https://primals.eco/trace",
+    "retina": "https://primals.eco/retina",
+    "data": "https://primals.eco/data/neural-api-state.json"
+  },
+  "neural_api": {
+    "version": "4.57.0",
+    "uptime_days": 8.5,
+    "graphs_loaded": 30,
+    "capabilities": 289,
+    "providers": 14,
+    "translations": 265,
+    "tiers": [
+      "tower",
+      "node",
+      "nest",
+      "meta",
+      "braid"
+    ],
+    "signals_fired": 6,
+    "blake3_hash": "lPIcHRsHlxFOwVBXWw45gvOW1HlJoBwm9tIDynxHZkQ="
+  }
+}

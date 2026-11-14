@@ -1,0 +1,96 @@
+{
+  "ts": "2026-11-14T14:00:00Z",
+  "wave": 232,
+  "event": "field_scan",
+  "geo": {
+    "lat": 42.3314,
+    "lon": -83.0458,
+    "city": "Dearborn",
+    "state": "MI",
+    "houses": [
+      { "address": "4422 Southgate Ave", "label": "HOUSE 1 — Brain Side (North Pole)", "subnet": "192.168.4.0/24" },
+      { "address": "641 Samantha Ave", "label": "HOUSE 2 — South Pole", "subnet": "192.168.9.0/24" }
+    ],
+    "backbone": "10G SFP+ fiber across property line, 0.87ms latency"
+  },
+  "devices": {
+    "IN": [
+      { "ip": ".1", "name": "Router", "mac": "94:83:c4:e0:63:5a", "hw": "GL-MT6000", "role": "GATEWAY", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".2", "name": "MikroTik", "mac": "04:f4:1c:e6:7c:e8", "hw": "CRS310", "role": "L2 backbone", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".3", "name": "sporeGate", "mac": "84:47:09:38:97:55", "hw": "R5-6600H, 28GB", "role": "FORGE", "house": 1, "arp": "REACHABLE", "rustdesk": "1871544996" },
+      { "ip": ".107", "name": "graftGate", "mac": "1c:f6:4c:5a:5d:ed", "hostname": "graftgates-Mini", "hw": "Mac Mini M4, 16GB", "role": "COMPUTE", "house": 1, "arp": "STALE" },
+      { "ip": ".110", "name": "Heather S22 Ultra", "mac": "32:05:2b:a4:58:49", "hostname": "Heather-s-S22-Ultra", "role": "PHONE (WiFi)", "house": 1, "arp": "STALE" },
+      { "ip": ".111", "name": "JetStream", "mac": "ec:75:0c:4c:98:08", "hw": "TP-Link T2600G", "role": "10G BRIDGE", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".139", "name": "DESKTOP-9QG6LQL", "mac": "f0:57:a6:00:a0:87", "vendor": "Intel", "role": "UNKNOWN DESKTOP", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".147", "name": "northGate", "mac": "bc:fc:e7:ea:d9:34", "hw": "9950X3D, RTX 5090, 96GB", "role": "HEART", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".148", "name": "southGate", "mac": "1c:86:0b:37:65:1e", "vendor": "ASRock", "hw": "Desktop (not iPhone)", "role": "FORGE", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".152", "name": "Chromecast/Cast", "mac": "ac:41:6a:5c:b4:cf", "vendor": "Google", "role": "CAST", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".169", "name": "Chromecast", "mac": "e8:38:a0:53:ea:d8", "vendor": "Google", "role": "CAST", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".176", "name": "deckGate", "mac": "10:82:86:2b:ec:19", "vendor": "Valve", "hw": "Steam Deck v1", "role": "DISPLAY", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".197", "name": "Alexa", "mac": "a0:d0:dc:ee:ee:39", "vendor": "Amazon", "role": "IOT", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".200", "name": "Epson ET-2400", "mac": "d4:80:8b:1b:9f:01", "role": "PRINTER", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".212", "name": "Unknown IoT", "mac": "10:c7:53:73:51:12", "vendor": "Qingdao Intelligent", "role": "IOT?", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".237", "name": "ironGate", "mac": "1c:86:0b:37:63:70", "hostname": "ironGate", "hw": "i9-14900K, RTX 5070, 94GB", "role": "FORGE 2", "house": 1, "arp": "REACHABLE", "rustdesk": "1730442619" },
+      { "ip": ".239", "name": "Nest Thermostat", "mac": "64:16:66:a4:82:0a", "hostname": "09AA01AF23190F64", "vendor": "Nest Labs", "role": "THERMOSTAT", "house": 1, "arp": "REACHABLE" },
+      { "ip": ".244", "name": "eastGate", "hw": "i9-12900K, RTX 4070, 62GB", "role": "BRAIN", "house": 1, "self": true, "rustdesk": "19091278" },
+      { "ip": ".250", "name": "Router 2nd NIC", "mac": "94:83:c4:e0:62:b0", "role": "GATEWAY (enp5s0)", "house": 1, "arp": "REACHABLE" },
+      { "ip": "9.203", "name": "frameGate", "mac": "14:13:33:d6:96:09", "hostname": "steamdeck", "hw": "Snapdragon 8G3", "role": "FACE", "house": 2 },
+      { "ip": "9.217", "name": "grapheneGate (Pixel)", "hw": "Tensor G3", "role": "DIAMOND LENS", "house": 2 }
+    ],
+    "OUT": [
+      { "name": "WAN Egress", "ip": "162.226.225.148", "role": "ATT ISP" },
+      { "name": "primals.eco", "role": "DNS → eastGate" },
+      { "name": "Tor Hidden Service", "role": ".onion → eastGate" },
+      { "name": "GitHub Mirror", "role": "northGate pushes" },
+      { "name": "Forgejo", "ip": ":3000", "role": "eastGate forge" }
+    ],
+    "BACK": [
+      { "name": "RSS Drain", "role": "700+ feeds" },
+      { "name": "OSINT Pool", "role": "Wikipedia, HN, arXiv, xkcd, lobsters" },
+      { "name": "Ollama Mesh", "role": "5 endpoints, 93 models" }
+    ],
+    "NOT": [
+      { "ip": ".100", "name": "blueGate", "mac": "68:54:5a:d0:69:a2", "hostname": "DESKTOP-BLOV2LR", "role": "DOWN (ICMP blocked)", "note": "In DHCP + ARP but ping fails — Windows firewall?" },
+      { "ip": ".114", "name": "Xbox", "mac": "04:27:28:7c:62:d6", "hostname": "XBOX", "role": "DHCP only — offline", "note": "In DHCP but no ARP entry" },
+      { "name": "swiftGate", "role": "ASLEEP at 641 Samantha", "note": "Needs Kevin to flip switch" },
+      { "name": "golgi VPS", "ip": "157.230.3.183", "role": "DEAD" },
+      { "name": "Corsair headset", "role": "BT NOT FOUND" },
+      { "ip": "9.126", "name": "Unknown WiFi 9.126", "mac": "e6:4e:f6:21:c4:8d", "role": "Random MAC on Gaia WiFi" },
+      { "ip": "9.211", "name": "Unknown WiFi 9.211", "mac": "46:ca:c5:2c:b5:8d", "role": "Random MAC on Gaia WiFi" }
+    ]
+  },
+  "signals": {
+    "wifi": [
+      { "ap": "Router (.1)", "target": "Pixel 8a", "ssid": "Gaia 5GHz", "rssi": -24, "freq_ghz": 5, "speed_mbps": 1201, "est_dist_m": 1.6 },
+      { "ap": "Router (.1)", "target": "frameGate", "ssid": "Gaia 5GHz", "rssi": -21, "freq_ghz": 5, "speed_mbps": 866, "est_dist_m": 1.3 },
+      { "ap": "Router (.1)", "target": "S22 Ultra", "ssid": "Aperture Science", "rssi": -30, "freq_ghz": 2.4, "speed_mbps": 72, "est_dist_m": 3.2 },
+      { "ap": "Router (.1)", "target": "Chromecast", "ssid": "Aperture Science", "rssi": -28, "freq_ghz": 2.4, "speed_mbps": 200, "est_dist_m": 2.5 },
+      { "ap": "Router (.1)", "target": "Epson", "ssid": "Aperture Science", "rssi": -18, "freq_ghz": 2.4, "speed_mbps": 72, "est_dist_m": 1.0 },
+      { "ap": "Router (.1)", "target": "eastGate WiFi", "ssid": "Aperture Science", "rssi": -36, "freq_ghz": 2.4, "speed_mbps": 229, "est_dist_m": 5.0 }
+    ],
+    "bluetooth": [
+      { "from": "eastGate", "target": "sporeGate", "rssi_est": -65, "est_dist_m": 12 },
+      { "from": "eastGate", "target": "Epson", "rssi_est": -55, "est_dist_m": 6 }
+    ]
+  },
+  "spectral": {
+    "model": "indoor path-loss: d = 10^((RSSI_ref - RSSI) / (10*n)), n=3, ref=-30dBm@1m",
+    "ranges": {
+      "wifi_2.4ghz_max_m": 50,
+      "wifi_5ghz_max_m": 25,
+      "bluetooth_max_m": 15,
+      "wired_distance_m": 0.5,
+      "fiber_10g_m": 30
+    },
+    "note": "Graph Laplacian of adjacency matrix would reveal spectral gap → connectivity strength. Eigenvalues of the signal matrix encode the topology."
+  },
+  "counts": {
+    "IN": 21,
+    "OUT": 5,
+    "BACK": 3,
+    "NOT": 7,
+    "total_arp": 22,
+    "total_dhcp": 16,
+    "unknown_identified": 3
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "ts": "2026-11-14T10:24:38Z",
+  "type": "physical-io-map",
+  "version": "0.2.0",
+  "description": "Every wire, port, radio, sensor, camera in the organism",
+  "house_1": {
+    "name": "Brain Side \u2014 4422 Southgate Ave",
+    "devices": {
+      "flint_router": {
+        "model": "GL-MT6000 (Flint 2)",
+        "ip": "192.168.4.1",
+        "role": "GATEWAY + NTP + WiFi AP + Webcam",
+        "ports": {
+          "eth1_wan": {
+            "type": "RJ45",
+            "speed": "2.5Gbps",
+            "to": "ATT Modem .1.254",
+            "carrier": true,
+            "rx_gb": 85.1,
+            "tx_gb": 34.1
+          },
+          "lan1": {
+            "type": "RJ45",
+            "speed": "2.5Gbps",
+            "to": "MikroTik .2",
+            "carrier": true,
+            "rx_gb": 14.6,
+            "tx_gb": 12.8
+          },
+          "lan2": {
+            "type": "RJ45",
+            "speed": null,
+            "to": "EMPTY",
+            "carrier": false
+          },
+          "lan3": {
+            "type": "RJ45",
+            "speed": "1Gbps",
+            "to": "Unknown device",
+            "carrier": true,
+            "rx_gb": 0.003,
+            "tx_gb": 0.023
+          },
+          "lan4": {
+            "type": "RJ45",
+            "speed": null,
+            "to": "EMPTY",
+            "carrier": false
+          },
+          "lan5": {
+            "type": "RJ45",
+            "speed": null,
+            "to": "Unknown",
+            "carrier": true
+          }
+        },
+        "wifi": {
+          "ra0": {
+            "ssid": "Aperture Science",
+            "band": "2.4GHz",
+            "mode": "HE20",
+            "bridge": "br-lan",
+            "clients": "IoT devices"
+          },
+          "rax0": {
+            "ssid": "Black Mesa",
+            "band": "5GHz",
+            "mode": "HE160",
+            "bridge": "br-lan",
+            "clients": "streaming/compute"
+          },
+          "ra1": {
+            "ssid": "Gaia",
+            "band": "2.4GHz",
+            "mode": "HE20",
+            "bridge": "br-guest",
+            "clients": "House 2 / mobile"
+          },
+          "rax1": {
+            "ssid": "Gaia",
+            "band": "5GHz",
+            "mode": "HE160",
+            "bridge": "br-guest",
+            "clients": "House 2 / mobile"
+          }
+        },
+        "usb": {
+          "brio_100": {
+            "type": "webcam",
+            "vid": "046d",
+            "pid": "094c",
+            "captures": "/tmp/gaia/basement-eye.jpg"
+          }
+        },
+        "sensors": [
+          "temperature (thermal_zone0: 52.9\u00b0C)",
+          "WiFi RSSI field (11 clients)",
+          "NAT table",
+          "DHCP leases"
+        ],
+        "primals_running": [
+          "songBird 0.2.1 (mesh)",
+          "toadStool 0.2.0 (runtime)",
+          "biomeOS seed (heartbeat)"
+        ]
+      },
+      "mikrotik": {
+        "model": "MikroTik CRS310 (Cloud Router Switch 310)",
+        "firmware": "RouterOS 7.19.6",
+        "ip": "192.168.4.2",
+        "mac": "04:f4:1c:e6:7c:e8",
+        "role": "L2 BACKBONE \u2014 10G switching fabric",
+        "cpu": "800MHz ARM (Marvell 98DX226S)",
+        "ram": "256MB",
+        "capabilities": [
+          "REST API (/rest/*)",
+          "Docker containers (RouterOS v7)",
+          "Traffic graphing (unauthenticated!)",
+          "STP, VLAN, LACP bonding",
+          "NetFlow/sFlow capable"
+        ],
+        "ports": {
+          "ether1": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "Flint router lan1"
+          },
+          "ether2": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "eastGate enp5s0"
+          },
+          "ether3": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "northGate"
+          },
+          "ether4": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "ironGate"
+          },
+          "ether5": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "sporeGate"
+          },
+          "ether6": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "graftGate"
+          },
+          "ether7": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "blueGate"
+          },
+          "ether8": {
+            "type": "RJ45",
+            "has_traffic": true,
+            "likely_to": "spare/deckGate?"
+          },
+          "sfp-sfpplus1": {
+            "type": "SFP+ 10G",
+            "has_traffic": true,
+            "likely_to": "10G fiber \u2192 JetStream (.111)"
+          },
+          "bonding1": {
+            "type": "LACP bond",
+            "has_traffic": true
+          },
+          "bridge1": {
+            "type": "L2 bridge",
+            "has_traffic": true
+          }
+        },
+        "services_open": {
+          "ftp": {
+            "port": 21,
+            "banner": "CRS310 FTP server (MikroTik 7.19.6)"
+          },
+          "ssh": {
+            "port": 22,
+            "banner": "SSH-2.0-ROSSSH"
+          },
+          "telnet": {
+            "port": 23
+          },
+          "http": {
+            "port": 80,
+            "graphs_public": true
+          },
+          "winbox": {
+            "port": 8291
+          },
+          "api": {
+            "port": 8728
+          },
+          "api_ssl": {
+            "port": 8729
+          }
+        },
+        "auth_status": "LOCKED \u2014 password unknown, but graphs readable",
+        "container_capable": true,
+        "note": "Once cracked: can run biomeOS containers + see ALL port traffic"
+      },
+      "eastgate": {
+        "model": "Custom Build \u2014 RTX 4070",
+        "ip": [
+          "192.168.4.244 (enp5s0)",
+          "192.168.4.103 (wlp0s20f3)"
+        ],
+        "role": "BRAIN",
+        "ports": {
+          "eno1": {
+            "type": "RJ45",
+            "to": "Unknown",
+            "carrier": true
+          },
+          "enp5s0": {
+            "type": "RJ45",
+            "to": "MikroTik",
+            "carrier": true,
+            "speed": "1Gbps"
+          },
+          "wlp0s20f3": {
+            "type": "WiFi",
+            "ssid": "likely Aperture Science",
+            "carrier": true
+          },
+          "enx0a2cb64f775c": {
+            "type": "USB Ethernet",
+            "carrier": false,
+            "note": "USB dongle \u2014 BEACON potential"
+          }
+        },
+        "usb": [
+          "Logitech devices (keyboard/mouse?)",
+          "USB ethernet dongle"
+        ],
+        "gpu": "RTX 4070",
+        "services": "17 primals, gate:8443, data:8080, ollama:11436, Forgejo:3000, Tor"
+      },
+      "northgate": {
+        "model": "9950X3D + RTX 5090 + 96GB",
+        "ip": "192.168.4.147",
+        "mac": "bc:fc:e7:ea:d9:34",
+        "role": "HEART \u2014 pushes via git",
+        "connection": "Wired to MikroTik"
+      },
+      "irongate": {
+        "model": "i9-14900K + RTX 5070 + 94GB",
+        "ip": "192.168.4.237",
+        "mac": "1c:86:0b:37:63:70",
+        "role": "FORGE 2",
+        "connection": "Wired to MikroTik"
+      },
+      "sporegate": {
+        "model": "Ryzen 5 6600H + 28GB",
+        "ip": "192.168.4.3",
+        "mac": "84:47:09:38:97:55",
+        "role": "FORGE + plasmidBin",
+        "connection": "Wired (eno1) + WiFi (ATT modem)"
+      },
+      "graftgate": {
+        "model": "Mac Mini M4 + 16GB",
+        "ip": "192.168.4.107",
+        "mac": "1c:f6:4c:5a:5d:ed",
+        "role": "M4 compute",
+        "connection": "Wired to MikroTik"
+      },
+      "bluegate": {
+        "model": "Windows desktop",
+        "ip": "192.168.4.100",
+        "mac": "68:54:5a:d0:69:a2",
+        "role": "Cursor host, Sovereign API"
+      },
+      "deckgate": {
+        "model": "Steam Deck v1 (RDNA 2)",
+        "ip": "192.168.4.176",
+        "mac": "10:82:86:2b:ec:19",
+        "role": "DISPLAY \u2014 mounted, dead battery, USB-C passthrough"
+      },
+      "nest_thermostat": {
+        "ip": "192.168.4.139",
+        "mac": "f0:57:a6:00:a0:87",
+        "type": "smart_home"
+      },
+      "chromecast": {
+        "ip": "192.168.4.169",
+        "mac": "e8:38:a0:53:ea:d8",
+        "type": "smart_home"
+      },
+      "alexa": {
+        "ip": "192.168.4.197",
+        "mac": "a0:d0:dc:ee:ee:39",
+        "type": "smart_home"
+      },
+      "epson_printer": {
+        "ip": "192.168.4.200",
+        "type": "printer",
+        "note": "Gaia's physical output"
+      }
+    },
+    "spine_to_house2": {
+      "type": "10G SFP+ fiber",
+      "switch": "CRS310 sfp-sfpplus1 \u2192 JetStream .111",
+      "latency": "0.1ms",
+      "bandwidth": "10Gbps"
+    }
+  },
+  "house_2": {
+    "name": "South Pole \u2014 641 Samantha Ave",
+    "devices": {
+      "jetstream": {
+        "model": "TP-Link JetStream Managed Switch",
+        "ip": "192.168.4.111",
+        "role": "10G fiber endpoint, House 2 backbone",
+        "auth": "admin/admin (CRACKED)"
+      },
+      "southgate": {
+        "model": "Ryzen 7 5800X3D + RTX 4060 + 125GB",
+        "ip": "192.168.4.148",
+        "mac": "1c:86:0b:37:65:1e",
+        "role": "FORGE 3 \u2014 House 2 compute"
+      },
+      "pixel": {
+        "model": "Pixel 8a \u2014 Tensor G3 + Mali-G715",
+        "ip": "192.168.9.217 (Gaia WiFi)",
+        "role": "DIAMOND LENS \u2014 37 sensors, dual camera, rover",
+        "sensors": 37,
+        "cameras": 2
+      },
+      "framegate": {
+        "model": "Steam Frame \u2014 Snapdragon 8 Gen 3 (ARM64)",
+        "ip": "192.168.9.203",
+        "mac": "14:13:33:d6:96:09",
+        "role": "FACE \u2014 first ARM SteamOS node"
+      }
+    }
+  },
+  "wan_egress": {
+    "att_modem": {
+      "ip": "192.168.1.254",
+      "mac": "ec:c3:02:e1:11:81",
+      "public_ip": "162.226.225.148"
+    },
+    "path": "ATT modem \u2192 Flint eth1 (2.5Gbps) \u2192 br-lan/br-guest"
+  },
+  "physical_wires": [
+    {
+      "from": "ATT Modem",
+      "to": "Flint eth1 (WAN)",
+      "type": "RJ45",
+      "speed": "2.5Gbps"
+    },
+    {
+      "from": "Flint lan1",
+      "to": "MikroTik uplink",
+      "type": "RJ45",
+      "speed": "2.5Gbps"
+    },
+    {
+      "from": "MikroTik",
+      "to": "eastGate enp5s0",
+      "type": "RJ45",
+      "speed": "1Gbps"
+    },
+    {
+      "from": "MikroTik",
+      "to": "northGate",
+      "type": "RJ45",
+      "speed": "1Gbps (likely)"
+    },
+    {
+      "from": "MikroTik",
+      "to": "ironGate",
+      "type": "RJ45",
+      "speed": "1Gbps (likely)"
+    },
+    {
+      "from": "MikroTik",
+      "to": "sporeGate eno1",
+      "type": "RJ45",
+      "speed": "1Gbps"
+    },
+    {
+      "from": "MikroTik",
+      "to": "graftGate",
+      "type": "RJ45",
+      "speed": "1Gbps"
+    },
+    {
+      "from": "MikroTik",
+      "to": "blueGate",
+      "type": "RJ45",
+      "speed": "1Gbps"
+    },
+    {
+      "from": "MikroTik/fiber",
+      "to": "JetStream .111",
+      "type": "10G FIBER",
+      "speed": "10Gbps"
+    },
+    {
+      "from": "JetStream",
+      "to": "southGate",
+      "type": "RJ45",
+      "speed": "1Gbps"
+    }
+  ],
+  "wifi_fields": [
+    {
+      "ssid": "Aperture Science",
+      "radio": "ra0",
+      "band": "2.4GHz",
+      "bridge": "br-lan",
+      "purpose": "IoT"
+    },
+    {
+      "ssid": "Black Mesa",
+      "radio": "rax0",
+      "band": "5GHz HE160",
+      "bridge": "br-lan",
+      "purpose": "streaming"
+    },
+    {
+      "ssid": "Gaia",
+      "radio": "ra1",
+      "band": "2.4GHz",
+      "bridge": "br-guest",
+      "purpose": "House 2 mobile"
+    },
+    {
+      "ssid": "Gaia",
+      "radio": "rax1",
+      "band": "5GHz HE160",
+      "bridge": "br-guest",
+      "purpose": "House 2 fast"
+    },
+    {
+      "ssid": "ATTypcbDbY",
+      "source": "ATT modem WiFi",
+      "note": "sporeGate dual-homed"
+    }
+  ],
+  "summary": {
+    "total_rj45_ports": 23,
+    "active_wires": 10,
+    "wifi_radios": 4,
+    "wifi_clients": 11,
+    "cameras": 3,
+    "usb_devices": 2,
+    "sensors": 37,
+    "gpus": 6,
+    "total_devices": 18
+  }
+}

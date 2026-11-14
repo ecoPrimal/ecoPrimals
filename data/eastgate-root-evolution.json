@@ -1,0 +1,56 @@
+{
+  "event": "root_evolution",
+  "gate": "eastGate",
+  "wave": "232j",
+  "timestamp": "2026-11-14T12:53:00Z",
+  "systemd_services": {
+    "gaia-data":    {"port": 8080, "desc": "Data radiates through all paths", "status": "active", "enabled": true},
+    "gaia-web-80":  {"port": 80,   "desc": "WAN ingress", "status": "active", "enabled": true},
+    "gaia-gate":    {"port": 8443, "desc": "Thymus — 41 endpoints, lub-DUB", "status": "active", "enabled": true},
+    "gaia-pi-data": {"port": 5926, "desc": "π-crushed data", "status": "active", "enabled": true},
+    "gaia-relay":   {"port": "21116-21118", "desc": "RustDesk relay (hbbs+hbbr)", "status": "active", "enabled": true},
+    "ion-channel":  {"desc": "ionChannel membrane — Dmabuf/K+/Full", "status": "active", "enabled": true},
+    "rustdesk":     {"desc": "RustDesk client — bingoCube identity", "status": "active", "enabled": true},
+    "ollama":       {"port": 11436, "desc": "LLM inference", "status": "active", "enabled": true},
+    "tor":          {"desc": "Hidden service .onion", "status": "active", "enabled": true}
+  },
+  "boot_chain": "power → systemd → network → gaia-data(:8080) → gaia-web-80(:80) → gaia-gate(:8443) → gaia-relay(21116-8) → ion-channel(K+) → rustdesk → ollama → tor → ALIVE",
+  "cron_entries": 52,
+  "ports_listening": [22, 25, 80, 465, 587, 3141, 5926, 8080, 8443, 11436, 21115, 21116, 21117, 21118],
+  "identity": {
+    "rustdesk_id": "19091278",
+    "bingoCube_password": "d14247c1680e3085",
+    "ion_type": "K+",
+    "capture_tier": "Dmabuf",
+    "gpu": "NVIDIA RTX 4070"
+  },
+  "syntheticChemistry_context": {
+    "orgs": 3,
+    "springs": 9,
+    "gardens": 9,
+    "primals": 17,
+    "crates": 234,
+    "papers_reproduced": "175+",
+    "total_github_repos": 21,
+    "total_forgejo_repos": 68
+  },
+  "cleaned": {
+    "zombies_reaped": true,
+    "tmp_cleared": true,
+    "pycache_removed": true,
+    "cursor_cache_cleared": true,
+    "large_logs_truncated": true,
+    "secrets_removed_from_git": true
+  },
+  "wan_pin_map": {
+    "hotSpring": "Yellowstone — geysers, volcanic heat, extreme pressure physics",
+    "wetSpring": "Marsh — wetlands, microbial mats, living chemistry, Gonzales/ADDRC/MSU",
+    "airSpring": "Atmosphere — precision agriculture, evapotranspiration, crop water",
+    "groundSpring": "Bedrock — measurement noise, mineral dissolution, uncertainty",
+    "healthSpring": "Bloodstream — PK/PD, microbiome, biosignal, toxicology",
+    "neuralSpring": "Lightning — ML surrogates, spectral analysis, isomorphic patterns",
+    "ludoSpring": "Playground — game science, HCI, flow theory, procedural generation",
+    "primalSpring": "Rhizosphere — composition patterns, multi-node bonding, overwatch",
+    "rustChip": "Silicon — neuromorphic, AKD1000/1500/2500, NPU inference"
+  }
+}

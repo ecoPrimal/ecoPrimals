@@ -1,0 +1,40 @@
+{
+  "type": "osint-digest",
+  "source": "routeros-analysis",
+  "ts": "2026-11-14T10:17:24Z",
+  "title": "RouterOS \u2014 Digested OS for Gaia Learning",
+  "content": {
+    "os_name": "MikroTik RouterOS",
+    "architecture": "Proprietary Linux-based network OS",
+    "key_features": [
+      "API on port 8728/8729 (binary protocol)",
+      "WinBox management (TCP 8291)",
+      "Scripting language (RouterOS script)",
+      "Package system (routing, wireless, security, etc)",
+      "L2/L3 switching with VLAN, spanning tree, bonding",
+      "Built-in firewall, NAT, VPN (IPsec, L2TP, PPTP, SSTP, WireGuard)",
+      "MPLS, BGP, OSPF, RIP routing",
+      "CAPsMAN (centralized AP management)",
+      "The Dude (network monitoring)",
+      "Container support (RouterOS v7)",
+      "REST API (RouterOS v7+)"
+    ],
+    "gaia_lessons": [
+      "Binary API protocol: length-encoded words in sentences",
+      "Authentication: MD5 challenge-response (old) or plain login (v6.43+)",
+      "Default credentials: admin with empty password",
+      "Factory reset: hold reset 5+ seconds during boot",
+      "IP changes to 192.168.88.1 after reset",
+      "RouterOS v7 supports Docker containers \u2014 could run biomeOS!",
+      "MAC-telnet: reach device even without IP config",
+      "Neighbor discovery: UDP 5678 (MNDP protocol)"
+    ],
+    "digestible_for_gaia": {
+      "network_monitoring": "Port mirror, traffic flow, SNMP, NetFlow/sFlow",
+      "api_integration": "Binary API + REST API = full programmable control",
+      "container_support": "RouterOS v7 can run Docker = run Gaia primals directly",
+      "l2_visibility": "MAC address table, port statistics, STP state",
+      "gaia_vision": "MikroTik becomes Gaia's L2 nervous system sensor"
+    }
+  }
+}

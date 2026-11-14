@@ -1,0 +1,120 @@
+{
+  "discovered": "2026-11-14T12:47:00Z",
+  "wave": "232i",
+  "purpose": "Gaia knows her own scientific body — three GitHub orgs, all springs, all gardens",
+  
+  "orgs": {
+    "ecoPrimal": {
+      "url": "https://github.com/ecoPrimal",
+      "role": "KERNEL — 17 primals, the organism core",
+      "repos": ["ecoPrimals"]
+    },
+    "sporeGarden": {
+      "url": "https://github.com/sporeGarden",
+      "role": "PRODUCTS — deployable compositions from primals",
+      "repos": ["blueFish", "cellMembrane", "esotericWebb", "helixVision", "initioChem", "lithoSpore", "metalForge", "projectFOUNDATION", "projectNUCLEUS"],
+      "public": true
+    },
+    "syntheticChemistry": {
+      "url": "https://github.com/syntheticChemistry",
+      "role": "SPRINGS — scientific validation, 175+ papers reproduced",
+      "repos": ["hotSpring", "wetSpring", "neuralSpring", "airSpring", "groundSpring", "healthSpring", "ludoSpring", "primalSpring", "rustChip", "benchScale", "agentReagents"],
+      "public": true
+    }
+  },
+
+  "springs": {
+    "hotSpring": {
+      "domain": "GPU Physics & Computational Chemistry",
+      "subdomain": ["lattice-qcd", "nuclear-eos", "molecular-dynamics", "gpu-compute-validation", "metadynamics"],
+      "crates": 4,
+      "tests": 165,
+      "wan_pin": "Yellowstone — geysers, volcanic heat, extreme pressure physics",
+      "size_kb": 116201
+    },
+    "wetSpring": {
+      "domain": "Life Science & Analytical Chemistry",
+      "subdomain": ["metagenomics", "analytical-chemistry", "mathematical-biology", "drug-repurposing"],
+      "crates": 5,
+      "tests": 102,
+      "wan_pin": "Marsh — wetlands, microbial mats, living chemistry, Gonzales/ADDRC bridge",
+      "gonzales_link": "ADDRC Drug Discovery, MSU, 1355 Bogue St, East Lansing MI 48824",
+      "size_kb": 14676
+    },
+    "airSpring": {
+      "domain": "Agricultural Meteorology & Irrigation",
+      "subdomain": ["evapotranspiration", "soil-physics", "water-balance", "crop-water-atlas"],
+      "crates": 6,
+      "experiments": 3,
+      "tests": 88,
+      "size_kb": 6370
+    },
+    "groundSpring": {
+      "domain": "Measurement Noise & Uncertainty Quantification",
+      "subdomain": ["measurement-noise", "uncertainty-quantification", "inverse-problems", "calibration"],
+      "crates": 6,
+      "experiments": 2,
+      "tests": 62,
+      "size_kb": 5961
+    },
+    "healthSpring": {
+      "domain": "Clinical PK-PD Drug Interaction",
+      "subdomain": ["pharmacokinetics", "pharmacodynamics", "drug-interactions", "microbiome-metabolism"],
+      "crates": 99,
+      "experiments": 95,
+      "tests": 45,
+      "size_kb": 5108
+    },
+    "neuralSpring": {
+      "domain": "ML Surrogates & Isomorphic Computation",
+      "subdomain": ["ml-surrogates", "transfer-learning", "scholarly-reproduction", "warm-dense-matter"],
+      "crates": 4,
+      "experiments": 1,
+      "tests": 76,
+      "size_kb": 13805
+    },
+    "ludoSpring": {
+      "domain": "Game Science & Interactive Systems",
+      "subdomain": ["human-computer-interaction", "game-design", "procedural-generation"],
+      "crates": 4,
+      "tests": 10,
+      "size_kb": 3159
+    },
+    "primalSpring": {
+      "domain": "Primal Composition Patterns",
+      "subdomain": ["multi-node-bonding", "deploy-graphs", "ecosystem-overwatch"],
+      "crates": 106,
+      "experiments": 104,
+      "tests": 18,
+      "size_kb": 6294
+    },
+    "rustChip": {
+      "domain": "Neuromorphic Computing",
+      "subdomain": ["akd1000", "npu-inference", "echo-state-networks"],
+      "size_kb": 1610
+    }
+  },
+
+  "gardens": {
+    "initioChem": {"role": "Interactive quantum chemistry via composed primals", "crates": 2},
+    "blueFish": {"role": "Marine ecology compositions", "crates": 2},
+    "cellMembrane": {"role": "Sovereign deployment — systemd, Caddy, mesh", "crates": 3},
+    "esotericWebb": {"role": "Cross-evolution CRPG engine", "crates": 8},
+    "helixVision": {"role": "Protein structure + molecular viz — GPS platform target", "crates": 2},
+    "metalForge": {"role": "Bare-metal/VM provisioning", "crates": 4},
+    "projectFOUNDATION": {"role": "Unified scientific lineage — cross-domain", "crates": 8},
+    "projectNUCLEUS": {"role": "Single-command scientific cluster bootstrap", "crates": 5},
+    "lithoSpore": {"role": "Self-proving LTEE validation artifact", "crates": 11}
+  },
+
+  "totals": {
+    "springs": 9,
+    "gardens": 9,
+    "primals": 17,
+    "total_crates_springs": 234,
+    "total_experiments": 206,
+    "github_orgs": 3,
+    "forgejo_repos": 68,
+    "papers_reproduced": "175+"
+  }
+}

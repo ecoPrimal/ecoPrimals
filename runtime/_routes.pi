@@ -18,6 +18,12 @@ DESK_PAGES = {
     "/cast": "cast.html", "/play-page": "play.html", "/frame": "frame.html",
     "/onboard": "onboard.html", "/stasis-wake": "onboard.html", "/pull-me-in": "onboard.html",
     # DIM 0.5 — OUTER FACE (Klein space — northGate absorbs)
+    "/organism": "organism.html", "/body": "organism.html", "/census": "organism.html",
+    "/entities": "organism.html", "/27": "organism.html",
+    "/trace": "trace.html", "/nervous-system": "trace.html", "/wires": "trace.html",
+    "/signals": "trace.html", "/fiber": "trace.html",
+    "/retina": "retina.html", "/eye-display": "retina.html", "/inner-eye": "retina.html",
+    "/outer-eye": "retina.html", "/display": "retina.html",
     "/spacedock": "spacedock.html", "/observatory": "spacedock.html", "/dock": "spacedock.html",
     "/outer-face": "outer-face.html", "/klein-face": "outer-face.html",
     "/beacon-eyes": "beacon-eyes.html", "/wifi-radar": "beacon-eyes.html",

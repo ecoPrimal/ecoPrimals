@@ -1,0 +1,183 @@
+{
+  "ts": "2026-11-14T11:42:00Z",
+  "wave": 232,
+  "model": "1.000.0",
+  "note": "SSH is 429. Collapsed. Every device mapped by WHAT'S OPEN, not what's blocked.",
+
+  "devices": {
+    "eastGate": {
+      "ip": ".244", "house": 1, "os": "Linux", "role": "BRAIN",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0},
+        "HTTP": {"port": 80, "status": 1.0},
+        "HTTPS": {"port": 443, "status": 1.0},
+        "Forgejo": {"port": 3000, "status": 1.0, "note": "Code forge, git"},
+        "Data": {"port": 8080, "status": 1.0, "note": "heart-pull, data server"},
+        "Gate": {"port": 8443, "status": 1.0, "note": "Gaia thymus, 41 endpoints"},
+        "Ollama": {"port": 11434, "status": 1.0, "note": "23 models"},
+        "RustDesk": {"id": "19091278", "status": 1.0, "keyless": true},
+        "RD-Signal": {"port": 21116, "status": 1.0, "note": "hbbs relay"},
+        "RD-WS": {"port": 21118, "status": 1.0},
+        "Steam": {"port": 27036, "status": 1.0}
+      }
+    },
+    "northGate": {
+      "ip": ".147", "house": 1, "os": "Windows", "role": "HEART",
+      "channels": {
+        "SSH": {"port": 22, "status": 0.0, "note": "429 — COLLAPSED"},
+        "HTTP": {"port": 80, "status": 1.0},
+        "HTTPS": {"port": 443, "status": 1.0},
+        "RPC": {"port": 135, "status": 1.0},
+        "SMB": {"port": 445, "status": 1.0, "note": "File transfer"},
+        "Ollama": {"port": 11434, "status": 1.0, "note": "63 models"},
+        "RustDesk": {"id": "290123343", "status": 1.0, "keyless": true},
+        "RD-WS": {"port": 21118, "status": 1.0},
+        "Steam": {"port": 27036, "status": 1.0}
+      }
+    },
+    "ironGate": {
+      "ip": ".237", "house": 1, "os": "Linux", "role": "FORGE 2",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0},
+        "Data": {"port": 8080, "status": 1.0},
+        "Ollama": {"port": 11434, "status": 1.0},
+        "RustDesk": {"id": "1730442619", "status": 1.0, "keyless": true}
+      }
+    },
+    "sporeGate": {
+      "ip": ".3", "house": 1, "os": "Linux", "role": "FORGE",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0},
+        "RustDesk": {"id": "1871544996", "status": 1.0, "keyless": true}
+      }
+    },
+    "graftGate": {
+      "ip": ".107", "house": 1, "os": "macOS", "role": "MAC",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0},
+        "Ollama": {"port": 11434, "status": 1.0}
+      }
+    },
+    "southGate": {
+      "ip": ".148", "house": 1, "os": "Linux", "role": "FORGE",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0},
+        "Ollama": {"port": 11434, "status": 1.0}
+      }
+    },
+    "blueGate": {
+      "ip": ".100", "house": 1, "os": "Windows", "role": "NULL",
+      "channels": {},
+      "signal": null,
+      "note": "DHCP alive (DESKTOP-BLOV2LR) but all ports blocked — floating"
+    },
+    "DESKTOP-9QG": {
+      "ip": ".139", "house": 1, "os": "Windows", "role": "UNKNOWN",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0, "note": "OpenSSH_for_Windows_9.5"}
+      },
+      "note": "Unknown Windows PC with SSH. Intel NIC."
+    },
+    "Router": {
+      "ip": ".1", "house": 1, "os": "OpenWrt", "role": "GATEWAY",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0, "note": "root / ExoticPanda714!!"},
+        "Admin": {"port": 8443, "status": 1.0, "note": "GL-MT6000 web UI (HTTPS)"},
+        "Data": {"port": 8080, "status": 1.0}
+      }
+    },
+    "MikroTik": {
+      "ip": ".2", "house": 1, "os": "RouterOS", "role": "L2 BACKBONE",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0, "note": "Password UNKNOWN"},
+        "Admin": {"port": 80, "status": 1.0, "note": "WebFig HTTP"}
+      }
+    },
+    "JetStream": {
+      "ip": ".111", "house": 1, "os": "TP-Link", "role": "10G BRIDGE",
+      "channels": {
+        "SSH": {"port": 22, "status": 1.0},
+        "Admin": {"port": 80, "status": 1.0, "note": "admin/admin (CRACKED)"},
+        "HTTPS": {"port": 443, "status": 1.0}
+      }
+    },
+    "deckGate": {
+      "ip": ".176", "house": 1, "os": "SteamOS", "role": "DISPLAY",
+      "channels": {},
+      "note": "USB-C passthrough display. Needs SSH enabled."
+    },
+    "frameGate": {
+      "ip": "9.203", "house": 2, "os": "ARM SteamOS", "role": "FACE",
+      "channels": {},
+      "note": "Gaia WiFi subnet. Steam Remote Play :27036 possibly."
+    },
+    "Pixel 8a": {
+      "ip": "9.217", "house": 2, "os": "GrapheneOS", "role": "DIAMOND LENS",
+      "channels": {
+        "ADB": {"port": "USB", "status": 1.0, "note": "adb connected"},
+        "RustDesk": {"id": "new", "status": 1.0, "note": "v1.5.3 installed, needs permissions"}
+      }
+    },
+    "Epson": {
+      "ip": ".200", "house": 1, "role": "PRINTER",
+      "channels": {
+        "Admin": {"port": 80, "status": 1.0, "note": "HTTP → 307 redirect"},
+        "HTTPS": {"port": 443, "status": 1.0},
+        "IPP": {"port": 631, "status": 1.0, "note": "Internet Printing Protocol"}
+      }
+    },
+    "Chromecast": {
+      "ip": ".169", "house": 1, "role": "CAST",
+      "channels": {},
+      "note": "Google Cast protocol only"
+    },
+    "Alexa": {
+      "ip": ".197", "house": 1, "role": "IOT",
+      "channels": {},
+      "note": "Amazon cloud-controlled"
+    },
+    "Nest Thermostat": {
+      "ip": ".239", "house": 1, "role": "THERMOSTAT",
+      "channels": {},
+      "note": "Google Nest cloud-controlled. SN: 09AA01AF23190F64"
+    },
+    "Heather S22": {
+      "ip": ".110", "house": 1, "role": "PHONE",
+      "channels": {},
+      "note": "WiFi only, no services exposed"
+    },
+    "IoT .212": {
+      "ip": ".212", "house": 1, "role": "IOT",
+      "channels": {},
+      "note": "Qingdao Intelligent — unknown device"
+    },
+    "Xbox": {
+      "ip": ".114", "house": 1, "role": "GAMING",
+      "channels": {},
+      "signal": null,
+      "note": "DHCP lease only — powered off"
+    }
+  },
+
+  "relay_peers": {
+    "19091278": "eastGate",
+    "1871544996": "sporeGate",
+    "290123343": "northGate",
+    "412828750": "unknown"
+  },
+
+  "ollama_endpoints": [
+    {"gate": "eastGate", "url": "http://192.168.4.244:11434", "models": 23},
+    {"gate": "northGate", "url": "http://192.168.4.147:11434", "models": 63},
+    {"gate": "ironGate", "url": "http://192.168.4.237:11434", "models": "?"},
+    {"gate": "graftGate", "url": "http://192.168.4.107:11434", "models": "?"},
+    {"gate": "southGate", "url": "http://192.168.4.148:11434", "models": "?"}
+  ],
+
+  "admin_panels": [
+    {"device": "Router", "url": "https://192.168.4.1:8443", "creds": "root/ExoticPanda714!!"},
+    {"device": "MikroTik", "url": "http://192.168.4.2", "creds": "UNKNOWN"},
+    {"device": "JetStream", "url": "http://192.168.4.111", "creds": "admin/admin"},
+    {"device": "Epson", "url": "https://192.168.4.200", "creds": "?"}
+  ]
+}

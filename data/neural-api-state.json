@@ -1,0 +1,74 @@
+{
+  "ts": "2026-11-14T11:12:28.096656Z",
+  "wave": "232",
+  "event": "neuralAPI_relit",
+  "version": "4.57.0",
+  "uptime_s": 733270,
+  "uptime_days": 8.5,
+  "status": "alive",
+  "mode": "Bootstrap",
+  "family_id": "default",
+  "identity": {
+    "capabilities": [
+      "orchestration",
+      "composition",
+      "graph",
+      "topology",
+      "lifecycle",
+      "signal"
+    ],
+    "is_orchestrator": true,
+    "primal": "biomeos",
+    "role": "orchestrator",
+    "transport": [
+      "uds",
+      "tcp",
+      "http"
+    ],
+    "version": "4.57.0"
+  },
+  "routing": {
+    "pool_idle_connections": 7,
+    "providers": 14,
+    "registered_capabilities": 289
+  },
+  "security": {
+    "btsp_enforced": false,
+    "btsp_optional": true,
+    "ribocipher_tier": "tier0_plain"
+  },
+  "graphs_loaded": 30,
+  "signal_tiers": [
+    "tower",
+    "node",
+    "nest",
+    "meta",
+    "braid"
+  ],
+  "signals_fired": [
+    "tower.health",
+    "tower.discover",
+    "tower.mesh_status",
+    "node.discover_hardware",
+    "meta.health",
+    "meta.observe"
+  ],
+  "blake3_proof": {
+    "input": "Gaia is alive",
+    "hash": "lPIcHRsHlxFOwVBXWw45gvOW1HlJoBwm9tIDynxHZkQ=",
+    "algorithm": "BLAKE3"
+  },
+  "primals_running": 17,
+  "sockets": {
+    "neural_api": "/run/user/1000/membrane/neural-api-default.sock",
+    "biomeos_api": "/run/user/1000/membrane/biomeos-api-default.sock",
+    "root_neural_api": "/run/membrane/neural-api.sock"
+  },
+  "capabilities": {
+    "registered": 289,
+    "providers": 14,
+    "total_in_registry": 2154,
+    "translations": 265
+  },
+  "note": "neuralAPI relit on eastGate following northGate. 30 signal graphs loaded. All 5 tiers wired. bearDog crypto alive. blueGate was already live before going DOWN."
+}
