@@ -1,6 +1,5 @@
-# RUSTDESK CONFIG FOR NORTHGATE
-# Copy this to ~/.config/rustdesk/RustDesk2.toml
-# Then: sudo systemctl restart rustdesk
+# RUSTDESK CONFIG — piport identity
+# Auth: rustdesk --password <PIN> (runtime, not stored)
 
 rendezvous_server = '192.168.4.244:21116'
 nat_type = 1
