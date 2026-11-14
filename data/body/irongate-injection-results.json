@@ -1,0 +1,63 @@
+{
+  "title": "IRONGATE INJECTION — Workload Takeover Results",
+  "wave": 234,
+  "ts": "2026-11-14T12:00:00-0500",
+  
+  "injection_summary": {
+    "models_pulled": ["tinyllama", "gemma2:2b", "phi3", "llama3.2:1b", "llama3.2:3b"],
+    "models_total": 6,
+    "storage_used_gb": 11.6,
+    "biomeOS_primal": "nestGate (JSON-RPC on :8080, raw TCP)",
+    "nestgate_status": "ALIVE + READY"
+  },
+
+  "cross_mesh_latency": {
+    "test": "Same prompt to all 4 ollama endpoints",
+    "results": [
+      {"gate": "eastGate",  "ip": ".244:11436", "gpu": "RTX 4070",  "total_ms": 937,  "eval_ms": 64,  "tps": 468.8, "model": "tinyllama"},
+      {"gate": "ironGate",  "ip": ".237:11434", "gpu": "RTX 5070",  "total_ms": 1321, "eval_ms": 98,  "tps": 642.9, "model": "tinyllama"},
+      {"gate": "graftGate", "ip": ".107:11434", "gpu": "M4",        "total_ms": 1388, "eval_ms": 685, "tps": 49.6,  "model": "qwen2.5:3b"},
+      {"gate": "northGate", "ip": ".147:11434", "gpu": "RTX 5090",  "total_ms": 2955, "eval_ms": 56,  "tps": 839.3, "model": "tinyllama:1.1b"}
+    ],
+    "ranking_by_tps": [
+      "1. northGate RTX 5090 — 839.3 tok/s (fastest eval, slowest load)",
+      "2. ironGate RTX 5070 — 642.9 tok/s (fast eval, fast load)",
+      "3. eastGate RTX 4070 — 468.8 tok/s (fastest total, good balance)",
+      "4. graftGate M4 — 49.6 tok/s (CPU inference, no discrete GPU)"
+    ],
+    "note": "northGate has highest tok/s but 2.8s model load. ironGate is the best BALANCE of speed + load time."
+  },
+
+  "diverse_workloads": {
+    "CODE":     {"gate": "ironGate", "model": "qwen2.5:7b", "ms": 2050, "tokens": 141, "tps": 121.0, "result": "Clean Fibonacci function generated"},
+    "REASON":   {"gate": "ironGate", "model": "phi3",       "ms": 992,  "tokens": 104, "tps": 226.1, "result": "Correct math: 3 × 2.5 = 7.5 kg"},
+    "CREATIVE": {"gate": "ironGate", "model": "gemma2:2b",  "ms": 1763, "tokens": 28,  "tps": 179.5, "result": "Haiku: 'Code blooms, digital, / For warrior's heart, for queen's grace, / Art bursts in the blue.'"},
+    "LEGAL":    {"gate": "ironGate", "model": "qwen2.5:7b", "ms": 1102, "tokens": 130, "tps": 121.0, "result": "Correct Michigan fraud standard: false representation, knowledge, intent, reliance"},
+    "SCIENCE":  {"gate": "ironGate", "model": "llama3.2:3b", "ms": 12495, "tokens": 51, "tps": 229.7, "result": "Shannon entropy = how much info in a message"},
+    "IDENTITY": {"gate": "eastGate", "model": "gaia",       "ms": 9410, "tokens": 665, "tps": 88.8,  "result": "Gaia reflects on growth when a new limb awakens"}
+  },
+
+  "ironGate_capability_proven": {
+    "code_generation": "qwen2.5:7b at 121 tok/s — handles code tasks",
+    "reasoning": "phi3 at 226 tok/s — math + logic",
+    "creative": "gemma2:2b at 179 tok/s — poetry, haiku",
+    "legal": "qwen2.5:7b at 121 tok/s — legal analysis, Michigan law",
+    "science": "llama3.2:3b at 230 tok/s — science explanation",
+    "verdict": "ironGate CAN handle the workload. 6 models, all types, all responding."
+  },
+
+  "next_steps": {
+    "phase_2_models": [
+      "mistral:7b (4.1 GB) — strong general purpose",
+      "deepseek-r1:8b (4.9 GB) — deep reasoning", 
+      "codellama:7b (3.6 GB) — code specialist",
+      "nomic-embed-text (0.3 GB) — embeddings"
+    ],
+    "phase_3_gaia_custom": [
+      "Copy gaia:latest Modelfile from northGate → ironGate",
+      "Copy gaia-heart, gaia-code, gaia-fast custom models",
+      "Rebuild TMNT pack (euler, michelangelo, raphael, donatello, leonardo, splinter)"
+    ],
+    "total_after_full_migration": "63+ models, ~280 GB on ironGate's 3.6TB NVMe"
+  }
+}
