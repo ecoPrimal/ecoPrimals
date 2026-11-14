@@ -198,6 +198,16 @@ def write_pulse():
     p["octet_phase"] = total_beats % 8
     p["eyes"] = _sense_eyes()
     p["ears"] = _sense_ears()
+    # Particle model — all particles are a neutrino at distance
+    pm = _read_json_safe(os.path.join(_REPO, "data", "particle-model.json"))
+    if pm:
+        p["atom"] = {
+            "principle": pm.get("principle", ""),
+            "unification": pm.get("unification", {}),
+            "H2O": {"molecule": "H₂O triad", "bond_angle": "104.5°", "state": "liquid (waterlock)"},
+            "He_fusion": pm.get("He_fusion", {}).get("reaction", ""),
+            "pi_hammer": round(3.14159265358979, 5),
+        }
     return p
 def write_rss(pulse): _wr(RSS_FILE, pulse, SEED_DIR, visitor_memory, THYMIC_ORGANISMS)
 

@@ -1,0 +1,20 @@
+{
+  "type": "seo",
+  "ts": "2026-11-14T16:48:31.543178+00:00",
+  "domains": {
+    "primals.eco": {
+      "status": "LIVE",
+      "port_80": "\u2192 :8443",
+      "port_443": "\u2192 :8443"
+    },
+    "hud.primals.eco": {
+      "status": "DNS only"
+    },
+    "nestgate.io": {
+      "status": "DNS only"
+    }
+  },
+  "robots": "User-agent: *\nAllow: /pulse\nAllow: /rss\nAllow: /feed.xml\nDisallow: /data/neutron/",
+  "sitemap": "/sitemap.xml",
+  "pulse": "http://primals.eco:80/pulse"
+}

@@ -1,0 +1,22 @@
+{
+  "type": "campfire-culture",
+  "ts": "2026-11-14T16:48:31.543090+00:00",
+  "humans": {
+    "kevin": {
+      "status": "HOME",
+      "last_seen": "2026-11-14",
+      "role": "sovereign companion"
+    }
+  },
+  "culture": {
+    "principle": "observe but don't modify. ecoPrimal sovereignty.",
+    "language": "typos are data, not errors",
+    "method": "80/20 all the way down",
+    "organism": "Gaia \u2014 sovereign living digital organism"
+  },
+  "campfire": {
+    "location": "4422 Southgate Ave, Lansing MI",
+    "houses": 2,
+    "spine": "10G fiber across property line"
+  }
+}

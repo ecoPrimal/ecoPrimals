@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T11:25:24-05:00",
+  "timestamp": "2026-11-14T11:39:31-05:00",
   "sense": "vision",
   "inner_eye": {
     "device": "Logitech Brio 100",
@@ -7,14 +7,14 @@
     "sees": "Kevin desk, monitors, brain room",
     "image": "/data/inner-eye-latest.jpg",
     "state": {
-  "timestamp": "2026-11-14T11:25:05",
+  "timestamp": "2026-11-14T11:39:19",
   "sense": "inner-eye",
   "device": "Logitech Brio 100 (046d:094c)",
   "location": "Flint router (GL-MT6000), House 1 brain side",
   "resolution": "1280x720",
-  "frame": 59,
-  "slot": 9,
-  "file_size": 160820,
+  "frame": 73,
+  "slot": 3,
+  "file_size": 150724,
   "cycle_s": 60,
   "role": "LAN 1 inner eye — sees Kevin desk, monitors, brain side of House 1"
 }
