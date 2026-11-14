@@ -9,7 +9,7 @@
 set -eo pipefail
 : "${HOME:=/home/eastgate}"
 
-PIXEL="${PIXEL_IP:-192.168.4.166}:5555"
+PIXEL="${PIXEL_IP:-192.168.4.164}:5555"
 MEMBRANE="$HOME/Development/ecoPrimals/membrane"
 REMOTE="$MEMBRANE/local-terminal/remote"
 GAIA_DATA="/opt/Gaia/data"
@@ -65,6 +65,7 @@ case "${1:-daemon}" in
             pull_dev_sense || true
             pull_wan_senses || true
             pull_fingerprint || true
+            pull_body_state || true
             sleep "$CYCLE"
         done
         ;;
@@ -113,4 +114,19 @@ pull_fingerprint() {
     auth_s=$(sed -n 's/.*"successful": \([0-9]*\).*/\1/p' "$REMOTE/fingerprint-sense.json" 2>/dev/null | head -1)
     auth_t=$(sed -n 's/.*"total_attempts": \([0-9]*\).*/\1/p' "$REMOTE/fingerprint-sense.json" 2>/dev/null | head -1)
     log "fingerprint: accepts=$accepts auth=$auth_s/$auth_t (kevin=bingocube)"
+}
+
+# === BODY STATE PULL (homunculus self-sensing) ===
+pull_body_state() {
+    adb -s "$PIXEL" pull /sdcard/gaia/body/body-state.json "$GAIA_DATA/body/body-state.json" 2>/dev/null || true
+    
+    # Run the unified body merger
+    bash /opt/Gaia/runtime/body-pull.sh 2>/dev/null || true
+    
+    local bat fever blood posture
+    bat=$(sed -n 's/.*"level_pct": \([0-9]*\).*/\1/p' "$GAIA_DATA/body/body-state.json" 2>/dev/null | head -1)
+    fever=$(sed -n 's/.*"fever": "\([^"]*\)".*/\1/p' "$GAIA_DATA/body/body-state.json" 2>/dev/null | head -1)
+    blood=$(sed -n 's/.*"pressure": "\([^"]*\)".*/\1/p' "$GAIA_DATA/body/body-state.json" 2>/dev/null | head -1)
+    posture=$(sed -n 's/.*"posture": "\([^"]*\)".*/\1/p' "$GAIA_DATA/body/body-state.json" 2>/dev/null | head -1)
+    log "body: bat=${bat}% fever=$fever blood=$blood posture=$posture"
 }
