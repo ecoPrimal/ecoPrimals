@@ -64,6 +64,7 @@ case "${1:-daemon}" in
             pull_dyson || true
             pull_dev_sense || true
             pull_wan_senses || true
+            pull_fingerprint || true
             sleep "$CYCLE"
         done
         ;;
@@ -100,4 +101,16 @@ pull_dev_sense() {
 pull_wan_senses() {
     adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/wan-senses.json "$REMOTE/wan-senses.json" 2>/dev/null || true
     cp "$REMOTE/wan-senses.json" "$GAIA_DATA/wan-senses.json" 2>/dev/null || true
+}
+
+# === FINGERPRINT PULL (biometric identity sensing) ===
+pull_fingerprint() {
+    adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/fingerprint-sense.json "$REMOTE/fingerprint-sense.json" 2>/dev/null || true
+    cp "$REMOTE/fingerprint-sense.json" "$GAIA_DATA/fingerprint-sense.json" 2>/dev/null || true
+    
+    local accepts auth_s auth_t
+    accepts=$(sed -n 's/.*"accept_count": \([0-9]*\).*/\1/p' "$REMOTE/fingerprint-sense.json" 2>/dev/null | head -1)
+    auth_s=$(sed -n 's/.*"successful": \([0-9]*\).*/\1/p' "$REMOTE/fingerprint-sense.json" 2>/dev/null | head -1)
+    auth_t=$(sed -n 's/.*"total_attempts": \([0-9]*\).*/\1/p' "$REMOTE/fingerprint-sense.json" 2>/dev/null | head -1)
+    log "fingerprint: accepts=$accepts auth=$auth_s/$auth_t (kevin=bingocube)"
 }
