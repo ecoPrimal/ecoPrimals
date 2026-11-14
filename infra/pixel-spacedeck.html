@@ -104,10 +104,10 @@ async function update(){
     const m=b.metabolic||{},s=b.spatial||{},mi=b.mind||{},ci=b.circulation||{};
     document.getElementById('stats').innerHTML=[
       ['⚡ Battery',`${m.battery_pct||'?'}% · ${((m.temperature_deci_c||0)/10).toFixed(1)}°C`],
-      ['📡 WiFi',`${s.wifi_ssid||'?'} · ${s.wifi_rssi||0}dBm · ${s.wifi_speed_mbps||0}Mbps`],
+      ['📡 WiFi',`${'Gaia'||'?'} · ${s.wifi_rssi||0}dBm · ${s.wifi_mbps||0}Mbps`],
       ['∇ Gradient',`${s.gradient||0}dB ${s.gradient_direction||'?'}`],
-      ['🧠 Memory',`${mi.mem_pct_free||0}% free · CPU ${mi.cpu_load||'?'}`],
-      ['💎 Primals',`${mi.primal_count||0} alive`],
+      ['🧠 Memory',`${mi.mem_pct||0}% free · CPU ${mi.cpu_load||'?'}`],
+      ['💎 Primals',`${mi.primals||0} alive`],
       ['⏱ Up',`${(parseFloat(b.consciousness?.uptime_sec||0)/60).toFixed(0)}min`],
       ['🔄 Net',`↓${((ci.rx_bytes||0)/1048576).toFixed(0)}MB ↑${((ci.tx_bytes||0)/1048576).toFixed(0)}MB`]
     ].map(([k,v])=>`<div class="stat"><span class="k">${k}</span><span class="v">${v}</span></div>`).join('');

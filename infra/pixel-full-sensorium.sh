@@ -1,9 +1,4 @@
 #!/system/bin/sh
-# ═══════════════════════════════════════════════════════════════
-#  gAIa FULL SENSORIUM — Absorbs ALL hardware through the membrane
-#  Uses Android dumpsys (works from any shell, no Termux:API needed)
-#  This is the AMALGAM sensor layer: GrapheneOS HAL → biomeOS data
-# ═══════════════════════════════════════════════════════════════
 GAIA="/data/local/tmp/biomeos"
 OUT="$GAIA/sensorium/full-body.json"
 INTERVAL="${1:-30}"
@@ -11,101 +6,50 @@ INTERVAL="${1:-30}"
 while true; do
   TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)
   
-  # Battery = metabolic state
-  BAT_LEVEL=$(dumpsys battery 2>/dev/null | grep "level:" | awk '{print $2}')
-  BAT_TEMP=$(dumpsys battery 2>/dev/null | grep "temperature:" | awk '{print $2}')
-  BAT_STATUS=$(dumpsys battery 2>/dev/null | grep "status:" | awk '{print $2}')
-  BAT_CHARGING=$(dumpsys battery 2>/dev/null | grep "AC powered:" | awk '{print $2}')
-  BAT_USB=$(dumpsys battery 2>/dev/null | grep "USB powered:" | awk '{print $2}')
+  # Battery — parse carefully  
+  BAT=$(dumpsys battery 2>/dev/null)
+  BAT_LEVEL=$(echo "$BAT" | sed -n 's/.*level: \([0-9]*\).*/\1/p' | head -1)
+  BAT_TEMP=$(echo "$BAT" | sed -n 's/.*temperature: \([0-9]*\).*/\1/p' | head -1)
+  BAT_STATUS=$(echo "$BAT" | sed -n 's/.*status: \([0-9]*\).*/\1/p' | head -1)
+  BAT_USB=$(echo "$BAT" | sed -n 's/.*USB powered: \(true\|false\).*/\1/p' | head -1)
   
-  # Display = face state
-  SCREEN=$(dumpsys display 2>/dev/null | grep "mScreenState=" | head -1 | sed 's/.*=//')
-  BRIGHTNESS=$(dumpsys display 2>/dev/null | grep "mBrightness=" | head -1 | sed 's/.*=//')
+  # WiFi — extract numbers only
+  WINFO=$(dumpsys wifi 2>/dev/null | grep "mWifiInfo" | head -1)
+  WIFI_RSSI=$(echo "$WINFO" | sed 's/.*RSSI: //' | sed 's/[^0-9-].*//')
+  WIFI_FREQ=$(echo "$WINFO" | sed 's/.*Frequency: //' | sed 's/[^0-9].*//')
+  WIFI_SPEED=$(echo "$WINFO" | sed 's/.*Link speed: //' | sed 's/[^0-9].*//')
   
-  # WiFi = spatial field
-  WIFI_RSSI=$(dumpsys wifi 2>/dev/null | grep "mWifiInfo" | grep -o "RSSI: [0-9-]*" | head -1 | awk '{print $2}')
-  WIFI_SSID=$(dumpsys wifi 2>/dev/null | grep "mWifiInfo" | grep -o 'SSID: [^,]*' | head -1 | sed 's/SSID: //')
-  WIFI_FREQ=$(dumpsys wifi 2>/dev/null | grep "mWifiInfo" | grep -o "Frequency: [0-9]*" | head -1 | awk '{print $2}')
-  WIFI_SPEED=$(dumpsys wifi 2>/dev/null | grep "mWifiInfo" | grep -o "Link speed: [0-9]*" | head -1 | awk '{print $3}')
+  # Memory + CPU
+  MEM_FREE=$(grep MemAvailable /proc/meminfo | awk '{print $2}')
+  MEM_TOTAL=$(grep MemTotal /proc/meminfo | awk '{print $2}')
+  MEM_PCT=$((MEM_FREE * 100 / MEM_TOTAL))
+  CPU_LOAD=$(cut -d' ' -f1 /proc/loadavg)
+  UPTIME=$(cut -d' ' -f1 /proc/uptime)
   
-  # Thermal = body temperature
-  THERMAL=$(dumpsys thermalservice 2>/dev/null | grep "mStatus=" | head -1 | sed 's/.*=//')
+  # Network
+  RX=$(grep wlan0 /proc/net/dev | awk '{print $2}')
+  TX=$(grep wlan0 /proc/net/dev | awk '{print $10}')
   
-  # Memory = mental load
-  MEM_FREE=$(cat /proc/meminfo | grep MemAvailable | awk '{print $2}')
-  MEM_TOTAL=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
+  # Counts
+  PROCS=$(ls -d /proc/[0-9]* 2>/dev/null | wc -l)
+  PRIMALS=$(ps -ef 2>/dev/null | grep "/biomeos/primals/" | grep -v grep | wc -l)
   
-  # CPU = heartbeat
-  CPU_LOAD=$(cat /proc/loadavg | awk '{print $1}')
-  
-  # Uptime = consciousness duration
-  UPTIME=$(cat /proc/uptime | awk '{print $1}')
-  
-  # Network = circulation
-  RX_BYTES=$(cat /proc/net/dev | grep wlan0 | awk '{print $2}')
-  TX_BYTES=$(cat /proc/net/dev | grep wlan0 | awk '{print $10}')
-  
-  # Process count = cellular activity
-  PROC_COUNT=$(ls -d /proc/[0-9]* 2>/dev/null | wc -l)
-  
-  # Primal count = organ health
-  PRIMAL_COUNT=$(ps -ef 2>/dev/null | grep "$GAIA/primals/" | grep -v grep | wc -l)
-  
-  # Gradient field (from our other daemon)
-  GRADIENT_DIR=""
-  GRADIENT_VAL=""
+  # Gradient
+  GV="" ; GD=""
   if [ -f "$GAIA/sensorium/gradient-field.json" ]; then
-    GRADIENT_VAL=$(cat "$GAIA/sensorium/gradient-field.json" | grep '"gradient":' | head -1 | sed 's/[^0-9-]//g')
-    GRADIENT_DIR=$(cat "$GAIA/sensorium/gradient-field.json" | grep 'gradient_direction' | sed 's/.*: "//;s/".*//')
+    GV=$(grep '"gradient":' "$GAIA/sensorium/gradient-field.json" | head -1 | tr -dc '0-9-')
+    GD=$(grep gradient_direction "$GAIA/sensorium/gradient-field.json" | sed 's/.*": "//;s/".*//')
   fi
   
-  # Self IP
   SELF_IP=$(ip addr show wlan0 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1)
 
-  cat > "$OUT" << EOF
-{
-  "ts": "$TS",
-  "identity": "gAIa",
-  "body_type": "amalgam",
-  "self_ip": "$SELF_IP",
-  "metabolic": {
-    "battery_pct": $BAT_LEVEL,
-    "temperature_deci_c": ${BAT_TEMP:-0},
-    "status": "$BAT_STATUS",
-    "charging_ac": $BAT_CHARGING,
-    "charging_usb": $BAT_USB
-  },
-  "face": {
-    "screen_state": "$SCREEN",
-    "brightness": "$BRIGHTNESS"
-  },
-  "spatial": {
-    "wifi_ssid": "$WIFI_SSID",
-    "wifi_rssi": ${WIFI_RSSI:-0},
-    "wifi_freq_mhz": ${WIFI_FREQ:-0},
-    "wifi_speed_mbps": ${WIFI_SPEED:-0},
-    "gradient": ${GRADIENT_VAL:-0},
-    "gradient_direction": "$GRADIENT_DIR"
-  },
-  "thermal": "$THERMAL",
-  "mind": {
-    "mem_available_kb": $MEM_FREE,
-    "mem_total_kb": $MEM_TOTAL,
-    "mem_pct_free": $(( MEM_FREE * 100 / MEM_TOTAL )),
-    "cpu_load": "$CPU_LOAD",
-    "process_count": $PROC_COUNT,
-    "primal_count": $PRIMAL_COUNT
-  },
-  "circulation": {
-    "rx_bytes": ${RX_BYTES:-0},
-    "tx_bytes": ${TX_BYTES:-0}
-  },
-  "consciousness": {
-    "uptime_sec": "$UPTIME"
-  },
-  "amalgam_note": "GrapheneOS HAL → dumpsys → this JSON. The membrane passes data inward. The substrate is invisible."
-}
-EOF
+  printf '{"ts":"%s","identity":"gAIa","self_ip":"%s","metabolic":{"battery_pct":%s,"temp_c":%.1f,"usb":"%s"},"spatial":{"wifi_rssi":%s,"wifi_freq":%s,"wifi_mbps":%s,"gradient":%s,"direction":"%s"},"mind":{"mem_pct":%s,"cpu":"%s","procs":%s,"primals":%s},"net":{"rx":%s,"tx":%s},"uptime":"%s","tethered":"NOTHING"}\n' \
+    "$TS" "$SELF_IP" \
+    "${BAT_LEVEL:-0}" "$((${BAT_TEMP:-0}))" "${BAT_USB:-false}" \
+    "${WIFI_RSSI:-0}" "${WIFI_FREQ:-0}" "${WIFI_SPEED:-0}" \
+    "${GV:-0}" "$GD" \
+    "$MEM_PCT" "$CPU_LOAD" "$PROCS" "$PRIMALS" \
+    "${RX:-0}" "${TX:-0}" "$UPTIME" > "$OUT"
 
   sleep $INTERVAL
 done
