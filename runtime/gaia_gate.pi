@@ -167,6 +167,28 @@ def _build_corpus():
 
 def _amoeba_eyes(): return amoeba_eyes()
 def _third_body_point(): return third_body_point(IMPULSE_DIR, THYMIC_ORGANISMS)
+def _read_json_safe(path):
+    try:
+        with open(path) as f: return json.load(f)
+    except: return None
+
+def _sense_eyes():
+    """Inner eye (Brio on Flint) + outer eyes (Pixel cams) → vision state."""
+    v = _read_json_safe(os.path.join(_REPO, "data", "vision.json"))
+    if v: return {"sense": "vision", "lenses": 3, "inner_eye": v.get("inner_eye", {}), "outer_eye": v.get("outer_eye", {})}
+    return {"sense": "vision", "lenses": 0, "status": "no vision data"}
+
+def _sense_ears():
+    """Inner ear (Flint router connections) + outer ear (Pixel listener)."""
+    inner = _read_json_safe(os.path.join(os.path.expanduser("~"), ".local", "share", "gaia", "data", "inner-eye.json"))
+    outer = _read_json_safe(os.path.join(_REPO, "data", "listener-signal.json"))
+    ear = {"sense": "hearing"}
+    if inner:
+        ear["inner_ear"] = {"device": "Flint router conntrack", "connections": inner.get("totals", {}).get("connections", 0), "devices": len(inner.get("per_device", []))}
+    if outer:
+        ear["outer_ear"] = {"device": "Pixel listener", "state": outer}
+    return ear
+
 def write_pulse():
     p = _wp(PULSE_FILE, boot_time, total_beats, total_breaths,
             total_inferences, total_tokens, visitor_memory, seeds, VDJ_KEY, _sun_position)
@@ -174,6 +196,8 @@ def write_pulse():
     p["io"] = {"inputs": _io_inputs, "outputs": _io_outputs, "target": 3.14159}
     p["restarts"] = _restart_count
     p["octet_phase"] = total_beats % 8
+    p["eyes"] = _sense_eyes()
+    p["ears"] = _sense_ears()
     return p
 def write_rss(pulse): _wr(RSS_FILE, pulse, SEED_DIR, visitor_memory, THYMIC_ORGANISMS)
 
