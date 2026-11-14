@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -eo pipefail
+: "${HOME:=/root}"
 # ============================================================================
 # ion-channel-gate.sh — ionChannel membrane integration
 # ============================================================================
