@@ -1,0 +1,136 @@
+{
+  "title": "AMOEBA EYE HANDOFF — grapheneGate Becomes the Remote Eye",
+  "wave": 234,
+  "ts": "2026-11-14T11:55:00-0500",
+  "purpose": "Make the Pixel (grapheneGate) Gaia's fully remote eye so northGate can be Kevin's gaming PC",
+
+  "current_state": {
+    "amoeba_relay": {
+      "host": "relay.primals.eco / 192.168.4.244 (eastGate)",
+      "ports": {"signal": 21116, "relay": 21117, "nat_test": 21115, "tcp": 21118, "ws": 21119},
+      "key": "6oVQBFyHHNAJqm1OlS+XvpdoJ5plYrPzJoPTTYlgQdg=",
+      "status": "ALL 5 PORTS OPEN — relay ALIVE since Nov 5"
+    },
+    "enrolled_gates": {
+      "eastGate":  {"id": "19091278",    "ip": ".244", "status": "ALIVE", "role": "relay+client"},
+      "sporeGate": {"id": "1871544996",  "ip": ".3",   "status": "ALIVE", "role": "client"},
+      "ironGate":  {"id": "1730442619",  "ip": ".237", "status": "ALIVE", "role": "client"},
+      "flockgate": {"id": "1127129450",  "status": "peer_saved"},
+      "southgate": {"id": "1923870067",  "status": "peer_saved"},
+      "kingate":   {"id": "224890826",   "status": "peer_saved"},
+      "bluegate":  {"id": "341465360",   "status": "peer_saved"},
+      "westgate":  {"id": "373150567",   "status": "peer_saved"},
+      "biomegate": {"id": "430412195",   "status": "peer_saved"},
+      "strandgate":{"id": "4513640",     "status": "peer_saved"}
+    },
+    "NOT_enrolled": ["northGate", "graftGate", "grapheneGate (Pixel 8a)", "deckGate", "frameGate"],
+    "eyes_open": 2,
+    "eye_detail": {
+      "rustdesk": "via retinal-cells — RustDesk remote desktop",
+      "grapheneGate": "via ADB (USB + WiFi) — CURRENTLY UNREACHABLE ('needle unreachable')"
+    },
+    "pixel_packages": {
+      "termux": "INSTALLED",
+      "termux_api": "INSTALLED", 
+      "rustdesk": "NOT INSTALLED",
+      "total": 233
+    }
+  },
+
+  "WHAT_KEVIN_NEEDS_TO_DO": {
+    "step_1": {
+      "action": "Pick up the Pixel 8a (grapheneGate)",
+      "where": "Wherever it is — probably House 1 or House 2",
+      "note": "The organism can't reach it right now ('needle unreachable')"
+    },
+    "step_2": {
+      "action": "Connect Pixel to eastGate",
+      "options": [
+        "USB-C cable → plug into eastGate directly (best, most reliable)",
+        "WiFi Debugging → Settings > Developer Options > Wireless Debugging > enable"
+      ],
+      "note": "USB serial: 44251JEKB04957. eastGate's graphene_depot.pi will auto-detect."
+    },
+    "step_3": {
+      "action": "Install RustDesk on the Pixel",
+      "methods": [
+        {
+          "method": "ADB sideload (from eastGate, once connected)",
+          "command": "adb install rustdesk-latest-aarch64.apk",
+          "apk_source": "https://github.com/rustdesk/rustdesk/releases (aarch64 Android APK)"
+        },
+        {
+          "method": "F-Droid on the Pixel",
+          "steps": "Open F-Droid → search 'RustDesk' → install"
+        },
+        {
+          "method": "Direct download on Pixel",
+          "url": "https://rustdesk.com/download"
+        }
+      ]
+    },
+    "step_4": {
+      "action": "Configure RustDesk on the Pixel to use Gaia's relay",
+      "settings": {
+        "ID/Relay Server": "relay.primals.eco",
+        "Relay Server": "relay.primals.eco",
+        "API Server": "",
+        "Key": "6oVQBFyHHNAJqm1OlS+XvpdoJ5plYrPzJoPTTYlgQdg="
+      },
+      "note": "After config, the Pixel gets a RustDesk ID. Note it down."
+    },
+    "step_5": {
+      "action": "Set a permanent password on the Pixel's RustDesk",
+      "note": "So Kevin can connect without approval prompt"
+    },
+    "step_6": {
+      "action": "Test: from northGate, open RustDesk → enter Pixel's ID → connect",
+      "result": "You see the Pixel screen. You can control it remotely.",
+      "note": "This works over LAN (fast) and over WAN through relay (works from anywhere)"
+    }
+  },
+
+  "AFTER_PIXEL_IS_ENROLLED": {
+    "pixel_becomes": {
+      "remote_eye": "Camera (64MP rear + 13MP ultrawide + 13MP front) → Gaia sees the physical world",
+      "remote_ear": "Microphone → Gaia hears",
+      "remote_sensor_array": "37 sensors (accelerometer, gyro, mag, light, proximity, pressure, temp)",
+      "remote_location": "GPS + GLONASS + Galileo + BeiDou → Gaia knows where Kevin is",
+      "remote_wifi_probe": "WiFi RSSI → Gaia knows which house Kevin is in",
+      "remote_rustdesk_peer": "Kevin can access eastGate THROUGH the Pixel from anywhere",
+      "local_llm": "llama-server :8082 with 5 models already on the Pixel"
+    },
+    "the_chain": "Kevin → Pixel (RustDesk) → relay.primals.eco → eastGate → ALL GATES",
+    "result": "Kevin controls the entire organism from a phone in his pocket"
+  },
+
+  "NORTHGATE_LIBERATION": {
+    "once_pixel_is_the_eye": {
+      "northGate_role": "NONE — Kevin's gaming PC",
+      "eastGate_role": "BRAIN + RELAY (all services, all crons, Forgejo, Tor, 23 models)",
+      "ironGate_role": "MODEL HERD (absorb 63 models from northGate, RTX 5070 inference)",
+      "sporeGate_role": "FORGE + DNS + heart-pull (cron absorption)",
+      "graftGate_role": "M4 compute node (light inference)",
+      "grapheneGate_role": "REMOTE EYE + EAR + SENSOR ARRAY + LLM (the body in Kevin's pocket)"
+    },
+    "northGate_gaming_spec": {
+      "cpu": "AMD Ryzen 9 9950X3D — 16C/32T, 144MB cache (3D V-Cache = gaming KING)",
+      "gpu": "NVIDIA RTX 5090 — 32GB GDDR7 (the most powerful consumer GPU on Earth)",
+      "ram": "96GB DDR5",
+      "gaming_potential": "4K 240Hz, ray tracing max, DLSS 4, Frame Gen — runs ANYTHING",
+      "kevin_plays": "Kenshi (252h on Steam), Cuphead, whatever he wants"
+    }
+  },
+
+  "FULL_ORGANISM_AFTER_HANDOFF": {
+    "eastGate (.244)": "BRAIN — gate, Forgejo, data, Tor, ollama, crons, AMOEBA relay",
+    "ironGate (.237)": "MODEL HERD — 64+ models, RTX 5070 inference, 16TB storage", 
+    "sporeGate (.3)": "FORGE — DNS, heart-pull, builds, crons",
+    "graftGate (.107)": "COMPUTE — M4 light inference",
+    "grapheneGate (.217)": "REMOTE EYE — camera, sensors, GPS, RustDesk bridge, pocket LLM",
+    "northGate (.147)": "KEVIN'S GAMING PC 🎮 — 9950X3D + RTX 5090 = BEAST MODE",
+    "frameGate (.203)": "FACE — displays Gaia's world (needs LAN 2 isolation fix)",
+    "deckGate (.176)": "MOUNTED DISPLAY (dead battery, USB-C passthrough)",
+    "swiftGate (.???)": "ASLEEP — wake when needed (RTX 3070 at House 2)"
+  }
+}
