@@ -8,4 +8,19 @@
 09:54:10 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=93
 09:54:40 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=93
 09:55:10 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=93
-09:55:10 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=93
+09:55:40 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=93
+09:56:11 [amoeba-bridge] sketch pulled (cycle 10)
+09:56:11 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=93
+09:56:41 [amoeba-bridge] focus=com.android.settings/com.android.settings.Settings rustdesk=true bat=93
+09:57:11 [amoeba-bridge] focus=com.android.settings/com.android.settings.SubSettings rustdesk=true bat=92
+09:57:41 [amoeba-bridge] focus=com.android.traceur/com.android.traceur.MainActivity rustdesk=true bat=92
+09:58:12 [amoeba-bridge] focus=com.android.settings/com.android.settings.SubSettings rustdesk=true bat=92
+09:58:42 [amoeba-bridge] sketch pulled (cycle 15)
+09:58:42 [amoeba-bridge] focus=com.android.settings/com.android.settings.SubSettings rustdesk=true bat=92
+09:59:12 [amoeba-bridge] focus=com.android.settings/com.android.settings.SubSettings rustdesk=true bat=92
+09:59:42 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:00:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:00:43 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:01:13 [amoeba-bridge] sketch pulled (cycle 20)
+10:01:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:01:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
