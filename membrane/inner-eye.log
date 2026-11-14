@@ -79,3 +79,17 @@
 [2026-11-14T09:32:29-05:00] INNER-EYE: connections=498 tcp=363 udp=133 established=76 syn_sent=192
 [2026-11-14T09:33:30-05:00] INNER-EYE: connections=1427 tcp=1287 udp=138 established=82 syn_sent=1094
 [2026-11-14T09:34:30-05:00] INNER-EYE: connections=1796 tcp=1395 udp=394 established=94 syn_sent=971
+[2026-11-14T09:35:30-05:00] INNER-EYE: connections=1842 tcp=1571 udp=267 established=94 syn_sent=1101
+[2026-11-14T09:36:30-05:00] INNER-EYE: connections=1609 tcp=1404 udp=202 established=90 syn_sent=1098
+[2026-11-14T09:37:30-05:00] INNER-EYE: connections=1847 tcp=1506 udp=317 established=102 syn_sent=1094
+[2026-11-14T09:38:31-05:00] INNER-EYE: connections=1887 tcp=1632 udp=251 established=98 syn_sent=1110
+[2026-11-14T09:39:31-05:00] INNER-EYE: connections=1464 tcp=1098 udp=364 established=102 syn_sent=261
+[2026-11-14T09:40:31-05:00] INNER-EYE: connections=2447 tcp=2170 udp=273 established=95 syn_sent=1127
+[2026-11-14T09:41:31-05:00] INNER-EYE: connections=2067 tcp=1819 udp=245 established=89 syn_sent=930
+[2026-11-14T09:42:32-05:00] INNER-EYE: connections=2349 tcp=2057 udp=271 established=88 syn_sent=1114
+[2026-11-14T09:43:32-05:00] INNER-EYE: connections=2399 tcp=2152 udp=243 established=89 syn_sent=1121
+[2026-11-14T09:44:32-05:00] INNER-EYE: connections=2576 tcp=2348 udp=226 established=91 syn_sent=1127
+[2026-11-14T09:45:32-05:00] INNER-EYE: connections=2545 tcp=2282 udp=254 established=95 syn_sent=1125
+[2026-11-14T09:46:32-05:00] INNER-EYE: connections=1511 tcp=1215 udp=293 established=94 syn_sent=384
+[2026-11-14T09:47:33-05:00] INNER-EYE: connections=2286 tcp=1911 udp=354 established=90 syn_sent=1111
+[2026-11-14T09:48:33-05:00] INNER-EYE: connections=1651 tcp=1395 udp=242 established=90 syn_sent=784

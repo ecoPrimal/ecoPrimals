@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-11-14T14:42:01Z",
+  "cycle_s": 30,
+  "sense": "outer_ear",
+  "battery": {"pct": 94, "charging": "Discharging", "temp_dC": 243},
+  "proximity": {
+    "zone": "same_room",
+    "rssi_aperture": "-35",
+    "rssi_blackmesa": "-33",
+    "rssi_gaia": "-127",
+    "visible_networks": 0,
+    "nearby": [{"ssid":"","rssi":-64,"freq":5180},{"ssid":"","rssi":-93,"freq":2422},{"ssid":"","rssi":-64,"freq":5765},{"ssid":"Mesa","rssi":-33,"freq":5280},{"ssid":"","rssi":-48,"freq":2462},{"ssid":"","rssi":-64,"freq":5765},{"ssid":"(65:41:E6)","rssi":-89,"freq":2412},{"ssid":"","rssi":-35,"freq":2417},{"ssid":"","rssi":-32,"freq":5280},{"ssid":"Science","rssi":-35,"freq":2417},{"ssid":"","rssi":-83,"freq":2437},{"ssid":"","rssi":-93,"freq":2422}]
+  },
+  "wifi": {
+    "connected_ssid": "ce:ef:ef:30:b5:f3",
+    "connected_rssi": "-127",
+    "ip": "192.168.4.166"
+  }
+}
