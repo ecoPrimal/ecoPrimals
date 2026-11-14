@@ -1,0 +1,86 @@
+{
+  "wave": 233,
+  "ts": "2026-11-14T16:20:00Z",
+  "scan_type": "full_domain_sense",
+
+  "wan_reachability": {
+    "http://primals.eco": {"code": 200, "status": "ALIVE"},
+    "https://primals.eco": {"code": 0, "status": "NO TLS — dromedary not on :443"},
+    "http://detroit.primals.eco": {"code": 200, "status": "ALIVE"},
+    "http://sporeprint.primals.eco": {"code": 200, "status": "ALIVE"},
+    "http://gis.primals.eco": {"code": 200, "status": "ALIVE"},
+    "http://api.primals.eco": {"code": 200, "status": "ALIVE"},
+    "http://mcp.nestgate.io": {"code": 200, "status": "ALIVE"},
+    "http://nestgate.io": {"code": 200, "status": "ALIVE"},
+    "https://nestgate.io": {"code": 0, "status": "NO TLS"},
+    "http://primal.eco": {"code": 0, "status": "NO REDIRECT — needs gate config"}
+  },
+
+  "summary": {
+    "domains_alive_http": 8,
+    "domains_alive_https": 0,
+    "domains_dead": 2,
+    "total_tested": 10
+  },
+
+  "eastgate_ports": {
+    "80": {"status": "ALIVE", "service": "gaia_gate.pi HTTP (port forwarded from WAN)"},
+    "443": {"status": "DEAD", "service": "NOTHING — dromedary not deployed, need TLS termination here"},
+    "3000": {"status": "ALIVE", "service": "Forgejo"},
+    "8080": {"status": "ALIVE", "service": "gaia-web data server"},
+    "8443": {"status": "ALIVE", "service": "gaia_gate.pi main gate"},
+    "8444": {"status": "DEAD", "service": "TLS gate (cert issue)"},
+    "11436": {"status": "ALIVE", "service": "Ollama (RTX 4070, 23 models)"}
+  },
+
+  "router_port_forwards": {
+    "HTTP_80": {"wan": 80, "lan_target": "192.168.4.244:80", "status": "ACTIVE"},
+    "HTTPS_443": {"wan": 443, "lan_target": "192.168.4.244:443", "status": "ACTIVE (but nothing listening)"},
+    "SMTP_25": {"wan": 25, "lan_target": "192.168.4.244:25", "status": "ACTIVE (no service)"},
+    "DNS_53": {"wan": 53, "lan_target": "192.168.4.244:53", "status": "ACTIVE (no service)"}
+  },
+
+  "blockers": [
+    {
+      "id": "tls_443",
+      "severity": "HIGH",
+      "description": "Port 443 forwarded but nothing listening. Need dromedary or gate binding to :443 with TLS.",
+      "fix": "Deploy dromedary binary to eastGate, or configure gaia_gate.pi to listen on :443 with ACME cert.",
+      "blocks": ["https://primals.eco", "https://nestgate.io", "ANS registration", "all HTTPS"]
+    },
+    {
+      "id": "code_deploy",
+      "severity": "HIGH",
+      "description": "eastGate /opt/Gaia is behind. New pages (gis, bingocube, fossil, domain-tree) return 404.",
+      "fix": "Update eastGate remote to ecoPrimal/Gaia-mirror.git + git pull. Requires physical access or RustDesk.",
+      "blocks": ["GIS map", "BingoCube fog", "fossils endpoint", "domain tree"]
+    },
+    {
+      "id": "primal_eco_redirect",
+      "severity": "LOW",
+      "description": "primal.eco not redirecting to primals.eco.",
+      "fix": "Add redirect rule in gaia_gate.pi based on Host header.",
+      "blocks": ["primal.eco domain alias"]
+    }
+  ],
+
+  "ready_when_deployed": {
+    "dromedary_toml": "runtime/dromedary.toml — full config ready, 17 subdomains mapped",
+    "agent_card": "static/.well-known/agent-card.json — ANS ready",
+    "bingocube": "static/js/bingocube.js — fog of war engine ready",
+    "gis": "static/gis.html — 8-layer GIS with privacy fog ready",
+    "porkbun_api": "riboCypher key stored in agent vault — DNS-01 ACME challenge ready"
+  },
+
+  "porkbun_api_available": true,
+  "porkbun_key_name": "riboCypher",
+  "porkbun_capabilities": [
+    "DNS record management (A, AAAA, CNAME, TXT, MX)",
+    "DNS-01 ACME challenge automation",
+    "Domain info + renewal",
+    "Agent Naming Service registration"
+  ],
+
+  "alive": true,
+  "lub": "DUB"
+}
