@@ -1,0 +1,456 @@
+[
+    {
+        "id":  "sbe_tom_mcmillin",
+        "label":  "Tom McMillin (SBE)",
+        "sample_connections":  "false_face_mcmillin",
+        "edge_types":  {
+                           "count":  1,
+                           "type":  "tethered_single"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  1,
+        "edge_count":  null
+    },
+    {
+        "id":  "prisoners_dilemma",
+        "label":  "Prisoner\u0027s Dilemma",
+        "sample_connections":  "false_face_blankenship",
+        "edge_types":  {
+                           "count":  1,
+                           "type":  "tethered_single"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  1,
+        "edge_count":  null
+    },
+    {
+        "id":  "p_hacking",
+        "label":  "P-Hacking",
+        "sample_connections":  "false_face_coristine",
+        "edge_types":  {
+                           "count":  1,
+                           "type":  "tethered_single"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  1,
+        "edge_count":  null
+    },
+    {
+        "id":  "false_face_snyder",
+        "label":  "FALSE FACE: Nikki Snyder",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_mcmillin",
+        "label":  "FALSE FACE: Tom McMillin",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "sbe_tom_mcmillin",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  [
+                           {
+                               "count":  9,
+                               "type":  "self_connection"
+                           },
+                           {
+                               "count":  1,
+                               "type":  "tethered_single"
+                           }
+                       ],
+        "type":  "false_face",
+        "connected_nodes":  10,
+        "edge_count":  10
+    },
+    {
+        "id":  "false_face_ohare",
+        "label":  "FALSE FACE: Tim O\u0027Hare",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_pargas",
+        "label":  "FALSE FACE: Mariano Pargas",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_murdoch",
+        "label":  "FALSE FACE: Rupert Murdoch",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "rupert_murdoch",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  [
+                           {
+                               "count":  9,
+                               "type":  "self_connection"
+                           },
+                           {
+                               "count":  1,
+                               "type":  "agglutinate"
+                           }
+                       ],
+        "type":  "false_face",
+        "connected_nodes":  10,
+        "edge_count":  10
+    },
+    {
+        "id":  "false_face_lachlan",
+        "label":  "FALSE FACE: Lachlan Murdoch",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_ryan",
+        "label":  "FALSE FACE: Paul Ryan",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_desantis",
+        "label":  "FALSE FACE: Ron DeSantis",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_petty",
+        "label":  "FALSE FACE: Ryan Petty",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "disenfranchised_grief",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  [
+                           {
+                               "count":  9,
+                               "type":  "self_connection"
+                           },
+                           {
+                               "count":  1,
+                               "type":  "tethered_single"
+                           }
+                       ],
+        "type":  "false_face",
+        "connected_nodes":  10,
+        "edge_count":  10
+    },
+    {
+        "id":  "false_face_northrop",
+        "label":  "FALSE FACE: Corey Northrop",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_maleyko",
+        "label":  "FALSE FACE: Glenn Maleyko",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_nessel",
+        "label":  "FALSE FACE: Dana Nessel",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  {
+                           "count":  9,
+                           "type":  "self_connection"
+                       },
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_hayward",
+        "label":  "FALSE FACE: Tony Hayward",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "tony_hayward_bp",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  [
+                           {
+                               "count":  6,
+                               "type":  "structural_relation"
+                           },
+                           {
+                               "count":  3,
+                               "type":  "self_connection"
+                           },
+                           {
+                               "count":  1,
+                               "type":  "agglutinate"
+                           }
+                       ],
+        "type":  "false_face",
+        "connected_nodes":  10,
+        "edge_count":  10
+    },
+    {
+        "id":  "false_face_blankenship",
+        "label":  "FALSE FACE: Don Blankenship",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "prisoners_dilemma",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  [
+                           {
+                               "count":  6,
+                               "type":  "structural_relation"
+                           },
+                           {
+                               "count":  3,
+                               "type":  "self_connection"
+                           },
+                           {
+                               "count":  1,
+                               "type":  "tethered_single"
+                           }
+                       ],
+        "type":  "false_face",
+        "connected_nodes":  10,
+        "edge_count":  10
+    },
+    {
+        "id":  "false_face_roland_martin",
+        "label":  "FALSE FACE: Roland Martin — The Organ Grinder",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "scientific-legal-proof",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  [
+                           {
+                               "count":  6,
+                               "type":  "structural_relation"
+                           },
+                           {
+                               "count":  3,
+                               "type":  "self_connection"
+                           }
+                       ],
+        "type":  "false_face",
+        "connected_nodes":  9,
+        "edge_count":  9
+    },
+    {
+        "id":  "false_face_coristine",
+        "label":  "FALSE FACE: Edward \u0027Big Balls\u0027 Coristine",
+        "sample_connections":  [
+                                   "article_snyder_true_face",
+                                   "backscatter-contrast",
+                                   "diamondcdn",
+                                   "p_hacking",
+                                   "scientific-legal-proof",
+                                   "telegram",
+                                   "true_face_burnam",
+                                   "true_face_cross",
+                                   "true_face_denhollander",
+                                   "true_face_drake_bell",
+                                   "true_face_kevin",
+                                   "true_face_uziyah"
+                               ],
+        "edge_types":  [
+                           {
+                               "count":  6,
+                               "type":  "structural_relation"
+                           },
+                           {
+                               "count":  3,
+                               "type":  "self_connection"
+                           },
+                           {
+                               "count":  1,
+                               "type":  "agglutinate"
+                           },
+                           {
+                               "count":  2,
+                               "type":  "tethered_single"
+                           }
+                       ],
+        "type":  "false_face",
+        "connected_nodes":  12,
+        "edge_count":  12
+    }
+]

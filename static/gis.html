@@ -6,6 +6,7 @@
 <title>GAIA footPrint — GIS Layer</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/static/js/bingocube.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0a;color:#e0e0e0;font-family:'Courier New',monospace;height:100vh;display:flex;flex-direction:column}
@@ -32,6 +33,16 @@ header .coords{margin-left:auto;color:#666;font-size:11px}
 .shell-row .num{color:#8844FF;display:inline-block;width:14px}
 footer{background:#080810;border-top:1px solid #222;padding:6px 16px;font-size:10px;color:#555;flex-shrink:0;display:flex;gap:16px;z-index:1000}
 footer a{color:#666}footer a:hover{color:#d4af37}
+.bingo-popup{text-align:center;font-family:'Courier New',monospace}
+.bingo-popup canvas{display:block;margin:4px auto;image-rendering:pixelated;border-radius:2px}
+.bingo-popup .zk{font-size:9px;color:#888;letter-spacing:1px}
+.bingo-popup .type-tag{font-size:8px;padding:1px 4px;border-radius:2px;display:inline-block;margin-top:2px}
+.bingo-popup .fog-bar{height:3px;background:#222;border-radius:2px;margin-top:4px}
+.bingo-popup .fog-fill{height:100%;border-radius:2px;transition:width 0.3s}
+.fog-overlay{position:fixed;top:50px;right:10px;background:rgba(0,0,0,0.85);border:1px solid #333;border-radius:4px;padding:8px;z-index:900;font-size:10px;width:140px}
+.fog-overlay h4{color:#d4af37;margin:0 0 4px;font-size:10px;letter-spacing:1px}
+.fog-overlay .reveal-pct{color:#0f8;font-size:16px;font-weight:bold}
+.fog-overlay .reveal-label{color:#666;font-size:8px}
 </style>
 </head>
 <body>
@@ -42,6 +53,18 @@ footer a{color:#666}footer a:hover{color:#d4af37}
 </header>
 
 <div id="map"></div>
+
+<div class="fog-overlay" id="fogHud">
+  <h4>FOG OF WAR</h4>
+  <div class="reveal-pct" id="fogPct">8%</div>
+  <div class="reveal-label">REVEAL at zoom <span id="fogZoom">4</span></div>
+  <div style="margin-top:4px;height:4px;background:#222;border-radius:2px">
+    <div id="fogBar" style="height:100%;width:8%;background:linear-gradient(90deg,#FF0000,#FFD700,#00FF88);border-radius:2px;transition:width 0.3s"></div>
+  </div>
+  <div style="margin-top:6px;font-size:8px;color:#555">
+    <span id="fogEntities">0</span> entities visible
+  </div>
+</div>
 
 <div class="layer-control" id="layerCtrl">
   <h3>LAYERS</h3>
@@ -265,6 +288,167 @@ async function pulse(){
 }
 pulse();
 setInterval(pulse, 30000);
+
+// ═══════════════════════════════════════════
+// BINGO CUBE FOG OF WAR ENGINE
+// ═══════════════════════════════════════════
+
+const FOG_ZOOM_MAP = {4:0.08, 6:0.12, 8:0.20, 10:0.35, 12:0.50, 14:0.70, 16:0.85, 18:1.0};
+const TYPE_MIN_ZOOM = {false_face:4, true_face:4, corporation:6, institution:6, legal_case:8, person:10, event:10, article:14, concept:14};
+const TYPE_BORDER = {false_face:'#FF0000', true_face:'#00FF88', corporation:'#e040fb', institution:'#FFD700', legal_case:'#FF9100', person:'#6495ED', event:'#00BFFF', article:'#888', concept:'#9ACD32', infrastructure:'#2E8B57'};
+
+let currentReveal = 0.08;
+let bingoMarkers = L.layerGroup();
+layers.bingoFog = bingoMarkers;
+
+function getRevealAtZoom(z) {
+  let keys = Object.keys(FOG_ZOOM_MAP).map(Number).sort((a,b)=>a-b);
+  if (z <= keys[0]) return FOG_ZOOM_MAP[keys[0]];
+  if (z >= keys[keys.length-1]) return FOG_ZOOM_MAP[keys[keys.length-1]];
+  for (let i = 0; i < keys.length-1; i++) {
+    if (z >= keys[i] && z < keys[i+1]) {
+      let t = (z - keys[i]) / (keys[i+1] - keys[i]);
+      return FOG_ZOOM_MAP[keys[i]] + t * (FOG_ZOOM_MAP[keys[i+1]] - FOG_ZOOM_MAP[keys[i]]);
+    }
+  }
+  return 1.0;
+}
+
+function updateFogHUD(zoom, reveal) {
+  let pct = Math.round(reveal * 100);
+  document.getElementById('fogPct').textContent = pct + '%';
+  document.getElementById('fogZoom').textContent = Math.round(zoom);
+  document.getElementById('fogBar').style.width = pct + '%';
+}
+
+function makeBingoPopup(entityId, entityType, entityLabel, reveal) {
+  let div = document.createElement('div');
+  div.className = 'bingo-popup';
+  
+  let canvas = document.createElement('canvas');
+  if (typeof BingoCube !== 'undefined') {
+    BingoCube.renderToCanvas(canvas, entityId, {
+      gridSize: 5, cellPx: 10, revealX: reveal, entityType: entityType
+    });
+  }
+  div.appendChild(canvas);
+  
+  let zk = document.createElement('div');
+  zk.className = 'zk';
+  let hash = typeof BingoCube !== 'undefined' ? BingoCube.entityHash(entityId) : entityId.slice(0,8);
+  zk.textContent = 'zk:' + hash;
+  div.appendChild(zk);
+  
+  if (reveal >= 0.5) {
+    let tag = document.createElement('div');
+    tag.className = 'type-tag';
+    tag.style.border = '1px solid ' + (TYPE_BORDER[entityType] || '#444');
+    tag.style.color = TYPE_BORDER[entityType] || '#888';
+    tag.textContent = entityType || 'entity';
+    div.appendChild(tag);
+  }
+  
+  if (reveal >= 0.85) {
+    let name = document.createElement('div');
+    name.style.marginTop = '4px';
+    name.style.fontSize = '10px';
+    name.style.color = '#e0e0e0';
+    name.textContent = entityLabel.length > 60 ? entityLabel.slice(0,57) + '...' : entityLabel;
+    div.appendChild(name);
+  } else {
+    let fog = document.createElement('div');
+    fog.style.marginTop = '4px';
+    fog.style.fontSize = '9px';
+    fog.style.color = '#555';
+    fog.textContent = '[ zoom in to reveal ]';
+    div.appendChild(fog);
+  }
+  
+  let bar = document.createElement('div');
+  bar.className = 'fog-bar';
+  let fill = document.createElement('div');
+  fill.className = 'fog-fill';
+  fill.style.width = (reveal * 100) + '%';
+  fill.style.background = TYPE_BORDER[entityType] || '#444';
+  bar.appendChild(fill);
+  div.appendChild(bar);
+  
+  return div;
+}
+
+// Load investigation pins with bingo identity
+const INVESTIGATION_BINGO_PINS = [
+  {id:'false_face_snyder', lat:42.7335, lon:-84.5540, type:'false_face', label:'FALSE FACE: Nikki Snyder'},
+  {id:'false_face_mcmillin', lat:42.7335, lon:-84.5530, type:'false_face', label:'FALSE FACE: Tom McMillin'},
+  {id:'false_face_ohare', lat:32.7357, lon:-97.1081, type:'false_face', label:'FALSE FACE: Tim O\'Hare'},
+  {id:'false_face_pargas', lat:29.5519, lon:-98.2575, type:'false_face', label:'FALSE FACE: Mariano Pargas'},
+  {id:'false_face_murdoch', lat:40.7580, lon:-73.9855, type:'false_face', label:'FALSE FACE: Rupert Murdoch'},
+  {id:'false_face_lachlan', lat:40.7580, lon:-73.9850, type:'false_face', label:'FALSE FACE: Lachlan Murdoch'},
+  {id:'false_face_ryan', lat:38.9072, lon:-77.0369, type:'false_face', label:'FALSE FACE: Paul Ryan (Fox Board)'},
+  {id:'false_face_desantis', lat:30.4383, lon:-84.2807, type:'false_face', label:'FALSE FACE: Ron DeSantis'},
+  {id:'false_face_petty', lat:28.5383, lon:-81.3792, type:'false_face', label:'FALSE FACE: Ryan Petty'},
+  {id:'false_face_northrop', lat:42.35, lon:-83.05, type:'false_face', label:'FALSE FACE: Corey Northrop'},
+  {id:'false_face_maleyko', lat:42.3223, lon:-83.1763, type:'false_face', label:'FALSE FACE: Glenn Maleyko'},
+  {id:'false_face_nessel', lat:42.7335, lon:-84.5553, type:'false_face', label:'FALSE FACE: Dana Nessel (AG)'},
+  {id:'false_face_hayward', lat:51.5074, lon:-0.1278, type:'false_face', label:'FALSE FACE: Tony Hayward (BP)'},
+  {id:'false_face_blankenship', lat:37.7782, lon:-81.1882, type:'false_face', label:'FALSE FACE: Don Blankenship'},
+  {id:'false_face_roland_martin', lat:42.35, lon:-83.06, type:'false_face', label:'FALSE FACE: Roland Martin — The Organ Grinder'},
+  {id:'false_face_coristine', lat:38.9072, lon:-77.0365, type:'false_face', label:'FALSE FACE: Edward Coristine'},
+  {id:'true_face_kevin', lat:42.7325, lon:-84.4857, type:'true_face', label:'TRUE FACE: Kevin Mok — Father. Builder.'},
+  {id:'true_face_cross', lat:29.2097, lon:-99.7862, type:'true_face', label:'TRUE FACE: Brett Cross — Uvalde parent.'},
+  {id:'true_face_burnam', lat:32.7555, lon:-97.3308, type:'true_face', label:'TRUE FACE: Lon Burnam — Spoke truth to power.'},
+  {id:'addr-dykema-lansing', lat:42.7335, lon:-84.5553, type:'institution', label:'Dykema Gossett — 201 Townsend St, Lansing'},
+  {id:'addr-dykema-annarbor', lat:42.2508, lon:-83.7407, type:'institution', label:'Dykema Gossett — 2723 S State St, Ann Arbor'},
+  {id:'cmu-authorizer', lat:43.5834, lon:-84.7753, type:'institution', label:'CMU: Charter School Authorizer'},
+  {id:'detroit_city_hall', lat:42.3293, lon:-83.0458, type:'institution', label:'Detroit City Hall — 341 entities, 131K connections'},
+  {id:'wayne_county_court', lat:42.3314, lon:-83.0458, type:'legal_case', label:'Wayne County Circuit Court — Case 26-108221-DC'},
+  {id:'mi_dept_education', lat:42.7330, lon:-84.5560, type:'institution', label:'Michigan Department of Education — failed to investigate'},
+  {id:'addr-menlo-park', lat:37.4847, lon:-122.1477, type:'corporation', label:'Meta (Facebook) HQ — scyBorg license target'},
+  {id:'purpose_charter', lat:42.4188, lon:-82.9860, type:'institution', label:'Purpose Charter Academy (CLOSED) — Banks CMU authorized'},
+];
+
+function rebuildBingoLayer() {
+  bingoMarkers.clearLayers();
+  let z = map.getZoom();
+  let reveal = getRevealAtZoom(z);
+  currentReveal = reveal;
+  let visible = 0;
+  
+  INVESTIGATION_BINGO_PINS.forEach(function(pin) {
+    let minZ = TYPE_MIN_ZOOM[pin.type] || 12;
+    if (z < minZ) return;
+    visible++;
+    
+    let border = TYPE_BORDER[pin.type] || '#444';
+    let radius = pin.type === 'false_face' ? 10 : (pin.type === 'true_face' ? 12 : 7);
+    let opacity = 0.15 + reveal * 0.55;
+    
+    let marker = L.circleMarker([pin.lat, pin.lon], {
+      radius: radius,
+      color: border,
+      fillColor: border,
+      fillOpacity: opacity,
+      weight: pin.type === 'false_face' ? 3 : 2,
+      dashArray: pin.type === 'false_face' ? '4,4' : null,
+      className: 'bingo-marker'
+    });
+    
+    marker.on('click', function() {
+      let popup = L.popup({className:'bingo-popup-wrap', maxWidth:200})
+        .setLatLng([pin.lat, pin.lon])
+        .setContent(makeBingoPopup(pin.id, pin.type, pin.label, currentReveal));
+      popup.openOn(map);
+    });
+    
+    bingoMarkers.addLayer(marker);
+  });
+  
+  updateFogHUD(z, reveal);
+  document.getElementById('fogEntities').textContent = visible;
+}
+
+map.on('zoomend', rebuildBingoLayer);
+rebuildBingoLayer();
 </script>
 </body>
 </html>
