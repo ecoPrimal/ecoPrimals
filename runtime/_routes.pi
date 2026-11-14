@@ -120,6 +120,7 @@ GUT_DATA = {
     "/yggdrasil": "data/body/yggdrasil-tree.json",
     "/fossils": "data/fossils/index.json",
     "/fossil-latest": "data/fossils/wave-233-fossil.json",
+    "/domain-tree": "data/body/domain-tree.json",
     # CROWD cluster (k-nearest: crowd, shadow-cast, pollination)
     "/crowd": "data/gut/crowd-trace-is-was-now.json",
     "/where-is-everybody": "data/gut/crowd-trace-is-was-now.json",
