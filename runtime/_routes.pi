@@ -118,6 +118,8 @@ GUT_DATA = {
     "/bingo-identity": "data/body/bingo-identity-manifest.json",
     "/bingo-index": "data/atoms/investigation/bingo-index.tsv",
     "/yggdrasil": "data/body/yggdrasil-tree.json",
+    "/fossils": "data/fossils/index.json",
+    "/fossil-latest": "data/fossils/wave-233-fossil.json",
     # CROWD cluster (k-nearest: crowd, shadow-cast, pollination)
     "/crowd": "data/gut/crowd-trace-is-was-now.json",
     "/where-is-everybody": "data/gut/crowd-trace-is-was-now.json",

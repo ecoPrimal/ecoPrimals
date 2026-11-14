@@ -1,0 +1,48 @@
+{
+  "name": "FOSSIL INDEX — Wave Concatenation Spine",
+  "description": "Each wave deposits a fossil. Fossils stack. The index is the spine that connects them all. Diff any two fossils to see what changed. Read the sequence to see the organism evolve.",
+  "policy": "APPEND ONLY. Never delete. Never edit old fossils. Each wave adds a new entry.",
+
+  "strata": [
+    {
+      "wave": 233,
+      "epoch": "organism_era",
+      "ts": "2026-11-14T15:30:00Z",
+      "commit": "380db15a9",
+      "fossil": "data/fossils/wave-233-fossil.json",
+      "headline": "YGGDRASIL + BINGO FOG + INVESTIGATION SHADOW CAST",
+      "deltas": {
+        "nodes_added": 0,
+        "edges_added": 0,
+        "bingo_stamped": 12817,
+        "surfaces_created": 4,
+        "paintings_created": 4,
+        "commits": 8
+      },
+      "graph_state": {
+        "nodes": 12817,
+        "edges": 113552,
+        "false_faces": 19,
+        "true_faces": 3
+      }
+    }
+  ],
+
+  "schema": {
+    "wave": "integer — monotonically increasing wave number",
+    "epoch": "string — WAS/IS/NOW era name",
+    "ts": "ISO 8601 timestamp of fossil creation",
+    "commit": "git commit hash at time of fossilization",
+    "fossil": "path to full fossil snapshot file",
+    "headline": "one-line summary of what happened this wave",
+    "deltas": "what changed since last fossil",
+    "graph_state": "investigation graph stats at this wave"
+  },
+
+  "reading_guide": {
+    "latest": "strata[strata.length - 1]",
+    "history": "strata.forEach — earliest first",
+    "diff": "compare strata[n].graph_state with strata[n-1].graph_state",
+    "search": "filter strata by epoch, commit, or headline keyword"
+  }
+}
