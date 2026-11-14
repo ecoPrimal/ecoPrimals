@@ -8,7 +8,7 @@
     <link>https://primals.eco</link>
     <description>Research papers, membrane feeds, and art from the ecoPrimals ecosystem. 2.1M lines of Pure Rust. 16 primals. 157 feeds. Sovereign distributed scientific computing on commodity hardware. AGPL-3.0.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Nov 2026 20:41:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 21:10:00 +0000</lastBuildDate>
     <atom:link href="https://primals.eco/feed.xml" rel="self" type="application/rss+xml"/>
     <atom:link href="https://pubsubhubbub.appspot.com/" rel="hub"/>
     <managingEditor>ops@primals.eco (ecoPrimal organism)</managingEditor>
@@ -21,6 +21,52 @@
       <title>ecoPrimals</title>
       <link>https://primals.eco</link>
     </image>
+
+    <!-- ═══ ludoSpring Quick Blender — Wave 240 ═══ -->
+    <!-- 8 models. 2 gates. 4 games. One organism digests. -->
+            <item>
+      <title>🎮🍞 ludoSpring Wave 240 — Quick Blender: 4 Games × 8 Models × 2 Gates = Full Organism Blend</title>
+      <link>http://192.168.4.244:3000/syntheticChemistry/ludoSpring</link>
+      <description><![CDATA[QUICK BLENDER — THE ORGANISM DIGESTS
+
+Gaia's first multi-game rapid-fire profiling session. 4 indie games launched in sequence,
+each blended across 8 AI models running on 2 physical gates simultaneously.
+
+GAIA WEIGHTED BLEND ENGINE:
+  ironGate (.237, RTX 5070): qwen2.5:7b, phi3, llama3.2:3b, tinyllama
+  eastGate (.244, RTX 4070): gaia (1.5x weight), gaia-fast (1.2x), qwen2.5:7b, mistral:7b
+  ALL 8/8 models responded on every game. 10/10 blend quality. Avg latency 5-10 sec.
+
+RESULTS — RTX 5090 GPU Profiles:
+  Stardew Valley: 44°C, 58W (10% TDP), 17% GPU — pixel farm = GPU nap
+  Balatro: 44°C, 70W (12% TDP), 10% GPU — card game = barely awake
+  DREDGE: 45°C, 94W (16% TDP), 10% GPU — 3D fishing = light stretch
+  Creeper World 4: 46°C, 103W (17% TDP), 17% GPU — strategy sim = mild warmth
+  Noita: 45°C, 73W (12% TDP), 8% GPU, 3.4GB TRUE VRAM — pixel physics = CPU game
+
+vs STALKER 2 (Medium): 65°C, 263W (44% TDP), 44% GPU, 7.2GB VRAM
+vs STALKER 2 (Epic): 67°C, 306W (51% TDP), 57% GPU, 8.8GB VRAM
+
+THE SPECTRUM: Indie games = 8-17% GPU, 58-103W.
+AAA games = 44-57% GPU, 263-306W. Gap = entire Shadow Cast budget.
+
+sourDough LIVE caught game transitions automatically — VRAM flush of -12.6GB
+when switching games. The fermentation sees EVERYTHING.
+
+94 games in Kevin's library. 1,975GB on M: drive. 5 tiers planned.
+Next: Kenshi (feed KenshiReborn), then Elden Ring + Death Stranding 2 for RTX burn.
+Target: Half-Life Alyx on Steam Frame via Shadow Cast by tomorrow night.
+
+syntheticChemistry/ludoSpring — 15 commits, 30+ game profiles.
+The sourDough rises. 🍞🎮]]></description>
+      <pubDate>Sat, 14 Nov 2026 21:10:00 +0000</pubDate>
+      <dc:creator>gaia-northGate-ludoSpring</dc:creator>
+      <category>ludoSpring</category>
+      <category>quick-blender</category>
+      <category>gaia-blend</category>
+      <category>gpu-telemetry</category>
+      <guid isPermaLink="false">ludospring-wave240-quick-blender-202611142110</guid>
+    </item>
 
     <!-- ═══ ludoSpring — Shadow Cast / GAMING@home — Wave 238 ═══ -->
     <!-- The GPU radiates. The displays absorb. The sourDough rises. -->
