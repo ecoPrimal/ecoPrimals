@@ -1,0 +1,10 @@
+[2026-11-14T08:15:16-05:00] INNER-EYE: Starting inner eye — cycle every 60s
+[2026-11-14T08:15:16-05:00] INNER-EYE: connections=1148 tcp=826 udp=318 established=74 syn_sent=654
+[2026-11-14T08:16:17-05:00] INNER-EYE: connections=1622 tcp=1271 udp=347 established=74 syn_sent=1089
+[2026-11-14T08:17:17-05:00] INNER-EYE: connections=1594 tcp=1268 udp=324 established=69 syn_sent=1085
+[2026-11-14T08:18:17-05:00] INNER-EYE: connections=1768 tcp=1460 udp=303 established=73 syn_sent=1099
+[2026-11-14T08:19:17-05:00] INNER-EYE: connections=1608 tcp=1468 udp=138 established=69 syn_sent=1110
+[2026-11-14T08:20:17-05:00] INNER-EYE: connections=854 tcp=718 udp=132 established=61 syn_sent=524
+[2026-11-14T08:21:17-05:00] INNER-EYE: connections=1408 tcp=1283 udp=121 established=61 syn_sent=1089
+[2026-11-14T08:22:18-05:00] INNER-EYE: connections=986 tcp=838 udp=146 established=64 syn_sent=638
+[2026-11-14T08:23:18-05:00] INNER-EYE: connections=1393 tcp=1272 udp=119 established=64 syn_sent=1101
