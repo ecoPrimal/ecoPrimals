@@ -58,27 +58,46 @@ case "${1:-daemon}" in
     etch)   shift; etch "$@" ;;
     pull)   pull_amoeba ;;
     *)
-        log "Amoeba bridge starting — pulling every ${CYCLE}s"
+        log "Amoeba bridge starting — pulling every ${CYCLE}s (amoeba + dyson + dev-sense + wan)"
         while true; do
             pull_amoeba || true
+            pull_dyson || true
+            pull_dev_sense || true
+            pull_wan_senses || true
             sleep "$CYCLE"
         done
         ;;
 esac
 
 # === DYSON SPHERE PULL ===
-# Also pull the full Dyson sphere data
 pull_dyson() {
     adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/dyson-sphere.json "$REMOTE/dyson-sphere.json" 2>/dev/null || true
     cp "$REMOTE/dyson-sphere.json" "$GAIA_DATA/dyson-sphere.json" 2>/dev/null || true
     
-    # Pull raw sensor data (from Termux bridge)
     adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/raw-sensors.json "$REMOTE/raw-sensors.json" 2>/dev/null || true
     
-    # Pull eye captures (every 10th cycle)
     if [ $((COUNTER % 10)) -eq 0 ]; then
         adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/eyes/left-eye.jpg "$GAIA_DATA/pixel-left-eye.jpg" 2>/dev/null || true
         adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/eyes/right-eye.jpg "$GAIA_DATA/pixel-right-eye.jpg" 2>/dev/null || true
         log "eyes pulled (left + right)"
     fi
+}
+
+# === DEV-SENSE PULL (innerface learning) ===
+pull_dev_sense() {
+    adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/dev-sense.json "$REMOTE/dev-sense.json" 2>/dev/null || true
+    cp "$REMOTE/dev-sense.json" "$GAIA_DATA/dev-sense.json" 2>/dev/null || true
+    
+    local frames janky layers load
+    frames=$(sed -n 's/.*"total_frames": \([0-9]*\).*/\1/p' "$REMOTE/dev-sense.json" 2>/dev/null | head -1)
+    janky=$(sed -n 's/.*"janky_frames": \([0-9]*\).*/\1/p' "$REMOTE/dev-sense.json" 2>/dev/null | head -1)
+    layers=$(sed -n 's/.*"surface_layers": \([0-9]*\).*/\1/p' "$REMOTE/dev-sense.json" 2>/dev/null | head -1)
+    load=$(sed -n 's/.*"cpu_load": \([0-9.]*\).*/\1/p' "$REMOTE/dev-sense.json" 2>/dev/null | head -1)
+    log "dev-sense: frames=$frames janky=$janky layers=$layers load=$load"
+}
+
+# === WAN SENSES PULL ===
+pull_wan_senses() {
+    adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/wan-senses.json "$REMOTE/wan-senses.json" 2>/dev/null || true
+    cp "$REMOTE/wan-senses.json" "$GAIA_DATA/wan-senses.json" 2>/dev/null || true
 }
