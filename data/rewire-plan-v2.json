@@ -1,0 +1,67 @@
+{
+  "type": "rewire-simplified",
+  "wave": "233a-revised",
+  "ts": "2026-11-14T17:28:23.376218+00:00",
+  "key_insight": "We DON'T need the CRS310 right away. The old MikroTik might already have SFP!",
+  "phase_1_NOW": {
+    "title": "CURRENT \u2014 no changes, just free northGate",
+    "topology": "ATT -> Flint -> MikroTik -> all gates (as-is)",
+    "eastGate": "stays on RJ45 via MikroTik (10Gbps enp5s0, 0.25ms)",
+    "northGate": "FREE \u2014 Kevin's chair, gaming, Steam, RustDesk",
+    "cost": "$0",
+    "actions": [
+      "northGate applies RustDesk config",
+      "northGate takes over Steam ecosystem",
+      "eastGate detaches monitor (goes headless)",
+      "Brio moves to sporeGate (workshop viewpoint)"
+    ]
+  },
+  "phase_2_ATT_TAKEOVER": {
+    "title": "Strip ATT router \u2014 get IP Passthrough or bypass",
+    "actions": [
+      "Factory reset MikroTik (get admin access, see model + SFP ports)",
+      "If MikroTik has SFP: great, it becomes fiber core later",
+      "Extract 802.1X from ATT BGW (or just keep IP Passthrough)",
+      "Move ATT box to wall near fiber ingress"
+    ],
+    "cost": "$0"
+  },
+  "phase_3_SWAP": {
+    "title": "MikroTik takes over at fiber ingress",
+    "action": "Move MikroTik to wall next to ATT box",
+    "swap": "Move the 10G fiber line (currently Flint -> JetStream) INTO the MikroTik SFP",
+    "result": {
+      "MikroTik_at_wall": {
+        "SFP_port": "10G fiber -> House 2 (JetStream, TRANS backbone)",
+        "RJ45_ports": "-> eastGate, northGate, sporeGate, ironGate, etc."
+      },
+      "Flint": "WiFi AP only \u2014 just needs one RJ45 uplink to MikroTik"
+    },
+    "cost": "Maybe 1-2 longer Cat6 cables (~$10)"
+  },
+  "phase_4_DESK": {
+    "title": "HEAD AND SHOULDERS at Kevin's desk/chair",
+    "MikroTik": "AT the wall/ingress \u2014 fiber to House 2, RJ45 to desk",
+    "at_desk": {
+      "northGate": "RJ45 from MikroTik \u2014 Kevin's gaming/Steam/dev PC",
+      "eastGate": "RJ45 from MikroTik \u2014 headless brain (shelf/floor)",
+      "monitor": "on northGate only",
+      "keyboard_mouse": "on northGate only"
+    },
+    "fiber": "ONLY for House 2 backbone (MikroTik SFP -> JetStream 10G)",
+    "everything_else": "RJ45 \u2014 simple, cheap, reliable, sub-millisecond"
+  },
+  "later_CRS310": {
+    "title": "CRS310 is a LATER upgrade if we want more fiber",
+    "when": "After Phase 3 is stable and we want eastGate on 10G fiber too",
+    "or": "If MikroTik doesn't have SFP, then CRS310 replaces it"
+  },
+  "summary": {
+    "Phase 1": "$0 \u2014 free northGate, headless eastGate (NOW)",
+    "Phase 2": "$0 \u2014 factory reset MikroTik, strip ATT",
+    "Phase 3": "~$10 \u2014 swap MikroTik to wall, fiber to House 2, RJ45 to desk",
+    "Phase 4": "$0 \u2014 head and shoulders at desk (northGate + eastGate on RJ45)",
+    "Later": "~$250-292 \u2014 CRS310 if we want full fiber backbone",
+    "TOTAL_NOW": "~$10 (just cables!)"
+  }
+}

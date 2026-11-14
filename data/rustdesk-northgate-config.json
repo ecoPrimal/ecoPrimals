@@ -1,0 +1,32 @@
+{
+  "info": "RustDesk config for northGate \u2014 Kevin's remote hub",
+  "RustDesk2.toml": {
+    "rendezvous_server": "192.168.4.244:21116",
+    "nat_type": 1,
+    "serial": 0,
+    "[options]": {
+      "custom-rendezvous-server": "192.168.4.244",
+      "relay-server": "192.168.4.244",
+      "key": "6oVQBFyHHNAJqm1OlS+XvpdoJ5plYrPzJoPTTYlgQdg=",
+      "direct-server": "Y",
+      "direct-access-port": "21118",
+      "verification-method": "use-permanent-password",
+      "allow-auto-disconnect": "N",
+      "enable-lan-discovery": "Y"
+    }
+  },
+  "peers": {
+    "eastGate": {
+      "id": "19091278",
+      "ip": "192.168.4.244",
+      "note": "BRAIN \u2014 relay server too"
+    },
+    "sporeGate": {
+      "id": "1871544996",
+      "ip": "192.168.4.3",
+      "note": "GUT \u2014 Xorg :0, eyeball ready"
+    }
+  },
+  "lan_discovery": "Both peers on 192.168.4.0/24 = DIRECT connection, no relay hairpin",
+  "passwords": "Set same permanent password on all gates for seamless access"
+}
