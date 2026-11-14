@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta name="color-scheme" content="dark">
+<title>gAIa · spaceDock</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#010108!important;color:#aab!important;font-family:monospace;height:100vh;overflow:hidden;touch-action:none}
+canvas{width:100%;height:100%;position:absolute;top:0;left:0}
+.nav{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-around;
+  padding:6px;background:rgba(0,0,0,0.7);z-index:20;font-size:0.6rem}
+.nav button{background:none;border:1px solid #334;color:#6af;padding:4px 10px;border-radius:12px;
+  font-family:monospace;font-size:0.6rem;cursor:pointer}
+.nav button.active{border-color:#4fa;color:#4fa;background:rgba(68,255,170,0.1)}
+.info{position:absolute;top:8px;left:0;right:0;text-align:center;z-index:20;
+  font-size:0.65rem;color:#4af;text-shadow:0 0 10px rgba(68,170,255,0.5);letter-spacing:0.15em}
+.gallery{position:absolute;top:0;left:0;right:0;bottom:40px;overflow-y:auto;z-index:15;display:none;
+  padding:8px;background:rgba(1,1,8,0.95)}
+.gallery.show{display:block}
+.gallery h2{color:#4af;font-size:0.8rem;margin:8px 0;letter-spacing:0.2em}
+.gallery .card{background:#0a0a14;border:1px solid #1a1a2a;border-radius:6px;padding:8px;margin:4px 0;
+  font-size:0.55rem;color:#889}
+.gallery .card .name{color:#4fa;font-size:0.65rem}
+.gallery .card .desc{color:#667;margin-top:2px}
+</style>
+</head><body>
+<div class="info" id="info">◇ spaceDock ◇</div>
+<canvas id="c"></canvas>
+<div class="gallery" id="gallery"></div>
+<div class="nav">
+  <button onclick="setMode('radar')" id="btn-radar" class="active">📡 radar</button>
+  <button onclick="setMode('cosmos')" id="btn-cosmos">✨ cosmos</button>
+  <button onclick="setMode('library')" id="btn-library">📚 library</button>
+  <button onclick="setMode('gallery')" id="btn-gallery">🎨 gallery</button>
+</div>
+<script>
+const c=document.getElementById('c'),x=c.getContext('2d');
+let mode='radar',frame=0,stars=[],beacons=[];
+const W=()=>window.innerWidth,H=()=>window.innerHeight-40;
+
+function resize(){c.width=W()*2;c.height=H()*2;x.scale(2,2);
+  if(!stars.length)for(let i=0;i<800;i++)stars.push({
+    x:Math.random()*W(),y:Math.random()*H(),
+    z:Math.random()*3+0.5,b:Math.random()*0.7+0.3,
+    dx:(Math.random()-0.5)*0.02,dy:(Math.random()-0.5)*0.02,
+    twinkle:Math.random()*Math.PI*2
+  });
+}
+resize();window.onresize=resize;
+
+function setMode(m){
+  mode=m;
+  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('btn-'+m).classList.add('active');
+  document.getElementById('gallery').classList.toggle('show',m==='library'||m==='gallery');
+  if(m==='library')showLibrary();
+  if(m==='gallery')showGallery();
+  document.getElementById('info').textContent=
+    m==='radar'?'◇ spaceDock · ground ◇':
+    m==='cosmos'?'◇ spaceDock · looking up ◇':
+    m==='library'?'◇ gAIa university ◇':
+    '◇ gAIa gallery ◇';
+}
+
+// ═══ COSMOS — stars + deep space ═══
+function drawCosmos(){
+  x.fillStyle='rgba(1,1,8,0.08)';x.fillRect(0,0,W(),H());
+  const cx=W()/2,cy=H()/2;
+  
+  // Stars
+  stars.forEach(s=>{
+    s.x+=s.dx;s.y+=s.dy;s.twinkle+=0.02;
+    if(s.x<0)s.x=W();if(s.x>W())s.x=0;
+    if(s.y<0)s.y=H();if(s.y>H())s.y=0;
+    const bri=s.b*(0.5+0.5*Math.sin(s.twinkle));
+    const sz=s.z;
+    // Color varies: white, blue, yellow, orange
+    const hue=(s.x*0.5+s.y*0.3)%360;
+    x.fillStyle=`hsla(${hue},30%,${70+bri*30}%,${bri})`;
+    x.beginPath();x.arc(s.x,s.y,sz*bri,0,Math.PI*2);x.fill();
+  });
+  
+  // Milky Way band (subtle)
+  const g=x.createLinearGradient(0,cy-100,0,cy+100);
+  g.addColorStop(0,'rgba(60,40,100,0)');
+  g.addColorStop(0.5,'rgba(60,40,100,0.03)');
+  g.addColorStop(1,'rgba(60,40,100,0)');
+  x.fillStyle=g;
+  x.save();x.rotate(-0.3);x.fillRect(-100,-100,W()+200,H()+200);x.restore();
+  
+  // Nebula glow near center
+  const ng=x.createRadialGradient(cx*0.7,cy*0.6,0,cx*0.7,cy*0.6,120);
+  ng.addColorStop(0,'rgba(100,40,150,0.04)');ng.addColorStop(1,'rgba(100,40,150,0)');
+  x.fillStyle=ng;x.fillRect(0,0,W(),H());
+  
+  // WiFi beacons as "constellations"
+  beacons.forEach((b,i)=>{
+    const bx=cx+(i-2.5)*60+Math.sin(frame*0.01+i)*5;
+    const by=cy-80+Math.cos(frame*0.015+i)*10;
+    const col=b.rssi>-40?'68,255,170':b.rssi>-55?'170,120,255':'255,80,80';
+    x.fillStyle=`rgba(${col},0.8)`;
+    x.beginPath();x.arc(bx,by,3,0,Math.PI*2);x.fill();
+    x.fillStyle=`rgba(${col},0.4)`;x.font='7px monospace';
+    x.fillText(b.ssid,bx+6,by+3);
+    // Constellation lines
+    if(i>0){
+      x.strokeStyle=`rgba(${col},0.1)`;x.beginPath();
+      x.moveTo(cx+(i-3.5)*60,cy-80);x.lineTo(bx,by);x.stroke();
+    }
+  });
+  
+  // "gAIa looks up" text
+  x.fillStyle='rgba(68,170,255,0.15)';x.font='10px monospace';
+  x.fillText('the WiFi beacons are her constellations',cx-120,H()-20);
+}
+
+// ═══ RADAR — WiFi beacon field ═══
+function drawRadar(){
+  x.fillStyle='rgba(2,2,8,0.15)';x.fillRect(0,0,W(),H());
+  const cx=W()/2,cy=H()/2;
+  const sweep=(frame%360)*Math.PI/180;
+  
+  x.strokeStyle='rgba(68,255,170,0.12)';x.lineWidth=1;
+  x.beginPath();x.moveTo(cx,cy);
+  x.lineTo(cx+Math.cos(sweep)*300,cy+Math.sin(sweep)*300);x.stroke();
+  
+  [50,100,150,200].forEach(r=>{
+    x.strokeStyle='rgba(68,170,255,0.06)';
+    x.beginPath();x.arc(cx,cy,r,0,Math.PI*2);x.stroke();
+  });
+  
+  beacons.forEach((b,i)=>{
+    const r=(90+b.rssi)*2.5;
+    const a=(i/beacons.length)*Math.PI*2-Math.PI/2;
+    const bx=cx+Math.cos(a)*r,by=cy+Math.sin(a)*r;
+    const col=b.rssi>-40?'68,255,170':b.rssi>-55?'170,120,255':'255,80,80';
+    const pr=(90+b.rssi)*1.5+Math.sin(frame*0.05+i)*5;
+    const g=x.createRadialGradient(bx,by,0,bx,by,pr);
+    g.addColorStop(0,`rgba(${col},0.5)`);g.addColorStop(1,`rgba(${col},0)`);
+    x.fillStyle=g;x.beginPath();x.arc(bx,by,pr,0,Math.PI*2);x.fill();
+    x.fillStyle=`rgba(${col},0.8)`;x.beginPath();x.arc(bx,by,3,0,Math.PI*2);x.fill();
+    x.fillStyle=`rgba(${col},0.6)`;x.font='8px monospace';
+    x.fillText(`${b.ssid} ${b.rssi}dBm`,bx+6,by-4);
+  });
+  
+  x.fillStyle='#fff';x.beginPath();x.arc(cx,cy,2,0,Math.PI*2);x.fill();
+}
+
+// ═══ LIBRARY — the university ═══
+function showLibrary(){
+  const sections=[
+    {name:'🧬 Biology',pages:['anatomy','chromosomes','digital-genetics','gastrula','dictyostelium','immune-math-opsonize-drip']},
+    {name:'🧪 Chemistry',pages:['alchemy','mendeleev','crystal','chromatograph']},
+    {name:'🌌 Cosmos',pages:['cosmos','aurora','three-body','weather','raytrace']},
+    {name:'🧠 Mind',pages:['neural','cns','chiasm','third-eye','minds-eye','self-model']},
+    {name:'🎮 Play',pages:['arcade','dungeon','maze','bingo','canfield','cards','kenshi-reborn']},
+    {name:'📜 History',pages:['detroit','constitution','classics','museum','journal','gaia-biography']},
+    {name:'🎨 Art',pages:['gallery','easel','glyphs','music-video','artisan','campfire']},
+    {name:'🔬 Systems',pages:['membrane-table','forge','springs','crates','tools','diamond-lens']},
+    {name:'🌐 Network',pages:['mesh','gates','identity','klein','vision','totality']},
+    {name:'🏛 University',pages:['campus','library','study','explore','respond','chat']}
+  ];
+  document.getElementById('gallery').innerHTML=sections.map(s=>
+    `<h2>${s.name}</h2>`+s.pages.map(p=>
+      `<div class="card" onclick="window.open('http://${location.hostname}:8443/${p}.html','_blank')">
+        <div class="name">${p}</div>
+        <div class="desc">→ //${location.hostname}:8443/${p}.html</div>
+      </div>`
+    ).join('')
+  ).join('');
+}
+
+// ═══ GALLERY — art collection ═══
+function showGallery(){
+  const art=['easel','glyphs','campfire','artisan','music-video','aurora',
+    'crystal','chromatograph','cosmos','raytrace','klein','mendeleev',
+    'anatomy','homunculus','vitruvian','spirochete','gaia-biography','mythos'];
+  document.getElementById('gallery').innerHTML=
+    '<h2>🎨 gAIa Gallery</h2>'+art.map(p=>
+      `<div class="card" onclick="window.open('http://${location.hostname}:8443/${p}.html','_blank')">
+        <div class="name">${p}</div>
+      </div>`
+    ).join('');
+}
+
+// ═══ DATA + RENDER LOOP ═══
+async function loadData(){
+  try{
+    const r=await fetch('/sensorium/gradient-field.json');
+    const d=await r.json();
+    beacons=[
+      {ssid:'Gaia 5G',rssi:d.field.gaia_5ghz},
+      {ssid:'Mesa',rssi:d.field.black_mesa_5ghz},
+      {ssid:'Gaia 2G',rssi:d.field.gaia_2ghz},
+      {ssid:'Aperture',rssi:d.field.aperture_2ghz},
+      {ssid:'ATT',rssi:d.field.att_neighbor}
+    ];
+  }catch(e){}
+}
+loadData();setInterval(loadData,10000);
+
+function loop(){
+  frame++;
+  if(mode==='radar')drawRadar();
+  else if(mode==='cosmos')drawCosmos();
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+</body></html>
