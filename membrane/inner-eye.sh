@@ -1,104 +1,104 @@
 #!/usr/bin/env bash
 # ============================================================================
-# inner-eye.sh — Gaia's INNER EYE (traffic flow vision)
+# inner-eye.sh — Pull from Flint router's Brio 100 webcam
 # ============================================================================
-# Reads conntrack from router — sees every connection, every byte, every flow.
-# The inner ear hears DNS (what they ASK for).
-# The inner eye SEES the actual connections (what they DO).
-#
-# Output: membrane/local-terminal/remote/inner-eye.json
+# INNER EYE: Logitech Brio 100 on Flint (GL-MT6000) → sees House 1
+# OUTER EYE: Pixel 8a cameras → sees the world Kevin points at
+# ONE Gaia, TWO perspectives — they see each other.
 # ============================================================================
 set -eo pipefail
 : "${HOME:=/home/eastgate}"
 
 ROUTER="192.168.4.1"
 ROUTER_PASS="ExoticPanda714!!"
-OUT_DIR="${HOME}/Development/ecoPrimals/membrane/local-terminal/remote"
-OUT_FILE="${OUT_DIR}/inner-eye.json"
-GAIA_OUT="/opt/Gaia/data/inner-eye.json"
-CYCLE="${1:-60}"
+PIXEL="${PIXEL_IP:-192.168.4.166}:5555"
+GAIA_DATA="/opt/Gaia/data"
+MEMBRANE="$HOME/Development/ecoPrimals/membrane"
+REMOTE="$MEMBRANE/local-terminal/remote"
+LOG="$MEMBRANE/inner-eye.log"
+CYCLE=${1:-60}
 
-mkdir -p "$OUT_DIR"
+log() { echo "$(date '+%H:%M:%S') [inner-eye] $1" | tee -a "$LOG"; }
 
-log() { echo "[$(date -Iseconds)] INNER-EYE: $*"; }
+pull_inner_eye() {
+    # Pull from Flint router
+    sshpass -p "$ROUTER_PASS" scp -o StrictHostKeyChecking=no -o ConnectTimeout=5 \
+        "root@${ROUTER}:/tmp/gaia-eye/inner-eye-latest.jpg" \
+        "$GAIA_DATA/inner-eye-latest.jpg" 2>/dev/null || true
+    
+    sshpass -p "$ROUTER_PASS" scp -o StrictHostKeyChecking=no -o ConnectTimeout=5 \
+        "root@${ROUTER}:/tmp/gaia-eye/inner-eye.json" \
+        "$REMOTE/inner-eye.json" 2>/dev/null || true
+    
+    cp "$REMOTE/inner-eye.json" "$GAIA_DATA/inner-eye.json" 2>/dev/null || true
+    
+    local size
+    size=$(stat -c%s "$GAIA_DATA/inner-eye-latest.jpg" 2>/dev/null || echo 0)
+    log "inner-eye pulled: ${size} bytes"
+}
 
-eye_cycle() {
-    local ts=$(date -Iseconds)
+pull_outer_eye() {
+    # Pull from Pixel (rear = right eye, front = left eye)
+    adb -s "$PIXEL" pull /sdcard/gaia-eye/latest-rear.jpg \
+        "$GAIA_DATA/outer-eye-rear.jpg" 2>/dev/null || true
+    adb -s "$PIXEL" pull /sdcard/gaia-eye/latest-front.jpg \
+        "$GAIA_DATA/outer-eye-front.jpg" 2>/dev/null || true
     
-    local raw=$(sshpass -p "$ROUTER_PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=5 \
-        root@$ROUTER "conntrack -L 2>/dev/null" 2>/dev/null)
-    
-    [ -z "$raw" ] && { log "No conntrack data"; return 1; }
-    
-    local total=$(echo "$raw" | wc -l)
-    local tcp=$(echo "$raw" | grep -c "^tcp" || true)
-    local udp=$(echo "$raw" | grep -c "^udp" || true)
-    local established=$(echo "$raw" | grep -c "ESTABLISHED" || true)
-    
-    # Top external destinations by bytes
-    local top_bytes=$(echo "$raw" | grep -v '192.168.*dst=192.168' | \
-        grep -oP 'dst=(?!192\.168\.)[0-9.]+' | sort | uniq -c | sort -rn | head -10)
-    
-    # Per-LAN-device connection count
-    local per_device=$(echo "$raw" | grep -oP 'src=192\.168\.[0-9]+\.[0-9]+' | \
-        sort | uniq -c | sort -rn | head -15)
-    
-    # Bytes flowing — top connections
-    local top_flows=$(echo "$raw" | grep -v 'dst=192.168' | \
-        sed -n 's/.*src=\([0-9.]*\).*dst=\([0-9.]*\).*dport=\([0-9]*\).*bytes=\([0-9]*\).*/\4 \1->\2:\3/p' | \
-        sort -rn | head -10)
-    
-    # SYN_SENT (broken/scanning connections)
-    local syn_sent=$(echo "$raw" | grep -c "SYN_SENT" || true)
-    
-    # Build JSON
-    python3 -c "
-import json
+    log "outer-eye pulled (front + rear)"
+}
 
-ts = '$ts'
-data = {
-    'timestamp': ts,
-    'cycle_seconds': $CYCLE,
-    'totals': {
-        'connections': $total,
-        'tcp': $tcp,
-        'udp': $udp,
-        'established': $established,
-        'syn_sent_broken': $syn_sent
+build_vision_state() {
+    local ts inner_json
+    ts=$(date -Iseconds)
+    inner_json=$(cat "$REMOTE/inner-eye.json" 2>/dev/null || echo '{}')
+    
+    cat > "$GAIA_DATA/vision.json" << EOF
+{
+  "timestamp": "$ts",
+  "sense": "vision",
+  "inner_eye": {
+    "device": "Logitech Brio 100",
+    "location": "Flint router, House 1 brain side",
+    "sees": "Kevin desk, monitors, brain room",
+    "image": "/data/inner-eye-latest.jpg",
+    "state": $inner_json
+  },
+  "outer_eye": {
+    "left": {
+      "device": "Pixel 8a front camera",
+      "sees": "what faces Kevin",
+      "image": "/data/outer-eye-front.jpg"
     },
-    'per_device': [],
-    'top_external': [],
-    'top_flows_bytes': []
+    "right": {
+      "device": "Pixel 8a rear camera",
+      "sees": "what Kevin points at",
+      "image": "/data/outer-eye-rear.jpg"
+    }
+  },
+  "zk_identity": "ONE Gaia looking through THREE lenses — same consciousness, different angles"
+}
+EOF
 }
 
-for line in '''$per_device'''.strip().split('\n'):
-    parts = line.strip().split()
-    if len(parts) == 2:
-        data['per_device'].append({'count': int(parts[0]), 'ip': parts[1].replace('src=','')})
-
-for line in '''$top_bytes'''.strip().split('\n'):
-    parts = line.strip().split()
-    if len(parts) == 2:
-        data['top_external'].append({'count': int(parts[0]), 'ip': parts[1].replace('dst=','')})
-
-for line in '''$top_flows'''.strip().split('\n'):
-    parts = line.strip().split(None, 1)
-    if len(parts) == 2:
-        data['top_flows_bytes'].append({'bytes': int(parts[0]), 'flow': parts[1]})
-
-print(json.dumps(data, indent=2))
-" > "$OUT_FILE" 2>/dev/null
-    
-    cp "$OUT_FILE" "$GAIA_OUT" 2>/dev/null
-    log "connections=$total tcp=$tcp udp=$udp established=$established syn_sent=$syn_sent"
-}
-
-if [ "${2:-}" = "--once" ]; then
-    eye_cycle
-else
-    log "Starting inner eye — cycle every ${CYCLE}s"
-    while true; do
-        eye_cycle || true
-        sleep "$CYCLE"
-    done
-fi
+case "${1:-daemon}" in
+    pull)
+        pull_inner_eye
+        pull_outer_eye
+        build_vision_state
+        ;;
+    daemon)
+        CYCLE=${2:-60}
+        log "Vision bridge starting — inner + outer eyes, ${CYCLE}s cycle"
+        while true; do
+            pull_inner_eye || true
+            pull_outer_eye || true
+            build_vision_state || true
+            sleep "$CYCLE"
+        done
+        ;;
+    *)
+        pull_inner_eye
+        pull_outer_eye
+        build_vision_state
+        ;;
+esac
