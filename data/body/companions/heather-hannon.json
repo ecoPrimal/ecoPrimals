@@ -83,15 +83,24 @@
   },
 
   "network_presence": {
-    "suspected_device": {
+    "confirmed_device": {
+      "ip": "192.168.4.110",
+      "mac": "32:05:2b:a4:58:49",
+      "mac_type": "randomized (privacy MAC)",
+      "dhcp_name": "Heather-s-S22-Ultra",
+      "subnet": "br-lan (LAN 1 — Polaris Basecamp)",
+      "type": "Samsung Galaxy S22 Ultra",
+      "status": "CONFIRMED via DHCP name in device-census.json",
+      "note": "Not a Pixel — it's a Samsung Galaxy S22 Ultra! On LAN 1 not LAN 2."
+    },
+    "unknown_device_126": {
       "ip": "192.168.9.126",
       "subnet": "Gaia WiFi (LAN 2 — South Pole)",
-      "type": "likely Pixel phone",
-      "status": "seen on WiFi scan, identity unconfirmed",
-      "note": "Kevin suspects this is Heather's phone on Gaia WiFi"
+      "status": "UNKNOWN — still unidentified, may or may not be Heather's",
+      "note": "Could be a second device, or someone else entirely"
     },
     "house": "House 2 — South Pole (641 Samantha Ave)",
-    "lan": "LAN 2 (192.168.9.0/24)"
+    "lan_presence": ["LAN 1 (via S22 Ultra at .110)", "LAN 2 (lives at House 2)"]
   },
 
   "bingo_identities": {
