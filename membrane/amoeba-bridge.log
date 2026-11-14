@@ -23,4 +23,730 @@
 10:00:43 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
 10:01:13 [amoeba-bridge] sketch pulled (cycle 20)
 10:01:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
-10:01:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:01:43 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:02:14 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:02:44 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:03:14 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:03:44 [amoeba-bridge] sketch pulled (cycle 25)
+10:03:44 [amoeba-bridge] focus=com.android.wallpaper/com.android.wallpaper.picker.preview.ui.WallpaperPreviewActivity rustdesk=true bat=92
+10:04:15 [amoeba-bridge] focus=android/com.android.internal.app.ResolverActivity rustdesk=true bat=91
+10:04:45 [amoeba-bridge] focus=com.android.gallery3d/com.android.gallery3d.app.GalleryActivity rustdesk=true bat=91
+10:05:15 [amoeba-bridge] focus=com.android.gallery3d/com.android.gallery3d.app.GalleryActivity rustdesk=true bat=91
+10:05:45 [amoeba-bridge] focus=com.android.gallery3d/com.android.gallery3d.app.GalleryActivity rustdesk=true bat=91
+10:06:16 [amoeba-bridge] sketch pulled (cycle 30)
+10:06:16 [amoeba-bridge] focus=android/com.android.internal.app.ResolverActivity rustdesk=true bat=91
+10:06:46 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=91
+10:07:16 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=91
+10:07:46 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=91
+10:08:16 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=91
+10:08:47 [amoeba-bridge] sketch pulled (cycle 35)
+10:08:47 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.AttachActivity rustdesk=true bat=91
+10:09:17 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.AttachActivity rustdesk=true bat=91
+10:09:47 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=91
+10:10:17 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=91
+10:10:48 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=91
+10:11:18 [amoeba-bridge] sketch pulled (cycle 40)
+10:11:18 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=91
+10:11:48 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=90
+10:12:18 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.AttachActivity rustdesk=true bat=90
+10:12:48 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.AttachActivity rustdesk=true bat=90
+10:13:19 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.AttachActivity rustdesk=true bat=90
+10:13:49 [amoeba-bridge] sketch pulled (cycle 45)
+10:13:49 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.AttachActivity rustdesk=true bat=90
+10:14:19 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.AttachActivity rustdesk=true bat=90
+10:14:49 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.SelectionListActivity rustdesk=true bat=91
+10:15:20 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.CredentialInputActivity rustdesk=true bat=91
+10:15:50 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.CredentialInputActivity rustdesk=true bat=91
+10:16:20 [amoeba-bridge] sketch pulled (cycle 50)
+10:16:20 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.BatchProcessingActivity rustdesk=true bat=91
+10:16:50 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.attach.BatchProcessingActivity rustdesk=true bat=91
+10:17:20 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=91
+10:17:51 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=91
+10:18:21 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=91
+10:18:51 [amoeba-bridge] sketch pulled (cycle 55)
+10:18:51 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=91
+10:19:21 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=91
+10:19:52 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=92
+10:20:22 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=92
+10:20:52 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=92
+10:21:22 [amoeba-bridge] sketch pulled (cycle 60)
+10:21:22 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=92
+10:21:52 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=92
+10:22:23 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=92
+10:22:53 [amoeba-bridge] focus= rustdesk= bat=
+10:23:23 [amoeba-bridge] focus=edu.berkeley.boinc/edu.berkeley.boinc.BOINCActivity rustdesk=true bat=92
+10:23:53 [amoeba-bridge] sketch pulled (cycle 65)
+10:23:53 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:24:23 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:24:53 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:25:24 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=92
+10:25:54 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=93
+10:26:24 [amoeba-bridge] sketch pulled (cycle 70)
+10:26:24 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=93
+10:26:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=93
+10:27:25 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=93
+10:27:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=93
+10:28:25 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=93
+10:28:55 [amoeba-bridge] sketch pulled (cycle 75)
+10:28:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=93
+10:29:26 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:29:56 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:30:26 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:30:56 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:31:26 [amoeba-bridge] sketch pulled (cycle 80)
+10:31:26 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:31:57 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:32:27 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:32:57 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:33:27 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=94
+10:33:58 [amoeba-bridge] sketch pulled (cycle 85)
+10:33:58 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:34:28 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:34:58 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:35:29 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:35:59 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:36:29 [amoeba-bridge] sketch pulled (cycle 90)
+10:36:29 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:36:59 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:37:30 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:38:00 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:38:30 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=95
+10:39:00 [amoeba-bridge] sketch pulled (cycle 95)
+10:39:00 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:39:31 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:40:01 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:40:31 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:41:01 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:41:32 [amoeba-bridge] sketch pulled (cycle 100)
+10:41:32 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:42:02 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:42:32 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:43:02 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:43:33 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=96
+10:44:03 [amoeba-bridge] sketch pulled (cycle 105)
+10:44:03 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:44:33 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:45:04 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:45:34 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:46:04 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:46:35 [amoeba-bridge] sketch pulled (cycle 110)
+10:46:35 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:47:05 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:47:35 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:48:05 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:48:36 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:49:06 [amoeba-bridge] sketch pulled (cycle 115)
+10:49:06 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:49:36 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=97
+10:50:06 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=98
+10:50:37 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=98
+10:51:07 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=98
+10:51:37 [amoeba-bridge] sketch pulled (cycle 120)
+10:51:37 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=98
+10:52:07 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=98
+10:52:38 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=98
+10:53:08 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=98
+10:53:38 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=99
+10:54:08 [amoeba-bridge] sketch pulled (cycle 125)
+10:54:08 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=99
+10:54:39 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=99
+10:55:09 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=99
+10:55:39 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=99
+10:56:09 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+10:56:40 [amoeba-bridge] sketch pulled (cycle 130)
+10:56:40 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+10:57:10 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+10:57:40 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+10:58:10 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+10:58:41 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+10:59:11 [amoeba-bridge] sketch pulled (cycle 135)
+10:59:11 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+10:59:41 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:00:12 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:00:42 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:01:12 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:01:42 [amoeba-bridge] sketch pulled (cycle 140)
+11:01:42 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:02:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:02:43 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:03:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:03:43 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:04:13 [amoeba-bridge] sketch pulled (cycle 145)
+11:04:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:04:44 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:05:14 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:05:44 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:06:15 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:06:45 [amoeba-bridge] sketch pulled (cycle 150)
+11:06:45 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:07:15 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:07:45 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:08:16 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:08:46 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:09:16 [amoeba-bridge] sketch pulled (cycle 155)
+11:09:16 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:09:46 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:10:17 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:10:47 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:11:17 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:11:47 [amoeba-bridge] sketch pulled (cycle 160)
+11:11:47 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:12:17 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:12:48 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:13:18 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:13:48 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:14:18 [amoeba-bridge] sketch pulled (cycle 165)
+11:14:18 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:14:48 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:15:19 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:15:49 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:16:19 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:16:49 [amoeba-bridge] sketch pulled (cycle 170)
+11:16:49 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:17:20 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:17:50 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:18:20 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:18:50 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:19:21 [amoeba-bridge] sketch pulled (cycle 175)
+11:19:21 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:19:51 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:20:21 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:20:51 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:21:22 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:21:52 [amoeba-bridge] sketch pulled (cycle 180)
+11:21:52 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:22:22 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:22:53 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:23:23 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:23:53 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:24:23 [amoeba-bridge] sketch pulled (cycle 185)
+11:24:23 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:24:54 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:25:24 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:25:54 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:26:24 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:26:55 [amoeba-bridge] sketch pulled (cycle 190)
+11:26:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:27:25 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:27:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:28:26 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:28:56 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:29:26 [amoeba-bridge] sketch pulled (cycle 195)
+11:29:26 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:29:56 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:30:27 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:30:57 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:31:27 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:31:58 [amoeba-bridge] sketch pulled (cycle 200)
+11:31:58 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:32:28 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:32:58 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:33:28 [amoeba-bridge] focus= rustdesk= bat=
+11:33:58 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:34:29 [amoeba-bridge] sketch pulled (cycle 205)
+11:34:29 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:34:59 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:35:29 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:35:59 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:36:30 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:37:00 [amoeba-bridge] sketch pulled (cycle 210)
+11:37:00 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:37:30 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:38:00 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:38:31 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:39:01 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:39:31 [amoeba-bridge] sketch pulled (cycle 215)
+11:39:31 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:40:02 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:40:32 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:41:02 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:41:32 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:42:03 [amoeba-bridge] sketch pulled (cycle 220)
+11:42:03 [amoeba-bridge] focus= rustdesk= bat=
+11:42:33 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:43:03 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:43:33 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:44:04 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:44:34 [amoeba-bridge] sketch pulled (cycle 225)
+11:44:34 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:45:04 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:45:34 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:46:05 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:46:35 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:47:05 [amoeba-bridge] sketch pulled (cycle 230)
+11:47:05 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:47:36 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:48:06 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:48:36 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:49:06 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:49:37 [amoeba-bridge] sketch pulled (cycle 235)
+11:49:37 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:50:07 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:50:37 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:51:07 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:51:38 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:52:08 [amoeba-bridge] sketch pulled (cycle 240)
+11:52:08 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:52:38 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:53:08 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:53:39 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:54:09 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:54:39 [amoeba-bridge] sketch pulled (cycle 245)
+11:54:39 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:55:09 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:55:40 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:56:10 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:56:40 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:57:11 [amoeba-bridge] sketch pulled (cycle 250)
+11:57:11 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:57:41 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:58:11 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:58:41 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:59:12 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+11:59:42 [amoeba-bridge] sketch pulled (cycle 255)
+11:59:42 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:00:12 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:00:42 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:01:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:01:43 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:02:13 [amoeba-bridge] sketch pulled (cycle 260)
+12:02:13 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:02:44 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:03:14 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:03:44 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:04:14 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:04:45 [amoeba-bridge] sketch pulled (cycle 265)
+12:04:45 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:05:15 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:05:45 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:06:15 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:06:46 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:07:16 [amoeba-bridge] sketch pulled (cycle 270)
+12:07:16 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:07:46 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:08:16 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:08:47 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:09:17 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:09:47 [amoeba-bridge] sketch pulled (cycle 275)
+12:09:47 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:10:17 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:10:48 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:11:18 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:11:48 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:12:18 [amoeba-bridge] sketch pulled (cycle 280)
+12:12:18 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:12:49 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:13:19 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:13:49 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:14:19 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:14:50 [amoeba-bridge] sketch pulled (cycle 285)
+12:14:50 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:15:20 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:15:50 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:16:20 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:16:51 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:17:21 [amoeba-bridge] sketch pulled (cycle 290)
+12:17:21 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:17:51 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:18:21 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:18:52 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:19:22 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:19:52 [amoeba-bridge] sketch pulled (cycle 295)
+12:19:52 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:20:23 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:20:53 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:21:23 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:21:53 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:22:24 [amoeba-bridge] sketch pulled (cycle 300)
+12:22:24 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:22:54 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:23:24 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:23:54 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:24:25 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:24:55 [amoeba-bridge] sketch pulled (cycle 305)
+12:24:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:25:25 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:25:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:26:26 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:26:56 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:27:26 [amoeba-bridge] sketch pulled (cycle 310)
+12:27:26 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:27:56 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:28:27 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:28:57 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:29:27 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:29:58 [amoeba-bridge] sketch pulled (cycle 315)
+12:29:58 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:30:28 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:30:58 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:31:28 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:31:59 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:32:29 [amoeba-bridge] sketch pulled (cycle 320)
+12:32:29 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:32:59 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:33:29 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:33:59 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:34:30 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:35:00 [amoeba-bridge] sketch pulled (cycle 325)
+12:35:00 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:35:30 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:36:00 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:36:31 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:37:01 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:37:31 [amoeba-bridge] sketch pulled (cycle 330)
+12:37:31 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:38:02 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:38:32 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:39:02 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:39:32 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:40:03 [amoeba-bridge] sketch pulled (cycle 335)
+12:40:03 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:40:33 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:41:03 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:41:33 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:42:04 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:42:34 [amoeba-bridge] sketch pulled (cycle 340)
+12:42:34 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:43:04 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:43:35 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:44:05 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:44:35 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:45:05 [amoeba-bridge] sketch pulled (cycle 345)
+12:45:05 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:45:36 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:46:06 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:46:36 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:47:06 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:47:37 [amoeba-bridge] sketch pulled (cycle 350)
+12:47:37 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:48:07 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:48:37 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:49:08 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:49:38 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:50:08 [amoeba-bridge] sketch pulled (cycle 355)
+12:50:08 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:50:38 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:51:09 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:51:39 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:52:09 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:52:40 [amoeba-bridge] sketch pulled (cycle 360)
+12:52:40 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:53:10 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:53:40 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:54:10 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+12:54:41 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:55:11 [amoeba-bridge] sketch pulled (cycle 365)
+12:55:11 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:55:41 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:56:11 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:56:42 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:57:12 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:57:42 [amoeba-bridge] sketch pulled (cycle 370)
+12:57:42 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:58:13 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:58:43 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:59:13 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+12:59:43 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:00:14 [amoeba-bridge] sketch pulled (cycle 375)
+13:00:14 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:00:44 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:01:14 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:01:44 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:02:15 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:02:45 [amoeba-bridge] sketch pulled (cycle 380)
+13:02:45 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:03:15 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:03:45 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:04:16 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:04:46 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:05:16 [amoeba-bridge] sketch pulled (cycle 385)
+13:05:16 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:05:47 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:06:17 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:06:47 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:07:17 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:07:47 [amoeba-bridge] sketch pulled (cycle 390)
+13:07:47 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:08:18 [amoeba-bridge] focus=NotificationShade rustdesk=true bat=100
+13:08:48 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CameraLauncher rustdesk=true bat=100
+13:09:18 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CameraLauncher rustdesk=true bat=100
+13:09:48 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CameraLauncher rustdesk=true bat=100
+13:10:19 [amoeba-bridge] sketch pulled (cycle 395)
+13:10:19 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CameraLauncher rustdesk=true bat=100
+13:10:49 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CameraLauncher rustdesk=true bat=100
+13:11:19 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CameraLauncher rustdesk=true bat=100
+13:11:49 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CameraLauncher rustdesk=true bat=100
+13:12:20 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CaptureActivity rustdesk=true bat=100
+13:12:50 [amoeba-bridge] sketch pulled (cycle 400)
+13:12:50 [amoeba-bridge] focus= rustdesk= bat=
+13:13:20 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CaptureActivity rustdesk=true bat=100
+13:13:50 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CaptureActivity rustdesk=true bat=100
+13:14:20 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CaptureActivity rustdesk=true bat=100
+13:14:51 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CaptureActivity rustdesk=true bat=100
+13:15:21 [amoeba-bridge] sketch pulled (cycle 405)
+13:15:21 [amoeba-bridge] focus=app.grapheneos.camera/app.grapheneos.camera.ui.activities.CaptureActivity rustdesk=true bat=100
+13:15:51 [amoeba-bridge] focus=com.termux/com.termux.filepicker.TermuxFileReceiverActivity rustdesk=true bat=100
+13:16:21 [amoeba-bridge] focus=com.termux/com.termux.filepicker.TermuxFileReceiverActivity rustdesk=true bat=100
+13:16:52 [amoeba-bridge] focus=  mCurrentFocus=null rustdesk=true bat=100
+13:17:22 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:17:52 [amoeba-bridge] sketch pulled (cycle 410)
+13:17:52 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:18:23 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:18:53 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:19:23 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:19:53 [amoeba-bridge] focus=com.android.wallpaper/com.android.wallpaper.picker.customization.ui.CustomizationPickerActivity rustdesk=true bat=100
+13:20:24 [amoeba-bridge] sketch pulled (cycle 415)
+13:20:24 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:20:54 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:21:25 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:21:55 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:22:25 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:22:55 [amoeba-bridge] sketch pulled (cycle 420)
+13:22:55 [amoeba-bridge] focus=ComponentSystemUIDialog rustdesk=true bat=100
+13:23:25 [amoeba-bridge] focus=ComponentSystemUIDialog rustdesk=true bat=100
+13:23:56 [amoeba-bridge] focus=ComponentSystemUIDialog rustdesk=true bat=100
+13:24:26 [amoeba-bridge] focus=ComponentSystemUIDialog rustdesk=true bat=100
+13:24:56 [amoeba-bridge] focus=com.termux/com.termux.filepicker.TermuxFileReceiverActivity rustdesk=true bat=100
+13:25:27 [amoeba-bridge] sketch pulled (cycle 425)
+13:25:27 [amoeba-bridge] focus=com.termux/com.termux.filepicker.TermuxFileReceiverActivity rustdesk=true bat=100
+13:25:57 [amoeba-bridge] focus=com.termux/com.termux.filepicker.TermuxFileReceiverActivity rustdesk=true bat=100
+13:26:27 [amoeba-bridge] focus=com.termux/com.termux.filepicker.TermuxFileReceiverActivity rustdesk=true bat=100
+13:26:57 [amoeba-bridge] focus=com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher rustdesk=true bat=100
+13:27:28 [amoeba-bridge] focus=com.android.music/com.android.music.AudioPreview rustdesk=true bat=100
+13:27:58 [amoeba-bridge] sketch pulled (cycle 430)
+13:27:58 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:28:28 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:28:58 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:29:29 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:29:59 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:30:29 [amoeba-bridge] sketch pulled (cycle 435)
+13:30:29 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:30:59 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:31:30 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:32:00 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:32:30 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:33:00 [amoeba-bridge] sketch pulled (cycle 440)
+13:33:00 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:33:31 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:34:01 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:34:31 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:35:01 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:35:32 [amoeba-bridge] sketch pulled (cycle 445)
+13:35:32 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:36:02 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:36:32 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:37:03 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:37:33 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:38:03 [amoeba-bridge] sketch pulled (cycle 450)
+13:38:03 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:38:34 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:39:04 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:39:34 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:40:04 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:40:35 [amoeba-bridge] sketch pulled (cycle 455)
+13:40:35 [amoeba-bridge] focus= rustdesk= bat=
+13:41:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:41:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:42:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:42:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:43:06 [amoeba-bridge] sketch pulled (cycle 460)
+13:43:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:43:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:44:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:44:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:45:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:45:37 [amoeba-bridge] sketch pulled (cycle 465)
+13:45:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:46:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:46:38 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:47:08 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:47:38 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:48:08 [amoeba-bridge] sketch pulled (cycle 470)
+13:48:08 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:48:39 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:49:09 [amoeba-bridge] focus= rustdesk= bat=
+13:49:39 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:50:10 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:50:40 [amoeba-bridge] sketch pulled (cycle 475)
+13:50:40 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:51:10 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:51:40 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:52:11 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:52:41 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:53:11 [amoeba-bridge] sketch pulled (cycle 480)
+13:53:11 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:53:41 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:54:12 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:54:42 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:55:12 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:55:42 [amoeba-bridge] sketch pulled (cycle 485)
+13:55:42 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:56:13 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:56:43 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:57:13 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:57:43 [amoeba-bridge] focus= rustdesk= bat=
+13:58:14 [amoeba-bridge] sketch pulled (cycle 490)
+13:58:14 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:58:44 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:59:14 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+13:59:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:00:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:00:45 [amoeba-bridge] sketch pulled (cycle 495)
+14:00:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:01:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:01:46 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:02:16 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:02:46 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:03:16 [amoeba-bridge] sketch pulled (cycle 500)
+14:03:16 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:03:47 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:04:17 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:04:47 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:05:17 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:05:48 [amoeba-bridge] sketch pulled (cycle 505)
+14:05:48 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:06:18 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:06:48 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:07:18 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:07:49 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:08:19 [amoeba-bridge] sketch pulled (cycle 510)
+14:08:19 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:08:49 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:09:19 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:09:50 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:10:20 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:10:50 [amoeba-bridge] sketch pulled (cycle 515)
+14:10:50 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:11:20 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:11:50 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:12:21 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:12:51 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:13:21 [amoeba-bridge] sketch pulled (cycle 520)
+14:13:21 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:13:51 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:14:22 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:14:52 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:15:22 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:15:52 [amoeba-bridge] sketch pulled (cycle 525)
+14:15:52 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:16:22 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:16:53 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:17:23 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=100
+14:17:53 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:18:23 [amoeba-bridge] sketch pulled (cycle 530)
+14:18:23 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:18:54 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:19:24 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:19:54 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:20:24 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:20:55 [amoeba-bridge] sketch pulled (cycle 535)
+14:20:55 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:21:25 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:21:55 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:22:25 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:22:55 [amoeba-bridge] focus= rustdesk= bat=
+14:23:25 [amoeba-bridge] sketch pulled (cycle 540)
+14:23:25 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:23:56 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:24:26 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:24:56 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:25:27 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:25:57 [amoeba-bridge] sketch pulled (cycle 545)
+14:25:57 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:26:27 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=99
+14:26:57 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:27:28 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:27:58 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:28:28 [amoeba-bridge] sketch pulled (cycle 550)
+14:28:28 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:28:59 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:29:29 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:29:59 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:30:29 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:31:00 [amoeba-bridge] sketch pulled (cycle 555)
+14:31:00 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:31:30 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:32:00 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:32:30 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:33:00 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:49:35 [amoeba-bridge] sketch pulled (cycle 560)
+14:49:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:50:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:50:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:51:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:51:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:52:05 [amoeba-bridge] sketch pulled (cycle 565)
+14:52:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:52:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:53:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:53:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:54:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:54:35 [amoeba-bridge] sketch pulled (cycle 570)
+14:54:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:55:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:55:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:56:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:56:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:57:05 [amoeba-bridge] sketch pulled (cycle 575)
+14:57:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:57:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:58:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:58:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:59:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+14:59:35 [amoeba-bridge] sketch pulled (cycle 580)
+14:59:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:00:05 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:00:35 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:01:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:01:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:02:06 [amoeba-bridge] sketch pulled (cycle 585)
+15:02:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:02:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:03:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:03:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:04:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:04:36 [amoeba-bridge] sketch pulled (cycle 590)
+15:04:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:05:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:05:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:06:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:06:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:07:06 [amoeba-bridge] sketch pulled (cycle 595)
+15:07:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:07:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:08:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:08:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:09:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:09:36 [amoeba-bridge] sketch pulled (cycle 600)
+15:09:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:10:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:10:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+rmux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:10:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+
+=== Wave 236: sporeGate Amalgam Stabilization (2026-11-14) ===
+- sporeGate Pop!_OS + biomeOS FUSION verified
+  14/14 primal services boot-enabled and running
+  16 primal binaries in /usr/local/bin/
+  membrane-cascade.timer active (15min cycle, 14/17 sync)
+  heart-pull cron every 2 min
+- RustDesk amoeba key mismatch FIXED
+  Key 6oVQBFy... added to northGate + sporeGate configs
+  RustDesk split into 3 clean services (service/server/password)
+- sporeGate bugs eaten:
+  AppArmor masked, Pop System Updater disabled
+  membrane-cascade tolerates partial failures
+  Omada controller KILLED (reclaimed 3.2GB RAM: 5.0→1.8GB used)
+  461 security updates applying
+- Pixel (grapheneGate) bugs eaten:
+  MediaProvider crash cleared, WifiHAL binder starvation fixed
+  Termux mirror rewritten (packages.termux.dev)
+  Wallet lockscreen disabled, background WiFi scan off
+  llama-server alive on :8082 (qwen2.5-0.5b, Vulkan)
+  5 models present, injection from sporeGate ADB working
+- Breathing paths verified:
+  LAN: eastGate→sporeGate 0.12ms, eastGate→northGate 0.25ms
+  WAN: primals.eco serving
+  Tor: .onion hidden service LIVE
+  RSS: feed.xml serving
+  Amoeba: hbbs/hbbr relay active, all ports open

@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-11-14T19:15:48Z",
+  "timestamp": "2026-11-14T19:32:41Z",
   "cycle_s": 30,
   "sense": "outer_ear",
-  "battery": {"pct": 100, "charging": "Discharging", "temp_dC": 247},
+  "battery": {"pct": 98, "charging": "Discharging", "temp_dC": 250},
   "proximity": {
     "zone": "router_room",
     "rssi_aperture": "-25",

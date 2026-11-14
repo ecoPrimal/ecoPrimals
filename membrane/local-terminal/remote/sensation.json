@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-11-14T14:16:16-05:00",
+  "timestamp": "2026-11-14T15:10:36-05:00",
   "sensation": "FULL",
   "outer_ear": {
     "source": "Pixel (grapheneGate)",
-    "zone": "router_room",
-    "rssi_aperture": -25,
-    "battery_pct": 100,
-    "charging": "Discharging",
+    "zone": "unknown",
+    "rssi_aperture": -127,
+    "battery_pct": 0,
+    "charging": "unknown",
     "nearby_networks": 0,
     "note": "WiFi RSSI proximity: -20=touching, -50=same room, -70=house, -85=yard"
   },
   "inner_ear": {
     "source": "Flint (GL-MT6000 router)",
-    "dns_queries": 242,
-    "dns_blocked": 74,
-    "block_rate_pct": 30.6,
-    "wan_leaks": 7,
+    "dns_queries": 224,
+    "dns_blocked": 64,
+    "block_rate_pct": 28.6,
+    "wan_leaks": 19,
     "note": "DNS signal intelligence from router query log"
   },
   "touch": {

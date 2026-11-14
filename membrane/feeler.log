@@ -109,3 +109,285 @@
 [2026-11-14T09:59:02-05:00] FEELER: Printer: idle | Pixel: 92% Discharging | Ollama: eG=0 nG=63 iG=1 gG=1
 [2026-11-14T10:01:02-05:00] FEELER: Starting feel cycle
 [2026-11-14T10:01:06-05:00] FEELER: Printer: idle | Pixel: 92% Discharging | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:03:06-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:03:11-05:00] FEELER: Printer: idle | Pixel: 92% Discharging | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:05:11-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:05:15-05:00] FEELER: Printer: idle | Pixel: 91% Discharging | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:07:15-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:07:20-05:00] FEELER: Printer: idle | Pixel: 91% Discharging | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:09:20-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:09:24-05:00] FEELER: Printer: idle | Pixel: 91% Discharging | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:11:24-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:11:28-05:00] FEELER: Printer: idle | Pixel: 90% Discharging | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:13:28-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:13:32-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:15:32-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:15:36-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:17:36-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:17:39-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:19:39-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:19:43-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:21:43-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:21:47-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:23:47-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:23:51-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:25:51-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:25:54-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:27:54-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:27:58-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:29:58-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:30:01-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:32:01-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:32:05-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:34:05-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:34:08-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:36:08-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:36:12-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:38:12-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:38:16-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:40:16-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:40:19-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:42:19-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:42:23-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:44:23-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:44:27-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:46:27-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:46:30-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:48:30-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:48:34-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:50:34-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:50:37-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:52:37-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:52:41-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:54:41-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:54:45-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:56:45-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:56:48-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T10:58:48-05:00] FEELER: Starting feel cycle
+[2026-11-14T10:58:52-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:00:52-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:00:55-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:02:55-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:02:59-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:04:59-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:05:02-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:07:02-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:07:06-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:09:06-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:09:10-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:11:10-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:11:13-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:13:13-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:13:17-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:15:17-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:15:19-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:17:19-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:17:23-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:19:23-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:19:27-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:21:27-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:21:30-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:23:30-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:23:34-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:25:34-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:25:38-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:27:38-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:27:41-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:29:41-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:29:45-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:31:45-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:31:49-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:33:49-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:33:52-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:35:52-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:35:56-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:37:56-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:38:00-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:40:00-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:40:03-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:42:03-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:42:07-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:44:07-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:44:11-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:46:11-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:46:15-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:48:15-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:48:18-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:50:18-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:50:22-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:52:22-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:52:26-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:54:26-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:54:30-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=1 gG=1
+[2026-11-14T11:56:30-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:56:33-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=3 gG=1
+[2026-11-14T11:58:33-05:00] FEELER: Starting feel cycle
+[2026-11-14T11:58:37-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:00:37-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:00:41-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:02:41-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:02:44-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:04:44-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:04:48-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:06:48-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:06:51-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:08:51-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:08:55-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:10:55-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:10:59-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:12:59-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:13:02-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:15:02-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:15:06-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:17:06-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:17:09-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:19:09-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:19:13-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:21:13-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:21:17-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:23:17-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:23:20-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:25:20-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:25:24-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:27:24-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:27:29-05:00] FEELER: Printer: processing | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:29:29-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:29:33-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=63 iG=6 gG=1
+[2026-11-14T12:31:33-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:31:38-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:33:38-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:33:44-05:00] FEELER: Printer: processing | Pixel: 0% unknown | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:35:44-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:35:50-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:37:50-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:37:57-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:39:57-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:40:03-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:42:03-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:42:10-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:44:10-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:44:16-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:46:16-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:46:22-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:48:22-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:48:29-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:50:29-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:50:35-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:52:35-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:52:41-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:54:41-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:54:48-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:56:48-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:56:54-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=1
+[2026-11-14T12:58:54-05:00] FEELER: Starting feel cycle
+[2026-11-14T12:59:03-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:01:03-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:01:11-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:03:11-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:03:19-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:05:19-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:05:28-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:07:28-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:07:36-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:09:36-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:09:44-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:11:44-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:11:52-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:13:52-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:14:00-05:00] FEELER: Printer: idle | Pixel: 100% Charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:16:00-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:16:08-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:18:08-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:18:17-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:20:17-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:20:26-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:22:26-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:22:34-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:24:34-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:24:43-05:00] FEELER: Printer: idle | Pixel: 100% Charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:26:43-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:26:51-05:00] FEELER: Printer: idle | Pixel: 100% Charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:28:51-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:28:59-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:30:59-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:31:08-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:33:08-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:33:16-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:35:16-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:35:25-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:37:25-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:37:34-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:39:34-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:39:42-05:00] FEELER: Printer: idle | Pixel: 100% Charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:41:42-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:41:51-05:00] FEELER: Printer: idle | Pixel: 100% Not charging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:43:51-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:43:59-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:45:59-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:46:08-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:48:08-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:48:16-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:50:16-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:50:24-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:52:24-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:52:33-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:54:33-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:54:41-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:56:41-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:56:50-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T13:58:50-05:00] FEELER: Starting feel cycle
+[2026-11-14T13:58:58-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:00:58-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:01:07-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:03:07-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:03:15-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:05:15-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:05:24-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:07:24-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:07:33-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:09:33-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:09:41-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:11:41-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:11:49-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:13:49-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:13:57-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:15:57-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:16:06-05:00] FEELER: Printer: idle | Pixel: 100% Discharging | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T14:18:06-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:18:12-05:00] FEELER: Printer: idle | Pixel: 99% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:20:12-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:20:19-05:00] FEELER: Printer: processing | Pixel: 99% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:22:19-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:22:26-05:00] FEELER: Printer: idle | Pixel: 99% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:24:26-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:24:32-05:00] FEELER: Printer: idle | Pixel: 99% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:26:32-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:26:38-05:00] FEELER: Printer: idle | Pixel: 98% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:28:38-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:28:45-05:00] FEELER: Printer: idle | Pixel: 98% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:30:45-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:30:51-05:00] FEELER: Printer: idle | Pixel: 98% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:32:51-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:32:58-05:00] FEELER: Printer: idle | Pixel: 98% Discharging | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:34:58-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:49:37-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:51:37-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:51:42-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:53:42-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:53:48-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:55:48-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:55:55-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T14:57:56-05:00] FEELER: Starting feel cycle
+[2026-11-14T14:58:01-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=12 iG=6 gG=0
+[2026-11-14T15:00:01-05:00] FEELER: Starting feel cycle
+[2026-11-14T15:00:07-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T15:02:07-05:00] FEELER: Starting feel cycle
+[2026-11-14T15:02:15-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T15:04:15-05:00] FEELER: Starting feel cycle
+[2026-11-14T15:04:23-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T15:06:23-05:00] FEELER: Starting feel cycle
+[2026-11-14T15:06:30-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T15:08:30-05:00] FEELER: Starting feel cycle
+[2026-11-14T15:08:37-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=0 iG=6 gG=0
+[2026-11-14T15:10:37-05:00] FEELER: Starting feel cycle
+[2026-11-14T15:10:43-05:00] FEELER: Printer: idle | Pixel: 0% unknown | Ollama: eG=0 nG=12 iG=6 gG=0

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T14:15:57-05:00",
+  "timestamp": "2026-11-14T15:10:37-05:00",
   "cycle_seconds": 120,
   "printer": {
     "ip": "192.168.4.200",
@@ -18,12 +18,12 @@
     },
     "sporeGate": {
       "ip": "192.168.4.3",
-      "uptime": "up 6 hours, 44 minutes",
+      "uptime": "up 12 minutes",
       "boot_chain": "xorg-headless + rustdesk + ion-channel + gdm"
     },
     "northGate": {
       "ip": "192.168.4.147",
-      "ollama_models": 0,
+      "ollama_models": 12,
       "ssh": "no (pony express only)"
     },
     "ironGate": {
@@ -38,10 +38,10 @@
     }
   },
   "pixel": {
-    "battery_pct": 100,
+    "battery_pct": 0,
     "temp_mC": 0,
-    "charging": "Discharging",
-    "biomeOS_processes": 13
+    "charging": "unknown",
+    "biomeOS_processes": 0
   },
   "unknown_devices": {
     "210": {"ip": "192.168.4.210", "ssh_banner": "SSH-2.0-OpenSSH_for_Windows_9.5", "identity": "Windows_OpenSSH_9.5"},
