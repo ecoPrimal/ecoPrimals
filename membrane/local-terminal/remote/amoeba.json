@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T18:53:58+00:00",
+  "timestamp": "2026-11-14T19:03:05+00:00",
   "sense": "amoeba",
   "cycle_s": 30,
   "retina": {"focus": "com.termux/com.termux.app.TermuxActivity", "app": "com.termux/.app.TermuxActivity", "screen": "Awake", "brightness": 60, "rotation": "0"},
@@ -8,7 +8,7 @@
   "membrane": {
     "battery_pct": 100,
     "temp_c": 24.8,
-    "mem_avail_kb": 1360644,
+    "mem_avail_kb": 1319432,
     "mem_total_kb": 7505204,
     "display": "1080x2400",
     "refresh_hz": 120

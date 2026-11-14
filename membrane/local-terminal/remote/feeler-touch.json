@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T13:52:24-05:00",
+  "timestamp": "2026-11-14T14:03:07-05:00",
   "cycle_seconds": 120,
   "printer": {
     "ip": "192.168.4.200",
@@ -18,7 +18,7 @@
     },
     "sporeGate": {
       "ip": "192.168.4.3",
-      "uptime": "up 6 hours, 20 minutes",
+      "uptime": "up 6 hours, 31 minutes",
       "boot_chain": "xorg-headless + rustdesk + ion-channel + gdm"
     },
     "northGate": {
