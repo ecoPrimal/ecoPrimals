@@ -721,32 +721,163 @@
 15:09:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
 15:10:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
 15:10:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-rmux/com.termux.app.TermuxActivity rustdesk=true bat=98
-15:10:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-
-=== Wave 236: sporeGate Amalgam Stabilization (2026-11-14) ===
-- sporeGate Pop!_OS + biomeOS FUSION verified
-  14/14 primal services boot-enabled and running
-  16 primal binaries in /usr/local/bin/
-  membrane-cascade.timer active (15min cycle, 14/17 sync)
-  heart-pull cron every 2 min
-- RustDesk amoeba key mismatch FIXED
-  Key 6oVQBFy... added to northGate + sporeGate configs
-  RustDesk split into 3 clean services (service/server/password)
-- sporeGate bugs eaten:
-  AppArmor masked, Pop System Updater disabled
-  membrane-cascade tolerates partial failures
-  Omada controller KILLED (reclaimed 3.2GB RAM: 5.0→1.8GB used)
-  461 security updates applying
-- Pixel (grapheneGate) bugs eaten:
-  MediaProvider crash cleared, WifiHAL binder starvation fixed
-  Termux mirror rewritten (packages.termux.dev)
-  Wallet lockscreen disabled, background WiFi scan off
-  llama-server alive on :8082 (qwen2.5-0.5b, Vulkan)
-  5 models present, injection from sporeGate ADB working
-- Breathing paths verified:
-  LAN: eastGate→sporeGate 0.12ms, eastGate→northGate 0.25ms
-  WAN: primals.eco serving
-  Tor: .onion hidden service LIVE
-  RSS: feed.xml serving
-  Amoeba: hbbs/hbbr relay active, all ports open
+15:11:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:11:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:12:06 [amoeba-bridge] sketch pulled (cycle 605)
+15:12:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:12:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:13:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:13:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:14:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:14:36 [amoeba-bridge] sketch pulled (cycle 610)
+15:14:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:15:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:15:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:16:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:16:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:17:06 [amoeba-bridge] sketch pulled (cycle 615)
+15:17:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:17:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:18:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:18:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:19:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:19:36 [amoeba-bridge] sketch pulled (cycle 620)
+15:19:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:20:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:20:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:21:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:21:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:22:06 [amoeba-bridge] sketch pulled (cycle 625)
+15:22:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:22:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:23:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:23:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:24:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:24:36 [amoeba-bridge] sketch pulled (cycle 630)
+15:24:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:25:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:25:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:26:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:26:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:27:06 [amoeba-bridge] sketch pulled (cycle 635)
+15:27:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:27:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:28:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:28:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:29:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:29:36 [amoeba-bridge] sketch pulled (cycle 640)
+15:29:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:30:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:30:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:31:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:31:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:32:06 [amoeba-bridge] sketch pulled (cycle 645)
+15:32:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:32:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:33:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:33:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:34:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:34:36 [amoeba-bridge] sketch pulled (cycle 650)
+15:34:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:35:06 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:35:36 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:36:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:36:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:37:07 [amoeba-bridge] sketch pulled (cycle 655)
+15:37:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:37:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:38:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:38:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:39:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:39:37 [amoeba-bridge] sketch pulled (cycle 660)
+15:39:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:40:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:40:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:41:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:41:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:42:07 [amoeba-bridge] sketch pulled (cycle 665)
+15:42:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:42:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:43:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:43:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:44:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:44:37 [amoeba-bridge] sketch pulled (cycle 670)
+15:44:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:45:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:45:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:46:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:46:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:47:07 [amoeba-bridge] sketch pulled (cycle 675)
+15:47:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:47:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:48:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:48:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:49:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:49:37 [amoeba-bridge] sketch pulled (cycle 680)
+15:49:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:50:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:50:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:51:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:51:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:52:07 [amoeba-bridge] sketch pulled (cycle 685)
+15:52:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:52:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:53:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:53:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:54:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:54:37 [amoeba-bridge] sketch pulled (cycle 690)
+15:54:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:55:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:55:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:56:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:56:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:57:07 [amoeba-bridge] sketch pulled (cycle 695)
+15:57:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:57:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:58:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:58:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:59:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+15:59:37 [amoeba-bridge] sketch pulled (cycle 700)
+15:59:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:00:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:00:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:01:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:01:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:02:07 [amoeba-bridge] sketch pulled (cycle 705)
+16:02:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:02:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:03:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:03:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:04:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:04:37 [amoeba-bridge] sketch pulled (cycle 710)
+16:04:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:05:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:05:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:06:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:06:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:07:07 [amoeba-bridge] sketch pulled (cycle 715)
+16:07:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:07:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:08:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:08:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:09:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:09:37 [amoeba-bridge] sketch pulled (cycle 720)
+16:09:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:10:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:10:38 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+-bridge] sketch pulled (cycle 710)
+16:04:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:05:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:05:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:06:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:06:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:07:07 [amoeba-bridge] sketch pulled (cycle 715)
+16:07:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:07:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:08:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:08:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:09:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:09:37 [amoeba-bridge] sketch pulled (cycle 720)
+16:09:37 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:10:07 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+16:10:38 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
