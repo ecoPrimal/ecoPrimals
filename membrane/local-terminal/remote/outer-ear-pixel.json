@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-11-14T14:42:01Z",
+  "timestamp": "2026-11-14T14:51:15Z",
   "cycle_s": 30,
   "sense": "outer_ear",
-  "battery": {"pct": 94, "charging": "Discharging", "temp_dC": 243},
+  "battery": {"pct": 93, "charging": "Discharging", "temp_dC": 243},
   "proximity": {
-    "zone": "same_room",
-    "rssi_aperture": "-35",
-    "rssi_blackmesa": "-33",
+    "zone": "router_room",
+    "rssi_aperture": "-25",
+    "rssi_blackmesa": "-28",
     "rssi_gaia": "-127",
     "visible_networks": 0,
-    "nearby": [{"ssid":"","rssi":-64,"freq":5180},{"ssid":"","rssi":-93,"freq":2422},{"ssid":"","rssi":-64,"freq":5765},{"ssid":"Mesa","rssi":-33,"freq":5280},{"ssid":"","rssi":-48,"freq":2462},{"ssid":"","rssi":-64,"freq":5765},{"ssid":"(65:41:E6)","rssi":-89,"freq":2412},{"ssid":"","rssi":-35,"freq":2417},{"ssid":"","rssi":-32,"freq":5280},{"ssid":"Science","rssi":-35,"freq":2417},{"ssid":"","rssi":-83,"freq":2437},{"ssid":"","rssi":-93,"freq":2422}]
+    "nearby": [{"ssid":"","rssi":-59,"freq":5765},{"ssid":"","rssi":-59,"freq":5765},{"ssid":"","rssi":-25,"freq":2417},{"ssid":"","rssi":-27,"freq":5280},{"ssid":"Science","rssi":-25,"freq":2417},{"ssid":"","rssi":-90,"freq":2457},{"ssid":"","rssi":-83,"freq":2437},{"ssid":"","rssi":-63,"freq":5180},{"ssid":"","rssi":-93,"freq":2422},{"ssid":"Mesa","rssi":-28,"freq":5280},{"ssid":"","rssi":-88,"freq":2427},{"ssid":"","rssi":-36,"freq":2462},{"ssid":"","rssi":-36,"freq":2462},{"ssid":"","rssi":-81,"freq":2422},{"ssid":"","rssi":-87,"freq":2457}]
   },
   "wifi": {
     "connected_ssid": "ce:ef:ef:30:b5:f3",
