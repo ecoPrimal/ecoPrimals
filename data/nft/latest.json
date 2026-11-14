@@ -1,0 +1,14 @@
+{
+  "id": 5,
+  "hash": "0b8c02385a6d5fe4005b27b34f99d16e16071e07a277f23133f58818dee15ab9",
+  "ts": 1794607599.416977,
+  "ts_client": 1794607599416.977,
+  "ceremony": "surgery_test",
+  "classification": "human",
+  "preview": "00000000",
+  "angle": "gaia:orthogonal:0b8c02385a6d5fe4",
+  "magnitude": 1.0,
+  "mint": "northGate",
+  "organism": "ecoPrimals",
+  "lub": "DUB"
+}
