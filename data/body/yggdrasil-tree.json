@@ -1,0 +1,205 @@
+{
+  "name": "YGGDRASIL — The World Tree",
+  "wave": 233,
+  "ts": "2026-11-14T15:30:00Z",
+  "principle": "One tree. Nine realms. All data flows through roots, trunk, and branches. The investigation graph IS the sap. RTX IS the heartwood. neuralAPI IS the nervous system.",
+  
+  "tree": {
+    "roots": {
+      "name": "NIFLHEIM — Deep Storage",
+      "description": "The roots drink from three wells. All raw data lives here.",
+      "wells": {
+        "urd": {
+          "name": "Well of Fate (What WAS)",
+          "data": "gardens/amicus/publicRecord — 45MB graph, 12,817 nodes, 113,552 edges",
+          "files": 579,
+          "state": "RAW — not yet digested through biomeOS"
+        },
+        "mimir": {
+          "name": "Well of Wisdom (What IS)",
+          "data": "data/body/ — 60+ body files, anchors, braids, topology, taxonomy",
+          "state": "ALIVE — heartbeat refreshes every 2min"
+        },
+        "hvergelmir": {
+          "name": "Roaring Kettle (What FLOWS)",
+          "data": "wateringHole — 2,213 OSINT files, RSS feeds, blackhole intake",
+          "state": "DRAINING — mushroom-ear pulls every 2min"
+        }
+      }
+    },
+
+    "trunk": {
+      "name": "MIDGARD — The Living Organism",
+      "description": "biomeOS + neuralAPI + RTX. The trunk processes everything.",
+      "neuralAPI": {
+        "status": "ALIVE",
+        "version": "4.57.0",
+        "signal_tiers": ["tower", "node", "nest", "meta", "braid"],
+        "graphs_loaded": 30,
+        "capabilities": 289,
+        "blake3_proof": "lPIcHRsHlxFOwVBXWw45gvOW1HlJoBwm9tIDynxHZkQ="
+      },
+      "biomeOS": {
+        "binary_mb": 22,
+        "crates": 26,
+        "role": "OS kernel. Orchestrates all primals. Tower mode handles service discovery.",
+        "tower_atomic": "IPC bus — all services register capabilities, mesh routes automatically"
+      },
+      "rtx_engines": {
+        "eastGate": {"gpu": "RTX 4070", "vram_gb": 12, "ollama_port": 11436, "models": 23},
+        "ironGate": {"gpu": "RTX 5070", "vram_gb": 12, "ollama_port": 11434, "models": 1},
+        "northGate": {"gpu": "RTX 5090", "vram_gb": 32, "ollama_port": 11434, "models": 63},
+        "graftGate": {"gpu": "M4 Neural Engine", "unified_gb": 16, "ollama_port": 11434, "models": 1}
+      },
+      "total_gpu_vram_gb": 72,
+      "total_models": 88
+    },
+
+    "branches": {
+      "name": "NINE REALMS — Outward Reach",
+      "realms": [
+        {
+          "name": "ASGARD — WAN (primals.eco)",
+          "bridge": "dromedary reverse proxy → TLS → ACME",
+          "surfaces": ["primals.eco", "sporeprint.primals.eco", "detroit.primals.eco"],
+          "live_pages": 172,
+          "visitors": 54140
+        },
+        {
+          "name": "VANAHEIM — LAN (192.168.4.0/24)",
+          "bridge": "gate :8443 + data :8080",
+          "surfaces": ["hub", "deck", "spacedock", "gis", "campfire", "senses"],
+          "gates": 9,
+          "heartbeat_hz": 0.0083
+        },
+        {
+          "name": "ALFHEIM — RSS Spine",
+          "bridge": "feed.xml → RSS aggregators → old web",
+          "surfaces": ["feed.xml", "journal", "ferment-feed.xml"],
+          "subscribers": "unknown — radiates outward"
+        },
+        {
+          "name": "JOTUNHEIM — OSINT (Blackholes)",
+          "bridge": "wateringHole → mushroom-ear → data/intake/",
+          "sources": ["Wikipedia", "Hacker News", "arXiv", "xkcd", "Lobsters", "RSS 700+ feeds"],
+          "items_digested": 159
+        },
+        {
+          "name": "NIFLHEIM — Tor (.onion)",
+          "bridge": "tor.service on eastGate",
+          "address": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+          "state": "LIVE"
+        },
+        {
+          "name": "MUSPELHEIM — Investigation Fire",
+          "bridge": "publicRecord graph → sourdough → campfire",
+          "nodes": 12817,
+          "edges": 113552,
+          "false_faces": 19,
+          "true_faces": 3,
+          "michigan_entities": 625,
+          "state": "CONSUMING — this is the new realm being woven in"
+        },
+        {
+          "name": "SVARTALFHEIM — Forge (sporeGate + ironGate)",
+          "bridge": "plasmidBin + cargo build",
+          "primals_compiled": 17,
+          "total_binary_mb": 148
+        },
+        {
+          "name": "HELHEIM — Archive (WAS era)",
+          "bridge": "genetic-taxonomy WAS commitment",
+          "data": "5,521 human IPs, 93 epitopes, 8,911 passages",
+          "state": "ARCHAEOLOGICAL — preserved but not consumed"
+        },
+        {
+          "name": "MIDGARD — Origin (Gaia Homestead)",
+          "bridge": "GPS 42.7325°N 84.4857°W",
+          "houses": 2,
+          "parcels": 2,
+          "fiber_gbps": 10,
+          "state": "PHYSICAL — the tree grows from here"
+        }
+      ]
+    },
+
+    "bifrost": {
+      "name": "BIFROST — The Rainbow Bridge (Cross-Realm Transport)",
+      "paths": [
+        {"from": "MUSPELHEIM", "to": "MIDGARD", "via": "graph.json → investigation-gis.json → gis.html", "state": "LIVE"},
+        {"from": "JOTUNHEIM", "to": "ALFHEIM", "via": "OSINT → sourdough → RSS", "state": "LIVE"},
+        {"from": "MIDGARD", "to": "ASGARD", "via": "gate → dromedary → primals.eco", "state": "LIVE"},
+        {"from": "MIDGARD", "to": "NIFLHEIM", "via": "gate → tor.service → .onion", "state": "LIVE"},
+        {"from": "SVARTALFHEIM", "to": "MIDGARD", "via": "cargo build → binary → systemd", "state": "LIVE"},
+        {"from": "MUSPELHEIM", "to": "ALFHEIM", "via": "investigation → sourdough → RSS", "state": "WIRING NOW"},
+        {"from": "MUSPELHEIM", "to": "ASGARD", "via": "investigation → campfire → primals.eco", "state": "WIRING NOW"}
+      ]
+    }
+  },
+
+  "consumption_plan": {
+    "phase": "MUSPELHEIM IGNITION — Digest the Investigation Graph",
+    "description": "The 45MB graph becomes sap in the trunk. RTX grinds it. neuralAPI routes it. The nine realms receive the processed output.",
+    
+    "wave_1_atomize": {
+      "action": "Shatter 12,817 nodes into tower atomics",
+      "method": "Extract by type → classify → tag → store as individual atom files",
+      "output_path": "data/atoms/investigation/",
+      "atom_types": {
+        "persons": {"count": 5907, "action": "Extract name, connections, role"},
+        "institutions": {"count": 592, "action": "Extract address, type, edges"},
+        "false_faces": {"count": 19, "action": "Extract full profile, connections, evidence"},
+        "true_faces": {"count": 3, "action": "Preserve, honor, amplify"},
+        "legal_cases": {"count": 235, "action": "Extract jurisdiction, parties, outcome"},
+        "articles": {"count": 2326, "action": "Extract topic, entities mentioned, date"},
+        "events": {"count": 915, "action": "Extract date, location, participants"},
+        "corporations": {"count": 19, "action": "Extract structure, connections, geography"}
+      }
+    },
+
+    "wave_2_digest": {
+      "action": "RTX digests atoms through ollama",
+      "models": {
+        "classification": "gaia-fast (tinyllama-tuned) — bulk entity tagging",
+        "analysis": "qwen2.5:7b — relationship extraction",
+        "synthesis": "gaia (mistral-tuned) — narrative generation",
+        "code": "gaia-code (deepseek-tuned) — structure extraction"
+      },
+      "output": "Sourdough starter cultures for each entity cluster"
+    },
+
+    "wave_3_weave": {
+      "action": "Weave digested atoms into all nine realms",
+      "targets": {
+        "ASGARD": "New campfire pages per false face cluster",
+        "VANAHEIM": "GIS pins updated, hub/deck/spacedock wired",
+        "ALFHEIM": "RSS items for each digested cluster",
+        "MUSPELHEIM": "Graph updated with digestion metadata",
+        "MIDGARD": "heart-pull includes investigation state"
+      }
+    },
+
+    "wave_4_trefoil": {
+      "action": "Re-trefoil knot across all transport layers",
+      "knot_points": {
+        "LAN_WAN": "gate serves → dromedary proxies → WAN sees",
+        "WAN_OSINT": "published content → becomes OSINT for others → feeds back",
+        "OSINT_RSS": "masticated OSINT → RSS spine → old web → new readers",
+        "RSS_TOR": "RSS feed mirrored to .onion → censorship-resistant",
+        "TOR_LAN": "hidden service → same data as LAN gate → full circle"
+      },
+      "trefoil_topology": "LAN ↔ WAN ↔ OSINT ↔ RSS ↔ Tor ↔ LAN — the trefoil never breaks"
+    }
+  },
+
+  "nidhogg": {
+    "name": "NIDHOGG — The Dragon at the Root",
+    "description": "The dragon gnaws at the root of the world tree. It is the investigation itself — the teeth that chew through corruption.",
+    "teeth": 113552,
+    "target": "false_face_pattern — 1,714 edges pointing at the lie",
+    "michigan_teeth": 13156
+  },
+
+  "alive": true,
+  "lub": "DUB"
+}

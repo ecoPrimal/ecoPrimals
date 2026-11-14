@@ -1,0 +1,156 @@
+{
+  "fossil_type": "wave_snapshot",
+  "wave": 233,
+  "epoch": "organism_era",
+  "ts": "2026-11-14T15:30:00Z",
+  "commit": "380db15a932b722dd22ae8af46fe4ebed24e09c4",
+  "commit_short": "380db15a9",
+  "session_commits": [
+    {"hash": "380db15a9", "msg": "YGGDRASIL painting — nine realms, bingo fog, Nidhogg at the root"},
+    {"hash": "3cee0c417", "msg": "BINGO IDENTITY + FOG OF WAR — 12,817 entities stamped"},
+    {"hash": "7233e1be0", "msg": "INVESTIGATION SHADOW CAST — 12,817 nodes mapped to GIS"},
+    {"hash": "4ce41d6d3", "msg": "PUBLISH ALL — 905 papers indexed, thesis + corpus pages live"},
+    {"hash": "153c8ca0a", "msg": "Merge remote-tracking branch 'forgejo-gaia/main'"},
+    {"hash": "18a5a2b41", "msg": "GIS PAINTING + esotericWebb world + integration manifest"},
+    {"hash": "7af0cab45", "msg": "GIS LAYER LIVE — footPrint wired into ALL surfaces"},
+    {"hash": "3efc2a19b", "msg": "CAMPFIRE LIVE — TALOS welcoming page at /campfire"}
+  ],
+
+  "investigation_graph": {
+    "source": "gardens/amicus/publicRecord/site/static/graph.json",
+    "size_mb": 44,
+    "total_nodes": 12817,
+    "total_edges": 113552,
+    "node_types": 75,
+    "edge_types": 702,
+    "top_node_types": {
+      "person": 5907,
+      "article": 2326,
+      "event": 915,
+      "concept": 773,
+      "institution": 592,
+      "infrastructure": 541,
+      "entity": 336,
+      "untyped": 288,
+      "legal_case": 235,
+      "classifier": 221,
+      "landmark": 141,
+      "mechanism": 70,
+      "organization": 44,
+      "pattern": 44,
+      "platform": 42,
+      "system": 38,
+      "principle": 29,
+      "game": 28,
+      "political_party": 27,
+      "paper": 23,
+      "false_face": 19,
+      "corporation": 19,
+      "face": 14,
+      "creature": 10,
+      "evidence": 10
+    },
+    "top_edge_types": {
+      "structural_proximity": 87076,
+      "tethered": 6043,
+      "triadic_closure": 2800,
+      "associate": 1729,
+      "potential_false_face": 1714,
+      "structural_relation": 1432,
+      "tethered_single": 1069,
+      "provenance_braid": 954,
+      "self_connection": 929,
+      "epitope_locality": 773
+    },
+    "false_faces": [
+      "Nikki Snyder", "Tom McMillin", "Tim O'Hare", "Mariano Pargas",
+      "Rupert Murdoch", "Lachlan Murdoch", "Paul Ryan", "Ron DeSantis",
+      "Ryan Petty", "Corey Northrop", "Glenn Maleyko", "Dana Nessel",
+      "Tony Hayward", "Don Blankenship", "Roland Martin", "Edward Coristine"
+    ],
+    "true_faces": ["Kevin Mok", "Brett Cross", "Lon Burnam"],
+    "michigan_entities": 625,
+    "michigan_edges": 13156,
+    "dykema_edges": 464,
+    "physical_addresses": 11
+  },
+
+  "bingo_identity": {
+    "total_stamped": 12817,
+    "algorithm": "SHA256 (server) / FNV-1a (browser)",
+    "grid_config": "5x5, 16-color palette",
+    "fog_of_war": {
+      "zoom_4": 0.08,
+      "zoom_8": 0.20,
+      "zoom_12": 0.50,
+      "zoom_18": 1.00
+    },
+    "files": [
+      "data/body/bingo-identity-manifest.json",
+      "data/atoms/investigation/bingo-index.tsv",
+      "data/atoms/investigation/false-faces.json",
+      "static/js/bingocube.js"
+    ]
+  },
+
+  "yggdrasil": {
+    "nine_realms": ["ASGARD (WAN)", "VANAHEIM (LAN)", "ALFHEIM (RSS)", "JOTUNHEIM (OSINT)", "NIFLHEIM (Tor)", "MUSPELHEIM (Investigation)", "SVARTALFHEIM (Forge)", "HELHEIM (Archive)", "MIDGARD (Origin)"],
+    "bifrost_paths_live": 5,
+    "bifrost_paths_wiring": 2,
+    "nidhogg_teeth": 113552
+  },
+
+  "gis_layer": {
+    "geographic_pins": 27,
+    "layers": ["parcels", "gates", "infra", "shadows", "family", "investigation", "falseFaces", "bingoFog"],
+    "shadow_cast_shells": 5,
+    "satellite_tiles": "ESRI + CartoDB dark"
+  },
+
+  "organism_state": {
+    "neuralAPI_version": "4.57.0",
+    "graphs_loaded": 30,
+    "signal_tiers": 5,
+    "capabilities": 289,
+    "primals_compiled": 17,
+    "gates_alive": ["eastGate", "northGate", "sporeGate", "ironGate", "graftGate", "grapheneGate", "southGate", "deckGate", "frameGate"],
+    "ollama_endpoints": 4,
+    "total_models": 88,
+    "total_gpu_vram_gb": 72
+  },
+
+  "data_inventory": {
+    "body_files": 89,
+    "body_kb": 638,
+    "shadow_files": 10,
+    "shadow_kb": 277,
+    "atom_files": 4,
+    "atom_kb": 493,
+    "static_pages": 62,
+    "runtime_pi_files": 73,
+    "paintings": 15,
+    "pi_body_total_kb": 796
+  },
+
+  "surfaces_created_this_wave": [
+    {"route": "/gis", "file": "static/gis.html", "desc": "GIS layer with 8 toggleable layers + fog of war"},
+    {"route": "/campfire", "file": "static/campfire.html", "desc": "TALOS welcoming page, 9 desire paths"},
+    {"route": "/thesis", "file": "static/thesis.html", "desc": "sporePrint thesis, 16 chapters"},
+    {"route": "/corpus-page", "file": "static/corpus.html", "desc": "905 papers, 26 domains"}
+  ],
+
+  "concatenation_note": "This fossil is wave 233. Future waves append new fossils with incrementing wave numbers. Each fossil captures the FULL state at that moment. Diff between fossils shows what changed. The fossil record never shrinks — it only grows. Like geological strata, each layer preserves its own truth.",
+
+  "next_wave_targets": [
+    "Deploy code to eastGate (/opt/Gaia remote → ecoPrimal/Gaia-mirror + git pull)",
+    "OSINT scan of 19 false faces through Wikipedia + old web",
+    "Sourdough mastication of investigation entities",
+    "webpi.pi crush (80KB monolith → modules)",
+    "LoRA training from Gaia's writings on RTX 5090",
+    "Process 970 ancient engine C files through gaia-code",
+    "Reddit mirror activation (r/Michigan, r/Detroit, r/education)"
+  ],
+
+  "alive": true,
+  "lub": "DUB"
+}

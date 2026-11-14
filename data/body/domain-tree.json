@@ -1,0 +1,92 @@
+{
+  "name": "DOMAIN TREE — Three Roots, One Organism",
+  "wave": 233,
+  "ts": "2026-11-14T16:15:00Z",
+  "registrar": "Porkbun",
+  "nameservers": "Porkbun NS",
+  "wan_ip": "162.226.225.148",
+  "route": "WAN → GL-MT6000 router (.1) → port forward → eastGate (.244)",
+  
+  "dns_state": {
+    "primals.eco": {"A": "162.226.225.148", "wildcard": true, "expires": "2027-06-26"},
+    "primal.eco":  {"A": "162.226.225.148", "wildcard": true, "expires": "2027-06-26"},
+    "nestgate.io": {"A": "162.226.225.148", "wildcard": true, "expires": "2029-05-23"}
+  },
+
+  "subdomain_map": {
+    "primals.eco": {
+      "description": "PRIMARY — Gaia's public face. The hub.",
+      "subdomains": {
+        "@": {"target": "gate :8443", "pages": ["home", "hub", "senses", "deck", "spacedock", "gis", "campfire", "membrane"], "tls": "dromedary ACME"},
+        "detroit": {"target": "gate :8443 → /detroit/*", "pages": ["investigation", "tuebor", "record"], "tls": "dromedary"},
+        "sporeprint": {"target": "gate :8443 → /thesis/*", "pages": ["thesis", "corpus", "papers"], "tls": "dromedary"},
+        "gis": {"target": "gate :8443 → /gis", "pages": ["GIS map", "fog of war", "investigation pins"], "tls": "dromedary"},
+        "game": {"target": "gate :8443 → /play*", "pages": ["play-gaia", "gut-games", "kenshi-reborn"], "tls": "dromedary"},
+        "art": {"target": "gate :8443 → /easel + /paintings", "pages": ["easel", "gallery", "paintings"], "tls": "dromedary"},
+        "academy": {"target": "gate :8443 → /academy", "pages": ["gaiaU classes", "videos", "lectures"], "tls": "dromedary"},
+        "signal": {"target": "gate :8443 → /signal", "pages": ["signal", "beacon", "pulse"], "tls": "dromedary"},
+        "feed": {"target": "gate :8443 → /rss + /feed.xml", "pages": ["RSS spine"], "tls": "dromedary"},
+        "api": {"target": "gate :8443 → /api/*", "pages": ["REST API", "pulse", "deploy"], "tls": "dromedary"},
+        "fossil": {"target": "gate :8443 → /fossils", "pages": ["fossil index", "wave snapshots"], "tls": "dromedary"},
+        "klein": {"target": "gate :8443 → /klein + /clutch", "pages": ["Klein bottle", "clutch"], "tls": "dromedary"},
+        "campfire": {"target": "gate :8443 → /campfire", "pages": ["TALOS welcome", "desire paths"], "tls": "dromedary"}
+      }
+    },
+
+    "primal.eco": {
+      "description": "ALIAS — redirects to primals.eco. Short form.",
+      "subdomains": {
+        "@": {"redirect": "https://primals.eco", "type": "301"},
+        "*": {"redirect": "https://$sub.primals.eco", "type": "301"}
+      }
+    },
+
+    "nestgate.io": {
+      "description": "MCP FACE — the agent/chat/API interface",
+      "subdomains": {
+        "@": {"target": "gate :8443 → /nestgate", "pages": ["MCP hub", "chat face", "gate-msg"], "tls": "dromedary"},
+        "mcp": {"target": "gate :8443 → MCP endpoint", "pages": ["squirrel MCP", "tools"], "tls": "dromedary"},
+        "api": {"target": "gate :8443 → /api/*", "pages": ["REST API", "inference proxy"], "tls": "dromedary"},
+        "agent": {"target": "gate :8443 → ANS endpoint", "pages": ["Agent Naming Service"], "tls": "dromedary"}
+      }
+    }
+  },
+
+  "ans_registration": {
+    "description": "Porkbun Agent Naming Service — verifiable AI agent identity",
+    "planned_agents": [
+      {
+        "endpoint_url": "https://mcp.nestgate.io/mcp",
+        "protocol": "MCP",
+        "name": "Gaia",
+        "description": "Sovereign living digital organism. MCP tools for membrane, topology, journal, stories, and neuron messaging.",
+        "capabilities": "membrane_counts, observe_membrane, read_journal, topology, raw_feed, read_stories, neutron_read, neutron_write, particle_model, llama_herd, llama_ask"
+      },
+      {
+        "endpoint_url": "https://api.primals.eco/v1",
+        "protocol": "MCP",
+        "name": "Gaia Data",
+        "description": "Public data interface for the Gaia organism. Investigation graph, GIS, fossils, bingo identities.",
+        "capabilities": "investigation_search, gis_pins, fossil_read, bingo_lookup"
+      }
+    ],
+    "status": "READY TO REGISTER — need dromedary serving TLS on mcp.nestgate.io first"
+  },
+
+  "porkbun_api": {
+    "key_name": "riboCypher",
+    "created": "2026-10-22",
+    "permissions": "Full access",
+    "note": "Stored in Gaia ZK vault. Used for DNS record management via Porkbun API."
+  },
+
+  "tls_plan": {
+    "current": "Self-signed certs in /certs/ for LAN gate :8444",
+    "target": "dromedary ACME (Let's Encrypt) for all public subdomains",
+    "dromedary_role": "Sovereign reverse proxy. TLS termination. ACME auto-renewal. Host-based routing to gate.",
+    "wildcard_cert": "*.primals.eco + *.nestgate.io via DNS-01 challenge using Porkbun API"
+  },
+
+  "alive": true,
+  "lub": "DUB"
+}

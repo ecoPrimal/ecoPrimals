@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T11:25:19-05:00",
+  "timestamp": "2026-11-14T11:25:49-05:00",
   "sensation": "FULL",
   "outer_ear": {
     "source": "Pixel (grapheneGate)",
@@ -12,10 +12,10 @@
   },
   "inner_ear": {
     "source": "Flint (GL-MT6000 router)",
-    "dns_queries": 202,
-    "dns_blocked": 58,
-    "block_rate_pct": 28.7,
-    "wan_leaks": 3,
+    "dns_queries": 221,
+    "dns_blocked": 56,
+    "block_rate_pct": 25.3,
+    "wan_leaks": 7,
     "note": "DNS signal intelligence from router query log"
   },
   "touch": {

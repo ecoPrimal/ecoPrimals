@@ -53,6 +53,12 @@ DESK_PAGES = {
     "/dykema": "dykema-pac-archive.html",
     # DIM 5 — ART (k=5, creation)
     "/paintings": "data/paintings/index.html", "/gallery": "data/paintings/index.html",
+    # DIM 6 — GIS + CAMPFIRE (k=6, geographic + welcoming)
+    "/gis": "gis.html", "/footprint-gis": "gis.html", "/homestead": "gis.html",
+    "/campfire": "campfire.html", "/welcome": "campfire.html", "/talos": "campfire.html",
+    # DIM 7 — PUBLISH ALL (k=7, the visible mass)
+    "/thesis": "thesis.html", "/sporeprint": "thesis.html",
+    "/corpus-page": "corpus.html",
 }
 
 # ═══ GUT DATA — tensor[5][path] → json ═══
@@ -106,6 +112,21 @@ GUT_DATA = {
     "/pi-ports": "data/gut/pi-imagination-engine.json",
     "/dreams": "data/gut/luna-dreams-wave222.json", "/luna-dreams": "data/gut/luna-dreams-wave222.json",
     "/shadow-cast": "data/gut/shadow-cast-traffic.json", "/traffic": "data/gut/shadow-cast-traffic.json",
+    "/shadowcast": "data/shadows/shadowcast-reality.json",
+    "/link-walk": "data/shadows/link-walk-reality.json",
+    "/family-geo": "data/body/family-geography.json",
+    # PUBLISH ALL — corpus + thesis + science + lab
+    "/corpus": "data/gut/whitepaper-index.json", "/corpus.json": "data/gut/whitepaper-index.json",
+    "/publish-manifest": "data/body/publish-all-manifest.json",
+    "/gis-integration": "data/body/gis-integration.json",
+    "/investigation-gis": "data/shadows/investigation-gis.json",
+    "/investigation-map": "data/shadows/investigation-gis.json",
+    "/bingo-identity": "data/body/bingo-identity-manifest.json",
+    "/bingo-index": "data/atoms/investigation/bingo-index.tsv",
+    "/yggdrasil": "data/body/yggdrasil-tree.json",
+    "/fossils": "data/fossils/index.json",
+    "/fossil-latest": "data/fossils/wave-233-fossil.json",
+    "/domain-tree": "data/body/domain-tree.json",
     # CROWD cluster (k-nearest: crowd, shadow-cast, pollination)
     "/crowd": "data/gut/crowd-trace-is-was-now.json",
     "/where-is-everybody": "data/gut/crowd-trace-is-was-now.json",
@@ -415,14 +436,23 @@ SEO_DISPATCH = {
 # But now it calls functions on access, never stale
 SEO_RESPONSES = SEO_DISPATCH
 
-# ═══ KNOWN GATES — tensor[body] — hyperlocal topology ═══
-KNOWN_GATES = {
-    "192.168.4.244": "eastGate", "192.168.4.103": "eastGate",
-    "192.168.4.3": "sporeGate", "192.168.4.147": "northGate",
-    "192.168.4.100": "blueGate", "192.168.4.107": "graftGate",
-    "192.168.4.148": "southGate", "192.168.4.237": "ironGate",
-    "192.168.4.249": "grapheneGate", "192.168.4.170": "grapheneGate", "127.0.0.1": "eastGate",
-}
+# ═══ KNOWN GATES — tensor[body] — CRUSHED from pi_ports.pi Round Table ═══
+try:
+    import sys as _sys, os as _os
+    _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__))))
+    from pi_ports import ROLE_MAP as _RM
+    KNOWN_GATES = {v: k for k, v in _RM.items() if k not in ("router","mikrotik","jetstream","epson","router2")}
+    KNOWN_GATES["127.0.0.1"] = "eastGate"
+    # eastGate secondary NIC
+    KNOWN_GATES[_RM.get("eastGate2", "192.168.4.103")] = "eastGate"
+except ImportError:
+    KNOWN_GATES = {
+        "192.168.4.244": "eastGate", "192.168.4.103": "eastGate",
+        "192.168.4.3": "sporeGate", "192.168.4.147": "northGate",
+        "192.168.4.100": "blueGate", "192.168.4.107": "graftGate",
+        "192.168.4.148": "southGate", "192.168.4.237": "ironGate",
+        "192.168.9.217": "grapheneGate", "127.0.0.1": "eastGate",
+    }
 
 SPORE_PREFIXES = (
     "/science/", "/architecture/", "/products/", "/getting-started/",

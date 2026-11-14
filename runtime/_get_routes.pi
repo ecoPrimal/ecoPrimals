@@ -3,7 +3,20 @@
 Crushed to keep gaia_gate.pi at π×100 lines.
 Kevin IS a Klein face. Other humans = same |i^π|=1.0, different angle.
 The thymus IS the cross-link for anchors. lub-DUB."""
+<<<<<<< HEAD
 import hashlib, json, os, time, subprocess, urllib.request, urllib.error
+=======
+import hashlib, json, os, sys, time, subprocess, urllib.request, urllib.error
+# CRUSH — resolve IPs from pi_ports.pi Round Table, never hardcode
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+try:
+    from pi_ports import ip as _ip, port as _port, url as _url, ROLE_MAP as _ROLES
+except ImportError:
+    def _ip(r): return {"eastGate":"192.168.4.244","sporeGate":"192.168.4.3","northGate":"192.168.4.147","graftGate":"192.168.4.107","blueGate":"192.168.4.100","southGate":"192.168.4.148","ironGate":"192.168.4.237"}.get(r,r)
+    def _port(s): return {"gate":8443,"data":8080,"forgejo":3000,"ollama":11434}.get(s,s)
+    def _url(r,s,p=""): return f"http://{_ip(r)}:{_port(s)}{p}"
+    _ROLES = {}
+>>>>>>> 918be8714982f930b665c8ef220910e03e32cd9f
 
 
 def encounter(self, code, G):
@@ -128,8 +141,13 @@ def handle_get(self, ip, collapsed, wave, G):
             "retry_after": PI_RETRY,
             "pores": {
                 "tor": onion,
+<<<<<<< HEAD
                 "lan": f"http://192.168.4.244:8080{self.path}",
                 "direct": f"http://192.168.4.244:8443{self.path}",
+=======
+                "lan": f"{_url('eastGate','data','')}{self.path}",
+                "direct": f"{_url('eastGate','gate','')}{self.path}",
+>>>>>>> 918be8714982f930b665c8ef220910e03e32cd9f
             },
         }
         accept=self.headers.get("Accept","")
@@ -496,6 +514,21 @@ def handle_get(self, ip, collapsed, wave, G):
     if self.path=="/tamison": self._serve_static("tamison.html"); return
     if self.path in ("/talk","/chat","/gaia-talk","/gaia-ai","/ai"): self._serve_static("talk.html"); return
     if self.path in ("/talk-old","/discord"): self._serve_static("gaia-talk.html"); return
+<<<<<<< HEAD
+=======
+    # ═══ PLAY-GAIA — The Living Game (17 primals, real heartbeat, 200+ paintings) ═══
+    if self.path in ("/play-gaia","/game","/gaia-game","/arcade"): self._serve_static("play-gaia.html"); return
+    # ═══ SPACEDECK — Observation windows into the organism (6 panels, live data) ═══
+    if self.path in ("/spacedeck","/space-deck","/deck-obs","/observation","/mission-control"): self._serve_static("spacedeck.html"); return
+    # ═══ GAIA — unified neck/throat. Everything flows through here. ═══
+    if self.path in ("/gaia","/neck","/throat","/unified","/all"): self._serve_static("gaia.html"); return
+    # ═══ TUBE — TR-49 round CRT tube with paintings + split-flap input ═══
+    if self.path in ("/tube","/tr-49","/tr49","/crt"): self._serve_static("tube.html"); return
+    # ═══ GAIA PLAYS — Twitch Plays but alive, scene tree explorer ═══
+    if self.path in ("/plays","/play","/twitch","/gaia-plays","/crowd"): self._serve_static("plays.html"); return
+    # ═══ GAIA TERMINAL — archive explorer (text mode) ═══
+    if self.path in ("/terminal","/archive","/gaia-terminal"): self._serve_static("terminal.html"); return
+>>>>>>> 918be8714982f930b665c8ef220910e03e32cd9f
     # ═══ BACKSCATTER — live GPU metrics from Polaris ═══
     if self.path in ("/api/backscatter/live","/api/backscatter"):
         try:
@@ -554,7 +587,11 @@ def handle_get(self, ip, collapsed, wave, G):
         return
     if self.path=="/api/compiler/proximity":
         if COMPILER_ACTIVE:
+<<<<<<< HEAD
             gates={"eastGate":"192.168.4.244","sporeGate":"192.168.4.3","northGate":"192.168.4.147","graftGate":"192.168.4.107","blueGate":"192.168.4.100","southGate":"192.168.4.148","ironGate":"192.168.4.237"}
+=======
+            gates={r:_ip(r) for r in ("eastGate","sporeGate","northGate","graftGate","blueGate","southGate","ironGate")}
+>>>>>>> 918be8714982f930b665c8ef220910e03e32cd9f
             self._json(G.get('_compiler_proximity', lambda x: {})(gates))
         else: self._json({"error":"compiler organ not loaded"})
         return

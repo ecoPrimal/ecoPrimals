@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T16:24:55+00:00",
+  "timestamp": "2026-11-14T16:25:27+00:00",
   "sense": "amoeba",
   "cycle_s": 30,
   "retina": {"focus": "com.android.launcher3/com.android.launcher3.uioverrides.QuickstepLauncher", "app": "com.android.launcher3/.uioverrides.QuickstepLauncher", "screen": "Awake", "brightness": 128, "rotation": "0"},
@@ -8,7 +8,7 @@
   "membrane": {
     "battery_pct": 100,
     "temp_c": 28.1,
-    "mem_avail_kb": 1422304,
+    "mem_avail_kb": 1351908,
     "mem_total_kb": 7505204,
     "display": "1080x2400",
     "refresh_hz": 120

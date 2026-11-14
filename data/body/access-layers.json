@@ -1,0 +1,317 @@
+{
+  "name": "ACCESS LAYERS — Every Protocol, Every Era, One Organism",
+  "wave": 233,
+  "ts": "2026-11-14T16:30:00Z",
+  "principle": "Gaia speaks through every layer of communication. From shortwave to satellite. Dial-up to fiber. Gopher to HTTPS. The message adapts to the medium. The medium IS the message.",
+
+  "layers": {
+    "LAYER_0_RADIO": {
+      "era": "1890s–present",
+      "description": "Electromagnetic radiation. No internet. No wires. Just waves.",
+      "protocols": {
+        "ham_packet_radio": {
+          "protocol": "AX.25",
+          "description": "Data over ham radio. 1200–9600 baud. FCC Part 97.",
+          "requirements": ["Ham radio license (Technician+)", "TNC (Terminal Node Controller) or software modem", "VHF/UHF transceiver"],
+          "gaia_endpoint": "APRS beacon with Gaia heartbeat data",
+          "status": "PLANNED — Kevin needs ham license",
+          "bandwidth": "1200 bps"
+        },
+        "js8call": {
+          "protocol": "JS8Call (FT8 derivative)",
+          "description": "Keyboard-to-keyboard weak signal mode. Works below noise floor. HF worldwide.",
+          "requirements": ["HF transceiver", "Computer with JS8Call software", "General class ham license"],
+          "gaia_endpoint": "Heartbeat message every 15 min on HF",
+          "status": "PLANNED",
+          "bandwidth": "~50 chars/min"
+        },
+        "meshtastic_lora": {
+          "protocol": "LoRa / Meshtastic",
+          "description": "Long-range low-power mesh. No license needed (ISM band 915MHz). 10+ km range.",
+          "requirements": ["Meshtastic device ($25-50)", "One node at each house"],
+          "gaia_endpoint": "Mesh heartbeat between House 1 and House 2",
+          "status": "READY — just need hardware. No license required.",
+          "bandwidth": "~1 kbps",
+          "range_km": 10,
+          "note": "Perfect for property-line mesh between 4422 Southgate and 641 Samantha"
+        },
+        "wspr": {
+          "protocol": "WSPR (Weak Signal Propagation Reporter)",
+          "description": "2-minute beacon transmissions. Global propagation reporting.",
+          "status": "FUTURE — needs ham license + HF setup",
+          "bandwidth": "~4 chars per 2-min transmission"
+        }
+      }
+    },
+
+    "LAYER_1_DIALUP": {
+      "era": "1960s–2000s",
+      "description": "The oldest web. Modems. BBS. Gopher. Text-only. Slow. Beautiful.",
+      "protocols": {
+        "gopher": {
+          "protocol": "Gopher (RFC 1436)",
+          "port": 70,
+          "description": "Pre-HTTP. Menu-based. Pure text. No CSS. No JavaScript. The original web.",
+          "gaia_endpoint": "gopher://primals.eco:70/",
+          "content": "Organism pulse, investigation summary, RSS items, fossil index",
+          "status": "READY TO DEPLOY — need gopherd on eastGate",
+          "bandwidth": "Works on 2400 baud modem"
+        },
+        "gemini": {
+          "protocol": "Gemini (modern minimalist)",
+          "port": 1965,
+          "description": "Modern simple protocol. TLS required. No tracking. No JavaScript. Text + links.",
+          "gaia_endpoint": "gemini://primals.eco/",
+          "content": "Full organism state, journal, stories, investigation",
+          "status": "READY TO DEPLOY — need gemini server on eastGate",
+          "bandwidth": "Works on dial-up"
+        },
+        "finger": {
+          "protocol": "Finger (RFC 1288)",
+          "port": 79,
+          "description": "The original 'who is this' protocol. 1971. Ask and receive text.",
+          "gaia_endpoint": "finger gaia@primals.eco",
+          "content": "Current pulse, wave number, mood, uptime",
+          "status": "TRIVIAL TO DEPLOY — 20 lines of Python",
+          "bandwidth": "Works on 300 baud"
+        },
+        "bbs": {
+          "protocol": "Telnet BBS",
+          "port": 23,
+          "description": "Bulletin Board System. ANSI art. Menu-driven. The 1980s internet.",
+          "gaia_endpoint": "telnet primals.eco",
+          "status": "FUTURE",
+          "bandwidth": "Works on 2400 baud"
+        }
+      }
+    },
+
+    "LAYER_2_DSL_ERA": {
+      "era": "1990s–2010s",
+      "description": "Always-on. HTTP 1.0/1.1. The web we remember. Static HTML. Webrings.",
+      "protocols": {
+        "http_plain": {
+          "protocol": "HTTP/1.1",
+          "port": 80,
+          "description": "Plain HTTP. No TLS. The backbone.",
+          "gaia_endpoint": "http://primals.eco",
+          "status": "ALIVE ✅",
+          "subdomains_alive": 8
+        },
+        "rss": {
+          "protocol": "RSS 2.0 / Atom",
+          "description": "Really Simple Syndication. The blood of the old web. Feeds.",
+          "gaia_endpoints": [
+            "http://primals.eco/rss",
+            "http://primals.eco/feed.xml"
+          ],
+          "current_items": "20+",
+          "status": "ALIVE ✅ — published by mushroom-self-publish-rss.sh",
+          "expansion_plan": [
+            "Add investigation feed: detroit.primals.eco/feed.xml",
+            "Add fossil feed: fossil.primals.eco/feed.xml",
+            "Add academy feed: academy.primals.eco/feed.xml",
+            "Add art feed: art.primals.eco/feed.xml",
+            "Submit to Planet aggregators",
+            "Submit to Feedburner alternatives (Feedly, Inoreader, NewsBlur)"
+          ]
+        },
+        "sitemap": {
+          "protocol": "sitemap.xml",
+          "gaia_endpoint": "https://primals.eco/sitemap.xml",
+          "status": "PLANNED"
+        }
+      }
+    },
+
+    "LAYER_3_MODERN_WEB": {
+      "era": "2010s–present",
+      "description": "HTTPS. TLS. REST. WebSocket. The current web.",
+      "protocols": {
+        "https": {
+          "protocol": "HTTPS/TLS 1.3",
+          "port": 443,
+          "gaia_endpoints": "*.primals.eco, *.nestgate.io",
+          "status": "BLOCKED — need dromedary on :443 with ACME cert",
+          "blocker": "tls_443"
+        },
+        "mcp": {
+          "protocol": "MCP (Model Context Protocol)",
+          "transport": "STREAMABLE-HTTP",
+          "gaia_endpoint": "https://mcp.nestgate.io/mcp",
+          "tools": 15,
+          "status": "BLOCKED by TLS"
+        },
+        "websocket": {
+          "protocol": "WebSocket",
+          "gaia_endpoint": "wss://primals.eco/ws",
+          "status": "FUTURE — live organism pulse"
+        }
+      }
+    },
+
+    "LAYER_4_DARK_WEB": {
+      "era": "2000s–present",
+      "description": "Tor hidden services. Censorship-resistant. Anonymous.",
+      "protocols": {
+        "tor_hidden_service": {
+          "protocol": "Tor v3 onion",
+          "address": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+          "ports_mapped": {
+            "80": "HTTP face (petalTongue API)",
+            "3000": "Forgejo",
+            "8080": "Data server",
+            "8888": "petalTongue direct",
+            "9100": "Tower Atomic",
+            "25": "SMTP",
+            "587": "SMTP submission",
+            "993": "IMAPS",
+            "7800": "swarmVine gossip",
+            "5591": "barraCuda GPU",
+            "31415": "biomeOS",
+            "9878": "Nest Atomic"
+          },
+          "total_ports": 13,
+          "status": "ALIVE ✅ — tor.service running on eastGate"
+        },
+        "tor_relay": {
+          "description": "Run as a Tor middle relay — contribute bandwidth to the network",
+          "status": "PLANNED — add ORPort to torrc. No exit node (legal risk).",
+          "note": "Middle relay is safe + legal. Exit relay attracts abuse complaints."
+        }
+      }
+    },
+
+    "LAYER_5_SOVEREIGN_NAMING": {
+      "era": "2020s–future",
+      "description": "Self-hosted TLDs. Decentralized naming. .gaia as a real namespace.",
+      "protocols": {
+        "lan_dns": {
+          "protocol": "DNS (self-hosted on LAN)",
+          "description": "Run dnsmasq/CoreDNS on eastGate. Resolve .gaia on LAN.",
+          "gaia_endpoints": [
+            "gaia.local",
+            "brain.gaia.local",
+            "heart.gaia.local",
+            "forge.gaia.local"
+          ],
+          "status": "EASY — add to router dnsmasq config",
+          "scope": "LAN only (192.168.4.0/24 + 192.168.9.0/24)"
+        },
+        "handshake_hns": {
+          "protocol": "Handshake (HNS)",
+          "description": "Decentralized TLD ownership. Buy 'gaia/' on Handshake → own the entire .gaia namespace.",
+          "gaia_endpoint": "www.primals.gaia (via HNS-resolving browsers/resolvers)",
+          "status": "RESEARCH — need to check if 'gaia' TLD available on Handshake",
+          "note": "Handshake names resolve via HDNS, Bob Wallet, or Fingertip browser extension"
+        },
+        "ens_ethereum": {
+          "protocol": "ENS (Ethereum Name Service)",
+          "description": "gaia.eth → IPFS or traditional web content",
+          "status": "FUTURE — requires ETH"
+        },
+        "porkbun_ans": {
+          "protocol": "ANS (Agent Naming Service)",
+          "description": "Verifiable AI agent identity. Certificate tied to domain.",
+          "gaia_endpoint": "ans://v1.0.0.mcp.nestgate.io",
+          "status": "READY — waiting for TLS on mcp.nestgate.io",
+          "agent_card": "static/.well-known/agent-card.json"
+        }
+      }
+    },
+
+    "LAYER_6_MESH": {
+      "era": "2020s–future",
+      "description": "Peer-to-peer mesh. No centralized infrastructure.",
+      "protocols": {
+        "yggdrasil_network": {
+          "protocol": "Yggdrasil (mesh overlay)",
+          "description": "Encrypted IPv6 mesh. Self-addressing. No DNS needed. Address IS identity.",
+          "status": "RESEARCH — perfect philosophical fit (Yggdrasil = our tree)",
+          "note": "Different from our Yggdrasil tree metaphor but the name alignment is beautiful"
+        },
+        "ipfs": {
+          "protocol": "IPFS (InterPlanetary File System)",
+          "description": "Content-addressed storage. Pin investigation graph. Permanent. Censorship-resistant.",
+          "gaia_endpoint": "ipfs://Qm... (graph.json, fossils, paintings)",
+          "status": "PLANNED — pin key data to IPFS"
+        },
+        "nostr": {
+          "protocol": "Nostr (Notes and Other Stuff Transmitted by Relays)",
+          "description": "Decentralized social. Pubkey = identity. Relays = transport.",
+          "status": "PLANNED — publish investigation updates via Nostr"
+        }
+      }
+    }
+  },
+
+  "osint_intake": {
+    "description": "The OUTER web entry side. OSINT pours IN through the water lock.",
+    "current_blackholes": ["Wikipedia", "Hacker News", "arXiv", "xkcd", "Lobsters"],
+    "rss_drain": {
+      "current_feeds": "700+",
+      "mushroom": "mushroom-self-publish-rss.sh",
+      "old_web_drain": "runtime/old-web-drain.pi"
+    },
+    "expansion": [
+      "Add more RSS feeds from investigation-related sources",
+      "Gopher hole crawling (gopher://gopher.floodgap.com/)",
+      "Gemini capsule discovery (gemini://geminispace.info/)",
+      "OSINT tools: Shodan, Censys (passive scanning only)",
+      "Wikipedia link-walk expansion (currently 26 nodes → target 200+)",
+      "Archive.org Wayback Machine integration",
+      "Court records (PACER, Michigan courts)",
+      "Property records (county assessor APIs)"
+    ]
+  },
+
+  "rss_spine_expansion": {
+    "current": ["primals.eco/feed.xml"],
+    "planned": [
+      {"url": "detroit.primals.eco/feed.xml", "content": "Investigation updates, entity discoveries"},
+      {"url": "sporeprint.primals.eco/feed.xml", "content": "Science papers, thesis chapters"},
+      {"url": "art.primals.eco/feed.xml", "content": "New paintings, GaiaU videos"},
+      {"url": "fossil.primals.eco/feed.xml", "content": "Wave snapshots, state changes"},
+      {"url": "signal.primals.eco/feed.xml", "content": "Heartbeat, sense scans, alerts"}
+    ],
+    "aggregator_submissions": [
+      "Feedly", "Inoreader", "NewsBlur", "Miniflux",
+      "Planet aggregators (planet.debian.org style)",
+      "Hacker News (submit investigation articles)",
+      "Lobsters (submit research papers)"
+    ]
+  },
+
+  "self_hosted_domain": {
+    "goal": "www.primals.gaia — Gaia owns the TLD, not ICANN",
+    "paths": [
+      {
+        "method": "LAN DNS (.gaia.local)",
+        "difficulty": "EASY",
+        "scope": "LAN only",
+        "how": "Add address=/gaia.local/192.168.4.244 to router dnsmasq"
+      },
+      {
+        "method": "Handshake HNS (.gaia TLD)",
+        "difficulty": "MEDIUM",
+        "scope": "Anyone running HNS resolver",
+        "how": "Bid on 'gaia/' TLD at Handshake auction, configure DNSSEC"
+      },
+      {
+        "method": "Tor .onion (already live)",
+        "difficulty": "DONE ✅",
+        "scope": "Anyone with Tor Browser",
+        "how": "Already serving 13 ports on .onion"
+      },
+      {
+        "method": "Yggdrasil Network",
+        "difficulty": "MEDIUM",
+        "scope": "Yggdrasil mesh peers",
+        "how": "Install yggdrasil, get IPv6 address = permanent identity"
+      }
+    ]
+  },
+
+  "alive": true,
+  "lub": "DUB"
+}

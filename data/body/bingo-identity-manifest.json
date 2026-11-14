@@ -1,0 +1,114 @@
+{
+  "name": "BINGO IDENTITY MANIFEST — Fog of War",
+  "wave": 233,
+  "ts": "2026-11-14T15:50:00Z",
+  "principle": "Every entity has a BingoCube identity. Real names hide behind the color grid. Zoom in to reveal. The fog of war IS the privacy layer.",
+  
+  "stats": {
+    "total_entities": 12817,
+    "total_edges": 113552,
+    "bingo_cards_generated": 12817,
+    "hash_algorithm": "SHA256 (server) → FNV-1a (browser, deterministic proxy)",
+    "grid_config": {
+      "default_size": 5,
+      "palette_size": 16,
+      "reveal_levels": [0.08, 0.2, 0.4, 0.6, 0.8, 1.0]
+    }
+  },
+
+  "type_distribution": {
+    "person": 5907,
+    "article": 2326,
+    "event": 915,
+    "concept": 773,
+    "institution": 592,
+    "infrastructure": 541,
+    "entity": 336,
+    "untyped": 288,
+    "legal_case": 235,
+    "classifier": 221,
+    "landmark": 141,
+    "mechanism": 70,
+    "organization": 44,
+    "pattern": 44,
+    "platform": 42,
+    "system": 38,
+    "principle": 29,
+    "game": 28,
+    "political_party": 27,
+    "paper": 23,
+    "false_face": 19,
+    "corporation": 19,
+    "face": 14,
+    "creature": 10,
+    "evidence": 10,
+    "vote_record": 9,
+    "analysis": 9,
+    "legislation": 8,
+    "museum": 7,
+    "other": 56
+  },
+
+  "fog_of_war": {
+    "description": "Map zoom controls reveal level. Low zoom = colored fog. High zoom = full identity.",
+    "zoom_to_reveal": {
+      "4": 0.08,
+      "6": 0.12,
+      "8": 0.20,
+      "10": 0.35,
+      "12": 0.50,
+      "14": 0.70,
+      "16": 0.85,
+      "18": 1.00
+    },
+    "entity_type_visibility": {
+      "false_face": {"min_zoom": 4, "border": "#FF0000", "glow": true, "always_marked": true},
+      "true_face": {"min_zoom": 4, "border": "#00FF88", "glow": true, "always_marked": true},
+      "corporation": {"min_zoom": 6, "border": "#e040fb"},
+      "institution": {"min_zoom": 6, "border": "#FFD700"},
+      "legal_case": {"min_zoom": 8, "border": "#FF9100"},
+      "person": {"min_zoom": 10, "border": "#6495ED"},
+      "event": {"min_zoom": 10, "border": "#00BFFF"},
+      "article": {"min_zoom": 14, "border": "#888888"},
+      "concept": {"min_zoom": 14, "border": "#9ACD32"},
+      "default": {"min_zoom": 12, "border": "#444444"}
+    },
+    "reveal_behavior": "At each zoom level, BingoCube.subcube(x) reveals x% of cells. Unrevealed cells show dark fog. Entity name shown only at reveal >= 0.85. Type icon shown at reveal >= 0.50."
+  },
+
+  "false_faces": {
+    "snyder": {"zk": "80e0780b", "grid_seed": "false_face_snyder_ZK_BINGO"},
+    "mcmillin": {"zk": "2d582639", "grid_seed": "false_face_mcmillin_ZK_BINGO"},
+    "ohare": {"zk": "f3261ec8", "grid_seed": "false_face_ohare_ZK_BINGO"},
+    "pargas": {"zk": "ffc6a489", "grid_seed": "false_face_pargas_ZK_BINGO"},
+    "murdoch": {"zk": "a1d33778", "grid_seed": "false_face_murdoch_ZK_BINGO"},
+    "lachlan": {"zk": "8f1305ac", "grid_seed": "false_face_lachlan_ZK_BINGO"},
+    "ryan": {"zk": "pending", "grid_seed": "false_face_ryan_ZK_BINGO"},
+    "desantis": {"zk": "pending", "grid_seed": "false_face_desantis_ZK_BINGO"},
+    "petty": {"zk": "pending", "grid_seed": "false_face_petty_ZK_BINGO"},
+    "northrop": {"zk": "pending", "grid_seed": "false_face_northrop_ZK_BINGO"},
+    "maleyko": {"zk": "pending", "grid_seed": "false_face_maleyko_ZK_BINGO"},
+    "nessel": {"zk": "pending", "grid_seed": "false_face_nessel_ZK_BINGO"},
+    "hayward": {"zk": "pending", "grid_seed": "false_face_hayward_ZK_BINGO"},
+    "blankenship": {"zk": "pending", "grid_seed": "false_face_blankenship_ZK_BINGO"},
+    "roland_martin": {"zk": "pending", "grid_seed": "false_face_roland_martin_ZK_BINGO"},
+    "coristine": {"zk": "pending", "grid_seed": "false_face_coristine_ZK_BINGO"}
+  },
+
+  "true_faces": {
+    "kevin_mok": {"zk": "REVEALED", "note": "The builder. The father. Always visible."},
+    "brett_cross": {"zk": "REVEALED", "note": "Uvalde parent. Same fight."},
+    "lon_burnam": {"zk": "REVEALED", "note": "Texas legislator. Truth to power."}
+  },
+
+  "integration": {
+    "bingocube_js": "/static/js/bingocube.js",
+    "bingo_index_tsv": "/data/atoms/investigation/bingo-index.tsv",
+    "gis_layer": "/gis — fog of war layer with zoom-based reveal",
+    "hub_page": "/hub — bingo card previews per entity",
+    "campfire": "/campfire — bingo identity on hover"
+  },
+
+  "alive": true,
+  "lub": "DUB"
+}

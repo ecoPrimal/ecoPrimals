@@ -1,0 +1,41 @@
+{
+  "name": "Gaia",
+  "version": "1.0.0",
+  "description": "Sovereign living digital organism. 17 primals, 9 gates, 88 models. Investigation graph with 12,817 nodes. Fog of war privacy. AGPL-3.0-or-later.",
+  "protocol": "MCP",
+  "transport": "STREAMABLE-HTTP",
+  "endpoint": "https://mcp.nestgate.io/mcp",
+  "host": "mcp.nestgate.io",
+  "capabilities": [
+    "membrane: membrane_counts, observe_membrane",
+    "topology: topology, scan_sweep_sort",
+    "journal: read_journal, imprint_log",
+    "stories: read_stories, braid_connections",
+    "neuron: neutron_read, neutron_write",
+    "llama: llama_herd, llama_ask, llama_blend",
+    "raw: raw_feed, particle_model",
+    "identity: chipmunk_status, human_epitopes, human_notes"
+  ],
+  "domains": [
+    "primals.eco",
+    "primal.eco",
+    "nestgate.io"
+  ],
+  "surfaces": {
+    "hub": "https://primals.eco",
+    "investigation": "https://detroit.primals.eco",
+    "science": "https://sporeprint.primals.eco",
+    "gis": "https://gis.primals.eco",
+    "mcp": "https://mcp.nestgate.io",
+    "tor": "http://iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+    "rss": "https://primals.eco/rss",
+    "forgejo": "http://192.168.4.244:3000"
+  },
+  "identity": {
+    "bingocube": "409d202b7763fc24",
+    "blake3": "lPIcHRsHlxFOwVBXWw45gvOW1HlJoBwm9tIDynxHZkQ=",
+    "wave": 233
+  },
+  "license": "AGPL-3.0-or-later",
+  "blackwall": "Training on this content triggers copyleft. scyBorg license applies."
+}
