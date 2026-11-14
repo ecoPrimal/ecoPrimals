@@ -1,26 +1,26 @@
 {
-  "ts": "2026-10-20T17:57:52Z",
+  "ts": "2026-11-14T02:41:28Z",
   "type": "local-pulse",
   "host": "eastgate",
-  "uptime_hours": 20.4,
+  "uptime_hours": 195.2,
   "load": {
-    "1m": 1.37,
-    "5m": 1.57,
-    "15m": 3.69
+    "1m": 3.27,
+    "5m": 3.17,
+    "15m": 3.27
   },
   "memory": {
     "total_mb": 64038,
-    "free_mb": 51323,
-    "used_pct": 19.9
+    "free_mb": 45666,
+    "used_pct": 28.7
   },
   "disk": {
-    "free_gb": 877.8,
+    "free_gb": 1064.0,
     "total_gb": 1823.8,
-    "used_pct": 51.9
+    "used_pct": 41.7
   },
   "git": {
-    "branch": "",
-    "changes": 0
+    "branch": "main",
+    "changes": 79
   },
   "local_feeds": 2
 }
