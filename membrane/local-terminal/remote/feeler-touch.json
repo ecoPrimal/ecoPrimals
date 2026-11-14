@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T12:56:48-05:00",
+  "timestamp": "2026-11-14T13:52:24-05:00",
   "cycle_seconds": 120,
   "printer": {
     "ip": "192.168.4.200",
@@ -18,7 +18,7 @@
     },
     "sporeGate": {
       "ip": "192.168.4.3",
-      "uptime": "up 5 hours, 25 minutes",
+      "uptime": "up 6 hours, 20 minutes",
       "boot_chain": "xorg-headless + rustdesk + ion-channel + gdm"
     },
     "northGate": {
@@ -34,13 +34,13 @@
     },
     "graftGate": {
       "ip": "192.168.4.107",
-      "ollama_models": 1
+      "ollama_models": 0
     }
   },
   "pixel": {
     "battery_pct": 100,
     "temp_mC": 0,
-    "charging": "Not charging",
+    "charging": "Discharging",
     "biomeOS_processes": 13
   },
   "unknown_devices": {
