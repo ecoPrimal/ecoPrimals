@@ -1,0 +1,85 @@
+{
+  "type": "wan-ingress-plan",
+  "wave": "232z",
+  "ts": "2026-11-14T17:12:12.842896+00:00",
+  "current_wan": {
+    "provider": "AT&T Fiber (Lansing, MI, SBC Global)",
+    "speed": "2.5 Gbps down/up",
+    "gateway": "Arris/CommScope BGW (ec:c3:02:e1:11:81)",
+    "mode": "IP Passthrough \u2192 Flint gets public IP",
+    "public_ip": "162.226.225.148/23",
+    "monthly_traffic_gb": 269,
+    "daily_gb": 9.0
+  },
+  "port_forwards_live": {
+    "80\u21928443": "GL-GAIA-HTTP (gate)",
+    "443\u21928443": "GL-GAIA-HTTPS (gate)",
+    "8080\u21928080": "eastgate-spine-public (data server)",
+    "25\u219225": "SMTP",
+    "587\u2192587": "SMTP submit",
+    "465\u2192465": "SMTPS"
+  },
+  "elimination_path": [
+    {
+      "phase": 1,
+      "cost": "$0",
+      "when": "NOW",
+      "action": "Move ATT box to other side of brick wall near fiber ingress",
+      "detail": "Physical move only \u2014 same ethernet cable to Flint, just longer run or new cable",
+      "benefit": "Frees bench space, cleaner cable path"
+    },
+    {
+      "phase": 2,
+      "cost": "$0",
+      "when": "SOON",
+      "action": "Phone tethering as failover WAN",
+      "detail": "iPhone USB to Flint (ipheth driver) OR Pixel RNDIS. Flint has ALL drivers already installed.",
+      "benefit": "Backup internet when ATT goes down. After Brio moves to sporeGate, Flint has free USB.",
+      "mint_mobile": "5GB/month = 0.6 days normal use \u2014 FAILOVER ONLY"
+    },
+    {
+      "phase": 3,
+      "cost": "$0",
+      "when": "WHEN READY",
+      "action": "Extract 802.1X certs from BGW, bypass routing",
+      "detail": "wpa_supplicant on Flint authenticates directly to AT&T OLT. BGW becomes dumb fiber-to-ethernet converter only.",
+      "benefit": "Eliminates double NAT, ATT gateway routing disabled",
+      "risk": "AT&T may update auth, need to re-extract"
+    },
+    {
+      "phase": 4,
+      "cost": "~$100",
+      "when": "OPTIONAL",
+      "action": "SFP+ GPON ONT module replaces ATT box entirely",
+      "detail": "Fiber plugs into SFP+ module in a switch. ATT box powered OFF forever.",
+      "benefit": "ATT box fully eliminated \u2014 pure sovereign fiber ingress",
+      "hardware": [
+        "SFP+ GPON/XGS-PON module ($80-150)",
+        "OR WAXbox media converter ($100)"
+      ]
+    }
+  ],
+  "physical_rewire": {
+    "fiber_ingress": "Physical fiber enters through basement wall",
+    "current_location": "ATT box + Flint + MikroTik all on same bench",
+    "plan": {
+      "ATT_box": "Move to wall near fiber ingress (other side of brick wall)",
+      "Flint": "Move farther from bench (WiFi radios work from anywhere)",
+      "MikroTik": "Stays as L2 backbone (wired switch)",
+      "bench": "northGate (Kevin's PC) + monitor + keyboard only"
+    },
+    "new_cable_needs": [
+      "Ethernet from ATT box (wall) \u2192 Flint (new location)",
+      "Ethernet from Flint \u2192 MikroTik (may need longer cable)",
+      "Fiber 10G to JetStream stays same path"
+    ]
+  },
+  "mint_mobile_analysis": {
+    "plan": "5GB/month",
+    "your_usage": "9 GB/day = 270 GB/month",
+    "ratio": "54\u00d7 over Mint cap",
+    "verdict": "FAILOVER ONLY \u2014 good for 13 hours of normal use",
+    "best_use": "Keep Pixel on Mint, tether to Flint USB when ATT goes down",
+    "alternative": "T-Mobile Home Internet ($50/mo, unlimited) if you want to ditch ATT"
+  }
+}
