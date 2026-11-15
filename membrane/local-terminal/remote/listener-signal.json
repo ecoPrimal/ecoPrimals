@@ -1,24 +1,28 @@
 {
-  "timestamp": "2026-11-14T21:21:05-05:00",
+  "timestamp": "2026-11-14T21:24:05-05:00",
   "cycle_seconds": 60,
   "totals": {
-    "queries": 84,
-    "blocked": 11,
-    "redirected": 25,
-    "forwarded_to_wan": 9,
-    "block_rate_pct": 13.1
+    "queries": 103,
+    "blocked": 20,
+    "redirected": 24,
+    "forwarded_to_wan": 20,
+    "block_rate_pct": 19.4
   },
   "top_talkers": [
     {
-      "count": 50,
+      "count": 46,
       "ip": "192.168.4.237"
     },
     {
-      "count": 25,
+      "count": 28,
       "ip": "192.168.4.147"
     },
     {
-      "count": 4,
+      "count": 16,
+      "ip": "192.168.4.110"
+    },
+    {
+      "count": 8,
       "ip": "192.168.4.152"
     },
     {
@@ -26,25 +30,21 @@
       "ip": "192.168.4.197"
     },
     {
+      "count": 2,
+      "ip": "192.168.4.139"
+    },
+    {
       "count": 1,
       "ip": "192.168.4.203"
-    },
-    {
-      "count": 1,
-      "ip": "192.168.4.148"
-    },
-    {
-      "count": 1,
-      "ip": "192.168.4.110"
     }
   ],
   "top_domains": [
     {
-      "count": 56,
+      "count": 79,
       "domain": "query[A]"
     },
     {
-      "count": 27,
+      "count": 23,
       "domain": "query[AAAA]"
     },
     {
@@ -54,18 +54,19 @@
   ],
   "blocked_attempts": [
     {
-      "count": 11,
+      "count": 20,
       "domain": "config"
     }
   ],
   "wan_leaks": [
     {
-      "count": 9,
+      "count": 20,
       "domain": "forwarded"
     }
   ],
   "unknown_sources": [
     "192.168.4.110",
+    "192.168.4.139",
     "192.168.4.152",
     "192.168.4.197",
     "192.168.4.203"
