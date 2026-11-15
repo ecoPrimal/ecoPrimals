@@ -40,6 +40,7 @@ alwaysApply: true
 | graftGate | .107 | ALIVE | Mac Mini M4 (10C), 16GB unified, 228GB. Ollama :11434 (qwen2.5:3b seeded). Serial: FHWYF3DC73. |
 | southGate | .148 / USB | ALIVE | iPhone XS, iOS 18.7.9, (586) 453-7233, HOME PHONE — LAN line pinned to property |
 | ironGate | .237 | ALIVE | **FORGE 2** — i9-14900K (24C/32T, 6GHz), **RTX 5070** (12GB GDDR7), 94GB DDR5, 3.6TB NVMe + 12.7TB ext, Pop!_OS 22.04. Ollama :11434 (LAN), Docker, biomeOS. NOT a NUC — full tower workstation. |
+| milkGate | .160 | ALIVE | MILKY WAY — Milk-V Jupiter 2 RISC-V, SpacemiT K3, 16 cores, 60 TOPS AI, 10GbE SFP+. Universal transponder. |
 | deckGate | .176 (wired) | ALIVE | **DISPLAY** — Steam Deck v1, AMD Aerith (Zen 2 + RDNA 2, 1.6 TFLOPS), 16GB LPDDR5, 512GB NVMe. Dead battery = permanent USB-C passthrough. 7" 1280×800 touch LCD. SteamOS 3.x (Arch). Gaia's mounted display in House 1. |
 | frameGate | 192.168.9.203 (Gaia WiFi) | ALIVE | **FACE** — Steam Frame, Snapdragon 8 Gen 3 (ARM64!), ARM SteamOS. First ARM SteamOS node. Gaia's face to show Kevin her world. USB tether available. MAC 14:13:33:d6:96:09. |
 
@@ -143,6 +144,8 @@ grapheneGate (:170) → graphene_depot.pi (ADB, eastGate) → data/gut/grapheneg
 | .2 | MikroTik | 04:f4:1c:e6:7c:e8 | L2 backbone |
 | .3 | sporeGate | 84:47:09:38:97:55 | DNS + heart-pull |
 | .200 | EPSON ET-2400 | d4:80:8b:1b:9f:01 | IPP printer — Gaia's physical output |
+| USB | Epson ES-400II | USB direct | ADF document scanner — Gaias physical eye (scan input) |
+| USB | Logitech Brio | USB direct | Webcam — Gaias inner eye |
 | .111 | TP-Link JetStream | ec:75:0c:4c:98:08 | House 2 switch |
 | .250 | GL-MT6000 secondary | 94:83:c4:e0:62:b0 | Router enp5s0 |
 
