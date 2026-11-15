@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T15:10:37-05:00",
+  "timestamp": "2026-11-14T20:00:30-05:00",
   "cycle_seconds": 120,
   "printer": {
     "ip": "192.168.4.200",
@@ -18,17 +18,17 @@
     },
     "sporeGate": {
       "ip": "192.168.4.3",
-      "uptime": "up 12 minutes",
+      "uptime": "up 4 hours, 20 minutes",
       "boot_chain": "xorg-headless + rustdesk + ion-channel + gdm"
     },
     "northGate": {
       "ip": "192.168.4.147",
-      "ollama_models": 12,
+      "ollama_models": 0,
       "ssh": "no (pony express only)"
     },
     "ironGate": {
       "ip": "192.168.4.237",
-      "ollama_models": 6,
+      "ollama_models": 18,
       "ssh": "auth_fail",
       "alert": "cloudflare_tunnel + subnet_scan"
     },

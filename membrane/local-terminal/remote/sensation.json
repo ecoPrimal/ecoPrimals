@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-14T15:10:36-05:00",
+  "timestamp": "2026-11-14T20:02:21-05:00",
   "sensation": "FULL",
   "outer_ear": {
     "source": "Pixel (grapheneGate)",
@@ -12,16 +12,16 @@
   },
   "inner_ear": {
     "source": "Flint (GL-MT6000 router)",
-    "dns_queries": 224,
-    "dns_blocked": 64,
-    "block_rate_pct": 28.6,
-    "wan_leaks": 19,
+    "dns_queries": 206,
+    "dns_blocked": 73,
+    "block_rate_pct": 35.4,
+    "wan_leaks": 12,
     "note": "DNS signal intelligence from router query log"
   },
   "touch": {
     "source": "feeler.sh (device probing)",
     "printer": "idle",
-    "ollama_models_total": 6,
+    "ollama_models_total": 18,
     "note": "Direct device probing via ports/IPP/SSH"
   },
   "organism": {
