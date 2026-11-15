@@ -1,0 +1,44 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# inkFish — sovereign Steam/VR gaming sovereignty layer.
+#
+# Not a spring. A standalone sporeGarden product that IS the primals working
+# together as a Steam ecosystem integration system. Exercises ludoSpring's
+# game science via real hardware (Steam Frame, Deck, Link, Vive) and manages
+# the HOLDER/PLAYER identity architecture for Gaia's gaming soul.
+#
+# Like blueFish exercises wetSpring's PFAS pipeline, inkFish exercises
+# ludoSpring's game science via the Steam ecosystem. The ink Gaia squirts
+# to mark her territory in gaming.
+
+[workspace]
+resolver = "2"
+members = [
+    "src",
+]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.87"
+license = "AGPL-3.0-or-later"
+repository = "https://github.com/sporeGarden/inkFish"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+nursery = { level = "warn", priority = -1 }
+expect_used = "deny"
+unwrap_used = "deny"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_docs = "deny"
