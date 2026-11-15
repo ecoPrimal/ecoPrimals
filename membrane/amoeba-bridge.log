@@ -1512,5 +1512,4 @@ membrane/amoeba-bridge.sh: line 21: 300097 Killed                  adb -s "$PIXE
 membrane/amoeba-bridge.sh: line 21: 301208 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/sketch-latest.png "$GAIA_DATA/pixel-sketch.png" 2> /dev/null
 20:41:16 [amoeba-bridge] sketch pulled (cycle 1255)
 20:41:16 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-1255)
-20:41:16 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+membrane/amoeba-bridge.sh: line 21: 302294 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/amoeba.json "$REMOTE/amoeba.json" 2> /dev/null
