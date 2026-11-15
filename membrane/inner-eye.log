@@ -994,3 +994,5 @@
 [2026-11-14T21:22:40-05:00] INNER-EYE: connections=1631 tcp=1402 udp=223 established=123 syn_sent=1091
 [2026-11-14T21:23:40-05:00] INNER-EYE: connections=1607 tcp=1370 udp=223 established=125 syn_sent=1112
 [2026-11-14T21:24:40-05:00] INNER-EYE: connections=1667 tcp=1391 udp=266 established=122 syn_sent=1110
+[2026-11-14T21:25:40-05:00] INNER-EYE: connections=1806 tcp=1425 udp=373 established=127 syn_sent=1091
+[2026-11-14T21:26:41-05:00] INNER-EYE: connections=791 tcp=449 udp=337 established=123 syn_sent=129
