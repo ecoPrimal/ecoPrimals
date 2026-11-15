@@ -97,16 +97,22 @@
     "8. Never force-feed — the organism eats when hungry, not on schedule alone"
   ],
 
-  "hairpin_nat_fix": {
+  "wan_evolution": {
     "problem": "ATT BGW320 does NOT support hairpin NAT. Double NAT kills LAN→WAN→LAN routing.",
-    "solution": "IP Passthrough using device PIN 579163",
-    "steps": [
-      "1. Login to http://192.168.1.254 with PIN 579163",
-      "2. Firewall → IP Passthrough → DHCPS-fixed",
-      "3. Set passthrough to GL-MT6000 MAC: 94:83:c4:e0:62:b0",
-      "4. Router gets PUBLIC IP (162.226.225.148) directly",
-      "5. No more double NAT → hairpin works → AMOEBA relay works"
-    ],
-    "result": "It's JUST ANOTHER PORT/IP — agentic routing. The hairpin becomes a (+) solved problem, not a (-) wall."
+    "phase_1_today": {
+      "action": "IP Passthrough using device PIN 579163 → GL-MT6000 gets public IP",
+      "mac": "94:83:c4:e0:62:b0 (GL-MT6000)",
+      "result": "Quick fix. Hairpin works. AMOEBA relay works."
+    },
+    "phase_2_final": {
+      "action": "RISC-V NUC becomes sovereign WAN edge",
+      "hardware": "RISC-V NUC with 10GbE (WAN fiber) + 2.5G RJ45 (LAN backbone)",
+      "wan_port": "10GbE = ATT fiber ONT direct (no BGW320 in path)",
+      "lan_port": "2.5G RJ45 → MikroTik/JetStream → mesh",
+      "software": "dromedary (reverse proxy) + skunkBat (firewall) + bearDog (identity)",
+      "imaging": "eastGate's job — ADB + flash image to RISC-V NUC",
+      "result": "Full sovereign edge. No ATT modem. No double NAT. No hairpin problem. Just another gate."
+    },
+    "philosophy": "It's JUST ANOTHER PORT/IP — agentic routing. We are the HEAD above the body. Physical wiring is the gates' job."
   }
 }
