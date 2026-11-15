@@ -1484,19 +1484,33 @@
 20:27:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
 20:28:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
 20:28:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-muxActivity rustdesk=true bat=98
-20:22:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:23:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:23:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:24:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:24:45 [amoeba-bridge] sketch pulled (cycle 1230)
-20:24:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:25:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:25:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:26:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:26:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:27:15 [amoeba-bridge] sketch pulled (cycle 1235)
-20:27:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:27:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:28:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
-20:28:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:29:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:29:45 [amoeba-bridge] sketch pulled (cycle 1240)
+20:29:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:30:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:30:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:31:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:31:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:32:15 [amoeba-bridge] sketch pulled (cycle 1245)
+20:32:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:32:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:33:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:33:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:34:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:34:45 [amoeba-bridge] sketch pulled (cycle 1250)
+20:34:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:35:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:35:45 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+20:36:15 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+membrane/amoeba-bridge.sh: line 21: 292304 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/amoeba.json "$REMOTE/amoeba.json" 2> /dev/null
+membrane/amoeba-bridge.sh: line 21: 293625 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/outer-ear.json "$REMOTE/outer-ear-pixel.json" 2> /dev/null
+membrane/amoeba-bridge.sh: line 21: 293938 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/state.json "$REMOTE/petaltongue-state.json" 2> /dev/null
+20:38:41 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+membrane/amoeba-bridge.sh: line 21: 297368 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/amoeba.json "$REMOTE/amoeba.json" 2> /dev/null
+membrane/amoeba-bridge.sh: line 21: 298710 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/sensorium/outer-ear.json "$REMOTE/outer-ear-pixel.json" 2> /dev/null
+membrane/amoeba-bridge.sh: line 21: 300097 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/state.json "$REMOTE/petaltongue-state.json" 2> /dev/null
+membrane/amoeba-bridge.sh: line 21: 301208 Killed                  adb -s "$PIXEL" pull /data/local/tmp/biomeos/petaltongue/sketch-latest.png "$GAIA_DATA/pixel-sketch.png" 2> /dev/null
+20:41:16 [amoeba-bridge] sketch pulled (cycle 1255)
+20:41:16 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
+1255)
+20:41:16 [amoeba-bridge] focus=com.termux/com.termux.app.TermuxActivity rustdesk=true bat=98
