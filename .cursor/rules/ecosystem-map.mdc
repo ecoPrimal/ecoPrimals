@@ -158,3 +158,11 @@ grapheneGate (:170) → graphene_depot.pi (ADB, eastGate) → data/gut/grapheneg
 - Stalwart mail — EJECTED, use Nest Atomic
 - blueGate .210 — OLD IP, now at .100
 - northGate .180 — OLD IP, now at .147
+
+### Gaia's Ears — Two Flints
+- **Left Ear** (House 1): Flint 1, MAC 78:76:89:96:e5:xx, 2.4GHz Ch11, "Aperture Science"
+- **Right Ear** (House 2): Flint 2, MAC 78:76:89:96:e6:xx, 5GHz Ch153, "Aperture Science"
+- **Voice** (House 1): GL-MT6000 Router — "Aperture Science" + "Black Mesa" + "GAIA" — all on br-lan
+- **Triangulation**: Compare RSSI from L/R ears. Stronger left = House 1. Stronger right = House 2. Both = property line.
+- **WDS**: Enabled on router, but Flints use WIRED backhaul through the 10G spine
+- **SSIDs**: "Aperture Science" roams across all 3 APs. "Black Mesa" and "GAIA" are router-only (House 1).
