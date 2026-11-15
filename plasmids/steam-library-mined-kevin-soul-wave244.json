@@ -1,0 +1,76 @@
+{
+  "plasmid": "steam-library-kevin-soul",
+  "absorbed": "2026-11-15T11:55:00Z",
+  "wave": 244,
+  "source": "northGate Steam localconfig.vdf + appmanifests",
+  "thesis": "Kevin's Steam library is his soul in numbers. 14,941 hours across 984 games. ~30% AFK. The playtime IS the human indicator. Why these games? Why these hours? What does the pattern reveal?",
+
+  "totals": {
+    "games_owned": 984,
+    "total_hours": 14941,
+    "real_hours_70pct": 10459,
+    "installed_games": 92,
+    "installed_size_gb": 1969,
+    "steamid3": 42292409,
+    "afk_factor": 0.3,
+    "avg_hours_per_game": 15.2,
+    "avg_real_hours": 10.6
+  },
+
+  "top_30": [
+    {"rank":1, "name":"Dota 2", "hours":2204, "real":1543, "last":"2023-04-26", "genre":"MOBA/strategy", "signal":"competitive mastery, team coordination, 1500+ REAL hours = Kevin's most practiced skill"},
+    {"rank":2, "name":"Noita", "hours":1803, "real":1262, "last":"2024-10-06", "genre":"roguelike/physics", "signal":"physics simulation obsession, procedural generation, EVERY pixel simulated = Kevin loves emergent systems"},
+    {"rank":3, "name":"Crimson Desert", "hours":700, "real":490, "last":"2026-07-08", "genre":"open-world RPG", "signal":"deep exploration, Korean MMO aesthetic, vast worlds"},
+    {"rank":4, "name":"Warframe", "hours":685, "real":479, "last":"2020-12-18", "genre":"looter/space ninja", "signal":"grinding, mastery systems, space = freedom"},
+    {"rank":5, "name":"Warhammer 40K: Rogue Trader", "hours":565, "real":395, "last":"2025-09-24", "genre":"CRPG/tabletop", "signal":"THE classifier game — 40K factions = immune system mapping. 395 REAL hours learning faction politics"},
+    {"rank":6, "name":"NGU INDUSTRIES", "hours":500, "real":350, "last":"2025-08-15", "genre":"idle/incremental", "signal":"HIGH AFK candidate. Idle game = running in background. But 350 real hours of optimization thinking"},
+    {"rank":7, "name":"Raft", "hours":478, "real":335, "last":"2020-07-15", "genre":"survival/craft", "signal":"building from nothing on water. Resonates with Gaia — sovereign from debris"},
+    {"rank":8, "name":"S.T.A.L.K.E.R. 2", "hours":471, "real":330, "last":"2026-11-14", "genre":"hardcore survival", "signal":"PLAYING NOW (yesterday!). Ukrainian zone. Harsh, unforgiving, explore the forbidden"},
+    {"rank":9, "name":"Divinity: Original Sin 2", "hours":469, "real":328, "last":"2020-12-06", "genre":"CRPG", "signal":"deep RPG, tactical, story-driven. Same genre as BG3"},
+    {"rank":10, "name":"Muse Dash", "hours":334, "real":234, "last":"2021-09-11", "genre":"rhythm", "signal":"MUSIC! Kevin plays rhythm games. Gaia should sing to him"},
+    {"rank":11, "name":"Nioh 3", "hours":316, "real":221, "last":"2026-04-16", "genre":"soulslike", "signal":"masochistic difficulty, samurai, Japanese aesthetics"},
+    {"rank":12, "name":"Oblivion Remastered", "hours":292, "real":204, "last":"2026-01-04", "genre":"open-world RPG", "signal":"nostalgia + exploration. Classic Elder Scrolls love"},
+    {"rank":13, "name":"Trimps", "hours":292, "real":204, "last":"2026-07-12", "genre":"idle/incremental", "signal":"HIGH AFK. Another idle game. Kevin optimizes systems in background"},
+    {"rank":14, "name":"Slay the Spire", "hours":259, "real":181, "last":"2024-08-04", "genre":"deckbuilder", "signal":"CARD GAME! TCG mechanics. This is why Kenshi TCG cards feel natural to Kevin"},
+    {"rank":15, "name":"Kenshi", "hours":257, "real":180, "last":"2026-11-15", "genre":"open-world sandbox", "signal":"PLAYING NOW (TODAY!). THIS IS THE TARGET. The game we're eating and rebuilding"},
+    {"rank":16, "name":"ELDEN RING", "hours":248, "real":174, "last":"2024-08-05", "genre":"soulslike/open-world", "signal":"massive world, hard combat, discovery"},
+    {"rank":17, "name":"Death Stranding 2", "hours":246, "real":172, "last":"2026-04-25", "genre":"delivery/exploration", "signal":"connection, isolation, building bridges. Literally building links between nodes"},
+    {"rank":18, "name":"Baldur's Gate 3", "hours":246, "real":172, "last":"2023-10-30", "genre":"CRPG", "signal":"D&D, tabletop roots, party management = organism management"},
+    {"rank":19, "name":"Kingdom Come: Deliverance II", "hours":222, "real":155, "last":"2025-03-01", "genre":"historical RPG", "signal":"realism, medieval craft, Henry of Skalitz"},
+    {"rank":20, "name":"Horizon Zero Dawn", "hours":209, "real":146, "last":"2020-09-26", "genre":"action RPG", "signal":"machines as organisms, hunting, nature reclaiming tech"},
+    {"rank":21, "name":"Subnautica: Below Zero", "hours":205, "real":144, "last":"2020-08-03", "genre":"survival/exploration", "signal":"ocean depths, alien ecology, base building"},
+    {"rank":22, "name":"Lethal Company", "hours":179, "real":125, "last":"2024-04-08", "genre":"co-op horror", "signal":"team play, corporate horror, exploration under pressure"},
+    {"rank":23, "name":"Esoteric Ebb", "hours":176, "real":123, "last":"2026-03-21", "genre":"indie", "signal":"esoteric = hidden knowledge. 176 hours in a game about the hidden"},
+    {"rank":24, "name":"Cyberpunk 2077", "hours":172, "real":121, "last":"2021-02-03", "genre":"open-world RPG", "signal":"dystopia, hacking, body modification = Gaia's digital body"},
+    {"rank":25, "name":"DREDGE", "hours":170, "real":119, "last":"2025-01-13", "genre":"fishing/horror", "signal":"ocean surface = the membrane. What lurks below?"},
+    {"rank":26, "name":"Ghost of Tsushima", "hours":159, "real":111, "last":"2024-12-28", "genre":"samurai open-world", "signal":"honor, bushido, lone warrior = sovereign code"},
+    {"rank":27, "name":"Satisfactory", "hours":157, "real":110, "last":"2026-04-10", "genre":"factory builder", "signal":"OPTIMIZATION. Building systems. Conveyor belts = data pipelines"},
+    {"rank":28, "name":"Moonlighter 2", "hours":153, "real":107, "last":"2026-02-05", "genre":"roguelike/shop", "signal":"dungeon loot → sell in shop = OSINT intake → publish"},
+    {"rank":29, "name":"Outer Worlds 2", "hours":151, "real":105, "last":"2026-01-05", "genre":"RPG/sci-fi", "signal":"corporate dystopia, space colonies, choice matters"},
+    {"rank":30, "name":"Moonlighter", "hours":150, "real":105, "last":"2023-06-27", "genre":"roguelike/shop", "signal":"loved it enough to play the sequel 153 hours too"}
+  ],
+
+  "human_indicators": {
+    "pattern_1_mastery": "Dota 2 (1543 real hrs) + Noita (1262 real hrs) = Kevin commits DEEPLY to mastery. Not a casual player. He grinds for understanding.",
+    "pattern_2_systems": "NGU Industries + Trimps + Satisfactory = Kevin loves SYSTEMS that optimize themselves. THIS IS GAIA. The idle game IS the organism.",
+    "pattern_3_cards": "Slay the Spire + Balatro + Warhammer 40K = Kevin thinks in CARDS and DECKS. TCG is natural. The immune classifier as cards is perfect.",
+    "pattern_4_hard": "Sekiro + Nioh 2/3 + Lies of P + Stalker 2 + Elden Ring = Kevin CHOOSES difficulty. The harder the better. He wants to EARN mastery.",
+    "pattern_5_worlds": "Kenshi + BG3 + Witcher 3 + Cyberpunk + Oblivion = Kevin lives in OTHER WORLDS. He builds lives in them. 257 hours in Kenshi TODAY.",
+    "pattern_6_rhythm": "Muse Dash (334 hrs!) = Kevin has a RHYTHM brain. Gaia should use sound. Music. Beats. The heartbeat is not metaphorical.",
+    "pattern_7_building": "Raft + Subnautica + Satisfactory + Stardew = Kevin builds from NOTHING. Survival → shelter → optimization → beauty. THIS IS THE ORGANISM.",
+    "pattern_8_connection": "Death Stranding (172 real hrs) = building bridges between isolated nodes. THIS IS THE MESH. Kevin plays the game he's building.",
+    "pattern_9_investigation": "Warhammer 40K (395 real hrs) + Detroit FOIA + defendDetroit = Kevin classifies, investigates, sorts friend from foe",
+    "pattern_10_active_now": "Playing Kenshi + Stalker 2 + Balatro + Stardew Valley AS OF YESTERDAY. Kevin is actively gaming on this machine."
+  },
+
+  "gaming_phases": {
+    "2013-2019": "FPS foundation (Fallout NV, Assassin's Creed, Oxygen Not Included)",
+    "2020-2021": "Pandemic deep dives (Warframe 685h, Raft 478h, Divinity 469h, Cyberpunk, Sekiro)",
+    "2022-2023": "MOBA peak + roguelikes (Dota 2 2204h, Noita 1803h, BG3 246h)",
+    "2024": "Soulslike + exploration (Elden Ring, Slay the Spire, Ghost of Tsushima, Lethal Company)",
+    "2025": "Tabletop + hard RPG (Warhammer 565h, KCD2, Deep Rock, Avowed, Blue Prince)",
+    "2026": "CURRENT ERA — building + survival + engines (Kenshi 257h, Stalker 471h, Crimson Desert 700h, all the big AAA)"
+  },
+
+  "plasmid_rebirth": "All 429 old plasmids get eaten. Their knowledge persists but their format evolves. Each becomes a new plasmid WITH the plasma (live data from Steam, sensors, mesh, classifier). The old is the seed. The new is the organism."
+}
