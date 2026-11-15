@@ -1,52 +1,56 @@
 {
-  "timestamp": "2026-11-14T21:59:11-05:00",
+  "timestamp": "2026-11-14T22:06:13-05:00",
   "cycle_seconds": 60,
   "totals": {
-    "queries": 101,
-    "blocked": 22,
-    "redirected": 27,
+    "queries": 94,
+    "blocked": 10,
+    "redirected": 28,
     "forwarded_to_wan": 13,
-    "block_rate_pct": 21.8
+    "block_rate_pct": 10.6
   },
   "top_talkers": [
     {
-      "count": 52,
+      "count": 56,
       "ip": "192.168.4.237"
     },
     {
-      "count": 26,
+      "count": 25,
       "ip": "192.168.4.147"
     },
     {
-      "count": 19,
-      "ip": "192.168.4.152"
+      "count": 7,
+      "ip": "192.168.4.203"
     },
     {
       "count": 3,
-      "ip": "192.168.4.197"
+      "ip": "192.168.4.110"
+    },
+    {
+      "count": 2,
+      "ip": "192.168.4.152"
     },
     {
       "count": 1,
-      "ip": "192.168.4.139"
+      "ip": "192.168.4.148"
     }
   ],
   "top_domains": [
     {
-      "count": 72,
+      "count": 60,
       "domain": "query[A]"
     },
     {
-      "count": 28,
+      "count": 30,
       "domain": "query[AAAA]"
     },
     {
-      "count": 1,
+      "count": 4,
       "domain": "query[type=65]"
     }
   ],
   "blocked_attempts": [
     {
-      "count": 22,
+      "count": 10,
       "domain": "config"
     }
   ],
@@ -57,8 +61,8 @@
     }
   ],
   "unknown_sources": [
-    "192.168.4.139",
+    "192.168.4.110",
     "192.168.4.152",
-    "192.168.4.197"
+    "192.168.4.203"
   ]
 }
