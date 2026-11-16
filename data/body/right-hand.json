@@ -1,0 +1,76 @@
+{
+  "name": "eastGate Right Hand",
+  "description": "ALL repos pinned to eastGate — Gaia's right hand in the LAN",
+  "timestamp": "2026-11-16T17:20:00-05:00",
+  "gate": "eastGate (.244)",
+  "role": "BRAIN + RIGHT HAND",
+  
+  "inventory": {
+    "springs": {
+      "count": 12,
+      "size": "8.1GB",
+      "repos": ["airSpring", "brainchip_devhub", "brainchip_models", "coralForge", 
+                "groundSpring", "healthSpring", "hotSpring", "ludoSpring",
+                "neuralSpring", "primalSpring", "rustChip", "wetSpring"]
+    },
+    "gardens": {
+      "count": 14,
+      "size": "99MB",
+      "repos": ["blueFish", "bonsai-bt-upstream", "cellMembrane", "dromedary",
+                "esotericWebb", "gaiaChuteDrip", "helixVision", "initioChem",
+                "inkFish", "lithoSpore", "metalForge", "projectFOUNDATION",
+                "projectNUCLEUS", "spore"]
+    },
+    "infra": {
+      "count": 29,
+      "size": "3.3GB",
+      "repos": ["agentReagents", "benchScale", "biomeOS", "bluegate-tenancy",
+                "campfire-site", "cellMembrane", "cns", "detroit", "fossilRecord",
+                "galaxy", "hooks", "hud", "hypothesis", "lansingPride", "membrane",
+                "mesh", "npu", "opsonize-rs", "plasmidBin", "publicRecord",
+                "reed-it", "scripts", "signal", "tuebor", "tuebor-repo",
+                "wateringHole", "whitePaper", "gaia-needle", "gate"]
+    },
+    "primals": {
+      "count": 18,
+      "size": "13GB",
+      "repos": ["barraCuda", "bearDog", "bingoCube", "biomeOS", "coralReef",
+                "dromedary", "loamSpine", "nestGate", "petalTongue", "rhizoCrypt",
+                "skunkBat", "songBird", "sourDough", "squirrel", "swarmVine",
+                "sweetGrass", "toadStool"]
+    },
+    "pin": {
+      "count": 25,
+      "size": "1.4GB",
+      "note": "Newly pinned from Forgejo — orgs that weren't submodules",
+      "orgs": {
+        "amicusContra": ["briefs", "poison-pill", "scyBorg", "talos"],
+        "defendDetroit": ["blackbook", "cash4kids", "publicRecord", "tuebor"],
+        "esotericWebb": ["KenshiReborn"],
+        "protoKarya": ["amoeba", "atlasHugged", "footPrint", "inkFish", "pns-amoeba", "tideGlass"],
+        "syntheticChemistry": ["ionChannel"],
+        "blueGate": ["messenger", "sporePrint"],
+        "ecoPrimals": ["caddy", "footPrint", "gaia-seed", "membrane-recipe", "rustdesk", "tideGlass", "zola"]
+      }
+    }
+  },
+
+  "totals": {
+    "repos_on_disk": 98,
+    "repos_on_forgejo": 144,
+    "disk_usage": "26GB",
+    "coverage": "98/144 (68%) — remaining are mirrors/duplicates"
+  },
+
+  "services": {
+    "epson_daemon": ":8084 — scanner mouth + printer voice",
+    "steam_mesh": ":8085 — game transport lubricant", 
+    "gaia_gate": ":8443 — thymus, 41 endpoints",
+    "gaia_fleet": ":11435 — 42 Ollama models, 4 GPUs",
+    "gaia_web": ":8080 — main site",
+    "gaia_pi_data": ":5926 — data server",
+    "gaia_sky": ":various — sky server",
+    "gaia_inference": ":various — water lock",
+    "gaia_ear": ":various — sporeGate Brio cochlea"
+  }
+}
