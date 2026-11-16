@@ -1,0 +1,44 @@
+{
+  "timestamp": "2026-11-16T18:13:00-05:00",
+  "wave": "240e-bt",
+  "bt_beacons": {
+    "eastGate":  {"mac": "C8:5E:A9:C9:6F:84", "chip": "Intel AX201", "bt": "5.2", "house": 1, "role": "BRAIN"},
+    "frameGate": {"mac": "90:82:C3:74:12:CB", "chip": "Snapdragon", "bt": "5.3", "house": 1, "role": "FACE"},
+    "Pixel":     {"mac": "E8:D5:2B:51:36:39", "chip": "Tensor G3", "bt": "5.3", "house": 1, "role": "LEFT EYE"},
+    "Epson":     {"mac": "D6:80:8B:1B:9F:01", "chip": "unknown", "bt": "4.x", "house": 1, "role": "PRINTER"},
+    "ironGate":  {"mac": "10:F6:0A:54:57:D0", "chip": "unknown", "bt": "5.x", "house": 2, "role": "FORGE 2"},
+    "southGate": {"mac": "C8:A3:E8:FB:94:4A", "chip": "unknown", "bt": "5.x", "house": 2, "role": "SOUTH"},
+    "milkGate":  {"mac": "C0:8B:27:9C:63:ED", "chip": "SpacemiT", "bt": "5.x", "house": 2, "role": "RISC-V"}
+  },
+  "wifi_beacons": {
+    "flint2": {
+      "ip": "192.168.4.9",
+      "ssh": true,
+      "chipset": "MediaTek WiFi 6",
+      "radios": [
+        {"ssid": "Aperture Science", "band": "2.4GHz", "mode": "HE40", "rate_mbps": 1147},
+        {"ssid": "GAIA", "band": "2.4GHz", "mode": "HE40", "rate_mbps": 1147},
+        {"ssid": "Black Mesa", "band": "5GHz", "mode": "HE160", "rate_mbps": 4803},
+        {"ssid": "GAIA", "band": "5GHz", "mode": "HE160", "rate_mbps": 4803}
+      ]
+    },
+    "jetstream": {
+      "ip": "192.168.4.111",
+      "http": true, "https": true, "ssh": true,
+      "role": "10G fiber bridge, House 2 switch"
+    }
+  },
+  "discovered_neighbors": [
+    {"mac": "10:C7:53:73:51:11", "name": "Android TV", "house": 2},
+    {"mac": "4E:2B:CC:92:00:69", "brand": "Apple", "house": 1},
+    {"mac": "72:45:2C:6F:77:64", "brand": "Apple", "house": 2}
+  ],
+  "totals": {
+    "bt_beacons": 7,
+    "wifi_ssids": 10,
+    "fiber_spines": 1,
+    "managed_switches": 1,
+    "neighbor_count": 3
+  },
+  "spatial_proof": "House 1 and House 2 see DIFFERENT BT devices — location-aware signal mesh"
+}
