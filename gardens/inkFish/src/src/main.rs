@@ -27,6 +27,7 @@ mod triad;
 mod controller;
 mod beacon;
 mod ludo_bridge;
+mod mirror;
 
 use clap::Parser;
 
@@ -67,6 +68,14 @@ enum Cli {
         #[arg(long, default_value = "10")]
         duration: u32,
     },
+    /// Mirror — pull northGate game library, push streams to Frame.
+    Mirror,
+    /// Run KenshiReborn scan — parse all game meshes/textures on local data.
+    Kenshi {
+        /// Subcommand: scan, flow, render.
+        #[arg(default_value = "scan")]
+        mode: String,
+    },
 }
 
 #[tokio::main]
@@ -89,6 +98,29 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Controller => controller::show_controller(),
         Cli::Bridge => ludo_bridge::show_bridge(),
         Cli::Scan { duration } => beacon::run_scan(duration).await?,
+        Cli::Mirror => mirror::run_mirror().await?,
+        Cli::Kenshi { mode } => {
+            let kenshi_bin = std::env::current_exe()?
+                .parent()
+                .unwrap_or(std::path::Path::new("."))
+                .join("kenshi-reborn");
+            if kenshi_bin.exists() {
+                let flag = match mode.as_str() {
+                    "scan" => "--scan",
+                    "flow" => "--flow",
+                    _ => "",
+                };
+                let mut cmd = std::process::Command::new(&kenshi_bin);
+                if !flag.is_empty() { cmd.arg(flag); }
+                let status = cmd.status()?;
+                if !status.success() {
+                    eprintln!("kenshi-reborn exited with: {status}");
+                }
+            } else {
+                eprintln!("kenshi-reborn binary not found at {}", kenshi_bin.display());
+                eprintln!("Build it: cd pin/esotericWebb/KenshiReborn/engine/kenshi-reborn && cargo build --release");
+            }
+        }
     }
 
     Ok(())

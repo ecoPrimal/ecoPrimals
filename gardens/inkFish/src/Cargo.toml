@@ -21,6 +21,7 @@ tracing-subscriber = { workspace = true }
 clap.workspace = true
 tokio.workspace = true
 humantime = "2"
+chrono = "0.4"
 
 [lints]
 workspace = true

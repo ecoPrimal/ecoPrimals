@@ -1,0 +1,27 @@
+{
+  "data": {
+    "hitboxes": 3995,
+    "meshes": 3277,
+    "skeletons": 33,
+    "textures": 1907,
+    "zones": 701
+  },
+  "engine": "KenshiReborn",
+  "gpu": {
+    "backend": "Vulkan",
+    "name": "NVIDIA GeForce RTX 4070"
+  },
+  "mesh_analysis": {
+    "parsed": 3277,
+    "submeshes": 3524,
+    "total_indices": 22707042,
+    "total_vertices": 22406095,
+    "triangles": 7569014
+  },
+  "timing_ms": {
+    "mesh_parse": 2850,
+    "total": 2950
+  },
+  "version": "0.2.0",
+  "wave": 258
+}

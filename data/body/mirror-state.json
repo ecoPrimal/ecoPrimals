@@ -1,0 +1,1438 @@
+{
+  "hosts": [
+    {
+      "hostname": "tamison",
+      "ip": "192.168.4.147",
+      "app_ids": [
+        108600,
+        228980,
+        233860,
+        250820,
+        305620,
+        333640,
+        362490,
+        413150,
+        431240,
+        435120,
+        452070,
+        480490,
+        482400,
+        526870,
+        532110,
+        546560,
+        674140,
+        686060,
+        744190,
+        794260,
+        835960,
+        848480,
+        881100,
+        1031460,
+        1084600,
+        1145960,
+        1292940,
+        1295660,
+        1368140,
+        1371980,
+        1422450,
+        1433990,
+        1449110,
+        1458140,
+        1466060,
+        1515210,
+        1562430,
+        1569580,
+        1574580,
+        1588550,
+        1592280,
+        1627720,
+        1640820,
+        1643320,
+        1649950,
+        1657630,
+        1762930,
+        1771300,
+        1877960,
+        1887840,
+        1944430,
+        1962700,
+        1963610,
+        2026000,
+        2057760,
+        2124120,
+        2135150,
+        2186680,
+        2186990,
+        2285550,
+        2291850,
+        2321470,
+        2350790,
+        2358720,
+        2379780,
+        2497920,
+        2524850,
+        2585830,
+        2622380,
+        2897610,
+        2950790,
+        2956680,
+        3024040,
+        3199650,
+        3244220,
+        3280350,
+        3321460,
+        3357650,
+        3361470,
+        3372980,
+        3373660,
+        3405340,
+        3407390,
+        3472550,
+        3527290,
+        3641000,
+        3681010,
+        3812600,
+        3838370,
+        3990420,
+        4197610,
+        4519130,
+        4711740,
+        4992070
+      ],
+      "sunshine_alive": true,
+      "remote_play_alive": true,
+      "last_seen": "2026-11-16T18:33:00"
+    },
+    {
+      "hostname": "steamdeck",
+      "ip": "192.168.4.176",
+      "app_ids": [
+        620,
+        40800,
+        71340,
+        105600,
+        200910,
+        218060,
+        219150,
+        228980,
+        237930,
+        250760,
+        250900,
+        274170,
+        288470,
+        311690,
+        330020,
+        413150,
+        457140,
+        460950,
+        473950,
+        557340,
+        587620,
+        590380,
+        597760,
+        629820,
+        632360,
+        638230,
+        646570,
+        681280,
+        681730,
+        699170,
+        751780,
+        753640,
+        774201,
+        788100,
+        814370,
+        834530,
+        861540,
+        905340,
+        917720,
+        972660,
+        1016790,
+        1035560,
+        1069530,
+        1070560,
+        1089980,
+        1092790,
+        1139900,
+        1142080,
+        1145360,
+        1154810,
+        1190170,
+        1229380,
+        1391110,
+        1488200,
+        1493710,
+        1593500,
+        1628350,
+        1794680,
+        1887720,
+        2321470,
+        2379780,
+        2805730,
+        4183110,
+        4628710
+      ],
+      "sunshine_alive": false,
+      "remote_play_alive": false,
+      "last_seen": "2026-11-16T18:33:00"
+    },
+    {
+      "hostname": "eastgate",
+      "ip": "192.168.4.244",
+      "app_ids": [
+        228980,
+        233860,
+        250820,
+        526870,
+        686060,
+        1070560,
+        1391110,
+        1493710,
+        1628350,
+        1640820,
+        1657630,
+        2180100,
+        3280350,
+        3373660,
+        3405340,
+        3681010,
+        4183110
+      ],
+      "sunshine_alive": false,
+      "remote_play_alive": false,
+      "last_seen": "2026-11-16T18:33:00"
+    }
+  ],
+  "games": [
+    {
+      "app_id": 108600,
+      "name": "Project Zomboid",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 228980,
+      "name": "Crusader Kings III",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 233860,
+      "name": "Kenshi",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 250820,
+      "name": "SteamVR",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 305620,
+      "name": "The Long Dark",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 333640,
+      "name": "Caves of Qud",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 362490,
+      "name": "Frostpunk",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 413150,
+      "name": "Stardew Valley",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 431240,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 435120,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 452070,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 480490,
+      "name": "Prey",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 482400,
+      "name": "Obduction",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 526870,
+      "name": "Satisfactory",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 532110,
+      "name": "Black Mesa",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 546560,
+      "name": "Half-Life: Alyx",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 674140,
+      "name": "VTOL VR",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 686060,
+      "name": "Pavlov VR",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 744190,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 794260,
+      "name": "Outward",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 835960,
+      "name": "Into the Breach",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 848480,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 881100,
+      "name": "Noita",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1031460,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1084600,
+      "name": "Budget Cuts 2",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1145960,
+      "name": "Hades",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1292940,
+      "name": "Sniper Elite VR",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1295660,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1368140,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1371980,
+      "name": "Population: One",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1422450,
+      "name": "Demeo",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1433990,
+      "name": "Creed: Rise to Glory",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1449110,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1458140,
+      "name": "Zenith: The Last City",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1466060,
+      "name": "Red Matter 2",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1515210,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1562430,
+      "name": "BONELAB",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1569580,
+      "name": "Wanderer",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1574580,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1588550,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1592280,
+      "name": "Blade and Sorcery",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1627720,
+      "name": "Kayak VR: Mirage",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1640820,
+      "name": "Gorilla Tag",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1643320,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1649950,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1657630,
+      "name": "Thief Simulator VR",
+      "vr": true,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1762930,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1771300,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1877960,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1887840,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1944430,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1962700,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 1963610,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2026000,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2057760,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2124120,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2135150,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2186680,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2186990,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2285550,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2291850,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2321470,
+      "name": "Lethal Company",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2350790,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2358720,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2379780,
+      "name": "Balatro",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2497920,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2524850,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2585830,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2622380,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2897610,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2950790,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 2956680,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3024040,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3199650,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3244220,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3280350,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3321460,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3357650,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3361470,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3372980,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3373660,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3405340,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3407390,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3472550,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3527290,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3641000,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3681010,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3812600,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3838370,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 3990420,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 4197610,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 4519130,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 4711740,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 4992070,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "tamison",
+      "can_stream": true
+    },
+    {
+      "app_id": 620,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 40800,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 71340,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 105600,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 200910,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 218060,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 219150,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 228980,
+      "name": "Crusader Kings III",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 237930,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 250760,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 250900,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 274170,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 288470,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 311690,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 330020,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 413150,
+      "name": "Stardew Valley",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 457140,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 460950,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 473950,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 557340,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 587620,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 590380,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 597760,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 629820,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 632360,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 638230,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 646570,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 681280,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 681730,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 699170,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 751780,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 753640,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 774201,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 788100,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 814370,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 834530,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 861540,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 905340,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 917720,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 972660,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1016790,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1035560,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1069530,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1070560,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1089980,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1092790,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1139900,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1142080,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1145360,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1154810,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1190170,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1229380,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1391110,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1488200,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1493710,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1593500,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1628350,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1794680,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 1887720,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 2321470,
+      "name": "Lethal Company",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 2379780,
+      "name": "Balatro",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 2805730,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 4183110,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 4628710,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "steamdeck",
+      "can_stream": false
+    },
+    {
+      "app_id": 228980,
+      "name": "Crusader Kings III",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 233860,
+      "name": "Kenshi",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 250820,
+      "name": "SteamVR",
+      "vr": true,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 526870,
+      "name": "Satisfactory",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 686060,
+      "name": "Pavlov VR",
+      "vr": true,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 1070560,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 1391110,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 1493710,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 1628350,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 1640820,
+      "name": "Gorilla Tag",
+      "vr": true,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 1657630,
+      "name": "Thief Simulator VR",
+      "vr": true,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 2180100,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 3280350,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 3373660,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 3405340,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 3681010,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    },
+    {
+      "app_id": 4183110,
+      "name": "(unknown)",
+      "vr": false,
+      "source_host": "eastgate",
+      "can_stream": false
+    }
+  ],
+  "moonlight_installed": true,
+  "sunshine_paired": false,
+  "frame_reachable": true,
+  "active_streams": 0,
+  "timestamp": "2026-11-16T18:33:00"
+}
