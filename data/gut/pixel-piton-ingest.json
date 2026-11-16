@@ -1,0 +1,42 @@
+{
+  "piton": "Pixel",
+  "device": "Pixel 8a (akita)",
+  "serial": "44251JEKB04957",
+  "timestamp": "2026-11-16T14:14:52Z",
+  "ropes": {
+    "usb_adb": true,
+    "wifi": {
+      "ssid": "GAIA",
+      "rssi_dbm": -19,
+      "freq_mhz": 0,
+      "link_mbps": 1134,
+      "ip": "192.168.4.135"
+    },
+    "cellular": {
+      "5g_nr_rsrp": -109,
+      "state": "standby"
+    }
+  },
+  "battery": {
+    "level": 100
+level:,
+    "status": 4,
+    "temp_c": 27.1
+  },
+  "memory_available_kb": 2668804,
+  "uptime": " 14:15:00 up  1:57,  0 users,  load average: 0.85, 0.56, 0.47",
+  "wifi_scan": [{"bssid":"78:76:89:96:e5:83","freq":5765,"rssi":-44,"ssid":"Aperture"},{"bssid":"78:76:89:96:e5:82","freq":2462,"rssi":-31,"ssid":"[RSN-SAE-CCMP-128][MFPR][MFPC]"},{"bssid":"ec:c3:02:e1:11:8c","freq":5765,"rssi":-59,"ssid":"ATTypcbDbY"},{"bssid":"82:c9:70:cf:f6:7c","freq":2417,"rssi":-20,"ssid":"GAIA"},{"bssid":"fa:8f:ca:78:4a:64","freq":2412,"rssi":-82,"ssid":"[ESS]"},{"bssid":"be:a2:c1:e8:df:01","freq":2417,"rssi":-20,"ssid":"Aperture"},{"bssid":"ce:ef:ef:30:b5:f3","freq":5280,"rssi":-29,"ssid":"GAIA"},{"bssid":"ec:c3:02:e1:11:88","freq":5180,"rssi":-66,"ssid":"ATTypcbDbY"},{"bssid":"22:2f:9f:44:79:13","freq":5280,"rssi":-28,"ssid":"Black"},{"bssid":"ec:c3:02:e1:11:84","freq":2437,"rssi":-45,"ssid":"ATTypcbDbY"},{"bssid":"7c:a7:b0:ef:3c:7b","freq":2422,"rssi":-82,"ssid":"CC_A21C_3c7b_0_34"},{"bssid":"78:76:89:96:e5:84","freq":2462,"rssi":-31,"ssid":"Aperture"},{"bssid":"78:76:89:96:e5:86","freq":2462,"rssi":-31,"ssid":"[ESS]"}],
+  "sensors": {
+    "accelerometer": "active",
+    "gyroscope": "active",
+    "magnetometer": "active",
+    "light": "active",
+    "pressure": "active",
+    "proximity": "active"
+  },
+  "walls_crossed": [
+    "wifi → USB (wireless to wired)",
+    "cellular → LAN (5G NR to flat subnet via WiFi bridge)",
+    "House1 ↔ House2 (Pixel physically moves, ropes stretch)"
+  ]
+}
