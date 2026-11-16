@@ -253,3 +253,7 @@ def start(port=SMTP_PORT):
     while True:
         conn, addr = srv.accept()
         threading.Thread(target=NeutrinoSMTP(conn, addr).handle, daemon=True).start()
+
+
+if __name__ == "__main__":
+    start()
