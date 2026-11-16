@@ -36,7 +36,7 @@ GATES = {
     "northGate": {"url": "http://192.168.4.147:11434",    "gpu": "RTX 5090",  "vram": 32, "priority": 2},
     "ironGate":  {"url": "http://192.168.4.237:11434",    "gpu": "RTX 5070",  "vram": 12, "priority": 3},
     "southGate": {"url": "http://192.168.4.148:11434",    "gpu": "RTX 4060",  "vram": 8,  "priority": 4},
-    "graftGate": {"url": "http://192.168.4.107:11434",    "gpu": "M4",        "vram": 16, "priority": 5},
+    "graftGate": {"url": "http://192.168.4.106:11434",    "gpu": "M4",        "vram": 16, "priority": 5},
 }
 
 # model → [gate_ids] mapping, refreshed every 30s
