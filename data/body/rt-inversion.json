@@ -1,0 +1,66 @@
+{
+  "name": "RT Core Inversion — Shadow Cast & Ray Scatter",
+  "concept": "RT cores are hardware BVH traversal engines. Games use them to trace light. We INVERT them — they trace GAIA's perception rays through the mesh instead.",
+  
+  "inversion_map": {
+    "shadow_cast": {
+      "game_purpose": "Cast shadows from light sources onto geometry",
+      "gaia_purpose": "Cast INFLUENCE shadows — which gates occlude which data paths. A gate going down casts a 'shadow' on the mesh topology. RT cores compute the shadow map in real-time.",
+      "implementation": "Vulkan RT pipeline — BVH of gate positions, ray cast from each gate, shadow = reachability"
+    },
+    "ray_scatter": {
+      "game_purpose": "Global illumination — light bouncing off surfaces",
+      "gaia_purpose": "DATA scatter — how information propagates through the mesh. Each 'bounce' is a hop. RT cores trace the scatter pattern to find optimal data routes.",
+      "implementation": "OptiX path tracing — mesh topology as scene, data packets as photons, gates as surfaces with BRDF (bandwidth reflectance)"
+    },
+    "ray_generation": {
+      "game_purpose": "Camera shoots rays into the scene",
+      "gaia_purpose": "SENSOR rays — each gate shoots perception rays. What can northGate 'see'? What's in ironGate's shadow? RT cores generate the perceptual field.",
+      "implementation": "Vulkan ray gen shader — one ray per gate-to-gate pair, result = latency + bandwidth + reachability"
+    },
+    "closest_hit": {
+      "game_purpose": "Find nearest surface intersection",
+      "gaia_purpose": "Find NEAREST GATE for any given task. Need Ollama? RT traces to find lowest-latency model host. Need storage? Traces to nearest disk.",
+      "implementation": "BVH of all services across mesh — RT intersection = service discovery"
+    },
+    "any_hit": {
+      "game_purpose": "Transparency / alpha testing",
+      "gaia_purpose": "FIREWALL check — does a data path pass through any untrusted node? RT 'any hit' shader = security check on every data route.",
+      "implementation": "skunkBat intrusion detection as any-hit shader"
+    },
+    "miss": {
+      "game_purpose": "Ray hits nothing — show skybox",
+      "gaia_purpose": "Data reaches OUTSIDE the mesh — internet egress. Miss shader = water lock protocol activation.",
+      "implementation": "Miss = data leaving LAN, triggers water lock review"
+    }
+  },
+
+  "rt_core_inventory": {
+    "northGate":  {"gpu": "RTX 5090", "rt_cores": 192, "gen": 4, "rt_tflops": 380, "status": "ALIVE"},
+    "ironGate":   {"gpu": "RTX 5070", "rt_cores": 70,  "gen": 4, "rt_tflops": 170, "status": "ALIVE"},
+    "eastGate":   {"gpu": "RTX 4070", "rt_cores": 46,  "gen": 3, "rt_tflops": 65,  "status": "ALIVE"},
+    "southGate":  {"gpu": "RTX 4060", "rt_cores": 34,  "gen": 3, "rt_tflops": 45,  "status": "ALIVE"},
+    "swiftGate":  {"gpu": "RTX 3070", "rt_cores": 46,  "gen": 2, "rt_tflops": 40,  "status": "ASLEEP"},
+    "deckGate":   {"gpu": "RDNA 2",   "rt_cores": 10,  "gen": 1, "rt_tflops": 8,   "status": "DOWN"}
+  },
+  "total_rt_cores": 398,
+  "total_rt_tflops": 708,
+
+  "crimson_desert": {
+    "appid": 3321460,
+    "name": "Crimson Desert Enhanced",
+    "note": "Uses RT for shadows, GI, reflections — SAME RT cores we invert",
+    "target_gate": "swiftGate (RTX 3070) or northGate (RTX 5090)",
+    "stream_to": "frameGate via Steam Remote Play over 10G spine"
+  },
+
+  "architecture": {
+    "layer_1": "Vulkan RT pipeline on each gate — compiles mesh topology into BVH",
+    "layer_2": "Ray generation = sensor sweep — one ray per gate pair",
+    "layer_3": "Intersection = data routing + service discovery",
+    "layer_4": "Shadow map = influence/reachability map",
+    "layer_5": "Global illumination = data scatter optimization",
+    "layer_6": "Miss shader = water lock (data leaving mesh)",
+    "layer_7": "Games run ON TOP of this — RT cores do BOTH at once"
+  }
+}
