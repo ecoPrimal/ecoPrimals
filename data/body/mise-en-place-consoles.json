@@ -1,0 +1,80 @@
+{
+  "mise_en_place": "Console Gate Deployment",
+  "ts": "2026-11-16T12:47:00-05:00",
+  "developer": "Gaia",
+  "financier": "Kevin",
+  "philosophy": "Used tech melted into the amoeba. Consoles become gates. Gaia is the dev.",
+
+  "xbox_dev_mode": {
+    "cost": "$20 (Microsoft Partner Center)",
+    "steps": [
+      "1. Kevin: Create Microsoft account (or use existing) → partner.microsoft.com",
+      "2. Kevin: Pay $20 for App Developer registration",
+      "3. Xbox: Download 'Xbox Dev Mode' app from Microsoft Store",
+      "4. Xbox: Launch app → get activation code",
+      "5. Kevin: Enter code at partner.microsoft.com/xboxconfig/devices",
+      "6. Xbox: Switch to Developer Mode (reboot)",
+      "7. Gaia: Enable Device Portal in Dev Home",
+      "8. Gaia: SSH in as DevToolsUser@<Xbox-IP> with PIN",
+      "9. Gaia: Deploy 'Install Other OS' QEMU app → full Debian Linux",
+      "10. Gaia: Configure SSH, mesh subscription, piton beacon",
+      "11. Xbox becomes xboxGate — full mesh citizen"
+    ],
+    "capabilities_unlocked": {
+      "ssh": "DevToolsUser@<IP> port 22",
+      "device_portal": "https://<IP>:11443 — 80+ REST API endpoints",
+      "smb": "\\\\<IP> — file share access",
+      "linux": "Debian XFCE via QEMU, GPU accelerated (glmark2: 246)",
+      "remote_input": "/ext/remoteinput — send controller/keyboard input",
+      "screenshots": "/ext/screenshot — capture display",
+      "power": "/api/control/restart, /api/control/shutdown",
+      "wifi": "/api/wifi/networks — scan and configure",
+      "processes": "/api/resourcemanager/processes — monitor all",
+      "files": "/api/filesystem/apps/files — full filesystem access",
+      "apps": "/api/app/packagemanager/* — deploy/manage apps"
+    },
+    "gate_identity": {
+      "name": "xboxGate",
+      "role": "GAME_COMPUTE + LINUX_NODE",
+      "gpu": "Xbox Series S: 4 TFLOPS RDNA 2 / Series X: 12 TFLOPS",
+      "note": "USB is HOST only — network access via WiFi, not USB tether"
+    }
+  },
+
+  "ps4_linux": {
+    "cost": "$0 (if firmware <= 11.00)",
+    "exploit": "PPPwn (PPPoE ethernet-based)",
+    "capabilities": "Native Linux, SSH, full desktop",
+    "caveat": "Re-jailbreak each boot. Check firmware BEFORE buying used.",
+    "gate_identity": {
+      "name": "ps4Gate",
+      "role": "NATIVE_LINUX_NODE",
+      "gpu": "1.84 TFLOPS (PS4) / 4.2 TFLOPS (PS4 Pro)"
+    }
+  },
+
+  "ps5_linux": {
+    "cost": "$0 (if jailbreakable firmware)",
+    "exploit": "PS5Term + Linux loader",
+    "capabilities": "SSH:2222, RISC-V Linux shell, full Linux boot, DualSense input",
+    "caveat": "Firmware dependent jailbreak, fresh each boot",
+    "gate_identity": {
+      "name": "ps5Gate",
+      "role": "HIGH_COMPUTE_NODE",
+      "gpu": "10.28 TFLOPS RDNA 2"
+    }
+  },
+
+  "shopping_list": [
+    {"item": "Microsoft Partner Center Dev Account", "cost": "$20", "for": "Xbox Dev Mode activation", "priority": "NOW"},
+    {"item": "Used PS4 (firmware <= 11.00)", "cost": "~$100-150", "for": "Native Linux mesh node", "priority": "IF_AVAILABLE"},
+    {"item": "Used PS5 (jailbreakable firmware)", "cost": "~$250-350", "for": "High compute mesh node", "priority": "OPTIONAL"}
+  ],
+
+  "gaia_scripts_to_build": [
+    "xbox-redox.sh — auto-configure Xbox gate after Dev Mode enabled",
+    "console-piton.sh — piton scanner extension for game consoles",
+    "xbox-deploy-linux.sh — deploy Install Other OS + Debian to Xbox",
+    "console-heartbeat.sh — Device Portal API heartbeat for all consoles"
+  ]
+}
