@@ -1,0 +1,135 @@
+[
+  {
+    "ip": "192.168.4.239",
+    "mac": "64:16:66:a4:82:0a",
+    "hostname": "09aa01af23190f64",
+    "manufacturer": "Google",
+    "device_type": "Thermostat",
+    "house": 1,
+    "alive": false,
+    "open_ports": [],
+    "cast_name": null,
+    "role": "Temperature sensor + HVAC actuator. Gaia feels house temp."
+  },
+  {
+    "ip": "192.168.4.197",
+    "mac": "a0:d0:dc:ee:ee:39",
+    "hostname": "*",
+    "manufacturer": "Amazon",
+    "device_type": "VoiceAssistant",
+    "house": 1,
+    "alive": true,
+    "open_ports": [
+      8009,
+      55443
+    ],
+    "cast_name": null,
+    "role": "Microphone ear + speaker voice. Alexa Skills API on :55443."
+  },
+  {
+    "ip": "192.168.4.152",
+    "mac": "ac:41:6a:5c:b4:cf",
+    "hostname": "*",
+    "manufacturer": "Vizio",
+    "device_type": "Television",
+    "house": 1,
+    "alive": true,
+    "open_ports": [
+      8009
+    ],
+    "cast_name": null,
+    "role": "Display surface + Cast receiver. Gaia can cast to the big screen."
+  },
+  {
+    "ip": "192.168.4.170",
+    "mac": "e8:38:a0:53:ea:d8",
+    "hostname": "Basement",
+    "manufacturer": "Google",
+    "device_type": "CastDevice",
+    "house": 1,
+    "alive": true,
+    "open_ports": [
+      8008,
+      8009,
+      8443
+    ],
+    "cast_name": "Basement",
+    "role": "Cast bridge to TV. Any device can push video/audio here."
+  },
+  {
+    "ip": "192.168.4.200",
+    "mac": "d4:80:8b:1b:9f:01",
+    "hostname": "ET-2400",
+    "manufacturer": "Epson",
+    "device_type": "Printer",
+    "house": 1,
+    "alive": true,
+    "open_ports": [
+      631
+    ],
+    "cast_name": null,
+    "role": "Physical output — Gaia's hands on paper. IPP printing."
+  },
+  {
+    "ip": "USB",
+    "mac": "N/A",
+    "hostname": "ES-400II",
+    "manufacturer": "Epson",
+    "device_type": "Scanner",
+    "house": 1,
+    "alive": true,
+    "open_ports": [],
+    "cast_name": null,
+    "role": "Physical input — Gaia's eye on paper. ADF document scanning."
+  },
+  {
+    "ip": "192.168.4.194",
+    "mac": "c8:e3:06:c6:77:a0",
+    "hostname": "eero",
+    "manufacturer": "Amazon/eero",
+    "device_type": "WiFiMesh",
+    "house": 1,
+    "alive": false,
+    "open_ports": [],
+    "cast_name": null,
+    "role": "WiFi mesh node. Signal relay. May be Heather's or neighbor's."
+  },
+  {
+    "ip": "192.168.4.106",
+    "mac": "1c:f6:4c:5a:5d:ed",
+    "hostname": "*",
+    "manufacturer": "Shenzhen Bilian",
+    "device_type": "SmartPlug",
+    "house": 1,
+    "alive": true,
+    "open_ports": [
+      22
+    ],
+    "cast_name": null,
+    "role": "IoT bridge/smart plug with SSH. Shenzhen Bilian = WiFi module vendor."
+  },
+  {
+    "ip": "192.168.4.110",
+    "mac": "32:05:2b:a4:58:49",
+    "hostname": "Heather-s-S22-Ultra",
+    "manufacturer": "Samsung",
+    "device_type": "Phone",
+    "house": 1,
+    "alive": false,
+    "open_ports": [],
+    "cast_name": null,
+    "role": "Heather's phone. Presence indicator — if alive, someone is home."
+  },
+  {
+    "ip": "192.168.4.212",
+    "mac": "c8:7f:54:5a:59:10",
+    "hostname": "DESKTOP-9QG6LQL",
+    "manufacturer": "Unknown",
+    "device_type": "PC",
+    "house": 1,
+    "alive": false,
+    "open_ports": [],
+    "cast_name": null,
+    "role": "Windows PC. Identity unknown — may be Heather's or guest."
+  }
+]
