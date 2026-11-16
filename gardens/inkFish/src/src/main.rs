@@ -25,6 +25,7 @@ mod solar;
 mod parity;
 mod triad;
 mod controller;
+mod beacon;
 
 use clap::Parser;
 
@@ -57,6 +58,12 @@ enum Cli {
     Triad,
     /// Show controller status — Xbox pad as organism HAND.
     Controller,
+    /// Scan all beacons — BT + WiFi, write to organism data.
+    Scan {
+        /// BT scan duration in seconds.
+        #[arg(long, default_value = "10")]
+        duration: u32,
+    },
 }
 
 #[tokio::main]
@@ -77,6 +84,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Parity => parity::show_parity(),
         Cli::Triad => triad::show_triad(),
         Cli::Controller => controller::show_controller(),
+        Cli::Scan { duration } => beacon::run_scan(duration).await?,
     }
 
     Ok(())
