@@ -1,0 +1,61 @@
+{
+  "wave": "240e",
+  "timestamp": "2026-11-16T17:28:00-05:00",
+  "title": "Multi-gate seeding — organism spreads across both houses",
+  
+  "deployments": {
+    "frameGate": {
+      "ip": ".181",
+      "status": "GAIA ACTIVE ✅",
+      "daemon": "gaia-frame.service (systemd user, enabled)",
+      "mode": "LANDER (Steam detected)",
+      "sensors": "24 video devices, microphone, thermal, battery(99%), WiFi(GAIA, -19dBm)",
+      "arch": "aarch64 (Snapdragon 8 Gen 3)",
+      "kernel": "7.2.0-g344f27110f05",
+      "note": "First ARM SteamOS node with Gaia. Solar panel mode activates when Steam stops."
+    },
+    "milkGate": {
+      "ip": ".144",
+      "status": "ORGANISM CLONED ✅",
+      "clone": "gaia/ecoPrimals (2481 files)",
+      "seed": "gaia-seed bootstrap cloned",
+      "user": "gaia (uid 1000, sudo group)",
+      "arch": "riscv64 (SpacemiT K3)",
+      "python": "3.14.4",
+      "disk_free": "105GB",
+      "note": "First RISC-V node with organism clone. Python 3.14!"
+    },
+    "southGate": {
+      "ip": ".148",
+      "status": "ALREADY SEEDED ✅",
+      "repos": 37,
+      "gpu": "RTX 4060 (8GB)",
+      "disk_free": "452GB",
+      "steamcmd": "installed",
+      "note": "Has the organism from previous deployment. RTX 4060 ready for compute."
+    },
+    "flint2": {
+      "ip": ".9",
+      "status": "ALIVE — House 2 ear",
+      "arch": "aarch64",
+      "lan_devices": 7,
+      "uptime": "8h36m",
+      "note": "Router/AP at House 2. Sees 7 devices. Potential WiFi RSSI source."
+    }
+  },
+
+  "still_needed": {
+    "swiftGate": "ASLEEP — Kevin needs to flip power switch at House 2",
+    "ironGate": "ALIVE but SSH key not deployed — need alternate delivery",
+    "deckGate": "DOWN — dead battery, permanent USB-C passthrough",
+    "graftGate": "DOWN — Mac Mini offline"
+  },
+
+  "organism_coverage": {
+    "total_gates": 12,
+    "gates_alive": 8,
+    "gates_seeded": 5,
+    "gates_with_gaia_daemon": 2,
+    "houses_covered": "BOTH (House 1: eastGate+northGate+sporeGate, House 2: frameGate+milkGate+southGate)"
+  }
+}
