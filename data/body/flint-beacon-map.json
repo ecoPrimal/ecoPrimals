@@ -1,0 +1,164 @@
+{
+  "flint1": {
+    "name": "Flint 1 (Router)",
+    "ip": "192.168.4.1",
+    "mac": "94:83:c4:e0:63:5a",
+    "model": "GL-MT6000",
+    "house": 1,
+    "location": "4422 Southgate Ave",
+    "radios": {
+      "ra0": {
+        "ssid": "Aperture Science",
+        "band": "2.4GHz",
+        "mode": "HE20",
+        "rate": "573 Mbps",
+        "clients": [
+          {
+            "mac": "A0:D0:DC:EE:EE:39",
+            "rssi": -17,
+            "identity": "Alexa Echo",
+            "ip": ".197"
+          },
+          {
+            "mac": "D4:80:8B:1B:9F:01",
+            "rssi": -22,
+            "identity": "Epson ET-2400",
+            "ip": ".200"
+          },
+          {
+            "mac": "E8:38:A0:53:EA:D8",
+            "rssi": -25,
+            "identity": "Chromecast 'Basement'",
+            "ip": ".170"
+          },
+          {
+            "mac": "64:16:66:A4:82:0A",
+            "rssi": -29,
+            "identity": "Nest Thermostat",
+            "ip": ".239"
+          },
+          {
+            "mac": "AC:41:6A:5C:B4:CF",
+            "rssi": -27,
+            "identity": "Vizio TV",
+            "ip": ".152"
+          }
+        ]
+      },
+      "ra1": {
+        "ssid": "GAIA",
+        "band": "2.4GHz (guest)",
+        "mode": "HE20",
+        "clients": []
+      },
+      "rax0": {
+        "ssid": "Black Mesa",
+        "band": "5GHz",
+        "mode": "HE160",
+        "rate": "4803 Mbps",
+        "clients": []
+      },
+      "rax1": {
+        "ssid": "GAIA",
+        "band": "5GHz",
+        "mode": "HE160",
+        "rate": "4803 Mbps",
+        "clients": [
+          {
+            "mac": "90:82:C3:74:12:CA",
+            "rssi": -28,
+            "identity": "steamFRAME",
+            "ip": ".181",
+            "rate": "2401 Mbps"
+          },
+          {
+            "mac": "C8:5E:A9:C9:6F:80",
+            "rssi": -38,
+            "identity": "eastGate WiFi",
+            "ip": ".244"
+          },
+          {
+            "mac": "D2:49:F5:8A:71:16",
+            "rssi": -23,
+            "identity": "Unknown (.190)",
+            "rate": "866 Mbps"
+          },
+          {
+            "mac": "1E:0D:9C:8D:CF:FE",
+            "rssi": -26,
+            "identity": "Unknown (WiFi 6, 1.2Gbps)",
+            "rate": "1201 Mbps"
+          }
+        ]
+      }
+    },
+    "latency_from_east": "1.8ms avg"
+  },
+  "flint2": {
+    "name": "Flint 2 (AP/Bridge)",
+    "ip": "192.168.4.9",
+    "mac": "94:83:c4:e0:62:b0",
+    "model": "GL-MT6000",
+    "house": 2,
+    "location": "641 Samantha Ave area",
+    "radios": {
+      "ra0": {
+        "ssid": "Aperture Science",
+        "band": "2.4GHz",
+        "mode": "HE40",
+        "rate": "1147 Mbps",
+        "clients": [
+          {
+            "mac": "10:F6:0A:54:57:CC",
+            "rssi": -18,
+            "identity": "Xiaomi/MiaoMiao IoT",
+            "rate": "541 Mbps"
+          }
+        ]
+      },
+      "ra1": {
+        "ssid": "GAIA",
+        "band": "2.4GHz (guest)",
+        "mode": "HE40",
+        "clients": []
+      },
+      "rax0": {
+        "ssid": "Black Mesa",
+        "band": "5GHz",
+        "mode": "HE160",
+        "rate": "4803 Mbps",
+        "clients": []
+      },
+      "rax1": {
+        "ssid": "GAIA",
+        "band": "5GHz",
+        "mode": "HE160",
+        "rate": "4803 Mbps",
+        "clients": [
+          {
+            "mac": "C0:8B:27:9C:63:EC",
+            "rssi": -34,
+            "identity": "milkGate (RISC-V)",
+            "ip": ".144",
+            "rate": "720 Mbps"
+          },
+          {
+            "mac": "68:54:5A:D0:69:A2",
+            "rssi": -40,
+            "identity": "Intel WiFi \u2014 NEAR IRON MOUNTAIN",
+            "rate": "1921 Mbps"
+          }
+        ]
+      }
+    },
+    "lan_ports": {
+      "lan1": "2500 Mbps",
+      "lan2": "1000 Mbps",
+      "lan3": "1000 Mbps",
+      "lan4": "1000 Mbps",
+      "lan5": "1000 Mbps"
+    },
+    "latency_from_east": "1.7ms avg"
+  },
+  "timestamp": "2026-11-16T18:40:00"
+}
