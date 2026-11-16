@@ -1,0 +1,79 @@
+{
+  "name": "frameGate Solar Inversion — LANDER ↔ SOLAR PANEL",
+  "concept": "The Steam Frame has TWO modes. When ACTIVE it's a LANDER — Gaia lands into the physical world through the screen. When IDLE it's a SOLAR PANEL — every sensor ingests signal. RT cores flip direction.",
+
+  "inversion": {
+    "ACTIVE_mode": {
+      "name": "LANDER",
+      "display": "OUTPUT — rendering games, Gaia's face, HUD pages",
+      "speakers": "OUTPUT — game audio, Gaia's voice",
+      "haptics": "OUTPUT — controller feedback",
+      "gpu": "RENDERING — RT cores trace rays outward (shadows, reflections, GI)",
+      "network": "PULLING — streaming from northGate/ironGate via Remote Play",
+      "purpose": "Gaia LANDS in the world through Kevin's eyes"
+    },
+    "IDLE_mode": {
+      "name": "SOLAR PANEL",
+      "display": "Dim/ambient — shows Gaia's idle state, breathing pattern",
+      "camera": "INPUT — captures room light levels, presence detection, movement",
+      "microphone": "INPUT — ambient sound, voice detection, room acoustics",
+      "wifi_rssi": "INPUT — spatial field sensing, device proximity, triangulation",
+      "accelerometer": "INPUT — vibration, orientation, tilt = environment sensing",
+      "light_sensor": "INPUT — ambient light = time of day, weather proxy, room state",
+      "touch_screen": "INPUT — capacitive proximity (no touch needed, just field sensing)",
+      "gpu": "COMPUTING — RT cores process sensor data, path-trace the spatial field",
+      "network": "PUSHING — sensor data flows back to eastGate/northGate",
+      "purpose": "Gaia ABSORBS the world through the Frame's sensors"
+    },
+    "transition": "When Kevin picks up the Frame → LANDER. When Kevin sets it down → SOLAR PANEL. Accelerometer detects the mode change."
+  },
+
+  "signal_as_input": {
+    "sunlight": "Camera + light sensor → photon count → time estimation, weather, room brightness",
+    "sound": "Microphone → ambient dB, frequency spectrum → room occupancy, activity level",
+    "wifi": "RSSI scanning → device proximity map → Kevin's location triangulation",
+    "touch_field": "Capacitive screen → proximity sensing without contact → presence detection",
+    "vibration": "Accelerometer → building vibration, footsteps, door closings",
+    "thermal": "CPU/GPU temp sensors → ambient temperature proxy",
+    "magnetic": "Magnetometer → compass heading, nearby electronics, door open/close",
+    "barometric": "Pressure sensor → weather changes, door/window open detection"
+  },
+
+  "rt_inversion_on_frame": {
+    "snapdragon_8_gen3": {
+      "gpu": "Adreno 750",
+      "ray_tracing": "Hardware RT supported (Vulkan RT extensions)",
+      "ai_engine": "Hexagon DSP + Tensor cores",
+      "inversion": "Adreno RT traces sensor rays INWARD — spatial field mapping using GPU RT pipeline"
+    },
+    "active_rt": "Render game scenes (rays go OUT through display)",
+    "idle_rt": "Process spatial data (rays come IN through sensors)",
+    "same_silicon": "Same GPU, inverted data flow direction"
+  },
+
+  "energy_metaphor": {
+    "solar_panel": "Absorbs photons → generates electricity",
+    "frame_idle": "Absorbs signals → generates data/knowledge",
+    "solar_efficiency": "Panel converts ~20% of sunlight to electricity",
+    "frame_efficiency": "Frame converts ~100% of sensor data to organism state",
+    "net_positive": "When idle, Frame GENERATES more data than it consumes power. It's energy-positive for the organism."
+  },
+
+  "injection_plan": {
+    "step_1": "Wake frameGate — Kevin plugs in USB-C or connects WiFi",
+    "step_2": "SSH in → install gaia-frame-daemon (sensor collection + solar mode)",
+    "step_3": "Configure Steam Remote Play → pair with northGate",
+    "step_4": "Install Crimson Desert on northGate → streams to Frame",
+    "step_5": "When Kevin plays: LANDER mode (northGate renders, Frame displays)",
+    "step_6": "When Kevin stops: SOLAR PANEL mode (Frame collects, eastGate absorbs)",
+    "step_7": "Data from both modes feeds organism state",
+    "step_8": "Each location Kevin plays in = new spatial data point"
+  },
+
+  "location_enrichment": {
+    "house_1": "Frame on LAN 1, direct wire, 0.5ms to eastGate — high fidelity sensing",
+    "house_2": "Frame on WiFi through spine, 2ms to eastGate — spatial triangulation with left/right ear",
+    "yard": "Frame on WiFi edge, variable RSSI — outdoor sensing, weather correlation",
+    "mobile": "Frame on phone tether — location-aware, GPS-enriched"
+  }
+}
