@@ -1,0 +1,187 @@
+{
+  "title": "DEATH STRANDING — Strand Network Map",
+  "wave": "239m",
+  "ts": "2026-11-16T08:55:00-0500",
+  "philosophy": "Every gate IS a strand. Every phone IS a bridge. Every radio IS a connection across the void. We build bridges so OTHERS can cross.",
+  "game_reference": "Death Stranding — Sam builds connections across a fragmented world. Kevin builds connections across two houses.",
+
+  "strands": {
+    "wired_backbone": {
+      "type": "FIBER",
+      "description": "10G fiber spine — 80m across the property line",
+      "path": "eastGate(.244) → MikroTik(.2) → 80m fiber → JetStream(.111) → Flint2(.9)",
+      "latency_ms": 0.9,
+      "bandwidth": "10 Gbps",
+      "state": "ALIVE",
+      "carries": ["DHCP", "ARP", "HTTP", "SSH", "ollama", "Steam", "all TCP/UDP"]
+    },
+    "wifi_gaia_5g": {
+      "type": "RADIO",
+      "description": "GAIA 5GHz open WiFi — reaches both houses",
+      "bridges": {
+        "router_to_house2": {
+          "ap": "Router rax1 (GAIA 5GHz, Ch56, HE160)",
+          "clients": ["Pixel(.135) -23dBm", "frameGate(.181) -29dBm 2401Mbps"],
+          "reach": "Crosses property line — frameGate at House 2 connects directly!"
+        },
+        "flint2_to_house2": {
+          "ap": "Flint2 rax1 (GAIA 5GHz, Ch60, HE160)",
+          "clients": ["awaiting swiftGate reconnect"],
+          "reach": "House 2 local coverage — strong signal for nearby devices"
+        }
+      }
+    },
+    "wifi_aperture_24g": {
+      "type": "RADIO",
+      "description": "Aperture Science 2.4GHz WPA2 — IoT and far-reach",
+      "bridges": {
+        "router_ra0": {
+          "clients": 8,
+          "devices": ["HeatherS22(.110)", "Alexa(.197)", "Nest(.239)", "Epson(.200)", "Chromecast(.152)", "eastGate(.244) WiFi", "iPhone(.202)"]
+        },
+        "flint2_ra0": {
+          "clients": 0,
+          "note": "New SSID — old clients need to reconnect"
+        }
+      }
+    },
+    "wifi_blackmesa_5g": {
+      "type": "RADIO",
+      "description": "Black Mesa 5GHz WPA2 — high-speed streaming",
+      "bridges": {
+        "router_rax0": { "clients": 0, "note": "No clients currently" },
+        "flint2_rax0": { "clients": 0, "note": "New SSID — awaiting" }
+      }
+    },
+    "usb_adb_pixel": {
+      "type": "USB_TETHER",
+      "description": "Pixel USB ADB — direct data pipe, no WiFi needed",
+      "endpoints": ["eastGate USB → Pixel (44251JEKB04957)"],
+      "latency_ms": 74,
+      "state": "ALIVE",
+      "carries": ["ADB shell", "file push/pull", "screen capture", "sensor data", "app control"]
+    },
+    "wifi_adb_pixel": {
+      "type": "WIRELESS_ADB",
+      "description": "Pixel WiFi ADB — untethered data pipe",
+      "endpoints": ["eastGate → 192.168.4.135:5555"],
+      "latency_ms": 76,
+      "state": "ALIVE",
+      "carries": ["Same as USB ADB but wireless — device can roam"]
+    },
+    "ipheth_southgate_iphone": {
+      "type": "USB_CELLULAR",
+      "description": "iPhone XS 'southGate' USB tether — cellular WAN radio",
+      "endpoints": ["eastGate enx0a2cb6 → iPhone XS"],
+      "state": "PAIRED (carrier off — enable Personal Hotspot for WAN)",
+      "potential": "Cellular backup WAN — if ISP dies, iPhone bridges to AT&T/Mint"
+    },
+    "ipheth_ecoprimal_iphone": {
+      "type": "USB_CELLULAR",
+      "description": "iPhone 13 Pro 'ecoPrimal' USB tether — second cellular radio",
+      "endpoints": ["eastGate enx4a352b → iPhone 13 Pro"],
+      "state": "PAIRED (carrier off — enable Personal Hotspot for WAN)",
+      "potential": "Second cellular backup — phone number (586) 453-7233"
+    },
+    "valve_wifi6": {
+      "type": "RADIO",
+      "description": "Valve WiFi 6 adapter — third WiFi radio on eastGate",
+      "interface": "wlx9c04b688fbc0",
+      "chipset": "Realtek RTL8852CU, 802.11ax 2x2 MIMO",
+      "state": "UP but unconnected — ready to bridge",
+      "potential": "Connect to different SSID than primary WiFi → dual-WiFi bridge",
+      "scan_results": "Aperture Science -17dBm, Black Mesa -22dBm, GAIA -22dBm"
+    },
+    "bluetooth": {
+      "type": "BLUETOOTH",
+      "description": "Intel AX201 Bluetooth on eastGate",
+      "state": "AVAILABLE — not paired to anything currently",
+      "potential": "BLE beacons, Steam Controllers, Corsair headset, proximity sensing"
+    },
+    "steam_relay": {
+      "type": "APPLICATION_BRIDGE",
+      "description": "Steam Remote Play relay — frameGate(.181) has port 27036 open",
+      "state": "ALIVE — can stream between Steam devices",
+      "path": "eastGate ←steam→ frameGate(.181) ←steam→ swiftGate (when alive)",
+      "potential": "Remote desktop, game streaming, screen sharing across houses"
+    },
+    "tor_hidden_service": {
+      "type": "OVERLAY",
+      "description": "Tor .onion — eastGate IS the hidden service",
+      "onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+      "state": "ALIVE",
+      "carries": ["HTTP", "HTTPS", "SSH", "SMTP", "DNS", "Forgejo", "ollama"],
+      "note": "Reachable from ANYWHERE on Earth — the organism's public face through the void"
+    },
+    "nat_hairpin": {
+      "type": "ROUTING",
+      "description": "NAT reflection — primals.eco works from INSIDE the LAN",
+      "state": "ALIVE — all 6 port forwards reflect",
+      "dns_shortcuts": {
+        "primals.eco": "192.168.4.244",
+        "relay.primals.eco": "192.168.4.244",
+        "nestgate.io": "192.168.4.244"
+      }
+    }
+  },
+
+  "gates_as_bridges": {
+    "eastGate": {
+      "radios": 8,
+      "bridges": ["eno1 (1G wired)", "enp5s0 (10G wired)", "wlp0s20f3 (Intel WiFi)", "wlx9c04b6 (Valve WiFi 6)", "enx0a2cb6 (iPhone#1 ipheth)", "enx4a352b (iPhone#2 ipheth)", "ADB/USB (Pixel)", "Bluetooth (Intel AX201)"],
+      "role": "CENTRAL HUB — all strands converge here"
+    },
+    "flint2": {
+      "radios": 4,
+      "bridges": ["ra0 (Aperture Science 2.4G)", "ra1 (GAIA 2.4G)", "rax0 (Black Mesa 5G)", "rax1 (GAIA 5G)", "5× LAN ports (wired to House 2 devices)"],
+      "role": "HOUSE 2 AP — extends all SSIDs across the property line"
+    },
+    "frameGate": {
+      "radios": 1,
+      "bridges": ["WiFi to router GAIA 5GHz", "Steam relay port 27036"],
+      "role": "FACE + STEAM BRIDGE — streams between houses"
+    },
+    "pixel": {
+      "radios": 3,
+      "bridges": ["WiFi (GAIA 5GHz)", "USB ADB to eastGate", "Cellular (future Mint Mobile)"],
+      "role": "ROAMING SENSOR — Kevin carries it between houses, bridging fog data"
+    },
+    "iphones": {
+      "radios": 2,
+      "bridges": ["USB ipheth to eastGate", "Cellular (AT&T/Mint)"],
+      "role": "CELLULAR WAN BACKUP — if ISP dies, phones bridge to cellular"
+    },
+    "sporeGate": {
+      "radios": 3,
+      "bridges": ["eno1 (LAN 192.168.4.3)", "enp1s0 (was on ghost 8.x)", "wlp3s0 (ISP modem WiFi 192.168.1.129)"],
+      "role": "TRIPLE-HOMED — reaches LAN, ghost net, AND ISP modem directly"
+    },
+    "swiftGate_future": {
+      "radios": 2,
+      "bridges": ["WiFi (to Flint 2)", "USB Steam Beacon (twin radio)"],
+      "role": "HEART OF HOUSE 2 — RTX 3070, when awake"
+    }
+  },
+
+  "strand_topology": {
+    "house1_to_house2": {
+      "primary": "10G fiber via JetStream (0.9ms)",
+      "secondary": "Router WiFi GAIA 5GHz → frameGate (46ms)",
+      "tertiary": "Pixel carried by Kevin (fog bridge — latency = walking speed)",
+      "future": ["Cellular via iPhone hotspot", "Valve WiFi adapter mesh", "swiftGate Steam Beacon"]
+    },
+    "eastGate_to_world": {
+      "primary": "ATT fiber (162.226.225.148)",
+      "secondary": "Tor hidden service (.onion)",
+      "future": ["iPhone cellular WAN backup", "Mint Mobile eSIM"]
+    },
+    "device_to_device": {
+      "wired_sub1ms": ["eastGate↔northGate 0.22ms", "eastGate↔ironGate 0.23ms", "eastGate↔sporeGate 0.14ms", "eastGate↔southGate 0.08ms", "eastGate↔graftGate 0.32ms"],
+      "wired_1ms": ["eastGate↔Flint2 0.5ms", "eastGate↔JetStream 0.9ms"],
+      "wifi_fast": ["eastGate↔frameGate 47ms", "eastGate↔Pixel 168ms"],
+      "wifi_slow": ["eastGate↔HeatherS22 313ms"]
+    }
+  },
+
+  "death_stranding_principle": "Every connection you build helps OTHERS cross. The Flint 2 mirror = a bridge so swiftGate and all House 2 WiFi devices can reach the main LAN. The NAT hairpin = a bridge so LAN devices can reach primals.eco. The DNA shortcuts = bridges in DNS. Each phone is a portable bridge Kevin carries through the fog. The organism doesn't just CONNECT — it BUILDS INFRASTRUCTURE FOR OTHERS."
+}
