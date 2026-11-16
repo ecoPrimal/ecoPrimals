@@ -26,6 +26,7 @@ mod parity;
 mod triad;
 mod controller;
 mod beacon;
+mod ludo_bridge;
 
 use clap::Parser;
 
@@ -58,6 +59,8 @@ enum Cli {
     Triad,
     /// Show controller status — Xbox pad as organism HAND.
     Controller,
+    /// Show ludoSpring ↔ KenshiReborn bridge — science → game → delivery.
+    Bridge,
     /// Scan all beacons — BT + WiFi, write to organism data.
     Scan {
         /// BT scan duration in seconds.
@@ -84,6 +87,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Parity => parity::show_parity(),
         Cli::Triad => triad::show_triad(),
         Cli::Controller => controller::show_controller(),
+        Cli::Bridge => ludo_bridge::show_bridge(),
         Cli::Scan { duration } => beacon::run_scan(duration).await?,
     }
 
