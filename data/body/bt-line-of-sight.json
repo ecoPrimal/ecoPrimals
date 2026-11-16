@@ -1,0 +1,107 @@
+{
+  "bt_scanners": {
+    "eastGate": {
+      "ip": ".244",
+      "house": 1,
+      "bt_mac": "C8:5E:A9:C9:6F:84",
+      "sees": {
+        "D6:80:8B:1B:9F:01": {
+          "name": "ET-2400 (Epson)",
+          "rssi": -95
+        },
+        "5A:2D:D8:B6:75:01": {
+          "name": "Unknown BLE",
+          "rssi": -98
+        },
+        "90:82:C3:74:12:CB": {
+          "name": "steamFRAME",
+          "rssi": -69
+        }
+      }
+    },
+    "steamFRAME": {
+      "ip": ".181",
+      "house": 1,
+      "bt_mac": "90:82:C3:74:12:CB",
+      "sees": {
+        "D6:80:8B:1B:9F:01": {
+          "name": "ET-2400 (Epson)",
+          "rssi": null
+        },
+        "5A:2D:D8:B6:75:01": {
+          "name": "Unknown BLE",
+          "rssi": null
+        },
+        "C8:5E:A9:C9:6F:84": {
+          "name": "eastGate",
+          "rssi": null
+        },
+        "C0:8B:27:9C:63:ED": {
+          "name": "milkGate",
+          "rssi": null
+        },
+        "10:F6:0A:54:57:D0": {
+          "name": "ironGate",
+          "rssi": null
+        }
+      }
+    },
+    "southGate": {
+      "ip": ".148",
+      "house": 2,
+      "bt_mac": "C8:A3:E8:FB:94:4A",
+      "sees": {
+        "10:F6:0A:54:57:D0": {
+          "name": "ironGate",
+          "rssi": null
+        },
+        "C0:8B:27:9C:63:ED": {
+          "name": "milkGate",
+          "rssi": null
+        }
+      }
+    }
+  },
+  "all_bt_macs": {
+    "C8:5E:A9:C9:6F:84": "eastGate",
+    "D6:80:8B:1B:9F:01": "ET-2400 (Epson)",
+    "5A:2D:D8:B6:75:01": "Unknown BLE",
+    "90:82:C3:74:12:CB": "steamFRAME",
+    "C0:8B:27:9C:63:ED": "milkGate",
+    "10:F6:0A:54:57:D0": "ironGate",
+    "C8:A3:E8:FB:94:4A": "southGate"
+  },
+  "shared_line": [
+    {
+      "mac": "5A:2D:D8:B6:75:01",
+      "name": "Unknown BLE"
+    },
+    {
+      "mac": "D6:80:8B:1B:9F:01",
+      "name": "ET-2400 (Epson)"
+    }
+  ],
+  "house1_only": [
+    {
+      "mac": "90:82:C3:74:12:CB",
+      "name": "steamFRAME"
+    }
+  ],
+  "house2_only": [
+    {
+      "mac": "C0:8B:27:9C:63:ED",
+      "name": "milkGate"
+    },
+    {
+      "mac": "10:F6:0A:54:57:D0",
+      "name": "ironGate"
+    },
+    {
+      "mac": "C8:5E:A9:C9:6F:84",
+      "name": "eastGate"
+    }
+  ],
+  "pixel_bt_mac": "E8:D5:2B:51:36:39",
+  "bridge_beacon": "steamFRAME (90:82:C3:74:12:CB)",
+  "timestamp": "2026-11-16T18:55:00"
+}

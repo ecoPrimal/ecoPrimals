@@ -1,0 +1,84 @@
+{
+  "C8:5E:A9:C9:6F:84": {
+    "name": "eastGate",
+    "type": "Intel AX201",
+    "house": 1,
+    "seen_by": [
+      "Frame"
+    ],
+    "role": "BRAIN BT beacon"
+  },
+  "90:82:C3:74:12:CB": {
+    "name": "steamFRAME",
+    "type": "Snapdragon 8 Gen 3 BT",
+    "house": "bridge",
+    "seen_by": [
+      "eastGate"
+    ],
+    "rssi_from_east": -69,
+    "role": "BRIDGE BEACON \u2014 sees both houses"
+  },
+  "C8:A3:E8:FB:94:4A": {
+    "name": "southGate",
+    "type": "Intel/Realtek BT",
+    "house": 2,
+    "seen_by": [],
+    "role": "South Pole BT beacon (scanner only, not scanned)"
+  },
+  "C0:8B:27:9C:63:ED": {
+    "name": "milkGate",
+    "type": "Milk-V BT",
+    "house": 2,
+    "seen_by": [
+      "Frame",
+      "southGate"
+    ],
+    "role": "RISC-V BT beacon at House 2"
+  },
+  "10:F6:0A:54:57:D0": {
+    "name": "ironGate",
+    "type": "Intel WiFi/BT",
+    "house": 2,
+    "seen_by": [
+      "Frame",
+      "southGate"
+    ],
+    "role": "Iron Mountain BT beacon"
+  },
+  "E8:D5:2B:51:36:39": {
+    "name": "Pixel (grapheneGate)",
+    "type": "Tensor G3 BT",
+    "house": "mobile",
+    "seen_by": [],
+    "role": "Rover BT \u2014 Kevin carries between houses"
+  },
+  "A0:5A:5C:0C:E2:A2": {
+    "name": "Switch Pro Controller",
+    "type": "Nintendo BT",
+    "house": 1,
+    "seen_by": [],
+    "role": "HAND \u2014 controller BT (USB wired now)"
+  },
+  "D6:80:8B:1B:9F:01": {
+    "name": "ET-2400 (Epson Printer)",
+    "type": "Epson BT",
+    "house": 1,
+    "seen_by": [
+      "eastGate",
+      "Frame"
+    ],
+    "rssi_from_east": -95,
+    "role": "PRINTER \u2014 ON THE LINE"
+  },
+  "5A:2D:D8:B6:75:01": {
+    "name": "Unknown BLE",
+    "type": "BLE beacon",
+    "house": "?",
+    "seen_by": [
+      "eastGate",
+      "Frame"
+    ],
+    "rssi_from_east": -98,
+    "role": "ON THE LINE \u2014 mystery beacon"
+  }
+}
