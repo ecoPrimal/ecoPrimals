@@ -22,6 +22,7 @@ mod mesh;
 mod streaming;
 mod ar_interweave;
 mod solar;
+mod parity;
 
 use clap::Parser;
 
@@ -48,6 +49,8 @@ enum Cli {
     Solar,
     /// Show the full organism gaming topology.
     Topology,
+    /// Show parity scores — how close each device is to Steam-grade.
+    Parity,
 }
 
 #[tokio::main]
@@ -65,6 +68,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Stream { gate, frame } => streaming::start_cross_stream(&gate, &frame).await?,
         Cli::Solar => solar::run_solar().await?,
         Cli::Topology => mesh::show_topology().await?,
+        Cli::Parity => parity::show_parity(),
     }
 
     Ok(())
