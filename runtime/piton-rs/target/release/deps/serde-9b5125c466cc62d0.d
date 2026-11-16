@@ -1,0 +1,14 @@
+/home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/deps/serde-9b5125c466cc62d0.d: /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/build/serde-64a29fcdc11209e4/out/private.rs
+
+/home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/deps/libserde-9b5125c466cc62d0.rlib: /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/build/serde-64a29fcdc11209e4/out/private.rs
+
+/home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/deps/libserde-9b5125c466cc62d0.rmeta: /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/build/serde-64a29fcdc11209e4/out/private.rs
+
+/home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs:
+/home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs:
+/home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs:
+/home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs:
+/home/eastgate/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs:
+/home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/build/serde-64a29fcdc11209e4/out/private.rs:
+
+# env-dep:OUT_DIR=/home/eastgate/Development/ecoPrimals/runtime/piton-rs/target/release/build/serde-64a29fcdc11209e4/out
