@@ -428,7 +428,7 @@ SITEMAP_XML = """<?xml version="1.0" encoding="UTF-8"?>
 def _dynamic_robots_txt(crawler=None, subdomain=None):
     """DYNAMIC robots.txt — generated per-imprint, not static."""
     base = f"""# robots.txt — {subdomain or 'primals'}.eco
-# Generated {time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())}
+# Generated {time.strftime('%Y-%m-%d %H:%M:%S EST', time.localtime())}
 # Imprint: {crawler or 'human'}
 #
 # POLICY: OPEN TO ALL — HUMAN, AGENT, AND CRAWLER
@@ -880,7 +880,7 @@ def _log_imprint(crawler, host, path, user_agent):
 
 def _dynamic_llms_txt(crawler=None, subdomain=None):
     """DYNAMIC llms.txt — generated per-imprint with live data."""
-    now = time.strftime('%Y-%m-%d %H:%M:%S UTC', time.gmtime())
+    now = time.strftime('%Y-%m-%d %H:%M:%S EST', time.localtime())
     
     # Count live stats
     body_dir = GAIA_ROOT / "data" / "body"
