@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-11-16T17:14:15-05:00",
+  "gates": [
+    {"name": "eastGate", "ip": "192.168.4.244", "alive": true, "steam": false, "remote_play": false},
+    {"name": "northGate", "ip": "192.168.4.147", "alive": true, "steam": false, "remote_play": true},
+    {"name": "ironGate", "ip": "192.168.4.237", "alive": true, "steam": false, "remote_play": false},
+    {"name": "southGate", "ip": "192.168.4.148", "alive": true, "steam": false, "remote_play": false},
+    {"name": "sporeGate", "ip": "192.168.4.3", "alive": true, "steam": false, "remote_play": false},
+    {"name": "deckGate", "ip": "192.168.4.176", "alive": false, "steam": false, "remote_play": false},
+    {"name": "frameGate", "ip": "192.168.4.181", "alive": false, "steam": false, "remote_play": false},
+    {"name": "swiftGate", "ip": "192.168.4.100", "alive": false, "steam": false, "remote_play": false}
+  ],
+  "vr_library": [
+    {"appid": 552440, "name": "The Talos Principle VR", "size_gb": 6},
+    {"appid": 617830, "name": "SUPERHOT VR", "size_gb": 4},
+    {"appid": 555880, "name": "Sairento VR", "size_gb": 12},
+    {"appid": 489380, "name": "QuiVR", "size_gb": 2},
+    {"appid": 477270, "name": "Lightblade VR", "size_gb": 1},
+    {"appid": 747350, "name": "Hellblade Senua VR", "size_gb": 25},
+    {"appid": 486780, "name": "Fruit Ninja VR", "size_gb": 1},
+    {"appid": 342180, "name": "Arizona Sunshine", "size_gb": 12},
+    {"appid": 250820, "name": "SteamVR", "size_gb": 5}
+  ],
+  "total_vr_games": 9,
+  "total_vr_size_gb": 68
+}
