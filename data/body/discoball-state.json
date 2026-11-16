@@ -1,0 +1,213 @@
+{
+  "lighthouses": [
+    {
+      "name": "Flint 1 (Router)",
+      "ip": "192.168.4.1",
+      "house": 1,
+      "radios": [
+        {
+          "interface": "ra0",
+          "ssid": "Aperture Science",
+          "channel": 2,
+          "frequency_mhz": 2417,
+          "bandwidth": "HE20",
+          "max_rate_mbps": 573,
+          "clients": [
+            {
+              "mac": "A0:D0:DC:EE:EE:39",
+              "identity": "Alexa",
+              "rssi_dbm": -17,
+              "rate_mbps": 173,
+              "house": 1
+            },
+            {
+              "mac": "D4:80:8B:1B:9F:01",
+              "identity": "Epson ET-2400",
+              "rssi_dbm": -22,
+              "rate_mbps": 72,
+              "house": 1
+            },
+            {
+              "mac": "E8:38:A0:53:EA:D8",
+              "identity": "Chromecast",
+              "rssi_dbm": -25,
+              "rate_mbps": 200,
+              "house": 1
+            },
+            {
+              "mac": "AC:41:6A:5C:B4:CF",
+              "identity": "Vizio TV",
+              "rssi_dbm": -27,
+              "rate_mbps": 229,
+              "house": 1
+            },
+            {
+              "mac": "64:16:66:A4:82:0A",
+              "identity": "Nest",
+              "rssi_dbm": -29,
+              "rate_mbps": 72,
+              "house": 1
+            }
+          ]
+        },
+        {
+          "interface": "rax1",
+          "ssid": "GAIA",
+          "channel": 56,
+          "frequency_mhz": 5280,
+          "bandwidth": "HE160",
+          "max_rate_mbps": 4803,
+          "clients": [
+            {
+              "mac": "90:82:C3:74:12:CA",
+              "identity": "steamFRAME",
+              "rssi_dbm": -28,
+              "rate_mbps": 2401,
+              "house": 1
+            },
+            {
+              "mac": "C8:5E:A9:C9:6F:80",
+              "identity": "eastGate",
+              "rssi_dbm": -38,
+              "rate_mbps": 864,
+              "house": 1
+            },
+            {
+              "mac": "D2:49:F5:8A:71:16",
+              "identity": "Unknown .190",
+              "rssi_dbm": -23,
+              "rate_mbps": 866,
+              "house": 1
+            },
+            {
+              "mac": "1E:0D:9C:8D:CF:FE",
+              "identity": "Unknown WiFi6",
+              "rssi_dbm": -26,
+              "rate_mbps": 1201,
+              "house": 1
+            }
+          ]
+        }
+      ],
+      "bt_visible": [
+        "ET-2400 (D6:80:8B)",
+        "steamFRAME (90:82:C3)"
+      ],
+      "chirality": 1
+    },
+    {
+      "name": "Flint 2 (Bridge)",
+      "ip": "192.168.4.9",
+      "house": 2,
+      "radios": [
+        {
+          "interface": "ra0",
+          "ssid": "Aperture Science",
+          "channel": 8,
+          "frequency_mhz": 2447,
+          "bandwidth": "HE40",
+          "max_rate_mbps": 1147,
+          "clients": [
+            {
+              "mac": "10:F6:0A:54:57:CC",
+              "identity": "Xiaomi IoT",
+              "rssi_dbm": -18,
+              "rate_mbps": 541,
+              "house": 2
+            }
+          ]
+        },
+        {
+          "interface": "rax1",
+          "ssid": "GAIA",
+          "channel": 60,
+          "frequency_mhz": 5300,
+          "bandwidth": "HE160",
+          "max_rate_mbps": 4803,
+          "clients": [
+            {
+              "mac": "C0:8B:27:9C:63:EC",
+              "identity": "milkGate",
+              "rssi_dbm": -34,
+              "rate_mbps": 720,
+              "house": 2
+            },
+            {
+              "mac": "68:54:5A:D0:69:A2",
+              "identity": "ironGate WiFi",
+              "rssi_dbm": -40,
+              "rate_mbps": 1921,
+              "house": 2
+            }
+          ]
+        }
+      ],
+      "bt_visible": [
+        "steamFRAME (90:82:C3)"
+      ],
+      "chirality": -1
+    }
+  ],
+  "black_holes": [
+    {
+      "name": "Chromecast 'Basement'",
+      "ip": "192.168.4.170",
+      "mac": "E8:38:A0:53:EA:D8",
+      "absorption": "Cast",
+      "ports": [
+        8008,
+        8009,
+        8443
+      ],
+      "rssi_to_flint": -25
+    },
+    {
+      "name": "Vizio SmartCast TV",
+      "ip": "192.168.4.152",
+      "mac": "AC:41:6A:5C:B4:CF",
+      "absorption": "Display",
+      "ports": [
+        8009
+      ],
+      "rssi_to_flint": -27
+    },
+    {
+      "name": "Alexa Echo",
+      "ip": "192.168.4.197",
+      "mac": "A0:D0:DC:EE:EE:39",
+      "absorption": "Speak",
+      "ports": [
+        8009,
+        55443
+      ],
+      "rssi_to_flint": -17
+    },
+    {
+      "name": "Epson ET-2400",
+      "ip": "192.168.4.200",
+      "mac": "D4:80:8B:1B:9F:01",
+      "absorption": "Print",
+      "ports": [
+        631
+      ],
+      "rssi_to_flint": -22
+    },
+    {
+      "name": "Epson ES-400II",
+      "ip": "USB",
+      "mac": "N/A",
+      "absorption": "Scan",
+      "ports": [],
+      "rssi_to_flint": 0
+    }
+  ],
+  "null_point": {
+    "medium": "10G fiber spine, MikroTik(.2) ↔ JetStream(.111)",
+    "latency_ms": 0.9,
+    "bandwidth_gbps": 10.0,
+    "chirality_flip": true
+  },
+  "facets": 12,
+  "volume": -13.671144638324337,
+  "bt_cant_degrees": 30.000000000000004
+}

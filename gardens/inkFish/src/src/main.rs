@@ -29,6 +29,7 @@ mod beacon;
 mod ludo_bridge;
 mod mirror;
 mod iot;
+mod discoball;
 
 use clap::Parser;
 
@@ -73,6 +74,8 @@ enum Cli {
     Mirror,
     /// Scan IoT devices — Nest, Alexa, Vizio, Chromecast, printer, eero.
     Iot,
+    /// Inverted discoball — chiral Flint lighthouses, null spine, black hole sinks.
+    Discoball,
     /// Run KenshiReborn scan — parse all game meshes/textures on local data.
     Kenshi {
         /// Subcommand: scan, flow, render.
@@ -103,6 +106,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Scan { duration } => beacon::run_scan(duration).await?,
         Cli::Mirror => mirror::run_mirror().await?,
         Cli::Iot => iot::show_iot(),
+        Cli::Discoball => discoball::show_discoball(),
         Cli::Kenshi { mode } => {
             let kenshi_bin = std::env::current_exe()?
                 .parent()
