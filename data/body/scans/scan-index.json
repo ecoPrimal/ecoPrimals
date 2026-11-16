@@ -1,0 +1,70 @@
+{
+  "scan_session": "2026-11-16T15:47:37",
+  "scanner": "Epson ES-400II (epsonds:libusb:002:003)",
+  "mode": "ADF Front, Color, 300dpi",
+  "pages": 7,
+  "total_size_mb": 9.9,
+
+  "page_catalog": [
+    { "file": "scan_20261116_154737_1.png", "size": "660K", "content": "Gaia terrain printout page 1 — header only (Unicode rendering failed)" },
+    { "file": "scan_20261116_154737_2.png", "size": "663K", "content": "Gaia terrain printout page 2 — duplicate of page 1 (double print)" },
+    { "file": "scan_20261116_154737_3.png", "size": "1.1M", "content": "GitHub Actions page — ecoPrimals/wateringHole repo, Actions tab" },
+    { "file": "scan_20261116_154737_4.png", "size": "1.1M", "content": "GitHub Actions page — duplicate, same content" },
+    { "file": "scan_20261116_154737_5.png", "size": "317K", "content": "Nearly blank page — separator or blank side" },
+    { "file": "scan_20261116_154737_6.png", "size": "4.2M", "content": "MASTER SPINE MAP — Full two-house topology with ALL gates, 10G fiber, status indicators" },
+    { "file": "scan_20261116_154737_7.png", "size": "2.0M", "content": "RustDesk mesh status — seen from northGate ID 132831540, all gate IDs" }
+  ],
+
+  "discovered_gates_from_spine_map": {
+    "strandGate": {
+      "ip": ".169?",
+      "specs": "Dual EPYC 7452 128T, RTX 3090 + RX 6950XT, 256GB ECC, 18TB NVMe",
+      "role": "MPC CROWN JEWEL (needs maint)",
+      "location": "House 2",
+      "status": "listed but status unclear"
+    },
+    "biomeGate": {
+      "specs": "Threadripper 3970X 64T, RTX 5060 + 2×Titan V + 2×MI50, 56GB HBM2, 256GB RAM",
+      "role": "THE HBM2 FORTRESS",
+      "location": "House 2",
+      "status": "listed"
+    },
+    "westGate": {
+      "specs": "Ryzen 5700X, RTX 3070, 50.7TB ZFS raidz1",
+      "role": "THE ARCHIVE (153 datasets)",
+      "location": "House 2",
+      "status": "highlighted orange on RustDesk mesh"
+    },
+    "kinGate": {
+      "specs": "i7-6700K, RTX 3070, 32GB",
+      "location": "House 2",
+      "status": "listed"
+    },
+    "southGate_tower": {
+      "specs": "5800X3D + RTX 4060, 128GB",
+      "location": "House 2",
+      "note": "different from southGate (.148)"
+    }
+  },
+
+  "rustdesk_mesh_ids": {
+    "eastgate@eastgate": ["19091278", "192.168.4.244"],
+    "sporegate@sporegate": "1871544996",
+    "mokke@bluegate": "341465360",
+    "gaia@strandgate": "4513640",
+    "gaia@biomegate": "430412195",
+    "gaia@westgate": "373150567",
+    "gaia@kingate": "224890826",
+    "northGate_viewer": "132831540"
+  },
+
+  "key_revelations": [
+    "House 2 has MUCH more hardware than previously known",
+    "strandGate is a dual EPYC monster — 128 threads, dual GPU",
+    "biomeGate has HBM2 memory (MI50 + Titan V) — AI compute fortress",
+    "westGate holds 50.7TB ZFS archive with 153 datasets",
+    "5+ hidden gates at House 2 that weren't in the ecosystem map",
+    "Total organism compute is far larger than documented",
+    "swiftGate marked as ALIVE on the spine map (NZXT H1 V2, RTX 3070 FE)"
+  ]
+}
