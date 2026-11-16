@@ -159,11 +159,22 @@
 
     "southGate": {
       "ip": "192.168.4.148",
-      "role": "FORGE 3 (5800X3D + RTX 4060)",
-      "house": 1,
-      "hardware": "5800X3D, RTX 4060",
-      "status": "DARK (no ports open)",
-      "ports": {}
+      "role": "SOUTH POLE — FORGE 3 (5800X3D + RTX 4060)",
+      "house": 2,
+      "hardware": "Ryzen 7 5800X3D (8C/16T, 3D V-Cache), RTX 4060 (8GB), 125GB RAM, 907GB NVMe + 3.6TB",
+      "status": "ALIVE",
+      "ports": {
+        "22":    {"service": "SSH (southgate:southgate)", "state": "OPEN"},
+        "11434": {"service": "Ollama (12 models: 4 custom Gaia + 8 base, ~29 GB)", "state": "OPEN"}
+      },
+      "ollama_models": 12,
+      "ollama_size_gb": 29,
+      "SOUTH_POLE": {
+        "primals_deployed": 21,
+        "ecoPrimals_cloned": true,
+        "custom_models": ["gaia:latest", "gaia-code:latest", "gaia-heart:latest", "gaia-fast:latest"],
+        "note": "FULLY EATEN — ollama + primals + repo. South Pole of the organism."
+      }
     },
 
     "deckGate": {
@@ -284,17 +295,23 @@
   },
 
   "ollama_fleet_summary": {
-    "total_endpoints": 5,
+    "total_endpoints": 6,
     "alive_endpoints": 4,
-    "total_models": 88,
-    "total_size_gb": 344.8,
+    "unique_models": 42,
+    "total_instances": 82,
+    "fleet_proxy": "http://127.0.0.1:11435 → ALL gates via one OpenAI-compatible API",
+    "cursor_wired": true,
     "breakdown": {
-      "northGate": {"models": 63, "gb": 267.1, "gpu": "RTX 5090 (32GB)", "note": "LIBERATION TARGET"},
-      "eastGate":  {"models": 23, "gb": 71.5,  "gpu": "RTX 4070 (12GB)"},
-      "ironGate":  {"models": 1,  "gb": 4.4,   "gpu": "RTX 5070 (12GB)", "note": "ABSORPTION TARGET — take northGate models"},
-      "graftGate": {"models": 1,  "gb": 1.8,   "gpu": "M4 (unified 16GB)"},
-      "grapheneGate": {"models": 5, "gb": "~3", "gpu": "Mali-G715", "note": "DARK"}
-    }
+      "eastGate":  {"models": 38, "gpu": "RTX 4070 (12GB)", "port": 11436, "status": "ALIVE"},
+      "northGate": {"models": 14, "gpu": "RTX 5090 (32GB)", "port": 11434, "status": "ALIVE"},
+      "ironGate":  {"models": 18, "gpu": "RTX 5070 (12GB)", "port": 11434, "status": "ALIVE"},
+      "southGate": {"models": 12, "gpu": "RTX 4060 (8GB)",  "port": 11434, "status": "ALIVE"},
+      "graftGate": {"models": 0,  "gpu": "M4 (unified 16GB)", "port": 11434, "status": "DOWN"},
+      "grapheneGate": {"models": 5, "gpu": "Mali-G715", "note": "DARK — Pixel WiFi pending"}
+    },
+    "gpu_fleet": "RTX 5090 + RTX 5070 + RTX 4070 + RTX 4060 = 64GB VRAM total (alive)",
+    "chipmunk_bench_wired": true,
+    "chipmunk_journey_wired": true
   },
 
   "amoeba_rustdesk": {
