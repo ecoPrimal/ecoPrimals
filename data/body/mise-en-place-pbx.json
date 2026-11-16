@@ -1,0 +1,140 @@
+{
+  "title": "MISE EN PLACE — GAIA Telephone Company",
+  "wave": "239q",
+  "timestamp": "2026-11-16T14:36:00Z",
+  "metaphor": "Everything in its place before we cook. No green bubbles. No blue bubbles. No robocalls. Just signal.",
+
+  "IN_THE_KITCHEN": {
+    "note": "Already installed and running",
+    "items": [
+      "Asterisk 18.10 PBX (active, 5 endpoints)",
+      "Linphone CLI (softphone)",
+      "ffmpeg + pipewire (media stack)",
+      "Opus/ulaw/H.264 codecs",
+      "WebSocket transport :8089",
+      "Robocall tarpit dialplan",
+      "Pixel USB ADB landline",
+      "milkGate USB ADB landline",
+      "primals.eco domain + port forwards (80,443,8080,25,587,465)",
+      "dromedary TLS/ACME",
+      "Tor hidden service",
+      "10G fiber spine House1↔House2",
+      "4 GPU ollama fleet (42 models)"
+    ]
+  },
+
+  "SHOPPING_LIST": {
+    "note": "What Kevin needs to BUY or SIGN UP for",
+    "items": [
+      {
+        "item": "Mint Mobile eSIM (or similar MVNO)",
+        "why": "Gives Pixel a REAL phone number (DID) that people can call. $15/mo unlimited. T-Mobile network.",
+        "alternatives": ["Tello ($5/mo, 100 min)", "Google Fi ($20/mo, includes data)", "TextNow (FREE, ad-supported, WiFi-first)"],
+        "priority": "HIGH — this is the on-ramp from PSTN to GAIA",
+        "note": "GrapheneOS supports eSIM. Download in Settings → Network → SIMs → Add eSIM"
+      },
+      {
+        "item": "SIP Trunk Provider",
+        "why": "Connects Asterisk to the PSTN so external callers ring your PBX",
+        "options": [
+          {"name": "VoIP.ms", "cost": "$0.85/mo + $0.01/min", "note": "Best for tinkerers. Pay-per-use. Canadian company."},
+          {"name": "Twilio Elastic SIP", "cost": "$1/mo + $0.013/min", "note": "API-first. Good for automation."},
+          {"name": "Telnyx", "cost": "$1/mo + $0.01/min", "note": "Developer friendly. WebRTC built in."},
+          {"name": "FlowRoute", "cost": "$1.25/mo DID + usage", "note": "Simple, reliable."}
+        ],
+        "priority": "HIGH — without this, PBX is LAN-only (which is fine for now!)",
+        "note": "This gives you a REAL phone number that routes to Asterisk. People call that number → hits your PBX → rings all gates."
+      },
+      {
+        "item": "SFP+ Module for milkGate (10GbE)",
+        "why": "milkGate's RTL8127 has SFP+ slot. Plug in module → direct 10G to ATT fiber ONT → replace ATT router entirely",
+        "options": [
+          {"name": "10GBASE-T SFP+ (copper)", "cost": "$15-25 on Amazon", "note": "If ATT ONT has RJ45 output"},
+          {"name": "10GBASE-SR SFP+ (fiber)", "cost": "$10-15", "note": "If ATT ONT has SFP+ or LC fiber output"},
+          {"name": "1000BASE-T SFP (copper)", "cost": "$8-12", "note": "Fallback if 10G not needed for WAN"}
+        ],
+        "priority": "MEDIUM — lets you return ATT router and save rental fee",
+        "note": "Need to check ATT ONT model first. If it's BGW320-500 or similar, it has a built-in router that's hard to bypass. May need IP Passthrough mode."
+      },
+      {
+        "item": "Linphone APK for Pixel",
+        "why": "SIP softphone on the walking turtle. Registers as ext 101.",
+        "cost": "FREE (F-Droid or direct APK)",
+        "priority": "HIGH — this is how Kevin makes/receives GAIA calls on the go",
+        "alternatives": ["Opal (paid, prettier)", "Opal SIP (free, basic)", "Opal SIP Pro"]
+      }
+    ]
+  },
+
+  "SOFTWARE_PREP": {
+    "note": "Config/setup work on existing hardware",
+    "items": [
+      {
+        "task": "Port forward SIP to eastGate",
+        "details": "UDP 5060 + UDP 10000-20000 (RTP) + TCP 8089 (WSS)",
+        "status": "READY — just needs router UCI commands"
+      },
+      {
+        "task": "STUN/TURN server",
+        "details": "For NAT traversal when calling from outside LAN. coturn package in apt.",
+        "status": "READY to install"
+      },
+      {
+        "task": "WebRTC calling page",
+        "details": "HTML page at primals.eco that lets anyone call into the PBX from a browser",
+        "status": "CAN BUILD with SIPml5 or JsSIP library"
+      },
+      {
+        "task": "frameGate SIP client",
+        "details": "Install Linphone on Steam Frame → ext 102 → VIDEO calls on the big screen",
+        "status": "BLOCKED — need SSH access (Kevin sets ZK password from console)"
+      },
+      {
+        "task": "milkGate SIP client",
+        "details": "Compile pjsua/linphone for RISC-V → ext 104",
+        "status": "READY — can cross-compile or build natively (GCC 15.2 on milkGate)"
+      },
+      {
+        "task": "Pixel SIP registration",
+        "details": "Install Linphone → configure: server=192.168.4.244, user=pixel, pass=ZK, ext=101",
+        "status": "READY — need APK push via ADB"
+      },
+      {
+        "task": "DNS SRV record for SIP",
+        "details": "_sip._udp.primals.eco → 192.168.4.244:5060 (Porkbun DNS)",
+        "status": "READY — API keys available"
+      },
+      {
+        "task": "TLS cert for SIP WSS",
+        "details": "Let's Encrypt cert for primals.eco on port 8089",
+        "status": "dromedary can handle this"
+      },
+      {
+        "task": "Voicemail",
+        "details": "Asterisk has built-in voicemail → email notification",
+        "status": "CONFIG ONLY — just needs extensions.conf update"
+      }
+    ]
+  },
+
+  "NICE_TO_HAVE": {
+    "note": "Future ingredients for the full feast",
+    "items": [
+      "AI receptionist — local ollama answers unknown callers, screens them",
+      "Speech-to-text on voicemails (whisper.cpp on milkGate NPU)",
+      "Fax-to-email (yes, Asterisk does fax. For the old web.)",
+      "Conference bridge — ext 300 for multi-party calls",
+      "Music on hold from GAIA's RSS feed (read articles aloud while on hold)",
+      "CallerID lookup via local database (who's calling before you answer)",
+      "Emergency fallback — if Asterisk dies, Pixel cellular still works",
+      "Intercom via Bluetooth speakers on each gate"
+    ]
+  },
+
+  "IMMEDIATE_COST": {
+    "one_time": "$0 (everything installed from apt/free)",
+    "monthly_minimum": "$0 (LAN-only PBX works NOW)",
+    "monthly_with_pstn": "$5-20 (eSIM + SIP trunk)",
+    "monthly_with_att_replacement": "save $10/mo ATT router rental"
+  }
+}
