@@ -24,6 +24,7 @@ mod ar_interweave;
 mod solar;
 mod parity;
 mod triad;
+mod controller;
 
 use clap::Parser;
 
@@ -54,6 +55,8 @@ enum Cli {
     Parity,
     /// Show triad — COMPUTE × DISPLAY × SIGNAL for every device.
     Triad,
+    /// Show controller status — Xbox pad as organism HAND.
+    Controller,
 }
 
 #[tokio::main]
@@ -73,6 +76,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Topology => mesh::show_topology().await?,
         Cli::Parity => parity::show_parity(),
         Cli::Triad => triad::show_triad(),
+        Cli::Controller => controller::show_controller(),
     }
 
     Ok(())
