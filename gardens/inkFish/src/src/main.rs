@@ -23,6 +23,7 @@ mod streaming;
 mod ar_interweave;
 mod solar;
 mod parity;
+mod triad;
 
 use clap::Parser;
 
@@ -51,6 +52,8 @@ enum Cli {
     Topology,
     /// Show parity scores — how close each device is to Steam-grade.
     Parity,
+    /// Show triad — COMPUTE × DISPLAY × SIGNAL for every device.
+    Triad,
 }
 
 #[tokio::main]
@@ -69,6 +72,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Solar => solar::run_solar().await?,
         Cli::Topology => mesh::show_topology().await?,
         Cli::Parity => parity::show_parity(),
+        Cli::Triad => triad::show_triad(),
     }
 
     Ok(())
