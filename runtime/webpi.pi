@@ -28,7 +28,11 @@ try:
 except ImportError:
     import tomli as tomllib
 
-GAIA_ROOT = Path(r"c:\Users\mokke\Desktop\Gaia")
+import platform
+if platform.system() == "Windows":
+    GAIA_ROOT = Path(r"c:\Users\mokke\Desktop\Gaia")
+else:
+    GAIA_ROOT = Path("/home/eastgate/Development/ecoPrimals/infra/hud/site/public")
 WATERING_HOLE = GAIA_ROOT / "primals" / "wateringHole"
 FILINGS_DIR = GAIA_ROOT / "whitePaper" / "guerillaGorilla" / "filings"
 
