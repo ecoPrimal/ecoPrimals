@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-11-16T21:02:26-0500",
+  "operation": "REDOX \u2014 FULL ORGANISM REGENERATION",
+  "wave": "239e-redox",
+  "organism_status": {
+    "eastGate": {
+      "role": "BRAIN",
+      "ip": ".244",
+      "status": "ALIVE",
+      "gpu": "RTX 4070 (46 RT cores)",
+      "ollama_models": 38,
+      "ollama_data_gb": 122.7,
+      "bt": "UP (C8:5E:A9:C9:6F:84)",
+      "steam": true,
+      "steamvr": true,
+      "games": 12,
+      "inkfish": "16 commands LIVE",
+      "kenshi": "3277 meshes, 7.6M triangles"
+    },
+    "northGate": {
+      "role": "HEAD",
+      "ip": ".147",
+      "status": "ALIVE (6.43ms)",
+      "gpu": "RTX 5090 (192 RT cores)",
+      "sunshine": "LIVE (:47990)",
+      "remote_play": "OPEN (:27036)",
+      "note": "No SSH \u2014 communicates via git push + streaming"
+    },
+    "ironGate": {
+      "role": "RIGHT SHOULDER",
+      "ip": ".237",
+      "status": "ALIVE (3.18ms) \u2014 SSH auth fails (publickey only)",
+      "gpu": "RTX 5070 (70 RT cores)"
+    },
+    "southGate": {
+      "role": "RIGHT LEG",
+      "ip": ".148",
+      "status": "ALIVE (1.49ms)",
+      "gpu": "RTX 4060 (34 RT cores)",
+      "ram_gb": 125,
+      "ollama_models": 12,
+      "bt": "UP (C8:A3:E8:FB:94:4A)",
+      "inkfish": "DEPLOYED \u2014 3.1MB x86_64"
+    },
+    "milkGate": {
+      "role": "LEFT LEG",
+      "ip": ".144",
+      "status": "ALIVE",
+      "arch": "riscv64 (SpacemiT X100)",
+      "ram_gb": 31,
+      "note": "RISC-V universal transponder"
+    },
+    "sporeGate": {
+      "role": "LEFT HAND",
+      "ip": ".3",
+      "status": "ALIVE (1.08ms)"
+    },
+    "frameGate": {
+      "role": "FACE (bridge between houses)",
+      "ip": ".181",
+      "status": "ASLEEP (WiFi off)",
+      "arch": "aarch64 (Snapdragon 8 Gen 3)",
+      "last_seen": "2026-11-16T20:24:36 \u2014 WiFi -14dBm, 82% battery",
+      "inkfish_arm64": "COMPILED (3.0MB) \u2014 waiting deployment",
+      "ollama_arm64": "AVAILABLE \u2014 waiting deployment",
+      "solar_feed_entries": 303
+    }
+  },
+  "inkfish_regeneration": {
+    "modules_run": [
+      {
+        "name": "mesh",
+        "result": "3 gates alive, 150 RT cores, gaia@gaming"
+      },
+      {
+        "name": "triad",
+        "result": "6 triads computed \u2014 frameGate=230 (display-heavy), northGate=170 (compute-heavy)"
+      },
+      {
+        "name": "parity",
+        "result": "frameGate/deckGate=100% native SteamOS, all others adapted to 100%"
+      },
+      {
+        "name": "controller",
+        "result": "No controller on /dev/input/js0 \u2014 needs Xbox USB-C or BT"
+      },
+      {
+        "name": "topology",
+        "result": "Full House 1/House 2 map with 10G spine, 1.67ms RT"
+      },
+      {
+        "name": "identity",
+        "result": "gaia@gaming 4/6 slots: gaia(HOLDER), Tamison, Napalm(legacy), AvatarLeo. 1421 titles (9 VR)"
+      },
+      {
+        "name": "iot",
+        "result": "Vizio TV(Cast), Nest thermostat, Epson scanner, Samsung phone"
+      },
+      {
+        "name": "discoball",
+        "result": "Volume=-13.67 (converging), BT cant=30\u00b0, Flint 1 L-chirality"
+      },
+      {
+        "name": "mirror",
+        "result": "Sunshine:47990 LIVE, RemotePlay:27036 OPEN \u2014 streaming ready"
+      },
+      {
+        "name": "interweave",
+        "result": "AR pairs: STALKER2+IntoTheRadius, CrimsonDesert+TalosPrinciple"
+      },
+      {
+        "name": "solar",
+        "result": "Frame dual mode: LANDER(display out) / SOLAR(sensors in)"
+      },
+      {
+        "name": "bridge",
+        "result": "ludoSpring(995 tests) \u2192 KenshiReborn(2734 LOC) \u2192 inkFish delivery"
+      },
+      {
+        "name": "kenshi",
+        "result": "RTX 4070 Vulkan: 3277 meshes, 22.4M verts, 7.6M tris in 2852ms"
+      },
+      {
+        "name": "scan",
+        "result": "BT scan initiated (eastGate + southGate)"
+      }
+    ],
+    "total_modules": 16,
+    "modules_run_count": 14,
+    "unrun": [
+      "stream (daemon mode)",
+      "scan (needs longer BT window)"
+    ]
+  },
+  "cross_compiled": {
+    "aarch64": {
+      "inkfish": "3.0MB dynamically linked ARM64 ELF \u2014 16 commands",
+      "flint_silicon": "681KB statically linked ARM64 ELF \u2014 silicon enumerator"
+    },
+    "x86_64": {
+      "inkfish": "3.1MB \u2014 deployed to eastGate + southGate"
+    },
+    "riscv64": {
+      "note": "hello_milkgate previously compiled. Full inkFish for RISC-V: TODO"
+    }
+  },
+  "frame_deployment": {
+    "status": "QUEUED \u2014 Frame is asleep, deployment manifest ready",
+    "binaries": [
+      "inkfish (3.0MB ARM64)",
+      "flint-silicon (681KB ARM64 musl)"
+    ],
+    "services": [
+      "Ollama ARM64 (tinyllama + phi3:mini)",
+      "inkfish solar",
+      "inkfish scan"
+    ],
+    "bt_plan": "Frame has BT 5.3 \u2014 will scan from bridge position (property line)",
+    "steamvr_plan": "Frame has dual 2160\u00d72160 panels \u2014 AR interweave from northGate Sunshine"
+  },
+  "bt_mesh": {
+    "eastGate_bt": "UP \u2014 C8:5E:A9:C9:6F:84 (hci0, USB)",
+    "southGate_bt": "UP \u2014 C8:A3:E8:FB:94:4A (hci0, USB)",
+    "frameGate_bt": "BT 5.3 (Snapdragon integrated) \u2014 ASLEEP",
+    "flint1_bt": "BlueZ 5.64 loaded, conninfra available, HCI not bound (MediaTek)",
+    "flint2_bt": "BlueZ 5.64 loaded, conninfra available, HCI not bound (MediaTek)",
+    "xbox_bt": "A8:8C:3E:A0:59:3A \u2014 needs fresh batteries",
+    "switch_pro": "A0:5A:5C:0C:E2:A2 \u2014 BT pairable",
+    "pixel_bt": "E8:D5:2B:51:36:39 \u2014 BT LE scanner"
+  },
+  "steamvr_pipeline": {
+    "server": "northGate \u2014 RTX 5090 + Sunshine + SteamVR (via Remote Play)",
+    "relay": "eastGate \u2014 RTX 4070 + SteamVR installed + Sunshine ready",
+    "display": "frameGate \u2014 dual 2160\u00d72160 + Snapdragon 8 Gen 3",
+    "status": "READY \u2014 Sunshine LIVE on northGate, SteamVR on eastGate, Frame needs wake",
+    "flow": "northGate renders \u2192 Sunshine encodes \u2192 LAN \u2192 Frame decodes \u2192 eyes"
+  },
+  "gpu_fleet": {
+    "total_rt_cores": 388,
+    "total_vram_gb": 72,
+    "configuration": [
+      "RTX 5090: 192 RT (northGate HEAD)",
+      "RTX 5070: 70 RT (ironGate SHOULDER)",
+      "RTX 4070: 46 RT (eastGate BRAIN)",
+      "RTX 4060: 34 RT (southGate LEG)",
+      "RTX 3070: 46 RT (swiftGate ASLEEP)"
+    ],
+    "active_rt_cores": 342,
+    "note": "swiftGate asleep = 46 RT cores dormant"
+  }
+}

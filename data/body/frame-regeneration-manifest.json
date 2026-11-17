@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-11-16T20:59:50-0500",
+  "target": "frameGate (Steam Frame)",
+  "ip": "192.168.4.181",
+  "mac": "90:82:c3:74:12:ca",
+  "arch": "aarch64 (ARM64, Snapdragon 8 Gen 3)",
+  "os": "SteamOS (ARM, Arch-based)",
+  "status": "ASLEEP \u2014 WiFi powered down, DHCP lease active",
+  "last_seen": "2026-11-16T20:24:36 (36 min ago) \u2014 WiFi -14dBm, bat 82%",
+  "deploy_binaries": {
+    "inkfish": {
+      "path": "gardens/inkFish/target/aarch64-unknown-linux-gnu/release/inkfish",
+      "size_mb": 3.0,
+      "type": "dynamically linked ARM64 ELF",
+      "commands": 16,
+      "modules": [
+        "mesh",
+        "interweave",
+        "identity",
+        "stream",
+        "solar",
+        "topology",
+        "parity",
+        "triad",
+        "controller",
+        "bridge",
+        "scan",
+        "mirror",
+        "iot",
+        "discoball",
+        "kenshi",
+        "help"
+      ]
+    },
+    "flint-silicon": {
+      "path": "springs/rustChip/target/aarch64-unknown-linux-musl/release/flint-silicon",
+      "size_mb": 0.68,
+      "type": "statically linked ARM64 ELF (musl)",
+      "commands": 1,
+      "modules": [
+        "silicon enumeration (sysfs/procfs/devfs)"
+      ]
+    }
+  },
+  "deploy_ollama": {
+    "url": "https://ollama.com/download/ollama-linux-arm64",
+    "install_cmd": "curl -fsSL https://ollama.com/install.sh | sh",
+    "recommended_models": [
+      "tinyllama:1.1b (0.6GB \u2014 fast scout)",
+      "gaia-tissue-fast (if modelfile works on ARM)",
+      "phi3:mini (2.3GB \u2014 good balance for 8GB RAM)"
+    ],
+    "note": "Snapdragon 8 Gen 3 has Adreno 750 GPU \u2014 Ollama may use it for inference"
+  },
+  "deploy_services": {
+    "inkfish_solar": {
+      "description": "Solar panel mode \u2014 Frame ingests sensors when idle",
+      "command": "/opt/gaia/inkfish solar",
+      "autostart": "systemd user service"
+    },
+    "inkfish_scan": {
+      "description": "Beacon scan \u2014 BT + WiFi signal mapping",
+      "command": "/opt/gaia/inkfish scan",
+      "frequency": "every 5 min"
+    },
+    "ollama_inference": {
+      "description": "Local AI inference on Snapdragon GPU",
+      "command": "ollama serve",
+      "port": 11434
+    }
+  },
+  "inkfish_status": {
+    "total_commands": 16,
+    "mesh": "3 gates alive, 150 RT cores, Sunshine + RemotePlay both LIVE",
+    "mirror": "northGate Sunshine:47990 LIVE, RemotePlay:27036 OPEN",
+    "triad": {
+      "frameGate": {
+        "compute": 45,
+        "display": 95,
+        "signal": 90,
+        "total": 230,
+        "bias": "display-heavy"
+      }
+    },
+    "parity": "frameGate = 100% (native SteamOS)",
+    "identity": "gaia@gaming \u2014 4/6 slots, 1421 titles (9 VR)",
+    "iot": "Vizio TV ALIVE (Cast :8009), Nest ALIVE",
+    "discoball": "volume=-13.67, BT cant=30\u00b0, steamFRAME @-28dBm on 5GHz GAIA"
+  },
+  "regeneration_script": "#!/bin/bash\n# Frame regeneration script \u2014 deploy when Frame wakes up\n# Run from eastGate: sshpass -p 'framegate' ssh steamos@192.168.4.181 < frame-regen.sh\n\nset -e\n\n# Create Gaia directory\nmkdir -p /opt/gaia /opt/gaia/data\n\n# Copy binaries (already cross-compiled for ARM64)\necho \"Deploying inkFish ARM64...\"\n# scp from eastGate will push these\n\n# Install Ollama\necho \"Installing Ollama for ARM64...\"\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Pull a small model for local inference\nollama pull tinyllama:1.1b\n\n# Start solar mode\necho \"Starting solar panel mode...\"\nnohup /opt/gaia/inkfish solar > /opt/gaia/solar.log 2>&1 &\n\necho \"Frame regenerated! inkFish + Ollama + Solar active.\"\n",
+  "wake_methods": [
+    "Kevin physically presses power button on Steam Frame",
+    "Wake-on-LAN if supported (MAC: 90:82:c3:74:12:ca)",
+    "Kevin opens Steam app \u2192 Frame wakes via Remote Play discovery"
+  ]
+}

@@ -30,6 +30,7 @@ mod ludo_bridge;
 mod mirror;
 mod iot;
 mod discoball;
+mod redox;
 
 use clap::Parser;
 
@@ -82,6 +83,8 @@ enum Cli {
         #[arg(default_value = "scan")]
         mode: String,
     },
+    /// Full organism redox — regenerate ALL state, deploy to alive gates.
+    Redox,
 }
 
 #[tokio::main]
@@ -107,6 +110,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         Cli::Mirror => mirror::run_mirror().await?,
         Cli::Iot => iot::show_iot(),
         Cli::Discoball => discoball::show_discoball(),
+        Cli::Redox => redox::run_redox().await?,
         Cli::Kenshi { mode } => {
             let kenshi_bin = std::env::current_exe()?
                 .parent()
