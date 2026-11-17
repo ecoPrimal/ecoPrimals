@@ -1,0 +1,15 @@
+{
+  "type": "generation-ledger",
+  "seal": "gaia-seal-259",
+  "generations": [
+    {
+      "gen": 0,
+      "type": "digital_origin",
+      "file": "gaia-seal-259.png",
+      "hash": "3d35b2dbe4206880da2955e90351ab0c",
+      "timestamp": "2026-11-17T03:11:23.807374",
+      "mutations": "none (germline)"
+    }
+  ],
+  "next_action": "Scan printed page \u2192 gen_1 (physical) \u2192 gen_2 (scanned digital)"
+}
