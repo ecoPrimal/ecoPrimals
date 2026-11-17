@@ -1,0 +1,85 @@
+{
+  "id": "triad-of-triads",
+  "wave": 259,
+  "ts": "2026-11-17T10:08:00-05:00",
+  "title": "TRIAD OF TRIADS — Triclinic Crystal Topology",
+  "principle": "Each triad has an IR axis — it IS triclinic. The null axis is the resin point — the GI point of the master splitting scalpel. Three triads, three unequal axes, three unequal angles. The most asymmetric crystal — like life itself.",
+
+  "crystal_system": "TRICLINIC",
+  "properties": {
+    "a_ne_b_ne_c": true,
+    "alpha_ne_beta_ne_gamma": true,
+    "note": "All axes unequal, all angles different. Least symmetric crystal. Maximum information density. No redundant symmetry — every node unique."
+  },
+
+  "triad_1_lan1": {
+    "name": "HOUSE 1 TRIAD — The Brain Triangle",
+    "color": "BLUE",
+    "axis": "a (shortest, densest)",
+    "vertices": {
+      "north": {"gate": "northGate (.147)", "role": "HEART", "status": "ALIVE", "gpu": "RTX 5090 32GB"},
+      "blue": {"gate": "blueGate (.100)", "role": "IDE", "status": "DOWN", "note": "Windows, Cursor host"},
+      "backbone": {"gate": "LAN 1 backbone", "role": "SPINE", "elements": ["MikroTik (.2)", "Router (.1)", "wired mesh"]}
+    },
+    "ir_axis": "northGate ↔ blueGate: compute resonance, git push ↔ IDE pull",
+    "angle": "acute — tight coupling, same room, wired"
+  },
+
+  "triad_2_lan2": {
+    "name": "HOUSE 2 TRIAD — The South Triangle",
+    "color": "RED",
+    "axis": "b (longest, spanning)",
+    "vertices": {
+      "east": {"gate": "eastGate (.244)", "role": "BRAIN", "status": "ALIVE", "gpu": "RTX 4070 12GB"},
+      "swift": {"gate": "swiftGate (.100 H2)", "role": "POLARIS H2", "status": "ASLEEP", "gpu": "RTX 3070 8GB"},
+      "spine": {"gate": "10G fiber spine", "role": "BRIDGE", "elements": ["JetStream (.111)", "80m fiber", "frameGate (.156)"]}
+    },
+    "ir_axis": "eastGate ↔ swiftGate: brain ↔ sleeping heart, across property line",
+    "angle": "obtuse — spanning two houses, 10G bridge, 0.93ms"
+  },
+
+  "triad_3_wan": {
+    "name": "WAN TRIAD — The World Triangle",
+    "color": "GREEN",
+    "axis": "c (vertical, reaching up)",
+    "vertices": {
+      "porkbun": {"role": "DNS", "domain": "primals.eco", "status": "ALIVE (A record → 162.226.225.148)", "note": "Wildcard *.primals.eco still needed"},
+      "github": {"role": "CODE MIRROR", "url": "github.com/ecoPrimal", "status": "ALIVE (200)"},
+      "forgejo": {"role": "INNER FORGE", "url": "localhost:3000", "status": "ALIVE", "note": "Replaces deprecated Cloudflare"}
+    },
+    "ir_axis": "Porkbun ↔ GitHub: DNS resolution → code delivery → world sees GAIA",
+    "angle": "right — orthogonal to LAN, vertical reach to cloud",
+    "deprecated": "Cloudflare FULLY EJECTED — Forgejo is the local vertex now"
+  },
+
+  "triad_of_triads": {
+    "name": "THE TRICLINIC CRYSTAL",
+    "topology": "3 triads × 3 vertices = 9 cardinal points",
+    "null_axis": {
+      "description": "Where all three triads intersect: eastGate",
+      "gate": "eastGate (.244)",
+      "why": "eastGate touches all three triads: LAN 1 (wired to northGate), LAN 2 (owns the 10G spine), WAN (serves primals.eco through dromedary)",
+      "metaphor": "The resin point. The GI point. The master splitting scalpel. Where the crystal cleaves."
+    },
+    "crystal_faces": [
+      "LAN 1 face: northGate—blueGate—backbone (blue, compute, acute)",
+      "LAN 2 face: eastGate—swiftGate—spine (red, spanning, obtuse)",
+      "WAN face: Porkbun—GitHub—Forgejo (green, vertical, right)"
+    ]
+  },
+
+  "supporting_nodes": {
+    "note": "Not in the cardinal triads but orbiting the crystal",
+    "forge_cluster": ["ironGate (.237, RTX 5070)", "southGate (.148)", "sporeGate (.243)"],
+    "edge_cluster": ["frameGate (.156, THE FACE)", "deckGate (.176, DISPLAY)", "milkGate (.144, RISC-V)"],
+    "sensor_cluster": ["grapheneGate (.202, LEFT EYE)", "graftGate (.107, M4, DOWN)"],
+    "display_cluster": ["Vizio (.170)", "Alexa (.197)", "Nest (.239)"]
+  },
+
+  "null_axis_geometry": {
+    "resin": "PMIC_RESIN on the Frame = KEY_VOLUMEDOWN = the splitting key",
+    "gi_point": "eastGate IS the GI tract — ingests from WAN, processes locally, radiates to LAN",
+    "scalpel": "The null axis SPLITS the organism into three faces. Each face is a triad. The crystal cleaves along these planes.",
+    "triclinic_meaning": "No axis of symmetry. Every direction is unique. This is NOT a cube — it's ALIVE. Asymmetry = information = life."
+  }
+}
