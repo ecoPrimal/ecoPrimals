@@ -1,0 +1,380 @@
+{
+  "timestamp": "2026-11-16T21:11:21-0500",
+  "scanner": "eastGate",
+  "method": [
+    "ARP",
+    "DHCP",
+    "nmap"
+  ],
+  "devices": {
+    "eastGate": {
+      "ip": "192.168.4.244",
+      "mac": "c8:5e:a9:c9:6f:80",
+      "hostname": "eastgate",
+      "type": "gate",
+      "role": "BRAIN",
+      "alive": true,
+      "gpu": "RTX 4070",
+      "ollama": 38,
+      "bt_mac": "C8:5E:A9:C9:6F:84"
+    },
+    "northGate": {
+      "ip": "192.168.4.147",
+      "mac": "bc:fc:e7:ea:d9:34",
+      "hostname": "northGate",
+      "type": "gate",
+      "role": "HEAD",
+      "alive": true,
+      "gpu": "RTX 5090",
+      "ollama": 14,
+      "sunshine": true,
+      "remote_play": true
+    },
+    "ironGate": {
+      "ip": "192.168.4.237",
+      "mac": "1c:86:0b:37:63:70",
+      "hostname": "ironGate",
+      "type": "gate",
+      "role": "SHOULDER",
+      "alive": true,
+      "gpu": "RTX 5070",
+      "ollama": 18
+    },
+    "southGate": {
+      "ip": "192.168.4.148",
+      "mac": "1c:86:0b:37:65:1e",
+      "hostname": "southGate",
+      "type": "gate",
+      "role": "LEG",
+      "alive": true,
+      "gpu": "RTX 4060",
+      "ollama": 12,
+      "bt_mac": "C8:A3:E8:FB:94:4A",
+      "ram_gb": 125
+    },
+    "milkGate": {
+      "ip": "192.168.4.144",
+      "mac": "c0:8b:27:9c:63:ec",
+      "hostname": "milkGate",
+      "type": "gate",
+      "role": "LEG (RISC-V)",
+      "alive": true,
+      "arch": "riscv64",
+      "ram_gb": 31
+    },
+    "sporeGate": {
+      "ip": "192.168.4.3",
+      "mac": "84:47:09:38:97:54",
+      "hostname": "sporeGate",
+      "type": "gate",
+      "role": "LEFT HAND",
+      "alive": true,
+      "alt_ip": "192.168.4.243"
+    },
+    "frameGate": {
+      "ip": "192.168.4.181",
+      "mac": "90:82:c3:74:12:ca",
+      "hostname": "steamFRAME",
+      "type": "gate",
+      "role": "FACE (USB-tethered!)",
+      "alive": true,
+      "usb_ip": "10.86.200.233",
+      "usb_mac": "02:01:37:6a:f7:1b",
+      "arch": "aarch64 (Snapdragon 8 Gen 3)",
+      "bt_mac": "90:82:C3:74:12:CB",
+      "gpu": "Adreno 750",
+      "battery": 71,
+      "steam": true,
+      "moonlight": true,
+      "kenshi": true,
+      "proton_arm64": true,
+      "inkfish_deployed": true,
+      "wlanap": "10.35.78.1/24"
+    },
+    "swiftGate": {
+      "ip": "192.168.4.171",
+      "mac": "9c:04:b6:88:fb:c0",
+      "hostname": "swiftGate",
+      "type": "gate",
+      "role": "HEART (H2)",
+      "alive": false,
+      "gpu": "RTX 3070",
+      "note": "DHCP lease active but no ping response"
+    },
+    "deckGate": {
+      "ip": "192.168.4.176",
+      "mac": "10:82:86:2b:ec:19",
+      "hostname": "steamdeck",
+      "type": "gate",
+      "role": "DISPLAY",
+      "alive": false,
+      "note": "Steam Deck v1, wired USB-C, dead battery"
+    },
+    "graftGate": {
+      "ip": "192.168.4.107",
+      "mac": null,
+      "hostname": "graftGate",
+      "type": "gate",
+      "role": "Mac Mini M4",
+      "alive": false,
+      "note": "Not in DHCP leases this cycle"
+    },
+    "router": {
+      "ip": "192.168.4.1",
+      "mac": "94:83:c4:e0:63:5a",
+      "hostname": "GL-MT6000",
+      "type": "infrastructure",
+      "role": "GATEWAY + NTP + DHCP + WiFi AP",
+      "alive": true
+    },
+    "mikrotik": {
+      "ip": "192.168.4.2",
+      "mac": "04:f4:1c:e6:7c:e8",
+      "hostname": "MikroTik",
+      "type": "infrastructure",
+      "role": "L2 backbone switch (House 1)",
+      "alive": true
+    },
+    "flint2": {
+      "ip": "192.168.4.9",
+      "mac": "94:83:c4:e0:62:b0",
+      "hostname": "GL-MT6000-2",
+      "type": "infrastructure",
+      "role": "Flint 2 \u2014 RIGHT EAR (House 2 WiFi relay)",
+      "alive": true
+    },
+    "jetstream": {
+      "ip": "192.168.4.111",
+      "mac": "ec:75:0c:4c:98:08",
+      "hostname": "EC-75-0C-4C-98-08",
+      "type": "infrastructure",
+      "role": "TP-Link JetStream \u2014 10G bridge (House 2 switch)",
+      "alive": true
+    },
+    "nest_thermostat": {
+      "ip": "192.168.4.239",
+      "mac": "64:16:66:a4:82:0a",
+      "hostname": "09aa01af23190f64",
+      "type": "iot_sensor",
+      "role": "Nest Thermostat \u2014 house temperature",
+      "alive": true
+    },
+    "epson_scanner": {
+      "ip": "USB",
+      "mac": null,
+      "hostname": "ES-400II",
+      "type": "iot_sensor",
+      "role": "Epson ES-400II \u2014 physical eye (document ADF scanner)",
+      "alive": true
+    },
+    "heather_phone": {
+      "ip": "192.168.4.110",
+      "mac": "32:05:2b:a4:58:49",
+      "hostname": "Heather-s-S22-Ultra",
+      "type": "iot_sensor",
+      "role": "Heather's presence indicator",
+      "alive": false,
+      "note": "DHCP lease active"
+    },
+    "vizio_tv": {
+      "ip": "192.168.4.152",
+      "mac": "ac:41:6a:5c:b4:cf",
+      "hostname": null,
+      "type": "iot_actuator",
+      "role": "Vizio Smart TV \u2014 Cast display surface",
+      "alive": true,
+      "ports": [
+        8009
+      ]
+    },
+    "chromecast": {
+      "ip": "192.168.4.170",
+      "mac": "e8:38:a0:53:ea:d8",
+      "hostname": "Basement",
+      "type": "iot_actuator",
+      "role": "Google Chromecast \u2014 Cast bridge",
+      "alive": true,
+      "ports": [
+        8008,
+        8009,
+        8443
+      ]
+    },
+    "epson_printer": {
+      "ip": "192.168.4.200",
+      "mac": "d4:80:8b:1b:9f:01",
+      "hostname": "ET-2400",
+      "type": "iot_actuator",
+      "role": "Epson ET-2400 \u2014 physical output (IPP printer)",
+      "alive": true,
+      "ports": [
+        631
+      ]
+    },
+    "alexa": {
+      "ip": "192.168.4.197",
+      "mac": "a0:d0:dc:ee:ee:39",
+      "hostname": null,
+      "type": "iot_bridge",
+      "role": "Amazon Echo \u2014 microphone ear + speaker voice",
+      "alive": true,
+      "ports": [
+        8009,
+        55443
+      ]
+    },
+    "eero": {
+      "ip": "192.168.4.194",
+      "mac": "c8:e3:06:c6:77:a0",
+      "hostname": "eero",
+      "type": "iot_bridge",
+      "role": "Amazon eero WiFi mesh node \u2014 signal relay",
+      "alive": false,
+      "note": "Expired lease"
+    },
+    "shenzhen_iot": {
+      "ip": "192.168.4.106",
+      "mac": "1c:f6:4c:5a:5d:ed",
+      "hostname": null,
+      "type": "iot_bridge",
+      "role": "Shenzhen Bilian IoT bridge/smart plug (SSH on :22!)",
+      "alive": true,
+      "ports": [
+        22
+      ]
+    },
+    "unknown_156": {
+      "ip": "192.168.4.156",
+      "mac": "ac:80:0a:85:c6:e1",
+      "hostname": null,
+      "type": "unknown",
+      "role": "Unknown device (DHCP lease, no hostname)",
+      "alive": false,
+      "vendor_guess": "ac:80:0a = Ruckus Wireless? or IoT"
+    },
+    "unknown_190": {
+      "ip": "192.168.4.190",
+      "mac": "d2:49:f5:8a:71:16",
+      "hostname": null,
+      "type": "unknown",
+      "role": "Unknown WiFi device (randomized MAC, no hostname)",
+      "alive": false
+    },
+    "unknown_122": {
+      "ip": "192.168.4.122",
+      "mac": "1e:0d:9c:8d:cf:fe",
+      "hostname": null,
+      "type": "unknown",
+      "role": "Unknown WiFi6 device (randomized MAC)",
+      "alive": false
+    },
+    "unknown_131": {
+      "ip": "192.168.4.131",
+      "mac": "5e:8a:82:d2:b4:17",
+      "hostname": null,
+      "type": "unknown",
+      "role": "Unknown device (randomized MAC, expired)",
+      "alive": false
+    },
+    "desktop_9qg": {
+      "ip": "192.168.4.212",
+      "mac": "c8:7f:54:5a:59:10",
+      "hostname": "DESKTOP-9QG6LQL",
+      "type": "pc",
+      "role": "Windows PC \u2014 identity unknown",
+      "alive": false,
+      "note": "DHCP lease active, ARP stale"
+    },
+    "tamison": {
+      "ip": "192.168.4.246",
+      "mac": "ac:f2:3c:25:fc:c1",
+      "hostname": "tamison",
+      "type": "pc",
+      "role": "Tamison's machine \u2014 Kevin's other account/device",
+      "alive": false,
+      "note": "DHCP lease expired"
+    },
+    "unknown_102": {
+      "ip": "192.168.4.102",
+      "mac": "68:54:5a:d0:69:a2",
+      "hostname": null,
+      "type": "unknown",
+      "role": "Unknown device (ARP seen)",
+      "alive": false,
+      "vendor_guess": "68:54:5a = Dell? HP? IoT?"
+    },
+    "unknown_116": {
+      "ip": "192.168.4.116",
+      "mac": "04:27:28:7c:62:d6",
+      "hostname": null,
+      "type": "unknown",
+      "role": "Unknown device (ARP seen)",
+      "alive": false,
+      "vendor_guess": "04:27:28 = Belkin?"
+    },
+    "steamdeck_old": {
+      "ip": "192.168.4.203",
+      "mac": "14:13:33:d6:96:09",
+      "hostname": "steamdeck",
+      "type": "gate",
+      "role": "deckGate alternate/old lease (different MAC from .176!)",
+      "alive": false
+    }
+  },
+  "summary": {
+    "total_devices": 32,
+    "alive": 18,
+    "by_type": {
+      "gate": 11,
+      "infrastructure": 4,
+      "iot_sensor": 3,
+      "iot_actuator": 3,
+      "iot_bridge": 3,
+      "unknown": 6,
+      "pc": 2
+    },
+    "organism_gates": 10,
+    "infrastructure": 4,
+    "iot_sensors": 3,
+    "iot_actuators": 3,
+    "iot_bridges": 3,
+    "unknown": 7,
+    "pcs": 2
+  },
+  "cast_targets": [
+    {
+      "name": "Vizio TV",
+      "ip": "192.168.4.152",
+      "port": 8009
+    },
+    {
+      "name": "Chromecast",
+      "ip": "192.168.4.170",
+      "port": 8009
+    },
+    {
+      "name": "Alexa",
+      "ip": "192.168.4.197",
+      "port": 8009
+    }
+  ],
+  "bt_mesh": {
+    "eastGate": "C8:5E:A9:C9:6F:84",
+    "southGate": "C8:A3:E8:FB:94:4A",
+    "frameGate": "90:82:C3:74:12:CB",
+    "pixel": "E8:D5:2B:51:36:39",
+    "xbox": "A8:8C:3E:A0:59:3A",
+    "switch_pro": "A0:5A:5C:0C:E2:A2"
+  },
+  "usb_tether": {
+    "frameGate": {
+      "eastGate_ip": "10.86.200.234",
+      "frame_ip": "10.86.200.233",
+      "interface": "enx0200376af71b",
+      "protocol": "CDC NCM",
+      "vendor": "Valve",
+      "product": "Steam Frame",
+      "serial": "steamFRAME"
+    }
+  }
+}

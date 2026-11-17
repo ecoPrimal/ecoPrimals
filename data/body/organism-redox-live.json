@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-17T02:03:34.178356951Z",
+  "timestamp": "2026-11-16T21:16:07-0500",
   "scanner": "eastGate",
   "gates": [
     {
@@ -114,18 +114,18 @@
       "name": "frameGate",
       "ip": "192.168.4.181",
       "role": "FACE",
-      "alive": false,
-      "latency_ms": null,
+      "alive": true,
+      "latency_ms": 1.8,
       "gpu": "Adreno 750",
-      "ollama_models": 0,
+      "ollama_models": 1,
       "ollama_port": 11434,
-      "bt_up": false,
-      "bt_mac": null,
-      "steam": false,
+      "bt_up": true,
+      "bt_mac": "90:82:C3:74:12:CB",
+      "steam": true,
       "steamvr": false,
       "remote_play": false,
       "sunshine": false,
-      "inkfish_deployed": false,
+      "inkfish_deployed": true,
       "arch": "aarch64"
     },
     {
@@ -148,14 +148,68 @@
     }
   ],
   "total_rt_cores": 388,
-  "active_rt_cores": 342,
+  "active_rt_cores": 388,
   "total_vram_gb": 72,
-  "ollama_total_models": 82,
-  "bt_radios_up": 1,
+  "ollama_total_models": 83,
+  "bt_radios_up": 2,
   "steam_titles": 1421,
   "arm64_binaries": [
     "gardens/inkFish/target/aarch64-unknown-linux-gnu/release/inkfish",
     "springs/rustChip/target/aarch64-unknown-linux-musl/release/flint-silicon"
   ],
-  "frame_manifest_ready": true
+  "frame_manifest_ready": true,
+  "frame_live": {
+    "usb_connected": true,
+    "usb_ip": "10.86.200.233",
+    "usb_interface": "enx0200376af71b (CDC NCM)",
+    "wifi_ip": "192.168.4.181",
+    "wlanap_ip": "10.35.78.1/24",
+    "arch": "aarch64 Snapdragon 8 Gen 3 (SM8650, Cortex-X4 0xd80)",
+    "cpu_features": 51,
+    "ram_gb": 15.3,
+    "disk_home_free_gb": 896,
+    "gpu": "Qualcomm SM8650 DPU + Adreno 750",
+    "vulkan": "1.4.363",
+    "bt": "hci0 UP RUNNING (UART, Qualcomm WCN7850)",
+    "bt_mac": "90:82:C3:74:12:CB",
+    "battery": "71% charging",
+    "thermal": {
+      "cpuss0": 41,
+      "cpu4_bottom": 54,
+      "cpu5_top": 41,
+      "cpu7_top": 45
+    },
+    "ollama": {
+      "version": "0.40.16",
+      "models": [
+        "tinyllama:latest (637MB)"
+      ],
+      "inference_speed": "48.4 tok/s (CPU, tinyllama)",
+      "first_words": "Gaia is excited to discover a new world of possibilities..."
+    },
+    "steam": {
+      "games": [
+        "Kenshi",
+        "Proton 11.0 (ARM64)"
+      ],
+      "flatpak": [
+        "Moonlight 6.2.0"
+      ]
+    },
+    "inkfish_deployed": true,
+    "flint_silicon_deployed": true,
+    "silicon": {
+      "compatible": [
+        "qcom,sm8650-dv1",
+        "qcom,sm8650"
+      ],
+      "leds": [
+        "mp3317-scene-illum-ir",
+        "rgb:status",
+        "mp3317-backlight-left",
+        "mp3317-backlight-right"
+      ],
+      "gpio_chips": 40
+    }
+  }
 }
