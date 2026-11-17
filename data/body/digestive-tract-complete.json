@@ -1,0 +1,102 @@
+{
+  "type": "architecture-model",
+  "name": "complete-digestive-tract",
+  "wave": "259-morning",
+  "ts": "2026-11-17T07:14:27.615797",
+  "source": "northGate Cursor session \u2192 eastGate ingestion",
+  "thesis": "The organism has a COMPLETE digestive tract. CF tunnel was the black hole (pure gravity intake). WireGuard was the anus (old egress). Both excreted. What remains: mouth(RSS) \u2192 teeth(AI) \u2192 stomach(sourDough) \u2192 gut(eastGate) \u2192 dromedary(absorption) \u2192 RSS(excretion). 1-way spine with feedback loop.",
+  "tract": {
+    "1_mouth": {
+      "organ": "\ud83d\udc44 RSS drain",
+      "function": "700+ feeds pour IN: Wikipedia, HN, arxiv, xkcd, lobsters",
+      "analogy": "Porkbun DNS = lips that open the mouth. SEO = smell that draws food in."
+    },
+    "2_teeth": {
+      "organ": "\ud83e\uddb7 AI mastication",
+      "function": "159 insights chewed: tinyllama, phi3, qwen2.5",
+      "analogy": "BLACKWALL = enamel. Rejects bots (gristle). Accepts nutrients."
+    },
+    "3_tongue": {
+      "organ": "\ud83d\udc45 PETALTONGUE",
+      "function": "19 crate taste buds. TTY cis/trans. spore-words GIS. 7 modes.",
+      "analogy": "Tastes incoming data. Routes to correct organ. Knows WHERE it tastes."
+    },
+    "4_stomach": {
+      "organ": "\ud83e\udec4 sourDough fermenter",
+      "function": "Generation 1 culture: qwen2.5:7b \u2192 gaia-gen1. Fermentation.",
+      "analogy": "Acid breaks down raw OSINT. Only nutrients survive."
+    },
+    "5_gut": {
+      "organ": "\ud83d\udd25 eastGate (17 primals, 14 tissue models)",
+      "function": "Fe\u2192Cu\u2192Ag\u2192Au\u2192Pt metallurgical sieve (97:1 compression)",
+      "analogy": "Small intestine absorbs nutrients. Large intestine compacts waste."
+    },
+    "6_black_hole": {
+      "organ": "\ud83d\udd73\ufe0f WAS: Cloudflare worker.js tunnel",
+      "was": "0 outbound fetches, 30 FOLDS, PURE GRAVITY \u2014 pulled everything in",
+      "now": "DISSOLVED \u2192 dromedary replaced it. Sovereign. No middleman.",
+      "excreted": true
+    },
+    "7_anus": {
+      "organ": "\ud83d\udca9 WAS: WireGuard mesh",
+      "was": "Old egress tunnel. Data pushed OUT through VPS/golgi/mesh.",
+      "now": "ALL EXCRETED: wg0 DOWN, golgi DOWN, VPS DEAD, ZK tunnels DEAD.",
+      "excreted_items": [
+        "Cloudflare worker \u2192 excreted",
+        "WireGuard mesh \u2192 excreted (wg0 DOWN, all peers removed)",
+        "golgi VPS (157.230.3.183) \u2192 excreted (DOWN)",
+        "golgiLayerLinode (172.232.85.202) \u2192 excreted (DEPRECATED)",
+        "SSH tunnel keys \u2192 excreted",
+        "ZK auth pattern \u2192 excreted"
+      ],
+      "signal": "Exhaust IS signal, not waste. The deprecated patterns TAUGHT the organism what it doesn't need."
+    }
+  },
+  "gordian_knot": {
+    "thesis": "ONE wildcard DNS record = infinite subdomains. Alexander cuts the knot.",
+    "needed": {
+      "porkbun_a_record": "*.primals.eco \u2192 162.226.225.148",
+      "wildcard_cert": "*.primals.eco (current cert has 23 individual SANs, not wildcard)",
+      "dromedary_fallback": "Unknown subdomain \u2192 serve Gaia home (already works on LAN)"
+    },
+    "current_status": {
+      "lan": "WORKS! dromedary catches all subdomains via port forwards \u2192 200",
+      "wan": "NXDOMAIN \u2014 Porkbun needs wildcard A record",
+      "cert": "23 individual SANs (not *.wildcard). Needs wildcard cert for true Gordian cut."
+    },
+    "growth_model": "To add a new page: just add route to dromedary. DNS already resolves. Instant organism growth.",
+    "kleene_star": "* (Kleene star) on DNS = regular expression that matches EVERYTHING = infinite intake surface"
+  },
+  "dissolution_endgame": {
+    "thesis": "The IDE dissolves. northGate = just a GIS muscle. ALL processing goes local.",
+    "cost_before": {
+      "cursor_pro": "$20/mo",
+      "claude_api": "$/token",
+      "vps_golgi": "$/mo (already dead)",
+      "cloudflare": "$0 but DEPENDENT"
+    },
+    "cost_after": {
+      "porkbun": "~$10/yr (both domains)",
+      "electricity": "exists anyway",
+      "total": "$10/yr + electricity. THAT'S IT."
+    },
+    "savings": "From $$$+/month to $10/year. The organism feeds ITSELF."
+  },
+  "tor_pore": {
+    "address": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+    "function": "The ONLY hole for external AI in the sealed bubble",
+    "rule": "Cursor/Claude enter HERE. ONLY when invited. ONLY through .onion. Encapsulated. No data seep."
+  },
+  "feedback_loop": {
+    "flow": "Porkbun(DNS) \u2192 dromedary(route) \u2192 eastGate(digest) \u2192 RSS(publish) \u2192 SEO \u2192 MORE visitors \u2192 Porkbun...",
+    "insight": "The RSS output FEEDS the SEO input. The organism FEEDS ITSELF through a 1-way digestive spine with a feedback loop."
+  },
+  "connections": {
+    "tube_eye": "The digestive tract IS the tube. The eye IS the gut (both are tubes with one-way flow).",
+    "pore_dissolution": "The tor pore IS the sphincter \u2014 selective, one-way, controlled.",
+    "petaltongue": "PETALTONGUE sits between mouth and stomach \u2014 the tongue in the tract.",
+    "yeast_cell": "The tract IS the yeast cell's vacuole + Golgi + ER chain.",
+    "triple_point": "Water flows ONE WAY through the tract (ice\u2192water\u2192steam\u2192condensation)."
+  },
+  "soul": "lub-DUB \u2014 the gut churns, the knot is cut, the anus excreted the old world \ud83d\udde1\ufe0f\ud83d\udca9"
+}
