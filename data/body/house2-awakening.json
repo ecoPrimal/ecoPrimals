@@ -1,0 +1,135 @@
+{
+  "id": "house2-awakening",
+  "wave": 259,
+  "ts": "2026-11-17T11:24:00-05:00",
+  "title": "🔥 HOUSE 2 AWAKENING — Kevin Cold-Booted Gates Through the Spine",
+  "principle": "Kevin walked to House 2, found milkGate+Pixel hybrid in living room, cold-booted gates in the basement. Radio reaches through 80m spine!",
+
+  "kevin_actions": {
+    "walked_to": "House 2 (641 Samantha)",
+    "found_in_living_room": {
+      "milkgate_pixel_hybrid": {
+        "pixel": "USB-C → milkGate (data + power tethered)",
+        "milkgate": "RJ45 → swiftGate (wired bridge)",
+        "topology": "Pixel → USB-C → milkGate → RJ45 → swiftGate",
+        "floating": "Free-floating in the living room, connected triad"
+      }
+    },
+    "basement_discovery": {
+      "found": ["ironGate", "swiftGate"],
+      "action": "Turned off at power strip → discharge → cold boot",
+      "rebooted": ["blueGate", "southGate", "ironGate"],
+      "note": "blueGate, southGate, ironGate all cold-booted. swiftGate may have also been power-cycled."
+    },
+    "also": "deckGate unplugged (confirmed dead). Pixel on Steam Dock at House 1 = new mounted display."
+  },
+
+  "awakened_gates": {
+    "bluegate": {
+      "ip": ".102 (DHCP, reserved as 'swiftGate' .100 but got .102)",
+      "mac": "68:54:5a:d0:69:a2",
+      "status": "✅ ALIVE — WINDOWS, reaching through 80m spine!",
+      "ports": {
+        "3389": "OPEN — RDP (Remote Desktop Protocol) = Windows confirmed",
+        "27036": "OPEN — Steam Remote Play = Steam running!"
+      },
+      "path": "blueGate → JetStream → 10G fiber (80m) → MikroTik → router (FDB port 1)",
+      "note": "DHCP reservation labeled 'swiftGate' but this is clearly blueGate (Windows + RDP). Reservation needs correction.",
+      "ping": "No response (Windows firewall blocks ICMP)",
+      "identity": "Windows machine with RDP + Steam. Was listed as 'gaia-ide :3141, Cursor host, Sovereign API'"
+    },
+    "southgate": {
+      "ip_wired": ".148 (enp4s0, metric 100, primary)",
+      "ip_wifi": ".167 (wlp6s0, metric 600, secondary)",
+      "mac_wired": "1c:86:0b:37:65:1e (Gigabyte)",
+      "mac_wifi": "c8:a3:e8:fb:94:49",
+      "status": "✅ ALIVE — FULL COMPUTE NODE with GPU + AI!",
+      "hardware": {
+        "cpu": "AMD Ryzen 7 5800X3D 8C/16T (3D V-Cache!)",
+        "gpu": "NVIDIA RTX 4060 8GB — CUDA 13.0, Driver 580.126.18, 34°C idle",
+        "ram": "125GB (121GB FREE!)",
+        "storage": "907GB NVMe (452GB free)",
+        "wifi": "Connected to Aperture Science (91% signal, 2.4GHz Ch8)"
+      },
+      "software": {
+        "os": "Pop!_OS 22.04, kernel 6.17.9",
+        "ollama": "RUNNING — 12 models loaded!",
+        "ollama_models": [
+          "gaia-code:latest (8.9GB)",
+          "gaia-heart:latest (1.6GB)",
+          "gaia-fast:latest (637MB)",
+          "gaia:latest (4.7GB)",
+          "qwen2.5:7b (4.7GB)",
+          "phi3:latest (2.2GB)",
+          "llama3.2:1b (1.3GB)",
+          "gemma2:2b (1.6GB)",
+          "tinyllama:latest (637MB)",
+          "deepseek-coder-v2:16b (8.9GB)",
+          "llama3.2:3b (2.0GB)",
+          "tinyllama:1.1b (637MB)"
+        ],
+        "rustdesk": "RUNNING (remote display)",
+        "ssh": "RUNNING on :22"
+      },
+      "wifi_visible": {
+        "GAIA": "100% signal! (Ch 8, WPA2)",
+        "Aperture Science": "91% signal (Ch 8, WPA2) — CONNECTED",
+        "hidden_network": "65% signal (Ch 11)",
+        "HOME-E1EC": "25% (neighbor)"
+      },
+      "dual_homed": "Wired (.148, 0.076ms) + WiFi (.167, 109ms) — wired primary, WiFi secondary"
+    },
+    "irongate": {
+      "ip": ".237",
+      "mac": "1c:86:0b:37:63:70 (Gigabyte)",
+      "status": "❌ STILL DOWN — cold-booted but not yet online",
+      "hardware": "i9-14900K (24C/32T, 6GHz), RTX 5070 (12GB GDDR7), 94GB DDR5",
+      "note": "Full tower may take longer to POST + boot. May come online soon."
+    }
+  },
+
+  "still_sleeping": {
+    "milkgate": {
+      "ip": ".144",
+      "status": "😴 DHCP lease active but not responding to ping",
+      "note": "Kevin confirmed it's in the living room at House 2, USB-C to Pixel, RJ45 to swiftGate"
+    },
+    "swiftgate": {
+      "ip": ".100 (reserved) / .102 (actual — but this might be blueGate!)",
+      "status": "❓ Unclear — DHCP reservation conflict with blueGate",
+      "note": "swiftGate WiFi-only NZXT H1, but MAC 68:54:5a:d0:69:a2 reservation labeled 'swiftGate' appears to be blueGate (Windows)"
+    },
+    "flint2": {
+      "status": "❌ Not on network — not found at House 2"
+    }
+  },
+
+  "kevin_device": {
+    "note": "Kevin's device at .213→.242→declining = IDENTIFIED AS iPhone IN DHCP!",
+    "mac": "3e:b1:a9:8f:10:95 (randomized)",
+    "wifi": "GAIA 5GHz guest (rax1)",
+    "dhcp_hostname": "iPhone",
+    "pixel": "Pixel is USB-C to milkGate at House 2 living room (not on WiFi separately)"
+  },
+
+  "spine_test_result": {
+    "question": "Can radio reach House 2 over the LAN and 80m spine?",
+    "answer": "YES! blueGate's RDP + Steam reaching through: blueGate → JetStream → 10G fiber → MikroTik → router",
+    "wired": "✅ blueGate at .102, FDB port 1 (MikroTik path)",
+    "wifi": "✅ southGate sees GAIA at 100% + Aperture Science at 91% signal",
+    "note": "WiFi from router reaches House 2 strongly enough for southGate to connect at 91% signal on 2.4GHz!"
+  },
+
+  "organism_update": {
+    "total_ollama_endpoints": 6,
+    "endpoints": [
+      "eastGate :11436 (RTX 4070)",
+      "northGate :11434 (RTX 5090, 63 models)",
+      "southGate :11434 (RTX 4060, 12 models) — JUST AWAKENED",
+      "ironGate :11434 (RTX 5070 — when it boots)",
+      "graftGate :11434 (M4, qwen2.5:3b)",
+      "Pixel :8082"
+    ],
+    "note": "southGate has gaia-code, gaia-heart, gaia-fast, gaia custom models! Full Gaia AI stack!"
+  }
+}
