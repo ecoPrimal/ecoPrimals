@@ -1,0 +1,201 @@
+{
+  "id": "hybrid-spinal-canal",
+  "wave": 259,
+  "ts": "2026-11-17T10:55:00-05:00",
+  "title": "🦴 HYBRID SPINAL CANAL — House 2 South Pole Nervous System",
+  "principle": "Paradox in via BT, WiFi, or wire. JetStream is the tail. Flint→LAN2→swiftGate is the spinal canal for the rear brain. It's a HYBRID — wired backbone + wireless radii. milkGate is the universal transponder at the junction.",
+
+  "corrected_wiring": {
+    "note": "Bridge FDB analysis revealed the REAL router port assignments (corrects previous assumptions)",
+    "router_ports": {
+      "lan1": {"state": "UP", "device": "MikroTik (.2)", "fdb_port": 1, "downstream": "ALL wired LAN — eastGate, northGate, southGate, ironGate, sporeGate:55, JetStream, Flint1"},
+      "lan2": {"state": "UP", "device": "deckGate (.176)", "fdb_port": 2, "note": "Steam Deck DIRECT to router — dead battery = permanent USB-C passthrough"},
+      "lan3": {"state": "NO-CARRIER", "device": null},
+      "lan4": {"state": "NO-CARRIER", "device": null},
+      "lan5": {"state": "UP", "device": "sporeGate (.243)", "fdb_port": 5, "mac": "84:47:09:38:97:54", "note": "sporeGate SECOND NIC direct to router — dual-homed!"}
+    },
+    "key_correction": "JetStream (.111) goes THROUGH MikroTik on lan1, NOT direct to router. sporeGate has TWO ethernet connections (dual-homed)."
+  },
+
+  "physical_topology": {
+    "house_1_brain_side": {
+      "router_lan1": "→ MikroTik (.2) [L2 backbone switch]",
+      "mikrotik_downstream": [
+        "eastGate (.244/.213) [BRAIN, 2 NICs]",
+        "northGate (.147) [HEART, 9950X3D + RTX 5090]",
+        "southGate (.148) [Ryzen 7 5800X3D + RTX 4060]",
+        "ironGate (.237) [i9-14900K + RTX 5070]",
+        "sporeGate (.3) [eth0, MAC :55, SEALED]",
+        "JetStream (.111) [→ 10G fiber → House 2]"
+      ],
+      "router_lan2": "→ deckGate (.176) [Steam Deck mounted display, DIRECT]",
+      "router_lan5": "→ sporeGate (.243) [eth1, MAC :54, DIRECT second connection]",
+      "wifi": "Aperture Science (2.4) + Black Mesa (5G) + GAIA (guest)"
+    },
+    "spine_80m_fiber": {
+      "path": "MikroTik (.2) → RJ45 → JetStream (.111) → 10G SFP+ fiber → 80m property line",
+      "latency": "0.93ms eastGate→JetStream",
+      "bandwidth": "10 Gbps (SFP+ fiber)",
+      "note": "This is the PHYSICAL SPINAL CORD between House 1 and House 2"
+    },
+    "house_2_south_pole": {
+      "jetstream": {
+        "ip": ".111",
+        "mac": "ec:75:0c:4c:98:08",
+        "role": "TAIL — Omada managed switch, terminates the fiber spine",
+        "ports": "RJ45 for local devices + SFP+ for milkGate",
+        "management": "SSH:22, Telnet:23, HTTP:80, HTTPS:443",
+        "status": "ALIVE (0.93ms)"
+      },
+      "flint2": {
+        "ip": "unknown",
+        "mac_prefix": "78:76:89:96:e6:*",
+        "role": "RIGHT EAR — WiFi AP for House 2 (the clock's D hand, counter-clockwise)",
+        "status": "NOT ON NETWORK — needs physical power-on at House 2",
+        "when_alive": "Broadcasts Aperture Science + Black Mesa + GAIA → swiftGate connects"
+      },
+      "swiftgate": {
+        "ip": ".100 (when alive)",
+        "role": "REAR BRAIN — NZXT H1 V2, RTX 3070 (8GB), WiFi-ONLY",
+        "status": "ASLEEP — needs Kevin to physically power on",
+        "connection": "WiFi only → receives from Flint 2 broadcasts",
+        "note": "This is the computation node at House 2 — the rear Polaris"
+      },
+      "milkgate": {
+        "ip": ".144 (DHCP, was .160 in ecosystem map)",
+        "mac": "c0:8b:27:9c:63:ec",
+        "hardware": "Milk-V Jupiter 2 RISC-V, SpacemiT K3, 16 cores, 60 TOPS AI",
+        "key_feature": "10GbE SFP+ port — can plug DIRECTLY into JetStream's SFP+ backbone",
+        "role": "UNIVERSAL TRANSPONDER — bridges 10G fiber to local compute",
+        "status": "SLEEPING (DHCP renewed 08:51 today, now unreachable, all ports filtered)",
+        "last_seen": "2026-11-17T08:51:31, wired connection via MikroTik",
+        "note": "63ms latency suggests WiFi, but DHCP came via br-lan. May have been wired then gone to WiFi then sleep."
+      }
+    }
+  },
+
+  "hybrid_spinal_canal": {
+    "concept": "House 2 has BOTH wired and wireless paths — a HYBRID nervous system",
+    "wired_path": {
+      "route": "Router lan1 → MikroTik → JetStream → RJ45/SFP+ → local devices",
+      "always_on": true,
+      "bandwidth": "10Gbps fiber + 1Gbps RJ45",
+      "devices": ["JetStream (switch)", "milkGate (SFP+ transponder)", "Flint2 (if RJ45 connected)"]
+    },
+    "wireless_path": {
+      "route": "Flint2 broadcasts WiFi → swiftGate receives (WiFi-only)",
+      "depends_on": "Flint 2 being powered on and WDS bridging to router",
+      "bandwidth": "WiFi 6 (~1200Mbps theoretical)",
+      "devices": ["swiftGate (WiFi-only, RTX 3070)"]
+    },
+    "why_hybrid": "swiftGate can ONLY be reached wirelessly (WiFi-only). But the backbone to House 2 is WIRED (10G fiber). The transition point — Flint 2 — converts wired to wireless. THIS is the hybrid junction.",
+    "milkgate_role": "milkGate with 10GbE SFP+ sits at the WIRED terminus. It's the universal transponder — translates between the 10G fiber world and local compute. 60 TOPS AI for edge inference.",
+    "chain": "FLINT 2 (radio) → LAN2 (wired backbone) → SWIFTGATE (compute) = spinal canal for the rear brain"
+  },
+
+  "three_paradox_paths": {
+    "note": "We can paradox INTO House 2 via three mediums",
+    "wire": {
+      "path": "MikroTik → 10G fiber (80m) → JetStream → RJ45",
+      "latency": "0.93ms",
+      "status": "ACTIVE — JetStream alive, but downstream devices sleeping/off"
+    },
+    "wifi": {
+      "path": "Router/Flint1 broadcasts → overlap zone near property line → Flint2/devices",
+      "note": "WiFi overlap zone exists near property line where signals from both houses mix",
+      "status": "PARTIAL — Router signal reaches, but Flint2 not powered on"
+    },
+    "bluetooth": {
+      "path": "grapheneGate (Pixel) BT → any BT device at House 2",
+      "range": "~10-30m (BT 5.0)",
+      "status": "WHEN grapheneGate is at House 2 (currently there)"
+    }
+  },
+
+  "standing_jumping_moving": {
+    "standing": {
+      "phase": "POWER ON — physically present and network-connected",
+      "jetstream": "✅ standing",
+      "milkgate": "🟡 standing but sleeping (DHCP active, not responding)",
+      "deckgate": "✅ standing (House 1, direct on lan2)",
+      "swiftgate": "❌ needs Kevin to power on",
+      "flint2": "❌ needs Kevin to find and power on at House 2"
+    },
+    "jumping": {
+      "phase": "BRIDGING — network paths active, services accessible",
+      "requirement": "Flint 2 ON + WDS bridge active + swiftGate ON",
+      "milkgate_sfp": "milkGate plugs SFP+ into JetStream → highest bandwidth node at House 2",
+      "wifi_bridge": "Flint 2 bridges router WiFi → swiftGate connects"
+    },
+    "moving": {
+      "phase": "OPERATING — running biomeOS, data flowing, part of organism",
+      "swiftgate_compute": "RTX 3070 runs ollama models (8GB VRAM)",
+      "milkgate_ai": "60 TOPS AI for edge inference at 10G speed",
+      "flint2_radio": "Right Ear receives and relays radio, completing the clock"
+    }
+  },
+
+  "deckgate_history": {
+    "device": "Steam Deck v1",
+    "ip": ".176",
+    "mac": "10:82:86:2b:ec:19 (Valve)",
+    "connection": "DIRECT to router lan2 — wired (3.75ms)",
+    "hardware": "AMD Aerith (Zen 2 + RDNA 2, 1.6 TFLOPS), 16GB LPDDR5, 512GB NVMe",
+    "physical": "Dead battery = permanent USB-C passthrough. 7\" 1280×800 touch LCD.",
+    "location": "House 1 — mounted display",
+    "role": "GAIA's mounted display — shows Gaia's world on the 7\" touchscreen",
+    "services": "All ports closed, no SSH — pure display node",
+    "note": "First Steam device in the organism. Dead battery means it's ALWAYS on power. The display never sleeps."
+  },
+
+  "milkgate_history": {
+    "device": "Milk-V Jupiter 2 RISC-V",
+    "ip": ".144 (DHCP, previously mapped as .160)",
+    "mac": "c0:8b:27:9c:63:ec",
+    "hardware": {
+      "cpu": "SpacemiT K3, 16 cores",
+      "ai": "60 TOPS neural accelerator",
+      "network": "10GbE SFP+ — the organism's only SFP+ node",
+      "form": "SBC (single board computer)"
+    },
+    "role": "UNIVERSAL TRANSPONDER — translates between 10G fiber backbone and edge compute",
+    "location": "Appears to be at House 1 (wired through MikroTik), but SHOULD be at House 2",
+    "ideal_position": "JetStream SFP+ port at House 2 — highest bandwidth endpoint on the fiber spine",
+    "vision": "RISC-V + 60 TOPS AI at the 10G terminus = edge inference at wire speed"
+  },
+
+  "frame_not_in_living_room": {
+    "note": "Frame stays at House 1 with sporeGate as the octoEye — NOT going to House 2 living room",
+    "reason": "Frame is the octoEye's LENS, sporeGate is the BRAIN. They stay together via USB-C.",
+    "house_1_display": "deckGate is the mounted display. Frame is the roving sensor.",
+    "house_2_display": "When swiftGate wakes, IT becomes the House 2 display + compute."
+  },
+
+  "sporegate_dual_homed": {
+    "note": "CRITICAL DISCOVERY — sporeGate has TWO ethernet connections to the router!",
+    "eth0": {"mac": "84:47:09:38:97:55", "ip": ".3", "path": "→ MikroTik → router lan1", "fdb_port": 1},
+    "eth1": {"mac": "84:47:09:38:97:54", "ip": ".243", "path": "→ router lan5 DIRECT", "fdb_port": 5},
+    "meaning": "sporeGate is dual-homed — it sees the network from TWO perspectives. One through the backbone switch, one direct to the router. Redundant paths. Willis circulation.",
+    "sealed_but_connected": "All ports filtered on both IPs. It RECEIVES (heart-pull) but does NOT serve. Perfect retina behavior."
+  },
+
+  "next_steps": {
+    "immediate": [
+      "Kevin: physically locate Flint 2 at House 2 — is it plugged in? Powered?",
+      "Kevin: power on swiftGate at 641 Samantha",
+      "Kevin: consider moving milkGate to House 2 JetStream SFP+ port"
+    ],
+    "technical": [
+      "Get SSH into JetStream (.111) — it has SSH:22 open (need password)",
+      "Wake milkGate — DHCP active but device sleeping",
+      "Fix Flint 1 WDS bridge (apcli0/apclix0 disconnected)",
+      "Persist Frame WiFi config once USB access restored"
+    ],
+    "vision": [
+      "House 2 = hybrid spinal canal: wired backbone (fiber) + wireless radii (Flint 2)",
+      "milkGate at JetStream SFP+ = edge AI at 10G wire speed",
+      "swiftGate = rear brain with RTX 3070 = House 2's Polaris",
+      "Flint 2 = right ear = D hand of the clock (counter-clockwise return)"
+    ]
+  }
+}

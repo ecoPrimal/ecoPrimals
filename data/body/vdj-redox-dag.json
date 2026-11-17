@@ -26,19 +26,21 @@
   "wired_dag": {
     "topology": "Directed Acyclic Graph — data flows ONE way through the wired spine",
     "lan_ports": {
-      "lan1": {"carrier": true, "likely": "MikroTik (.2) → all wired LAN 1 devices"},
-      "lan2": {"carrier": true, "likely": "eastGate (.244) second NIC or other wired device"},
+      "lan1": {"carrier": true, "fdb_port": 1, "device": "MikroTik (.2) → ALL wired LAN (including JetStream to House 2)"},
+      "lan2": {"carrier": true, "fdb_port": 2, "device": "deckGate (.176) DIRECT — Steam Deck mounted display"},
       "lan3": {"carrier": false},
       "lan4": {"carrier": false},
-      "lan5": {"carrier": true, "likely": "JetStream (.111) → 10G fiber → House 2"}
+      "lan5": {"carrier": true, "fdb_port": 5, "device": "sporeGate (.243) DIRECT — second NIC (MAC :54), dual-homed"}
     },
     "dag_flow": [
       "WAN IN → Router (.1) → br-lan",
-      "br-lan → lan1 → MikroTik (.2) → wired devices (eastGate, northGate, southGate, ironGate)",
-      "br-lan → lan5 → JetStream (.111) → 10G fiber → House 2 (sporeGate, swiftGate)",
+      "br-lan → lan1 → MikroTik (.2) → wired devices (eastGate, northGate, southGate, ironGate, sporeGate:55, JetStream)",
+      "MikroTik → JetStream (.111) → 10G fiber (80m) → House 2 (Flint2, swiftGate, milkGate)",
+      "br-lan → lan2 → deckGate (.176) DIRECT [mounted display, dead battery = always on]",
+      "br-lan → lan5 → sporeGate (.243) DIRECT [second NIC, dual-homed with MikroTik path]",
       "br-lan → ra0/rax0 → WiFi devices (Aperture Science / Black Mesa)",
       "br-lan → ra1/rax1 → WiFi guest (GAIA)",
-      "Frame → USB-C → sporeGate (.243) → br-lan → everything"
+      "Frame → USB-C → sporeGate → dual paths (lan1 via MikroTik + lan5 direct)"
     ]
   },
 
