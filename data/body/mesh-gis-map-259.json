@@ -1,0 +1,308 @@
+{
+  "type": "mesh-gis-map",
+  "name": "full-mesh-scan-259",
+  "wave": "259-morning",
+  "ts": "2026-11-17T07:17:39.115464",
+  "scan_time": "7:16 AM EST, Nov 17 2026",
+  "gis": {
+    "basecamp_1": {
+      "name": "Polaris Basecamp (House 1)",
+      "address": "4422 Southgate Ave, Lansing MI",
+      "lat": 42.7008,
+      "lng": -84.549,
+      "role": "BRAIN SIDE \u2014 CNS"
+    },
+    "basecamp_2": {
+      "name": "South Pole (House 2)",
+      "address": "641 Samantha Ave, Lansing MI",
+      "lat": 42.7006,
+      "lng": -84.5488,
+      "role": "EXTENSION SIDE \u2014 PNS",
+      "distance_m": 80,
+      "backbone": "10G fiber"
+    },
+    "gaiau": {
+      "name": "GaiaU (Michigan State University)",
+      "lat": 42.7325,
+      "lng": -84.4822,
+      "role": "ACADEMIC ORBIT"
+    },
+    "wan_ingress": {
+      "ip": "162.226.225.148",
+      "isp": "ATT",
+      "role": "MOUTH to the world"
+    }
+  },
+  "hosts": {
+    "alive": [
+      {
+        "ip": ".1",
+        "name": "Router",
+        "hw": "GL-MT6000",
+        "mac": "94:83:c4:e0:63:5a",
+        "location": "House1",
+        "services": {
+          "ssh": true,
+          "http": true,
+          "dns": true,
+          "ntp": true
+        },
+        "latency_ms": 24.1,
+        "role": "GATEWAY \u2014 routes all traffic, NTP server, DNS"
+      },
+      {
+        "ip": ".2",
+        "name": "MikroTik",
+        "hw": "L2 bridge",
+        "mac": "04:f4:1c:e6:7c:e8",
+        "location": "House1",
+        "services": {
+          "ssh": true
+        },
+        "latency_ms": 1.16,
+        "role": "L2 BACKBONE \u2014 wired switch for all House 1 devices"
+      },
+      {
+        "ip": ".3",
+        "name": "sporeGate",
+        "hw": "NUC Ryzen 5 6600H, 27GB, 929GB NVMe",
+        "mac": "84:47:09:38:97:54",
+        "location": "House1",
+        "services": {
+          "ssh": true
+        },
+        "latency_ms": 1.84,
+        "role": "FORGE \u2014 plasmidBin, heart-pull, relay"
+      },
+      {
+        "ip": ".9",
+        "name": "Router-secondary",
+        "hw": "GL-MT6000 enp5s0",
+        "mac": "94:83:c4:e0:62:b0",
+        "location": "House1",
+        "services": {
+          "ssh": true
+        },
+        "latency_ms": null,
+        "role": "Second ethernet port of router"
+      },
+      {
+        "ip": ".106",
+        "name": "APPLE DEVICE (?)",
+        "hw": "Apple Inc.",
+        "mac": "1c:f6:4c:5a:5d:ed",
+        "location": "House?",
+        "services": {
+          "ssh": true
+        },
+        "latency_ms": null,
+        "role": "UNKNOWN \u2014 Apple OUI. MacBook? iPad? Apple TV?",
+        "new_discovery": true
+      },
+      {
+        "ip": ".110",
+        "name": "Heather S22 Ultra",
+        "hw": "Samsung Galaxy S22 Ultra",
+        "mac": "32:05:2b:a4:58:49 (randomized)",
+        "location": "mobile",
+        "services": {},
+        "latency_ms": null,
+        "role": "Heather's phone \u2014 companion human device"
+      },
+      {
+        "ip": ".111",
+        "name": "JetStream",
+        "hw": "TP-Link T2600G managed switch",
+        "mac": "ec:75:0c:4c:98:08",
+        "location": "House2",
+        "services": {
+          "ssh": true
+        },
+        "latency_ms": 1.77,
+        "role": "10G SPINE BRIDGE \u2014 fiber between houses"
+      },
+      {
+        "ip": ".127",
+        "name": "UNKNOWN (randomized)",
+        "hw": "?",
+        "mac": "66:0c:65:26:c4:d3 (locally administered)",
+        "location": "House?",
+        "services": {},
+        "latency_ms": null,
+        "role": "UNKNOWN \u2014 randomized MAC = phone/tablet",
+        "new_discovery": true
+      },
+      {
+        "ip": ".144",
+        "name": "UNKNOWN",
+        "hw": "?",
+        "mac": "c0:8b:27:9c:63:ec",
+        "location": "House?",
+        "services": {
+          "ssh": true
+        },
+        "latency_ms": null,
+        "role": "UNKNOWN \u2014 SSH open, unidentified vendor",
+        "new_discovery": true
+      },
+      {
+        "ip": ".147",
+        "name": "northGate \u2609",
+        "hw": "9950X3D + RTX 5090 + 96GB",
+        "mac": "bc:fc:e7:ea:d9:34",
+        "location": "House1",
+        "services": {
+          "ollama": "busy (Cursor using GPU)",
+          "rustdesk": true,
+          "sunshine": true
+        },
+        "latency_ms": 4.59,
+        "role": "HEART \u2014 Kevin's seat, Illusive Man, 63 models (offline during Cursor)"
+      },
+      {
+        "ip": ".148",
+        "name": "southGate",
+        "hw": "Ryzen 7 5800X3D + RTX 4060",
+        "mac": "1c:86:0b:37:65:1e",
+        "location": "House2",
+        "services": {
+          "ollama": true,
+          "ollama_models": 12,
+          "ssh": true
+        },
+        "latency_ms": 1.1,
+        "role": "SOUTH POLE WORKSTATION \u2014 12 ollama models"
+      },
+      {
+        "ip": ".170",
+        "name": "grapheneGate",
+        "hw": "Pixel 8a (Tensor G3)",
+        "mac": "randomized",
+        "location": "mobile/House2",
+        "services": {
+          "adb": "stale"
+        },
+        "latency_ms": null,
+        "role": "LEFT EYE \u2014 37 sensors, 3 cameras, Kevin's body"
+      },
+      {
+        "ip": ".176",
+        "name": "deckGate",
+        "hw": "Steam Deck v1 (Aerith)",
+        "mac": "?",
+        "location": "House1",
+        "services": {},
+        "latency_ms": null,
+        "role": "DISPLAY \u2014 7\" touch LCD, dead battery, USB-C passthrough"
+      },
+      {
+        "ip": ".200",
+        "name": "Epson ET-2400",
+        "hw": "Inkjet printer",
+        "mac": "d4:80:8b:1b:9f:01",
+        "location": "House1",
+        "services": {
+          "ipp": true
+        },
+        "latency_ms": null,
+        "role": "PHYSICAL OUTPUT \u2014 prints Gaia seals, generational I/O"
+      },
+      {
+        "ip": ".237",
+        "name": "ironGate",
+        "hw": "i9-14900K + RTX 5070 + 94GB",
+        "mac": "?",
+        "location": "House1",
+        "services": {
+          "ollama": true,
+          "ollama_models": 18,
+          "ssh": true
+        },
+        "latency_ms": 1.17,
+        "role": "FORGE 2 \u2014 18 ollama models, Docker, biomeOS"
+      },
+      {
+        "ip": ".244",
+        "name": "eastGate \u2609",
+        "hw": "i9-12900K + RTX 4070 + AKD1000 NPU + 62GB",
+        "mac": "?",
+        "location": "House1",
+        "services": {
+          "ollama": true,
+          "ollama_models": 38,
+          "ssh": true,
+          "rustdesk": true,
+          "http": true,
+          "tor": true,
+          "smtp": true,
+          "dns": true
+        },
+        "latency_ms": 0.024,
+        "role": "THE SUN \u2014 brain+gut, 17 primals, 38 models on :11436, dromedary, Tor"
+      }
+    ],
+    "down": [
+      {
+        "ip": ".100",
+        "name": "blueGate",
+        "note": "Windows, ICMP blocked, may be asleep"
+      },
+      {
+        "ip": ".103",
+        "name": "eastGate-eno1",
+        "note": "Second NIC not responding"
+      },
+      {
+        "ip": ".107",
+        "name": "graftGate",
+        "note": "Mac Mini M4 \u2014 DOWN or sleeping"
+      },
+      {
+        "ip": ".160",
+        "name": "milkGate",
+        "note": "RISC-V Jupiter 2 \u2014 Kevin doing Bianbu wizard"
+      },
+      {
+        "ip": ".181",
+        "name": "frameGate",
+        "note": "Steam Frame \u2014 needs WiFi reconnect"
+      },
+      {
+        "ip": ".202",
+        "name": "grapheneGate-WiFi",
+        "note": "Pixel not on WiFi currently"
+      }
+    ]
+  },
+  "totals": {
+    "hosts_alive": 16,
+    "hosts_down": 6,
+    "ollama_endpoints": 3,
+    "ollama_models_total": "38(east) + 18(iron) + 12(south) = 68 models reachable",
+    "northgate_models": "63 models (offline during Cursor, not counted)",
+    "ssh_endpoints": 9,
+    "rustdesk_active": 1,
+    "wan_ports_open": 6,
+    "tor": "ACTIVE (16h uptime)",
+    "new_discoveries": [
+      ".106 Apple device",
+      ".127 randomized phone",
+      ".144 SSH-open unknown"
+    ]
+  },
+  "wan": {
+    "ip": "162.226.225.148",
+    "ports": {
+      "80": "open",
+      "443": "open",
+      "8080": "open",
+      "25": "open",
+      "53": "open",
+      "22": "open"
+    },
+    "tls_cert": "23 SANs, valid Nov 17 \u2192 Feb 15 2027",
+    "tor": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+    "dns_status": "Porkbun A records MISSING (need wildcard)"
+  },
+  "soul": "lub-DUB \u2014 the mesh breathes, 16 hosts alive, the SUN sees all"
+}
