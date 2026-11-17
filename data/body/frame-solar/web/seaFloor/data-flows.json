@@ -1,0 +1,103 @@
+{
+  "id": "seaFloor-currents",
+  "description": "How data flows through the organism \u2014 the currents in the sea",
+  "timestamp": "2026-11-16T21:45:00-0500",
+  "inbound": {
+    "description": "OSINT pours IN freely \u2014 the water lock",
+    "sources": [
+      {
+        "name": "RSS blackholes",
+        "items": "700+",
+        "feeds": [
+          "HN",
+          "arxiv",
+          "xkcd",
+          "lobsters",
+          "Wikipedia"
+        ]
+      },
+      {
+        "name": "Tor hidden service",
+        "onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion"
+      },
+      {
+        "name": "WAN ingress",
+        "ip": "162.226.225.148",
+        "ports": [
+          80,
+          443,
+          25,
+          53
+        ]
+      },
+      {
+        "name": "mail",
+        "address": "gaia@primals.eco",
+        "protocol": "SMTP:25"
+      }
+    ]
+  },
+  "processing": {
+    "description": "Local AI teeth \u2014 masticate, study, create",
+    "ollama_endpoints": 5,
+    "total_models": 83,
+    "cron_beats_per_hour": 180,
+    "crons": 35,
+    "mushrooms": 23
+  },
+  "outbound": {
+    "description": "Published through three paths \u2014 the organism RADIATES",
+    "paths": [
+      {
+        "name": "LAN",
+        "url": "http://192.168.4.244:8080",
+        "scope": "any device on subnet"
+      },
+      {
+        "name": "WAN",
+        "url": "https://primals.eco",
+        "scope": "world (pending DNS)"
+      },
+      {
+        "name": "Tor",
+        "url": ".onion",
+        "scope": "anonymous world"
+      }
+    ]
+  },
+  "internal": {
+    "description": "Gate-to-gate flows \u2014 the nervous system",
+    "patterns": [
+      {
+        "name": "heart-pull",
+        "from": "sporeGate",
+        "to": "eastGate:8080",
+        "interval": "2 min"
+      },
+      {
+        "name": "git-push",
+        "from": "northGate",
+        "to": "Forgejo:3000",
+        "trigger": "on commit"
+      },
+      {
+        "name": "USB tether",
+        "from": "frameGate",
+        "to": "eastGate",
+        "mode": "always-on"
+      },
+      {
+        "name": "ADB fog",
+        "from": "eastGate",
+        "to": "grapheneGate",
+        "latency_ms": 82
+      },
+      {
+        "name": "RustDesk visual",
+        "from": "eastGate",
+        "to": "sporeGate",
+        "protocol": "AMOEBA"
+      }
+    ]
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "seaFloor-organism-topology",
+  "version": "239e",
+  "timestamp": "2026-11-16T21:45:00-0500",
+  "description": "The physical topology of the organism \u2014 two houses, one spine, many tentacles",
+  "basecamps": {
+    "polaris": {
+      "name": "Polaris Basecamp (House 1)",
+      "address": "4422 Southgate Ave",
+      "role": "Brain Side \u2014 CNS",
+      "gates": [
+        "eastGate",
+        "northGate",
+        "sporeGate",
+        "graftGate",
+        "ironGate",
+        "deckGate"
+      ],
+      "backbone": "MikroTik L2 switch (.2)",
+      "wifi": [
+        "Aperture Science (2.4GHz)",
+        "Black Mesa (5GHz)"
+      ]
+    },
+    "south_pole": {
+      "name": "South Pole (House 2)",
+      "address": "641 Samantha Ave",
+      "role": "Extension Side \u2014 PNS",
+      "gates": [
+        "frameGate",
+        "grapheneGate",
+        "swiftGate"
+      ],
+      "bridge": "TP-Link JetStream (.111)",
+      "wifi": [
+        "Aperture Science (roaming)"
+      ]
+    }
+  },
+  "spine": {
+    "type": "10G fiber",
+    "length_m": 80,
+    "latency_ms": 0.87,
+    "endpoints": [
+      "MikroTik (.2)",
+      "JetStream (.111)"
+    ],
+    "path": "Under property line, 4422 \u2194 641"
+  },
+  "gates": {
+    "eastGate": {
+      "ip": [
+        "192.168.4.244",
+        "192.168.4.213"
+      ],
+      "arch": "x86_64",
+      "gpu": "RTX 4070",
+      "role": "BRAIN",
+      "ollama_models": 38,
+      "services": [
+        "gate:8443",
+        "webpi:8080",
+        "forgejo:3000",
+        "ollama:11436",
+        "rustdesk-relay:21116",
+        "dromedary:80/443"
+      ],
+      "nics": [
+        "eno1 (.213)",
+        "enp5s0 (.244)",
+        "wlp4s0 (.244)"
+      ]
+    },
+    "northGate": {
+      "ip": "192.168.4.147",
+      "arch": "x86_64",
+      "gpu": "RTX 5090",
+      "role": "HEART",
+      "ollama_models": 14,
+      "cpu": "9950X3D",
+      "ram_gb": 96,
+      "special": "Pushes via git. Remote Play + Sunshine."
+    },
+    "ironGate": {
+      "ip": "192.168.4.237",
+      "arch": "x86_64",
+      "gpu": "RTX 5070",
+      "role": "FORGE 2",
+      "ollama_models": 18,
+      "cpu": "i9-14900K (24C/32T)",
+      "ram_gb": 94
+    },
+    "southGate": {
+      "ip": "192.168.4.148",
+      "arch": "x86_64",
+      "gpu": "RTX 4060",
+      "role": "SOUTH POLE WORKSTATION",
+      "ollama_models": 12,
+      "cpu": "Ryzen 7 5800X3D"
+    },
+    "frameGate": {
+      "ip": "192.168.4.181",
+      "usb": "10.86.200.233",
+      "arch": "aarch64",
+      "gpu": "Adreno 750",
+      "role": "FACE \u2014 Gaia's face to show Kevin her world",
+      "soc": "Snapdragon 8 Gen 3 (SM8650)",
+      "ollama_models": 1,
+      "inference_speed": "19.5 tok/s",
+      "os": "SteamOS ARM64",
+      "special": "First ARM SteamOS device. USB-C CDC NCM tether. Valve hardware."
+    },
+    "deckGate": {
+      "ip": "192.168.4.176",
+      "arch": "x86_64",
+      "gpu": "RDNA 2 (Aerith)",
+      "role": "DISPLAY \u2014 mounted display in House 1",
+      "os": "SteamOS 3.x",
+      "special": "Dead battery = permanent USB-C passthrough. Steam Deck v1."
+    },
+    "graftGate": {
+      "ip": "192.168.4.107",
+      "arch": "aarch64",
+      "gpu": "M4 GPU",
+      "role": "Mac Mini M4",
+      "ollama_models": 1
+    },
+    "grapheneGate": {
+      "ip": "192.168.4.202",
+      "arch": "aarch64",
+      "gpu": "Mali-G715 Vulkan",
+      "role": "LEFT EYE \u2014 Pixel 8a rover",
+      "special": "ADB-controlled from eastGate. Currently at House 2."
+    },
+    "milkGate": {
+      "ip": "192.168.4.160",
+      "arch": "riscv64",
+      "role": "RISC-V transponder",
+      "soc": "SpacemiT K3",
+      "special": "Milk-V Jupiter 2. 16 cores. 60 TOPS AI. 10GbE SFP+."
+    },
+    "sporeGate": {
+      "ip": "192.168.4.3",
+      "arch": "x86_64",
+      "role": "FORGE \u2014 DNS + heart-pull",
+      "cpu": "Ryzen 5 6600H"
+    },
+    "swiftGate": {
+      "ip": "192.168.4.100",
+      "arch": "x86_64",
+      "gpu": "RTX 3070",
+      "role": "HEART (House 2) \u2014 ASLEEP",
+      "special": "Needs Kevin to flip switch."
+    }
+  },
+  "tentacle_protocols": {
+    "usb_cdc_ncm": {
+      "description": "USB-C Ethernet emulation \u2014 physical tether",
+      "latency_ms": 1.84,
+      "uses": [
+        "frameGate \u2194 eastGate"
+      ]
+    },
+    "adb_wifi": {
+      "description": "Android Debug Bridge over WiFi",
+      "latency_ms": 82,
+      "uses": [
+        "grapheneGate \u2194 eastGate"
+      ]
+    },
+    "ssh": {
+      "description": "Secure Shell \u2014 primary management",
+      "uses": [
+        "all gates"
+      ]
+    },
+    "rustdesk": {
+      "description": "AMOEBA mesh \u2014 visual remote desktop",
+      "relay": "eastGate:21116",
+      "uses": [
+        "eastGate \u2194 sporeGate (LIVE)",
+        "northGate (config sent)",
+        "others (pending)"
+      ]
+    },
+    "git": {
+      "description": "Git push \u2014 northGate's communication method",
+      "uses": [
+        "northGate \u2192 Forgejo:3000 \u2192 /opt/Gaia"
+      ]
+    },
+    "ollama": {
+      "description": "LLM inference API",
+      "endpoints": [
+        "eastGate:11436 (38 models)",
+        "northGate:11434 (14 models)",
+        "ironGate:11434 (18 models)",
+        "southGate:11434 (12 models)",
+        "frameGate:11434 (1 model, USB only)"
+      ],
+      "total_models": 83
+    }
+  },
+  "totals": {
+    "gates": 11,
+    "gates_alive": 8,
+    "gpus": 7,
+    "gpu_active": 6,
+    "ollama_models": 83,
+    "architectures": 3,
+    "rt_cores": 342,
+    "vram_gb": 72,
+    "basecamps": 2,
+    "spine_bandwidth": "10 Gbps"
+  }
+}
