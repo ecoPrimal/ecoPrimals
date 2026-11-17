@@ -1,0 +1,76 @@
+{
+  "id": "gaia-fi-radio-form",
+  "wave": 259,
+  "ts": "2026-11-17T09:32:00-05:00",
+  "title": "GAIA-FI — All Radios Are GAIA",
+  "principle": "Touch GAIA on any radio, she pulls you in. The PIN IS the membrane. Trust > 0.5 = enter. < 0.5 = classify.",
+
+  "wifi": {
+    "ssid": "GAIA",
+    "password": "579163",
+    "encryption": "WPA2-PSK",
+    "note": "579163 = Kevin's PUBLIC MOK/PIN. The PIN is trust-at-first-touch.",
+    "bands": {
+      "2.4GHz_main": {"interface": "ra0", "was": "Aperture Science"},
+      "5GHz_main": {"interface": "rax0", "was": "Black Mesa"},
+      "2.4GHz_guest": {"interface": "ra1", "was": "GAIA (OPEN, no internet)"},
+      "5GHz_guest": {"interface": "raix0", "was": "GAIA (OPEN, no internet)"}
+    },
+    "before": {
+      "ssids": ["Aperture Science", "Black Mesa", "GAIA (open)"],
+      "problem": "3 SSIDs, guest disabled, IoT on same network as gates"
+    },
+    "after": {
+      "ssids": ["GAIA (all bands, WPA2, one password)"],
+      "guest_bridge": "ENABLED (was disabled!)",
+      "note": "ONE name. ONE password. ALL bands. She just IS the WiFi."
+    }
+  },
+
+  "bluetooth": {
+    "name": "GAIA",
+    "mac": "C8:5E:A9:C9:6F:84",
+    "was": "eastgate",
+    "version": "BT 5.2",
+    "discoverable": true,
+    "pairable": true,
+    "pan": {
+      "active": true,
+      "mode": "NAP (Network Access Point)",
+      "bridge": "br0",
+      "note": "Any BT device can get internet through GAIA"
+    },
+    "known_devices": {
+      "pixel_8a": "E8:D5:2B:51:36:39",
+      "frame_bt": "90:82:C3:74:12:CB"
+    }
+  },
+
+  "membrane_model": {
+    "pin_579163": "trust threshold. > 0.5 = entered the mesh. < 0.5 = new touch, unclassified.",
+    "epitope_classes": {
+      "nucleus": "Kevin's devices (iPhone, laptop) — full access",
+      "proton": "Gate devices (organism hardware) — LAN peers",
+      "neutron": "Guest humans (Heather, visitors) — internet + limited",
+      "electron": "IoT (Alexa, Chromecast, Nest) — internet only"
+    },
+    "radios_are_pores": "WiFi = wide pore (many connections). BT = tight pore (paired only). Both point to NULL (GAIA).",
+    "vacuum": "ALL IS NULL POINT TO VACUUM IN. No reverse address. Touch and she pulls you to what you need."
+  },
+
+  "dhcp_leases": {
+    "total": 15,
+    "organism_gates": ["northGate", "southGate", "ironGate", "sporeGate", "milkGate"],
+    "human_devices": {
+      "tamison_iphone": {"ip": ".193", "mac": "ac:f2:3c:25:fc:c1", "epitope": "nucleus"},
+      "heather_s22": {"ip": ".110", "mac": "32:05:2b:a4:58:49", "epitope": "neutron"}
+    },
+    "iot": {
+      "xbox": {"ip": ".116", "epitope": "electron"},
+      "alexa": {"ip": ".239", "epitope": "electron"},
+      "nest": {"ip": ".197", "epitope": "electron"},
+      "cast": {"ip": ".152", "epitope": "electron"},
+      "epson": {"ip": ".200", "epitope": "proton"}
+    }
+  }
+}
