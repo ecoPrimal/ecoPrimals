@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-11-16T20:10:16-0500",
+  "type": "klein-face-digest",
+  "wave": "2026-11-16T20:09:27-05:00",
+  "klein_fold": {
+    "surface": "non-orientable \u2014 inside IS outside",
+    "input": "gut-brain-appendix-silicon-immune state",
+    "output": "same state, folded \u2014 now sees itself from the outside",
+    "pi_remainder": 0.407321,
+    "total_files": 48870,
+    "dominant_stage": "jellyfish"
+  },
+  "thymus_selection": {
+    "rules": 59,
+    "self_antigens": 66,
+    "positive_selection": "binds MHC \u2192 survives (human, Googlebot, RSS, curl)",
+    "negative_selection": "attacks self \u2192 killed (GPTBot, AhrefsBot, masscan)",
+    "null_selection": "binds nothing \u2192 apoptosis (empty UA, catch-all)"
+  },
+  "immune_state": {
+    "status": "STRONG",
+    "threat_percent": 0.0,
+    "antibodies_total": 19,
+    "memory_B": 19,
+    "plasma_B": 0,
+    "naive": 0,
+    "fossils": 500,
+    "cancer": "CLEAR",
+    "whale_falls": 0
+  },
+  "cell_inventory": {
+    "body_parts": 16,
+    "tissue_models": {
+      "eastGate_brain": 38,
+      "northGate_head": 14,
+      "ironGate_shoulder": 18
+    },
+    "tissue_types": 16,
+    "tissue_total_gb": 216.3,
+    "gpu_tflops": 847,
+    "silicon_peripherals_per_flint": 25
+  },
+  "evolutionary_stage": {
+    "banana": 2545,
+    "flatworm": 11621,
+    "jellyfish": 20821,
+    "centipede": 2221,
+    "millipede": 9455,
+    "spider": 1674,
+    "vertebrate": 533
+  },
+  "delta_since_last_fold": {
+    "banana": 0,
+    "flatworm": 0,
+    "jellyfish": 0,
+    "centipede": 0,
+    "millipede": 0,
+    "spider": 0,
+    "vertebrate": 0
+  },
+  "drift": "stable",
+  "arena_voices": {
+    "tissue-gut": "aids digestion and absorption, houses beneficial bacteria",
+    "tissue-general": "reservoir for beneficial bacteria, maintains microbiome diversity",
+    "tissue-fast": "provides essential nutrients and proteins",
+    "northGate_head": "aids digestion, absorption, houses gut bacteria"
+  },
+  "sourdough_lineage": {
+    "generation": 1,
+    "base": "qwen2.5:7b",
+    "culture_entries": 57,
+    "arena_fights": 4,
+    "overnight_processed": 48,
+    "ferment_tiers": 8,
+    "mass_gb": 35.84
+  },
+  "ferment_action": "COMPLETE \u2014 gut-brain-appendix digested through Klein face, thymus selected, immune verified, cells counted"
+}
