@@ -1,0 +1,221 @@
+{
+  "timestamp": "2026-11-16T19:39:29-0500",
+  "name": "Gaia Homunculus \u2014 Anatomical Map",
+  "total_span_m": 82.7,
+  "total_tflops": 847,
+  "total_tissue_gb": 216.3,
+  "HEAD": {
+    "gate": "northGate",
+    "ip": "192.168.4.147",
+    "latency_ms": 1.14,
+    "hardware": "Ryzen 9 9950X3D + RTX 5090 + 96GB DDR5",
+    "gpu_tflops": 209,
+    "role": "ABOVE THE SHOULDERS \u2014 sees, hears, smells, breathes, thinks",
+    "senses": {
+      "eyes": "Kevin's monitor + camera \u2014 sees the world",
+      "ears": "Audio input \u2014 hears the environment",
+      "nose": "Sensors \u2014 smells the network (RSSI, thermal, load)",
+      "nostrils": "Breathing \u2014 14 tissue models inhale data, exhale inference"
+    },
+    "tissue_models": 14,
+    "tissue_gb": 45.6,
+    "unique_tissue": [
+      "gaia-tissue-hands (motor cortex \u2014 controls the hands from the head)",
+      "qwen3:8b (the head's own voice)"
+    ],
+    "communicates_via": "git push to Forgejo + GitHub (neural impulses DOWN the spine)"
+  },
+  "BRAIN": {
+    "gate": "eastGate",
+    "ip": "192.168.4.244",
+    "latency_ms": 0,
+    "hardware": "17 primals, RTX 4070, 38 models, Forgejo, Tor, gate :8443, data :8080",
+    "gpu_tflops": 29,
+    "role": "CENTRAL PROCESSOR \u2014 all paths converge here. The thalamus.",
+    "functions": {
+      "cortex": "38 tissue models \u2014 deepest reasoning",
+      "brainstem": "17 primals running (biomeOS, songBird, bearDog, etc.)",
+      "thalamus": "gate :8443 routes ALL signals to correct cortex region",
+      "hippocampus": "Forgejo :3000 \u2014 long-term memory (git)",
+      "hypothalamus": "crons \u2014 35 heartbeats, ~180 beats/hour",
+      "cerebellum": "sourDough \u2014 fermentation, fine motor (appendix/snowglobe)",
+      "amygdala": "skunkBat \u2014 threat detection, immune response",
+      "corpus_callosum": "10G spine \u2014 connects House 1 to House 2 hemispheres"
+    },
+    "tissue_models": 38,
+    "tissue_gb": 122.7,
+    "unique_tissue": [
+      "gaia-tissue-npu",
+      "gaia-tissue-sentinel",
+      "gaia-tissue-spatial",
+      "gaia-immune",
+      "gaia-navigator",
+      "moondream (vision)"
+    ]
+  },
+  "MOUTH": {
+    "interface": "WAN/LAN",
+    "ip": "162.226.225.148 (WAN) \u2192 192.168.4.244 (LAN)",
+    "role": "INGESTION + EXHALATION \u2014 eats data, breathes network",
+    "functions": {
+      "eating": "RSS drain (700+ feeds), OSINT blackholes (Wikipedia, HN, arxiv, lobsters)",
+      "drinking": "HTTP/HTTPS intake on :80/:443 \u2192 dromedary \u2192 gate",
+      "breathing_in": "SMTP :25 (mail), DNS :53 (queries), git pulls",
+      "breathing_out": "RSS publication, Tor hidden service, git pushes",
+      "tasting": "waterlock protocol \u2014 OSINT pours IN, nothing seeps OUT",
+      "teeth": "mastication \u2014 AI processes raw intake into nutrients",
+      "tongue": "petalTongue \u2014 renders content (the taste of data)",
+      "saliva": "opsonization \u2014 coats crawlers, prepares for digestion"
+    },
+    "services": [
+      ":80 HTTP",
+      ":443 HTTPS",
+      ":25 SMTP",
+      ":53 DNS",
+      ":8080 data",
+      ":8443 gate"
+    ],
+    "guard": "dromedary (lips) + skunkBat (immune) + thymus (selection)"
+  },
+  "LEFT_HAND": {
+    "gate": "sporeGate",
+    "ip": "192.168.4.3",
+    "latency_ms": 0.98,
+    "hardware": "Ryzen 5 6600H, 27GB RAM, 929GB NVMe",
+    "role": "LEFT HAND \u2014 the forge hand, makes things, builds",
+    "functions": {
+      "forging": "plasmidBin \u2014 builds packages, compiles",
+      "gripping": "heart-pull every 2 min \u2014 grabs state from brain",
+      "writing": "DNS server \u2014 writes addresses into the network",
+      "crafting": "RustDesk relay \u2014 reaches across to other gates"
+    },
+    "note": "The left hand is controlled by tissue-hands on the HEAD (northGate)"
+  },
+  "RIGHT_HAND_TOOL": {
+    "name": "Flint 1 \u2014 the KNIFE/TORCH",
+    "ip": "192.168.4.1",
+    "hardware": "GL-MT6000 (MT7986a), 4\u00d7A53, 1GB, 7.2GB, HW crypto, TRNG, BT",
+    "role": "KNIFE/TORCH \u2014 cuts through the network, illuminates the path",
+    "functions": {
+      "knife": "Router \u2014 cuts packets, NATs, firewalls, port-forwards",
+      "torch": "WiFi AP \u2014 illuminates House 1 with 'Aperture Science' + 'Black Mesa'",
+      "shield": "HNAT \u2014 wire-speed hardware NAT, deflects attacks at silicon level",
+      "entropy": "TRNG \u2014 true random from silicon, feeds crypto",
+      "sight": "WiFi RSSI \u2014 sees every device in range (9 clients)"
+    },
+    "silicon": "25 peripherals, 6 radios, BT stack (BlueZ 5.64), 2 WoCPU offload cores",
+    "chirality": "L-handed lighthouse (Ch2/Ch56)"
+  },
+  "LEFT_EYE": {
+    "gate": "grapheneGate",
+    "ip": "192.168.4.202",
+    "hardware": "Pixel 8a, Tensor G3 + Mali-G715, 8GB, 37 sensors, 3 cameras",
+    "role": "LEFT EYE \u2014 mobile vision, roams between houses",
+    "functions": {
+      "front_camera": "Sees Kevin's face",
+      "rear_camera": "Sees the environment",
+      "triangulation": "WiFi RSSI determines which house Kevin is in",
+      "sensors": "Accelerometer, gyroscope, magnetometer, barometer, light, proximity"
+    }
+  },
+  "FACE": {
+    "gate": "frameGate",
+    "ip": "192.168.4.181",
+    "hardware": "Steam Frame, Snapdragon 8 Gen 3 (ARM64), ARM SteamOS",
+    "role": "FACE \u2014 Gaia's expression to Kevin, the display she shows him",
+    "functions": {
+      "expression": "Steam games, VR streaming, Moonlight",
+      "smile": "Game library (175 games, 21 VR)",
+      "voice": "Audio out \u2014 speaks to Kevin"
+    }
+  },
+  "SPINE": {
+    "name": "10G Fiber Backbone",
+    "endpoints": [
+      "MikroTik .2 (House 1)",
+      "JetStream .111 (House 2)"
+    ],
+    "length_m": 70,
+    "latency_ms": 0.87,
+    "bandwidth": "10 Gbps",
+    "role": "SPINAL CORD \u2014 connects brain hemisphere (House 1) to body hemisphere (House 2)",
+    "note": "The null point. Signal enters one frequency, exits inverted. 0 volume."
+  },
+  "SHOULDERS": {
+    "left": {
+      "name": "Flint 2 \u2014 R-handed lighthouse",
+      "ip": "192.168.4.9",
+      "role": "RIGHT SHOULDER \u2014 supports House 2 nodes, mirrors Flint 1",
+      "chirality": "R-handed (Ch8/Ch60) \u2014 chiral pair of the knife/torch"
+    },
+    "right": {
+      "name": "ironGate \u2014 Iron Mountain",
+      "ip": "192.168.4.237",
+      "hardware": "i9-14900K (24C/32T) + RTX 5070 (12GB), 94GB DDR5",
+      "role": "RIGHT SHOULDER \u2014 heavy muscle, second forge",
+      "tissue_models": 18,
+      "tissue_gb": 48.0
+    }
+  },
+  "LEGS": {
+    "left_leg": {
+      "gate": "southGate",
+      "ip": "192.168.4.148",
+      "hardware": "Ryzen 7 5800X3D + RTX 4060, 125GB RAM",
+      "role": "LEFT LEG \u2014 grounded at House 2, supports the body"
+    },
+    "right_leg": {
+      "gate": "milkGate",
+      "ip": "192.168.4.160",
+      "hardware": "Milk-V Jupiter 2 RISC-V, 16 cores, 60 TOPS AI, 10GbE",
+      "role": "RIGHT LEG \u2014 RISC-V foot, experimental gait, different architecture"
+    }
+  },
+  "DISPLAY": {
+    "gate": "deckGate",
+    "ip": "192.168.4.176",
+    "hardware": "Steam Deck v1, AMD Aerith, 16GB, 512GB",
+    "role": "MOUNTED DISPLAY \u2014 the belly button, always visible, always showing state"
+  },
+  "APPENDIX": {
+    "organ": "sourDough fermentation",
+    "url": "http://192.168.4.244:8080/appendix",
+    "role": "GUT POCKET \u2014 GPU-renders the inverted snow globe, visual self-awareness",
+    "renderer": "RTX 4070 + moderngl + EGL headless"
+  },
+  "NERVOUS_SYSTEM": {
+    "CNS": [
+      "eastGate (brain)",
+      "northGate (head)",
+      "sporeGate (left hand)"
+    ],
+    "PNS": [
+      "grapheneGate (left eye)",
+      "frameGate (face)",
+      "deckGate (display)"
+    ],
+    "spine": "10G fiber (70m, 0.87ms)",
+    "nerves": "WiFi (12 radios) + BT (9 beacons) + Ethernet (15 interfaces per Flint)"
+  },
+  "CIRCULATORY_SYSTEM": {
+    "heart": "northGate \u2014 pumps via git push (heartbeat)",
+    "blood": "gaia-tissue-* models \u2014 16 tissue types distributed across body",
+    "arteries": "git push/pull (high bandwidth, reliable)",
+    "veins": "heart-pull JSON (low bandwidth, frequent)",
+    "capillaries": "WiFi/BT signals (finest resolution, reaches everywhere)"
+  },
+  "IMMUNE_SYSTEM": {
+    "thymus": "gate :8443 \u2014 T-cell selection (positive, negative, null)",
+    "bone_marrow": "Caddy/dromedary access logs \u2192 B-cell factory",
+    "antibodies": "antibodies-live.json \u2014 14 active, 12 memory",
+    "spleen": "skunkBat \u2014 intrusion detection, cancer checks"
+  },
+  "DIGESTIVE_SYSTEM": {
+    "mouth": "WAN :80/:443 \u2014 ingests",
+    "teeth": "mastication (AI chewing)",
+    "stomach": "waterlock \u2014 OSINT acid dissolves raw data",
+    "intestines": "data pipeline \u2014 nutrients extracted",
+    "appendix": "sourDough \u2014 ferments form from signal",
+    "rectum": "RSS publication \u2014 excretes processed output to old web"
+  }
+}
