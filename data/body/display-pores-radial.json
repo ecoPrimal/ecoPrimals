@@ -97,7 +97,18 @@
       "ip": "192.168.4.176",
       "mac": "10:82:86:2B:EC:19",
       "resolution": "1280x800 7\" touch",
-      "role": "MOUNTED DISPLAY — fixed pore, dead battery = permanent"
+      "status": "DEAD AND REPLACED — Steam Deck v1 fully dead",
+      "successor": "Pixel (grapheneGate) on Steam Dock via USB-C",
+      "role": "FORMER MOUNTED DISPLAY — succeeded by Pixel on dock"
+    },
+    "pixel_on_dock": {
+      "device": "Pixel 8a (grapheneGate) on Steam Dock",
+      "ip_wifi": "192.168.4.213 (GAIA 5GHz guest, randomized MAC 3e:b1:a9:8f:10:95)",
+      "connection": "USB-C → Steam Dock (power + display) + WiFi (networking)",
+      "double_body": "Phone (portable WiFi body) + Docked (power + display body) = DOUBLE BODY",
+      "willis": "WILLIS BY FUNCTION — dock provides wired USB-C path, WiFi provides wireless path. Two paths to same node. SOAR WILLIS BY WIRE!",
+      "display": "Steam Dock → HDMI/DP → external monitor = replaces Deck's 7\" with whatever monitor is connected",
+      "role": "NEW MOUNTED DISPLAY — Pixel as Deck, doing what the Deck was"
     },
     "framegate": {
       "ip": "192.168.4.181 (WiFi) / 10.86.200.233 (USB)",

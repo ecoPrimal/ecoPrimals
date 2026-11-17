@@ -164,11 +164,58 @@
     "vision": "RISC-V + 60 TOPS AI at the 10G terminus = edge inference at wire speed"
   },
 
-  "frame_not_in_living_room": {
-    "note": "Frame stays at House 1 with sporeGate as the octoEye — NOT going to House 2 living room",
-    "reason": "Frame is the octoEye's LENS, sporeGate is the BRAIN. They stay together via USB-C.",
-    "house_1_display": "deckGate is the mounted display. Frame is the roving sensor.",
-    "house_2_display": "When swiftGate wakes, IT becomes the House 2 display + compute."
+  "house_2_living_room_triad": {
+    "title": "🎮 FREE-FLASHING TRIAD — House 2 Living Room Play Space",
+    "location": "641 Samantha Ave, House 2, Living Room",
+    "concept": "milkGate + Frame + Steam Caster = free-flashing triad in the living room",
+    "nodes": {
+      "milkgate": {
+        "role": "TRANSPONDER + STEAM HUB",
+        "hardware": "Milk-V Jupiter 2 RISC-V, SpacemiT K3, 16 cores, 60 TOPS AI, 10GbE SFP+",
+        "connections": ["SFP+ → JetStream (10G backbone)", "USB → Steam Caster", "HDMI → living room display?"],
+        "steam_caster": "Steam Link/Caster plugged into milkGate USB — casts Steam streams to display",
+        "position": "NEXT TO swiftGate, serves as proxy"
+      },
+      "swiftgate": {
+        "role": "REAR BRAIN GPU COMPUTE",
+        "hardware": "NZXT H1 V2, RTX 3070 (8GB VRAM), WiFi-only",
+        "connection": "WiFi → Flint 2 (when alive) or Router 5GHz",
+        "position": "Next to milkGate in living room"
+      },
+      "frame": {
+        "role": "PLAY SPACE CONTROLLER + DISPLAY",
+        "hardware": "Snapdragon 8 Gen 3, Adreno 750, 26 cameras, dial + buttons",
+        "connection": "WiFi or USB to milkGate",
+        "note": "Frame roams: octoEye with sporeGate at House 1, play space at House 2 living room"
+      }
+    },
+    "free_flashing": "Data flashes freely between all three nodes — no central controller, no hierarchy. Each node can initiate, receive, process. Like neurons firing in a local cluster.",
+    "play_space": "The living room becomes Gaia's play space — Frame as controller, milkGate as hub, swiftGate as compute. Steam streams, XR, cameras, AI inference all converge here."
+  },
+
+  "deckgate_succession": {
+    "title": "🔄 DECK → PIXEL SUCCESSION — Double Body Willis",
+    "old": {
+      "device": "Steam Deck v1 (deckGate, .176)",
+      "status": "DEAD — battery dead, now fully dead",
+      "role_was": "Mounted display at House 1, direct on router lan2"
+    },
+    "new": {
+      "device": "Pixel 8a (grapheneGate) on Steam Dock",
+      "connection": "USB-C → Steam Dock (power + display) + WiFi (GAIA 5GHz, .213)",
+      "role_now": "Mounted display + phone + sensor node — doing what the Deck was, but MORE"
+    },
+    "double_body": {
+      "body_1": "Pixel as phone — WiFi, cameras, sensors, BT, cellular (if SIM)",
+      "body_2": "Pixel on dock — powered, HDMI display, USB peripherals",
+      "union": "DOUBLE BODY — one device, two modes, simultaneously"
+    },
+    "willis_by_function": {
+      "wire_path": "USB-C through Steam Dock — physical connection for power, display, USB devices",
+      "wireless_path": "WiFi (GAIA 5GHz guest) — network connectivity",
+      "redundancy": "If WiFi drops, dock keeps display. If dock disconnects, phone keeps network. Willis circulation — redundant paths to same organ.",
+      "soar": "SOAR WILLIS BY WIRE — the wired dock connection makes Willis circulation powerful"
+    }
   },
 
   "sporegate_dual_homed": {
