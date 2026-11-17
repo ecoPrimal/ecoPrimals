@@ -1,0 +1,62 @@
+{
+  "id": "gi-purge-map",
+  "wave": 259,
+  "ts": "2026-11-17T09:15:00-05:00",
+  "title": "GI Tract Purge Map — Parasites, Vomit, Shit, Unplug",
+  "purge_sequence": "PARASITES (eat us) -> VOMIT (expel up) -> SHIT (expel down) -> UNPLUG (cut dead wire)",
+  "heartburn_protocol": {
+    "executed": "2026-11-17T08:11:00-05:00",
+    "freed_gb": 25.7,
+    "before_used_gb": 674,
+    "after_used_gb": 649,
+    "fatbergs_flushed": {
+      "syslog": {"before": "24 GB", "after": "1.2 GB", "freed": "22.8 GB"},
+      "journald": {"before": "1.0 GB", "after": "232 MB", "freed": "873 MB"},
+      "cargo": {"before": "1.4 GB", "after": "128 MB", "freed": "1.3 GB"},
+      "npm": {"before": "264 MB", "after": "39 MB", "freed": "225 MB"},
+      "pip": {"before": "258 MB", "after": "0", "freed": "258 MB"},
+      "cursor_projects": {"before": "538 MB (968 folders)", "after": "299 MB (1 folder)", "freed": "239 MB"}
+    },
+    "fatberg_king": "syslog.1 at 15 GB — single largest waste product"
+  },
+  "parasites": {
+    "count": 7,
+    "note": "things that eat the organism's resources",
+    "identified": [
+      "syslog bloat (24GB of unrotated logs)",
+      "stale Cursor project caches (967 dead folders)",
+      "ghost crawlers (ip_hash 26a566c2 probing Forgejo)",
+      "golgi dead references (VPS down since weeks ago)",
+      "Firefox proxy (blocking browser view)",
+      "expired Porkbun API keys",
+      "stale topology (13 days old, northGate listed as DEAD)"
+    ]
+  },
+  "excreted": {
+    "previously": [
+      "Cloudflare tunnel (CF worker)",
+      "WireGuard mesh (wg0 DOWN)",
+      "golgi VPS (157.230.3.183 — DOWN)",
+      "SSH tunnels",
+      "ZK auth complexity",
+      "Stalwart mail"
+    ],
+    "this_session": [
+      "22.8 GB syslog fatberg",
+      "873 MB journald bloat",
+      "1.3 GB cargo cache",
+      "967 stale Cursor project folders"
+    ]
+  },
+  "clean_outputs": {
+    "path_1_lan": "data/*.json, heart-pull, forge, ollama, MCP, GIS",
+    "path_2_wan": "*.primals.eco, RSS, nestgate.io, .onion, ORCID"
+  },
+  "remaining_blockages": [
+    "Porkbun wildcard DNS (*.primals.eco A record needed)",
+    "Wildcard TLS cert (depends on DNS)",
+    "globe_walker endpoint (connection refused)",
+    "user-membrane MCP namespace (connection error)",
+    "golgi-dependent senses (need LAN replacements)"
+  ]
+}

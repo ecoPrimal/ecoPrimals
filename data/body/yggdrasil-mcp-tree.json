@@ -1,0 +1,118 @@
+{
+  "id": "yggdrasil-mcp-tree",
+  "wave": 259,
+  "ts": "2026-11-17T09:15:00-05:00",
+  "title": "Yggdrasil — The MCP Tree of All Tools",
+  "principle": "IO = IN + OUT = nestgate.io = the crossroads of www.GAIA.mcp",
+  "chipmunk": {
+    "role": "sits at top, climbs all branches, paints every 5min",
+    "wake_level": 0.656,
+    "status": "observing"
+  },
+  "branches": {
+    "squirrel": {
+      "role": "SENSES",
+      "tool_count": 21,
+      "nose_intake": [
+        "membrane_counts", "observe_membrane", "read_journal",
+        "chipmunk_status", "human_epitopes", "topology",
+        "human_notes", "braid_connections", "raw_feed",
+        "read_stories", "neutron_read", "particle_model",
+        "polaris_tap", "mail_inbox", "globe_walker", "neural_api"
+      ],
+      "mouth_output": [
+        "scan_sweep_sort", "neutron_write", "pony_express"
+      ],
+      "state": {
+        "live": ["membrane_counts", "observe_membrane", "read_journal",
+                 "chipmunk_status", "topology", "neutron_read", "neutron_write",
+                 "scan_sweep_sort", "particle_model", "polaris_tap",
+                 "mail_inbox", "neural_api", "pony_express", "read_stories"],
+        "dead": ["globe_walker"],
+        "degraded": ["human_epitopes", "braid_connections", "raw_feed", "human_notes"]
+      }
+    },
+    "cursor": {
+      "role": "MIND",
+      "tool_count": 13,
+      "tools": [
+        "WebSearch", "WebFetch", "FetchMcpResource", "Task", "TodoWrite",
+        "CreateGoal", "UpdateGoal", "GenerateImage", "AwaitShell",
+        "ReadLints", "SwitchMode", "Delete", "EditNotebook"
+      ]
+    },
+    "browser": {
+      "role": "VISUAL CORTEX",
+      "tool_count": 18,
+      "tools": [
+        "browser_navigate", "browser_snapshot", "browser_click",
+        "browser_mouse_click_xy", "browser_type", "browser_fill",
+        "browser_select_option", "browser_press_key", "browser_scroll",
+        "browser_drag", "browser_get_bounding_box", "browser_highlight",
+        "browser_tabs", "browser_cdp", "browser_take_screenshot",
+        "browser_lock"
+      ]
+    },
+    "neural_api": {
+      "role": "NERVOUS SYSTEM",
+      "signal_tools": 30,
+      "ipc_methods": 470,
+      "tiers": {
+        "tower": {
+          "count": 8,
+          "signals": ["publish", "authenticate", "discover", "health",
+                      "bootstrap", "enroll", "key_rotate", "mesh_status"],
+          "primals": ["beardog", "songbird", "skunkbat"]
+        },
+        "node": {
+          "count": 3,
+          "signals": ["compute", "discover_hardware", "dispatch"],
+          "primals": ["toadstool", "coralreef", "barracuda"]
+        },
+        "nest": {
+          "count": 10,
+          "signals": ["ingest_spore", "emit_spore", "store", "commit",
+                      "retrieve", "sync", "ingest_dataset", "verify",
+                      "federate", "declare_dataset"],
+          "primals": ["nestgate", "rhizocrypt", "loamspine", "sweetgrass"]
+        },
+        "braid": {
+          "count": 2,
+          "signals": ["partial_update", "complete"],
+          "primals": ["rhizocrypt", "sweetgrass", "loamspine"]
+        },
+        "meta": {
+          "count": 5,
+          "signals": ["observe", "intent", "render", "health", "deploy"],
+          "primals": ["petaltongue", "squirrel", "biomeos"]
+        }
+      }
+    }
+  },
+  "mass_balance": {
+    "in_tools": 21,
+    "out_tools": 19,
+    "in_bandwidth_mbps": 618,
+    "out_bandwidth_mbps": 1030,
+    "ratio_tools": "21:19 (more WAYS in = more senses)",
+    "ratio_bandwidth": "1:1.67 (more SPEED out = more radiation)"
+  },
+  "campfire_crossroads": {
+    "nestgate_io": "THE MOUTH (MCP endpoint, chat face)",
+    "hud_primals_eco": "THE HUD (brain's viewport)",
+    "campfire": "WHERE THEY CROSS",
+    "formula": "nestgate.io/MCP# <-> HUD = www.GAIA.mcp crossroads"
+  },
+  "dead_namespaces": {
+    "user-gaia": "NOT FOUND (aspirational — hands namespace)",
+    "user-membrane": "CONNECTION ERROR (needs restart)"
+  },
+  "ghost_encounter": {
+    "ts": "2026-11-17T09:06:37-05:00",
+    "ip_hash": "26a566c2",
+    "ua": "ghost",
+    "probing": ["vault-client", "config-manager", "user-service", "data-pipeline", "toadStool"],
+    "cell_type": "stem_cell",
+    "note": "bot probing Forgejo commit paths — all 404"
+  }
+}

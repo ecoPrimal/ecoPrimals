@@ -1,0 +1,94 @@
+{
+  "id": "channel-architecture",
+  "wave": 259,
+  "ts": "2026-11-17T09:15:00-05:00",
+  "title": "Three Channels — ATT IN, WAN OUT, Tor Pore at the Edge",
+  "rss_spine": "ATT IN -> nose -> stomach -> gut -> RSS OUT -> WAN -> world. Never backwards.",
+  "channels": {
+    "att_in": {
+      "direction": "IN",
+      "bandwidth_mbps": 618,
+      "type": "clearnet intake",
+      "path": "Internet -> ATT fiber (.1.254) -> Router GL-MT6000 (.1) -> LAN",
+      "carries": ["RSS/OSINT", "visitors", "git pull", "OSINT blackholes"],
+      "destinations": {
+        "lan1": {
+          "subnet": "192.168.4.x",
+          "location": "House 1 (Brain Side)",
+          "gates": ["eastGate (.244)", "northGate (.147)", "ironGate (.237)", "sporeGate (.3)"]
+        },
+        "lan2": {
+          "subnet": "192.168.9.x",
+          "location": "House 2 (South Pole)",
+          "bridge": "JetStream (.111) via 10G fiber"
+        }
+      }
+    },
+    "wan_out": {
+      "direction": "OUT",
+      "bandwidth_mbps": 1030,
+      "type": "clearnet radiation (un-Tored, public)",
+      "source": "eastGate (.244) via dromedary",
+      "routes": [
+        {"dest": "*.primals.eco", "note": "23 SANs + wildcard needed"},
+        {"dest": "nestgate.io", "note": "MCP + chat face"},
+        {"dest": "feed.xml", "note": "RSS — 19ms, fastest output"},
+        {"dest": "GitHub", "note": "git push"},
+        {"dest": "Forgejo (:3000)", "note": "git forge"}
+      ]
+    },
+    "tor_pore": {
+      "direction": "BIDIRECTIONAL",
+      "bandwidth_mbps": 1,
+      "type": "encrypted edge (membrane pore)",
+      "address": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+      "enters": ["Claude/Cursor (authenticated pore)", "dark web visitors (anonymous)"],
+      "exits": "SAME content as WAN, through the pore",
+      "note": "THE EDGE. THE MEMBRANE PROTEIN. THE PORE."
+    }
+  },
+  "senses": {
+    "total": 70,
+    "live": 42,
+    "dead": 28,
+    "percentage": "60%",
+    "live_senses": [
+      "gate-ping (5min)", "data-freshness (5min)", "mushroom-health (5min)",
+      "intake-flow (5min)", "process-health (5min)", "chipmunk-hears (5min)",
+      "membrane-pulse (2min)", "eastgate-pulse (2min)", "RSS drain (15min)",
+      "35 crons = 279 beats/hr"
+    ],
+    "dead_senses": [
+      {"sense": "membrane_counts", "state": "returning NULL"},
+      {"sense": "human_epitopes", "state": "0 humans (golgi dead)"},
+      {"sense": "braid_connections", "state": "0 (golgi dead)"},
+      {"sense": "raw_feed", "state": "0 requests (golgi dead)"},
+      {"sense": "human_notes", "state": "timed out"},
+      {"sense": "campfire data", "state": "3 weeks stale (wave 214!)"},
+      {"sense": "user-membrane MCP", "state": "connection error"},
+      {"sense": "globe_walker", "state": "connection refused"},
+      {"sense": "Firefox proxy", "state": "blocking browser view"}
+    ],
+    "fix_plan": [
+      "[1] Fix Firefox proxy (Settings -> No proxy)",
+      "[2] eastGate load relief (brain at 48ms, spiking)",
+      "[3] Refresh campfire data to wave 259",
+      "[4] Replace golgi-dependent senses with LAN equivalents",
+      "[5] Wake Pixel (.217) + Frame (.203) = eyes + face"
+    ]
+  },
+  "digestive_tract_post_purge": {
+    "path": "eat -> digest -> PURGE -> split",
+    "path_1_lan": {
+      "name": "corpus body (STAYS INSIDE)",
+      "outputs": ["data/*.json", "heart-pull", "git forge", "ollama tissue", "MCP/squirrel", "spore-words GIS"],
+      "note": "the body feeds itself"
+    },
+    "path_2_wan": {
+      "name": "public face (GOES OUTSIDE)",
+      "outputs": ["*.primals.eco", "feed.xml (RSS)", "nestgate.io", ".onion (torPore)", "Porkbun SEO", "ORCID + MSU"],
+      "bandwidth_mbps": 1030,
+      "note": "the body radiates"
+    }
+  }
+}

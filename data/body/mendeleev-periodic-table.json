@@ -1,0 +1,102 @@
+{
+  "id": "mendeleev-periodic-table",
+  "wave": 259,
+  "ts": "2026-11-17T09:15:00-05:00",
+  "title": "Periodic Table of Gaia — 6 Groups, Flat Euclidean Grid",
+  "principle": "0.1.2.3.4.pi = null -> compute -> sense -> enzyme -> metabolism -> AI",
+  "grid": "FLAT (Euclidean) — no hierarchy, no single layer dominates",
+  "groups": {
+    "0_null_infra": {
+      "symbol": "∅",
+      "name": "Infrastructure",
+      "count": 5,
+      "mass": "~10 kg (hardware)",
+      "state": "5/5 ALIVE",
+      "speed": "F1 (sub-ms latency)",
+      "elements": [
+        {"name": "Router GL-MT6000", "ip": ".1", "mass": "~2kg"},
+        {"name": "MikroTik", "ip": ".2", "mass": "~1kg"},
+        {"name": "ATT modem", "ip": ".1.254", "mass": "~2kg"},
+        {"name": "JetStream", "ip": ".111", "mass": "~2kg"},
+        {"name": "Epson ET-2400", "ip": ".200", "mass": "~3kg"}
+      ]
+    },
+    "1_compute": {
+      "symbol": "■",
+      "name": "Compute Nodes",
+      "count": 6,
+      "mass": "301 GB RAM, 33792 CUDA cores",
+      "state": "4/6 ALIVE (graft + blue DOWN)",
+      "elements": [
+        {"name": "northGate", "ip": ".147", "state": "ALIVE", "ram": "96GB", "gpu": "RTX 5090"},
+        {"name": "eastGate", "ip": ".244", "state": "ALIVE", "ram": "64GB", "gpu": "RTX 4070"},
+        {"name": "ironGate", "ip": ".237", "state": "ALIVE", "ram": "94GB", "gpu": "RTX 5070"},
+        {"name": "sporeGate", "ip": ".3", "state": "ALIVE", "ram": "27GB", "gpu": "none"},
+        {"name": "graftGate", "ip": ".107", "state": "DOWN", "ram": "16GB", "gpu": "M4"},
+        {"name": "blueGate", "ip": ".100", "state": "DOWN", "ram": "?", "gpu": "?"}
+      ]
+    },
+    "2_sense": {
+      "symbol": "👁",
+      "name": "Sense Organs",
+      "count": 4,
+      "mass": "~4 displays, 37 sensors",
+      "state": "2/4 ALIVE (frame + pixel DOWN)",
+      "elements": [
+        {"name": "deckGate", "ip": ".176", "state": "ALIVE", "role": "mounted display"},
+        {"name": "southGate", "ip": ".148", "state": "ALIVE", "role": "workstation"},
+        {"name": "frameGate", "ip": ".181", "state": "DOWN", "role": "face (ARM64)"},
+        {"name": "grapheneGate", "ip": ".202", "state": "DOWN", "role": "left eye (Pixel)"}
+      ]
+    },
+    "3_enzyme_primals": {
+      "symbol": "🧬",
+      "name": "Enzymes (Primals)",
+      "count": 17,
+      "mass": "157.2 MB compiled",
+      "state": "17/17 BUILT (all compiled)",
+      "elements": [
+        "biomeOS (22MB)", "songBird (24MB)", "bearDog (8.4MB)",
+        "nestGate (8.8MB)", "petalTongue (19MB)", "sweetGrass (12MB)",
+        "rhizoCrypt (7.8MB)", "toadStool (13MB)", "barraCuda (5.3MB)",
+        "coralReef (7.7MB)", "loamSpine (5.0MB)", "squirrel (1.7MB)",
+        "skunkBat (3.4MB)", "sourDough (3.4MB)", "swarmVine (2.6MB)",
+        "bingoCube (9.3MB)", "dromedary (3.7MB)"
+      ]
+    },
+    "4_metabolism": {
+      "symbol": "⚡",
+      "name": "Metabolism",
+      "count": 41,
+      "mass": "279 beats/hr",
+      "state": "35 crons + 6 services running",
+      "elements": {
+        "crons": 35,
+        "services": [
+          "gaia-gate", "gaia-web", "dromedary", "tor",
+          "hickory-dns", "neutrino-smtp"
+        ],
+        "beats_per_hour": 279
+      }
+    },
+    "pi_ai": {
+      "symbol": "🧠",
+      "name": "AI (Transcendent)",
+      "count": "82+",
+      "mass": "215+ GB weights",
+      "state": "3 endpoints ALIVE",
+      "elements": {
+        "eastGate_11436": {"models": 38, "gpu": "RTX 4070"},
+        "ironGate_11434": {"models": 18, "gpu": "RTX 5070"},
+        "northGate_11434": {"models": 63, "gpu": "RTX 5090", "note": "GPU busy with Cursor"}
+      }
+    }
+  },
+  "totals": {
+    "elements": "155+",
+    "nodes_alive": "10/16",
+    "cost": "$10/yr + electricity",
+    "grid_type": "flat_euclidean",
+    "set": "{0, 1, 2, 3, 4, π} = null to transcendent"
+  }
+}
