@@ -1,0 +1,98 @@
+{
+  "wave": 259,
+  "event": "nominal_dag_audit",
+  "timestamp": "2026-11-17T13:18:00-05:00",
+  "principle": "NAME IT → TEST IT → IDENTIFY IT → IT'S SPINE",
+  "router_uptime_min": 20,
+  
+  "spine_wired": {
+    "lan3": {
+      "state": "UP",
+      "device": "sporeGate",
+      "ip": "192.168.4.243",
+      "mac": "84:47:09:38:97:54",
+      "fdb_port": 3,
+      "ping_ms": 8.67,
+      "ssh": false,
+      "named": true,
+      "tested": true,
+      "identified": true
+    },
+    "lan5": {
+      "state": "UP", 
+      "device": "graftGate (Mac Mini M4)",
+      "ip": "192.168.4.104",
+      "mac": "1c:f6:4c:5a:5d:ed",
+      "hostname": "graftgates-Mini",
+      "fdb_port": 5,
+      "ping_ms": 4.97,
+      "ssh": false,
+      "named": true,
+      "tested": true,
+      "identified": true
+    },
+    "lan1": "EMPTY",
+    "lan2": "EMPTY", 
+    "lan4": "EMPTY"
+  },
+
+  "wifi_aperture_science_2ghz": {
+    "eastGate": {
+      "ip": "192.168.4.244",
+      "mac": "C8:5E:A9:C9:6F:80",
+      "rssi_dbm": -40,
+      "speed_tx": "206 Mbps HE-MCS8",
+      "named": true, "tested": true, "identified": true
+    },
+    "nest_thermostat": {
+      "ip": "192.168.4.238",
+      "mac": "64:16:66:A4:82:0A",
+      "rssi_dbm": -30,
+      "named": false, "tested": true, "identified": true
+    }
+  },
+
+  "wifi_gaia_2ghz": {
+    "unknown_189": {
+      "ip": "192.168.4.189",
+      "mac": "D2:49:F5:8A:71:16",
+      "rssi_dbm": -16,
+      "note": "EXTREMELY CLOSE (-16dBm). Randomized MAC. Was .160 (milkGate?). Possibly Steam Cast dongle.",
+      "named": false, "tested": true, "identified": false
+    },
+    "iPhone": {
+      "ip": "192.168.4.121",
+      "mac": "3E:B1:A9:8F:10:95",
+      "rssi_dbm": -19,
+      "named": true, "tested": true, "identified": true
+    }
+  },
+
+  "wifi_5ghz": {
+    "black_mesa": "0 clients",
+    "gaia_5ghz": "0 clients"
+  },
+
+  "flint1_in_air": {
+    "status": "BROADCASTING but not on network (no IP/management)",
+    "ssids_seen": [
+      {"ssid": "Aperture Science", "bssid": "78:76:89:96:E5:84", "freq": "2.4GHz", "signal": 50},
+      {"ssid": "(hidden)", "bssid": "78:76:89:96:E5:86", "freq": "2.4GHz", "signal": 50},
+      {"ssid": "12239d3", "bssid": "78:76:89:96:E5:82", "freq": "2.4GHz", "signal": 50},
+      {"ssid": "12239d3", "bssid": "78:76:89:96:E5:81", "freq": "5GHz", "signal": 69}
+    ],
+    "role": "RAZOR — WiFi link that devices magnetize to, split will open in time"
+  },
+
+  "dark_nodes": {
+    "MikroTik": ".2 — chained through sporeGate but not responding",
+    "northGate": ".147 — rebooted, still dark",
+    "southGate": ".148 — House 2, spine dark",
+    "JetStream": ".111 — House 2 spine switch",
+    "ironGate": ".237 — parked",
+    "frameGate": "was on WiFi (90:82:c3:74:12:ca), now silent",
+    "Flint2_RightEar": "House 2, broadcasting but zombie (no WAN DHCP)"
+  },
+
+  "topology_ascii": "Router(.1) ─lan3─→ [sporeGate .243] ─(chain)─→ MikroTik(dark) ─→ Flint1(air)\n                    ─lan5─→ [graftGate .104]\n                    ─WiFi─→ eastGate(.244) + Nest(.238) + iPhone(.121) + .189(Cast?) + Flint1(razor)"
+}
