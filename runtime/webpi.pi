@@ -389,6 +389,7 @@ NESTGATE_ROUTES = {
     "/dock":      "hub.html",       # alias
     "/canfield":  "canfield.html",  # Canfield solitaire
     "/lisp":      "lisp-desk.html", # Lisp desk
+    "/appendix":  "appendix.html",  # Gut pocket — inverted snow globe, sourDough ferments here
     "/walkers":   "walkers.html",   # Wiki Walker — H = I — shadows on the globe
 }
 
@@ -1205,6 +1206,10 @@ class WebPIHandler(http.server.BaseHTTPRequestHandler):
                 rel = path[len(prefix):].lstrip("/")
                 return self._serve_from(root, "/" + rel if rel else "/")
         
+        # APPENDIX — gut pocket, sourDough ferments the snow globe here
+        if path == "/appendix" or path == "/appendix/":
+            return self._serve_from(GAIA_ROOT / "static", "/appendix.html")
+
         # FALLTHROUGH → proxy to gate on :8443 (petalTongue lives there)
         # This is the fix for DEAD petals. The gate has 160+ endpoints with
         # petalTongue TRANS rendering. Without this proxy, browsers see raw JSON.
@@ -1562,13 +1567,36 @@ li{{padding:0.3em 0}}h2{{color:#88ccff;margin-bottom:1em}}
         self.wfile.write(data)
 
     def do_POST(self):
-        """Handle POST requests — banana ceremony, etc."""
+        """Handle POST requests — banana ceremony, ferment, etc."""
         path = urllib.parse.unquote(self.path.split("?")[0])
         if path == "/banana":
             return self._banana_ceremony()
+        if path == "/appendix/ferment":
+            return self._appendix_ferment()
         # Default: 404
         self.send_response(404)
         self.end_headers()
+
+    def _appendix_ferment(self):
+        """🧫 sourDough fermentation — GPU re-render the snow globe."""
+        import subprocess
+        ferment_script = str(Path(__file__).parent.parent / "primals" / "sourDough" / "appendix-ferment.py")
+        try:
+            result = subprocess.run(
+                ["python3", ferment_script],
+                capture_output=True, text=True, timeout=30
+            )
+            if result.returncode == 0:
+                resp = json.dumps({"ok": True, "output": result.stdout.strip()})
+            else:
+                resp = json.dumps({"ok": False, "error": result.stderr.strip()})
+        except Exception as e:
+            resp = json.dumps({"ok": False, "error": str(e)})
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+        self.wfile.write(resp.encode("utf-8"))
 
     def _banana_ceremony(self):
         """🍌 ARE YOU A BANANA? → THE BUTTON → NFT PRINTER.
