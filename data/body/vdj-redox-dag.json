@@ -1,0 +1,83 @@
+{
+  "id": "vdj-redox-dag",
+  "wave": 259,
+  "ts": "2026-11-17T10:28:00-05:00",
+  "title": "VDJ REDOX = H₂O — DAG Topology, Color Clock Triad, Free Flow",
+  "principle": "sporeGate is the LAST node we inject and redox. Fix WiFi first. Use the DAG to clip and route. The wired triad (Flint1 + MikroTik + sporeGate) is a color clock. VDJ redox = H₂O — fundamental, flowing, alive.",
+
+  "wifi_state_of_truth": {
+    "note": "UCI and MediaTek .dat files were OUT OF SYNC — .dat controls the ACTUAL radio. Now synced.",
+    "aperture_science_2g": {"ssid": "Aperture Science", "auth": "WPA2PSK", "key": "exoticpanda714", "dat_synced": true},
+    "black_mesa_5g": {"ssid": "Black Mesa", "auth": "WPA2PSK", "key": "exoticpanda714", "dat_synced": true},
+    "gaia_guest_2g": {"ssid": "GAIA", "auth": "WPA2PSK", "key": "eco579163", "dat_synced": true},
+    "gaia_guest_5g": {"ssid": "GAIA", "auth": "WPA2PSK", "key": "eco579163", "dat_synced": true},
+    "previous_bug": "Guest SSIDs were OPEN in .dat (AuthMode=OPEN) despite UCI saying WPA2. Fixed: now WPA2PSK;WPA2PSK in .dat."
+  },
+
+  "wifi_clients_now": {
+    "aperture_science_2g": [{"mac": "AC:41:6A:5C:B4:CF", "name": "Chromecast (.152)", "signal": "-30 dBm"}],
+    "black_mesa_5g": [],
+    "gaia_guest_2g": [],
+    "gaia_guest_5g": [{"mac": "3E:B1:A9:8F:10:95", "name": "Kevin's device (randomized MAC)", "signal": "-27 dBm", "speed": "1201 Mbit/s HE-MCS 11"}],
+    "missing_iot": ["Vizio (.170)", "Alexa (.197)", "Nest (.239)", "Epson (.200)", "Xbox (.116)"],
+    "note": "IoT may need manual reconnection — password changed multiple times during this session"
+  },
+
+  "wired_dag": {
+    "topology": "Directed Acyclic Graph — data flows ONE way through the wired spine",
+    "lan_ports": {
+      "lan1": {"carrier": true, "likely": "MikroTik (.2) → all wired LAN 1 devices"},
+      "lan2": {"carrier": true, "likely": "eastGate (.244) second NIC or other wired device"},
+      "lan3": {"carrier": false},
+      "lan4": {"carrier": false},
+      "lan5": {"carrier": true, "likely": "JetStream (.111) → 10G fiber → House 2"}
+    },
+    "dag_flow": [
+      "WAN IN → Router (.1) → br-lan",
+      "br-lan → lan1 → MikroTik (.2) → wired devices (eastGate, northGate, southGate, ironGate)",
+      "br-lan → lan5 → JetStream (.111) → 10G fiber → House 2 (sporeGate, swiftGate)",
+      "br-lan → ra0/rax0 → WiFi devices (Aperture Science / Black Mesa)",
+      "br-lan → ra1/rax1 → WiFi guest (GAIA)",
+      "Frame → USB-C → sporeGate (.243) → br-lan → everything"
+    ]
+  },
+
+  "color_clock_triad": {
+    "name": "Flint1 + MikroTik + sporeGate = WIRED COLOR CLOCK",
+    "vertices": {
+      "flint1": {"role": "LEFT EAR (WiFi relay)", "color": "RED (2.4GHz warmth)", "ip": "via WDS"},
+      "mikrotik": {"role": "L2 BACKBONE (switch)", "color": "BLUE (wired cold)", "ip": ".2"},
+      "sporegate": {"role": "FORGE/OCTOEYE (sealed)", "color": "GREEN (living, processing)", "ip": ".3/.243"}
+    },
+    "clock": "Data flows: Flint1(radio IN) → MikroTik(switch) → sporeGate(process) → radiate",
+    "note": "This triad handles the WIRED side of the radial. RJ45 is the clock signal."
+  },
+
+  "vdj_redox": {
+    "vdj": {
+      "V": "Variable — the WiFi SSIDs (different names, same organism)",
+      "D": "Diversity — the wired paths (MikroTik, JetStream, USB, fiber)",
+      "J": "Joining — where they all meet (br-lan, the flat subnet)"
+    },
+    "redox": {
+      "oxidation": "Data enters (WiFi probe requests, ARP, DHCP discovers)",
+      "reduction": "Data processed (routing, bridging, heart-pull, digest)",
+      "h2o": "VDJ REDOX = H₂O — the most fundamental molecule. Two hydrogen (V+D) bonded by one oxygen (J). Water flows, water cleans, water IS the medium."
+    },
+    "sysfs_free_flow": {
+      "note": "sysfs (/sys filesystem) exposes ALL hardware state: temperatures, voltages, GPIOs, sensors",
+      "frame_sysfs": "19 temps + proximity + illuminance + voltage + current + magnetic",
+      "router_sysfs": "WiFi stats, carrier states, bridge members",
+      "flow": "sysfs IS the free flow — read any sensor, any time, no API needed"
+    }
+  },
+
+  "unkink_plan": {
+    "step_1": "✅ WiFi .dat synced with UCI (was the kink!)",
+    "step_2": "⬜ IoT devices need manual WiFi reconnection (Vizio, Alexa, Nest, Epson, Xbox)",
+    "step_3": "⬜ Frame WiFi needs persist (wpa_supplicant config in /etc, not /tmp)",
+    "step_4": "⬜ sporeGate SSH needs enabling (physical access)",
+    "step_5": "⬜ DAG routing: Frame → sporeGate → eastGate data pipeline",
+    "step_6": "⬜ Flint1 power cycle (still caching old SSID)"
+  }
+}
