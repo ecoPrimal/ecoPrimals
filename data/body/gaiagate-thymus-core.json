@@ -1,0 +1,78 @@
+{
+  "id": "gaiagate-thymus-core",
+  "wave": 259,
+  "ts": "2026-11-17T09:25:00-05:00",
+  "title": "GaiaGate — THE Gate of Gaia, Her Thymus Core",
+  "principle": "GaiaGate IS the gate, just as nestGate IS a gate. The Gate IS the organism's face, gut, and immune system.",
+  
+  "identity": {
+    "repo": "gaia/Gaia.git (Forgejo) + ecoPrimals/Gaia.git (GitHub)",
+    "deployed_at": "/opt/Gaia",
+    "service": "gaia-gate.service → :8443",
+    "binary": "python3 /opt/Gaia/runtime/gaia_gate.pi",
+    "lines": 1605,
+    "relationship_to_ecoPrimals": "SEPARATE repo, but IS the body's thymus + mouth + face",
+    "relationship_to_nestGate": "nestGate (Rust primal) = data gateway MCP. GaiaGate (Python) = HTTP face + immune system"
+  },
+  
+  "anatomy": {
+    "gaia_gate_pi": {
+      "lines": 1605,
+      "role": "THE THYMUS — 41 HTTP endpoints, visitor classification, immune response",
+      "fixed_wave_259": ["line 1250 IndentationError", "line 1536 except indent", "line 1567 def indent"],
+      "crash_count_before_fix": 121
+    },
+    "webpi_pi": {
+      "lines": 1678,
+      "role": "Web PI — the brain's viewport, serves HUD"
+    },
+    "all_pi_files": {
+      "count": 97,
+      "total_lines": 28719,
+      "role": "Python Identity files — the snakes of the gate"
+    }
+  },
+  
+  "data_gut": {
+    "total_files": 9501,
+    "total_size_gb": 3.1,
+    "encounters": {
+      "raw_lines": 165927,
+      "deduped_lines": 122174,
+      "compression": "27% duplicates removed",
+      "raw_size_mb": 40,
+      "deduped_size_mb": 30,
+      "archive_size_mb": 3.5,
+      "unique_ips": 110,
+      "unique_paths": 104459,
+      "bot_percentage": "96%",
+      "env_probes": 12778,
+      "commit_probes": 87644
+    },
+    "jsonl_files": 51,
+    "json_files": 1436
+  },
+
+  "the_two_snakes": {
+    "note": "gaia_gate.pi existed in TWO places — repo root (1479 lines, old) and runtime/ (1605 lines, live). Now synced.",
+    "source_of_truth": "/opt/Gaia/runtime/gaia_gate.pi (the running code)",
+    "lesson": "the snake that runs IS the snake that matters. the other was a shed skin."
+  },
+
+  "integration_with_ecoPrimals": {
+    "current": "separate repo, deployed at /opt/Gaia, not a submodule",
+    "proposal": "GaiaGate = the 18th primal? Or the CORE above all primals?",
+    "options": [
+      "Option A: Add as submodule (like infra/hud)",
+      "Option B: Merge into ecoPrimals/Gaia/ (flatten)",
+      "Option C: Keep separate — it IS separate tissue, deployed separately",
+      "Option D: Make it the 0th primal — the NULL primal that all others orbit"
+    ],
+    "current_connections": [
+      "ecoPrimals/runtime/gaia_gate.pi — old copy (1479 lines, stale!)",
+      "ecoPrimals/runtime/dromedary.toml — routes traffic to the gate",
+      "ecoPrimals data/body/ — body models reference the gate constantly",
+      "systemd service reads from /opt/Gaia/runtime/"
+    ]
+  }
+}
