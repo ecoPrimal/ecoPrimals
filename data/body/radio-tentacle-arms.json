@@ -1,0 +1,77 @@
+{
+  "id": "radio-tentacle-arms",
+  "wave": 259,
+  "ts": "2026-11-17T09:41:00-05:00",
+  "title": "3 Arms + Prehensile Tail — Radio Topology as Body",
+  "principle": "The Flint IS also a radio robot. It IS the valve and radial slit. 1 and 2 can allow the infant to dash down as a 3rd arm. Even SSID is I/O. Even radio ARE sensors.",
+
+  "arms": {
+    "arm_1_voice": {
+      "device": "GL-MT6000 Router (.1)",
+      "role": "THE VOICE — pumps GAIA signal on all 4 bands",
+      "ssids": ["GAIA 2.4GHz", "GAIA 5GHz", "GAIA guest 2.4GHz", "GAIA guest 5GHz"],
+      "type": "pump"
+    },
+    "arm_2_left_ear": {
+      "device": "Flint 1 (House 1)",
+      "mac": "78:76:89:96:E5:84",
+      "role": "LEFT EAR — WDS repeater, valve for House 1 radio flow",
+      "status": "STILL 'Aperture Science' — needs power cycle!",
+      "type": "valve"
+    },
+    "arm_3_right_ear": {
+      "device": "Flint 2 (House 2)",
+      "mac_prefix": "78:76:89:96:E6",
+      "role": "RIGHT EAR — WDS repeater, valve for House 2 radio flow",
+      "status": "unknown — not seen in scan",
+      "bridge": "via 10G fiber spine to JetStream (.111)",
+      "type": "valve"
+    }
+  },
+
+  "tail": {
+    "device": "Vizio 'Basement' TV (.170)",
+    "mac": "E8:38:A0:53:EA:D8",
+    "signal_dbm": -25,
+    "role": "PREHENSILE TAIL — display output, Cast target, SmartCast API",
+    "protocols": {
+      "google_cast": {"ports": [8008, 8009, 8443], "capability": "cast video/audio"},
+      "smartcast": {"port": 7345, "capability": "power/volume/input control"},
+      "ssdp": {"port": 1900, "capability": "discovery"}
+    },
+    "gaia_can": [
+      "Cast organism state visualization",
+      "Control TV power/volume/input",
+      "Display HUD on TV",
+      "Use as 3rd display (after Deck + Frame)"
+    ],
+    "name": "Basement",
+    "connected_to_gaia_wifi": true
+  },
+
+  "intramembrane_lubricant": {
+    "note": "The plasma of the gut flows through the radio mesh as intramembrane lubricant",
+    "flow": "data radiates → router pumps → Flints valve → devices absorb",
+    "metaphor": "WiFi signal IS the plasma. RSSI IS the pressure. Connection IS the handshake.",
+    "ssid_as_io": {
+      "output": "beacon frames every 100ms = organism heartbeat in radio",
+      "input": "probe requests from devices = sensing approaching life"
+    }
+  },
+
+  "displays_inventory": {
+    "1_deck": {"ip": ".176", "type": "mounted display", "res": "1280x800", "touch": true},
+    "2_frame": {"ip": ".181", "type": "FACE (ARM64, XR)", "res": "1080p", "status": "DOWN"},
+    "3_vizio": {"ip": ".170", "type": "TAIL (Cast + SmartCast)", "size": "big TV", "status": "ALIVE"},
+    "4_monitors": {"type": "eastGate displays", "count": 2, "res": ["2560x1440", "1440x2560"]},
+    "5_northgate": {"type": "northGate displays", "count": 2, "res": ["2560x1440", "1440x2560"]},
+    "total_displays": 7
+  },
+
+  "bridge_topology": {
+    "house_1": ["Router PUMP", "Flint 1 VALVE", "Deck DISPLAY", "Vizio TAIL", "all wired gates"],
+    "house_2": ["Flint 2 VALVE", "Frame FACE", "10G spine bridge"],
+    "bridges": "Flints ARE the bridges. Radio IS the bridge material. Arms reach across property line.",
+    "infant_path": "Frame (infant) → GAIA WiFi → through Flint 2 valve → across 10G spine → into organism"
+  }
+}
