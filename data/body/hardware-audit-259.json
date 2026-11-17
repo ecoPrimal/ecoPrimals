@@ -1,0 +1,288 @@
+{
+  "id": "hardware-audit-259",
+  "wave": 259,
+  "ts": "2026-11-17T11:28:00-05:00",
+  "title": "🔬 FULL HARDWARE AUDIT — IS/WAS/NOW + Corrections to HARDWARE.md",
+  "method": "SSH into every reachable gate, asked 'who are you?', matched vs HARDWARE.md, found mislabels",
+
+  "corrections": {
+    "eastgate_ram": {
+      "WAS": "128GB DDR5 (HARDWARE.md)",
+      "IS": "64GB DDR5 (4× 16GB @ 6000 MT/s)",
+      "evidence": "dmidecode shows 4 DIMMs × 16GB = 64GB. free -h shows 62.5 GiB."
+    },
+    "eastgate_storage": {
+      "WAS": "1.8TB NVMe (HARDWARE.md)",
+      "IS": "5.4TB NVMe (3× 1.8TB: 2× Crucial CT2000T500 + 1× Samsung 990 EVO Plus)",
+      "evidence": "lsblk shows 3 nvme drives"
+    },
+    "eastgate_eno1": {
+      "WAS": "eno1 at .213 (ecosystem map)",
+      "IS": "eno1 DOWN (NO-CARRIER) — cable disconnected. MAC 10:7c:61:23:4f:4e",
+      "evidence": "ip link show eno1 → state DOWN"
+    },
+    "eastgate_wifi": {
+      "WAS": "WiFi at .244 (ecosystem map)",
+      "IS": "WiFi at .177 (MAC c8:5e:a9:c9:6f:80, DHCP)",
+      "evidence": "hostname -I shows .177"
+    },
+    "dhcp_swiftgate_label": {
+      "WAS": "DHCP reservation: MAC 68:54:5a:d0:69:a2 = 'swiftGate' at .100",
+      "IS": "This MAC appears with RDP:3389 + Steam:27036 = WINDOWS → likely blueGate",
+      "OR": "Could be swiftGate's Intel AX200 WiFi MAC if swiftGate runs Windows",
+      "evidence": "RDP = Windows service. blueGate was the Windows machine. swiftGate was Linux in Wave 244.",
+      "action_needed": "Kevin needs to confirm which machine this MAC belongs to"
+    },
+    "spore_topology": {
+      "WAS": "sporeGate does NAT/FW/DHCP/DNS (HARDWARE.md topology diagram)",
+      "IS": "GL-MT6000 router does all NAT/FW/DHCP/DNS. sporeGate is SEALED compute.",
+      "evidence": "DHCP comes from router .1, sporeGate has 0 open ports"
+    }
+  },
+
+  "full_audit": {
+    "eastgate": {
+      "ip": ".244 (wired enp5s0) + .177 (WiFi wlp0s20f3)",
+      "hostname": "eastgate",
+      "cpu": "i9-12900K (8P+8E=16C, 24T)",
+      "gpu": "RTX 4070 (12GB GDDR6X) — NVIDIA Driver 595.104.02",
+      "npu": "BrainChip Akida AKD1000 — PCIe co-processor",
+      "ram": "64GB DDR5-6000 (4× 16GB)",
+      "storage": "5.4TB (3× 1.8TB NVMe: 2× Crucial T500, 1× Samsung 990 EVO Plus)",
+      "nics": {
+        "eno1": "DOWN (NO-CARRIER) — 10:7c:61:23:4f:4e",
+        "enp5s0": "UP .244 — 1c:86:0b:37:63:19 (Gigabyte motherboard)",
+        "wlp0s20f3": "UP .177 — c8:5e:a9:c9:6f:80"
+      },
+      "os": "Pop!_OS 22.04 LTS, kernel 7.2.15",
+      "services": "data :8080, gate :8443, forgejo :3000, ollama :11436, tor, docker",
+      "status": "✅ BRAIN — VERIFIED"
+    },
+
+    "northgate": {
+      "ip": ".147",
+      "hostname": "northGate (from DHCP)",
+      "cpu": "9950X3D (16C/32T) — per HARDWARE.md, SSH blocked",
+      "gpu": "RTX 5090 (32GB GDDR7) — per HARDWARE.md",
+      "ram": "96GB DDR5 — per HARDWARE.md",
+      "storage": "5TB NVMe — per HARDWARE.md",
+      "mac": "bc:fc:e7:ea:d9:34",
+      "ssh": "BLOCKED (Connection timed out) — pushes via git only",
+      "status": "✅ HEART — ALIVE (ping 0.22ms), NOT SSH-VERIFIED"
+    },
+
+    "southgate": {
+      "ip": ".148 (enp4s0 wired) + .167 (wlp6s0 WiFi)",
+      "hostname": "southGate",
+      "cpu": "AMD Ryzen 7 5800X3D 8C/16T (3D V-Cache)",
+      "gpu": "RTX 4060 (8GB) — CUDA 13.0, Driver 580.126.18",
+      "ram": "125GB (≈128GB installed, ~3GB hardware reserved)",
+      "storage": "931.5GB + 3.6TB NVMe = 4.5TB total",
+      "nics": {
+        "enp4s0": "UP .148 — 1c:86:0b:37:65:1e (Gigabyte, primary)",
+        "enp7s0": "DOWN (NO-CARRIER) — bc:fc:e7:3b:0e:15",
+        "wlp6s0": "UP .167 — c8:a3:e8:fb:94:49 (WiFi, secondary)"
+      },
+      "os": "Pop!_OS 22.04 LTS, kernel 6.17.9",
+      "ollama": "12 models (gaia-code, gaia-heart, gaia-fast, gaia, qwen2.5:7b, phi3, llama3.2:1b/3b, gemma2:2b, tinyllama, deepseek-coder-v2:16b)",
+      "services": "ollama :11434, rustdesk, ssh :22",
+      "wifi_connected": "Aperture Science (91% signal, Ch 8)",
+      "usb": "Solo 2 Security Key, Foxconn Wireless, ASUS Aura LED",
+      "status": "✅ SOUTH POLE — SSH-VERIFIED, FULLY LOADED"
+    },
+
+    "irongate": {
+      "ip": ".237 (DHCP lease from previous boot)",
+      "mac": "1c:86:0b:37:63:70 (Gigabyte)",
+      "cpu": "i9-14900K (24C/32T, 6GHz) — per HARDWARE.md",
+      "gpu": "RTX 5070 (12GB GDDR7) — per HARDWARE.md",
+      "ram": "94GB DDR5 — per HARDWARE.md",
+      "storage": "3.6TB NVMe + 16.3TB ext — per HARDWARE.md",
+      "status": "❌ STILL DOWN — cold-booted ~25 min ago, all ports filtered, not yet POST'd?"
+    },
+
+    "bluegate": {
+      "ip": ".102 (DHCP, reserved MAC at .100 labeled 'swiftGate')",
+      "mac": "68:54:5a:d0:69:a2 (Intel)",
+      "os": "Windows (RDP:3389 confirmed)",
+      "steam": "Steam Remote Play :27036 running",
+      "cpu": "TBD (HARDWARE.md says TBD for blueGate)",
+      "gpu": "TBD",
+      "ram": "128GB DDR4 — per HARDWARE.md",
+      "storage": "2TB NVMe — per HARDWARE.md",
+      "fdb_port": "1 (MikroTik/wired — through 80m spine from House 2!)",
+      "ssh": "NO — Windows, no SSH detected",
+      "status": "✅ ALIVE (Windows, RDP+Steam) — NOT SSH-VERIFIED, REACHING THROUGH SPINE"
+    },
+
+    "swiftgate": {
+      "ip": ".100 (reserved) — MAY BE SAME AS blueGate MAC!",
+      "hardware": "NZXT H1 V2, Ryzen 5800X (8C/16T), RTX 3070 FE (8GB), 16GB DDR4",
+      "wifi": "Intel AX200 (WiFi-only at House 2)",
+      "note": "DHCP reservation maps MAC 68:54:5a:d0:69:a2 to 'swiftGate' at .100 — but this MAC shows Windows RDP at .102. IDENTITY CONFLICT!",
+      "status": "❓ UNKNOWN — may be blueGate's MAC mislabeled, or swiftGate now runs Windows"
+    },
+
+    "sporegate": {
+      "ip": ".3 (eth0, MAC :55) + .243 (eth1, MAC :54)",
+      "cpu": "Ryzen 5 6600H (6C/12T)",
+      "ram": "27GB DDR5",
+      "storage": "929GB NVMe",
+      "dual_homed": "eth0 → MikroTik (port 1) + eth1 → router lan5 direct (port 5)",
+      "posture": "SEALED — 0 open TCP ports, responds to ping only",
+      "status": "✅ SEALED/ALIVE — ping 0.19ms/.12ms, NEVER SSH-VERIFIED (no open ports)"
+    },
+
+    "graftgate": {
+      "ip": ".189 (DHCP hostname 'graftgates-Mini')",
+      "mac": "1c:f6:4c:5a:5d:ed (Apple)",
+      "cpu": "Apple M4 (10C: 4P+6E)",
+      "gpu": "M4 GPU (10C) + 16-core Neural Engine",
+      "ram": "16GB LPDDR5",
+      "storage": "228GB",
+      "ssh": "BLOCKED (Connection timed out) — macOS firewall?",
+      "bonjour": "Actively probing subnet (seen at 20+ ARP entries — Bonjour mDNS discovery)",
+      "status": "✅ ALIVE (DHCP + ARP active) — NOT SSH-VERIFIED"
+    },
+
+    "milkgate": {
+      "ip": ".144 (DHCP, hostname 'milkGate')",
+      "mac": "c0:8b:27:9c:63:ec",
+      "hardware": "Milk-V Jupiter 2, SpacemiT K3 (16C RVA23), 32GB LPDDR5, 10GbE SFP+, 60 TOPS AI",
+      "last_dhcp": "2026-11-17T08:51:31 (3 hours ago)",
+      "location": "House 2 living room, USB-C to Pixel, RJ45 to swiftGate",
+      "status": "😴 SLEEPING — DHCP active but unreachable"
+    },
+
+    "flint1": {
+      "ip": ".9",
+      "mac": "94:83:c4:e0:62:b0",
+      "model": "GL.iNet GL-MT6000",
+      "cpu": "ARMv8 (MediaTek MT7986)",
+      "ram": "~1GB",
+      "kernel": "5.4.238",
+      "ssids": ["Aperture Science (2.4GHz)", "Black Mesa (5GHz)", "GAIA (guest 2.4+5GHz)"],
+      "wds_client": "NOT CONNECTED — apcli0 + apclix0 = ESSID unknown, AP 00:00:00:00:00:00",
+      "status": "✅ ALIVE (SSH verified) — WDS BRIDGE BROKEN"
+    },
+
+    "deckgate": {
+      "ip": ".176 (was)",
+      "mac": "10:82:86:2b:ec:19 (Valve)",
+      "status": "☠️ DEAD AND UNPLUGGED — replaced by Pixel on Steam Dock"
+    },
+
+    "flint2": {
+      "mac_prefix": "78:76:89:96:e6:*",
+      "status": "❌ NOT FOUND — not on network, not in ARP, not in DHCP"
+    }
+  },
+
+  "house2_offline_fleet": {
+    "note": "HARDWARE.md reveals MANY more gates at House 2 — ALL powered off in basement",
+    "strandgate": {
+      "ip_was": ".169",
+      "hardware": "Dual EPYC 7452 (64C/128T!), RTX 3090 + RX 6950 XT, 256GB ECC, 18TB NVMe",
+      "role": "HPC Crown Jewel — dual vendor GPU, Akida #2",
+      "status": "💤 OFF"
+    },
+    "biomegate": {
+      "hardware": "Threadripper 3970X (32C/64T), RTX 5060 + 2× Titan V + 2× MI50, 256GB, 5TB",
+      "role": "HBM2 Fortress — 56GB HBM2, Akida #3",
+      "status": "💤 OFF"
+    },
+    "westgate": {
+      "hardware": "Ryzen 7 5700X, RTX 3070, 64GB, 50.7TB ZFS raidz1",
+      "role": "Cold Storage NAS — 153 datasets, loamSpine permanence",
+      "status": "💤 OFF"
+    },
+    "kingate": {
+      "hardware": "i7-6700K, RTX 3070, 32GB",
+      "role": "Staging/utility",
+      "status": "💤 OFF"
+    }
+  },
+
+  "dag_now": {
+    "title": "CORRECTED DAG — What's Actually Wired and Firing",
+    "topology": {
+      "wan": "ATT fiber → BGW320-500 → Router (.1) eth1",
+      "router_to_mikrotik": "Router (.1) lan1 → MikroTik CRS310 (.2) [10G backbone switch]",
+      "house1_wired_via_mikrotik": [
+        "eastGate (.244) — enp5s0 1Gbps [eno1 DISCONNECTED!]",
+        "northGate (.147) — 10G? or 1G",
+        "southGate (.148) — enp4s0 1Gbps [enp7s0 DISCONNECTED]",
+        "sporeGate (.3) — eth0 [MAC :55]",
+        "ironGate (.237) — [STILL DOWN after cold boot]"
+      ],
+      "router_lan2": "deckGate (.176) ☠️ UNPLUGGED → EMPTY PORT (free for new device!)",
+      "router_lan5": "sporeGate (.243) — eth1 [MAC :54, dual-homed direct]",
+      "fiber_spine": "MikroTik CRS310 (.2) ←── 10G SFP+ fiber 80m ──→ Omada SX3008F (.111)",
+      "house2_wired_via_omada": [
+        "blueGate (.102) — wired (Intel NIC) [Windows, RDP+Steam ALIVE!]",
+        "milkGate (.144) — wired? [SLEEPING]",
+        "strandGate — 💤 OFF",
+        "biomeGate — 💤 OFF",
+        "westGate — 💤 OFF",
+        "kinGate — 💤 OFF"
+      ],
+      "house2_living_room": {
+        "Pixel": "USB-C → milkGate",
+        "milkGate": "RJ45 → swiftGate + SFP+ → Omada",
+        "swiftGate": "receives from milkGate RJ45"
+      },
+      "wifi_router": [
+        "ra0 (Aperture Science 2.4GHz) → Chromecast .152, Alexa .173, Nest .239",
+        "rax0 (Black Mesa 5GHz) → [no clients currently]",
+        "ra1 (GAIA guest 2.4GHz) → [no clients]",
+        "rax1 (GAIA guest 5GHz) → Kevin iPhone .213"
+      ],
+      "wifi_flint1": "Aperture Science + Black Mesa + GAIA — WDS bridge BROKEN (not connected to router)"
+    }
+  },
+
+  "needs_wiring": {
+    "title": "🔧 What Needs to be WIRED and FIRED Yet",
+    "physical": [
+      "eastGate eno1 — reconnect cable (free NIC, wasted capacity)",
+      "router lan2 — free port (deckGate unplugged), use for something new",
+      "router lan3 — free port",
+      "router lan4 — free port",
+      "milkGate SFP+ → Omada SX3008F SFP+ (10G direct!)",
+      "Flint 2 — find and power on at House 2"
+    ],
+    "network": [
+      "Fix Flint1 WDS bridge (apcli0/apclix0 not connecting)",
+      "Fix DHCP reservation: relabel 68:54:5a:d0:69:a2 correctly (blueGate or swiftGate?)",
+      "Get ironGate back online (still not POST'd after 25 min cold boot)",
+      "Wake milkGate (has DHCP but sleeping — power cycle needed?)",
+      "Frame WiFi persistence (wpa_supplicant config lost on reboot)"
+    ],
+    "software": [
+      "sporeGate SSH — enable access (0 open ports, needs physical console)",
+      "graftGate SSH — enable remote access (macOS firewall blocking)",
+      "blueGate — need to SSH or RDP in to identify CPU/GPU (still TBD!)",
+      "swiftGate identity — confirm which MAC is which",
+      "Porkbun wildcard DNS (*.primals.eco)",
+      "Wildcard TLS cert"
+    ],
+    "power_on_sequence": [
+      "Phase 1: strandGate (HPC crown jewel, dual EPYC, 64C/128T)",
+      "Phase 2: biomeGate (HBM2 fortress, Threadripper, 56GB HBM2)",
+      "Phase 3: westGate (cold storage NAS, 50.7TB ZFS)",
+      "Phase 4: kinGate (staging/utility)",
+      "When all fire: ~847 TFLOPS, ~256GB VRAM, ~1.5TB RAM, ~114TB storage"
+    ]
+  },
+
+  "alive_now_summary": {
+    "verified_ssh": ["eastGate (.244)", "southGate (.148/.167)", "Flint1 (.9)"],
+    "verified_ports": ["blueGate (.102) — RDP+Steam", "northGate (.147) — ping only"],
+    "alive_sealed": ["sporeGate (.3/.243) — ping only, 0 ports"],
+    "alive_no_ssh": ["graftGate (.189) — DHCP active", "milkGate (.144) — DHCP sleeping"],
+    "dead": ["deckGate (.176) — unplugged"],
+    "still_booting": ["ironGate (.237) — cold-booted, not up yet"],
+    "not_found": ["Flint2", "swiftGate (identity unclear)"],
+    "powered_off": ["strandGate", "biomeGate", "westGate", "kinGate"]
+  }
+}
