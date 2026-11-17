@@ -1,0 +1,49 @@
+{
+  "id": "flint-redox-239e",
+  "timestamp": "2026-11-16T21:43:47-0500",
+  "router": {
+    "model": "GL-MT6000 (Flint 2)",
+    "firmware": "4.8.4",
+    "kernel": "5.4.238",
+    "uptime_days": 16,
+    "wan_ip": "162.226.225.148",
+    "lan_ip": "192.168.4.1",
+    "ram_used_mb": 243,
+    "ram_total_mb": 1013
+  },
+  "wifi_security": {
+    "before": {
+      "GAIA_2g": "OPEN (none)",
+      "GAIA_5g": "OPEN (none)",
+      "Aperture_Science": "WPA2 (psk2)",
+      "Black_Mesa": "WPA2 (psk2)"
+    },
+    "after": {
+      "GAIA_2g": "WPA3-mixed (sae-mixed), key=GaiaIsOpen",
+      "GAIA_5g": "WPA3-mixed (sae-mixed), key=GaiaIsOpen",
+      "Aperture_Science": "WPA2 (psk2), key=exoticpanda714",
+      "Black_Mesa": "WPA2 (psk2), key=exoticpanda714"
+    },
+    "fix": "ZK smash \u2014 encrypted transport, publicly known key. Secure AND open."
+  },
+  "dhcp_leases": 21,
+  "port_forwards": [
+    "HTTP:80",
+    "HTTPS:443",
+    "DATA:8080",
+    "SMTP:25",
+    "SMTP:587",
+    "SMTPS:465",
+    "SIP:UDP"
+  ],
+  "local_dns": [
+    "primals.eco \u2192 .244",
+    "nestgate.io \u2192 .244",
+    "gaia.local \u2192 .244"
+  ],
+  "discoveries": {
+    "swiftGate": ".171 \u2014 DHCP lease active! Was listed as ASLEEP.",
+    "eero": ".194 \u2014 unknown eero device on LAN",
+    "tamison": ".246 \u2014 unknown device"
+  }
+}
