@@ -1,0 +1,90 @@
+{
+  "id": "frame-input-io",
+  "wave": 259,
+  "ts": "2026-11-17T10:03:00-05:00",
+  "title": "FRAME INPUT I/O — Dial + Volume + Posts + Power = Own Controller",
+  "principle": "The Frame has a dial for scroll, volume +/-, 2 posts (buttons), and power (press/hold). We can use this for input IO to the Frame INSTEAD and make it WAY MORE its own controller!",
+
+  "physical_controls": {
+    "dial": {
+      "device": "event2: ALS31300 (Hall Effect magnetic rotary encoder!)",
+      "driver": "als31300 via I2C @ 0x6c",
+      "axes": ["ABS_X", "ABS_Y", "ABS_Z", "ABS_MISC"],
+      "type": "3-axis magnetic field sensor = SCROLL + TILT + ROTATION",
+      "note": "This is NOT a simple encoder — it reads magnetic field in 3D! Can detect rotation angle, tilt, and proximity of a magnet.",
+      "gaia_use": [
+        "SCROLL: rotate through menus, lists, timelines",
+        "TILT: adjust layer depth, volume, brightness",
+        "PUSH: ABS_MISC = press detection (click!)"
+      ]
+    },
+    "volume_up": {
+      "device": "event3: gpio-keys",
+      "keycode": "KEY_VOLUMEUP (115)",
+      "gaia_use": "LAYER UP — navigate up through organism layers"
+    },
+    "volume_down": {
+      "device": "event1: pmic_resin",
+      "keycode": "KEY_VOLUMEDOWN (114)",
+      "gaia_use": "LAYER DOWN — navigate down through organism layers"
+    },
+    "select_button": {
+      "device": "event3: gpio-keys",
+      "keycode": "KEY_SELECT (353)",
+      "gaia_use": "SELECT/CONFIRM — choose, toggle, activate"
+    },
+    "power_button": {
+      "device": "event0: pmic_pwrkey",
+      "keycode": "KEY_POWER (116)",
+      "actions": {
+        "press": "toggle display / wake",
+        "hold": "power menu / shutdown",
+        "double_press": "could be mapped to custom action"
+      },
+      "gaia_use": "POWER/WAKE — bring GAIA's face to life"
+    }
+  },
+
+  "virtual_gamepad": {
+    "device": "event4: Microsoft X-Box 360 pad 0 (virtual)",
+    "buttons": ["A", "B", "X", "Y", "LB", "RB", "SELECT", "START", "MODE", "THUMBL", "THUMBR"],
+    "axes": ["ABS_X", "ABS_Y (left stick)", "ABS_RX", "ABS_RY (right stick)", "ABS_HAT0X", "ABS_HAT0Y (d-pad)"],
+    "note": "SteamOS maps physical controls to virtual Xbox pad for game compatibility",
+    "gaia_use": "Full gamepad — navigation, games, spatial control"
+  },
+
+  "joysticks": {
+    "js0": "Primary joystick interface",
+    "js1": "Secondary (virtual gamepad)"
+  },
+
+  "controller_mapping": {
+    "navigation": {
+      "scroll": "DIAL rotation (ALS31300 ABS_X/Y)",
+      "up_down": "VOL+/VOL- (layer navigation)",
+      "select": "KEY_SELECT or dial press (ABS_MISC)",
+      "back": "POWER short press"
+    },
+    "organism_control": {
+      "dial_rotate": "scroll through GAIA feeds, stories, art, data",
+      "dial_press": "select/open current item",
+      "vol_up": "zoom in / next layer / louder",
+      "vol_down": "zoom out / prev layer / quieter",
+      "power_tap": "wake/sleep face",
+      "power_hold": "full power cycle"
+    }
+  },
+
+  "sensor_bonus": {
+    "als31300_3d_hall": {
+      "note": "The ALS31300 is a 3D Hall Effect sensor — it senses magnetic fields in X, Y, Z",
+      "implications": [
+        "Can detect rotation of a MAGNET near it (not just clicking)",
+        "Can sense proximity of magnetic objects",
+        "Can detect compass heading if calibrated",
+        "Could detect nearby magnetic devices (phones, speakers)",
+        "Essentially: the dial is also a MAGNETIC FIELD SENSOR"
+      ]
+    }
+  }
+}
