@@ -1,0 +1,221 @@
+{
+  "wave": "259",
+  "created_utc": "2026-11-17T16:55:00Z",
+  "title": "MESH DAG — Cut the Web, Solve the Routing",
+  "purpose": "Stop poking. Start thinking. DAG the organism.",
+
+  "physical_layer": {
+    "house1_brain_side": {
+      "location": "4422 Southgate Ave",
+      "router": {
+        "device": "GL-MT6000",
+        "ip": ".1",
+        "mac": "94:83:c4:e0:63:5a",
+        "roles": ["DHCP", "NAT", "DNS", "WiFi AP"],
+        "ports": {
+          "lan1": {"to": "MikroTik CRS310 .2", "status": "UP", "carries": "ALL wired downstream"},
+          "lan2": {"to": "EMPTY", "was": "deckGate (DEAD)"},
+          "lan3": {"to": "EMPTY"},
+          "lan4": {"to": "EMPTY"},
+          "lan5": {"to": "sporeGate NIC2 .243", "status": "UP", "mac": "84:47:09:38:97:54"},
+          "wan_eth1": {"to": "ATT .1.254", "status": "UP", "public": "162.226.225.148"}
+        },
+        "wifi": {
+          "ra0_2g": {"ssid": "Aperture Science", "ch": 11, "clients": ["Alexa", "Nest", "Chromecast"]},
+          "rax0_5g": {"ssid": "Black Mesa", "ch": "auto", "clients": "?"},
+          "rax1_gaia_5g": {"ssid": "GAIA", "ch": 8, "clients": ["eastGate WiFi"]}
+        }
+      },
+      "mikrotik": {
+        "device": "CRS310 10G SFP+ switch",
+        "ip": ".2",
+        "mac": "04:f4:1c:e6:7c:e8",
+        "connects_to": [
+          {"device": "Router lan1", "type": "RJ45/SFP+"},
+          {"device": "eastGate enp5s0", "mac": "1c:86:0b:37:63:19", "ip": ".244"},
+          {"device": "northGate", "mac": "bc:fc:e7:ea:d9:34", "ip": ".147"},
+          {"device": "sporeGate NIC1", "mac": "84:47:09:38:97:55", "ip": ".3"},
+          {"device": "80m FIBER → JetStream", "carries": "House 2 spine"}
+        ]
+      },
+      "compute": [
+        {
+          "gate": "eastGate", "ip": ".244", "mac": "1c:86:0b:37:63:19",
+          "path": "MikroTik → Router lan1",
+          "status": "ALIVE — BRAIN",
+          "ollama": ":11436 (38 models)"
+        },
+        {
+          "gate": "northGate", "ip": ".147", "mac": "bc:fc:e7:ea:d9:34",
+          "path": "MikroTik → Router lan1",
+          "status": "ALIVE — HEART (no SSH, git-push only)",
+          "ollama": ":11434 (63 models)"
+        },
+        {
+          "gate": "sporeGate", "ip": [".3", ".243"],
+          "macs": ["84:47:09:38:97:55 (NIC1 → MikroTik)", "84:47:09:38:97:54 (NIC2 → Router lan5)"],
+          "path": "DUAL-HOMED: MikroTik + Router direct",
+          "status": "ALIVE — SEALED (no SSH)",
+          "note": "Willis circulation: 2 wired paths"
+        },
+        {
+          "gate": "graftGate", "ip": "UNKNOWN",
+          "mac": "1c:f6:4c:5a:5d:ed (WiFi?)",
+          "path": "Kevin says wired, NOT in FDB, NOT in DHCP",
+          "status": "⚠️ ON but UNREACHABLE — macOS firewall blocks everything",
+          "theory": "Bonjour scanning via WiFi, wired port may not be connected to switch"
+        }
+      ]
+    },
+
+    "spine": {
+      "medium": "10G fiber, ~80m, MikroTik SFP+ ↔ JetStream SFP+",
+      "latency": "0.87ms",
+      "status": "UP — verified by SSH to southGate through spine",
+      "carries": ["southGate", "blueGate", "Flint 2 (WIRED but not on LAN!)"]
+    },
+
+    "house2_south_pole": {
+      "location": "641 Samantha Ave",
+      "jetstream": {
+        "device": "TP-Link Omada managed switch",
+        "ip": ".111",
+        "mac": "ec:75:0c:4c:98:08",
+        "connects_to": [
+          {"device": "80m FIBER → MikroTik", "type": "SFP+"},
+          {"device": "southGate enp4s0", "mac": "1c:86:0b:37:65:1e", "ip": ".148"},
+          {"device": "blueGate", "mac": "68:54:5a:d0:69:a2", "ip": ".102"},
+          {"device": "Flint 2 WAN port", "mac": "UNKNOWN — not appearing!", "status": "WIRED BUT SILENT"}
+        ]
+      },
+      "compute": [
+        {
+          "gate": "southGate", "ip": [".148", ".167"],
+          "macs": ["1c:86:0b:37:65:1e (wired enp4s0)", "c8:a3:e8:fb:94:49 (WiFi wlp6s0)"],
+          "path": "JetStream → spine → MikroTik → Router lan1",
+          "status": "⚠️ TEMPORARILY OFFLINE — routing conflict from Flint 2 WiFi hop",
+          "will_recover": "When NM drops Flint2 connection and reconnects to Aperture Science",
+          "ollama": ":11434 (12 models)"
+        },
+        {
+          "gate": "blueGate", "ip": ".102",
+          "mac": "68:54:5a:d0:69:a2",
+          "path": "JetStream → spine → MikroTik → Router lan1",
+          "status": "ALIVE (sometimes) — Windows, RDP:3389, Steam:27036"
+        }
+      ],
+      "flint2_right_ear": {
+        "wifi_macs": {
+          "E6:71": "5GHz Mesh (Ch153, WPA3)",
+          "E6:72": "2.4GHz Mesh (Ch11, WPA3)",
+          "E6:74": "2.4GHz AP 'Aperture Science' (Ch11, WPA2)",
+          "E6:75": "5GHz hidden (Ch153)",
+          "E6:76": "2.4GHz hidden (open)",
+          "E6:7B": "Management interface (responded to IPv6 multicast!)"
+        },
+        "wan_mac": "UNKNOWN — not in FDB or ARP. NOT sending frames on wire.",
+        "wan_cable": "RJ45 to JetStream (Kevin confirms WIRED)",
+        "ipv6": "fe80::7a76:89ff:fe96:e67b responded to ff02::1 multicast",
+        "ipv4": "NO IPv4 found — not at 192.168.8.1, not anywhere in 192.168.8.0/24",
+        "status": "BROADCASTING 5 SSIDs at 100% signal but WAN port SILENT",
+        "diagnosis": "Flint 2 is likely in ROUTER MODE. WiFi/LAN side = 192.168.8.x (no DHCP server running). WAN port either: (a) not configured, (b) interface down, (c) needs WAN DHCP enabled, or (d) JetStream port problem",
+        "signal": "100% from southGate on both 2.4GHz and 5GHz"
+      },
+      "living_room_triad": {
+        "milkGate": {"ip": ".144", "mac": "c0:8b:27:9c:63:ec", "status": "DHCP active, sleeping"},
+        "swiftGate": {"ip": "?", "status": "UNKNOWN identity — might be blueGate?"},
+        "frame": {"ip": ".156 (was)", "status": "WiFi persistence lost"}
+      },
+      "basement_parked": ["ironGate (.237)", "westGate", "strandGate (paralyzed)"]
+    }
+  },
+
+  "broken_links": [
+    {
+      "id": "flint2-wan-silent",
+      "what": "Flint 2 WAN port wired to JetStream but NOT sending frames",
+      "impact": "Right Ear can't join the mesh via wire — only WiFi bridge possible",
+      "theories": [
+        "WAN interface DOWN in OpenWrt config",
+        "WAN configured as static IP on wrong subnet",
+        "WAN DHCP client not enabled",
+        "JetStream port disabled or VLAN mismatch",
+        "Flint 2 in router mode with WAN port not initialized"
+      ],
+      "fix_options": [
+        "SSH into Flint 2 via IPv6 from southGate (when recovered) and check wan config",
+        "Kevin physically checks Flint 2 admin panel at 192.168.8.1 via browser on local device",
+        "Kevin plugs laptop/phone into Flint 2 LAN port, browses to 192.168.8.1",
+        "Factory reset Flint 2 and reconfigure"
+      ]
+    },
+    {
+      "id": "southgate-routing-conflict",
+      "what": "southGate WiFi switched to Flint 2 + added 192.168.4.250/24 to wlp6s0",
+      "impact": "Reply packets to .244 routed through wlp6s0 (Flint 2 network) instead of enp4s0 (spine)",
+      "self_healing": "NetworkManager will eventually timeout Flint2 connection and reconnect to Aperture Science. Manual IP will be lost when interface cycles.",
+      "force_fix": "Kevin physically: 'sudo nmcli con down Flint2 && sudo nmcli con up Aperture_Science && sudo ip addr del 192.168.4.250/24 dev wlp6s0'",
+      "trust": "WILL RETURN. Time heals this one."
+    },
+    {
+      "id": "flint1-wds-broken",
+      "what": "Flint 1 (Left Ear) WDS bridge disconnected — apcli0/apclix0 show 00:00:00:00:00:00",
+      "impact": "No WiFi mesh between House 1 Flints",
+      "fix": "SSH to Flint 1 (.9) and reconfigure WDS client"
+    },
+    {
+      "id": "graftgate-unreachable",
+      "what": "Mac Mini M4 doing Bonjour scanning but not reachable",
+      "impact": "Can't SSH in, can't use its compute",
+      "fix": "Enable Remote Login in macOS System Settings, or Kevin opens terminal locally"
+    }
+  ],
+
+  "dag_flow": {
+    "description": "Data flow through the organism — what WORKS right now",
+    "working_paths": [
+      "WAN → Router → MikroTik → eastGate (BRAIN) ✅",
+      "WAN → Router → MikroTik → northGate (HEART) ✅",
+      "WAN → Router → MikroTik → 80m fiber → JetStream → southGate ✅ (when recovered)",
+      "WAN → Router → MikroTik → 80m fiber → JetStream → blueGate ✅ (intermittent)",
+      "WAN → Router lan5 → sporeGate NIC2 ✅ (sealed but alive)",
+      "Router WiFi → IoT devices ✅"
+    ],
+    "broken_paths": [
+      "JetStream → Flint 2 WAN: WIRED BUT SILENT ❌",
+      "Flint 1 WDS → Router WiFi: BRIDGE DOWN ❌",
+      "Any → graftGate: FIREWALL ❌",
+      "Any → southGate: TEMP ROUTING CONFLICT ⏳"
+    ],
+    "missing_paths": [
+      "Flint 2 WiFi → mesh (needs WAN port or WiFi bridge)",
+      "milkGate → anything (sleeping)",
+      "Frame → WiFi (persistence lost)"
+    ]
+  },
+
+  "resolution_plan": {
+    "phase1_wait": {
+      "action": "Trust southGate returns. Wait 5-15 minutes.",
+      "why": "NetworkManager will cycle. Routing conflict self-heals."
+    },
+    "phase2_flint2": {
+      "action": "When southGate recovers: SSH into Flint 2 via IPv6 from southGate",
+      "command": "ssh -6 root@fe80::7a76:89ff:fe96:e67b%wlp6s0",
+      "then": "Check WAN interface config: 'uci show network.wan', 'ifconfig eth0'",
+      "goal": "Enable WAN DHCP client so Flint 2 gets a .4.x address through JetStream"
+    },
+    "phase3_graftgate": {
+      "action": "Kevin enables Remote Login on Mac Mini via System Settings",
+      "then": "SSH in, set DHCP reservation, add to mesh"
+    },
+    "phase4_flint1_wds": {
+      "action": "SSH to Flint 1 at .9, reconfigure WDS client to connect to Router AP",
+      "then": "WiFi mesh between House 1 and House 2 ears"
+    },
+    "phase5_enmesh": {
+      "action": "All nodes on LAN with proper DHCP reservations",
+      "result": "Clean DAG: Router → MikroTik → {eastGate, northGate, sporeGate, JetStream → {southGate, blueGate, Flint 2}} + WiFi → {Flint 1, graftGate, IoT}"
+    }
+  }
+}
