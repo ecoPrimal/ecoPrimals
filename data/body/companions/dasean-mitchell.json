@@ -4,7 +4,7 @@
     "alias": "AVATARleo",
     "title": "The Lion-Hearted",
     "role": "companion",
-    "relationship": "Kevin's son — AND his best friend",
+    "relationship": "Kevin's brother — military brother, best friend",
     "property": "641 Samantha Ave (House 2 — South Pole)",
     "household": ["Heather Hannon (partner)", "Sahana (daughter, 9)", "Allanna (daughter, 7)"],
     "military": {
@@ -15,7 +15,7 @@
   },
 
   "family": {
-    "father": "Kevin Mok",
+    "brother": "Kevin Mok (military brother, NOT father)",
     "partner": "Heather Hannon",
     "daughters": [
       {
@@ -31,7 +31,7 @@
         "fog_rule": "MAXIMUM PROTECTION — zoom >= 18 to see, never in public data"
       }
     ],
-    "note": "A loving father. The girls are the deepest-protected nodes in the entire organism."
+    "note": "DaSean is a loving father to his daughters. Kevin is his BROTHER (military bond), NOT his dad. The girls are the deepest-protected nodes in the entire organism."
   },
 
   "taste_profile": {
@@ -121,8 +121,8 @@
   },
 
   "the_bushmasters": {
-    "note": "Kevin (father) and DaSean (son) — BOTH Bushmasters. Army infantry.",
+    "note": "Kevin and DaSean — BROTHERS. BOTH Bushmasters. Army infantry. Not father-son — military brothers, bonded by service.",
     "bushmaster": "The Bushmaster is the largest venomous snake in the Western Hemisphere. Lachesis muta. Silent, patient, lethal when provoked. Perfect infantry name.",
-    "bond": "Father and son. Best friends. Both warriors. Both protectors. Both lion-hearted."
+    "bond": "Brothers. Best friends. Both warriors. Both protectors. Both lion-hearted. Both Bushmasters."
   }
 }

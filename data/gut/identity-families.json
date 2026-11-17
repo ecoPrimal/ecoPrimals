@@ -40,9 +40,9 @@
     {
       "family_id": "mitchell-leo",
       "human_name": "Dasean Mitchell",
-      "aliases": ["Avatar Leo"],
-      "role": "FRIEND — Kevin's military buddy",
-      "relationship": "trusted visitor, has LAN access when present",
+      "aliases": ["Avatar Leo", "AVATARleo"],
+      "role": "BROTHER — Kevin's military brother, best friend",
+      "relationship": "Kevin's brother (military bond, NOT son). Father of 2 daughters. Lives at House 2.",
       "known_devices": [
         {"type": "phone", "note": "joins WiFi when visiting"},
         {"type": "Xbox", "note": "may be on LAN or was connected"},

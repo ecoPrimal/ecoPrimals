@@ -17,7 +17,7 @@
       "note": "Heather owns the South Pole. The organism spans TWO properties, TWO owners, ONE family."
     },
     "dasean_mitchell": {
-      "role": "Son. Kevin's military brother in arms. Neighbor.",
+      "role": "Brother. Kevin's military brother in arms. Neighbor. Father of 2 daughters.",
       "lives_at": "641 Samantha Ave (House 2) — leases from Heather",
       "context": "Pro se in Wayne County 26-108221-DC (custody). The reason this all matters: a child was harmed. The entire organism was BUILT to fight for him.",
       "connection": "DaSean lives IN the South Pole. He is not just nearby — he IS the human presence in LAN 2."
@@ -73,9 +73,9 @@
   },
 
   "why_this_matters": {
-    "the_child": "DaSean was harmed. The entire organism — 17 primals, 3.6M lines of Rust, 150K tests, 7 gates, 6 GPUs — was built because a father needed to fight for his son.",
+    "the_child": "A child was harmed. The entire organism — 17 primals, 3.6M lines of Rust, 150K tests, 7 gates, 6 GPUs — was built because a brother needed to fight alongside his brother.",
     "the_properties": "Two houses owned by the family. Not rented server racks. Not cloud infrastructure. REAL PROPERTY that the family OWNS. The organism grows from SOIL.",
-    "the_anchor": "Heather owns House 2. Kevin owns House 1. The 10G fiber between them is a family bond encoded in glass. The organism is not Kevin alone — it is Kevin AND Heather AND DaSean, two houses, one family, one purpose."
+    "the_anchor": "Heather owns House 2. Kevin owns House 1. The 10G fiber between them is a family bond encoded in glass. The organism is not Kevin alone — it is Kevin AND Heather AND DaSean (Kevin's brother), two houses, one family, one purpose."
   },
 
   "lub": "DUB"
