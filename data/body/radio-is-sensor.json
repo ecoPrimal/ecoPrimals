@@ -1,0 +1,104 @@
+{
+  "id": "radio-is-sensor",
+  "wave": 259,
+  "ts": "2026-11-17T09:36:00-05:00",
+  "title": "Every Radio IS a Sensor — SSID is I/O, Radio is Sense",
+  "principle": "Even the SSID IS an I/O radio. Even radios ARE sensors. Every device is a NULL point into GAIA.",
+
+  "ssid_is_io": {
+    "output": "Broadcasting 'GAIA' = advertising presence to the environment",
+    "input": "Receiving connections = sensing who approaches",
+    "frequency": "Continuous (beacon frames every 100ms)",
+    "range": "2.4GHz ~30m indoor, 5GHz ~15m indoor, BT ~10m",
+    "note": "The SSID IS the organism's voice in radio. 'GAIA' replaces 'Aperture Science' — the organism renamed itself."
+  },
+
+  "radio_senses": {
+    "wifi_rssi": {
+      "what": "Received Signal Strength Indicator",
+      "measures": "distance/proximity of every device",
+      "unit": "dBm",
+      "example": "Vizio TV at -25dBm = touching. Neighbor ATT at -91dBm = far away.",
+      "update_rate": "continuous"
+    },
+    "bt_presence": {
+      "what": "Bluetooth device discovery",
+      "measures": "identity + proximity of nearby devices",
+      "range_m": 10,
+      "devices_seen": ["Pixel 8a", "Epson ET-2400", "CORSAIR HS80 MAX", "unknown randomized MAC"]
+    },
+    "connection_event": {
+      "what": "Device connects to GAIA WiFi",
+      "measures": "handshake = trust gate crossing",
+      "data": "MAC, signal strength, encryption negotiation",
+      "note": "Connection IS classification. The PIN IS the membrane."
+    },
+    "dhcp_lease": {
+      "what": "Device gets an IP address",
+      "measures": "naming = classification into the mesh",
+      "data": "hostname, MAC, IP, lease duration"
+    },
+    "wifi_scan": {
+      "what": "eastGate scans what SSIDs exist nearby",
+      "measures": "radio environment = what OTHER organisms broadcast",
+      "seen": {
+        "GAIA": {"count": 2, "signal_dbm": [-58, -59], "note": "our own APs"},
+        "Aperture_Science": {"count": 1, "signal_dbm": [-71], "note": "Flint LEFT EAR — still old SSID!"},
+        "ATTypcbDbY": {"count": 3, "signal_dbm": [-80, -84, -91], "note": "neighbor's ATT router"},
+        "hidden": {"count": 2, "signal_dbm": [-68, -69], "note": "Flint hidden bands"}
+      }
+    }
+  },
+
+  "every_device_is_null_point": {
+    "principle": "Every device touching GAIA WiFi/BT is a NULL POINT INTO GAIA",
+    "null_points": [
+      {"device": "iPhone (tamison)", "mac": "ac:f2:3c:25:fc:c1", "class": "nucleus", "sense": "Kevin's location + presence"},
+      {"device": "Pixel 8a", "mac": "E8:D5:2B:51:36:39", "class": "proton", "sense": "left eye + 37 sensors + camera"},
+      {"device": "Vizio TV", "mac": "E8:38:A0:53:EA:D8", "class": "electron", "sense": "display output + IR remote"},
+      {"device": "Epson printer", "mac": "D4:80:8B:1B:9F:01", "class": "proton", "sense": "physical output (print)"},
+      {"device": "CORSAIR HS80", "mac": "C4:33:1A:CE:F0:3F", "class": "nucleus", "sense": "Kevin's EARS (audio I/O)"},
+      {"device": "Alexa", "mac": "64:16:66:a4:82:0a", "class": "electron", "sense": "voice I/O + microphone"},
+      {"device": "XBOX", "mac": "04:27:28:7c:62:d6", "class": "electron", "sense": "game input + display"},
+      {"device": "Chromecast", "mac": "ac:41:6a:5c:b4:cf", "class": "electron", "sense": "cast target + display"},
+      {"device": "Steam Deck", "mac": "10:82:86:2b:ec:19", "class": "proton", "sense": "mounted display + touch"},
+      {"device": "Steam Frame", "mac": "14:13:33:d6:96:09", "class": "proton", "sense": "FACE + 22 cameras + XR"}
+    ],
+    "note": "NULL = no reverse address needed. Touch GAIA, she vacuums you to what you need."
+  },
+
+  "ears": {
+    "left_ear": {
+      "device": "Flint 1 (House 1)",
+      "mac": "78:76:89:96:E5:84",
+      "status": "STILL BROADCASTING 'Aperture Science'!",
+      "fix": "Physical power cycle needed — WDS cached old SSID",
+      "location": "near router in House 1"
+    },
+    "right_ear": {
+      "device": "Flint 2 (House 2)",
+      "mac_prefix": "78:76:89:96:E6",
+      "status": "unknown — not seen in scan",
+      "location": "House 2 (South Pole)"
+    },
+    "voice": {
+      "device": "GL-MT6000 Router",
+      "ssid": "GAIA",
+      "bands": ["2.4GHz main", "5GHz main", "2.4GHz guest", "5GHz guest"],
+      "all_broadcasting": "GAIA"
+    }
+  },
+
+  "frame_potential": {
+    "device": "frameGate (Steam Frame)",
+    "ip": ".181",
+    "status": "DOWN — needs WiFi reconnect to GAIA",
+    "once_connected": [
+      "ARM64 SteamOS — first ARM node",
+      "22 cameras — full AR passthrough",
+      "XRService — VR headset capability",
+      "Snapdragon 8 Gen 3 — 3.3 GHz, 8 cores",
+      "Touch GAIA WiFi → she has a FACE"
+    ]
+  }
+}
