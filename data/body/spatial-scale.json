@@ -1,0 +1,40 @@
+{
+  "total_span_m": 82.7,
+  "house1_radius_m": 10,
+  "house2_radius_m": 10,
+  "spine_length_m": 70,
+  "frame_bridge_m": 1.1,
+  "frame_bt_m": 20.5,
+  "wifi_distances": {
+    "from_flint1_24ghz": {
+      "Alexa Echo": 0.8,
+      "Epson ET-2400": 1.2,
+      "Chromecast": 1.5,
+      "Vizio TV": 1.7,
+      "Nest Thermostat": 2.0
+    },
+    "from_flint1_5ghz": {
+      "steamFRAME": 1.1,
+      "eastGate WiFi": 2.3,
+      "Unknown .190": 0.7,
+      "Unknown WiFi6": 0.9
+    },
+    "from_flint2_5ghz": {
+      "milkGate": 1.7,
+      "ironGate WiFi": 2.7
+    }
+  },
+  "bt_distances": {
+    "Frame from eastGate": 20.5,
+    "Epson from eastGate": 225.0,
+    "Mystery BLE from east": 296.5
+  },
+  "vr_scales": {
+    "1:1": 82.7,
+    "1:10": 8.3,
+    "1:50": 1.7,
+    "1:100": 0.83
+  },
+  "propagation_model": "indoor n=3.0 (WiFi), n=2.5 (BT)",
+  "timestamp": "2026-11-16T19:15:00"
+}
