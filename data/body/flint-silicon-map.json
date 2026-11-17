@@ -1,0 +1,218 @@
+{
+  "timestamp": "2026-11-16T19:35:24-0500",
+  "soc": {
+    "model": "MediaTek MT7986a (Filogic 830)",
+    "compatible": [
+      "glinet,gl-mt6000",
+      "mediatek,mt7986a"
+    ],
+    "cpu": {
+      "arch": "ARMv8 (AArch64)",
+      "core": "Cortex-A53",
+      "cores": 4,
+      "implementer": "0x41 (ARM)",
+      "part": "0xd03 (Cortex-A53)",
+      "features": [
+        "fp",
+        "asimd",
+        "evtstrm",
+        "aes",
+        "pmull",
+        "sha1",
+        "sha2",
+        "crc32",
+        "cpuid"
+      ],
+      "crypto_extensions": true
+    },
+    "memory": "1GB DDR4",
+    "storage": "eMMC (7.2GB overlay, 57MB rootfs)"
+  },
+  "peripherals": {
+    "10000000.consys": {
+      "name": "Connectivity Subsystem",
+      "role": "WiFi + BT combo controller",
+      "kernel_threads": [
+        "conninfra_cored",
+        "conninfra_cb",
+        "sub_bt_thrd",
+        "sub_conninfra_t"
+      ],
+      "note": "MediaTek conninfra framework \u2014 manages WiFi and BT radios"
+    },
+    "1020f000.trng": {
+      "name": "True Random Number Generator",
+      "role": "Hardware entropy source",
+      "address": "0x1020f000-0x1020ffff",
+      "note": "SoC-level TRNG \u2014 feeds /dev/random for crypto"
+    },
+    "10320000.crypto": {
+      "name": "Hardware Crypto Engine",
+      "role": "AES/SHA/DES acceleration",
+      "address": "0x10320000",
+      "note": "Offloads IPsec, WPA, TLS crypto from CPU"
+    },
+    "11002000.serial": {
+      "name": "UART Controller",
+      "role": "Serial console + BT UART",
+      "ports": [
+        "ttyS0 (console)",
+        "ttyS1 (BT candidate)"
+      ]
+    },
+    "1100c800.thermal": {
+      "name": "Thermal Sensor",
+      "role": "SoC temperature monitoring",
+      "address": "0x1100c800-0x1100cfff"
+    },
+    "11200000.xhci": {
+      "name": "USB 3.0 xHCI Controller",
+      "role": "USB host controller",
+      "note": "2x USB ports (xHCI + EHCI + OHCI)"
+    },
+    "11210000.audio-controller": {
+      "name": "Audio Controller",
+      "role": "I2S/PCM audio interface",
+      "note": "Not exposed on GL-MT6000 but silicon present"
+    },
+    "11230000.mmc": {
+      "name": "eMMC Controller",
+      "role": "Internal flash storage"
+    },
+    "11d00000.efuse": {
+      "name": "eFuse / NVMEM",
+      "role": "Hardware identity + calibration",
+      "note": "One-time-programmable silicon identity fuses"
+    },
+    "15100000.ethernet": {
+      "name": "Ethernet MAC",
+      "role": "2.5GbE switching engine",
+      "ports": {
+        "eth0": "LAN switch (5 ports: lan1-lan5)",
+        "eth1": "WAN port (2.5GbE)"
+      }
+    },
+    "15100000.hnat": {
+      "name": "Hardware NAT Engine",
+      "role": "Wire-speed NAT offload",
+      "note": "Offloads IPv4/IPv6 NAT from CPU"
+    },
+    "15104800.wdma": {
+      "name": "Wireless DMA Engine",
+      "role": "DMA for WiFi data path"
+    },
+    "15010000.wed": {
+      "name": "Wireless Ethernet Dispatch (WED)",
+      "role": "WiFi-to-Ethernet fast path",
+      "instances": [
+        "wed",
+        "wed2"
+      ],
+      "note": "Zero-copy WiFi offload \u2014 frames bypass CPU"
+    },
+    "wocpu": {
+      "name": "Wireless Offload CPUs",
+      "instances": [
+        "wocpu0_ilm",
+        "wocpu1_ilm",
+        "wocpu_dlm"
+      ],
+      "role": "Dedicated microprocessors for WiFi packet processing",
+      "note": "Two separate CPUs for WiFi offload \u2014 the SoC has 6+ cores total"
+    },
+    "18000000.wbsys": {
+      "name": "Wireless Baseband System",
+      "role": "RF baseband processing + PCIe WiFi",
+      "address": "0x18000000",
+      "note": "Contains the MT7976 dual-band radio complex"
+    },
+    "1001c000.watchdog": {
+      "name": "Watchdog Timer",
+      "role": "System reset on hang"
+    },
+    "1001f000.pinctrl": {
+      "name": "Pin Controller",
+      "role": "GPIO/pin muxing"
+    },
+    "42ff0000.ramoops": {
+      "name": "RAM OOPS Logger",
+      "role": "Crash dump to RAM"
+    },
+    "pcie-phy@11c00000": {
+      "name": "PCIe PHY",
+      "role": "PCIe lane physical layer"
+    },
+    "usb-phy@11e10000": {
+      "name": "USB PHY",
+      "role": "USB physical transceivers (3 PHYs)"
+    }
+  },
+  "radios": {
+    "2.4GHz": {
+      "interface": "ra0/ra1",
+      "device": "mt798611",
+      "mode": "802.11bgnax (WiFi 6)",
+      "note": "Aperture Science + GL-MT6000-2ae"
+    },
+    "5GHz": {
+      "interface": "rax0/rax1",
+      "device": "mt798612",
+      "mode": "802.11anacax (WiFi 6, HE160)",
+      "note": "GL-MT6000-2ae-5G + Aperture Science 5G"
+    }
+  },
+  "bluetooth": {
+    "stack_loaded": true,
+    "modules": [
+      "btusb",
+      "btintel",
+      "bnep",
+      "kmod-bluetooth"
+    ],
+    "bluez_version": "5.64",
+    "daemon_running": true,
+    "hci_device": null,
+    "status": "STACK READY \u2014 adapter not registered",
+    "note": "BT silicon present in MT7986 conninfra. Stack loaded. BT thread running. But HCI interface not bound. Needs btmtkuart or conninfra BT activation."
+  },
+  "gpio": {
+    "usb_power": "GPIO-controlled USB power",
+    "chip": "gpiochip411"
+  },
+  "leds": {
+    "blue:run": "Activity LED",
+    "white:system": "System status LED"
+  },
+  "network_interfaces": 15,
+  "chirality": {
+    "flint1": {
+      "role": "Router (L-handed lighthouse)",
+      "ip": "192.168.4.1",
+      "thermal_mC": 53502,
+      "bt_stack": true,
+      "wifi_macs": {
+        "ra0": "be:a2:c1:e8:df:01",
+        "rax0": "22:2f:9f:44:79:13"
+      },
+      "eth_macs": {
+        "eth0": "ce:2e:80:11:53:d1",
+        "eth1": "94:83:c4:e0:63:58"
+      }
+    },
+    "flint2": {
+      "role": "Bridge (R-handed lighthouse)",
+      "ip": "192.168.4.9",
+      "thermal_mC": 51378,
+      "bt_stack": false,
+      "wifi_macs": {
+        "ra0": "92:35:c7:45:dd:73",
+        "rax0": "b2:c4:2e:7e:c7:9d"
+      }
+    },
+    "identical_silicon": true,
+    "identical_peripherals": true,
+    "different_frequencies": true,
+    "different_efuse": true,
+    "note": "Same MT7986a die, different eFuse identity, different radio calibration = CHIRAL PAIR"
+  }
+}

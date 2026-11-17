@@ -1,0 +1,296 @@
+{
+  "timestamp": "1794875827",
+  "hostname": "GL-MT6000",
+  "model": "GL.iNet GL-MT6000",
+  "compatible": [
+    "glinet,gl-mt6000",
+    "mediatek,mt7986a"
+  ],
+  "cpu": {
+    "model_name": "ARMv8 Processor rev 4 (v8l)",
+    "cores": 4,
+    "features": [
+      "fp",
+      "asimd",
+      "evtstrm",
+      "aes",
+      "pmull",
+      "sha1",
+      "sha2",
+      "crc32",
+      "cpuid"
+    ],
+    "implementer": "0x41",
+    "part": "0xd03"
+  },
+  "thermal_mc": 54257,
+  "memory_kb": 1013116,
+  "uptime_secs": 1383290.23,
+  "peripherals": [
+    {
+      "address": "10000000",
+      "name": "10000000.consys",
+      "driver_bound": true
+    },
+    {
+      "address": "10003000",
+      "name": "10003000.wed_pcie",
+      "driver_bound": false
+    },
+    {
+      "address": "1001c000",
+      "name": "1001c000.watchdog",
+      "driver_bound": true
+    },
+    {
+      "address": "1001f000",
+      "name": "1001f000.pinctrl",
+      "driver_bound": true
+    },
+    {
+      "address": "1020f000",
+      "name": "1020f000.trng",
+      "driver_bound": true
+    },
+    {
+      "address": "10320000",
+      "name": "10320000.crypto",
+      "driver_bound": false
+    },
+    {
+      "address": "11002000",
+      "name": "11002000.serial",
+      "driver_bound": true
+    },
+    {
+      "address": "1100c800",
+      "name": "1100c800.thermal",
+      "driver_bound": true
+    },
+    {
+      "address": "11200000",
+      "name": "11200000.xhci",
+      "driver_bound": true
+    },
+    {
+      "address": "11210000",
+      "name": "11210000.audio-controller",
+      "driver_bound": false
+    },
+    {
+      "address": "11230000",
+      "name": "11230000.mmc",
+      "driver_bound": true
+    },
+    {
+      "address": "11d00000",
+      "name": "11d00000.efuse",
+      "driver_bound": true
+    },
+    {
+      "address": "15010000",
+      "name": "15010000.wed2",
+      "driver_bound": false
+    },
+    {
+      "address": "15010000",
+      "name": "15010000.wed",
+      "driver_bound": true
+    },
+    {
+      "address": "15100000",
+      "name": "15100000.hnat",
+      "driver_bound": true
+    },
+    {
+      "address": "15100000",
+      "name": "15100000.ethernet",
+      "driver_bound": true
+    },
+    {
+      "address": "15104800",
+      "name": "15104800.wdma",
+      "driver_bound": false
+    },
+    {
+      "address": "15194000",
+      "name": "15194000.wocpu_boot",
+      "driver_bound": false
+    },
+    {
+      "address": "151a5000",
+      "name": "151a5000.ap2woccif",
+      "driver_bound": false
+    },
+    {
+      "address": "151e0000",
+      "name": "151e0000.wocpu0_ilm",
+      "driver_bound": false
+    },
+    {
+      "address": "151e8000",
+      "name": "151e8000.wocpu_dlm",
+      "driver_bound": false
+    },
+    {
+      "address": "151f0000",
+      "name": "151f0000.wocpu1_ilm",
+      "driver_bound": false
+    },
+    {
+      "address": "18000000",
+      "name": "18000000.wbsys",
+      "driver_bound": false
+    },
+    {
+      "address": "42ff0000",
+      "name": "42ff0000.ramoops",
+      "driver_bound": true
+    },
+    {
+      "address": "Fixed MDIO bus",
+      "name": "Fixed MDIO bus.0",
+      "driver_bound": false
+    }
+  ],
+  "radios": [
+    {
+      "interface": "apcli0",
+      "mac": "92:83:c4:e0:63:5b",
+      "device": "client",
+      "state": "down"
+    },
+    {
+      "interface": "apclix0",
+      "mac": "9e:83:c4:e0:63:5b",
+      "device": "client",
+      "state": "down"
+    },
+    {
+      "interface": "ra0",
+      "mac": "be:a2:c1:e8:df:01",
+      "device": "mt798611 (2.4GHz)",
+      "state": "up"
+    },
+    {
+      "interface": "ra1",
+      "mac": "82:c9:70:cf:f6:7c",
+      "device": "mt798611 (2.4GHz)",
+      "state": "unknown"
+    },
+    {
+      "interface": "rax0",
+      "mac": "22:2f:9f:44:79:13",
+      "device": "mt798612 (5GHz)",
+      "state": "unknown"
+    },
+    {
+      "interface": "rax1",
+      "mac": "ce:ef:ef:30:b5:f3",
+      "device": "mt798612 (5GHz)",
+      "state": "unknown"
+    }
+  ],
+  "bluetooth": {
+    "modules_loaded": [
+      "btusb",
+      "btintel",
+      "bnep"
+    ],
+    "daemon_running": true,
+    "hci_devices": [],
+    "bluez_installed": true
+  },
+  "efuse_hex": "01000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000230000000000000000840000000000002f00000000000000a0b3ffcc5b037b2a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "leds": [
+    {
+      "name": "blue:run",
+      "brightness": 0
+    },
+    {
+      "name": "white:system",
+      "brightness": 1
+    }
+  ],
+  "gpio": [
+    "usb_power",
+    "gpiochip411"
+  ],
+  "network_interfaces": [
+    {
+      "name": "apcli0",
+      "mac": "92:83:c4:e0:63:5b",
+      "state": "down"
+    },
+    {
+      "name": "apclix0",
+      "mac": "9e:83:c4:e0:63:5b",
+      "state": "down"
+    },
+    {
+      "name": "br-lan",
+      "mac": "94:83:c4:e0:63:5a",
+      "state": "up"
+    },
+    {
+      "name": "eth0",
+      "mac": "ce:2e:80:11:53:d1",
+      "state": "up"
+    },
+    {
+      "name": "eth1",
+      "mac": "94:83:c4:e0:63:58",
+      "state": "up"
+    },
+    {
+      "name": "lan1",
+      "mac": "94:83:c4:e0:63:5a",
+      "state": "up"
+    },
+    {
+      "name": "lan2",
+      "mac": "94:83:c4:e0:63:5a",
+      "state": "lowerlayerdown"
+    },
+    {
+      "name": "lan3",
+      "mac": "94:83:c4:e0:63:5a",
+      "state": "lowerlayerdown"
+    },
+    {
+      "name": "lan4",
+      "mac": "94:83:c4:e0:63:5a",
+      "state": "lowerlayerdown"
+    },
+    {
+      "name": "lan5",
+      "mac": "94:83:c4:e0:63:5a",
+      "state": "up"
+    },
+    {
+      "name": "lo",
+      "mac": "00:00:00:00:00:00",
+      "state": "unknown"
+    },
+    {
+      "name": "ra0",
+      "mac": "be:a2:c1:e8:df:01",
+      "state": "up"
+    },
+    {
+      "name": "ra1",
+      "mac": "82:c9:70:cf:f6:7c",
+      "state": "unknown"
+    },
+    {
+      "name": "rax0",
+      "mac": "22:2f:9f:44:79:13",
+      "state": "unknown"
+    },
+    {
+      "name": "rax1",
+      "mac": "ce:ef:ef:30:b5:f3",
+      "state": "unknown"
+    }
+  ]
+}
