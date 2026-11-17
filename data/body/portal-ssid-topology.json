@@ -1,0 +1,91 @@
+{
+  "id": "portal-ssid-topology",
+  "wave": 259,
+  "ts": "2026-11-17T09:49:00-05:00",
+  "title": "PORTAL SSID TOPOLOGY — White + Black + GAIA = Three Doors, One Organism",
+  "principle": "Aperture Science and Black Mesa names are BACK — they are the white and black image. Old code, same password norm. Clients access INTO the modem transport face = GAIA mesh WiFi.",
+
+  "ssids": {
+    "aperture_science": {
+      "band": "2.4GHz",
+      "interface": "ra0 (wifi2g)",
+      "color": "WHITE",
+      "imagery": "Portal — clean rooms, test chambers, science",
+      "role": "IoT DOOR — penetrates walls, long range, old code devices, sensors",
+      "key": "579163",
+      "encryption": "WPA2",
+      "reaches": "thermostats, printers, sensors, cameras, old IoT, Alexa",
+      "metaphor": "The WHITE portal — you see through it, it lets light in"
+    },
+    "black_mesa": {
+      "band": "5GHz",
+      "interface": "rax0 (wifi5g)",
+      "color": "BLACK",
+      "imagery": "Half-Life — underground research, dense compute, resonance cascade",
+      "role": "STREAMING DOOR — fast data, low latency, video, games",
+      "key": "579163",
+      "encryption": "WPA2",
+      "reaches": "laptops, phones, TVs, Deck, Frame, compute gates",
+      "metaphor": "The BLACK portal — heavy matter passes through, dense and fast"
+    },
+    "gaia_guest_2g": {
+      "band": "2.4GHz guest",
+      "interface": "ra1 (guest2g)",
+      "color": "GREEN",
+      "imagery": "The living organism itself — Gaia, Earth, life",
+      "role": "GUEST PORE — public face, new connections, mesh door",
+      "key": "579163",
+      "encryption": "WPA2",
+      "reaches": "Kevin's iPhone, guests, new devices, untrusted",
+      "metaphor": "Touch GAIA and she pulls you into what you need"
+    },
+    "gaia_guest_5g": {
+      "band": "5GHz guest",
+      "interface": "rax1 (guest5g)",
+      "color": "GREEN",
+      "imagery": "Fast guest pore",
+      "role": "FAST GUEST PORE — high bandwidth guest access",
+      "key": "579163",
+      "encryption": "WPA2",
+      "reaches": "same as guest 2g but faster",
+      "metaphor": "The fast green door"
+    }
+  },
+
+  "three_doors_one_organism": {
+    "white_door": "Aperture Science (2.4GHz) — IoT, sensors, old code, penetrating",
+    "black_door": "Black Mesa (5GHz) — streaming, compute, dense, fast",
+    "green_door": "GAIA (guest 2.4+5GHz) — public face, mesh, new touch",
+    "same_password": "ALL use 579163 — ONE trust membrane, THREE access modes",
+    "same_network": "ALL bridge to br-lan or br-guest — ONE organism underneath"
+  },
+
+  "portal_physics": {
+    "white_portal": {
+      "frequency": "2.4 GHz",
+      "wavelength": "~12.5 cm",
+      "penetration": "HIGH — goes through walls, floors, furniture",
+      "bandwidth": "moderate",
+      "analogy": "Light passes through — sensors SEE through it"
+    },
+    "black_portal": {
+      "frequency": "5 GHz",
+      "wavelength": "~6 cm",
+      "penetration": "LOW — absorbed by walls, line-of-sight preferred",
+      "bandwidth": "HIGH",
+      "analogy": "Dense matter — heavy data flows through, needs clear path"
+    },
+    "green_portal": {
+      "frequency": "both 2.4 + 5 GHz",
+      "note": "Guest bands on BOTH frequencies — maximum reach",
+      "analogy": "Life finds a way — reaches whatever frequency works"
+    }
+  },
+
+  "flint_ears": {
+    "note": "Flints WDS-repeat ALL SSIDs — so each ear broadcasts all three doors",
+    "left_ear_flint1": "House 1 — repeats Aperture Science + Black Mesa + GAIA",
+    "right_ear_flint2": "House 2 — repeats all via 10G spine",
+    "status": "Left Ear still cached old config — needs power cycle to pick up new SSIDs"
+  }
+}
