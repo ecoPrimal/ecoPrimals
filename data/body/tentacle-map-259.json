@@ -1,0 +1,100 @@
+{
+  "id": "tentacle-map-259",
+  "wave": 259,
+  "ts": "2026-11-17T09:39:00-05:00",
+  "title": "GAIA Tentacle Map — 28+ Live Services, 40+ Ports",
+  "principle": "The Flints are real power horses. We are BARE level. These are GAIA tentacles that need to get live before the FRAME and the BOOTSTRAP BRAIN.",
+
+  "tentacles": {
+    "system": {
+      "count": 12,
+      "services": {
+        "gaia-gate": {"port": 8443, "role": "THYMUS — 41 HTTP endpoints, immune system"},
+        "dromedary": {"port": "80/443", "role": "REVERSE PROXY — TLS, sovereign, Pure Rust"},
+        "hickory-dns": {"port": 53, "role": "NAMESERVER — sovereign DNS, Pure Rust"},
+        "neutrino-smtp": {"port": 25, "role": "MAIL RECEIVER — sovereign email"},
+        "ollama": {"port": 11436, "role": "38 AI MODELS — local cortex"},
+        "forgejo": {"port": 3000, "role": "GIT FORGE — inner membrane"},
+        "tor": {"port": 9050, "role": ".ONION PORE — anonymous edge"},
+        "gaia-drip": {"role": "riboCypher printer, gut digester, RSS publisher"},
+        "gaia-feed": {"role": "beacon + gallery + identity registration"},
+        "gaia-steam": {"port": 1242, "role": "ArchiSteamFarm — ALWAYS ONLINE"},
+        "membrane-neural-api": {"role": "biomeOS graph orchestrator + capability router"},
+        "membrane-beardog": {"role": "sovereign cryptography"}
+      }
+    },
+    "user": {
+      "count": 12,
+      "services": {
+        "gaia-web": {"port": 8080, "role": "DATA RADIATION — serves all JSON feeds"},
+        "gaia-sky": {"role": "sky server — dissolved tissue + NFT + Mendeleev"},
+        "gaia-pi-data": {"port": 5926, "role": "π data server"},
+        "gaia-pi-ports": {"role": "port crusher — all ports to π"},
+        "gaia-fleet": {"port": 11435, "role": "42 model proxy, 4 GPUs, 1 port"},
+        "gaia-inference": {"port": 11434, "role": "water lock protocol"},
+        "gaia-ear": {"role": "Brio 100 cochlea — 30s pulse"},
+        "biomeos-beacon": {"role": "Dark Forest gated API"},
+        "epson-daemon": {"role": "scanner mouth + printer voice"},
+        "steam-mesh": {"port": 8085, "role": "game transport lubricant"},
+        "nucleus-beardog": {"role": "user session crypto"},
+        "nucleus-loamspine": {"role": "user session spine"}
+      }
+    },
+    "native_primals": {
+      "count": 5,
+      "live": {
+        "nestgate": {"port": 8092},
+        "swarmvine": {"port": 7800},
+        "coralreef": {"port": 35735},
+        "toadstool": {"port": 38407},
+        "sweetgrass": {"ports": [39143, 39923]}
+      }
+    },
+    "mesh_services": {
+      "rustdesk": {"ports": [21115, 21116, 21117, 21118, 21119], "role": "remote display mesh"},
+      "fluidsynth": {"port": 9800, "role": "MIDI synthesizer — GAIA has MUSIC!"},
+      "iperf3": {"port": 5201, "role": "bandwidth measurement"}
+    }
+  },
+
+  "totals": {
+    "live_tentacles": 28,
+    "listening_ports": 40,
+    "python_services": 12,
+    "rust_services": 8,
+    "native_primals": 5
+  },
+
+  "inkfish": {
+    "status": "COMPILED for aarch64 — ready for Frame deployment",
+    "binary": "gardens/inkFish/target/aarch64-unknown-linux-gnu/release/inkfish",
+    "role": "Steam sovereignty layer — HOLDER/PLAYER architecture",
+    "targets": ["frameGate (ARM64 SteamOS)", "deckGate (x86 SteamOS)"],
+    "manages": ["identity", "hardware", "streaming", "spatial", "metrics", "library"]
+  },
+
+  "before_frame_bootstrap": {
+    "note": "These tentacles need to be live BEFORE Frame can bootstrap as GAIA's face",
+    "required": [
+      "✅ GAIA WiFi broadcasting (done — all bands)",
+      "✅ dromedary + TLS (done — serving all subdomains)",
+      "✅ gaia-gate (done — thymus alive after crash fix)",
+      "✅ steam-mesh (done — :8085 game transport)",
+      "✅ RustDesk hbbs/hbbr (done — display mesh)",
+      "✅ inkFish ARM64 binary (done — compiled)",
+      "⬜ Frame connects to GAIA WiFi (needs physical reconnect)",
+      "⬜ Frame SSH access (steamos@.181, password framegate)",
+      "⬜ inkFish deployed to Frame (scp binary + config)",
+      "⬜ Steam login on Frame (needs Steam Guard from Pixel)"
+    ]
+  },
+
+  "radios_as_tentacles": {
+    "wifi_2g_main": "tentacle: broadcast + receive, 7+ clients",
+    "wifi_5g_main": "tentacle: broadcast + receive, low-latency",
+    "wifi_2g_guest": "tentacle: guest membrane pore",
+    "wifi_5g_guest": "tentacle: guest membrane pore", 
+    "bluetooth_pan": "tentacle: proximity mesh + tethering",
+    "note": "Every radio = a tentacle. 5 radio tentacles + 28 service tentacles = 33 total."
+  }
+}
