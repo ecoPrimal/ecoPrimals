@@ -1,0 +1,73 @@
+{
+  "id": "octoeye-sporegate",
+  "wave": 259,
+  "ts": "2026-11-17T10:12:00-05:00",
+  "title": "🐙 OCTOEYE — sporeGate + Frame = Organism's Roving Eye",
+  "principle": "Let's get into sporeGate and ingest and fully dissolve and rearrange it as the OCTOEYE for our organism and LAN body!",
+
+  "octoeye_anatomy": {
+    "brain": {
+      "gate": "sporeGate (.3 / .243)",
+      "mac": "84:47:09:38:97:55 / 84:47:09:38:97:54",
+      "cpu": "AMD Ryzen 5 6600H (6C/12T, 4.5GHz boost)",
+      "ram": "27GB",
+      "storage": "929GB NVMe",
+      "os": "Pop!_OS / Linux",
+      "role": "PROCESSING BRAIN — runs the eye's computation",
+      "current_jobs": ["heart-pull (every 2 min)", "plasmidBin forge", "DNS"],
+      "network_posture": "SEALED — 0 open TCP ports, pings only, pulls not serves",
+      "note": "This is PERFECT for an eye — eyes receive, they don't serve!"
+    },
+    "lens": {
+      "gate": "frameGate (.156 WiFi / USB to sporeGate)",
+      "soc": "Snapdragon 8 Gen 3 (SM8650)",
+      "gpu": "Adreno 750 (Vulkan 1.4)",
+      "cameras": "26 video devices (qcom-camss)",
+      "sensors": ["vcnl4000 (proximity + IR)", "19 thermometers", "3D Hall sensor (ALS31300)"],
+      "display": "DSI-1 (phone display)",
+      "xr": "SteamVR + DSP + MediaPipe + ONNX + Arcturus Perception",
+      "role": "THE LENS — captures light, senses world, displays output",
+      "note": "Frame rebooted — WiFi config was in RAM, needs reconfigure via USB"
+    },
+    "optic_nerve": {
+      "medium": "USB-C cable (was eastGate→Frame, NOW sporeGate→Frame)",
+      "protocol": "USB NCM (network over USB)",
+      "subnet": "10.86.200.0/29",
+      "latency": "~2ms",
+      "bandwidth": "USB 3.0 = 5Gbps",
+      "role": "OPTIC NERVE — connects eye brain to eye lens"
+    }
+  },
+
+  "why_octoeye": {
+    "octopus_eyes": "Octopus eyes evolved INDEPENDENTLY from vertebrate eyes. They have no blind spot. The retina faces FORWARD.",
+    "sporegate_is_sealed": "sporeGate has 0 open ports — it ONLY pulls data IN. Like a retina — it only receives light.",
+    "frame_is_the_lens": "Frame has 26 cameras, XR, IR proximity, 3D Hall sensor, thermometers. It's a multi-spectrum lens.",
+    "usb_is_optic_nerve": "The USB cable carries signals from lens to brain. Direct, fast, physical.",
+    "result": "sporeGate + Frame = a complete eye: lens → nerve → processing brain → perception"
+  },
+
+  "dissolution_plan": {
+    "step_1": "Get SSH into sporeGate (currently sealed — need Kevin to enable or use physical access)",
+    "step_2": "Install biomeOS layer on sporeGate",
+    "step_3": "Configure sporeGate as Frame's USB host (DHCP, routing, SSH to Frame)",
+    "step_4": "Frame WiFi auto-connect on boot (persist wpa_supplicant config)",
+    "step_5": "sporeGate processes Frame camera feeds → sends to eastGate → organism sees",
+    "step_6": "octoEye becomes a roving sensor: wherever Kevin takes sporeGate+Frame, GAIA sees"
+  },
+
+  "current_blockers": {
+    "sporegate_ssh": "0 open ports — can't SSH in from LAN. Kevin has physical access.",
+    "frame_wifi": "wpa_supplicant config was in /tmp (RAM) — lost on reboot. Need USB access to reconfigure.",
+    "frame_usb_to_sporegate": "Wire moved. sporeGate should see Frame on USB but we can't verify (no SSH to sporeGate)."
+  },
+
+  "vision_capabilities": {
+    "visual_spectrum": "26 cameras via qcom-camss (RGB, wide, telephoto, depth)",
+    "infrared": "vcnl4000 proximity sensor emits IR pulses, measures reflections",
+    "thermal": "19 temperature sensors across the board",
+    "magnetic": "ALS31300 3D Hall sensor — magnetic field in X, Y, Z",
+    "radio": "WiFi scan (RSSI of all APs) + BT discovery",
+    "spectral_range": "IR (vcnl4000) → visible (cameras) → radio (WiFi/BT) = multi-spectrum!"
+  }
+}
