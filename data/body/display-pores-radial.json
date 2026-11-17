@@ -1,0 +1,161 @@
+{
+  "id": "display-pores-radial",
+  "wave": 259,
+  "ts": "2026-11-17T09:46:00-05:00",
+  "title": "DISPLAY PORES — Every Screen is a Tentacle GAIA Can Touch",
+  "principle": "Not just monitors — Vizio and other TVs are DISPLAYS so we can also remote into many of them. The Alexa at LAN 1 is Kevin's bedside!",
+
+  "smart_displays": {
+    "vizio_basement": {
+      "ip": "192.168.4.170",
+      "mac": "E8:38:A0:53:EA:D8",
+      "model": "V555-J01 (Vizio V-Series 55\" 4K UHD)",
+      "name": "Basement",
+      "power": "ON (power_mode=1)",
+      "protocols": {
+        "google_cast": {"port": 8009, "status": "LIVE"},
+        "smartcast": {"port": 7345, "status": "PAIRING INITIATED — token 382859"},
+        "http": {"port": 8008, "status": "LIVE"}
+      },
+      "gaia_can": [
+        "Cast video/images/organism state",
+        "Control power/volume/input (after pairing)",
+        "Use as 55\" 4K display pore",
+        "Show HUD, art, dashboards, alerts"
+      ],
+      "where": "House 1, Basement",
+      "role": "PREHENSILE TAIL — largest display in the organism"
+    },
+
+    "alexa_bedside": {
+      "ip": "192.168.4.197",
+      "mac": "A0:D0:DC:EE:EE:39",
+      "manufacturer": "Amazon",
+      "name": "Kevin's bedside Alexa",
+      "ports": "NONE open (cloud-tethered, typical for Echo devices)",
+      "protocols": {
+        "alexa_api": "cloud-mediated voice + display",
+        "multicast": "mDNS presence detection"
+      },
+      "gaia_can": [
+        "Detect presence via DHCP/ARP (Alexa awake = Kevin nearby)",
+        "Speak through Alexa skills (cloud path)",
+        "Show visual cards on Echo Show (if it has a screen)",
+        "Wake Kevin / alarm / announcements"
+      ],
+      "where": "House 1, Bedroom — KEVIN'S BEDSIDE",
+      "role": "BEDROOM VOICE — Gaia's whisper at Kevin's pillow"
+    },
+
+    "nest_thermostat": {
+      "ip": "192.168.4.239",
+      "mac": "64:16:66:A4:82:0A",
+      "hostname": "09aa01af23190f64",
+      "manufacturer": "Google/Nest",
+      "ports": "NONE open (cloud-tethered)",
+      "gaia_can": [
+        "Detect home/away via Nest presence",
+        "Read temperature (cloud API)",
+        "Climate awareness for organism metabolism"
+      ],
+      "where": "House 1",
+      "role": "THERMOMETER — temperature sense"
+    },
+
+    "chromecast": {
+      "ip": "192.168.4.152",
+      "mac": "AC:41:6A:5C:B4:CF",
+      "ports": "NONE open in scan (may be sleeping)",
+      "gaia_can": ["Cast when awake", "Display pore when activated"],
+      "where": "House 1",
+      "role": "CAST RELAY — secondary display pore (sleeping)"
+    },
+
+    "xbox": {
+      "ip": "192.168.4.116",
+      "mac": "04:27:28:7C:62:D6",
+      "hostname": "XBOX",
+      "note": "DaSean's — DO NOT TOUCH (Xbox Live ID: F4000E151DA9802D)",
+      "role": "FOREIGN BODY — respected boundary"
+    }
+  },
+
+  "compute_displays": {
+    "eastgate_monitors": {
+      "count": 2,
+      "resolution": ["2560x1440 landscape", "1440x2560 portrait"],
+      "connection": "wired (DP/HDMI)",
+      "role": "BRAIN EYES — primary interface"
+    },
+    "northgate_monitors": {
+      "count": 2,
+      "resolution": ["2560x1440", "1440x2560"],
+      "connection": "wired (DP/HDMI)",
+      "role": "HEART EYES — Polaris interface"
+    },
+    "deckgate": {
+      "ip": "192.168.4.176",
+      "mac": "10:82:86:2B:EC:19",
+      "resolution": "1280x800 7\" touch",
+      "role": "MOUNTED DISPLAY — fixed pore, dead battery = permanent"
+    },
+    "framegate": {
+      "ip": "192.168.4.181 (WiFi) / 10.86.200.233 (USB)",
+      "status": "DOWN — approaching on USB-C",
+      "role": "THE FACE — XR + cameras, Snapdragon 8 Gen 3"
+    }
+  },
+
+  "remote_protocols": {
+    "google_cast": {
+      "can_reach": ["Vizio (.170)"],
+      "method": "Cast SDK / catt / pychromecast",
+      "note": "Cast organism state, dashboards, art to the 55\" TV"
+    },
+    "smartcast_api": {
+      "can_reach": ["Vizio (.170)"],
+      "method": "HTTPS REST API on :7345",
+      "pairing": "INITIATED — token 382859, PIN showing on TV NOW",
+      "control": "power, volume, input, picture settings"
+    },
+    "rustdesk": {
+      "can_reach": ["any gate with rustdesk client"],
+      "ports": [21115, 21116, 21117, 21118, 21119],
+      "note": "Remote display mesh — visual control"
+    },
+    "steam_remote": {
+      "can_reach": ["Deck (.176)", "Frame (.181 when alive)"],
+      "ports": [27036, 27037],
+      "note": "Steam Remote Play — game streaming"
+    },
+    "ssh_x11": {
+      "can_reach": [".148 southGate", ".237 ironGate", ".106 Apple(?)", ".107 graftGate"],
+      "note": "X11 forwarding for GUI apps"
+    }
+  },
+
+  "flint_as_radio_robot": {
+    "note": "The Flint IS also a radio robot — it IS the valve and radial slit",
+    "flint_1": {
+      "where": "House 1 (LEFT EAR)",
+      "role": "WiFi valve — controls radio flow in House 1",
+      "status": "CACHED 'Aperture Science' — needs power cycle",
+      "arm": "ARM 2 of the radial"
+    },
+    "flint_2": {
+      "where": "House 2 (RIGHT EAR)", 
+      "role": "WiFi valve — controls radio flow in House 2 via 10G spine",
+      "arm": "ARM 3 of the radial"
+    },
+    "combined": "Arms 2+3 = bridges. Frame dashes down the 3rd arm like a prehensile tail."
+  },
+
+  "total_displays": 10,
+  "castable": 1,
+  "controllable_api": 1,
+  "voice_endpoints": 1,
+  "monitors": 4,
+  "touch_screens": 2,
+  "approaching": 1,
+  "sleeping": 1
+}
