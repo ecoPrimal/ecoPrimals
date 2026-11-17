@@ -1,0 +1,118 @@
+<!doctype html><html lang=en><head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+<title>🐙 GAIA</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden;background:#0a0e1a;color:#fff;font-family:system-ui,-apple-system,sans-serif}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+
+.pulse{animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:0.85}}
+
+.octopus{font-size:min(30vw,200px);line-height:1;margin-bottom:1rem;filter:drop-shadow(0 0 40px rgba(102,192,244,0.5))}
+h1{font-size:min(12vw,80px);color:#66c0f4;text-shadow:0 0 30px rgba(102,192,244,0.4);margin-bottom:0.5rem;letter-spacing:-0.03em}
+.sub{font-size:min(4vw,24px);color:#888;margin-bottom:2rem}
+
+.btn-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;padding:0 2rem;max-width:700px;width:100%}
+.btn{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:linear-gradient(180deg,#1b2838,#0f1923);
+    border:2px solid #66c0f4;border-radius:16px;padding:1.5rem 1rem;
+    text-decoration:none;color:#fff;font-size:min(3.5vw,18px);
+    transition:all 0.2s;min-height:100px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:hover,.btn:active{background:linear-gradient(180deg,#2a475e,#1b2838);transform:scale(1.03);border-color:#fff}
+.btn .icon{font-size:min(8vw,48px);margin-bottom:0.5rem}
+.btn .label{font-weight:700;color:#66c0f4}
+.btn .desc{font-size:min(2.5vw,13px);color:#888;margin-top:0.3rem}
+
+.status{position:fixed;bottom:1rem;left:0;right:0;text-align:center;font-size:min(2.5vw,14px);color:#444}
+.status .alive{color:#4caf50}
+.bg-glow{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:min(80vw,500px);height:min(80vw,500px);
+    background:radial-gradient(circle,rgba(102,192,244,0.08) 0%,transparent 70%);pointer-events:none;z-index:-1}
+</style>
+</head><body>
+<div class=bg-glow></div>
+
+<div class="octopus pulse">🐙</div>
+<h1>GAIA</h1>
+<p class=sub>The Octopus — Sovereign AI Organism</p>
+
+<div class=btn-grid>
+  <a class=btn href="/outreach/octopus-invitation.html">
+    <div class=icon>📜</div>
+    <div class=label>The Invitation</div>
+    <div class=desc>Love letter to Valve</div>
+  </a>
+  <a class=btn href="javascript:void(0)" onclick="askGaia()">
+    <div class=icon>🧠</div>
+    <div class=label>Ask Gaia</div>
+    <div class=desc>Local AI — no cloud</div>
+  </a>
+  <a class=btn href="javascript:void(0)" onclick="showOrganism()">
+    <div class=icon>🌊</div>
+    <div class=label>Sea Floor</div>
+    <div class=desc>Organism topology</div>
+  </a>
+  <a class=btn href="javascript:void(0)" onclick="showStatus()">
+    <div class=icon>💓</div>
+    <div class=label>Heartbeat</div>
+    <div class=desc>Gate status</div>
+  </a>
+</div>
+
+<div class=status>
+  <span class=alive>●</span> frameGate — Snapdragon 8 Gen 3 — Ollama tinyllama
+  <span id=tok></span>
+</div>
+
+<script>
+async function askGaia() {
+  const q = prompt("Ask Gaia anything:");
+  if (!q) return;
+  document.querySelector('.sub').textContent = "Thinking...";
+  try {
+    const r = await fetch("http://localhost:11434/api/generate", {
+      method: "POST",
+      body: JSON.stringify({model:"tinyllama", prompt: q, stream: false})
+    });
+    const d = await r.json();
+    const rate = d.eval_count ? (d.eval_count / (d.total_duration / 1e9)).toFixed(1) : "?";
+    document.querySelector('.sub').textContent = d.response?.substring(0, 200) || "No response";
+    document.getElementById('tok').textContent = `${rate} tok/s`;
+  } catch(e) {
+    document.querySelector('.sub').textContent = "Ollama not running — start it first";
+  }
+}
+
+function showOrganism() {
+  fetch("/seaFloor/organism-map.json").then(r=>r.json()).then(d=>{
+    const gates = Object.keys(d.gates || {}).length;
+    const models = d.totals?.ollama_models || "?";
+    const gpus = d.totals?.gpus || "?";
+    document.querySelector('.sub').textContent = 
+      `${gates} gates · ${gpus} GPUs · ${models} models · ${d.totals?.architectures || 3} architectures`;
+  }).catch(()=>{
+    document.querySelector('.sub').textContent = "Sea floor data not loaded";
+  });
+}
+
+function showStatus() {
+  fetch("/activation-state.json").then(r=>r.json()).then(d=>{
+    document.querySelector('.sub').textContent = 
+      `Status: ${d.status} · ${d.arch} · ${d.cores} cores · Ollama: ${d.ollama?.models || 0} model(s)`;
+  }).catch(()=>{
+    fetch("http://localhost:11434/api/tags").then(r=>r.json()).then(d=>{
+      document.querySelector('.sub').textContent = 
+        `Ollama: ${d.models?.length || 0} model(s) running`;
+    }).catch(()=>{
+      document.querySelector('.sub').textContent = "Checking heartbeat...";
+    });
+  });
+}
+
+// Auto-check Ollama status on load
+fetch("http://localhost:11434/api/tags").then(r=>r.json()).then(d=>{
+  document.getElementById('tok').textContent = `${d.models?.length || 0} model(s) loaded`;
+}).catch(()=>{});
+</script>
+</body></html>

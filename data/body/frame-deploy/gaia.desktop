@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=🐙 GAIA — The Octopus
+Comment=Sovereign AI organism — tap to see the octopus
+Exec=/home/steamos/gaia/gaia-launch.sh
+Icon=/home/steamos/gaia/gaia-icon.svg
+Terminal=false
+Type=Application
+Categories=Game;Science;
+StartupWMClass=gaia
