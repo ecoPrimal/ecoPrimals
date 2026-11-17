@@ -1,0 +1,130 @@
+{
+  "id": "gpu-metal-green",
+  "wave": 259,
+  "ts": "2026-11-17T09:50:00-05:00",
+  "title": "GPU METAL LAYER — The Green Null Spectrum Topology",
+  "principle": "Green is the NULL spectrum — same reason NVIDIA uses green. Humans detect the widest spread there. It is the most information-dense where grey and static meet as triad. The GPUs ARE the first metal layer of topology.",
+
+  "green_physics": {
+    "why_green": "Human eyes have peak sensitivity at ~555nm (green). More photoreceptors respond to green than any other color.",
+    "nvidia_green": "NVIDIA chose green because green = maximum information throughput in human vision",
+    "null_spectrum": "Green is where RGB overlaps maximally — it's the NULL point where all channels contribute equally",
+    "grey_triad": "Grey = equal R+G+B. Static = random R+G+B. Green sits between as the axis of maximum sensitivity.",
+    "chroma_key": "Green screen works because human vision has highest resolution in green — easiest to cleanly separate"
+  },
+
+  "gpu_topology": {
+    "total_gpus": 7,
+    "total_vram_gb": 84.3,
+    "vendors": ["NVIDIA (4)", "Qualcomm (1)", "Apple (1)", "AMD (1)"],
+
+    "gpus": [
+      {
+        "gate": "northGate (.147)",
+        "model": "NVIDIA RTX 5090",
+        "vram": "32GB GDDR7",
+        "role": "HEART — heaviest compute, 63 ollama models",
+        "color": "GREEN (NVIDIA)",
+        "status": "ALIVE"
+      },
+      {
+        "gate": "ironGate (.237)",
+        "model": "NVIDIA RTX 5070",
+        "vram": "12GB GDDR7",
+        "role": "FORGE 2 — secondary heavy compute",
+        "color": "GREEN (NVIDIA)",
+        "status": "ALIVE"
+      },
+      {
+        "gate": "eastGate (.244)",
+        "model": "NVIDIA GeForce RTX 4070",
+        "vram": "12GB GDDR6X",
+        "driver": "595.104.02",
+        "clock_mhz": 2475,
+        "temp_c": 45,
+        "power_w": 29.14,
+        "role": "BRAIN — ollama + inference + local compute",
+        "color": "GREEN (NVIDIA)",
+        "status": "ALIVE"
+      },
+      {
+        "gate": "frameGate (.155 WiFi / 10.86.200.233 USB)",
+        "model": "Qualcomm Adreno 750 (Turnip)",
+        "vulkan": "1.4.362",
+        "driver": "turnip Mesa 26.3.0-devel",
+        "freq_mhz": 903,
+        "soc": "Snapdragon 8 Gen 3 (SM8650)",
+        "dsp": ["adsp_sm8650 (audio)", "cdsp_sm8650 (compute)", "CAMERA_ICP (vision)", "evass (XR)"],
+        "xr_drivers": ["cv", "deckard", "frame_hmd", "frame_controller", "htc", "indexcontroller", "indexhmd", "oculus", "prism"],
+        "cameras": 26,
+        "role": "THE FACE — XR + vision + spatial compute",
+        "color": "RED (Qualcomm Adreno fire)",
+        "status": "ALIVE — JUST CONNECTED!"
+      },
+      {
+        "gate": "graftGate (.107)",
+        "model": "Apple M4 10-core GPU",
+        "memory": "16GB unified",
+        "role": "NEURAL ENGINE — ML + efficiency",
+        "color": "SILVER (Apple)",
+        "status": "ALIVE"
+      },
+      {
+        "gate": "deckGate (.176)",
+        "model": "AMD Van Gogh (RDNA 2)",
+        "tflops": 1.6,
+        "role": "MOUNTED DISPLAY — game render + touch",
+        "color": "RED (AMD Radeon)",
+        "status": "ALIVE"
+      },
+      {
+        "gate": "swiftGate (.100 H2)",
+        "model": "NVIDIA RTX 3070",
+        "vram": "8GB GDDR6",
+        "role": "POLARIS H2 — asleep, needs Kevin to wake",
+        "color": "GREEN (NVIDIA)",
+        "status": "ASLEEP"
+      }
+    ]
+  },
+
+  "metal_layers": {
+    "layer_0_green": {
+      "name": "NVIDIA Green (56GB active VRAM)",
+      "gpus": ["RTX 5090 (32GB)", "RTX 5070 (12GB)", "RTX 4070 (12GB)"],
+      "role": "PRIMARY COMPUTE — AI inference, ollama, CUDA, tensorRT",
+      "note": "Green = NULL spectrum = maximum information density"
+    },
+    "layer_1_red": {
+      "name": "Qualcomm + AMD (Adreno 750 + RDNA 2)",
+      "gpus": ["Adreno 750 (Frame)", "Van Gogh RDNA 2 (Deck)"],
+      "role": "EDGE COMPUTE — mobile, spatial, XR, gaming",
+      "note": "Red = fire = edge processing, low-power high-throughput"
+    },
+    "layer_2_silver": {
+      "name": "Apple Neural Engine (M4)",
+      "gpus": ["M4 10-core"],
+      "role": "NEURAL ENGINE — ML efficiency, unified memory",
+      "note": "Silver = precision = neural pathways"
+    }
+  },
+
+  "frame_first_contact": {
+    "hostname": "steamFRAME",
+    "os": "SteamOS (Holo, Arch-based, ARM64!)",
+    "kernel": "7.2.0-g344f27110f05 aarch64",
+    "cpu": "Snapdragon 8 Gen 3 (Cortex-X4 prime core)",
+    "gpu": "Adreno 750 (Vulkan 1.4)",
+    "ram": "16GB (8.3GB available)",
+    "storage": "929GB home (892GB free!)",
+    "wifi": "Aperture Science 2.4GHz (GAIA-LAN), .155",
+    "usb": "10.86.200.233 (umbilical to eastGate)",
+    "soft_ap": "wlanap at 10.35.78.1 (Frame's own WiFi!)",
+    "cameras": "26 video devices via qcom-camss",
+    "sensors": ["vadc@9000 (voltage)", "vadc@9100 (voltage)", "vcnl4000 (proximity + ambient light)"],
+    "xr": "SteamVR + DSP service + XRService + Arcturus Perception + MediaPipe + ONNX",
+    "bluetooth": "90:82:C3:74:12:CB, alias steamFRAME",
+    "services": ["dsp_service", "steamos-devkit", "xrdp", "avahi", "steam-web-debug", "steamvr-web-debug"],
+    "display": "DSI-1 connected (phone display) + Writeback"
+  }
+}
