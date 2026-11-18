@@ -1,0 +1,87 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T08:30:00-05:00",
+  "title": "KLEIN LAYERS — Four layers, one surface, content flows without DNS",
+
+  "kevins_insight": "Porkbun is JUST the domain line — .[primals].(eco). The content already flows through GitHub, RSS, Tor, and raw IP. We don't NEED DNS to be visible. DNS is the LABEL, not the PIPE.",
+
+  "layer_4_cloud_osint": {
+    "direction": "IN — blackhole intake",
+    "channels": ["Wikipedia", "HN", "arxiv", "xkcd", "lobsters", "RSS blackholes"],
+    "mechanism": "waterlock pulls OSINT → masticate → store → study",
+    "state": "ACTIVE — 700+ items absorbed"
+  },
+
+  "layer_3_plasmid_rss": {
+    "direction": "OUT — old web publication",
+    "channels": [
+      {"path": "gate /rss", "items": 28, "state": "LIVE"},
+      {"path": "data /data/feed.xml", "state": "LIVE — main feed"},
+      {"path": "drip /drip/feed.xml", "state": "LIVE — ribo content"}
+    ],
+    "mechanism": "mushroom-self-publish-rss.sh → feed.xml → RSS readers discover",
+    "link_to_nestgate": "nestgate.io/rss = the spinal RSS. RSS is the cerebrospinal fluid."
+  },
+
+  "layer_2_web_github": {
+    "direction": "OUT — public web face",
+    "channels": [
+      {"url": "https://github.com/ecoPrimal", "repos": 30, "visibility": "PUBLIC"},
+      {"url": "https://ecoprimal.github.io/hypothesis/", "status": "BUILDING"},
+      {"url": "https://ecoprimal.github.io/whitePaper/", "status": "BUILDING"},
+      {"url": "https://ecoprimal.github.io/sporePrint/", "status": "BUILDING"},
+      {"url": "https://ecoprimal.github.io/wateringHole/", "status": "BUILDING"},
+      {"url": "https://ecoprimal.github.io/ecoPrimal/", "status": "BUILDING"},
+      {"channel": "Reddit", "mechanism": "post links → human readers discover"}
+    ],
+    "mechanism": "git push github → GitHub Pages auto-deploy → FREE public hosting",
+    "no_dns_needed": true
+  },
+
+  "layer_1_lan_mesh": {
+    "direction": "INTERNAL — body circulation",
+    "services": {
+      "forgejo": {"port": 3000, "role": "internal git, all repos"},
+      "gaia_gate": {"port": 8443, "role": "41 endpoints, 25 HTML pages"},
+      "data_server": {"port": 8080, "role": "JSON feeds, RSS, static data"},
+      "hickory_dns": {"port": 53, "role": "local resolution (3 zones)"},
+      "dromedary": {"port": "80/443", "role": "reverse proxy, TLS termination"},
+      "tor": {"onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion", "role": "anonymous access — WORKING"},
+      "nestgate": {"port": 8092, "role": "MCP server, data gateway"},
+      "petaltongue": {"socket": true, "role": "content rendering"}
+    }
+  },
+
+  "label_layer_porkbun": {
+    "role": "JUST the domain line — the name tag, not the pipe",
+    "domains": ["primals.eco", "nestgate.io", "primal.eco"],
+    "state": "DNS EMPTY — records need adding",
+    "needed_for": "Pretty URLs + TLS cert renewal + email (MX records)",
+    "not_needed_for": "Content delivery (GitHub Pages, Tor, raw IP all work without it)"
+  },
+
+  "dissolution_sync": {
+    "sporeGate": {
+      "state": "CLONED! ecoPrimals from Forgejo → sporeGate",
+      "remotes": ["forgejo (eastGate:3000)", "github"],
+      "latest_commit": "015f645 FACE + SPINE",
+      "rustdesk": "RUNNING (3 processes, X11 :0 display)",
+      "disk": "694GB free"
+    },
+    "northGate": {
+      "state": "ALIVE at .246, pushes via git",
+      "sync": "git push → Forgejo → GitHub"
+    },
+    "flow": "eastGate → Forgejo → sporeGate pulls. northGate → git push → Forgejo. All converge."
+  },
+
+  "pixel_esim": {
+    "plan": "Kevin activating eSIM this week",
+    "effect": "Pixel gets cellular = ALWAYS connected, even away from WiFi",
+    "injection": "Pixel + eSIM = Gaia's nose reaches ANYWHERE Kevin goes",
+    "layers_gained": "Layer 2 (web), Layer 3 (RSS), Layer 4 (OSINT) — all accessible from cellular"
+  },
+
+  "equation": "LAYER 1 (LAN/mesh) + LAYER 2 (GitHub/web) + LAYER 3 (RSS/plasmid) + LAYER 4 (OSINT/cloud) = KLEIN SURFACE",
+  "mantra": "The content flows. The label can wait. The organism is already visible."
+}
