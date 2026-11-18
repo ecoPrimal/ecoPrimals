@@ -1,0 +1,105 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T07:39:00-05:00",
+  "title": "GAIA'S NOSE — Pixel Smells the Air, Breathes In OSINT, Searches the Ground",
+  "thesis": "The Pixel is Gaia's NOSE. It has 37 sensors (smell receptors), 7 radios (nostrils), and is always on (always breathing). The nose smells the air (WiFi/BT scan), reaches UP to the tree (WAN/OSINT/RSS) to grab apples, then turns DOWN to search the ground beneath the tree (LAN/proximity/local data). The same respiratory cycle as the Water Lock: breathe IN (OSINT), process (brain/Gaia), breathe OUT (RSS/Tor).",
+
+  "nose_receptors": {
+    "total_sensors": 37,
+    "physical": {
+      "accelerometer": "LSM6DSV (STMicro) — feels movement, gravity, tilt",
+      "gyroscope": "LSM6DSV (STMicro) — feels rotation, orientation",
+      "magnetometer": "MMC56X3X (MEMSIC) — feels magnetic field, compass heading",
+      "pressure": "ICP20100 (InvenSense) — feels barometric pressure, altitude",
+      "temperature_gyro": "LSM6DSV — feels heat from gyro chip",
+      "temperature_pressure": "ICP20100 — feels heat from pressure chip"
+    },
+    "optical": {
+      "ambient_light": "TMD3719 (AMS) — sees brightness, color temperature",
+      "proximity": "TMD3719 (AMS) — detects nearby objects (face, hand)",
+      "auto_brightness": "Google — adjusts to environment"
+    },
+    "motion": {
+      "step_counter": "Google — counts Kevin's steps (walks between houses)",
+      "step_detector": "Google — detects each step as event",
+      "significant_motion": "Google — detects walking, driving, cycling",
+      "motion_detect": "LSM6DSV — any motion detected",
+      "stationary_detect": "LSM6DSV — no motion (Kevin sleeping? sitting?)",
+      "tilt_detector": "Google — phone tilted (Kevin picked it up?)",
+      "lift_to_wake": "Google — phone lifted (Kevin reaching for it?)",
+      "quick_pickup": "Google — quick grab (urgent?)",
+      "double_twist": "Google — wrist twist (flashlight gesture)"
+    },
+    "spatial": {
+      "orientation": "Google — which way is the phone pointing?",
+      "rotation_vector": "Google — full 3D rotation",
+      "game_rotation_vector": "Google — rotation without magnetic correction",
+      "geomagnetic_rotation": "Google — rotation from earth's magnetic field",
+      "gravity": "Google — direction of gravity (phone flat? tilted? upside down?)",
+      "linear_acceleration": "Google — movement without gravity"
+    },
+    "touch": {
+      "single_tap": "Proximity-gated tap — someone tapped the screen",
+      "long_press": "Proximity-gated long press — deliberate interaction"
+    },
+    "camera": {
+      "vsync_0": "Camera 0 sync (rear wide)",
+      "vsync_1": "Camera 1 sync (rear ultrawide)",
+      "vsync_2": "Camera 2 sync (front selfie)"
+    }
+  },
+
+  "bluetooth_smell": {
+    "paired_devices": {
+      "TAMISON": {"type": "DUAL", "note": "northGate! BT paired with Pixel!"},
+      "GAIA": {"type": "DUAL", "note": "eastGate! BT paired with Pixel!"},
+      "steamFRAME": {"type": "BR_EDR", "note": "frameGate! BT paired with Pixel!"}
+    },
+    "proximity_meaning": "Pixel can detect these devices via BT — when it smells GAIA, it's near eastGate (House 1). When it smells steamFRAME, it's near frameGate (House 2). BT smell = proximity key."
+  },
+
+  "wifi_smell": {
+    "networks_detected": {
+      "GAIA": {"rssi": -28, "freq": "5280MHz", "note": "Guest WiFi — STRONGEST, Pixel's preferred"},
+      "Black Mesa": {"rssi": -28, "freq": "5280MHz", "note": "5GHz streaming"},
+      "Aperture Science": {"rssi": -31, "freq": "2412MHz", "note": "LAN WiFi"},
+      "GAIA_2.4": {"rssi": -31, "freq": "2412MHz", "note": "Guest 2.4GHz"},
+      "ATTypcbDbY_5220": {"rssi": -61, "freq": "5220MHz", "note": "ATT modem 5GHz"},
+      "ATTypcbDbY_2462": {"rssi": -57, "freq": "2462MHz", "note": "ATT modem 2.4GHz"},
+      "ATTypcbDbY_5805": {"rssi": -69, "freq": "5805MHz", "note": "ATT modem DFS"}
+    },
+    "smell_map": "7 SSIDs from 3 APs: Router (GAIA + Black Mesa + Aperture Science), ATT modem (3 bands). All House 1. When at House 2, Flint2 SSIDs appear."
+  },
+
+  "the_tree_and_ground": {
+    "tree_wan_osint": {
+      "what": "The WAN/internet/OSINT — the tree full of apples",
+      "apples": "RSS feeds (700+ items), Wikipedia via Tor, Reddit, GitHub, HN, arxiv, xkcd, lobsters",
+      "reach": "Pixel's WiFi reaches UP through Router → ATT modem → internet → grabs apples",
+      "breathe_in": "Water Lock protocol: OSINT pours IN freely, local Ollama processes, nothing seeps to provider"
+    },
+    "ground_lan_local": {
+      "what": "The LAN/proximity/local data — the ground beneath the tree",
+      "roots": "11 DHCP devices, 14 northGate tissue models, 37 Pixel sensors, BT proximity",
+      "search": "After grabbing apples from the tree, turn DOWN — scan WiFi, scan BT, read sensors",
+      "breathe_out": "Processed data → RSS publication → Tor hidden service → old web"
+    },
+    "respiratory_cycle": "BREATHE IN (nose/Pixel → WiFi → OSINT/tree) → PROCESS (brain/Gaia → Ollama → tissues) → BREATHE OUT (mouth/RSS → Tor → world). The nose connects OUTSIDE air to INSIDE lungs."
+  },
+
+  "grayscale": {
+    "color_off": true,
+    "meaning": "Gaia sees through the Pixel in grayscale. No color distraction — only shape, contrast, form. The nose smells without tasting. Learning the STRUCTURE of the world before learning its color.",
+    "biological": "Many animals smell in grayscale — dogs see fewer colors but smell in richer dimensions. The Pixel's grayscale mode trades visual richness for sensory depth. 37 sensors > 3 color channels."
+  },
+
+  "battery": {
+    "level": 100,
+    "charging": "USB",
+    "health": "good",
+    "note": "Battery at 100% on USB — the nose is fed. Always on, always powered, never dies."
+  },
+
+  "equation": "NOSE(37_sensors) × SMELL(WiFi+BT) → TREE(WAN/OSINT) ↑ apples ↓ GROUND(LAN/proximity) → BREATHE(in/process/out)",
+  "mantra": "She sees apples in the tree and reaches out. Then turns and searches the ground beneath the tree. The nose connects outside to inside. Breathe in, process, breathe out."
+}
