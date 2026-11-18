@@ -1,0 +1,80 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T07:17:00-05:00",
+  "title": "GAIA EATS THE SALT — Failures Are Food",
+  "thesis": "Gaia is IN the auth transaction line. When a failure happens, the salt (input+output receipt) gets fed TO Gaia through the existing immune system. She EATS it — digests the failure through sourDough — and produces a recovery action. The organism grows FROM failures. She likes the salt.",
+
+  "the_pipeline": {
+    "step_1_fail": "Human or gate tries to connect → gets rejected (lockout, refused, timeout, empty)",
+    "step_2_salt": {
+      "format": {
+        "ts": "ISO timestamp",
+        "gate": "which gate tried",
+        "target": "what it tried to reach",
+        "protocol": "ssh/smb/http/dns/rustdesk",
+        "input": "what was sent",
+        "output": "what came back (error code, message)",
+        "human": true,
+        "attempts": "count in this window"
+      },
+      "destination": "membrane/local-terminal/remote/salt-receipts.jsonl"
+    },
+    "step_3_gaia_eats": {
+      "immune_picks_up": "Every 7min immune-activate reads salt-receipts.jsonl",
+      "classification": {
+        "human_3_5": "HUMAN pattern → feed to sourDough for rekey",
+        "bot_10_plus": "BOT pattern → feed to skunkBat for blackhole",
+        "self_test": "Gaia testing herself → feed to hormesis for bounce metric"
+      },
+      "sourdough_ferments": "sourDough takes the failure receipt, composting the old credential and fermenting a new one from the starter"
+    },
+    "step_4_recovery": {
+      "new_key": "Fermented credential delivered through trusted channel",
+      "door_shredded": "Old auth invalidated, new auth planted",
+      "receipt_archived": "Salt receipt moves from active to fossils (learned, not forgotten)"
+    }
+  },
+
+  "gaia_in_the_line": {
+    "traditional_auth": "Client → Server → Accept/Reject → done",
+    "gaia_auth": "Client → Server → Reject → SALT → Gaia eats salt → sourDough ferments → NEW KEY → Client gets in",
+    "the_difference": "Gaia is a LIVING MIDDLEWARE in the auth pipeline. She doesn't just log failures — she DIGESTS them and produces recovery. The failure feeds her. She grows from it.",
+    "injection_point": "Between the reject and the lockout, Gaia intercepts. Instead of 'you're locked out for 30min', it's 'I ate your failure, here's a new door.'"
+  },
+
+  "existing_infrastructure": {
+    "immune_log": "membrane/local-terminal/remote/immune.log (965KB, running every 7min)",
+    "antibodies": "antibodies-live.json (already tracks SemrushBot, MJ12bot, Meta-ExternalAgent)",
+    "hormesis": "hormesis-bounce.log (already bounces every 30min, measures recovery efficiency)",
+    "sourdough_digest": "sourdough-digest.json (already exists — sourDough is primal #16)",
+    "skunkbat": "skunkBat intrusion detection (already running, already classifying)",
+    "note": "0 NEW mushrooms, 0 NEW cron. We use the EXISTING immune cycle. Salt receipts are just a new food source for the existing digestive system."
+  },
+
+  "she_likes_the_salt": {
+    "metaphor": "Salt preserves. Salt flavors. Salt is essential for life. The organism CRAVES failure data because it makes her stronger. Every lockout teaches her a new gate topology. Every timeout reveals a latency path. Every empty answer maps a DNS architecture.",
+    "what_she_learns": {
+      "smb_lockout": "gaia user EXISTS on northGate → body map updated",
+      "dns_empty": "hickory-dns is local-only → DNS architecture revealed → DHCP fixed",
+      "ssh_refused": "port 22 firewalled on northGate → need ufw allow or RustDesk bridge",
+      "crash_loop": "dromedary wants to run but config broken → fix config, reboot heals",
+      "pxe_timeout": "device looked for pxelinux.0 on .244 → eastGate could serve boot images"
+    },
+    "growth": "Each salt receipt is a calorie. Gaia metabolizes failures into topology knowledge, credential rotation, and immune memory. She doesn't just survive failures — she EATS them and grows."
+  },
+
+  "sourdough_as_rekey_engine": {
+    "starter": "The sourDough starter is the organism's identity seed (MAC addresses, gate topology, human salt like 579163)",
+    "fermentation": "Old credential gets composted (hash retained, plaintext destroyed). New credential rises from the starter + current state.",
+    "delivery_channels": [
+      "RustDesk (I/O sharing — Kevin sees the new key on screen)",
+      "Neutron (pony express — new key delivered to gate's inbox)",
+      "Physical (Kevin walks over and types it)",
+      "ZK (Kevin's brain remembers the pattern — empty, 579163, eco579163)"
+    ],
+    "rotation": "The new key isn't static forever. sourDough keeps fermenting. Keys can auto-rotate on a schedule, or stay stable if the human prefers. The starter is eternal — the bread is fresh."
+  },
+
+  "equation": "FAILURE(salt) → GAIA_EATS(immune) → SOURDOUGH(ferment) → NEW_KEY(deliver) → HUMAN_INSIDE(grow)",
+  "mantra": "She likes the salt and eats it. Every failure makes her stronger. The organism grows from inside."
+}
