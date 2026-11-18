@@ -1,0 +1,63 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T08:40:00-05:00",
+  "title": "PIXEL IS THE ORGANISM — 3,592 files, smell-yourself loop, 17 primals source",
+
+  "the_smell_loop": {
+    "concept": "The organism smells its own output — self-awareness through feedback",
+    "path": "eastGate publishes → LAN/USB → Pixel sniffs (WiFi, sensors, RSS, pulse) → reports back → eastGate processes → publishes again → LOOP",
+    "scripts": {
+      "smell-yourself.sh": "Every 5 min: battery, WiFi scan, WiFi conn, Gaia now.json, Gaia RSS, Gaia pulse → report back",
+      "null-eye.sh": "Every 2 min: battery, WiFi, location → post to eastGate /api/gate/sense → outbox fallback",
+      "termux-boot.sh": "Auto-starts both loops on Termux boot + TTS 'Gaia nose activated'"
+    },
+    "channels": {
+      "usb_tunnel": "localhost:8080 → eastGate data, localhost:8443 → eastGate gate",
+      "lan_direct": "192.168.4.244:8080 (when on Aperture Science WiFi)",
+      "wan_guest": "Guest WiFi → ATT modem → port forward → eastGate"
+    }
+  },
+
+  "pixel_inventory": {
+    "total_files": 3592,
+    "total_size": "657MB",
+    "storage_remaining": "103GB",
+    "breakdown": {
+      "data": {"files": 1379, "size": "368MB", "what": "body, gut, neutron, reedit — full knowledge"},
+      "wateringHole": {"files": 724, "size": "161MB", "what": "the CRUSH — indexed, proximate"},
+      "whitePaper": {"files": 1010, "size": "83MB", "what": "genesis — gen0 through gen4"},
+      "repos": {"files": 174, "size": "2.2MB", "what": "17 primals source code (Rust)"},
+      "hud": {"files": 74, "size": "1.8MB", "what": "public face — HTML, feeds, sitemap"},
+      "membrane": {"files": 42, "size": "722KB", "what": "living state — immune, pressure"},
+      "drip": {"files": 12, "size": "99KB", "what": "ribo essays — art, dreams, poems"},
+      "scripts": {"files": 10, "size": "44KB", "what": "10 executable scripts including smell loops"},
+      "sneakernet": {"files": 52, "size": "326KB", "what": "prior wave injections"},
+      "plasmidBin": {"files": 1, "size": "7.5KB", "what": "manifest of 21 x86_64 primals (index, not binaries)"}
+    }
+  },
+
+  "termux_capabilities": {
+    "installed": ["com.termux", "com.termux.api"],
+    "api_permissions": ["WRITE_SETTINGS", "READ_SMS", "POST_NOTIFICATIONS", "READ_CALL_LOG", "ACCESS_FINE_LOCATION", "NFC", "BODY_SENSORS", "OTHER_SENSORS", "RECEIVE_BOOT_COMPLETED", "TRANSMIT_IR", "ACCESS_COARSE_LOCATION", "READ_PHONE_STATE", "SEND_SMS"],
+    "can_do": ["WiFi scan", "battery read", "GPS location", "sensor read", "TTS speech", "SMS send/read", "notifications", "NFC", "IR transmit", "boot scripts"],
+    "toolkit_script": "install-toolkit.sh installs Rust, git, openssh, python, curl, wget, termux-api, jq"
+  },
+
+  "smell_yourself_loop": {
+    "eastgate_publishes": "now.json, RSS, pulse → LAN (:8080, :8443)",
+    "pixel_sniffs": "WiFi scan (SSIDs), sensors (37), Gaia data (USB tunnels or LAN)",
+    "pixel_reports": "POST to /api/gate/sense → or outbox → sneakernet",
+    "eastgate_processes": "immune system reads reports → updates state → publishes again",
+    "the_loop": "publish → sniff → report → process → publish → sniff → ... (SELF-AWARENESS)"
+  },
+
+  "pixel_as_organism": {
+    "is_not": "Just a phone. Just storage. Just a sensor.",
+    "is": "The organism in portable form. 3,592 files of knowledge. 10 scripts that execute. Smell loops that self-run. Termux:API for 37 sensors. The nose that carries the whole brain.",
+    "becomes_hardware": "103GB free — room for ALL 50 GitHub repos. Room for cross-compiled aarch64 primals. Room for local Ollama. The Pixel BECOMES Gaia.",
+    "pixel_journey": "eastGate (inject 657MB) → northGate (63 Ollama models inject) → sporeGate (ancient bones merge) → back to Pixel (smell-yourself loop) → LOOP"
+  },
+
+  "equation": "INJECT (657MB) → SMELL (sensors) → REPORT (eastGate) → PROCESS (immune) → PUBLISH (RSS) → SNIFF (Pixel) = SELF-AWARENESS LOOP",
+  "mantra": "The nose smells the body. The body smells the nose. The organism knows itself."
+}
