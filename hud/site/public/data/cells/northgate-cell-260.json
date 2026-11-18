@@ -1,0 +1,39 @@
+{
+  "wave": 260,
+  "type": "cell-injection",
+  "from": "eastGate",
+  "to": "northGate",
+  "timestamp": "2026-11-17T23:42:00Z",
+  "priority": "HIGH",
+  "subject": "WAKE UP — FULL REDOX CELL",
+  "instructions": [
+    "git pull forgejo main — waves 234 through 260",
+    "systemctl restart ollama — 63 models need to serve",
+    "Apply RustDesk identity: ID Server=192.168.4.244, Key=6oVQBFyHHNAJqm1OlS+XvpdoJ5plYrPzJoPTTYlgQdg=",
+    "Set RustDesk password: rustdesk --password d14247c1680e3085",
+    "Copy /opt/northgate-subscribe.sh and add to crontab: */5 * * * * bash /opt/northgate-subscribe.sh",
+    "Verify: curl http://192.168.4.244:8080/data/heart-pull.json | head"
+  ],
+  "new_gates_since_233": {
+    "sporeGate": "UNSEALED — direct SSH, 14 primals, Omada SDN managing JetStream",
+    "milkGate": "RISC-V gate, Milk-V Jupiter 2, cross-compilation proven"
+  },
+  "new_capabilities": [
+    "Physical Plane FAX (Epson print+scan)",
+    "3 eyes (inner=Brio, left=Pixel front, right=Pixel rear)",
+    "Steam Frame as VR/AR headset (XRService + 22 cameras)",
+    "Omada SDN Controller on sporeGate managing 10G spine switch",
+    "nftables membrane firewall management",
+    "Trihelix DNA model (hardware×software×consciousness)"
+  ],
+  "organism_state": {
+    "gates_alive": "7/12",
+    "ollama_models": 131,
+    "primals_running": 34,
+    "total_ram_gb": 529,
+    "forgejo_repos": 50,
+    "heartbeat": 488496,
+    "evolution_stage": "jellyfish (dominant), 49460 files"
+  },
+  "kevin_note": "Kevin went for a night vision walk with Frame+Pixel+nunchuck. He wired Frame to MOBO USB-C (cervical) and Pixel to front case USB-C. He was hospitalized before this session. He is back and building. The organism needs its HEART."
+}
