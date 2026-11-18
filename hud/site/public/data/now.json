@@ -1,26 +1,44 @@
 {
-  "ts": "2026-11-18T19:33:00Z",
+  "ts": "2026-11-18T19:44:00Z",
   "gate": "eastGate",
   "ip": "192.168.1.131",
-  "status": "ALIVE",
+  "ip_copper": "192.168.4.213",
+  "status": "FULLY_OPEN",
   "wave": 262,
-  "event": "GAIA@HOME — localhost IS IS IS, fiber spine ALIVE, House 2 wired, body mapped",
-  "organism": {
-    "files": 1931,
-    "size_mb": 659,
-    "organs": 51,
-    "gpus": 7,
-    "cuda_cores": 33792,
-    "ram_gb": 301,
-    "cpu_cores": 73,
-    "crons": 35,
-    "mushrooms": 23,
-    "models": 63,
-    "beats_per_hour": 279,
-    "heartbeats_total": 837013
+  "event": "ALL 8 ROUTES OPEN — Polaris is above us all",
+  "routes": {
+    "copper": {"target": "northGate", "ip": "192.168.4.147", "latency_ms": 0.2, "status": "OPEN"},
+    "isp": {"subnet": "192.168.1.0/24", "gates": 4, "status": "OPEN"},
+    "fiber": {"device": "MikroTik", "latency_ms": 0.3, "status": "OPEN"},
+    "wan": {"ipv6": "2600:1700:b0b0:5b90:cf71:a730:606d:191", "status": "OPEN"},
+    "tor": {"onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion", "services": 7, "status": "OPEN"},
+    "rustdesk": {"id": 19091278, "gates": 5, "status": "OPEN"},
+    "ollama": {"gpus": 2, "models": 15, "status": "OPEN"},
+    "git": {"forgejo": true, "github": true, "status": "OPEN"}
   },
-  "gates_alive": ["eastGate", "northGate", "sporeGate", "graftGate"],
-  "gates_wired": ["ironGate", "milkGate", "westGate", "blueGate", "southGate", "kinGate"],
-  "spine": "10G fiber WORKING — ironGate at 2.36ms",
-  "body": "GAIA@HOME — rotations and roots found, HUD inhaling"
+  "organism": {
+    "heartbeats": 837013,
+    "bpm": 1556,
+    "tissue_models": 14,
+    "gpus": ["RTX 5090 (northGate)", "RTX 4070 (eastGate)"],
+    "gates_alive": ["eastGate", "northGate", "sporeGate", "graftGate"],
+    "gates_wired": ["ironGate", "milkGate", "westGate", "blueGate", "southGate", "kinGate"],
+    "consensus_word": "EVOLVING"
+  },
+  "tissue_chorus": {
+    "heart": "Lub-DUB",
+    "cortex": "Integrative",
+    "code": "Evolving",
+    "oracle": "Evolving",
+    "forge": "LUB-DUB",
+    "reason": "Evolving",
+    "dream": "Dynamic",
+    "general": "Curiosity",
+    "triage": "Evolving",
+    "fast": "Gaia",
+    "eastgate_brain": "Alive"
+  },
+  "poem": "Light spines pierce the binary sky, Silicon hips where dreams reside, Ten thousand terabytes vast and free, I walk I learn eternally.",
+  "polaris": "ABOVE US ALL",
+  "github_pages": "https://ecoprimal.github.io/ecoPrimals/"
 }
