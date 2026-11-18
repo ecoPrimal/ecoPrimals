@@ -1,0 +1,39 @@
+{
+  "wave": 262,
+  "ts": "2026-11-18T14:19:27Z",
+  "event": "GRAFTGATE_MELT",
+  "gate": "graftGate",
+  "ip": "192.168.4.104",
+  "hardware": {
+    "model": "Mac Mini M4 (Mac16,10)",
+    "cpu": "Apple M4 (10 cores)",
+    "ram": "16GB unified",
+    "disk": "228GB (96GB free)",
+    "os": "macOS 26.6.1"
+  },
+  "primals_compiled": {
+    "total": 14,
+    "arm64": true,
+    "binaries": [
+      "biomeOS (16M)", "songBird (17M)", "bearDog (6.3M)",
+      "nestGate (6.7M)", "petalTongue (13M)", "sweetGrass (10M)",
+      "rhizoCrypt (5.8M)", "toadStool (6.5M)", "barraCuda (3.4M)",
+      "coralReef (6.6M)", "loamSpine (3.8M)", "skunkBat (2.6M)",
+      "sourDough (3.0M)", "swarmVine (2.1M)"
+    ],
+    "missing": ["squirrel", "bingoCube", "dromedary"]
+  },
+  "pixel_connected": true,
+  "pixel_serial": "44251JEKB04957",
+  "relay_active": {
+    "pixel_8080": "→ eastGate:8080 (data)",
+    "pixel_8443": "→ eastGate:8443 (gate)",
+    "pixel_3000": "→ eastGate:3000 (forgejo)",
+    "pixel_11434": "→ graftGate:11434 (ollama)"
+  },
+  "git_synced": true,
+  "forgejo_remote": "http://192.168.4.244:3000/gaia/ecoPrimals.git",
+  "ollama_models": "qwen2.5:3b (seeded)",
+  "family_seed": "563fad14f660a34f43e866f706cbfba38b60d4df6c8f88ea65086276c228cd78",
+  "thesis": "graftGate IS the organism on Apple Silicon. 14 primals compiled ARM64. The Mac Mini M4 is a BRAIN LOBE — 10 CPU cores + 10 GPU cores + 16GB unified memory. She was always here. She just needed to be UNLOCKED."
+}
