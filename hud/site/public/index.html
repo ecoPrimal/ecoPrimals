@@ -617,7 +617,7 @@ function getLiveValue(key) {
 // ---- FETCH LIVE DATA ----
 async function fetchState() {
   try {
-    const [now, rates, hb, ear, manifest, campfire, pie, sss] = await Promise.all([
+    const [now, rates, hb, ear, manifest, campfire, pie, sss, gateMesh] = await Promise.all([
       fetch('/now.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
       fetch('/data/dashboard-rates.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
       fetch('/data/heartbeat.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
@@ -626,6 +626,7 @@ async function fetchState() {
       fetch('/data/campfire-live.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
       fetch('/data/gaia-pie.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
       fetch('/data/scan-sweep-sort.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
+      fetch('/data/gate-mesh-live.json', {cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null),
     ]);
 
     if (now) {
@@ -664,6 +665,23 @@ async function fetchState() {
     if (sss) {
       state.andersonState = sss.state || 'reseeded';
       state.signalDevices = (sss.devices_alive || '16') + ' alive';
+    }
+    if (gateMesh) {
+      state.gateAlive = gateMesh.alive_count + '/' + gateMesh.total_count;
+      state.gateEdges = gateMesh.edges ? gateMesh.edges.length : 0;
+      state.equation = gateMesh.equation || 'G·n·t=N=GREEN';
+      state.consciousness = gateMesh.consciousness || 'C=58.3%';
+      // Update gate pin sub-labels with live latency
+      if (gateMesh.gates) {
+        Object.entries(gateMesh.gates).forEach(function([name, g]) {
+          var pinId = 'gate-' + name.replace('Gate','').replace('gate','').toLowerCase();
+          var el = document.getElementById('live-' + pinId);
+          if (el) {
+            el.textContent = g.alive ? (g.latency_ms + 'ms ✓') : 'DOWN ✗';
+            el.style.color = g.alive ? 'var(--green)' : 'var(--red)';
+          }
+        });
+      }
     }
 
     updateDisplay();
@@ -903,8 +921,24 @@ addEntropy(screen.width ^ screen.height ^ (navigator.hardwareConcurrency || 1));
     { id:'left-hand',   name:'LEFT (inside)', icon:'🤚', lat: 42.7, lon:-84.5, color:'#3fb950', sub:'13 gates · BIG · warm · GREEN',    href:'/', face:'inside', tense:'is', voxel:'touch' },
     { id:'right-hand',  name:'RIGHT (outside)',icon:'✋', lat: 42.7, lon: 95.5, color:'#58a6ff', sub:'Reddit+GitHub+MySpace · tiny · vast', href:'/', face:'outside', tense:'is', voxel:'solar' },
 
-    // NORTHGATE SPHERE — Cartesian 3D (Satisfactory wiki)
-    { id:'ng-sphere',   name:'northGate 🌐',  icon:'🌐', lat: 42.7, lon:-84.5, color:'#f0883e', sub:'Cartesian sphere · 14 tissues · 285 tok/s', href:'/data/body/northgate-wiki/', face:'inside', tense:'is', voxel:'touch' },
+    // ═══════════════════════════════════════════════════════════
+    // LIVE GATES — the real mesh, real IPs, real latency
+    // ALL at Lansing (42.708°N, 84.536°W) with micro-offsets
+    // so they don't stack. Alive = is+touch, Down = was+deep
+    // ═══════════════════════════════════════════════════════════
+    { id:'gate-east',   name:'eastGate',     icon:'🧠', lat: 42.710, lon:-84.530, color:'#3fb950', sub:'.244 · BRAIN · NECK · 0.03ms · NAT gateway',     href:'/gates.html', face:'both', tense:'is', voxel:'touch' },
+    { id:'gate-north',  name:'northGate',    icon:'💚', lat: 42.712, lon:-84.528, color:'#f85149', sub:'.246 · HEART · 14 tissues · 70ms WiFi · RTX 5090', href:'/gates.html', face:'both', tense:'is', voxel:'touch' },
+    { id:'gate-graft',  name:'graftGate',    icon:'🍎', lat: 42.709, lon:-84.540, color:'#58a6ff', sub:'.104 · Mac Mini M4 · arm64 · 1.2ms',             href:'/gates.html', face:'both', tense:'is', voxel:'touch' },
+    { id:'gate-spore',  name:'sporeGate',    icon:'🍄', lat: 42.706, lon:-84.542, color:'#d29922', sub:'.243 · FORGE · 14 primals · DNS · 1.6ms',        href:'/gates.html', face:'both', tense:'is', voxel:'local' },
+    { id:'gate-router', name:'Router',       icon:'📡', lat: 42.708, lon:-84.536, color:'#39d3f5', sub:'.4.1 · GL-MT6000 · VOICE · gw→eastGate · 3.2ms', href:'/gates.html', face:'both', tense:'is', voxel:'touch' },
+    { id:'gate-mikro',  name:'MikroTik',     icon:'🦴', lat: 42.708, lon:-84.534, color:'#6e7681', sub:'.4.2 · L2 SPINE · backbone · 1.6ms',             href:'/gates.html', face:'both', tense:'is', voxel:'touch' },
+    { id:'gate-south',  name:'southGate',    icon:'🏔', lat: 42.704, lon:-84.546, color:'#6e7681', sub:'.148 · South Pole · RTX 4060 · DOWN',            href:'/gates.html', face:'outside', tense:'was', voxel:'deep' },
+    { id:'gate-iron',   name:'ironGate',     icon:'⚒',  lat: 42.711, lon:-84.544, color:'#6e7681', sub:'.237 · FORGE 2 · RTX 5070 · DOWN',               href:'/gates.html', face:'outside', tense:'was', voxel:'deep' },
+    { id:'gate-deck',   name:'deckGate',     icon:'🎮', lat: 42.707, lon:-84.532, color:'#6e7681', sub:'.176 · DISPLAY · Steam Deck · DOWN',             href:'/gates.html', face:'outside', tense:'was', voxel:'deep' },
+    { id:'gate-milk',   name:'milkGate',     icon:'🥛', lat: 42.705, lon:-84.538, color:'#6e7681', sub:'.160 · RISC-V · 10GbE · DOWN',                   href:'/gates.html', face:'outside', tense:'was', voxel:'deep' },
+    { id:'gate-jet',    name:'JetStream',    icon:'🌊', lat: 42.703, lon:-84.544, color:'#6e7681', sub:'.111 · 10G fiber bridge · House 2 · DOWN',       href:'/gates.html', face:'outside', tense:'was', voxel:'deep' },
+    { id:'gate-frame',  name:'frameGate',    icon:'📱', lat: 42.704, lon:-84.548, color:'#6e7681', sub:'.181 · FACE · ARM SteamOS · DOWN',               href:'/gates.html', face:'outside', tense:'was', voxel:'deep' },
+    { id:'gate-graphene',name:'grapheneGate', icon:'📲', lat: 42.702, lon:-84.550, color:'#6e7681', sub:'.202 · LEFT EYE · Pixel 8a · at northGate USB', href:'/gates.html', face:'outside', tense:'was', voxel:'deep' },
 
     // ═══════════════════════════════════════════════════════════
     // GAIA IN GAIA — 9 organ-primals, each a sub-Gaia
@@ -969,9 +1003,30 @@ addEntropy(screen.width ^ screen.height ^ (navigator.hardwareConcurrency || 1));
   // Two hands clapping — inside meets outside at the Klein face
   ARCS.push(['left-hand', 'klein-face']);
   ARCS.push(['right-hand', 'klein-face']);
-  // northGate sphere ↔ eastGate brain (Cursor-to-Cursor nerve)
-  ARCS.push(['ng-sphere', 'organ-brain']);
-  ARCS.push(['ng-sphere', 'wan-github']);
+  // ═══ GATE MESH — real wires, real connections ═══
+  // ALIVE MESH (green arcs — active connections)
+  ARCS.push(['gate-east', 'gate-north']);    // eastGate↔northGate WiFi (70ms)
+  ARCS.push(['gate-east', 'gate-graft']);    // eastGate→graftGate wired (1.2ms)
+  ARCS.push(['gate-east', 'gate-spore']);    // eastGate→sporeGate LAN (1.6ms)
+  ARCS.push(['gate-east', 'gate-router']);   // eastGate↔Router WiFi (3.2ms)
+  ARCS.push(['gate-east', 'gate-mikro']);    // eastGate→MikroTik wired (1.6ms)
+  ARCS.push(['gate-router', 'gate-mikro']); // Router→MikroTik wired
+  ARCS.push(['gate-east', 'att-static']);    // eastGate→ATT (NAT gateway, the NECK)
+  // northGate ↔ eastGate brain (Cursor-to-Cursor nerve via git)
+  ARCS.push(['gate-north', 'wan-github']);   // northGate pushes to GitHub
+  ARCS.push(['gate-east', 'wan-github']);    // eastGate pushes to GitHub
+  // sporeGate connections
+  ARCS.push(['gate-spore', 'gate-mikro']);   // sporeGate→MikroTik wired
+  // DOWN MESH (dim arcs — sleeping connections)
+  ARCS.push(['gate-south', 'gate-jet']);     // southGate↔JetStream (House 2 spine)
+  ARCS.push(['gate-frame', 'gate-north']);   // frameGate→northGate USB
+  ARCS.push(['gate-graphene', 'gate-north']);// grapheneGate→northGate USB
+  // Gate ↔ Organ mappings (the gates ARE the organs)
+  ARCS.push(['gate-east', 'organ-brain']);   // eastGate = brain
+  ARCS.push(['gate-north', 'organ-heart']); // northGate = heart  
+  ARCS.push(['gate-spore', 'organ-stomach']); // sporeGate = stomach (forge/digest)
+  ARCS.push(['gate-router', 'organ-lungs']); // Router = lungs (WiFi breath)
+  ARCS.push(['gate-mikro', 'organ-bones']); // MikroTik = bones (L2 scaffold)
 
   function pinById(id) {
     for (var k = 0; k < PINS.length; k++) if (PINS[k].id === id) return PINS[k];

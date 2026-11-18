@@ -1,0 +1,195 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T11:34:28Z",
+  "gates": {
+    "eastGate": {
+      "ip": ".244",
+      "role": "BRAIN/NECK",
+      "hw": "NAT gateway, Tor, Forgejo",
+      "alive": true,
+      "latency_ms": 0.029
+    },
+    "northGate": {
+      "ip": ".246",
+      "role": "HEART",
+      "hw": "9950X3D, RTX 5090, 14 Ollama tissues",
+      "alive": true,
+      "latency_ms": 69.9
+    },
+    "graftGate": {
+      "ip": ".104",
+      "role": "ARM64",
+      "hw": "Mac Mini M4, 16GB",
+      "alive": true,
+      "latency_ms": 1.23
+    },
+    "sporeGate": {
+      "ip": ".243",
+      "role": "FORGE",
+      "hw": "Ryzen 5 6600H, 14 primals, DNS",
+      "alive": true,
+      "latency_ms": 1.56
+    },
+    "Router": {
+      "ip": ".4.1",
+      "role": "VOICE",
+      "hw": "GL-MT6000, WiFi AP, gw\u2192eastGate",
+      "alive": true,
+      "latency_ms": 3.23
+    },
+    "MikroTik": {
+      "ip": ".4.2",
+      "role": "SPINE",
+      "hw": "L2 backbone switch",
+      "alive": true,
+      "latency_ms": 1.64
+    },
+    "southGate": {
+      "ip": ".148",
+      "role": "SOUTH POLE",
+      "hw": "Ryzen 7 5800X3D, RTX 4060",
+      "alive": false,
+      "latency_ms": null
+    },
+    "ironGate": {
+      "ip": ".237",
+      "role": "FORGE 2",
+      "hw": "i9-14900K, RTX 5070",
+      "alive": false,
+      "latency_ms": null
+    },
+    "deckGate": {
+      "ip": ".176",
+      "role": "DISPLAY",
+      "hw": "Steam Deck v1, dead battery",
+      "alive": false,
+      "latency_ms": null
+    },
+    "milkGate": {
+      "ip": ".160",
+      "role": "MILKY WAY",
+      "hw": "RISC-V, 10GbE SFP+",
+      "alive": false,
+      "latency_ms": null
+    },
+    "JetStream": {
+      "ip": ".111",
+      "role": "BRIDGE",
+      "hw": "10G fiber, House 2",
+      "alive": false,
+      "latency_ms": null
+    },
+    "frameGate": {
+      "ip": ".181",
+      "role": "FACE",
+      "hw": "Steam Frame, ARM SteamOS",
+      "alive": false,
+      "latency_ms": null
+    },
+    "grapheneGate": {
+      "ip": ".202",
+      "role": "LEFT EYE",
+      "hw": "Pixel 8a, at northGate USB",
+      "alive": false,
+      "latency_ms": null
+    }
+  },
+  "alive_count": 6,
+  "total_count": 13,
+  "edges": [
+    {
+      "from": "eastGate",
+      "to": "northGate",
+      "type": "WiFi",
+      "ms": 70,
+      "alive": true
+    },
+    {
+      "from": "eastGate",
+      "to": "graftGate",
+      "type": "wired",
+      "ms": 1.2,
+      "alive": true
+    },
+    {
+      "from": "eastGate",
+      "to": "sporeGate",
+      "type": "LAN",
+      "ms": 1.6,
+      "alive": true
+    },
+    {
+      "from": "eastGate",
+      "to": "Router",
+      "type": "WiFi",
+      "ms": 3.2,
+      "alive": true
+    },
+    {
+      "from": "eastGate",
+      "to": "MikroTik",
+      "type": "wired",
+      "ms": 1.6,
+      "alive": true
+    },
+    {
+      "from": "Router",
+      "to": "MikroTik",
+      "type": "wired",
+      "ms": 0.5,
+      "alive": true
+    },
+    {
+      "from": "eastGate",
+      "to": "ATT",
+      "type": "wired(NAT)",
+      "ms": 0.5,
+      "alive": true
+    },
+    {
+      "from": "northGate",
+      "to": "GitHub",
+      "type": "git(Cursor)",
+      "ms": null,
+      "alive": true
+    },
+    {
+      "from": "eastGate",
+      "to": "GitHub",
+      "type": "git(push)",
+      "ms": null,
+      "alive": true
+    },
+    {
+      "from": "sporeGate",
+      "to": "MikroTik",
+      "type": "wired",
+      "ms": 0.3,
+      "alive": true
+    },
+    {
+      "from": "southGate",
+      "to": "JetStream",
+      "type": "wired",
+      "ms": null,
+      "alive": false
+    },
+    {
+      "from": "frameGate",
+      "to": "northGate",
+      "type": "USB-C",
+      "ms": null,
+      "alive": false
+    },
+    {
+      "from": "grapheneGate",
+      "to": "northGate",
+      "type": "USB-C",
+      "ms": null,
+      "alive": false
+    }
+  ],
+  "equation": "G\u00b7n\u00b7t = N = GREEN = 13\u00d727\u00d7262 = 91,962",
+  "consciousness": "C = r/R = 7/12 = 58.3%",
+  "entropy_H": 2.458
+}
