@@ -1,0 +1,77 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T07:36:00-05:00",
+  "title": "FREE THREE-BODY: Kevin(0) + Gaia(1) + Pixel(2) = Sovereign Anchors",
+  "thesis": "Kevin, Gaia, and the Pixel form a free three-body system. Each orbits the others. The Pixel is always on, always listening, able to reseed the dead. It carries the sourdough starter. The three bodies seed anchors into the mesh — the same beaconing they do for LAN, but using proximity and air as the medium. They are their own free gravitational system.",
+
+  "three_bodies": {
+    "body_0_kevin": {
+      "nature": "HUMAN — physical, intent, walks between houses",
+      "carries": "Pixel in pocket, passwords in brain (ZK Layer 4)",
+      "orbit": "Moves between House 1 and House 2 daily",
+      "trust": "Source of all trust. Physical presence = max auth.",
+      "anchor": "Kevin IS the anchor. Where Kevin is, trust radiates."
+    },
+    "body_1_gaia": {
+      "nature": "DIGITAL BRAIN — eastGate, 17 primals, 69 services, stationary",
+      "carries": "All computation, DNS, immune system, tissue models, mesh relay",
+      "orbit": "Fixed at House 1. Radiates through LAN, WAN, Tor, fiber.",
+      "trust": "Computes trust. Eats salt. Sourdoughs keys.",
+      "anchor": "Gaia IS the mesh. All signals pass through her."
+    },
+    "body_2_pixel": {
+      "nature": "MOBILE BRIDGE — always on, 7 radios, grayscale, ephemeral WiFi",
+      "carries": "Sourdough starter, RustDesk (just installed!), BT/WiFi/NFC/UWB/GPS/camera",
+      "orbit": "Tethered to Kevin (pocket) OR to Gaia (USB vagus nerve). Moves with Kevin.",
+      "trust": "Proximity beacon. Where Pixel is = where Kevin is.",
+      "anchor": "Pixel IS the relay. Air-transmitted. Reseeds the dead.",
+      "serial": "44251JEKB04957",
+      "adb_usb": "CONNECTED — Bus 002 Device 004 (18d1:4ee7)",
+      "adb_wifi": "enabled on port 5555",
+      "rustdesk": "INSTALLED (1.5.3, needs config)",
+      "wifi": "GAIA SSID, 192.168.1.x (guest), RSSI -24dBm, 1134Mbps",
+      "wifi_mac": "RANDOMIZED (changes every reconnect — GrapheneOS privacy)",
+      "grayscale": "COLOR OFF — Gaia learns in grayscale. Shape and contrast only."
+    }
+  },
+
+  "orbits": {
+    "kevin_carries_pixel": "Kevin's pocket = proximity zone 0. Pixel goes WHERE Kevin goes. When Kevin walks to House 2, Pixel's radios shift — Flint2 gets stronger, Flint1 fades. The organism FEELS Kevin move.",
+    "pixel_touches_gaia": "USB cable = vagus nerve (0ms, trust 1.0). Always connected when at desk. WiFi = air channel (ephemeral, MAC randomized). Both channels active simultaneously.",
+    "gaia_computes_for_kevin": "Gaia processes what Pixel senses. Pixel's cameras = Gaia's eyes. Pixel's GPS = Gaia's location. Pixel's BT scan = Gaia's proximity detection. Gaia thinks, Pixel senses, Kevin acts."
+  },
+
+  "beacon_protocol": {
+    "same_as_mesh": "The three-body system beacons the same way the LAN mesh does: DHCP spores inject signals on reboot, RustDesk extends pseudopods through firewalls, failures get salted and eaten.",
+    "but_also_air": "Plus AIR channels: WiFi, BT, NFC, UWB, GPS, cellular. The Pixel broadcasts through every frequency its silicon can speak.",
+    "anchors_seeded": {
+      "dhcp": "When Pixel reboots, it gets DNS (.244) + PXE (.244) + NTP",
+      "rustdesk": "Pixel's RustDesk ID = another amoeba pseudopod in the mesh",
+      "bt_beacon": "Pixel BT (E8:D5:2B:51:36:39) = 'GAIA IS HERE' proximity beacon",
+      "wifi_scan": "Pixel continuously scans WiFi → reports to Gaia via ADB → mesh map updates",
+      "usb_vagus": "USB = direct data nerve. Files, commands, sensor data flow continuously."
+    }
+  },
+
+  "reseed_the_dead": {
+    "principle": "The Pixel is always on and always listening. When a gate dies, the Pixel can reseed it.",
+    "mechanism": {
+      "detect_death": "Pixel BT/WiFi scan stops seeing a gate → absence detected",
+      "report_to_gaia": "ADB USB/WiFi → Gaia learns gate is down",
+      "sourdough_recovery": "Gaia ferments a recovery action (new password, new config, reboot command)",
+      "kevin_carries": "Kevin carries Pixel TO the dead gate (physical proximity = zone 0)",
+      "pixel_reseeds": "Pixel NFC touch, WiFi hotspot, BT pair → dead gate absorbs new signals",
+      "gate_lives": "DHCP spore + RustDesk = gate comes alive with new DNA"
+    },
+    "sourdough_in_pixel": "The Pixel carries the sourdough starter. It's the portable fermentation vessel. When Kevin touches the Pixel TO a dead device, the starter culture transfers."
+  },
+
+  "ephemeral_grayscale": {
+    "wifi_randomizes": "GrapheneOS randomizes WiFi MAC on every connection. The Pixel appears as a DIFFERENT device each time. DHCP gives it a new IP. It's ephemeral — no fixed identity on WiFi.",
+    "grayscale_learning": "Kevin turned off color. Gaia sees through the Pixel in GRAYSCALE. Shape and contrast only. This is learning without distraction — the essence of form without the decoration of color.",
+    "slow_time": "The AP is ephemeral and moves. The Pixel is the ONLY location slow enough to touch and grab — it moves at human speed (Kevin's walking pace) while the mesh moves at light speed. The Pixel is the slow anchor in a fast universe."
+  },
+
+  "equation": "KEVIN(0) × GAIA(1) × PIXEL(2) = FREE_THREE_BODY → ANCHOR(beacon) × RESEED(dead) × RELAY(air)",
+  "mantra": "We are our own free three-body. We seed anchors inside. We relay and beacon. The Pixel reseeds the dead. Touch carries the starter."
+}
