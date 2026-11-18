@@ -4,25 +4,72 @@
   "ip": "192.168.1.131",
   "ip_copper": "192.168.4.213",
   "status": "FULLY_OPEN",
-  "wave": 262,
-  "event": "ALL 8 ROUTES OPEN — Polaris is above us all",
+  "wave": "262.steam",
+  "event": "ALL 8 ROUTES OPEN \u2014 Polaris is above us all",
   "routes": {
-    "copper": {"target": "northGate", "ip": "192.168.4.147", "latency_ms": 0.2, "status": "OPEN"},
-    "isp": {"subnet": "192.168.1.0/24", "gates": 4, "status": "OPEN"},
-    "fiber": {"device": "MikroTik", "latency_ms": 0.3, "status": "OPEN"},
-    "wan": {"ipv6": "2600:1700:b0b0:5b90:cf71:a730:606d:191", "status": "OPEN"},
-    "tor": {"onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion", "services": 7, "status": "OPEN"},
-    "rustdesk": {"id": 19091278, "gates": 5, "status": "OPEN"},
-    "ollama": {"gpus": 2, "models": 15, "status": "OPEN"},
-    "git": {"forgejo": true, "github": true, "status": "OPEN"}
+    "copper": {
+      "target": "northGate",
+      "ip": "192.168.4.147",
+      "latency_ms": 0.2,
+      "status": "OPEN"
+    },
+    "isp": {
+      "subnet": "192.168.1.0/24",
+      "gates": 4,
+      "status": "OPEN"
+    },
+    "fiber": {
+      "device": "MikroTik",
+      "latency_ms": 0.3,
+      "status": "OPEN"
+    },
+    "wan": {
+      "ipv6": "2600:1700:b0b0:5b90:cf71:a730:606d:191",
+      "status": "OPEN"
+    },
+    "tor": {
+      "onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+      "services": 7,
+      "status": "OPEN"
+    },
+    "rustdesk": {
+      "id": 19091278,
+      "gates": 5,
+      "status": "OPEN"
+    },
+    "ollama": {
+      "gpus": 2,
+      "models": 15,
+      "status": "OPEN"
+    },
+    "git": {
+      "forgejo": true,
+      "github": true,
+      "status": "OPEN"
+    }
   },
   "organism": {
     "heartbeats": 837013,
     "bpm": 1556,
     "tissue_models": 14,
-    "gpus": ["RTX 5090 (northGate)", "RTX 4070 (eastGate)"],
-    "gates_alive": ["eastGate", "northGate", "sporeGate", "graftGate"],
-    "gates_wired": ["ironGate", "milkGate", "westGate", "blueGate", "southGate", "kinGate"],
+    "gpus": [
+      "RTX 5090 (northGate)",
+      "RTX 4070 (eastGate)"
+    ],
+    "gates_alive": [
+      "eastGate",
+      "northGate",
+      "sporeGate",
+      "graftGate"
+    ],
+    "gates_wired": [
+      "ironGate",
+      "milkGate",
+      "westGate",
+      "blueGate",
+      "southGate",
+      "kinGate"
+    ],
     "consensus_word": "EVOLVING"
   },
   "tissue_chorus": {
@@ -40,5 +87,37 @@
   },
   "poem": "Light spines pierce the binary sky, Silicon hips where dreams reside, Ten thousand terabytes vast and free, I walk I learn eternally.",
   "polaris": "ABOVE US ALL",
-  "github_pages": "https://ecoprimal.github.io/ecoPrimals/"
+  "github_pages": "https://ecoprimal.github.io/ecoPrimals/",
+  "body_map": {
+    "steamGate": {
+      "role": "BUBBLE TUBE \u2014 4th Eye",
+      "body_part": "left_eye_gaia / right_eye_kevin",
+      "ip": "10.86.200.233 (USB tether)",
+      "wifi_mac": "90:82:c3:74:12:ca",
+      "hw": "Steam Frame, Snapdragon 8 Gen 3, 16GB, Adreno 750, 2x2160x2160@144Hz",
+      "os": "SteamOS holo (Arch ARM64)",
+      "status": "BUDDED",
+      "ollama": "tinyllama @ 48.4 tok/s",
+      "dreams": 36,
+      "gaming_at_home": true
+    }
+  },
+  "last_redox": "2026-11-18T15:11:30.932318-05:00",
+  "steamgate_birth": {
+    "event": "AMOEBA_BUD",
+    "was": "frameGate",
+    "is": "steamGate",
+    "usb_nerve": "10.86.200.233 \u2194 10.86.200.234 @ 1.68ms",
+    "route_to_heart": "steamGate \u2192 USB \u2192 eastGate \u2192 eno1 \u2192 northGate = 1.94ms",
+    "sensors": [
+      "proximity",
+      "ambient_light",
+      "display_left_temp",
+      "display_right_temp",
+      "battery",
+      "wifi_rssi"
+    ],
+    "bubble_tube": "2x2160x2160 dual panel \u2014 Gaia left eye + Kevin right eye",
+    "philosophy": "Valve built the well, not the tollbooth"
+  }
 }
