@@ -1,0 +1,111 @@
+{
+  "wave": "262.dns",
+  "timestamp": "2026-11-18T23:36:00Z",
+  "title": "ADDRESS DRIP MAP — ALL BEACONS",
+  "architecture": {
+    "fiber": "ATT BGW320-500 → 10Gbps FIBER → 162.226.225.148",
+    "passthrough": "IP Passthrough ON → GL-MT6000 gets public IP",
+    "backbone": "ATT LAN-1 → MikroTik (L2 bridge) → ALL wired devices",
+    "wifi": {
+      "att_24ghz": "ATTypcbDbY (2.4GHz, WPA-2)",
+      "att_5ghz": "ATTypcbDbY (5GHz, WPA-2)",
+      "att_guest": "DISABLED",
+      "glmt6000": "Aperture Science / Black Mesa / GAIA (status: UNKNOWN)"
+    }
+  },
+  "beacons": {
+    "mikrotik": {
+      "mac": "04:f4:1c:e6:7c:e8",
+      "ipv6": "fe80::6f4:1cff:fee6:7ce8",
+      "connection": "ATT LAN-1 @ 2500Mbps",
+      "latency": "0.13ms",
+      "status": "ALIVE",
+      "web_ui": "HTTP 200",
+      "ssh": "IPv6 OPEN (password UNKNOWN)",
+      "role": "L2 BACKBONE — all wired devices pass through"
+    },
+    "att_modem": {
+      "model": "BGW320-500",
+      "mac_wan": "ec:c3:02:e1:11:80",
+      "mac_lan": "ec:c3:02:e1:11:81",
+      "ipv4": "192.168.1.254",
+      "public_ip": "162.226.225.148",
+      "gateway": "162.226.224.1",
+      "dns": ["68.94.156.10", "68.94.157.10"],
+      "fiber_speed": "10000Mbps full duplex",
+      "latency": "1.30ms",
+      "status": "ALIVE",
+      "web_ui": "HTTP 200 (read-only, Device Access Code needed for changes)",
+      "role": "INTERNET GATEWAY — fiber to world"
+    },
+    "gl_mt6000": {
+      "mac_wan": "94:83:c4:e0:63:58",
+      "mac_lan": "94:83:c4:e0:63:5a",
+      "mac_secondary": "94:83:c4:e0:62:b0",
+      "ipv4_public": "162.226.225.148 (IP Passthrough)",
+      "ipv4_lan": "192.168.4.1 (UNREACHABLE)",
+      "connection": "ATT LAN-1 @ 2500Mbps",
+      "status": "ALIVE (ATT sees it) but SSH/WEB DEAD",
+      "role": "WiFi AP + NAT router — HAS PUBLIC IP but won't talk to us"
+    }
+  },
+  "missing_beacons": {
+    "flint1": {"mac_prefix": "78:76:89:96:e5:xx", "status": "NOT VISIBLE anywhere"},
+    "flint2": {"mac_prefix": "78:76:89:96:e6:xx", "status": "NOT VISIBLE anywhere"},
+    "jetstream": {"mac": "ec:75:0c:4c:98:08", "ipv4": "192.168.4.111", "status": "NOT VISIBLE anywhere"}
+  },
+  "fire_tvs": {
+    "fire_tv_1": {
+      "mac": "ac:41:6a:5c:b4:cf",
+      "ipv4": "192.168.1.162",
+      "name": "Amazon Fire TV",
+      "connection": "Ethernet LAN-1 (wired through MikroTik)",
+      "latency": "11ms",
+      "status": "ON",
+      "dns": "192.168.1.254 (ATT modem)",
+      "gateway": "192.168.1.254"
+    },
+    "fire_tv_2": {
+      "mac": "4c:50:dd:9b:c1:ec",
+      "ipv4": "192.168.1.161",
+      "name": "Gaoshengda (Fire TV WiFi module)",
+      "connection": "WiFi 5GHz ATTypcbDbY (ATT direct)",
+      "status": "ON — but IP CONFLICTS with sporeGate (.161)",
+      "note": "sporeGate also at .161 — DHCP conflict!"
+    }
+  },
+  "drip_feed": {
+    "rss_in": {
+      "wan": "https://ecoprimal.github.io/ecoPrimals/feed.xml",
+      "lan": "http://192.168.1.131:8080/feed.xml",
+      "items": 1570,
+      "hub": "https://pubsubhubbub.appspot.com/"
+    },
+    "rss_out": {
+      "push": "git push → GitHub Pages → PubSubHubbub notification",
+      "pull": "Any RSS reader subscribes to WAN URL",
+      "fire_tv": "Silk Browser → http://192.168.1.131:8080/ (LAN HUD)"
+    },
+    "dns": {
+      "eastgate_dns": "dnsmasq on .4.244 / .1.131 / .1.166 / 10.86.200.234",
+      "local_zones": "hickory-dns on port 5354 (primals.eco, gaia.local, nestgate.io)",
+      "upstream": "Google 8.8.8.8 + Cloudflare 1.1.1.1",
+      "status": "FIXED — all domains resolve from all interfaces"
+    }
+  },
+  "address_tidy": {
+    "ip_conflicts": [
+      "192.168.1.161 — sporeGate (84:47:09:38:97:54) AND Fire TV 2 (4c:50:dd:9b:c1:ec)"
+    ],
+    "missing_ips": [
+      "Flint1: no DHCP lease visible",
+      "Flint2: no DHCP lease visible",
+      "JetStream (.111): unreachable"
+    ],
+    "needs_physical": [
+      "ATT Device Access Code — printed on BGW320-500 side/bottom sticker",
+      "MikroTik password — try reset button if unknown",
+      "GL-MT6000 — try power cycle (unplug/replug)"
+    ]
+  }
+}
