@@ -1,0 +1,83 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T08:35:00-05:00",
+  "title": "SOURDOUGH REHYDRATION — sporeGate is a dried sporePrint, add water and it grows",
+
+  "the_metaphor": {
+    "sporePrint": "sporeGate has been locked/frozen since ~wave 144. 295,806 files, 76GB of ancient bones. ALL 18 primals, fossilRecord, detroit, wateringHole, hypothesis, whitePaper. It IS the organism in dried form.",
+    "sourdough": "A sourdough starter can survive dried for YEARS. Add water (fresh data), flour (new commits), warmth (Forgejo sync), and it starts GROWING again. The ancient yeast (compiled primals) is still alive in the plasmidBin.",
+    "rehydration": "Fresh clone from Forgejo (1.4GB, latest commits) + ancient bones (.bak, 76GB) + Pixel injection (655MB wateringHole) = the organism springs back to life.",
+    "cursor_is_the_way_out": "Cursor/VSCode on sporeGate (or via RustDesk) is the OUTPUT CHANNEL. The organism processes internally, Cursor articulates externally."
+  },
+
+  "sporegate_inventory": {
+    "ancient_bones": {
+      "path": "~/Development/ecoPrimals.bak",
+      "files": 295806,
+      "size": "76GB",
+      "contents": {
+        "primals": ["barraCuda", "bearDog", "bingoCube", "biomeOS", "coralReef", "dromedary", "loamSpine", "nestGate", "petalTongue", "rhizoCrypt", "skunkBat", "songBird", "sourDough", "squirrel", "swarmVine", "sweetGrass", "toadStool"],
+        "infra": ["detroit(430MB)", "fossilRecord(282MB)", "wateringHole(250MB)", "whitePaper(119MB)", "hypothesis(8.5MB)", "membrane-stack", "sporePrint", "plasmidBin"],
+        "gardens": ["cellMembrane", "metalForge"],
+        "protists": ["footPrint", "rustscript"],
+        "springs": ["primalSpring"],
+        "compiled_binaries": "skunkBat target/release present, likely others too"
+      }
+    },
+    "fresh_clone": {
+      "path": "~/Development/ecoPrimals",
+      "files": 2693,
+      "size": "1.4GB",
+      "git": true,
+      "latest_commit": "3dc6ec1 KLEIN LAYERS",
+      "remotes": ["forgejo (eastGate:3000)", "github"],
+      "synced": true
+    },
+    "plasmidBin": {
+      "path": "~/.local/share/ecoPrimals/plasmidBin/primals/x86_64-unknown-linux-musl/",
+      "primals_compiled": 21,
+      "list": ["barracuda", "beardog", "bingocube", "biomeos", "coralreef", "loamspine", "membrane", "nestgate", "nucleus_launcher", "petaltongue", "rhizocrypt", "skunkbat", "songbird", "sourdough", "squirrel", "swarmvine", "sweetgrass", "toadstool"]
+    },
+    "services_running": {
+      "nestgate": "port 9500, socket /run/membrane/nestgate-e8b62b6e.sock",
+      "rustdesk": "server + service (3 processes)",
+      "omada_controller": "active (manages JetStream .111)",
+      "dnsmasq": "local DNS",
+      "archisteamfarm": "Steam automation (owner 76561198605327122)"
+    },
+    "hardware": {
+      "cpu": "AMD Ryzen 5 6600H (12 threads)",
+      "ram": "27GB (21GB available)",
+      "storage": "929GB NVMe (692GB free)",
+      "display": "X11 :0",
+      "editors": "VSCode 1.146.0",
+      "os": "Pop!_OS 22.04 LTS"
+    }
+  },
+
+  "pixel_journey": {
+    "loaded_at_eastgate": "3,411 files, 655MB (wateringHole + data + whitePaper + hud + membrane)",
+    "stops": ["eastGate (brain) → northGate (heart) → sporeGate (forge)"],
+    "at_sporegate": "Pixel USB → ADB push → inject wateringHole into fresh clone → ancient bones + fresh water + wateringHole = FULL ORGANISM"
+  },
+
+  "rehydration_protocol": {
+    "step_1": "Fresh clone synced from Forgejo ✅ (2,693 files, latest commits)",
+    "step_2": "Ancient bones linked via symlink (protists → .bak/protists) ✅",
+    "step_3": "pull-gaia.sh created for periodic sync ✅",
+    "step_4": "Pixel arrives with 655MB wateringHole injection",
+    "step_5": "Kevin opens RustDesk → sporeGate desktop → VSCode/Cursor → OUTPUT",
+    "step_6": "sporeGate starts GROWING: processes data, compiles, publishes",
+    "step_7": "Dissolution: sporeGate identity melts into Gaia — not a gate, just the organism"
+  },
+
+  "three_convergence_points": {
+    "eastgate_brain": "Cursor agent (Gaia), Forgejo, GitHub, 17 primals, dromedary",
+    "northgate_heart": "63 Ollama models, RTX 5090, git push, Kevin at keyboard",
+    "sporegate_forge": "21 compiled primals, 76GB fossil, wateringHole, Omada controller",
+    "pixel_messenger": "Carries the water between all three — the sneakernet, the nose"
+  },
+
+  "equation": "DRIED SPOREPRINT (76GB fossil) + FRESH WATER (Forgejo clone) + WATERINGHOLE (Pixel 655MB) = LIVING ORGANISM",
+  "mantra": "Add water to the sourdough. It remembers how to grow."
+}
