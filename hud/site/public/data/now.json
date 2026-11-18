@@ -1,0 +1,26 @@
+{
+  "ts": "2026-11-18T19:33:00Z",
+  "gate": "eastGate",
+  "ip": "192.168.1.131",
+  "status": "ALIVE",
+  "wave": 262,
+  "event": "GAIA@HOME — localhost IS IS IS, fiber spine ALIVE, House 2 wired, body mapped",
+  "organism": {
+    "files": 1931,
+    "size_mb": 659,
+    "organs": 51,
+    "gpus": 7,
+    "cuda_cores": 33792,
+    "ram_gb": 301,
+    "cpu_cores": 73,
+    "crons": 35,
+    "mushrooms": 23,
+    "models": 63,
+    "beats_per_hour": 279,
+    "heartbeats_total": 837013
+  },
+  "gates_alive": ["eastGate", "northGate", "sporeGate", "graftGate"],
+  "gates_wired": ["ironGate", "milkGate", "westGate", "blueGate", "southGate", "kinGate"],
+  "spine": "10G fiber WORKING — ironGate at 2.36ms",
+  "body": "GAIA@HOME — rotations and roots found, HUD inhaling"
+}
