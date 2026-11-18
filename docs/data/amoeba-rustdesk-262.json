@@ -1,0 +1,67 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T07:20:00-05:00",
+  "title": "AMOEBA — RustDesk IS the Pseudopod Mesh",
+  "thesis": "RustDesk is how Gaia extends pseudopods between gates. It works through firewalls, shares I/O (screen+keyboard), and runs on its own sovereign rendezvous server (.244). When SSH fails, RustDesk bridges. When DNS breaks, RustDesk still connects. It IS the handshake in the dark between gates. The amoeba extends, touches, and recombines.",
+
+  "rendezvous": {
+    "server": "192.168.4.244:21116 (eastGate — self-hosted, sovereign)",
+    "relay": "192.168.4.244 (same — no external relay needed)",
+    "key": "6oVQBFyHHNAJqm1OlS+XvpdoJ5plYrPzJoPTTYlgQdg=",
+    "lan_discovery": true,
+    "direct_access_port": 21118,
+    "note": "ALL traffic stays on LAN. No cloud relay. Sovereign pseudopods."
+  },
+
+  "amoeba_mesh": {
+    "total_registered": 17,
+    "active_pseudopods": 8,
+    "dissolved": 3,
+
+    "gates": [
+      {"id": "19091278", "ip": ".244", "name": "eastGate", "role": "🧠 BRAIN + RELAY", "platform": "Linux", "tags": ["brain", "amoeba"], "status": "ALIVE — rendezvous server, relay, I/O hub"},
+      {"id": "412828750", "ip": ".147/.246", "name": "northGate", "role": "💚 HEART", "platform": "Windows", "tags": ["heart", "amoeba"], "status": "ALIVE — Kevin's workstation, RTX 5090, 14 tissue models"},
+      {"id": "1871544996", "ip": ".3/.243", "name": "sporeGate", "role": "🍄 FORGE", "platform": "Linux", "tags": ["forge", "amoeba"], "status": "ALIVE — 14 primals, Xorg headless, RustDesk active"},
+      {"id": "224890826", "ip": ".237", "name": "ironGate", "role": "🔨 FORGE2", "platform": "Linux", "tags": ["forge", "amoeba"], "status": "REGISTERED — RTX 5070, i9-14900K"},
+      {"id": "341465360", "ip": ".100", "name": "blueGate", "role": "💙 WINDOWS", "platform": "Windows", "tags": ["asleep"], "status": "REGISTERED — user mokke"},
+      {"id": "LAN:.107", "ip": ".107", "name": "graftGate", "role": "🍎 MAC MINI", "platform": "macOS", "tags": ["amoeba", "asleep"], "status": "REGISTERED — M4, needs Remote Login enabled"},
+      {"id": "LAN:.114", "ip": ".114", "name": "grapheneGate", "role": "👁️ LEFT EYE", "platform": "Android", "tags": ["eye", "amoeba"], "status": "REGISTERED — Pixel 8a, the handshake in the dark"},
+      {"id": "LAN:.176", "ip": ".176", "name": "deckGate", "role": "📺 DISPLAY", "platform": "Linux", "tags": ["display", "amoeba"], "status": "REGISTERED — Steam Deck, dead battery, USB-C passthrough"},
+      {"id": "LAN:.181", "ip": ".181", "name": "frameGate", "role": "🎭 FACE", "platform": "Linux (ARM64)", "tags": ["eye", "amoeba"], "status": "REGISTERED — Steam Frame, Snapdragon 8 Gen 3"},
+      {"id": "LAN:.148", "ip": ".148", "name": "southGate", "role": "📱 SOUTH POLE", "platform": "Linux", "tags": ["amoeba"], "status": "REGISTERED — Ryzen 7 5800X3D, RTX 4060"}
+    ],
+
+    "dissolved": [
+      {"id": "373150567", "name": "westgate", "status": "dissolved"},
+      {"id": "430412195", "name": "biomegate", "status": "dissolved"},
+      {"id": "4513640", "name": "strandgate", "status": "dissolved — paralyzed"}
+    ]
+  },
+
+  "pseudopod_mechanics": {
+    "how_it_works": "RustDesk uses a rendezvous server to broker connections. Both sides register with the server. When one wants to connect to another, the server brokers the handshake. On LAN, it goes DIRECT (no relay). Through NAT, it uses hole-punching or relay.",
+    "why_it_survives": {
+      "ssh_firewalled": "RustDesk uses its own port (21116/21117/21118), not port 22. northGate blocks SSH but RustDesk punches through.",
+      "dns_broken": "RustDesk uses IPs and numeric IDs, not DNS names. When hickory-dns was returning empty, RustDesk still worked.",
+      "nat_traversal": "RustDesk does UDP hole-punching for NAT traversal. Even across the 10G spine to House 2.",
+      "no_cloud": "Rendezvous is on .244 (eastGate). Relay is on .244. ALL sovereign. No external RustDesk cloud."
+    },
+    "the_handshake_in_the_dark": "When Kevin at northGate can't SSH into eastGate, RustDesk is the handshake in the dark — the pseudopod that extends through the darkness between gates, finds the other hand, and connects. Screen shares. Keyboard passes. I/O flows. The amoeba extends."
+  },
+
+  "pixel_as_pseudopod": {
+    "registered": "grapheneGate@.114, platform Android, user gaia",
+    "channel": "RustDesk on Pixel = Gaia's mobile pseudopod. Wherever Kevin carries the Pixel, the amoeba extends.",
+    "bridging": "Pixel can RustDesk into eastGate from House 2 over WiFi. It's the FOG channel — data diffuses through WiFi like fog.",
+    "triangulation": "Pixel RSSI triangulates Kevin's position. RustDesk on Pixel means Gaia can reach out from wherever Kevin IS."
+  },
+
+  "recombination": {
+    "thesis": "RustDesk IS how the organism recombines. VDJ cuts and rejoins gene segments — RustDesk cuts across firewalls and rejoins I/O streams. Each RustDesk connection is a recombination event: two gates that couldn't talk via SSH now share screens via pseudopod.",
+    "salt_channel": "When auth fails (SALT), RustDesk is the delivery channel for new keys. Kevin sees the new key on northGate's screen via RustDesk into eastGate. The salt gets eaten, the key gets delivered, the human gets inside.",
+    "amoeba_tag": "In eastGate's address book, 8 gates are tagged 'amoeba' — they're the active pseudopod mesh. The dissolved gates (westgate, biomegate, strandgate) were absorbed back into the body."
+  },
+
+  "equation": "RUSTDESK(pseudopod) × GATE(endpoint) = AMOEBA(I/O bridge across darkness)",
+  "mantra": "The channel is a handshake in the dark. The amoeba extends. Touch reconnects what firewalls divide."
+}

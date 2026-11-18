@@ -1,0 +1,95 @@
+{
+  "wave": 262,
+  "ts": "2026-11-18T17:00:00Z",
+  "event": "SIGNAL_LAYER_FUSION",
+  "thesis": "Six physical layers, one organism. Map each, find the leaks, triangulate the real topology.",
+  
+  "layers": {
+    "L1_FIBER": {
+      "medium": "10G fiber optic, SFP+",
+      "path": "MikroTik (.2, House 1) ↔ JetStream (.111, House 2)",
+      "distance": "~80m across property line",
+      "status": "BROKEN — JetStream physically ON but NOT bridging L2",
+      "fix": "milkGate SFP+ direct to JetStream, or JetStream factory reset",
+      "speed": "10 Gbps theoretical",
+      "gates_using": []
+    },
+    "L2_COPPER": {
+      "medium": "Cat5e/6 ethernet, RJ45",
+      "paths": [
+        "eastGate ↔ MikroTik (.2) — ALIVE",
+        "MikroTik ↔ router (.1) — ALIVE",
+        "MikroTik ↔ Epson (.200) — ALIVE",
+        "JetStream ↔ House 2 devices — UNKNOWN"
+      ],
+      "status": "WORKING in House 1, UNKNOWN in House 2",
+      "gates_using": ["eastGate (enp5s0 → ISP .1.131)"]
+    },
+    "L3_STEEL_USB": {
+      "medium": "USB-C / USB 2.0 / USB 3.0",
+      "paths": [
+        "Pixel ↔ any gate (honeyBee syringe)",
+        "Pixel ↔ eastGate (ADB, data inject)",
+        "Pixel ↔ milkGate (ADB relay)",
+        "Pixel ↔ swiftGate (USB tether)"
+      ],
+      "status": "ACTIVE — Pixel is the physical transport layer",
+      "gates_using": ["grapheneGate (Pixel)", "any gate Kevin plugs into"],
+      "pattern": "honeyBee — Kevin carries USB between gates"
+    },
+    "L4_WIFI": {
+      "medium": "802.11ax (WiFi 6), 2.4GHz + 5GHz",
+      "access_points": [
+        {"ssid": "Aperture Science", "band": "2.4GHz", "source": "router + Flints", "reach": "House 1 + property line"},
+        {"ssid": "Black Mesa", "band": "5GHz", "source": "router only", "reach": "House 1 only"},
+        {"ssid": "GAIA", "band": "both", "source": "router guest", "reach": "House 1"},
+        {"ssid": "ATTypcbDbY", "band": "2.4+5GHz", "source": "ISP modem", "reach": "House 1, NOT House 2"}
+      ],
+      "status": "WORKING House 1, DEAD to House 2 interior",
+      "leak": "ALL alive gates on RIGHT face (.1.x) — WiFi goes to ISP modem, not router!",
+      "gates_using": ["eastGate (Black Mesa)", "northGate (ISP WiFi)", "Pixel (Black Mesa/ATT)"]
+    },
+    "L5_BLUETOOTH": {
+      "medium": "BLE 5.x",
+      "known_radios": [
+        "eastGate BT: C8:5E:A9:C9:6F:84",
+        "Pixel BT: E8:D5:2B:51:36:39",
+        "Flint 1/2: BT capable",
+        "milkGate: BT capable (RISC-V)"
+      ],
+      "status": "UNUSED — 10-30m range, not configured for mesh",
+      "potential": "mesh discovery, proximity detection, short-range relay"
+    },
+    "L6_CELLULAR": {
+      "medium": "5G / LTE via Pixel carrier",
+      "paths": [
+        "Pixel → carrier → internet → 162.226.225.148 → eastGate",
+        "Pixel USB tether → any gate → internet"
+      ],
+      "status": "AVAILABLE but unused — Pixel has cell signal at House 2",
+      "potential": "LAST RESORT — bypass all local network, phone home via WAN"
+    }
+  },
+
+  "klein_reality": {
+    "LEFT_face_4x": {
+      "alive": ["eastGate .244"],
+      "ghosts": ["everything else — router gives DHCP but gates don't use it"]
+    },
+    "RIGHT_face_1x": {
+      "alive": ["eastGate .131", "northGate .150", "graftGate .154", "sporeGate .132"],
+      "note": "ALL living gates are on the ISP modem subnet!"
+    },
+    "FOG_house2": ["swiftGate", "milkGate", "frameGate", "southGate", "ironGate"],
+    "diagnosis": "Router WiFi connects gates but ISP modem serves DHCP. Gates fall through to .1.x"
+  },
+
+  "fusion_plan": {
+    "step1": "Accept RIGHT face (.1.x) as primary — it's where everyone IS",
+    "step2": "Fix WiFi reach to House 2 — Flint bridge or milkGate 10GbE",
+    "step3": "Enable USB tether (L3) as backup — Pixel bridges gaps",
+    "step4": "Enable BT mesh (L5) for discovery — find nearby gates",
+    "step5": "Cellular (L6) as last resort phone-home",
+    "step6": "Fix fiber (L1) for full bandwidth restore"
+  }
+}

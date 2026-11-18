@@ -1,0 +1,75 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T11:20:00Z",
+  "event": "WAN TRIAD ANCHORED — ingress/egress mapped",
+  
+  "triad": {
+    "reddit": {
+      "url": "https://reddit.com",
+      "direct": "HTTP 301 ✅",
+      "tor": "HTTP 301 ✅",
+      "role": "SOCIAL SENSOR — what humans are talking about",
+      "rss": "https://www.reddit.com/r/{subreddit}/.rss",
+      "pore_type": "ingress (absorb)"
+    },
+    "github": {
+      "url": "https://github.com",
+      "direct": "HTTP 200 ✅",
+      "tor": "HTTP 200 ✅",
+      "role": "CODE NERVE — push/pull, the organism's git synapse",
+      "api": "https://api.github.com/orgs/ecoPrimals",
+      "pore_type": "bidirectional (push AND pull)"
+    },
+    "myspace": {
+      "url": "https://myspace.com",
+      "direct": "HTTP 200 ✅",
+      "tor": "HTTP 200 ✅",
+      "role": "CREATIVE IDENTITY — retro anchor, the OG social membrane",
+      "pore_type": "ingress (absorb cultural DNA)"
+    }
+  },
+  
+  "grey_nutrition": {
+    "wikipedia": {
+      "url": "https://en.wikipedia.org",
+      "direct": "HTTP 301 ✅",
+      "tor": "HTTP 302 ✅ (1.2s)",
+      "role": "STABLE GREY NUTRITION — neutral knowledge, no agenda",
+      "rss_feeds": {
+        "recent_changes": "https://en.wikipedia.org/w/api.php?action=feedrecentchanges&feedformat=atom",
+        "featured": "https://en.wikipedia.org/w/api.php?action=featuredfeed&feed=featured&feedformat=atom",
+        "random": "https://en.wikipedia.org/wiki/Special:Random"
+      },
+      "ingestion": "Tor → Wikipedia → RSS → masticate → knowledge graph",
+      "principle": "Tor eat and breathe INTO Wikipedia as grey nutrition of STABLE"
+    }
+  },
+  
+  "tor_identity": {
+    "active": true,
+    "exit_ip": "89.147.110.251",
+    "onion_address": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+    "role": "Identity is the warps of the onion layer — anonymous ingestion"
+  },
+  
+  "wan_architecture": {
+    "inside": "LAN 192.168.4.0/24 — all gates, primals, sensors",
+    "neck": "eastGate — bridges INSIDE ↔ OUTSIDE, MASQUERADE on enp5s0",
+    "blackhole": "ATT ISP modem at 192.168.1.254 — all WAN funnels here",
+    "outside": "Internet — triad anchors + Wikipedia grey nutrition",
+    "identity_layers": {
+      "clear": "Direct HTTP — organism identified (public IP)",
+      "tor": "SOCKS5 localhost:9050 — anonymous (89.147.110.251)",
+      "onion": "Hidden service — others reach us anonymously"
+    },
+    "traffic_mix": "admin/direct + anonymous/tor = mixed identity on WAN",
+    "principle": "WAN sees us as tiny (one IP), we are big INSIDE (13 gates)"
+  },
+  
+  "gis_to_rss": {
+    "triad_as_gis": "Reddit=social_coordinate, GitHub=code_coordinate, MySpace=creative_coordinate",
+    "wikipedia_as_map": "Wikipedia RSS is the GIS of all human knowledge",
+    "tor_as_transport": "Tor is HOW we navigate the map anonymously",
+    "osint_flow": "WAN → Tor pores → RSS spine → masticate → knowledge graph → GUTS"
+  }
+}

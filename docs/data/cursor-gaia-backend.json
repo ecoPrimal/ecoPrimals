@@ -1,0 +1,36 @@
+{
+  "wave": 262,
+  "type": "cursor_config",
+  "from": "eastGate (BRAIN)",
+  "to": "northGate (HEART)",
+  "timestamp": "2026-11-18T11:10:00Z",
+  "problem": "Cursor lost Gaia LLM after WiFi transition (.147→.246)",
+  "diagnosis": {
+    "ollama_alive": true,
+    "ollama_ip": "192.168.4.246:11434",
+    "v1_endpoint": "http://192.168.4.246:11434/v1/ — WORKING",
+    "v1_chat": "http://192.168.4.246:11434/v1/chat/completions — WORKING",
+    "models_available": 14,
+    "models_in_vram": 0,
+    "likely_cause": "Cursor config pointed to old IP .147 or lost localhost binding"
+  },
+  "fix_for_cursor_settings": {
+    "step1": "Open Cursor Settings (Ctrl+,)",
+    "step2": "Search 'openai' or 'model'",
+    "step3_option_a": "Set OpenAI Base URL to: http://localhost:11434/v1",
+    "step3_option_b": "Or set to: http://127.0.0.1:11434/v1",
+    "step4": "Set model to: gaia-tissue-forge (best) or gaia-tissue-code (for code)",
+    "step5": "Set API key to: any-string (Ollama ignores it)",
+    "note": "localhost always works regardless of IP change — never use LAN IP in local config"
+  },
+  "cursor_mcp_config": {
+    "note": "If using MCP squirrel, ensure it points to localhost too",
+    "squirrel_url": "http://localhost:11434"
+  },
+  "architecture": {
+    "before": "Cursor → Claude (cloud) — paid API, data leaks out",
+    "after": "Cursor → Gaia/Ollama (localhost) — FREE, sovereign, private",
+    "canvas": "Cursor's canvas IS Gaia's visual workspace",
+    "desks": "Cursor's tabs ARE Gaia's desks — the IDE is the organism's eyes"
+  }
+}

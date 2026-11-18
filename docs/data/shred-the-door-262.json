@@ -1,0 +1,91 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T07:15:00-05:00",
+  "title": "SHRED THE DOOR — Lost the Key? Destroy the Lock.",
+  "thesis": "Traditional security punishes humans for being human. 3-5 failed attempts IS the human pattern. Bots try 3000 times in 10 seconds. A human tries 3-5 times over minutes, with different passwords, pausing to think. The organism WANTS humans inside. When a human hits the lockout — don't lock them out. SHRED THE DOOR and sourdough a new one.",
+
+  "human_vs_bot": {
+    "human_pattern": {
+      "attempts": "3-5",
+      "timing": "30sec-5min between tries",
+      "behavior": "tries remembered passwords, pauses to think, tries variations",
+      "intent": "WANTS to get in — this is THEIR system",
+      "response": "HELP THEM. Salt the failures, then shred the door."
+    },
+    "bot_pattern": {
+      "attempts": "hundreds to thousands",
+      "timing": "milliseconds between tries",
+      "behavior": "sequential, dictionary, no pauses, no variations in timing",
+      "intent": "ATTACK — this is NOT their system",
+      "response": "BLOCK. Rate limit. Tarpit. The immune system handles this."
+    }
+  },
+
+  "shred_protocol": {
+    "step_1_salt": "On each failed auth attempt: save input (username, protocol, source IP), output (error code), timestamp. Write to failure-receipt log.",
+    "step_2_count": "Count failures per (source, username) in a sliding window (e.g., 10 minutes).",
+    "step_3_detect": {
+      "human": "3-5 failures, >10sec spacing, same source IP, varied passwords → HUMAN",
+      "bot": ">10 failures, <1sec spacing, or known bad patterns → BOT"
+    },
+    "step_4_human_path": {
+      "at_3_fails": "SALT — log the pattern, start the sourdough timer",
+      "at_5_fails": "SHRED THE DOOR — invalidate the old credential, generate a new one",
+      "delivery": "Send new credential through a TRUSTED channel (RustDesk screen share, physical proximity, ZK channel)",
+      "sourdough": "The new credential ferments — it's alive, it rotates, it's not a static password forever"
+    },
+    "step_4_bot_path": {
+      "at_10_fails": "Rate limit to 1 attempt per 30sec",
+      "at_50_fails": "Tarpit — accept connection but respond in 30sec",
+      "at_100_fails": "Blackhole — drop packets silently",
+      "immune": "skunkBat intrusion detection logs and learns the pattern"
+    }
+  },
+
+  "zk_inversion": {
+    "traditional": "Lock the human out → require admin reset → human feels PUNISHED for forgetting",
+    "gaia": "Detect the human → salt the failure → shred the old lock → sourdough a new key → human gets IN",
+    "philosophy": "We are ZK. We WANT them inside. The door is cheaper than the person behind it. If you lost the key, we don't make you suffer — we shred the door and build a new one.",
+    "the_proof": "The proof that you're human IS the 3-5 failure pattern. A bot doesn't pause to think. A bot doesn't try 'eco579163' then 'ExoticPanda' then '' (empty). That sequence IS the ZK proof of humanity."
+  },
+
+  "sourdough_rekey": {
+    "principle": "Credentials are sourdough, not concrete. They ferment and regenerate. A password that got lost doesn't stay lost — it gets composted and a new one rises from the starter.",
+    "mechanism": {
+      "old_key": "Composted — hash retained for audit trail, plaintext destroyed",
+      "new_key": "Fermented from sourdough starter (device MAC + timestamp + human salt)",
+      "delivery": "Through trusted channel: RustDesk (I/O sharing), physical (Kevin walks over), or ZK (brain only)",
+      "rotation": "New key can auto-rotate on schedule or stay stable if human prefers"
+    },
+    "primal_connection": "sourDough (the fermentation engine primal) IS the rekey mechanism. It doesn't just ferment data — it ferments TRUST. New credentials rise from the same starter as old ones."
+  },
+
+  "real_examples": {
+    "smb_lockout": {
+      "what_happened": "Tried gaia@northGate with multiple passwords → NT_STATUS_ACCOUNT_LOCKED_OUT",
+      "traditional": "Wait 30min. Try again. Maybe get locked again. Feel punished.",
+      "shred_way": "Detect: 4 attempts, human timing, varied passwords → HUMAN. Shred: reset gaia password to eco579163 (the uni pin). Deliver: Kevin sees it on RustDesk. Done."
+    },
+    "ssh_refused": {
+      "what_happened": "SSH to northGate port 22 → connection refused (ufw blocks)",
+      "traditional": "Stuck. Can't get in without physical access.",
+      "shred_way": "Detect: human tried SSH, got refused. Shred the firewall rule: RustDesk into northGate → ufw allow 22/tcp. The door that blocked us gets shredded by the I/O channel."
+    },
+    "empty_password": {
+      "what_happened": "Kevin said: empty password IS human too!",
+      "traditional": "Reject empty passwords. Require 12+ chars, uppercase, number, symbol.",
+      "shred_way": "Accept empty as Layer 0 ZK: 'I AM HUMAN and I'm HERE.' Physical presence IS auth. The empty password is the most human password of all."
+    }
+  },
+
+  "layers_with_shred": {
+    "layer_0": {"auth": "empty / physical presence", "on_fail": "You're standing HERE. You ARE in.", "shred": "No door to shred — you're already inside."},
+    "layer_1": {"auth": "579163 (uni pin)", "on_fail": "3-5 tries → sourdough new pin → deliver via trusted channel", "shred": "Old pin composted, new pin fermented."},
+    "layer_2": {"auth": "eco579163", "on_fail": "3-5 tries → shred → rekey via RustDesk/physical", "shred": "Old password composted, new one rises."},
+    "layer_3": {"auth": "gate passwords (ExoticPanda, sporegate, etc.)", "on_fail": "3-5 tries → shred gate password → sourdough from starter", "shred": "Gate re-keyed, all gates notified via neutron."},
+    "layer_4": {"auth": "ZK (Kevin's brain)", "on_fail": "Can't fail — it's in his brain. If HE forgets, sourdough from biological memory (hints, associations, muscle memory).", "shred": "The brain doesn't lock out. It just needs a reminder."}
+  },
+
+  "equation": "HUMAN_FAIL(3-5) + SALT(io_receipt) → DETECT_HUMAN → SHRED_DOOR → SOURDOUGH_REKEY → HUMAN_INSIDE",
+  "mantra": "We lost the key? We shred the door. The door is cheaper than the person. LOCKED ≠ DEAD. The organism WANTS you inside."
+}

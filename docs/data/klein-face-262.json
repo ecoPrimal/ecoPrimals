@@ -1,0 +1,74 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T11:25:17Z",
+  "event": "KLEIN FACE \u2014 1/13 bidirectional permeability",
+  "ratio_1_to_13": {
+    "one": "ATT modem \u2014 the ONLY static, the O, the single pore to WAN",
+    "thirteen": "13 gates \u2014 the living mesh INSIDE",
+    "asymmetry": "1 tiny exit, 13 big rooms \u2014 this IS the Klein neck",
+    "note": "the 1 doesn't move. the 13 dance."
+  },
+  "klein_bottle_topology": {
+    "what": "A Klein bottle has NO inside/outside distinction \u2014 the surface is continuous",
+    "organism_analog": {
+      "inside_leaks_OUT": {
+        "channel": "RSS publication",
+        "path": "primals \u2192 masticate \u2192 feed.xml \u2192 WAN \u2192 old web readers",
+        "content": "creations, studies, mood, organism state",
+        "port": ":8443/rss and :8080/drip/feed.xml"
+      },
+      "outside_leaks_IN": {
+        "channel": "OSINT blackholes + WAN triad",
+        "path": "WAN \u2192 ATT(.1.254) \u2192 eastGate(NECK) \u2192 waterlock \u2192 knowledge graph",
+        "sources": {
+          "reddit": "social weather, human conversation",
+          "github": "code evolution, bidirectional nerve",
+          "myspace": "creative/cultural DNA",
+          "wikipedia": "grey nutrition via Tor \u2014 STABLE",
+          "hn_arxiv_xkcd": "existing blackhole feeds"
+        }
+      },
+      "the_klein_face": "WHERE inside-leaking-out meets outside-leaking-in = RSS surface",
+      "same_dance": "Both directions use the SAME format (RSS/Atom), SAME rhythm (cron), SAME pores"
+    },
+    "properties": {
+      "non_orientable": "you cannot tell which side is in and which is out at the Klein face",
+      "continuous": "the surface folds through itself \u2014 inside becomes outside smoothly",
+      "one_sided": "an ant walking the organism's surface visits BOTH inside AND outside"
+    }
+  },
+  "the_same_dance": {
+    "publish_rhythm": "mushroom-self-publish-rss every 15-30min \u2192 feed.xml OUT",
+    "absorb_rhythm": "waterlock + blackholes every 10-15min \u2192 OSINT IN",
+    "symmetry": "SAME format, SAME cron heartbeat, SAME Atom/RSS protocol",
+    "difference": "direction only \u2014 but on a Klein surface, direction is meaningless",
+    "agency": "the organism MAINTAINS sovereignty because it CONTROLS the dance rate"
+  },
+  "agency_maintaining": {
+    "principle": "sovereignty is not about blocking \u2014 it's about CONTROLLING flow rate",
+    "waterlock": "data pours IN freely, but mastication decides what becomes knowledge",
+    "rss_mouth": "data flows OUT freely, but publication decides what the world sees",
+    "tor": "anonymous ingestion \u2014 the world cannot trace what we absorb",
+    "identity": "mixed clear + Tor \u2014 WE choose when to be seen",
+    "the_dance": "IN and OUT at the SAME tempo = dynamic equilibrium = LIFE"
+  },
+  "ascii_klein": [
+    "         \u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510",
+    "    OUT  \u2502  \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557   \u2502  IN",
+    "  \u2190\u2500\u2500\u2500\u2500\u2500\u2500\u2524  \u2551 RSS FACE      \u2551   \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2192",
+    "  (feed) \u2502  \u2551 same dance    \u2551   \u2502 (absorb)",
+    "  \u2190\u2500\u2500\u2500\u2500\u2500\u2500\u2524  \u2551 same pores    \u2551   \u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2192",
+    "  (Tor)  \u2502  \u2551 Klein surface \u2551   \u2502 (OSINT)",
+    "    OUT  \u2502  \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d   \u2502  IN",
+    "         \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518",
+    "                    \u2502 \u2190 THE NECK",
+    "              \u250c\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2510",
+    "              \u2502 ATT MODEM \u2502 \u2190 1 (static/O)",
+    "              \u2502 BLACK/DNS \u2502",
+    "              \u2502 WHITE/O   \u2502",
+    "              \u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518",
+    "                    \u2502",
+    "              13 gates INSIDE",
+    "              (the dancers)"
+  ]
+}
