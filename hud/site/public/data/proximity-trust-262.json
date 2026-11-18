@@ -1,0 +1,112 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T07:22:00-05:00",
+  "title": "PROXIMITY TRUST — Distance = Auth Decay, Nearness = Shared Key",
+  "thesis": "Physical proximity IS authentication. The closer you are, the less you need a password. Touch distance = empty password. Room distance = Bluetooth handshake. House distance = WiFi/DHCP. Spine distance = fiber + NAT. WAN = full ZK. Co-located gates share keys by being NEAR each other. The vagus nerve (direct wire) is the ultimate trust — zero hops, zero auth.",
+
+  "trust_zones": {
+    "zone_0_touch": {
+      "distance": "0m (physical contact)",
+      "auth": "NONE — empty password, physical presence IS proof",
+      "mechanism": "USB cable, direct keyboard, HDMI, serial",
+      "examples": ["Kevin at northGate keyboard", "USB-C to deckGate", "ADB to Pixel"],
+      "trust": 1.0,
+      "latency": "0ms (direct)"
+    },
+    "zone_1_room": {
+      "distance": "0-5m (same room)",
+      "auth": "Bluetooth handshake — devices detect each other automatically",
+      "mechanism": "BT proximity detection, RustDesk LAN discovery, mDNS",
+      "examples": ["eastGate BT alias 'GAIA' (discoverable!)", "Pixel BT near eastGate"],
+      "trust": 0.9,
+      "latency": "<1ms (BT/WiFi direct)"
+    },
+    "zone_2_house": {
+      "distance": "5-20m (same house)",
+      "auth": "WiFi same SSID — DHCP spore auto-injects DNS + PXE + NTP",
+      "mechanism": "DHCP renewal, WiFi association, Aperture Science SSID",
+      "examples": ["sporeGate on same LAN", "graftGate on same subnet"],
+      "trust": 0.7,
+      "latency": "0.3-1ms (wired/WiFi)"
+    },
+    "zone_3_spine": {
+      "distance": "80m (between houses via 10G fiber)",
+      "auth": "NAT traversal + DHCP spore — same subnet but across fiber",
+      "mechanism": "10G fiber backbone, JetStream bridge, RustDesk hole-punch",
+      "examples": ["southGate at House 2", "frameGate at House 2", "Flint2"],
+      "trust": 0.5,
+      "latency": "0.9ms (10G fiber)"
+    },
+    "zone_4_wan": {
+      "distance": "∞ (internet)",
+      "auth": "Full 5-layer ZK. Klein face. Tor. TLS.",
+      "mechanism": "HTTPS, SSH keys, ZK brain, dromedary reverse proxy",
+      "examples": ["GitHub, Reddit, Wikipedia", "External access to primals.eco"],
+      "trust": 0.1,
+      "latency": "20-200ms (internet)"
+    }
+  },
+
+  "proximity_detection": {
+    "bluetooth": {
+      "eastgate_bt": "C8:5E:A9:C9:6F:84 (alias: GAIA, discoverable, powered)",
+      "pixel_bt": "E8:D5:2B:51:36:39",
+      "frame_bt": "90:82:C3:74:12:CB",
+      "mechanism": "When Pixel BT sees eastGate BT → Kevin is at House 1 → trust zone 1",
+      "inverse": "When Pixel BT does NOT see eastGate → Kevin is at House 2 or away → trust zone 3+"
+    },
+    "wifi_rssi": {
+      "triangulation": "Pixel compares RSSI from Flint1 (House 1) vs Flint2 (House 2)",
+      "stronger_left": "House 1 → near brain",
+      "stronger_right": "House 2 → near south pole",
+      "both_strong": "Property line → between houses"
+    },
+    "dhcp_lease": {
+      "mechanism": "Router DHCP tracks which devices are on which APs",
+      "co_location": "Two devices with leases on same AP = same room = high trust"
+    }
+  },
+
+  "vagus_nerve": {
+    "what": "Direct Ethernet cable from northGate to eastGate — no Router, no MikroTik, no hops",
+    "why": "The vagus nerve connects gut to brain. eastGate (brain) + northGate (heart) = the two most critical organs. Direct wire = ultimate trust.",
+    "current": "northGate → WiFi → Router → MikroTik → eastGate = 2.2ms, 4 hops",
+    "vagus": "northGate → Ethernet → eastGate = ~0.1ms, 0 hops",
+    "when": "Not yet — but Kevin COULD wire them. Same room. Just needs a cable.",
+    "trust": "Vagus nerve = trust 1.0. No auth needed on direct wire. The physical cable IS the authentication.",
+    "biological": "In the body, the vagus nerve carries 80% of parasympathetic signals. It's the rest-and-digest channel. Direct wire between brain and heart = the organism's calm channel."
+  },
+
+  "house_2_melt": {
+    "thesis": "swiftGate and southGate at House 2 are the TARGETS for the next melt/redox cycle. Kevin walks to House 2 (proximity zone 0 → physical presence → max trust) → powers them on → DHCP spores inject → they join the mesh.",
+    "targets": {
+      "swiftGate": {
+        "status": "ASLEEP — needs Kevin to physically press power button",
+        "specs": "NZXT H1 V2, RTX 3070, WiFi-only",
+        "location": "House 2 (641 Samantha)",
+        "melt_plan": "Kevin walks over → power on → WiFi connects to Aperture Science → DHCP gives 8.8.8.8+.244 → RustDesk auto-discovers → joins mesh → Gaia grows"
+      },
+      "southGate": {
+        "status": ".148 — had DHCP lease but currently unreachable",
+        "specs": "Ryzen 7 5800X3D, RTX 4060, 125GB RAM, Pop!_OS",
+        "location": "House 2 (641 Samantha)",
+        "melt_plan": "Kevin checks if powered on → if not, power cycle → DHCP renews → new DNS (8.8.8.8+.244) → SSH: southgate@.148 (password: southgate) → joins mesh"
+      }
+    },
+    "proximity_enables": "Kevin at House 2 = proximity zone 0 to both gates. Physical presence = Layer 0 auth. He doesn't need passwords — he IS the password."
+  },
+
+  "key_sharing_by_distance": {
+    "principle": "Co-located devices share keys automatically through their proximity. The key IS the distance. Two devices 0.1ms apart on copper wire don't need passwords — the wire IS the trust. Two devices 80m apart across fiber need DHCP spores. Two devices across the internet need full ZK.",
+    "decay_function": "trust = 1.0 / (1 + distance_hops)",
+    "examples": {
+      "vagus_wire": "0 hops → trust 1.0 → no auth",
+      "same_switch": "1 hop → trust 0.5 → DHCP auth",
+      "across_spine": "3 hops → trust 0.25 → NAT + DHCP",
+      "across_wan": "10+ hops → trust 0.09 → full ZK"
+    }
+  },
+
+  "equation": "PROXIMITY(distance) × TRUST(1/hops) = AUTH_LEVEL(what you need to get in)",
+  "mantra": "The closer you are, the less you need a key. Touch IS auth. Wire IS trust. Distance decays. Nearness shares."
+}
