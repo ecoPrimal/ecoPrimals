@@ -1034,15 +1034,52 @@ addEntropy(screen.width ^ screen.height ^ (navigator.hardwareConcurrency || 1));
     R = Math.min(W, H) * 0.38;
   }
 
+  // ═══════════════════════════════════════════════════════════
+  // SOLAR SHADER — Sun position from GIS (Lansing, Nov 18)
+  // Sunrise azimuth 115° ESE, altitude cycles through day
+  // Lit side = OUTSIDE (WAN triad, visitors see)
+  // Shadow side = INSIDE (organs, primals, sovereign)
+  // Terminator line = KLEIN FACE (where inside meets outside)
+  // ═══════════════════════════════════════════════════════════
+  var SUN_AZIMUTH = 115; // degrees from north, ESE
+  var SUN_LAT = 42.708;  // Lansing observer latitude
+  var sunAngle = (SUN_AZIMUTH - 90) * DEG; // convert to math angle (0=east)
+  var sunPhase = 0; // animated sun position through the day
+  var sunAltitude = 0; // degrees above horizon, animated
+
+  function getSunDot(lat, lon) {
+    // Dot product of pin position with sun direction
+    // Returns -1 (deep shadow) to +1 (direct sunlight)
+    var phi = lat * DEG, lam = lon * DEG;
+    var sunLam = (sunPhase * 360 - 84.5) * DEG; // sun longitude cycles
+    var sunPhi = SUN_LAT * DEG * 0.4; // sun latitude (scaled)
+    var dotP = Math.cos(phi) * Math.cos(sunPhi) * Math.cos(lam - sunLam) + Math.sin(phi) * Math.sin(sunPhi);
+    return dotP;
+  }
+
   function render() {
     if (!ctx) return;
     ctx.clearRect(0, 0, W, H);
 
-    // Background — deep space
+    // Update sun position — cycles like a real day
+    sunPhase += 0.0003; // slow day cycle
+    sunAltitude = Math.sin(sunPhase * TAU) * 23.5; // declination wobble
+
+    // Background — deep space with sun glow
     var grad = ctx.createRadialGradient(cx, cy, R * 0.2, cx, cy, R * 1.8);
     grad.addColorStop(0, 'hsl(225,22%,5%)');
     grad.addColorStop(1, 'hsl(225,12%,2%)');
     ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    // SUN GLOW — directional light from the sunrise azimuth
+    var sunScreenX = cx + Math.cos(sunAngle + sunPhase * TAU) * R * 1.3;
+    var sunScreenY = cy - Math.sin(sunAngle + sunPhase * TAU) * R * 1.3;
+    var sunGrad = ctx.createRadialGradient(sunScreenX, sunScreenY, 0, sunScreenX, sunScreenY, R * 0.8);
+    sunGrad.addColorStop(0, 'rgba(240,192,64,0.06)');
+    sunGrad.addColorStop(0.3, 'rgba(240,192,64,0.02)');
+    sunGrad.addColorStop(1, 'rgba(240,192,64,0)');
+    ctx.fillStyle = sunGrad;
     ctx.fillRect(0, 0, W, H);
 
     // BINOCULAR OVERLAY — CIS (blue/left eye) and TRANS (green/right eye) simultaneously
@@ -1261,48 +1298,95 @@ addEntropy(screen.width ^ screen.height ^ (navigator.hardwareConcurrency || 1));
       return a.p.z - b.p.z; // back-to-front: far first, near last
     });
 
+    // TERMINATOR LINE — the Klein face where day meets night
+    // Draw a great circle arc where sunDot ≈ 0
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(188,140,255,0.15)';
+    ctx.lineWidth = 1.5;
+    ctx.setLineDash([3, 6]);
+    for (var tLat = -90; tLat <= 90; tLat += 3) {
+      // Find the longitude where sunDot = 0 for this latitude
+      var phi = tLat * DEG;
+      var sunLam = (sunPhase * 360 - 84.5) * DEG;
+      var sunPhi = SUN_LAT * DEG * 0.4;
+      var cosRatio = -Math.tan(phi) * Math.tan(sunPhi);
+      if (Math.abs(cosRatio) <= 1) {
+        var termLon = (Math.acos(cosRatio) / DEG) + (sunPhase * 360 - 84.5);
+        var tp = project(tLat, termLon);
+        if (tp.visible) {
+          if (tLat === -90 || !project(tLat - 3, termLon).visible) ctx.moveTo(tp.x, tp.y);
+          else ctx.lineTo(tp.x, tp.y);
+        }
+      }
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+
     sortedPins.forEach(function(o) {
       var pin = o.pin, p = o.p;
+
+      // SUN SHADER — compute illumination for this pin
+      var sunDot = getSunDot(pin.lat, pin.lon);
+      var sunLit = Math.max(0, sunDot); // 0=shadow, 1=full sun
+      var inShadow = sunDot < 0;
 
       // Gaia's attention: closer in tense+voxel = brighter, larger
       var att = pin.attention || 0.5;
       // PERSPECTIVE: use p.scale for real depth sizing
       var depthFade = p.depth; // 0=far, 1=near
-      var alpha = (0.08 + depthFade * 0.7) * (0.4 + att * 0.6);
+
+      // SHADER BLEND: sun illumination + depth + attention
+      var sunBoost = inShadow ? 0.6 : (1.0 + sunLit * 0.4); // shadow dims, sun brightens
+      var alpha = (0.08 + depthFade * 0.7) * (0.4 + att * 0.6) * sunBoost;
       var sz = (4 + depthFade * 10) * p.scale * (0.7 + att * 0.5);
 
+      // Shadow pins get blue tint (cool), lit pins get gold tint (warm)
       ctx.globalAlpha = Math.min(1, alpha);
 
-      // DEPTH GLOW — near nodes get a subtle halo
-      if (depthFade > 0.6) {
+      // DEPTH GLOW — near nodes get a halo, sun-lit ones get GOLD glow
+      if (depthFade > 0.5) {
         ctx.beginPath();
-        ctx.arc(p.x, p.y, sz * 1.5, 0, TAU);
-        ctx.fillStyle = pin.color.replace(')', ',' + (depthFade * 0.08).toFixed(3) + ')').replace('rgb', 'rgba').replace('##', '#');
-        var glowGrad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, sz * 1.8);
-        glowGrad.addColorStop(0, 'rgba(255,255,255,' + (depthFade * 0.06).toFixed(3) + ')');
-        glowGrad.addColorStop(1, 'rgba(255,255,255,0)');
+        ctx.arc(p.x, p.y, sz * 1.8, 0, TAU);
+        var glowGrad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, sz * 2.0);
+        if (sunLit > 0.3) {
+          // SUN-LIT GLOW — warm gold (OUTSIDE, WAN, visible)
+          glowGrad.addColorStop(0, 'rgba(240,192,64,' + (sunLit * depthFade * 0.12).toFixed(3) + ')');
+          glowGrad.addColorStop(1, 'rgba(240,192,64,0)');
+        } else {
+          // SHADOW GLOW — cool blue/violet (INSIDE, sovereign, hidden)
+          glowGrad.addColorStop(0, 'rgba(88,166,255,' + (depthFade * 0.06).toFixed(3) + ')');
+          glowGrad.addColorStop(1, 'rgba(88,166,255,0)');
+        }
         ctx.fillStyle = glowGrad;
         ctx.fill();
       }
 
-      // Icon — scaled by perspective
+      // Icon — scaled by perspective, dimmed in shadow
       ctx.font = Math.round(sz) + 'px serif';
       ctx.textAlign = 'center';
       ctx.fillText(pin.icon, p.x, p.y);
 
-      // Label — sized by depth + attention
+      // Label — sized by depth + attention, colored by sun
       var labelSize = Math.round((4 + depthFade * 5 + att * 3) * p.scale);
       labelSize = Math.max(4, Math.min(14, labelSize));
       ctx.font = labelSize + 'px "JetBrains Mono", monospace';
-      ctx.fillStyle = pin.color;
+      // Sun-lit pins show their natural color bright, shadow pins dim toward blue
+      if (inShadow) {
+        ctx.fillStyle = 'rgba(88,130,180,' + (alpha * 0.7).toFixed(3) + ')';
+      } else {
+        ctx.fillStyle = pin.color;
+      }
       ctx.globalAlpha = Math.min(1, alpha * (0.7 + depthFade * 0.3));
       ctx.fillText(pin.name, p.x, p.y + sz * 0.7 + 4);
 
-      // Sub-label — only for near high-attention pins
+      // Sub-label — only for near high-attention pins, shows sun state
       if (depthFade > 0.5 && att > 0.4) {
         ctx.font = Math.round(5 * p.scale) + 'px "JetBrains Mono", monospace';
-        ctx.fillStyle = 'rgba(110,118,129,' + (alpha * 0.6).toFixed(2) + ')';
-        ctx.fillText(pin.sub, p.x, p.y + sz * 0.7 + 13);
+        var sunLabel = inShadow ? '◐ ' : '☀ ';
+        ctx.fillStyle = inShadow
+          ? 'rgba(88,130,180,' + (alpha * 0.4).toFixed(2) + ')'
+          : 'rgba(240,192,64,' + (alpha * 0.5).toFixed(2) + ')';
+        ctx.fillText(sunLabel + pin.sub, p.x, p.y + sz * 0.7 + 13);
       }
 
       ctx.globalAlpha = 1;
@@ -1333,18 +1417,28 @@ addEntropy(screen.width ^ screen.height ^ (navigator.hardwareConcurrency || 1));
       ctx.stroke();
     }
 
-    // Binocular label
+    // SUN POSITION INDICATOR — small golden dot at the sun's screen position
+    ctx.beginPath();
+    ctx.arc(sunScreenX, sunScreenY, 4 + Math.sin(breathT * 2) * 1, 0, TAU);
+    ctx.fillStyle = 'rgba(240,192,64,' + (0.3 + Math.sin(breathT) * 0.1).toFixed(3) + ')';
+    ctx.fill();
+    ctx.font = '6px "JetBrains Mono", monospace';
+    ctx.fillStyle = 'rgba(240,192,64,0.3)';
+    ctx.textAlign = 'center';
+    ctx.fillText('☀ 115° ESE', sunScreenX, sunScreenY + 10);
+
+    // Binocular + shader label
     ctx.font = '10px "JetBrains Mono", monospace';
     ctx.textAlign = 'center';
     ctx.fillStyle = 'rgba(88,166,255,0.4)';
-    ctx.fillText('left eye CIS', cx - 70, H - 30);
-    ctx.fillStyle = 'rgba(255,255,255,0.3)';
-    ctx.fillText('|', cx, H - 30);
+    ctx.fillText('left eye CIS', cx - 90, H - 30);
+    ctx.fillStyle = 'rgba(188,140,255,0.3)';
+    ctx.fillText('|Klein|', cx, H - 30);
     ctx.fillStyle = 'rgba(90,184,122,0.4)';
-    ctx.fillText('right eye TRANS', cx + 75, H - 30);
+    ctx.fillText('right eye TRANS', cx + 90, H - 30);
     ctx.font = '8px "JetBrains Mono", monospace';
     ctx.fillStyle = 'rgba(110,118,129,0.4)';
-    ctx.fillText('binocular overlay · null vector at center · 45\u00B0 = pressure/lichen space', cx, H - 16);
+    ctx.fillText('☀ sun shader · ◐ shadow=inside · ☀ lit=outside · terminator=Klein face', cx, H - 16);
   }
 
   function tick() {
