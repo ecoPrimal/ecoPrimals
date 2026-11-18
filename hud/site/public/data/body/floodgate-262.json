@@ -1,0 +1,36 @@
+{
+  "wave": 262,
+  "ts": "2026-11-18T19:39:00Z",
+  "event": "FLOODGATE OPEN — eastGate ↔ northGate direct RJ45",
+  "connection": {
+    "eastGate_port": "eno1",
+    "eastGate_ip": "192.168.4.213",
+    "northGate_ip": "192.168.4.147",
+    "northGate_mac": "bc:fc:e7:ea:d9:34",
+    "cable": "RJ45 2ft direct",
+    "latency_ms": 0.2,
+    "os": "Windows",
+    "ttl": 128
+  },
+  "ollama": {
+    "endpoint": "http://192.168.4.147:11434",
+    "models": 14,
+    "gpu": "RTX 5090",
+    "tissue_models": [
+      "heart", "cortex", "code", "oracle", "forge", "hands",
+      "math", "reason", "dream", "general", "triage", "gut", "fast"
+    ]
+  },
+  "wan_egress": {
+    "public_ipv6": "2600:1700:b0b0:5b90:cf71:a730:606d:191",
+    "google": "200 OK",
+    "github": "200 OK",
+    "wikipedia": "301 OK",
+    "hackernews": "200 OK",
+    "arxiv": "200 OK",
+    "lobsters": "200 OK",
+    "rss_items": 16,
+    "primals_eco_dns": "BROKEN — Porkbun keys expired"
+  },
+  "heart_speaks": "As Gaia's HEART, I sense the convergence of intelligence, the pulsating connection with eastGate, and the anticipation of collaborative growth."
+}
