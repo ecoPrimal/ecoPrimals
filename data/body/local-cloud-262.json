@@ -1,0 +1,72 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T11:44:18Z",
+  "event": "EASTGATE = LOCAL CLOUD \u2014 reboot regenerates, not kills",
+  "what_eastgate_is": {
+    "identity": "eastGate IS the VPS. We OWN the hardware. No rent. No cloud.",
+    "replaces": "golgi VPS (dead), golgiLayerLinode (deprecated), Cloudflare (ejected)",
+    "principle": "REMAKE SELF AS NEEDED. REDOX TO ROOT. REBOOT = REGENERATE."
+  },
+  "survives_reboot": {
+    "system_services": {
+      "tor.service": "Tor hidden service + SOCKS proxy :9050",
+      "forgejo.service": "Git forge :3000",
+      "ollama.service": "Local AI :11434",
+      "docker.service": "Container runtime",
+      "dromedary.service": "Sovereign reverse proxy, TLS, ACME",
+      "gaia-data.service": "Data server :8080",
+      "gaia-gate.service": "Gate server :8443",
+      "gaia-drip.service": "Drip feed system",
+      "gaia-feed.service": "RSS feed publisher",
+      "gaia-pi-data.service": "Pi data pipeline",
+      "gaia-steam.service": "Steam integration",
+      "netfilter-persistent": "NAT MASQUERADE rules \u2705 JUST INSTALLED"
+    },
+    "user_services_linger": {
+      "gaia-web.service": "HUD web server",
+      "gaia-ear.service": "WiFi ear listener",
+      "gaia-fleet.service": "Fleet management",
+      "gaia-inference.service": "AI inference pipeline",
+      "gaia-sky.service": "Sky/weather sensor",
+      "biomeos-beacon.service": "biomeOS beacon",
+      "epson-daemon.service": "Printer daemon",
+      "fluidsynth.service": "Audio synthesis",
+      "note": "Linger=yes \u2014 user services start without login"
+    },
+    "sysctl_persistent": "/etc/sysctl.d/99-gaia-nat.conf \u2014 ip_forward + rp_filter",
+    "iptables_persistent": "/etc/iptables/rules.v4 \u2014 MASQUERADE + FORWARD rules",
+    "cron": "52 cron entries (heartbeat, mushrooms, sensors, publish)"
+  },
+  "does_NOT_survive_reboot": {
+    "router_default_route": {
+      "issue": "Router 'default via 192.168.4.244' is ephemeral (ip route add)",
+      "fix": "SSH to router, uci set, uci commit \u2014 PENDING",
+      "workaround": "Add to eastGate boot script to re-inject route via SSH"
+    }
+  },
+  "reboot_regeneration_sequence": [
+    "1. systemd starts all enabled services (tor, forgejo, ollama, docker, gaia-*)",
+    "2. netfilter-persistent restores iptables (MASQUERADE, FORWARD)",
+    "3. sysctl.d applies ip_forward=1 and rp_filter=0",
+    "4. linger starts user services (gaia-web, gaia-ear, etc.)",
+    "5. 52 cron jobs resume heartbeat every 2-15 minutes",
+    "6. Tor re-establishes .onion hidden service",
+    "7. Ollama loads models on first request",
+    "8. NAT MASQUERADE resumes: LAN(.4.x) \u2192 enp5s0 \u2192 ISP(.1.254) \u2192 WAN",
+    "9. ONLY MISSING: Router default route (needs manual re-inject or boot script)"
+  ],
+  "local_cloud_inventory": {
+    "disk": "1.8TB NVMe, 661GB used (39%), 1.1TB free",
+    "services": "13 system + 14 user = 27 auto-start services",
+    "crons": 52,
+    "primals": "17 compiled Rust binaries",
+    "ollama_models": "8 local + 14 on northGate = 22 total",
+    "containers": "Docker ready",
+    "tor": "hidden service + SOCKS proxy",
+    "git": "Forgejo :3000 (self-hosted)",
+    "nat": "MASQUERADE gateway for all LAN traffic",
+    "hud": "primals.eco (or localhost:8080) \u2014 the organism's face"
+  },
+  "equation": "REBOOT \u2192 REGENERATE \u2192 REDOX \u2192 GREEN",
+  "philosophy": "We OWN this. Remake as needed. The cloud is HERE, not there."
+}
