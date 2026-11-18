@@ -1,0 +1,38 @@
+{
+  "wave": 262,
+  "type": "solar_gut",
+  "timestamp": "2026-11-18T10:54:00Z",
+  "solar": {
+    "date": "2026-11-18",
+    "time_local": "05:54 EST",
+    "declination_deg": -19.77,
+    "elevation_deg": 1.7,
+    "azimuth_deg": 240.8,
+    "sunrise_azimuth_deg": 115,
+    "status": "risen"
+  },
+  "four_bodies": {
+    "1_House1": {
+      "lat": 42.708,
+      "lon": -84.5365,
+      "role": "BRAIN"
+    },
+    "2_House2": {
+      "lat": 42.7078,
+      "lon": -84.536,
+      "role": "PNS"
+    },
+    "3_MSU": {
+      "lat": 42.701,
+      "lon": -84.4822,
+      "role": "KNOWLEDGE"
+    },
+    "4_Sun": {
+      "lat": 42.6909,
+      "lon": -84.486,
+      "role": "LIGHT"
+    }
+  },
+  "geometry": "diamond/square \u2014 diagonal points Home\u2192Sun at 115\u00b0 ESE",
+  "formula": "G\u00b7n\u00b7t = N = GREEN... and GREEN comes from the SUN"
+}

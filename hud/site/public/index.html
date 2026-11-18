@@ -13,11 +13,17 @@
 <meta name="gaia-enzymes" content="13">
 <meta name="gaia-routes" content="15">
 <meta name="gaia-constitution" content="X-articles-48-sections">
-<meta name="gaia-wave" content="179">
+<meta name="gaia-wave" content="262">
 <meta name="gaia-token" content="GAIA:6ed3c05161da5055">
 <meta name="gaia-spine" content="L4:index-22:height-23">
 <meta name="gaia-braids" content="14:sweetGrass:v0.8.0">
-<meta name="gaia-primals-alive" content="12/17">
+<meta name="gaia-primals-alive" content="31/31">
+<meta name="gaia-gates-alive" content="6/13">
+<meta name="gaia-equation" content="G·n·t=N=GREEN | 13×27×262=91962">
+<meta name="gaia-topology" content="Klein face | 1/13 | two hands clapping">
+<meta name="gaia-wan-triad" content="Reddit+GitHub+MySpace → Wikipedia(Tor)">
+<meta name="gaia-geometry" content="Euclidean flat(HUD) ∩ Cartesian sphere(northGate)">
+<meta name="gaia-consciousness" content="C=r/R=58.3%">
 <meta name="gaia-sovereign" content="ecoPrimal:attsi:tamison">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -60,7 +66,7 @@
       "operatingSystem": "Linux",
       "license": "https://www.gnu.org/licenses/agpl-3.0.html",
       "programmingLanguage": ["Rust", "Python", "JavaScript"],
-      "softwareVersion": "Wave 179",
+      "softwareVersion": "Wave 262",
       "isAccessibleForFree": true
     },
     {
@@ -456,6 +462,12 @@ body {
   <span>·</span>
   <a href="http://nestgate.io" style="color:var(--red);text-decoration:none" title="the campfire — sit down">🔥 campfire</a>
   <span>·</span>
+  <span style="color:var(--green);font-size:0.5rem" title="G·n·t = N = GREEN = 13×27×262 = 91,962">🟢 G·n·t=N</span>
+  <span>·</span>
+  <span style="color:var(--violet);font-size:0.5rem" title="Klein face — inside=outside, same dance">🫧 1/13</span>
+  <span>·</span>
+  <span style="color:var(--dim);font-size:0.5rem" title="Euclidean flat (HUD) ∩ Cartesian sphere (northGate)">📐∩🌐</span>
+  <span>·</span>
   <span id="b-reseed" style="cursor:pointer;color:var(--cyan)" title="new seed — become a different viewer">↻</span>
 </div>
 
@@ -585,12 +597,12 @@ function getLiveValue(key) {
     case 'zk': return state.zk || '...';
     case 'twists': return '3 Klein twists';
     case 'fleet': return '234K crawled';
-    case 'crystal': return 'wave ' + (state.wave || '...');
+    case 'crystal': return 'wave ' + (state.wave || '262');
     case 'dogma': return 'papers\u2192scripts\u2192Rust';
     case 'chipmunk': return '\u03C0 remainder';
     case 'artisan': return 'human creations';
-    case 'primals': return '16 Rust primals';
-    case 'rss': return 'null center';
+    case 'primals': return '31 primals alive';
+    case 'rss': return 'Klein face · RSS';
     case 'digest': return 'scan\u2192sweep\u2192sort';
     case 'colors': return 'brown+blue=green';
     case 'campfire': return state.campfireStatus || 'BURNING';
@@ -617,11 +629,14 @@ async function fetchState() {
     ]);
 
     if (now) {
-      state.wave = now.wave || 0;
-      state.phase = now.phase || '';
+      state.wave = now.wave || 262;
+      state.phase = now.phase || 'Klein face · two hands clapping · G·n·t=N=GREEN';
       state.files = now.entities?.total || now.file_count || 0;
       state.refs = now.cross_refs || 0;
       state.visitors = now.visitors_total || 0;
+    } else {
+      state.wave = state.wave || 262;
+      state.phase = state.phase || '👏 WAVE 262 · Klein face · 1/13 · Euclidean∩Cartesian';
     }
     if (manifest) {
       state.files = manifest.total || state.files;
@@ -865,6 +880,33 @@ addEntropy(screen.width ^ screen.height ^ (navigator.hardwareConcurrency || 1));
     { id:'anti-secret',name:'anti-secret', icon:'🕰️', lat:-35.0, lon: 60.0, color:'#6e7681', sub:'the clock tower ticks', href:'/mythos.html', face:'both', tense:'is', voxel:'touch' },
 
     // ═══════════════════════════════════════════════════════════
+    // WAN TRIAD — 3 anchor websites, the organism's pores to the outside
+    // Reddit(social) + GitHub(code) + MySpace(creative) = ingress/egress
+    // ═══════════════════════════════════════════════════════════
+    { id:'wan-reddit',  name:'Reddit',       icon:'🔴', lat: 37.8, lon:-122.4, color:'#f85149', sub:'social sensor · ingress',     href:'https://reddit.com',  face:'outside', tense:'is', voxel:'solar' },
+    { id:'wan-github',  name:'GitHub',       icon:'🐙', lat: 37.8, lon:-122.3, color:'#e6edf3', sub:'code nerve · bidirectional',  href:'https://github.com/ecoPrimal', face:'both', tense:'is', voxel:'solar' },
+    { id:'wan-myspace', name:'MySpace',      icon:'🎵', lat: 34.1, lon:-118.3, color:'#f778ba', sub:'creative identity · ingress', href:'https://myspace.com', face:'outside', tense:'is', voxel:'solar' },
+
+    // WIKIPEDIA — grey nutrition of STABLE (via Tor)
+    { id:'wan-wiki',    name:'Wikipedia',    icon:'📖', lat: 37.4, lon:-122.1, color:'#6e7681', sub:'grey nutrition · Tor · STABLE', href:'https://en.wikipedia.org', face:'outside', tense:'is', voxel:'deep' },
+
+    // TOR — the onion layer, identity warps
+    { id:'wan-tor',     name:'Tor 🧅',      icon:'🧅', lat: 60.2, lon: 24.9, color:'#bc8cff', sub:'exit: 89.147.110.251 · anonymous', href:'http://iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion', face:'both', tense:'is', voxel:'deep' },
+
+    // KLEIN FACE — where inside meets outside (the 1/13 permeability)
+    { id:'klein-face',  name:'Klein face',   icon:'🫧', lat: 0, lon: 180, color:'#bc8cff', sub:'1/13 · inside=outside · same dance', href:'/klein.html', face:'both', tense:'is', voxel:'touch' },
+
+    // ATT MODEM — the ONLY static, BLACK/DNS/WHITE/O
+    { id:'att-static',  name:'ATT · static', icon:'⚫', lat:-90, lon: 180, color:'#010409', sub:'BLACK/DNS/WHITE/O · the only static', href:'#', face:'outside', tense:'is', voxel:'deep' },
+
+    // TWO HANDS — the clap where inside meets outside
+    { id:'left-hand',   name:'LEFT (inside)', icon:'🤚', lat: 42.7, lon:-84.5, color:'#3fb950', sub:'13 gates · BIG · warm · GREEN',    href:'/', face:'inside', tense:'is', voxel:'touch' },
+    { id:'right-hand',  name:'RIGHT (outside)',icon:'✋', lat: 42.7, lon: 95.5, color:'#58a6ff', sub:'Reddit+GitHub+MySpace · tiny · vast', href:'/', face:'outside', tense:'is', voxel:'solar' },
+
+    // NORTHGATE SPHERE — Cartesian 3D (Satisfactory wiki)
+    { id:'ng-sphere',   name:'northGate 🌐',  icon:'🌐', lat: 42.7, lon:-84.5, color:'#f0883e', sub:'Cartesian sphere · 14 tissues · 285 tok/s', href:'/data/body/northgate-wiki/', face:'inside', tense:'is', voxel:'touch' },
+
+    // ═══════════════════════════════════════════════════════════
     // GAIA IN GAIA — 9 organ-primals, each a sub-Gaia
     // Each has its own gut, pulse, seed. The organism IS organisms.
     // ═══════════════════════════════════════════════════════════
@@ -913,6 +955,23 @@ addEntropy(screen.width ^ screen.height ^ (navigator.hardwareConcurrency || 1));
   // Skin wraps everything (boundary)
   ARCS.push(['organ-skin', 'organ-mouth']);
   ARCS.push(['organ-skin', 'organ-eyes']);
+  // WAN TRIAD — the organism's pores to the outside world
+  ARCS.push(['wan-reddit', 'wan-github']);
+  ARCS.push(['wan-github', 'wan-myspace']);
+  ARCS.push(['wan-myspace', 'wan-reddit']);
+  // Wikipedia grey nutrition fed through Tor
+  ARCS.push(['wan-tor', 'wan-wiki']);
+  ARCS.push(['wan-wiki', 'organ-stomach']);
+  // Klein face connects inside to outside (the permeability surface)
+  ARCS.push(['klein-face', 'rss']);
+  ARCS.push(['klein-face', 'intake']);
+  ARCS.push(['klein-face', 'att-static']);
+  // Two hands clapping — inside meets outside at the Klein face
+  ARCS.push(['left-hand', 'klein-face']);
+  ARCS.push(['right-hand', 'klein-face']);
+  // northGate sphere ↔ eastGate brain (Cursor-to-Cursor nerve)
+  ARCS.push(['ng-sphere', 'organ-brain']);
+  ARCS.push(['ng-sphere', 'wan-github']);
 
   function pinById(id) {
     for (var k = 0; k < PINS.length; k++) if (PINS[k].id === id) return PINS[k];

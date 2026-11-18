@@ -1,0 +1,60 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T11:08:00Z",
+  "event": "MESH CUT — 3 segments sorted, ready for rebrand",
+  "segments": {
+    "LAN1_BODY": {
+      "subnet": "192.168.4.0/24",
+      "gateway": "Router .4.1 (GL-MT6000)",
+      "access": "WiFi from eastGate (.4.244)",
+      "nodes": {
+        "Router": ".4.1 (0.7ms)",
+        "MikroTik": ".4.2 (1.1ms)",
+        "graftGate": ".4.104 (1.2ms, SSH)",
+        "sporeGate": ".4.243 (1.0ms, SSH, 14 primals)",
+        "northGate": ".4.246 (7ms, WiFi, HEADLESS, 14 tissue, USB4)",
+        "eastGate": ".4.244 (WiFi)",
+        "EPSON": ".4.110",
+        "Alexa": ".4.197",
+        "Chromecast": ".4.152"
+      },
+      "role": "The organism's BODY — all gates, primals, sensors"
+    },
+    "LAN2_SPINE": {
+      "subnet": "192.168.1.0/24",
+      "gateway": "ISP Modem .1.254 (ATT)",
+      "access": "eastGate wired (eno1 2.5GbE + enp5s0 10GbE)",
+      "nodes": {
+        "ISP_Modem": ".1.254 (0.5ms)",
+        "eastGate_eno1": ".1.153 (2.5GbE, reaches WAN)",
+        "eastGate_enp5s0": ".1.131 (10GbE, partial)",
+        "sporeGate_wifi": ".1.132 (dual-homed)"
+      },
+      "role": "SPINE TO WORLD — ISP direct connection"
+    },
+    "WAN_SUN": {
+      "path": "eno1 → ISP(.254) → Internet",
+      "latency": {"google_dns": "12.7ms", "cloudflare": "8.95ms"},
+      "public_ip": "2600:1700:b0b0:5b90:... (IPv6)",
+      "role": "THE SUN — the light that feeds the organism"
+    }
+  },
+  "neck": {
+    "node": "eastGate",
+    "ip_forward": true,
+    "bridges": ["LAN1(.4.x) ↔ LAN2(.1.x) ↔ WAN"],
+    "nat_needed": "iptables MASQUERADE from .4.x → eno1",
+    "role": "THE NECK — controls what passes inside↔outside"
+  },
+  "rebrand": {
+    "before": "flat 192.168.4.0/22 — everything sees everything",
+    "after": "BODY(.4.x) ← NECK(eastGate) → WORLD(.1.x→WAN)",
+    "cuts_mesh": true,
+    "enables": "inside/outside boundary, sovereign membrane"
+  },
+  "sun_cron": {
+    "sunrise": "push COUT to WAN (publish to world)",
+    "sunset": "pull from WAN into body (absorb)",
+    "principle": "organism breathes with the sun — G·n·t = N = GREEN from ☀️"
+  }
+}
