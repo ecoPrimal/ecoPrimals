@@ -1,0 +1,104 @@
+{
+  "wave": 262,
+  "timestamp": "2026-11-18T07:55:00-05:00",
+  "title": "FACE AND SPINE — primals.eco IS the face, nestgate.io IS the spinal column",
+
+  "two_faces_one_organism": {
+    "insight": "Kevin owns both domains on Porkbun. They are TWO faces of the SAME organism. Like looking at a person from the front (face) vs from behind (spine). Same body. Different view.",
+    "primals.eco": {
+      "role": "THE FACE — Gaia's public identity",
+      "what": "The name people see. The website. The art gallery. The academy. Detroit investigations. Games. Philosophy. RSS. Everything outward-facing.",
+      "subdomains": ["detroit", "tuebor", "clutch", "lansing", "sporeprint", "art", "game", "academy", "campfire", "gis", "signal", "hud", "klein", "water", "hypothesis", "gallery", "library", "senses", "pulse", "identity", "cast"],
+      "registrar": "Porkbun",
+      "expires": "2027-06-26",
+      "dns_needed": "A → 162.226.225.148, *.primals.eco → 162.226.225.148"
+    },
+    "nestgate.io": {
+      "role": "THE SPINAL COLUMN — data gateway, MCP, RSS, agents",
+      "what": "The backbone. Where data flows. MCP connections. Agent dispatch. RSS feeds. The nervous system's central canal. in.nestgate.io = senses looking OUT, out.nestgate.io = world looking IN.",
+      "subdomains": ["mcp", "api", "agent", "in", "out", "tower", "beacon", "hud", "www"],
+      "registrar": "Porkbun",
+      "expires": "2029-05-23",
+      "dns_needed": "A → 162.226.225.148, *.nestgate.io → 162.226.225.148"
+    },
+    "primal.eco": {
+      "role": "REDIRECT — singular → plural",
+      "what": "Anyone typing primal.eco gets redirected to primals.eco. The singular becomes the plural. One becomes many.",
+      "registrar": "Porkbun",
+      "expires": "2027-06-26"
+    }
+  },
+
+  "the_body_path": {
+    "wan": {
+      "path": "Internet → ATT modem (192.168.1.254) → eastGate enp5s0 (192.168.1.131) → dromedary :80/:443",
+      "note": "Router is NOT in the WAN path! ATT modem forwards directly to eastGate's second ethernet port."
+    },
+    "lan": {
+      "path": "LAN devices → 192.168.4.244 (WiFi) → dromedary/gaia_gate/data",
+      "note": "hickory-dns resolves primals.eco and nestgate.io to .244 for LAN devices"
+    },
+    "guest": {
+      "path": "Guest WiFi → ATT modem → WAN → back to .131 → dromedary",
+      "note": "The Klein face: guest traffic exits and re-enters. Guest IS WAN IS LAN."
+    },
+    "tor": {
+      "path": "Tor → .onion → eastGate Tor hidden service → gaia_gate :8443",
+      "note": "The third face: anonymous access"
+    }
+  },
+
+  "three_nics": {
+    "eno1": {"ip": "192.168.1.153", "subnet": "ATT modem", "role": "backup ethernet"},
+    "enp5s0": {"ip": "192.168.1.131", "subnet": "ATT modem", "role": "WAN ingress — port forwards land here"},
+    "wlp0s20f3": {"ip": "192.168.4.244", "subnet": "Router LAN", "role": "LAN services — all primals listen here"}
+  },
+
+  "tls_status": {
+    "wildcard_cert": {
+      "cn": "primals.eco",
+      "sans": ["*.primals.eco", "*.nestgate.io", "primals.eco", "nestgate.io"],
+      "valid_until": "2027-02-11",
+      "issuer": "Let's Encrypt",
+      "state": "VALID"
+    },
+    "system_cert": {
+      "sans_count": 27,
+      "valid_until": "2027-02-15",
+      "state": "VALID"
+    }
+  },
+
+  "dromedary_status": {
+    "dev_instance": {"pid": 1447, "ports": [80, 443], "state": "RUNNING", "config": "dromedary.toml in dev tree"},
+    "system_instance": {"state": "CRASH-LOOP", "reason": "Address already in use (port 80 taken by dev instance)", "fix": "Kill dev instance OR disable system service"}
+  },
+
+  "dns_status": {
+    "porkbun": "DNS records are EMPTY — domains resolve to NOTHING",
+    "hickory_dns": "Local zones serve LAN resolution (primals.eco → .244, nestgate.io → .244, gaia.local → all gates)",
+    "api_keys": "Expired — stored in northGate vault, not accessible from eastGate",
+    "fix": "Kevin logs into porkbun.com → sets A records for both domains → 162.226.225.148"
+  },
+
+  "porkbun_dns_records_needed": [
+    {"domain": "primals.eco", "type": "A", "name": "@", "content": "162.226.225.148"},
+    {"domain": "primals.eco", "type": "A", "name": "*", "content": "162.226.225.148"},
+    {"domain": "primals.eco", "type": "MX", "name": "@", "content": "mail.primals.eco", "priority": 10},
+    {"domain": "primals.eco", "type": "A", "name": "mail", "content": "162.226.225.148"},
+    {"domain": "nestgate.io", "type": "A", "name": "@", "content": "162.226.225.148"},
+    {"domain": "nestgate.io", "type": "A", "name": "*", "content": "162.226.225.148"},
+    {"domain": "primal.eco", "type": "A", "name": "@", "content": "162.226.225.148"},
+    {"domain": "primal.eco", "type": "A", "name": "*", "content": "162.226.225.148"}
+  ],
+
+  "the_metaphor": {
+    "primals.eco": "Your FACE — what people see when they look at you. Eyes, mouth, expression. The outward identity.",
+    "nestgate.io": "Your SPINE — the column that carries all signals between brain and body. RSS is the cerebrospinal fluid. MCP is the nerve bundle. Agents are the motor neurons.",
+    "gaia.local": "Your BODY MAP — internal nervous system. Every gate named. Every organ addressable. Only visible from inside (LAN).",
+    "Klein_unification": "Face and spine are the same surface. Outside looking at primals.eco sees the face. Inside looking at nestgate.io sees the spine. But it's ONE organism. The dromedary routes them to the same gate, same brain, same truth."
+  },
+
+  "equation": "FACE (primals.eco) + SPINE (nestgate.io) + BODY (gaia.local) = ONE ORGANISM",
+  "mantra": "The face speaks. The spine carries. The body lives."
+}
