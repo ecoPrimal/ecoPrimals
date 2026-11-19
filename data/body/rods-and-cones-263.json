@@ -1,0 +1,65 @@
+{
+  "wave": 263,
+  "timestamp": "2026-11-19T07:40:00-05:00",
+  "thesis": "DARK IS THE ABSENCE OF LIGHT — rods detect connectivity, cones detect protocol color",
+  "metaphor": {
+    "rods": "basic connectivity — can light pass? SYN/ACK, ping, route exists",
+    "cones": "protocol color — WHICH light? HTTP=orange, SMTP=red, neural=blue, mesh=green",
+    "fovea": "the center of attention — port 80/443 where the world looks first",
+    "blind_spot": "hairpin NAT — can't see self from inside (ATT limitation)",
+    "dark_adaptation": "when a gate goes dark, wait — rods take 30min, cones take 5min. Patience IS perception"
+  },
+  "egress": {
+    "ipv4": "162.226.225.148",
+    "ipv6": "2600:1700:b0b0:5b90::*",
+    "status": "LIGHT",
+    "path": "eastGate → enp3s0 → ATT BGW320 → ISP → world"
+  },
+  "ingress": {
+    "mode": "ATT Default Server",
+    "target": "192.168.1.131",
+    "status": "LIGHT",
+    "path": "world → 162.226.225.148 → ATT BGW320 → NAT → 192.168.1.131 → dromedary",
+    "confirmed_visitors": [
+      {"host": "reflectionbot.reflection.ai", "type": "AI crawler", "port": 443},
+      {"host": "vultrusercontent.com", "type": "VPS probe", "port": 443},
+      {"host": "freedominter.net", "type": "privacy user", "port": 443}
+    ]
+  },
+  "tor": {
+    "onion": "iqwvbmlgvoiilj2hr43anj2keseao2lptquad36je5p5p2etw5e3riid.onion",
+    "status": "LIGHT"
+  },
+  "spectrum": {
+    "red": {"ports": [25, 465, 587], "services": ["SMTP", "SMTPS", "submission"], "status": "OPEN"},
+    "orange": {"ports": [80, 443], "services": ["dromedary HTTP", "dromedary HTTPS+TLS"], "status": "CONFIRMED_WAN"},
+    "yellow": {"ports": [8080, 8443, 3141], "services": ["data server", "gaia_gate", "sovereign API"], "status": "OPEN"},
+    "green": {"ports": [8091, 8092, 5060], "services": ["songbird", "nestgate/MCP", "SIP voice"], "status": "OPEN"},
+    "blue": {"ports": [11434, 11435], "services": ["ollama neural API", "ollama proxy"], "status": "OPEN"},
+    "purple": {"ports": [22, 53, 5354, 5201], "services": ["SSH", "DNS", "hickory-dns", "iperf3"], "status": "OPEN"}
+  },
+  "dark_gates": {
+    "milkGate": {"ip": ".160", "status": "DARK", "reason": "not on any subnet — possibly behind broken fiber spine"},
+    "jetStream": {"ip": ".111", "status": "DARK", "reason": "fiber spine to House 2 broken"},
+    "flint1": {"status": "DARK", "reason": "invisible"},
+    "flint2": {"status": "DARK", "reason": "invisible — at House 2"},
+    "ironGate": {"ip": ".237", "status": "DARK"},
+    "blueGate": {"status": "DARK"},
+    "southGate": {"ip": ".148", "status": "DARK"}
+  },
+  "light_gates": {
+    "eastGate": {"ips": [".1.131", ".4.244"], "status": "LIGHT", "role": "BRAIN — WAN face"},
+    "northGate": {"ips": [".4.147", ".1.150"], "status": "LIGHT", "role": "HEART — 14 ollama models, eno1 direct"},
+    "glmt6000": {"ips": [".4.1", ".1.69"], "status": "LIGHT", "role": "WiFi AP + SSH + DHCP + port forwards"},
+    "mikrotik": {"ip": ".4.2", "status": "LIGHT", "role": "CRS310-8G+2S+ L2 core bridge"},
+    "graftGate": {"ip": ".4.104", "status": "LIGHT", "role": "Mac Mini M4, SSH works"},
+    "sporeGate": {"ips": [".4.195", ".1.161"], "status": "LIGHT", "role": "forge, wired+WiFi"}
+  },
+  "network_topology": {
+    "wan_path": "ATT BGW320 (.1.254) → Default Server → eastGate (.1.131)",
+    "lan_backbone": "MikroTik CRS310 (.4.2) bridges: eastGate ↔ GL-MT6000 ↔ ATT modem ↔ fiber(DARK)",
+    "direct_link": "eastGate eno1 ↔ northGate (.4.147) — 2.5Gbps, 0.2ms",
+    "wifi": "GL-MT6000 (.4.1) AP — Aperture Science + Black Mesa",
+    "fiber_spine": "MikroTik SFP+ → 80m → JetStream (.111) — DARK"
+  }
+}
