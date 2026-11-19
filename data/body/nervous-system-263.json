@@ -1,0 +1,11 @@
+{
+  "wave": 263,
+  "thesis": "The Blood-Brain Barrier is the input mesh — ONE keyboard controls ALL gates",
+  "server": "eastGate:24800 (BRAIN)",
+  "mesh": ["northgate←→eastgate", "eastgate←→graftgate", "eastgate←→sporegate", "northgate←→irongate", "northgate←→bluegate", "sporegate←→southgate"],
+  "cns": ["eastGate(brain)", "northGate(heart)", "graftGate(hands)", "sporeGate(forge)"],
+  "pns": ["southGate", "ironGate", "blueGate", "milkGate(sleeping)"],
+  "wan_as_pns": "WAN = peripheral nervous system, rods and cones sense through port spectrum",
+  "globe": {"shoulders": "LAN 1 House 1", "equator": "MikroTik CRS310", "hips": "LAN 2 House 2"},
+  "future": "Ingest Barrier protocol → rebuild in Rust as synapseWeave primal"
+}
