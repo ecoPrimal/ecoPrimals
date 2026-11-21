@@ -1,0 +1,61 @@
+{
+  "wave": "262e-amoeba",
+  "timestamp": "2026-11-21T20:41:00Z",
+  "thesis": "RustDesk is the amoeba membrane — squirrel rides inside as the MCP IDE",
+  "portals": {
+    "orange": { "role": "NEAR WAN", "speed": "1 Gbps", "device": "GL-MT6000", "wan_ip": "162.226.225.148" },
+    "blue":   { "role": "FAR WAN",  "speed": "5 Gbps", "device": "new ATT router", "status": "keys_pending" }
+  },
+  "rendezvous": {
+    "hbbs": "192.168.4.244:21116",
+    "hbbr": "192.168.4.244:21117",
+    "key": "6oVQBFyHHNAJqm1OlS+XvpdoJ5plYrPzJoPTTYlgQdg=",
+    "password": "579163"
+  },
+  "mcp_bridge": {
+    "host": "192.168.4.244",
+    "port": 9091,
+    "tools": 12,
+    "protocol": "JSON-RPC over TCP",
+    "thesis": "squirrel inside rustdesk = IDE in gaia heart"
+  },
+  "layers": {
+    "COMPUTE": {
+      "northGate": { "ip": ".147", "gpu": "RTX 5090", "cpu": "9950X3D", "ram": "96GB", "ollama_models": 14, "role": "HEART" },
+      "eastGate":  { "ip": [".244", ".248"], "gpu": "RTX 4070 12GB", "ollama": "available", "role": "BRAIN" },
+      "unknown_230": { "ip": ".230", "mac": "1c:1b:0d:67:8f:ca", "oui": "Giga-Byte", "ttl": 64, "os": "Linux", "status": "dark" }
+    },
+    "DATA": {
+      "eastGate": { "services": ["Forgejo:3000", "DataSrv:8080", "GaiaGate:8443", "dromedary:443"], "role": "GUT" },
+      "sporeGate": { "ip": ".3", "disk": "209G/929G", "ram": "27G", "services": ["Omada", "ecoPrimals"], "role": "FORGE" },
+      "southGate": { "ip": ".148", "status": "alive_sealed" },
+      "southgate_data": { "ip": ".138", "status": "alive_sealed" },
+      "mikrotik": { "ip": ".2", "services": ["HTTP:80"], "role": "L2_backbone" }
+    },
+    "SIGNAL": {
+      "eastGate": {
+        "rustdesk": { "id": "19091278", "hbbs": true, "hbbr": true, "direct": 21118 },
+        "barrier": 24800,
+        "squirrel_rpc": 9090,
+        "squirrel_mcp": 9091,
+        "ssh": 22,
+        "wireguard": "10.13.37.5",
+        "role": "SPINE"
+      },
+      "sporeGate": {
+        "rustdesk": { "id": "1871544996", "direct": 21118, "verified": true },
+        "squirrel": "local_socket",
+        "omada_sdn": 8245,
+        "ssh": 22,
+        "mcp_flow": "verified_to_eastgate"
+      },
+      "northGate": { "rustdesk_id": "412828750", "ollama": 11434, "status": "registered_no_ssh" },
+      "router": { "ip": ".1", "ssh": 22, "wifi": ["Aperture Science 573Mbps", "Black Mesa 4.8Gbps"] }
+    }
+  },
+  "handshake": {
+    "method": "shared_key_plus_pin",
+    "no_passwords": true,
+    "thesis": "key IS the handshake — no approval needed, just the shared secret"
+  }
+}
