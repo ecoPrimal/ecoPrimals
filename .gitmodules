@@ -1,3 +1,3 @@
 [submodule "primals/GaiaGate"]
 	path = primals/GaiaGate
-	url = http://gaia:GaiaForge2026!@localhost:3000/gaia/Gaia.git
+	url = https://github.com/ecoPrimals/Gaia.git
