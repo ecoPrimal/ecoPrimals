@@ -131,7 +131,7 @@
         "asf_owner": 76561198605327122,
         "always_online": true
       },
-      "git_remote": "http://gaia:GaiaForge2026!@192.168.4.244:3000/gaia/Gaia.git",
+      "git_remote": "http://192.168.4.244:3000/gaia/Gaia.git",
       "git_wave": 259,
       "cron": {
         "heart_pull": "*/2 * * * * /opt/gaia-heart-pull.sh",

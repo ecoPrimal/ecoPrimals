@@ -1,4 +1,5 @@
 #!/bin/bash
+: "${GAIA_ROUTER_PASS:=$(cat "$HOME/.config/gaia/router.pass" 2>/dev/null)}"  # the value lives outside the repo
 # FLINT 2 FIX — Run from eastGate when southGate is reachable
 # This SSHes through southGate → Flint 2 via IPv6 and fixes the WAN config
 
@@ -71,7 +72,7 @@ sshpass -p 'southgate' ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 sout
 echo '=== Trying SSH to Flint 2 via IPv6 ==='
 # Use ssh with password piped through stdin
 # Flint 2 management IPv6: fe80::7a76:89ff:fe96:e67b%wlp6s0
-echo 'ExoticPanda714!!' | ssh -6 -o StrictHostKeyChecking=no -o ConnectTimeout=10 \
+echo "$GAIA_ROUTER_PASS" | ssh -6 -o StrictHostKeyChecking=no -o ConnectTimeout=10 \
     root@'fe80::7a76:89ff:fe96:e67b%wlp6s0' 2>&1 << 'FLINT2_COMMANDS'
 
 echo '============================================'

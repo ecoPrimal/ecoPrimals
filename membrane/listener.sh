@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+: "${GAIA_ROUTER_PASS:=$(cat "$HOME/.config/gaia/router.pass" 2>/dev/null)}"  # the value lives outside the repo
 # ============================================================================
 # listener.sh — Gaia's EAR (far-field signal intelligence)
 # ============================================================================
@@ -12,7 +13,7 @@ set -eo pipefail
 : "${HOME:=/home/eastgate}"
 
 ROUTER="192.168.4.1"
-ROUTER_PASS="ExoticPanda714!!"
+ROUTER_PASS="$GAIA_ROUTER_PASS"
 DNS_LOG="/tmp/dns-queries.log"
 OUT_DIR="${HOME}/Development/ecoPrimals/membrane/local-terminal/remote"
 OUT_FILE="${OUT_DIR}/listener-signal.json"
