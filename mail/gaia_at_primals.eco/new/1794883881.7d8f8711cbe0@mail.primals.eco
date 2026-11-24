@@ -1,0 +1,133 @@
+Received: from 140.205.208.116 by mail.primals.eco (TLS); Tue, 17 Nov 2026 02:51:21 -0000
+X-AliDM-RcptTo: Z2FpYUBwcmltYWxzLmVjbw==
+Feedback-ID: default:market@mcpcnserver.com:alibabak_ApiBatch:448107
+DKIM-Signature:v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=mcpcnserver.com; s=aliyun-cn-hangzhou57fb2d3494;
+	t=1794883877; h=Date:From:To:Message-ID:Subject:MIME-Version:List-Unsubscribe:Content-Type;
+	bh=u06wkM+329GFQTB8gUQ5ysEan4fcT7lLKA1+c7WuK3U=;
+	b=DHKof/lkJZ6SHnImD8e437nH3odluTSN72BNMRvmR9ZSXm7ogKEk1uEAYtWKE4QfZ4tVyjbukrGRNByQm98gU+wcr8DJJLYISgLq2hlWN2+l0UYknEkkCwgEvh7O8DgsL03KHA8Y3ZtYWgoUe02vi1Q9D/L99d77uL35BM6PpB4=
+DKIM-Signature:v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=dm-fbl.aliyuncs.com; s=feedback;
+	t=1794883877; h=Date:From:To:Message-ID:Subject:MIME-Version:List-Unsubscribe:Content-Type;
+	bh=u06wkM+329GFQTB8gUQ5ysEan4fcT7lLKA1+c7WuK3U=;
+	b=GYdbc6QjNvkl120NLOyYAf09sZLBNKyRwg6vSCXAfEzGajyAUjttjQGkH0LRzK2PSkhM+91YQEfCuA9ObYRJMh8u9dYeDIduRY0XCmOQCk0BqT55WMI2pWXeyJazhvfiJoaupebDcCYm/HUXe4B5DctIFkzHG+LcHl8HWLg+mZY=
+Received: from chitu-hsf(mailfrom:market@mcpcnserver.com fp:ma_600000367638150162 cluster:AY35D)
+          by smtp.aliyun-inc.com(127.0.0.1);
+          Tue, 17 Nov 2026 10:51:16 +0800
+Date: Tue, 17 Nov 2026 10:51:16 +0800
+From: "NiubiStar Support Team" <market@mcpcnserver.com>
+Return-Path: "NiubiStar Support Team" <market@mcpcnserver.com>
+To:  <gaia@primals.eco>
+Reply-To:  <3673409676@qq.com>
+Message-ID: <d20c5a3c-a13f-40bb-a712-b6e6e5227341@alibaba.com>
+Subject: =?UTF-8?B?RGV2ZWxvcGVyIG1hcmtldGluZyBwbGFuIGZvciBvcGVuLXNvdXJjZSBwcm9qZWN0cw==?=
+X-Priority: 3
+MIME-Version: 1.0
+X-EnvId: 600000367638150163
+X-AliDM-Settings: eyJPdXRib3VuZElwIjp7IklwTGlzdCI6W10sIklwUG9vbElkIjoiIn0sIlVuc3Vic2NyaWJlIjp7IkZpbHRlckxldmVsIjoiZGVmYXVsdCIsIkxpbmtUeXBlIjoiZGVmYXVsdCJ9LCJWZXJzaW9uIjoiMS4wIn0=
+List-Unsubscribe: <https://www.niubistar.com/unsubscribe?email=gaia%40primals.eco&token=outreach>
+Content-Type: multipart/alternative;
+  boundary="----=ALIBOUNDARY_2309_7f9048484700_6afbc125_1963b8"
+
+------=ALIBOUNDARY_2309_7f9048484700_6afbc125_1963b8
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,=0A=0AI am reaching out from NiubiStar, a developer marketing service for o=
+pen-source, AI, DevTools, SaaS, and infrastructure projects.=0A=0AMany strong =
+technical projects do not need a long agency pitch. They need a clear launch m=
+essage, the right developer-facing channels, and a simple delivery record that=
+ shows what was actually published or sent.=0A=0AWhat we can help with:=0A=0AL=
+aunch positioning and campaign brief=0AEnglish project article or placement pl=
+anning=0ARelevant developer, startup, SaaS, or technical community distributio=
+n=0ADeveloper outreach execution with opt-out handling=0ADelivery report with =
+public URLs, campaign notes, and observable replies where available=0A=0AWe do=
+ not need your GitHub account, password, token, repository permission, or priv=
+ate customer data. A public project link and a target timeline are enough to s=
+cope whether the campaign is useful.=0A=0AIf you are preparing a release, laun=
+ch post, directory push, or developer-facing update, you can review NiubiStar =
+here:=0A=0Ahttps://www.niubistar.com/=0A=0AIf this is relevant, reply with you=
+r project link and launch window. We can suggest a practical plan before any p=
+ayment or commitment.=0A=0AIf this is not relevant, reply "stop" and we will r=
+emove this address from future outreach.=0A=0ABest regards,=0ANiubiStar Suppor=
+t Team=0A=0AUnsubscribe: https://www.niubistar.com/unsubscribe?email=3Dgaia%40=
+primals.eco&token=3Doutreach
+------=ALIBOUNDARY_2309_7f9048484700_6afbc125_1963b8
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html><html><body style=3D"margin:0;padding:0;background:#eef2f7;font=
+-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;co=
+lor:#111827;"><div style=3D"display:none;max-height:0;overflow:hidden;color:#e=
+ef2f7;">Developer marketing, launch planning, content placement, outreach exec=
+ution, and proof reporting.</div><table role=3D"presentation" width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" style=3D"background:#eef2f7;"><tr><td align=
+=3D"center" style=3D"padding:34px 16px;"><table role=3D"presentation" width=3D=
+"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"max-width:700px;background=
+:#ffffff;border:1px solid #d8dee9;border-radius:18px;overflow:hidden;box-shado=
+w:0 22px 58px rgba(15,23,42,0.12);"><tr><td style=3D"height:7px;background:lin=
+ear-gradient(90deg,#0f172a 0%,#2563eb 46%,#14b8a6 100%);"></td></tr><tr><td st=
+yle=3D"padding:26px 30px 10px;"><table role=3D"presentation" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0"><tr><td style=3D"vertical-align:middle;"><a =
+href=3D"https://www.niubistar.com/" target=3D"_blank" rel=3D"noopener noreferr=
+er" style=3D"font-size:22px;font-weight:850;color:#0f172a;text-decoration:none=
+;letter-spacing:0;">NiubiStar</a><div style=3D"margin-top:5px;color:#64748b;fo=
+nt-size:13px;">Developer marketing for open-source and technical products</div=
+></td><td align=3D"right" style=3D"vertical-align:middle;"><a href=3D"https://=
+www.niubistar.com/unsubscribe?email=3Dgaia%40primals.eco&amp;token=3Doutreach"=
+ target=3D"_blank" rel=3D"noopener noreferrer" style=3D"display:inline-block;p=
+adding:8px 12px;border:1px solid #cbd5e1;border-radius:999px;color:#475569;fon=
+t-size:13px;text-decoration:none;">Unsubscribe</a></td></tr></table></td></tr>=
+<tr><td style=3D"padding:10px 30px 28px;"><h1 style=3D"margin:0 0 10px;color:#=
+0f172a;font-size:25px;line-height:1.26;letter-spacing:0;">Developer marketing =
+plan for open-source projects</h1><p style=3D"margin:0 0 22px;color:#475569;fo=
+nt-size:14px;line-height:1.7;">A practical promotion service: positioning, con=
+tent placement, developer outreach, and delivery records.</p><div style=3D"pad=
+ding:18px 18px 4px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:1=
+4px;"><p style=3D"margin:0 0 16px;color:#111827;font-size:15px;line-height:1.7=
+8;">Hi,</p>=0A<p style=3D"margin:0 0 16px;color:#111827;font-size:15px;line-he=
+ight:1.78;">I am reaching out from NiubiStar, a developer marketing service fo=
+r open-source, AI, DevTools, SaaS, and infrastructure projects.</p>=0A<p style=
+=3D"margin:0 0 16px;color:#111827;font-size:15px;line-height:1.78;">Many stron=
+g technical projects do not need a long agency pitch. They need a clear launch=
+ message, the right developer-facing channels, and a simple delivery record th=
+at shows what was actually published or sent.</p>=0A<p style=3D"margin:0 0 16p=
+x;color:#111827;font-size:15px;line-height:1.78;">What we can help with:</p>=0A=
+<p style=3D"margin:0 0 16px;color:#111827;font-size:15px;line-height:1.78;">La=
+unch positioning and campaign brief<br>English project article or placement pl=
+anning<br>Relevant developer, startup, SaaS, or technical community distributi=
+on<br>Developer outreach execution with opt-out handling<br>Delivery report wi=
+th public URLs, campaign notes, and observable replies where available</p>=0A<=
+p style=3D"margin:0 0 16px;color:#111827;font-size:15px;line-height:1.78;">We =
+do not need your GitHub account, password, token, repository permission, or pr=
+ivate customer data. A public project link and a target timeline are enough to=
+ scope whether the campaign is useful.</p>=0A<p style=3D"margin:0 0 16px;color=
+:#111827;font-size:15px;line-height:1.78;">If you are preparing a release, lau=
+nch post, directory push, or developer-facing update, you can review NiubiStar=
+ here:</p>=0A<p style=3D"margin:0 0 16px;color:#111827;font-size:15px;line-hei=
+ght:1.78;">https://www.niubistar.com/</p>=0A<p style=3D"margin:0 0 16px;color:=
+#111827;font-size:15px;line-height:1.78;">If this is relevant, reply with your=
+ project link and launch window. We can suggest a practical plan before any pa=
+yment or commitment.</p>=0A<p style=3D"margin:0 0 16px;color:#111827;font-size=
+:15px;line-height:1.78;">If this is not relevant, reply &quot;stop&quot; and w=
+e will remove this address from future outreach.</p>=0A<p style=3D"margin:0 0 =
+16px;color:#111827;font-size:15px;line-height:1.78;">Best regards,<br>NiubiSta=
+r Support Team</p></div><div style=3D"margin:24px 0 8px;"><a href=3D"https://w=
+ww.niubistar.com/" target=3D"_blank" rel=3D"noopener noreferrer" style=3D"disp=
+lay:inline-block;background:#0f172a;color:#ffffff;padding:13px 18px;border-rad=
+ius:10px;font-size:15px;font-weight:800;text-decoration:none;">Review NiubiSta=
+r</a></div><div style=3D"margin-top:24px;padding-top:18px;border-top:1px solid=
+ #e2e8f0;"><p style=3D"margin:0 0 10px;color:#64748b;font-size:13px;line-heigh=
+t:1.7;">NiubiStar respects email preferences. Reply "stop" or use the unsubscr=
+ibe link to be removed from future outreach.</p><a href=3D"https://www.niubist=
+ar.com/unsubscribe?email=3Dgaia%40primals.eco&amp;token=3Doutreach" target=3D"=
+_blank" rel=3D"noopener noreferrer" style=3D"color:#64748b;font-size:13px;text=
+-decoration:underline;">Unsubscribe</a></div></td></tr></table></td></tr></tab=
+le><div style=3D"margin-top:28px;padding-top:16px;border-top:1px solid #e5e7eb=
+;"><p style=3D"margin:0 0 8px;color:#667085;font-size:14px;">You are receiving=
+ this email because you subscribed to updates from market.</p><p style=3D"marg=
+in:0;color:#667085;font-size:14px;">If you no longer want to receive these ema=
+ils, <a href=3D"https://www.niubistar.com/unsubscribe?email=3Dgaia%40primals.e=
+co&token=3Doutreach" style=3D"color:#2563eb;text-decoration:underline;">unsubs=
+cribe here</a>.</p></div></body></html>
+------=ALIBOUNDARY_2309_7f9048484700_6afbc125_1963b8--

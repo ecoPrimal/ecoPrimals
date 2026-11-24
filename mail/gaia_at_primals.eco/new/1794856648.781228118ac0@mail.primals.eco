@@ -1,0 +1,92 @@
+Received: from 52.101.43.135 by mail.primals.eco (TLS); Mon, 16 Nov 2026 19:17:28 -0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=JVUDRocnoI4yS4fZElsYDb1hlJhc1ziBHphGDb5qjrR2L7XoHoAoKXX5vi12fFdyqM3yjoHTaubFAQQOUZT86kNmZb4UmiTZbyrf1vWNhE13YESWKmSYKHo0pLi1tdYjrVF2M2O9ZfN0Xiv1R3ewaawqxckiit6/n4L8Yuro1RGpWVB8e69H16LUxxVitH0xLHIlQDYabjnhA8M/aV7lx8g3WtFFcSs5y02UWHFcRcVt+Ttdq+hmRVlneyKimh72vX+XodOqXrl06dzDF8+C0XcmF1WjkYWl/wJj8M7axcR58+HMPVgoYAV+QSXatkRTkkcCnm/oIWQiJg+y7vOKog==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=0SBGZjPFb2AgkpFWJU6SXU5B+tdVxwOLrBWZMAidiGM=;
+ b=SgCqo9pbs0xGZ8ufZ1XoaZRaXbFurvSCCHSgFLS1X5V+cQPzrJhIyInVZqokiLFQngFzAiBi+SCgYqRGivzmfn5DAPvWe3YBMCHqjeP7u1s8vqHWoMh0XmpEIm5YEuUKwkvj955tju79ZCTr+EnYWr5qQuWQk0OGvMsxAOhwOrH+xLy7C5akksVOW9zimudLluZiqAXTiEPwwFZ96MWTVfQeKFh1zFYDik1pkaGiV5E1SPHWY3FA/b+9X0ejgtJv+kOtTGqzjptqv0MRdKU0X7u+TbuDMHGKC5/p+SWYCoSHKHYAph2F7EasNSWC7UsU6gyEG+TXtcg3MLtCvzQ/kQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none
+ action=none header.from=accountprotection.microsoft.com; dkim=none (message
+ not signed); arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=accountprotection.microsoft.com; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=0SBGZjPFb2AgkpFWJU6SXU5B+tdVxwOLrBWZMAidiGM=;
+ b=LoOJC2JzQceGgI0/LqRClUOJS0GxHE6qlgM3zfrK8bBb34We916obbeemd0UfZSlYXNtQ/j77e/PDrDlAXTyo/ln0Iz1Y6ac9fhW+t3Xig2g4LyU5eipSYApHkM93KcSpz5t6UcYVkURqojpzNGUt39GBK+wAVFecM2df0c+1/o=
+Received: from BN9PR03CA0582.namprd03.prod.outlook.com (2603:10b6:408:10d::17)
+ by PH7PR16MB4727.namprd16.prod.outlook.com (2603:10b6:510:138::21) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.615.13; Mon, 16 Nov
+ 2026 19:17:26 +0000
+Received: from BN6PEPF0000006F.namprd03.prod.outlook.com
+ (2603:10b6:408:10d:cafe::66) by BN9PR03CA0582.outlook.office365.com
+ (2603:10b6:408:10d::17) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.21.615.14 via Frontend Transport; Mon,
+ 16 Nov 2026 19:17:26 +0000
+X-MS-Exchange-Authentication-Results: mx.microsoft.com 1; spf=none (sender IP
+ is 57.154.113.239) smtp.mailfrom=accountprotection.microsoft.com; dkim=none
+ (message not signed) header.d=none;dmarc=none action=none
+ header.from=accountprotection.microsoft.com;
+Received: from accountprotection.microsoft.com (57.154.113.239) by
+ BN6PEPF0000006F.mail.protection.outlook.com (10.167.248.196) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.21.639.5
+ via Frontend Transport; Mon, 16 Nov 2026 19:17:25 +0000
+From: Microsoft account team
+	<account-security-noreply@accountprotection.microsoft.com>
+Date: Mon, 16 Nov 2026 11:17:25 -0800
+Subject: Your single-use code
+To: gaia@primals.eco
+X-Priority: 3
+X-MSAPipeline: MessageDispatcherEOP
+Message-ID: <DACNPNKJUUU4.0TYKTQ0Z1HAR1@ph1pepf0001735d>
+X-MSAMetaData: =?utf-8?q?DqxWrxw3QM7DSXbLrv1!OJ76cX8HNFLzuqDTyMDYGhWdb1voH2tuc4H2kOT0H?=
+ =?utf-8?q?lroCuumFW9UfazWUpC8PR4!c8!jHHr3nD7hPBQve0zdAie1W8sda4OBck9Ovv?=
+ =?utf-8?q?G5KPsYaw$$?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-DGK4hhmj0fKYB6H6OwlHuA=="
+Return-Path: account-security-noreply@accountprotection.microsoft.com
+X-MS-TrafficTypeDiagnostic:
+	BN6PEPF0000006F:EE_FirstParty-MicrosoftAccount-V3-System|PH7PR16MB4727:EE_FirstParty-MicrosoftAccount-V3-System
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 4918f00a-15d2-4dc8-0c78-08df44163fcb
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|376014|61400799027|23010399003|16102099003|18002099003|5143699018|19003699004|261009223027099003|6143699003|56012099006|10067099003|261028144727099003|261026140227099003|261026121527099003|261022113327099003|261022105027099003|7146999003;
+X-Microsoft-Antispam-Message-Info:
+	wlwW6W1zQeT/flmaq/P2z/VfWIF64uRNy8bm26pEbVeceCnZ+6ULy52m4r6OCdwUWUIeerocA3CNEJzPhAKbAxdGny1tAMpDHY4MgGczoLychD8TpVuediTMjg5i0qcpC2+VnqdmRC/o2OicCJYUeRQd7PM8chNCyggCdIVy7DTGgvoFSRzfxnT7fD0G9Mrlsmmxx+i6aIWskNgKyYQNmHSTq+i2YLYMxHpxKFPgmb852Bal3SlaoyffkSweCCH/oluW7mBYU6SwYA/Y/YQg/Td1BS1ilKAyDeOeFnip2PlGtbqKNze+q0WuxrDqqwsz91NaqTv+4zClXqw3kCCYsUVpHwILoFLeoAaWB+62F/cwanwcA9bgmSE8KxM60Jqhl4+hhuVVYy2bSRfeau+8gbxXSdqnqcpM/McGwA+zKUDP1cAIm6byM347BItKI8o0opt+85wuCUZ7zOGEYrb81ONIeBEgBzRpmcY2ljEPmb47YZYQSOPNOXXfKrZuzqvMRVT9yresCOxB/ntrf7yTGzDnorGg+xoeyrGXZuaGyuEWpej1UplIugm5tUmYB1PtqqFB01zm0d1KiJDmcnbPo8wK7snAWjQxRoXR+YlX6sDZrNFjRt2nf1CrlziYGy/VMg0CQkohPUtvUefKcgh8Zo1vBIWe0ngzXPYYPIk3mABH532lpewHO6I8h1+3lLs87E8wq5ycpVginG1mzdGWOoOHVEv1Tdsrjhub3lwcSdQUpmzuOwiZ5C951eXErvpXiTs/VV3PscM2ngcE+le0pwKnZAPFrrZ+YvT8qYK8mAPSoFlz5HYmgBgY5T+8DQat
+X-Forefront-Antispam-Report:
+	CIP:57.154.113.239;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:accountprotection.microsoft.com;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(376014)(61400799027)(23010399003)(16102099003)(18002099003)(5143699018)(19003699004)(261009223027099003)(6143699003)(56012099006)(10067099003)(261028144727099003)(261026140227099003)(261026121527099003)(261022113327099003)(261022105027099003)(7146999003);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	sgpDDR/Tr0eF/EE+kTr061XDPc4S9Rf9kEilkXY074sBC/pPbqvFvwkdk719mtW6Mt+KOYxUUXIdcsGgMDTVrpWJUm+b5WmUMuQr5VB4R09cqtp21EW1fZQ1Mtb1935G5c9m+VYyx3lcXbQy6PM6qHiTSY5zskkKRA8aoumFoGPzNLeitnESByo0Je20y84b3pSPOVBOpo0mRWA5NUiECjJcPmlvFkWmUhV0r6WDiQzb/Em7ZkP2XDcocmgitE0c/NCq8cz2mtA3oH6PEblevXGGIYZXk+RySisqYW4nPBFHMdNYjtpPL8maYsLD/ZsStkCI9u6+kQt1DLgSIMDdit5R70h3I+KejmlmUrMgUEu7fnJsST0N/IO5Ljy4lsHJeYFs4FtrZHtPZJ/GzjJx3Z0v1JKV9LNFH8Z+Eniy4hLwghjaZd7O+N2ZwoedXQe8Zg1YnOUQXWcTU2hZVqRm7tesv8GlE8WuAMTcZWeiYVo2NvG2LEEU+CU/5yVG6/OC5w8uVWDJ4859aDy37Pzn3NryN2BJ/MsEBNkjpoPThTA/RInLW4dZ1sEjFulGKfPRyb6bhuZWhuQlaJuEL346zQOb/PoPdU8gjs4dv5kGvrCuPlW+2AdO4QcBkT4qwMXzaBXt5tVJHAd/s2ba+0wt1EG+yiPpeaDgSGMzi6g4vp2D6fN6dY/MG00511jNZ3GLzChw7r0tkbOcXKARSctbUeiN5ZXmIYF4Jz/HZm0/aYNdO3upZVK7Fv5TCNuLW/IrSVCR26Vo8rXBsNgSaLE0hfN85/mWkHYJy91kk/c3IDyNaMfegkPH91k+fzV1bvW0UIzFeYf4VinmFFlvU2sSguweWA5rnq39dHkl+s0dBnDOYNmirbckYo35lJdSSbjmt0CtGj3q9Ibqmi/Ln4bXG8w07/7Hgt+lMorgyzIJfeC694aLzE5HrA5InNOpIiOM
+X-OriginatorOrg: accountprotection.microsoft.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 Nov 2026 19:17:25.7527
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4918f00a-15d2-4dc8-0c78-08df44163fcb
+X-MS-Exchange-CrossTenant-Id: 5ba90553-c2cd-460e-b5fd-ab93ad9155c7
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=5ba90553-c2cd-460e-b5fd-ab93ad9155c7;Ip=[57.154.113.239];Helo=[accountprotection.microsoft.com]
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: TreatMessagesAsInternal-BN6PEPF0000006F.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH7PR16MB4727
+
+--=-DGK4hhmj0fKYB6H6OwlHuA==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Hi gaia@primals.eco,
+
+We received your request for a single-use code to use with your Microsoft account.
+
+Your single-use code is: 917355
+
+Only enter this code on an official website or app. Don't share it with anyone. We'll never ask for it outside an official platform.
+
+Thanks,
+The Microsoft account team
+Privacy Statement: https://go.microsoft.com/fwlink/?LinkId=521839
+Microsoft Corporation, One Microsoft Way, Redmond, WA 98052
+
+--=-DGK4hhmj0fKYB6H6OwlHuA==--

@@ -1,7 +1,7 @@
 {
   "git.autoRepositoryDetection": false,
   "git.scanRepositories": [],
-  "git.enabled": false,
+  "git.enabled": true,
   "search.followSymlinks": false,
   "files.maxMemoryForLargeFilesMB": 128,
   "extensions.autoUpdate": false,
@@ -43,5 +43,7 @@
     "gardens/**": true,
     "protists/**": true,
     "infra/**": true
-  }
+  },
+  "git.blame.editorDecoration.enabled": true,
+  "git.diagnosticsCommitHook.Enabled": true
 }

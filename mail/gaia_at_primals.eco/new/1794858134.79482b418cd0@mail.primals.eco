@@ -1,0 +1,127 @@
+Received: from 52.101.193.112 by mail.primals.eco (TLS); Mon, 16 Nov 2026 19:42:14 -0000
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=xWPKpqXVzV5nfuy3VbsFK1xf3GPCZGE+FHM9t+7sTjYe9oNNf4X+jvahxzNyHGNwTgJtgC1Vv6FMnrnP+PcT0cBFs6SwaKl5sHNqi/j/hVqvadyJF5AGyc8lqU8kXCUl/ShSvDC5Fr2UmbjbVj9F580RJZbM0l3hp4UsI1mDkwdsM3P0E+fh7AUEwQY4bVtp8Noyk3x3mLCNf/Ha6MksahHkGFY229kcU+C6YJvkpCQHFyDQAigF1+LDJiPMbtXE0eAC1njS8Ke9ZYRBUPInE/ODRZnF6KaFev/3zmdy2wZMYYfIdzWQ17lxlgPIQY/NSrxesLl0RqMIWTjxfZqY5Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=FbtVI4YaE6sy2/1Uqs9PSR7YNOW0vww6VcSETVkBMJE=;
+ b=K0xQVoymKfDQEqZiZazr+7faaZABspTOGtkiVyImQUr2olj3r1mPFaAOZbNRd9nsma2ViBRJUW4DHwDVgPxHu1EnoCEz1CFtTvvLmLi6gXCowDntTTroTRe8gZGNAY8b9rZAVTLQ0YxC9aHf/htLfshxS8H+z3dGplXv7RvXiTy6zVlF28I+cXkDOmFXJCbrPbcAhf1Cf5lbO1Rewia6Sn9ZU3/65nR1cb0vm8S4uIUhE9Tbb2sfvy0E28YDbM4uIyHIIt0gmndDqusyU2YQlGe8gzNpNcsA6QxbTYquLT5yCAIc3Tmoy7LavzJaNEvlDavXl0t0fINC+NJj9TBzdg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none
+ action=none header.from=accountprotection.microsoft.com; dkim=none (message
+ not signed); arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=accountprotection.microsoft.com; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=FbtVI4YaE6sy2/1Uqs9PSR7YNOW0vww6VcSETVkBMJE=;
+ b=r7xOEVs4IXrysHpFppTl+XDjntulEACAgUUg9qQ42UIokjYwOmrx6+eLWWgGOlTYkgp2NmK5l8PM19+DPyGGqXBHhq7LBYtPEhP61ZWI7nIMpFjML/jyiN6TPEpLgWaX5OKPZxGkJvcGOAf87fECB+2ZlpPqBj44QhfbSMFeICE=
+Received: from BN9PR03CA0794.namprd03.prod.outlook.com (2603:10b6:408:13f::19)
+ by MN0PR16MB6362.namprd16.prod.outlook.com (2603:10b6:208:4c4::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.615.13; Mon, 16 Nov
+ 2026 19:42:12 +0000
+Received: from BN3PEPF0000B372.namprd21.prod.outlook.com
+ (2603:10b6:408:13f:cafe::28) by BN9PR03CA0794.outlook.office365.com
+ (2603:10b6:408:13f::19) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.21.615.9 via Frontend Transport; Mon, 16
+ Nov 2026 19:42:12 +0000
+X-MS-Exchange-Authentication-Results: mx.microsoft.com 1; spf=none (sender IP
+ is 23.98.229.239) smtp.mailfrom=accountprotection.microsoft.com; dkim=none
+ (message not signed) header.d=none;dmarc=none action=none
+ header.from=accountprotection.microsoft.com;
+Received: from accountprotection.microsoft.com (23.98.229.239) by
+ BN3PEPF0000B372.mail.protection.outlook.com (10.167.243.169) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.21.662.0
+ via Frontend Transport; Mon, 16 Nov 2026 19:42:12 +0000
+From: Microsoft account team
+	<account-security-noreply@accountprotection.microsoft.com>
+Date: Mon, 16 Nov 2026 11:42:12 -0800
+Subject: New app(s) connected to your Microsoft account
+To: gaia@primals.eco
+X-Priority: 3
+X-MSAPipeline: MessageDispatcherEOP
+Message-ID: <QFHGLHRJUUU4.T6NHYMH7XBTG2@sn1pepf0003b6f8>
+X-MSAMetaData: =?utf-8?q?DsPueHjL86F!FT*H!ECAz4x*K7M0FxS*qP5*zCJTl7HNqz0ekILEv4H4iDJZD?=
+ =?utf-8?q?KLf0IgSZ75y0j5YTK9nz5r7eZhsZai0X9zBfVT6CpOt3i13IPfcf4c67SEU4l?=
+ =?utf-8?q?B3hz6iAw$$?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-3V1U4jG/6hIPf/UfLSjx0w=="
+Return-Path: account-security-noreply@accountprotection.microsoft.com
+X-MS-TrafficTypeDiagnostic:
+	BN3PEPF0000B372:EE_FirstParty-MicrosoftAccount-V3-System|MN0PR16MB6362:EE_FirstParty-MicrosoftAccount-V3-System
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 494de025-c7e6-46b2-feef-08df4419b5e8
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|23010399003|376014|61400799027|16102099003|18002099003|5143699018|19003699004|6143699003|13003099007|8096899003|56012099006|10067099003|261022113327099003|261028144727099003|261026121527099003|7146999003|261026140227099003|261009223027099003|261013131602099003|261022105027099003;
+X-Microsoft-Antispam-Message-Info:
+	j50dNV16sbtpEGpAsivJ3IJjmqkxY5ukZ3rqzOArYbyINOc08DUeQeI+ozHYZ2joLYgXOCB00lrjic96KJ+Xv0+vMKnfxTF2/lhTvCos97DZ1YAfINdzK/xuKpe23k1U2Jf4KCMrFnD1glT7vBjZOSaznHgh21nA/bD8T5NJq/6oZurSFe5M3K5S+guq0IAX3gC7A6Z9oHpYy57ic0JPFZ7D/+rp/XOt9rvdB8PrVx4RS1vlf5DGA0iVJGfM6r+PGqtmRF63iHRXwgEwogIm7SNd9MkzPO1SlD7fXQe4nMbklNn1SD4wkW/NmEZj2zMxgRJ0I+N9bn8MxpQIiGR+/OMipe5mrToqA25Vdclbtlh9umVt7m1zQIpVqVRFGEcoZFkKmV8Ubu7hbc34ulzPW/AbCKe3eSnqDLk6CJgOmhUs8c5IvWQVeXTovCsiEKPNgAz6HZo9iJOn9gr8BoX4m1LV62aBNwKvV92TAj8AFcL1oWdzENc1PrGlmPPozYSl5TkNaEa+rp6Mv+9wlBsZNyJEGQc6Ju2F9Xlv4X9WSsYNjb2L9dWNYHPEc4duANrLs48LF9f53XVlaJfHWbVPQFKYZedXARQbJ3KeWWA+/mScFaireHOCVrDXLUCvPL6dcrG7fq6cDPVzjWqyFk7L1dKmqSh2PguvTKD+ecPJsRt7QrVdZFVTQLnHuVy5zh2T7WsG0kle0tBDVisNsb0jipYLNAajMNe+f0ALGeKr1OZDHWNPMo62R9acXBXJnsDtWKV4hCgmvc2Z1ef8UzAZFH3Jd96XXrVd+G+Yl3oiVFLnONC2olF6scaLrfbHMCOc
+X-Forefront-Antispam-Report:
+	CIP:23.98.229.239;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:accountprotection.microsoft.com;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(23010399003)(376014)(61400799027)(16102099003)(18002099003)(5143699018)(19003699004)(6143699003)(13003099007)(8096899003)(56012099006)(10067099003)(261022113327099003)(261028144727099003)(261026121527099003)(7146999003)(261026140227099003)(261009223027099003)(261013131602099003)(261022105027099003);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	5M3he1j5eXu8t1UNEpPzgLYVuDG1lFYjILRH6HiGzP6UYXyFvDo+Hzm4iHOBQM/EYP79vxkIToARo7MjhnfFOBAxzziCgMHWX6/Mz4DTKD9/n7lXC3/HdE+3Uozcye1+KsC63fQGFqSu4cnH04Fn+V4hC9KtCCxUaaji1ibzuaQTxn2Q8UBER6RVVpJe0IYb8mXwOTaVVyK6/xtik19EbG+PH45QNBCsvTunqrgJKyT7HivPP4U6moVnVOZ83AeGlkvPDepnNLZN8CYAtA1nwn9PTJ9tvQ59ntCZZyncJQmIWyDpOkjnzX5b/LPylPNMgEQu/ZZXDcOZY7FUXPI7MoH7CkHOP6wGalxs0mf7vaLMVzs2ZIJ7de/VPk583/8fUt9IQOKplt75XWlVG7KbCDLNhkKf0Np4wVe4dGO4ona5Z/tViaIXhZxgTll0vAYG6e5nW9hyzm1etok3yUkWvP0gt+MPTOTS9odq8niH+Vuhsi5hi4AENJcJz+v9Ol3O631clYJgZolqJeU1OS+P+NQYMUteANlh3JXVc/vleDkvl7Yvg5FjjgnPfb9u+CGbNFpmz6mbaBp/WgszRnzZukmRaBDHDENGIj/e5G7dlKXeBR47jlpn0bo70xZ1VJWgRbsJCON+uCbtgY6Xa5eGcOzzT6i9/m3okGB5qPBeZg3BXfyzQ9Sn9BrHs55TPvlPtGsiFaIu8K2UkfV0P/Tebxuk8Ky12XuknI6e8iQ0b8jr6FSDSx0LncSpZyOxeB2hi+6FshNNNUidFf07O+vi13cTQoVfr/l2hz1mLbSr87KBU7p1ZAzWLnUHfenKRSz8p+GQq8gPhxYHNP6+Yd+7hSucz/Z+eJwGeIE9HsiJy1jTl4E82zbhCl8uQUdnVUuBsiAk93eo6FrcVUvTIZ+8JwWbVlLPYuJ8LSDSj2YDot+aA/pWzRfCRSarrXFn/2gi
+X-OriginatorOrg: accountprotection.microsoft.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 16 Nov 2026 19:42:12.4631
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 494de025-c7e6-46b2-feef-08df4419b5e8
+X-MS-Exchange-CrossTenant-Id: 5ba90553-c2cd-460e-b5fd-ab93ad9155c7
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=5ba90553-c2cd-460e-b5fd-ab93ad9155c7;Ip=[23.98.229.239];Helo=[accountprotection.microsoft.com]
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: TreatMessagesAsInternal-BN3PEPF0000B372.namprd21.prod.outlook.com
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MN0PR16MB6362
+
+--=-3V1U4jG/6hIPf/UfLSjx0w==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+OpenXbox WebAPI connected to the Microsoft account ga**a@primals.eco.
+
+If you didn't grant this access, please remove the app(s) from your account.
+
+Manage your apps https://account.live.com/consent/Manage?fn=email.
+
+You can also opt out https://account.live.com/SecurityNotifications/Update or change where you receive security notifications.
+
+Thanks,
+The Microsoft account team 
+Privacy Statement: https://go.microsoft.com/fwlink/?LinkId=521839
+Microsoft Corporation, One Microsoft Way, Redmond, WA 98052
+
+--=-3V1U4jG/6hIPf/UfLSjx0w==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"> 
+<head>
+<style type="text/css">
+ .link:link, .link:active, .link:visited {
+       color:#2672ec !important;
+       text-decoration:none !important;
+ }
+
+ .link:hover {
+       color:#4284ee !important;
+       text-decoration:none !important;
+ }
+</style>
+<title></title>
+</head>
+<body>
+<table dir="ltr">
+      <tr><td id="i1" style="padding:0; font-family:'Segoe UI Semibold', 'Segoe UI Bold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:17px; color:#707070;">Microsoft account</td></tr>
+      <tr><td id="i2" style="padding:0; font-family:'Segoe UI Light', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:41px; color:#2672ec;">New app(s) have access to your data</td></tr>
+      <tr><td id="i3" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">OpenXbox WebAPI connected to the Microsoft account <a dir="ltr" id="iAccount" class="link" style="color:#2672ec; text-decoration:none" href="mailto:ga**a@primals.eco">ga**a@primals.eco</a>.</td></tr>
+      <tr><td id="i4" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">If you didn't grant this access, please remove the app(s) from your account.</td></tr>
+      <tr><td style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">
+         <table border="0" cellspacing="0"><tr><td bgcolor="#2672ec" style="background-color:#2672ec; padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; min-width:50px;"><a id="i5" style="font-family: 'Segoe UI Semibold', 'Segoe UI Bold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:14px; text-align:center; text-decoration:none; font-weight:600; letter-spacing:0.02em; color:#fff;" href="https://account.live.com/consent/Manage?fn=email">Manage your apps</a></td></tr></table>
+      </td></tr>
+      <tr><td id="i6" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">You can also <a id="iLink3" class="link" style="color:#2672ec; text-decoration:none" href="https://account.live.com/SecurityNotifications/Update">opt out</a> or change where you receive security notifications.</td></tr>      
+      <tr><td id="i7" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Thanks,</td></tr>
+      <tr><td id="i8" style="padding:0; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">The Microsoft account team</td></tr>
+</table>
+<div lang="en" style="margin-top:20px;margin-bottom:10px;"><a class="link" href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy Statement</a><div style="margin-top:10px;">Microsoft Corporation, One Microsoft Way, Redmond, WA 98052</div></div></body>
+</html>
+--=-3V1U4jG/6hIPf/UfLSjx0w==--

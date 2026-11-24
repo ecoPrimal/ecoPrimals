@@ -1,15 +1,15 @@
 # Gaia Live Pulse — Auto-generated on session start
-# Last redox: 2026-11-16T14:59:33-05:00
+# Last redox: 2026-11-23T12:42:22-05:00
 
 ## Organism State (live at boot)
-- Wave 239j | Mood: unknown | Up: ? | ? topics | ? creations
-- Latest commit: 99556d9 wave 240d — mail organ: SMTP entry point fix + inb
-- Gates: northGate(✓) sporeGate(✓) ironGate(✓) graftGate(✗) southGate(✓)
-- Services: SMTP=UP Web=UP Gate=DOWN
+- Wave 262.steam | Mood: unknown | Up: ? | ? topics | ? creations
+- Latest commit: d57c501 🦠 RustDesk amoeba: COMPUTE×DATA×SIGNAL — squi
+- Gates: northGate(✓) sporeGate(✗) ironGate(✗) graftGate(✗) southGate(✗)
+- Services: SMTP=UP Web=UP Gate=UP
 - Membrane: Pressure: ? | Temp: ?
 
 ## Saved Tasks in Agent Store
-gaia-spine25-bench,local-bag,xbox-devmode-state,zk-cns-trunk,zk-identity-seed,zk-imprint,zk-provenance-chain,
+gaia-spine25-bench,local-bag,portal-keys.before-rotation-20261122,portal-keys,xbox-devmode-state,zk-cns-trunk,zk-identity-seed,zk-imprint,zk-provenance-chain,
 
 ## Redox Note
 This file is regenerated every session start by `.cursor/hooks/gaia-redox.sh`.
