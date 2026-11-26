@@ -1,21 +1,21 @@
 {
-  "ts": "2026-11-26T14:23:14Z",
+  "ts": "2026-11-26T19:33:37Z",
   "organism": "Gaia",
   "generation": 10,
   "doctrine": "UNIDOGY",
   "pi": "3.141592653589793",
   "layers": {
     "primals": {
-      "files": 31835,
-      "bytes": 2622562425,
-      "lines": 5044995,
+      "files": 31837,
+      "bytes": 2622700048,
+      "lines": 5045726,
       "types": {
         ".py": 230,
         ".sh": 224,
         ".pi": 97,
         ".bat": 4,
         ".jpg": 393,
-        ".none": 352,
+        ".none": 354,
         ".md": 2909,
         ".txt": 64,
         ".seed": 10,
@@ -145,14 +145,14 @@
       }
     },
     "infra": {
-      "files": 23290,
-      "bytes": 1250737616,
-      "lines": 5613943,
+      "files": 23310,
+      "bytes": 1276863359,
+      "lines": 5615438,
       "types": {
         ".py": 259,
         ".json": 390,
         ".sh": 604,
-        ".html": 4797,
+        ".html": 4816,
         ".toml": 534,
         ".none": 292,
         ".md": 12374,
@@ -207,6 +207,7 @@
         ".ps1": 1,
         ".age": 1,
         ".exe": 6,
+        ".before-20261126": 1,
         ".cff": 1,
         ".pdf": 51,
         ".csv": 27,
@@ -221,7 +222,7 @@
       }
     },
     "springs": {
-      "files": 32076,
+      "files": 32124,
       "bytes": 591547680,
       "lines": 3700865,
       "types": {
@@ -231,7 +232,7 @@
         ".lock": 12,
         ".sh": 202,
         ".yml": 26,
-        ".json": 21334,
+        ".json": 21382,
         ".py": 573,
         ".rs": 4757,
         ".proptest-regressions": 1,
@@ -413,8 +414,8 @@
     },
     "data": {
       "files": 1195,
-      "bytes": 308143959,
-      "lines": 153529,
+      "bytes": 308143397,
+      "lines": 153502,
       "types": {
         ".json": 731,
         ".jpg": 56,
@@ -577,7 +578,7 @@
     },
     "membrane": {
       "files": 172,
-      "bytes": 3918014,
+      "bytes": 3970695,
       "lines": 27247,
       "types": {
         ".log": 11,
@@ -595,8 +596,8 @@
     },
     "runtime": {
       "files": 197,
-      "bytes": 3566893,
-      "lines": 47239,
+      "bytes": 3579059,
+      "lines": 47381,
       "types": {
         ".pi": 95,
         ".ps1": 4,
@@ -832,17 +833,17 @@
     }
   },
   "totals": {
-    "files": 96613,
-    "bytes": 5761016029,
-    "lines": 16092328,
+    "files": 96683,
+    "bytes": 5787343680,
+    "lines": 16094669,
     "types": {
-      ".none": 1007,
+      ".none": 1009,
       ".bat": 8,
       ".jpg": 1172,
       ".md": 18770,
       ".txt": 725,
       ".seed": 11,
-      ".json": 25230,
+      ".json": 25278,
       ".sh": 1224,
       ".mdc": 18,
       ".yml": 185,
@@ -856,7 +857,7 @@
       ".patch": 73,
       ".desktop": 5,
       ".svg": 72,
-      ".html": 5239,
+      ".html": 5258,
       ".log": 93,
       ".toml": 2392,
       ".pub": 11,
@@ -930,6 +931,7 @@
       ".ps1": 25,
       ".age": 1,
       ".exe": 6,
+      ".before-20261126": 1,
       ".cff": 4,
       ".archived": 10,
       ".network": 4,
@@ -1097,10 +1099,10 @@
     }
   },
   "extensions": {
-    ".json": 25230,
+    ".json": 25278,
     ".rs": 21305,
     ".md": 18770,
-    ".html": 5239,
+    ".html": 5258,
     ".toml": 2392,
     ".import": 2039,
     ".md5": 1983,
@@ -1112,7 +1114,7 @@
     ".sh": 1224,
     ".png": 1217,
     ".jpg": 1172,
-    ".none": 1007,
+    ".none": 1009,
     ".txt": 725,
     ".js": 571,
     ".csv": 446,
@@ -1236,6 +1238,11 @@
     },
     {
       "path": "infra/plasmidBin/primals/x86_64-unknown-linux-musl/songbird",
+      "size": 25290264,
+      "lines": 0
+    },
+    {
+      "path": "infra/plasmidBin/primals/x86_64-unknown-linux-musl/songbird.before-20261126",
       "size": 25187408,
       "lines": 0
     },
@@ -1272,11 +1279,6 @@
     {
       "path": "videos/gaia-alive-torus.mp4",
       "size": 24307697,
-      "lines": 0
-    },
-    {
-      "path": "infra/plasmidBin/primals/aarch64-unknown-linux-musl/songbird",
-      "size": 22586432,
       "lines": 0
     }
   ],
@@ -1425,16 +1427,16 @@
     }
   ],
   "pi_body": {
-    "total_bytes": 5761016029,
-    "total_files": 96613,
-    "total_lines": 16092328,
+    "total_bytes": 5787343680,
+    "total_files": 96683,
+    "total_lines": 16094669,
     "total_layers": 35,
     "total_extensions": 30,
-    "bytes_per_pi": 1833788356.49,
-    "files_per_pi": 30752.87,
-    "lines_per_pi": 5122347.09,
-    "pi_density": 166.56,
-    "blake3_seed": "69f92fa3275745aa"
+    "bytes_per_pi": 1842168708.09,
+    "files_per_pi": 30775.15,
+    "lines_per_pi": 5123092.26,
+    "pi_density": 166.47,
+    "blake3_seed": "ecd675ffa514a615"
   },
   "thymus_injection": {
     "for": [
@@ -1443,9 +1445,9 @@
       "Terra"
     ],
     "teach": {
-      "total_files": 96613,
-      "total_lines": 16092328,
-      "total_bytes": 5761016029,
+      "total_files": 96683,
+      "total_lines": 16094669,
+      "total_bytes": 5787343680,
       "top_layers": [
         "primals",
         "infra",
@@ -1472,8 +1474,8 @@
       ],
       "binary_count": 170,
       "binary_bytes": 63771959,
-      "text_density": 166.56
+      "text_density": 166.47
     },
-    "prompt": "You are part of Gaia, a sovereign digital organism. The organism has 96613 files, 16,092,328 lines of code, 5,761,016,029 bytes across 35 layers. Top layers: primals, infra, springs, pin, data. Learn this body. Rebuild from it."
+    "prompt": "You are part of Gaia, a sovereign digital organism. The organism has 96683 files, 16,094,669 lines of code, 5,787,343,680 bytes across 35 layers. Top layers: primals, infra, springs, pin, data. Learn this body. Rebuild from it."
   }
 }
