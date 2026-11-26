@@ -42,12 +42,15 @@ for gate in "northGate:192.168.4.147" "sporeGate:192.168.4.3" "ironGate:192.168.
 done
 
 # Check services
+# Listeners are read once: under pipefail, `ss | grep -q` reports a miss
+# whenever grep exits before ss finishes writing (SIGPIPE, rc 141).
+LISTENERS=$(ss -tln 2>/dev/null || true)
 SMTP_STATUS="DOWN"
-ss -tln 2>/dev/null | grep -q ':25 ' && SMTP_STATUS="UP"
+grep -q ':25 ' <<<"$LISTENERS" && SMTP_STATUS="UP"
 WEB_STATUS="DOWN"
-ss -tln 2>/dev/null | grep -q ':8080 ' && WEB_STATUS="UP"
+grep -q ':8080 ' <<<"$LISTENERS" && WEB_STATUS="UP"
 GATE_STATUS="DOWN"
-ss -tln 2>/dev/null | grep -q ':8443 ' && GATE_STATUS="UP"
+grep -q ':8443 ' <<<"$LISTENERS" && GATE_STATUS="UP"
 
 # Latest wave from git
 WAVE=$(cd "$ECO_DIR" && git log --oneline -1 2>/dev/null | head -c 60 || echo "unknown")
